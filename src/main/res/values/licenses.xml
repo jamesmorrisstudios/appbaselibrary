@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="help_license">
+        <!-- This has to be overridden in the application for app specific credits -->
+    </array>
+
+    <string-array name="help_license_library_code_item_0">
+        <item name="title">App Base: James Morris Studios</item>
+        <item name="link_site">https://github.com/morris-james/appbaselibrary</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_1">
+        <item name="title">Library: futuresimple</item>
+        <item name="link_site">https://github.com/futuresimple/android-floating-action-button</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_2">
+        <item name="title">Library: navasmdc</item>
+        <item name="link_site">https://github.com/navasmdc/MaterialDesignLibrary</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_3">
+        <item name="title">Library: Aidan Follestad</item>
+        <item name="link_site">https://github.com/afollestad/material-dialogs</item>
+        <item name="link_license">http://opensource.org/licenses/MIT</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_4">
+        <item name="title">Library: Artem.Votincev</item>
+        <item name="link_site">https://github.com/ApmeM/android-flowlayout</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_5">
+        <item name="title">Library: Kai Zhu</item>
+        <item name="link_site">https://github.com/rengwuxian/MaterialEditText</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_6">
+        <item name="title">Library: wdullaer</item>
+        <item name="link_site">https://github.com/wdullaer/MaterialDateTimePicker</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_7">
+        <item name="title">Library: Tonic Artos</item>
+        <item name="link_site">https://github.com/TonicArtos/SuperSLiM</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <array name="help_license_library">
+        <item>@array/help_license_library_code_item_0</item>
+        <item>@array/help_license_library_code_item_1</item>
+        <item>@array/help_license_library_code_item_2</item>
+        <item>@array/help_license_library_code_item_3</item>
+        <item>@array/help_license_library_code_item_4</item>
+        <item>@array/help_license_library_code_item_5</item>
+        <item>@array/help_license_library_code_item_6</item>
+        <item>@array/help_license_library_code_item_7</item>
+    </array>
+
+</resources>

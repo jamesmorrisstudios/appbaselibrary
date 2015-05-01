@@ -1,34 +1,27 @@
 <resources>
     <string name="app_name">AppBaseLibrary</string>
-
-    <string name="todo">TODO Coming Soon</string>
-
-    <string name="action_help">Help &amp; Feedback</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="help_how_to_use_header">How To Use</string>
-    <string name="help_how_to_use_read">Read How</string>
-    <string name="help_how_to_use_watch">Watch How</string>
-
-    <string name="help_about">About</string>
-    <string name="help_studio">James Morris Studios</string>
-    <string name="help_studio_email">james.morris.studios@gmail.com</string>
-    <string name="help_license">Open Source Licenses</string>
-
-    <string name="help_twitter">https://twitter.com/J_M_Studios</string>
-    <string name="help_gPlus">https://plus.google.com/116342052026616674911</string>
-    <string name="help_fb">https://www.facebook.com/j.morris.studios</string>
-
-    <string name="license_0_title">James Morris Studios</string>
-    <string name="license_0_link_site">https://github.com/morris-james/randRemind</string>
-    <string name="license_0_link_license">http://www.apache.org/licenses/LICENSE-2.0</string>
-
-    <string name="license_1_title">Navasmdc</string>
-    <string name="license_1_link_site">https://github.com/navasmdc/MaterialDesignLibrary</string>
-    <string name="license_1_link_license">http://www.apache.org/licenses/LICENSE-2.0</string>
+    <string name="app_short_name">Base</string>
 
     <string name="agree">OK</string>
     <string name="disagree">Cancel</string>
     <string name="default_recycle_no_data">No items found</string>
+
+    <string name="action_help">Help &amp; Feedback</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="help_how_to_header">How To Use</string>
+    <string name="help_how_to_read">Read How</string>
+    <string name="help_how_to_watch">Watch How</string>
+
+    <string name="help_about_header">About</string>
+    <string name="help_about_studio">James Morris Studios</string>
+    <string name="help_about_email">james.morris.studios@gmail.com</string>
+    <string name="help_license">Licenses</string>
+
+    <string name="help_link_twitter">https://twitter.com/J_M_Studios</string>
+    <string name="help_link_gPlus">https://plus.google.com/116342052026616674911</string>
+    <string name="help_link_fb">https://www.facebook.com/j.morris.studios</string>
+
+    <string name="todo">Coming Soon</string>
 
 </resources>

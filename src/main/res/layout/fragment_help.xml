@@ -14,7 +14,7 @@
   ~ limitations under the License.
   -->
 
-<com.jamesmorrisstudios.materialuilibrary.controls.ScrollView
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivityFragment"
@@ -35,15 +35,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/help_how_to_use_header"
+            android:text="@string/help_how_to_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/white80"
+            android:textColor="@color/textLightMain"
             android:textSize="@dimen/header_size" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/white15" />
+            android:background="@color/textLightDivider" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:layout_gravity="center_horizontal"
@@ -54,8 +54,8 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:textSize="@dimen/item_size"
-            android:background="@color/white80"
-            android:text="@string/help_how_to_use_read" />
+            android:background="@color/textLightMain"
+            android:text="@string/help_how_to_read" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:layout_gravity="center_horizontal"
@@ -66,32 +66,32 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:textSize="@dimen/item_size"
-            android:background="@color/white80"
-            android:text="@string/help_how_to_use_watch" />
+            android:background="@color/textLightMain"
+            android:text="@string/help_how_to_watch" />
 
         <!-- About  -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/help_about"
+            android:text="@string/help_about_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/white80"
+            android:textColor="@color/textLightMain"
             android:textSize="@dimen/header_size" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/white15" />
+            android:background="@color/textLightDivider" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
-            android:text="@string/help_studio"
+            android:text="@string/help_about_studio"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white80"
+            android:textColor="@color/textLightMain"
             android:textSize="@dimen/item_size" />
 
         <TextView
@@ -100,10 +100,10 @@
             android:layout_gravity="center_horizontal"
             android:autoLink="web|email"
             android:gravity="center_horizontal"
-            android:text="@string/help_studio_email"
+            android:text="@string/help_about_email"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white80"
-            android:textColorLink="@color/primaryColorAccent"
+            android:textColor="@color/textLightMain"
+            android:textColorLink="@color/accent"
             android:textSize="@dimen/item_size" />
 
         <!-- Social Media badges -->
@@ -149,7 +149,7 @@
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:textSize="@dimen/item_size"
-            android:background="@color/white80"
+            android:background="@color/textLightMain"
             android:text="@string/help_license" />
 
         <TextView
@@ -160,9 +160,9 @@
             android:layout_marginLeft="24dp"
             android:gravity="bottom|left"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white80"
+            android:textColor="@color/textLightMain"
             android:textSize="@dimen/item_small_size" />
 
     </LinearLayout>
 
-</com.jamesmorrisstudios.materialuilibrary.controls.ScrollView>
+</ScrollView>

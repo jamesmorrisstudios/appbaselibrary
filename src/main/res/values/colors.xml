@@ -1,28 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Blue 500 -->
-    <color name="primaryColor">#2196F3</color>
-    <!-- Blue 700 -->
-    <color name="primaryColorDark">#1976D2</color>
-    <!-- Red A200 -->
-    <color name="primaryColorAccent">#FF5252</color>
-    <!-- Red A200 at 80% opacity  -->
-    <color name="primaryColorAccentText">#CCFF5252</color>
-    <!-- Red A200 at 20% opacity  -->
-    <color name="primaryColorAccentTextHint">#33FF5252</color>
-    <!-- Blue 700 at 80% opacity -->
-    <color name="primaryColorDarkText">#CC1976D2</color>
-    <!-- Blue 700 at 20% opacity -->
-    <color name="primaryColorDarkTextHint">#331976D2</color>
-    <!-- Blue 900 -->
-    <color name="background">#0D47A1</color>
-    <!-- A slight offwhite -->
-    <color name="cardBackground">#EEEEEE</color>
-    <!-- White 80% opacity used for main text -->
-    <color name="white80">#CCFFFFFF</color>
-    <!-- white 15% opacity used for dividers -->
-    <color name="white15">#26FFFFFF</color>
 
-    <color name="mdtp_accent_color">@color/primaryColorAccent</color>
-    <color name="mdtp_accent_color_dark">@color/primaryColorDark</color>
+    <!-- Blue 500 -->
+    <color name="primary">#2196F3</color>
+
+    <color name="primaryDisabled">#2196F3</color>
+
+    <color name="primaryLight">#E3F2FD</color>
+    <!-- Blue 700 -->
+    <color name="primaryDark">#1976D2</color>
+    <!-- Blue 900 -->
+    <color name="primaryBackground">#0D47A1</color>
+    <!-- Red A200 -->
+    <color name="accent">#FF5252</color>
+    <color name="accentLight">#FF8A80</color>
+    <color name="accentDark">#FF1744</color>
+    <color name="accentDisabled">#FF1744</color>
+
+    <!-- Red A200 at 80% opacity  -->
+    <color name="textAccent">#CCFF5252</color>
+    <color name="iconLight">@color/textLightMain</color>
+    <color name="iconDark">@color/textDarkSecondary</color>
+    <color name="dividerLight">@color/textLightDivider</color>
+    <color name="dividerDark">@color/textDarkDivider</color>
+
+    <!-- Light Main text and icons-->
+    <color name="textLightMain">#FFFFFF</color>
+    <!-- secondary text-->
+    <color name="textLightSecondary">#66FFFFFF</color>
+    <!-- Disabled or hint text-->
+    <color name="textLightDisabled">#4CFFFFFF</color>
+    <!-- Dividers -->
+    <color name="textLightDivider">#1EFFFFFF</color>
+
+    <!-- Dark Main text-->
+    <color name="textDarkMain">#DD000000</color>
+    <!-- secondary text and icons-->
+    <color name="textDarkSecondary">#8A000000</color>
+    <!-- Disabled or hint text-->
+    <color name="textDarkDisabled">#42000000</color>
+    <!-- Dividers -->
+    <color name="textDarkDivider">#1E000000</color>
+
+    <!--
+    <color name="mdtp_accent_color">@color/accent</color>
+    <color name="mdtp_accent_color_dark">@color/primaryDark</color>
+    -->
 </resources>

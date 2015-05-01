@@ -4,33 +4,33 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
         <!-- Set primary coloring in the app -->
-        <item name="colorPrimary">@color/primaryColor</item>
-        <item name="colorPrimaryDark">@color/primaryColorDark</item>
-        <item name="colorAccent">@color/primaryColorAccent</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
         <!-- Set the backgrounds so we don't redraw them -->
-        <item name="android:windowBackground">@color/background</item>
-        <item name="android:colorBackground">@color/background</item>
+        <item name="android:windowBackground">@color/primaryBackground</item>
+        <item name="android:colorBackground">@color/primaryBackground</item>
 
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_mtrl</item>
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
         <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_mtrl</item>
 
         <item name="md_dark_theme">false</item>
-        <item name="md_background_color">@color/cardBackground</item>
-        <item name="md_title_color">@color/primaryColorDarkText</item>
-        <item name="md_content_color">@color/primaryColorDarkText</item>
+        <item name="md_background_color">@color/primaryLight</item>
+        <item name="md_title_color">@color/textDarkMain</item>
+        <item name="md_content_color">@color/textDarkSecondary</item>
 
     </style>
 
     <!-- Theme for the toolbars in the app-->
     <style name="ThemeOverlay.toolbar" parent="ThemeOverlay.AppCompat.Light">
-        <item name="android:colorBackground">@color/primaryColorDark</item>
-        <item name="android:textColor">@color/white80</item>
+        <item name="android:colorBackground">@color/primaryDark</item>
+        <item name="android:textColor">@color/textLightMain</item>
     </style>
 
     <!-- Card view theme -->
     <style name="Theme.cardView" parent="Theme.AppCompat">
-        <item name="android:textColorSecondary">@color/primaryColorDarkText</item>
+        <item name="android:textColorSecondary">@color/textDarkSecondary</item>
     </style>
 
 

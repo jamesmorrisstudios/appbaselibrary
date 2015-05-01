@@ -1,7 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -13,10 +12,9 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleItem;
-import com.jamesmorrisstudios.materialuilibrary.controls.ButtonFloat;
+import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleAdapter;
+import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleContainer;
+import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleItem;
 import com.jamesmorrisstudios.materialuilibrary.recyclemanager.LayoutManager;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
@@ -30,7 +28,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private BaseRecycleAdapter mAdapter = null;
     private TextView noDataText;
-    private ButtonFloat fab;
+    private RecyclerView mRecyclerView;
 
     /**
      * Required empty public constructor
@@ -47,24 +45,11 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recycle, container, false);
-        fab = (ButtonFloat) view.findViewById(R.id.buttonAddNew);
-        fab.setBackgroundColor(getResources().getColor(R.color.primaryColorAccent));
         noDataText = (TextView) view.findViewById(R.id.empty_view);
-        RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (dy > 0) {
-                    fab.hide();
-                } else if (dy < 0) {
-                    fab.show();
-                }
-            }
-        });
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.primaryColorAccent);
+        mSwipeRefreshLayout.setColorSchemeResources(R.color.accent);
         mSwipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override
@@ -97,11 +82,23 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         mAdapter.setHeaderDisplay(mHeaderDisplay);
         mViews.setAdapter(mAdapter);
         startDataLoad();
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (dy > 0) {
+                    hideFab();
+                } else if (dy < 0) {
+                    showFab();
+                }
+            }
+        });
     }
 
     protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
     protected abstract void startDataLoad();
     protected abstract void itemClicked(BaseRecycleItem item);
+
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if(mAdapter != null && data != null && !data.isEmpty()) {
@@ -124,6 +121,10 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 isRefreshing = false;
             }
         }, 500);
+    }
+
+    protected final void setNoDataText(@NonNull String text) {
+        noDataText.setText(text);
     }
 
     /**
