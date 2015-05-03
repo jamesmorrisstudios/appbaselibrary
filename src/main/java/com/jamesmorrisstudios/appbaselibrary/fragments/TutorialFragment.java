@@ -97,4 +97,9 @@ public class TutorialFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void afterViewCreated() {
+
+    }
+
 }

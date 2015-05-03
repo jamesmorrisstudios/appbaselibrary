@@ -93,12 +93,12 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 }
             }
         });
+        afterViewCreated();
     }
 
     protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
     protected abstract void startDataLoad();
     protected abstract void itemClicked(BaseRecycleItem item);
-
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if(mAdapter != null && data != null && !data.isEmpty()) {

@@ -45,4 +45,9 @@ public class SettingsFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void afterViewCreated() {
+
+    }
+
 }

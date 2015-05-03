@@ -40,6 +40,16 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
         BaseFragment.OnUtilListener {
 
     /**
+     * The fragment is changing. This is called right after the fragment is notified
+     */
+    protected abstract void onFragmentChangeStart();
+
+    /**
+     * The fragment was just changed
+     */
+    protected abstract void onFragmentChangeEnd();
+
+    /**
      * Create this activity
      * @param savedInstanceState Saved instance state
      */
@@ -61,7 +71,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
      * Activity start
      */
     @Override
-    public void onStart() {
+      public void onStart() {
         super.onStart();
     }
 
@@ -95,6 +105,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     @Override
     public void onBackStackChanged() {
         shouldDisplayHomeUp();
+        onFragmentChangeEnd();
     }
 
     /**
@@ -142,6 +153,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
         if (f instanceof BaseFragment) {
             ((BaseFragment) f).onBack();
         }
+        onFragmentChangeStart();
     }
 
     /**
@@ -265,6 +277,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
      */
     protected final void loadFragment(@NonNull BaseFragment fragment, @NonNull String tag, boolean addBackStack) {
         if (!isFragmentUIActive(fragment)) {
+            onFragmentChangeStart();
             if(addBackStack) {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)

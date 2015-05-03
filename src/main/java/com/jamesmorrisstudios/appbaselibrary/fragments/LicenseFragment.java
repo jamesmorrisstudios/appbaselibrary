@@ -110,4 +110,9 @@ public class LicenseFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void afterViewCreated() {
+
+    }
+
 }

@@ -112,6 +112,11 @@ public class HelpFragment extends BaseFragment {
     }
 
     @Override
+    protected void afterViewCreated() {
+
+    }
+
+    @Override
     public void onBack() {
 
     }
