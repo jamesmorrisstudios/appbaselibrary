@@ -11,6 +11,9 @@
     <color name="primaryDark">#1976D2</color>
     <!-- Blue 900 -->
     <color name="primaryBackground">#0D47A1</color>
+
+    <color name="tintColor">@color/iconDark</color>
+
     <!-- Red A200 -->
     <color name="accent">#FF5252</color>
     <color name="accentLight">#FF8A80</color>
@@ -34,13 +37,13 @@
     <color name="textLightDivider">#1EFFFFFF</color>
 
     <!-- Dark Main text-->
-    <color name="textDarkMain">#DD000000</color>
+    <color name="textDarkMain">#DD0D47A1</color>
     <!-- secondary text and icons-->
-    <color name="textDarkSecondary">#8A000000</color>
+    <color name="textDarkSecondary">#8A0D47A1</color>
     <!-- Disabled or hint text-->
-    <color name="textDarkDisabled">#42000000</color>
+    <color name="textDarkDisabled">#420D47A1</color>
     <!-- Dividers -->
-    <color name="textDarkDivider">#1E000000</color>
+    <color name="textDarkDivider">#1E0D47A1</color>
 
     <!--
     <color name="mdtp_accent_color">@color/accent</color>

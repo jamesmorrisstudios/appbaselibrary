@@ -48,6 +48,7 @@
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
+            android:clickable="true"
             android:id="@+id/howToUseRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,6 +61,7 @@
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
+            android:clickable="true"
             android:id="@+id/howToUseWatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,6 +146,7 @@
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"
             android:id="@+id/helpLicense"
+            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"

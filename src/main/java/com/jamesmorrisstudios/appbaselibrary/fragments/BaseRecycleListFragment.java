@@ -73,15 +73,15 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        int mHeaderDisplay = getResources().getInteger(R.integer.default_header_display);
-        boolean mAreMarginsFixed = getResources().getBoolean(R.bool.default_margins_fixed);
+        int mHeaderDisplay = LayoutManager.LayoutParams.HEADER_INLINE;  //getResources().getInteger(R.integer.default_header_display); //LayoutManager.LayoutParams.HEADER_INLINE;
+        boolean mAreMarginsFixed = false;
         ViewHolder mViews = new ViewHolder(view);
         mViews.initViews(new LayoutManager(getActivity()));
         mAdapter = getAdapter(mHeaderDisplay, this);
         mAdapter.setMarginsFixed(mAreMarginsFixed);
         mAdapter.setHeaderDisplay(mHeaderDisplay);
         mViews.setAdapter(mAdapter);
-        startDataLoad();
+        startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
@@ -93,11 +93,10 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 }
             }
         });
-        afterViewCreated();
     }
 
     protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
-    protected abstract void startDataLoad();
+    protected abstract void startDataLoad(boolean forcedRefresh);
     protected abstract void itemClicked(BaseRecycleItem item);
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
@@ -121,6 +120,20 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 isRefreshing = false;
             }
         }, 500);
+    }
+
+    protected final void setEnablePullToRefresh(boolean enable) {
+        mSwipeRefreshLayout.setEnabled(enable);
+        if(enable) {
+            mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    startDataLoad(true);
+                }
+            });
+        } else {
+            mSwipeRefreshLayout.setOnRefreshListener(null);
+        }
     }
 
     protected final void setNoDataText(@NonNull String text) {
