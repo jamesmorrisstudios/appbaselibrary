@@ -142,6 +142,35 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="4dp"
+                android:text="@string/help_rate_question"
+                android:textSize="@dimen/item_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:id="@+id/btn_rateNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/item_size"
+                android:background="@color/textLightMain"
+                android:text="@string/help_rate_now" />
+
+        </LinearLayout>
+
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:layout_gravity="center_horizontal"
             android:gravity="center_horizontal"

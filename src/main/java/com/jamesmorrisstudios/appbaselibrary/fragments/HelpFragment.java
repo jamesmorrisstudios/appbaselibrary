@@ -46,6 +46,7 @@ public class HelpFragment extends BaseFragment {
         ImageButton btnTwitter = (ImageButton) view.findViewById(R.id.btn_twitter);
         ImageButton btnFB = (ImageButton) view.findViewById(R.id.btn_fb);
         ImageButton btnGPlus = (ImageButton) view.findViewById(R.id.btn_gplus);
+        ButtonFlat rateNow = (ButtonFlat) view.findViewById(R.id.btn_rateNow);
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +83,12 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.help_link_gPlus))));
+            }
+        });
+        rateNow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.store_link))));
             }
         });
         return view;

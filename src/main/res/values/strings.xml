@@ -2,6 +2,8 @@
     <string name="app_name">AppBaseLibrary</string>
     <string name="app_short_name">Base</string>
 
+    <string name="store_link">Change This</string>
+
     <string name="agree">OK</string>
     <string name="disagree">Cancel</string>
     <string name="default_recycle_no_data">No items found</string>
@@ -12,6 +14,9 @@
     <string name="help_how_to_header">How To Use</string>
     <string name="help_how_to_read">Read How</string>
     <string name="help_how_to_watch">Watch How</string>
+
+    <string name="help_rate_question">Like this app?</string>
+    <string name="help_rate_now">Rate It Now</string>
 
     <string name="help_about_header">About</string>
     <string name="help_about_studio">James Morris Studios</string>

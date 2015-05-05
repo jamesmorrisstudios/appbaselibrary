@@ -39,6 +39,8 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
         BaseFragment.OnDialogListener,
         BaseFragment.OnUtilListener {
 
+    private boolean clearingBackStack = false;
+
     /**
      * The fragment is changing. This is called right after the fragment is notified
      */
@@ -104,8 +106,10 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
      */
     @Override
     public void onBackStackChanged() {
-        shouldDisplayHomeUp();
-        onFragmentChangeEnd();
+        if(!clearingBackStack) {
+            shouldDisplayHomeUp();
+            onFragmentChangeEnd();
+        }
     }
 
     /**
@@ -120,6 +124,14 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     public final boolean hasBackStack() {
         return getSupportFragmentManager().getBackStackEntryCount() > 0;
+    }
+
+    public final void clearBackStack() {
+        clearingBackStack = true;
+        while(hasBackStack()) {
+            getSupportFragmentManager().popBackStack();
+        }
+        clearingBackStack = false;
     }
 
     /**
