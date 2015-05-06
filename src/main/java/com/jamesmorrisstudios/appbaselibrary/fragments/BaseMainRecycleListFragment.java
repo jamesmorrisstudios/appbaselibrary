@@ -27,7 +27,7 @@ public abstract class BaseMainRecycleListFragment extends BaseRecycleListFragmen
     }
 
     /**
-     * @param menu Menu
+     * @param menu     Menu
      * @param inflater Inflate
      */
     @Override
@@ -42,9 +42,9 @@ public abstract class BaseMainRecycleListFragment extends BaseRecycleListFragmen
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.action_help) {
+        if (item.getItemId() == R.id.action_help) {
             menuItemListener.onHelpClicked();
-        } else if(item.getItemId() == R.id.action_settings) {
+        } else if (item.getItemId() == R.id.action_settings) {
             menuItemListener.onSettingsClicked();
         }
         return super.onOptionsItemSelected(item);
@@ -52,6 +52,7 @@ public abstract class BaseMainRecycleListFragment extends BaseRecycleListFragmen
 
     /**
      * Attach to the activity
+     *
      * @param activity Activity to attach to
      */
     @Override

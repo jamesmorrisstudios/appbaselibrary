@@ -28,7 +28,7 @@ public abstract class BaseMainFragment extends BaseFragment {
     }
 
     /**
-     * @param menu Menu
+     * @param menu     Menu
      * @param inflater Inflate
      */
     @Override
@@ -43,9 +43,9 @@ public abstract class BaseMainFragment extends BaseFragment {
      */
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.action_help) {
+        if (item.getItemId() == R.id.action_help) {
             menuItemListener.onHelpClicked();
-        } else if(item.getItemId() == R.id.action_settings) {
+        } else if (item.getItemId() == R.id.action_settings) {
             menuItemListener.onSettingsClicked();
         }
         return super.onOptionsItemSelected(item);
@@ -53,6 +53,7 @@ public abstract class BaseMainFragment extends BaseFragment {
 
     /**
      * Attach to the activity
+     *
      * @param activity Activity to attach to
      */
     @Override

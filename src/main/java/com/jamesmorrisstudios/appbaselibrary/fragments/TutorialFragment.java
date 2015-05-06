@@ -24,7 +24,8 @@ public class TutorialFragment extends BaseFragment {
     /**
      * Required empty public constructor
      */
-    public TutorialFragment() {}
+    public TutorialFragment() {
+    }
 
     /**
      * @param savedInstanceState Saved instance state
@@ -36,27 +37,28 @@ public class TutorialFragment extends BaseFragment {
 
     /**
      * Create view
-     * @param inflater Inflater object
-     * @param container Container view
+     *
+     * @param inflater           Inflater object
+     * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return The top view for this fragment
      */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_tutorial, container, false);
-        LinearLayout contView = (LinearLayout)view.findViewById(R.id.tutorial_container);
+        LinearLayout contView = (LinearLayout) view.findViewById(R.id.tutorial_container);
         TypedArray tutorial = getResources().obtainTypedArray(R.array.help_tutorial);
-        for(int i=0; i<tutorial.length(); i++) {
+        for (int i = 0; i < tutorial.length(); i++) {
             int id = tutorial.getResourceId(i, 0);
-            if(id > 0) {
+            if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);
-                if(item.length() >= 2) {
+                if (item.length() >= 2) {
                     int idHeader = item.getResourceId(0, 0);
                     int idText = item.getResourceId(1, 0);
                     String header = getResources().getString(idHeader);
                     String text = getResources().getString(idText);
                     Drawable drawable = null;
-                    if(item.length() >= 3) {
+                    if (item.length() >= 3) {
                         int idImage = item.getResourceId(2, 0);
                         drawable = getResources().getDrawable(idImage);
                     }
@@ -71,10 +73,11 @@ public class TutorialFragment extends BaseFragment {
 
     /**
      * Adds an individual tutorial item
+     *
      * @param container Container to place the item
-     * @param header Header text
-     * @param text Main description text
-     * @param drawable Image to place below. Null if none
+     * @param header    Header text
+     * @param text      Main description text
+     * @param drawable  Image to place below. Null if none
      */
     private void addTutorialItem(@NonNull LinearLayout container, @NonNull String header, @NonNull String text, @Nullable Drawable drawable) {
         LinearLayout item = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.tutorial_item, null);
@@ -83,7 +86,7 @@ public class TutorialFragment extends BaseFragment {
         ImageView image = (ImageView) item.findViewById(R.id.image);
         textHeader.setText(header);
         textDetail.setText(text);
-        if(drawable == null) {
+        if (drawable == null) {
             image.setVisibility(View.GONE);
         } else {
             image.setVisibility(View.VISIBLE);

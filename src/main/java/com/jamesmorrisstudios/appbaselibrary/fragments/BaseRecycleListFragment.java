@@ -33,11 +33,12 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     /**
      * Required empty public constructor
      */
-    public BaseRecycleListFragment() {}
+    public BaseRecycleListFragment() {
+    }
 
     /**
-     * @param inflater Inflater
-     * @param container Root container
+     * @param inflater           Inflater
+     * @param container          Root container
      * @param savedInstanceState Saved instance state
      * @return This fragments top view
      */
@@ -67,7 +68,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     /**
      * View creation done
-     * @param view This fragments main view
+     *
+     * @param view               This fragments main view
      * @param savedInstanceState Saved instance state
      */
     @Override
@@ -96,11 +98,13 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
+
     protected abstract void startDataLoad(boolean forcedRefresh);
+
     protected abstract void itemClicked(BaseRecycleItem item);
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
-        if(mAdapter != null && data != null && !data.isEmpty()) {
+        if (mAdapter != null && data != null && !data.isEmpty()) {
             mAdapter.setItems(data);
             hideNoDataText();
         } else {
@@ -112,7 +116,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     /**
      * Finish up a refresh and hide the spinner
      */
-    private void endRefresh () {
+    private void endRefresh() {
         mSwipeRefreshLayout.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -124,7 +128,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     protected final void setEnablePullToRefresh(boolean enable) {
         mSwipeRefreshLayout.setEnabled(enable);
-        if(enable) {
+        if (enable) {
             mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
@@ -170,6 +174,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
         /**
          * Constructor
+         *
          * @param view View to set
          */
         public ViewHolder(@NonNull View view) {
@@ -185,6 +190,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
         /**
          * Set the adapter
+         *
          * @param adapter Adapter
          */
         public void setAdapter(@NonNull RecyclerView.Adapter<?> adapter) {

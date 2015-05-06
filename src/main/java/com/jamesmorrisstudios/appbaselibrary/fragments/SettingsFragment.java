@@ -1,7 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,7 +24,8 @@ public class SettingsFragment extends BaseFragment {
     /**
      * Required empty public constructor
      */
-    public SettingsFragment() {}
+    public SettingsFragment() {
+    }
 
     /**
      * @param savedInstanceState Saved instance state
@@ -38,8 +37,9 @@ public class SettingsFragment extends BaseFragment {
 
     /**
      * Create view
-     * @param inflater Inflater object
-     * @param container Container view
+     *
+     * @param inflater           Inflater object
+     * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return The top view for this fragment
      */
@@ -49,11 +49,11 @@ public class SettingsFragment extends BaseFragment {
         LinearLayout settingsContainer = (LinearLayout) view.findViewById(R.id.settings_container);
 
         TypedArray settings = getResources().obtainTypedArray(R.array.settings_array);
-        for(int i=0; i<settings.length(); i++) {
+        for (int i = 0; i < settings.length(); i++) {
             int id = settings.getResourceId(i, 0);
-            if(id > 0) {
+            if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);
-                if(item.length() == 4) {
+                if (item.length() == 4) {
                     int idType = item.getResourceId(0, 0);
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);

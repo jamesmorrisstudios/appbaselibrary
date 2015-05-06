@@ -27,12 +27,14 @@ public class HelpFragment extends BaseFragment {
     /**
      * Required empty constructor
      */
-    public HelpFragment() {}
+    public HelpFragment() {
+    }
 
     /**
      * Create the view
-     * @param inflater Inflater object
-     * @param container Container view
+     *
+     * @param inflater           Inflater object
+     * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return This fragments top view
      */
@@ -96,6 +98,7 @@ public class HelpFragment extends BaseFragment {
 
     /**
      * Attach to the activity
+     *
      * @param activity Activity to attach
      */
     @Override

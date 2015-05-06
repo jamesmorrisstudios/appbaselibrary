@@ -19,7 +19,7 @@ import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
 
 /**
  * Base app fragment
- *
+ * <p/>
  * Created by James on 4/29/2015.
  */
 public abstract class BaseFragment extends Fragment {
@@ -57,7 +57,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private void initFab() {
-        if(getView() instanceof RelativeLayout) {
+        if (getView() instanceof RelativeLayout) {
             RelativeLayout relativeLayout = (RelativeLayout) getView();
             fab = new FloatingActionButton(getActivity().getApplicationContext());
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
@@ -77,7 +77,8 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * View creation done
-     * @param view This fragments main view
+     *
+     * @param view               This fragments main view
      * @param savedInstanceState Saved instance state
      */
     @Override
@@ -96,7 +97,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected final void setFabEnable(boolean enable) {
-        if(enable) {
+        if (enable) {
             initFab();
             fab.setVisibility(View.VISIBLE);
         } else {
@@ -109,14 +110,14 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected void showFab() {
-        if(fab == null) {
+        if (fab == null) {
             return;
         }
-        if(fabShownPos == 0 || fabHidePos == 0) {
+        if (fabShownPos == 0 || fabHidePos == 0) {
             fabShownPos = fab.getY();
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if(animShow != null && animShow.isRunning() || fab.getY() == fabShownPos) {
+        if (animShow != null && animShow.isRunning() || fab.getY() == fabShownPos) {
             return;
         }
         animShow = AnimatorControl.translateY(fab, (fabHidePos - fabShownPos), 0, 250, 0);
@@ -124,14 +125,14 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected final void hideFab() {
-        if(fab == null) {
+        if (fab == null) {
             return;
         }
-        if(fabShownPos == 0 || fabHidePos == 0) {
+        if (fabShownPos == 0 || fabHidePos == 0) {
             fabShownPos = fab.getY();
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if(animHide != null && animHide.isRunning() || fab.getY() == fabHidePos) {
+        if (animHide != null && animHide.isRunning() || fab.getY() == fabHidePos) {
             return;
         }
         animHide = AnimatorControl.translateY(fab, 0, (fabHidePos - fabShownPos), 250, 0);
@@ -145,17 +146,19 @@ public abstract class BaseFragment extends Fragment {
 
         /**
          * Build a new time picker dialog
+         *
          * @param listener Return listener
-         * @param hour Start hour
-         * @param minute Start minute
+         * @param hour     Start hour
+         * @param minute   Start minute
          * @param is24Hour True if 24 hour mode
          */
         void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour);
 
         /**
          * Build a ok/cancel prompt
-         * @param title Title of the prompt
-         * @param content Content text
+         *
+         * @param title    Title of the prompt
+         * @param content  Content text
          * @param callback Callback listener
          */
         void createPromptDialog(@NonNull String title, @NonNull String content, MaterialDialog.ButtonCallback callback);

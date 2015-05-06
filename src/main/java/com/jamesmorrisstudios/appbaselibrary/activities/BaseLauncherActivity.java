@@ -1,7 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Context;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -29,7 +28,7 @@ import com.jamesmorrisstudios.materialuilibrary.dialogs.time.TimePickerDialog;
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
  * along with help and settings fragments. Extend the mainFragment for your main page
- *
+ * <p/>
  * Created by James on 4/29/2015.
  */
 public abstract class BaseLauncherActivity extends AppCompatActivity implements
@@ -54,6 +53,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     /**
      * Create this activity
+     *
      * @param savedInstanceState Saved instance state
      */
     @Override
@@ -65,7 +65,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
         setSupportActionBar(toolbar);
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         shouldDisplayHomeUp();
-        if(!hasBackStack()) {
+        if (!hasBackStack()) {
             loadMainFragment();
         }
     }
@@ -74,7 +74,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
      * Activity start
      */
     @Override
-      public void onStart() {
+    public void onStart() {
         super.onStart();
     }
 
@@ -107,7 +107,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
      */
     @Override
     public void onBackStackChanged() {
-        if(!clearingBackStack) {
+        if (!clearingBackStack) {
             shouldDisplayHomeUp();
             onFragmentChangeEnd();
         }
@@ -116,9 +116,9 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Check if we are at the top page and show the up button as needed
      */
-    public final void shouldDisplayHomeUp(){
+    public final void shouldDisplayHomeUp() {
         ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null) {
+        if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(hasBackStack());
         }
     }
@@ -129,7 +129,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     public final void clearBackStack() {
         clearingBackStack = true;
-        while(hasBackStack()) {
+        while (hasBackStack()) {
             getSupportFragmentManager().popBackStack();
         }
         clearingBackStack = false;
@@ -138,6 +138,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * The up button was pressed so pop one off the backstack
      * and notify the visible fragment that it is being left
+     *
      * @return Always true
      */
     @Override
@@ -172,6 +173,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Gets the tutorial fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
+     *
      * @return The fragment
      */
     @NonNull
@@ -196,6 +198,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Gets the license fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
+     *
      * @return The fragment
      */
     @NonNull
@@ -220,6 +223,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Gets the help fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
+     *
      * @return The fragment
      */
     @NonNull
@@ -244,6 +248,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Gets the help fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
+     *
      * @return The fragment
      */
     @NonNull
@@ -268,6 +273,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
     /**
      * Gets the main list fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
+     *
      * @return The fragment
      */
     @NonNull
@@ -284,14 +290,15 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     /**
      * Loads the given fragment into the container view.
-     * @param fragment Fragment to add
-     * @param tag Tag to give the fragment
+     *
+     * @param fragment     Fragment to add
+     * @param tag          Tag to give the fragment
      * @param addBackStack True to add to backstack for back and up navigation
      */
     protected final void loadFragment(@NonNull BaseFragment fragment, @NonNull String tag, boolean addBackStack) {
         if (!isFragmentUIActive(fragment)) {
             onFragmentChangeStart();
-            if(addBackStack) {
+            if (addBackStack) {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
                         .addToBackStack(tag)
@@ -308,6 +315,7 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     /**
      * Checks if the UI of a fragment is active
+     *
      * @param fragment Fragment to check
      * @return True if fragment is added and visible
      */
@@ -361,9 +369,10 @@ public abstract class BaseLauncherActivity extends AppCompatActivity implements
 
     /**
      * Create a time picker dialog
+     *
      * @param listener Return listener
-     * @param hour Start hour
-     * @param minute Start minute
+     * @param hour     Start hour
+     * @param minute   Start minute
      * @param is24Hour True if 24 hour mode
      */
     @Override

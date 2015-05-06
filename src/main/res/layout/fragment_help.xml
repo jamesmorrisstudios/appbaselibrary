@@ -14,21 +14,20 @@
   ~ limitations under the License.
   -->
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivityFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    tools:context=".MainActivityFragment">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <!-- How To Use  -->
         <TextView
@@ -46,30 +45,30 @@
             android:background="@color/textLightDivider" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:clickable="true"
             android:id="@+id/howToUseRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:textSize="@dimen/item_size"
             android:background="@color/textLightMain"
-            android:text="@string/help_how_to_read" />
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:text="@string/help_how_to_read"
+            android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:clickable="true"
             android:id="@+id/howToUseWatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:textSize="@dimen/item_size"
             android:background="@color/textLightMain"
-            android:text="@string/help_how_to_watch" />
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:text="@string/help_how_to_watch"
+            android:textSize="@dimen/item_size" />
 
         <!-- About  -->
         <TextView
@@ -150,39 +149,39 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="4dp"
-                android:text="@string/help_rate_question"
-                android:textSize="@dimen/item_size"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"
+                android:text="@string/help_rate_question"
+                android:textSize="@dimen/item_size" />
 
             <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:clickable="true"
                 android:id="@+id/btn_rateNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/item_size"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
                 android:background="@color/textLightMain"
-                android:text="@string/help_rate_now" />
+                android:clickable="true"
+                android:text="@string/help_rate_now"
+                android:textSize="@dimen/item_size" />
 
         </LinearLayout>
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
             android:id="@+id/helpLicense"
-            android:clickable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:textSize="@dimen/item_size"
             android:background="@color/textLightMain"
-            android:text="@string/help_license" />
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:text="@string/help_license"
+            android:textSize="@dimen/item_size" />
 
         <TextView
             android:id="@+id/versionName"

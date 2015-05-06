@@ -22,7 +22,8 @@ public class LicenseFragment extends BaseFragment {
     /**
      * Required empty public constructor
      */
-    public LicenseFragment() {}
+    public LicenseFragment() {
+    }
 
     /**
      * @param savedInstanceState Saved instance state
@@ -34,15 +35,16 @@ public class LicenseFragment extends BaseFragment {
 
     /**
      * Create view
-     * @param inflater Inflater object
-     * @param container Container view
+     *
+     * @param inflater           Inflater object
+     * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return The top view for this fragment
      */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_license, container, false);
-        LinearLayout contView = (LinearLayout)view.findViewById(R.id.license_container);
+        LinearLayout contView = (LinearLayout) view.findViewById(R.id.license_container);
         TypedArray licensesLibrary = getResources().obtainTypedArray(R.array.help_license_library);
         TypedArray codeApp = getResources().obtainTypedArray(R.array.help_license);
         buildLicense(licensesLibrary, codeApp, contView);
@@ -54,33 +56,34 @@ public class LicenseFragment extends BaseFragment {
     /**
      * Builds a license section given the typed array for library and app specitic sections
      * and the container for this section
+     *
      * @param arrayLibrary Library general license list
-     * @param arrayApp App specific license list
-     * @param container Container view for this section
+     * @param arrayApp     App specific license list
+     * @param container    Container view for this section
      */
     private void buildLicense(@NonNull TypedArray arrayLibrary, @NonNull TypedArray arrayApp, @NonNull LinearLayout container) {
         boolean found = false;
-        for(int i=0; i<arrayApp.length(); i++) {
+        for (int i = 0; i < arrayApp.length(); i++) {
             int id = arrayApp.getResourceId(i, 0);
-            if(id > 0) {
+            if (id > 0) {
                 String[] arr = getResources().getStringArray(id);
-                if(arr.length == 3) {
+                if (arr.length == 3) {
                     addLicenseItem(container, arr[0], arr[1], arr[2]);
                     found = true;
                 }
             }
         }
-        for(int i=0; i<arrayLibrary.length(); i++) {
+        for (int i = 0; i < arrayLibrary.length(); i++) {
             int id = arrayLibrary.getResourceId(i, 0);
-            if(id > 0) {
+            if (id > 0) {
                 String[] arr = getResources().getStringArray(id);
-                if(arr.length == 3) {
+                if (arr.length == 3) {
                     addLicenseItem(container, arr[0], arr[1], arr[2]);
                     found = true;
                 }
             }
         }
-        if(found) {
+        if (found) {
             container.setVisibility(View.VISIBLE);
         } else {
             container.setVisibility(View.GONE);
@@ -89,9 +92,10 @@ public class LicenseFragment extends BaseFragment {
 
     /**
      * Creates an individual license item
-     * @param container Container for the item
-     * @param title Title of the item
-     * @param link_site Link to web site
+     *
+     * @param container    Container for the item
+     * @param title        Title of the item
+     * @param link_site    Link to web site
      * @param link_license Link to license file
      */
     private void addLicenseItem(@NonNull LinearLayout container, @NonNull String title, @NonNull String link_site, @NonNull String link_license) {
