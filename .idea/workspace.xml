@@ -81,7 +81,42 @@
     <favorites_list name="appbaselibrary" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="BaseLauncherActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0338984">
+              <caret line="387" column="54" selection-start-line="387" selection-start-column="54" selection-end-line="387" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <folding>
+                <element signature="method#onAttach#0;class#BaseFragment#0" expanded="false" />
+                <element signature="method#onDetach#0;class#BaseFragment#0" expanded="false" />
+                <element signature="method#initFab#0;class#BaseFragment#0" expanded="false" />
+                <element signature="e#2715#2716#0" expanded="false" />
+                <element signature="e#2767#2768#0" expanded="false" />
+                <element signature="method#onViewCreated#0;class#BaseFragment#0" expanded="false" />
+                <element signature="method#setFabEnable#0;class#BaseFragment#0" expanded="false" />
+                <element signature="e#3578#3579#0" expanded="false" />
+                <element signature="e#3617#3618#0" expanded="false" />
+                <element signature="method#showFab#0;class#BaseFragment#0" expanded="false" />
+                <element signature="method#hideFab#0;class#BaseFragment#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -913,19 +948,24 @@
         <option value="$PROJECT_DIR$/src/main/res/values/tutorial.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/tutorial_item.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_recycle.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_license.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/TutorialFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/LicenseFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values/licenses.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/HelpFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/layout/fragment_help.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/fragment_settings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/menu_items.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/settings.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/menu_item_boolean.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/TutorialFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/settings_item_boolean.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/licenses.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java" />
       </list>
     </option>
   </component>
@@ -961,9 +1001,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
@@ -982,139 +1019,12 @@
               <option name="myItemId" value="appbaselibrary" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="menu" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fragments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activities" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1329,13 +1239,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2777778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1356,6 +1264,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2777778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1387,7 +1297,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="method#onAttach#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#onDetach#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#initFab#0;class#BaseFragment#0" expanded="false" />
+            <element signature="e#2715#2716#0" expanded="false" />
+            <element signature="e#2767#2768#0" expanded="false" />
+            <element signature="method#onViewCreated#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#setFabEnable#0;class#BaseFragment#0" expanded="false" />
+            <element signature="e#3578#3579#0" expanded="false" />
+            <element signature="e#3617#3618#0" expanded="false" />
+            <element signature="method#showFab#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#hideFab#0;class#BaseFragment#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1395,7 +1327,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1537,75 +1481,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/tutorial.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.238">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_tutorial.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7532258">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_settings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7129032">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding>
-            <element signature="e#1084#1104#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_recycle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3435484">
           <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/tutorial_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/tutorial_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7951613">
           <caret line="29" column="34" selection-start-line="29" selection-start-column="34" selection-end-line="29" selection-end-column="34" />
           <folding />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/license_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/license_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1619,14 +1523,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5064516">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseMainRecycleListFragment.java">
@@ -1637,31 +1541,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_license.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8080645">
           <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="e#934#969#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60708785">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/TutorialFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.990755">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1687,7 +1575,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21869783">
           <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1695,39 +1582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2268#2660#0" expanded="true" />
-            <element signature="e#2659#2660#0" expanded="true" />
-            <element signature="e#4736#4926#0" expanded="true" />
-            <element signature="e#4925#4926#0" expanded="true" />
-            <element signature="e#5129#5314#0" expanded="true" />
-            <element signature="e#5313#5314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="method#onAttach#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#onDetach#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#initFab#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#onViewCreated#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#setFabEnable#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#showFab#0;class#BaseFragment#0" expanded="false" />
-            <element signature="method#hideFab#0;class#BaseFragment#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/licenses.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48536208">
-          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,19 +1590,6 @@
         <state vertical-scroll-proportion="0.60246533">
           <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.60246533">
-          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
-          <folding>
-            <element signature="e#2964#2965#0" expanded="false" />
-            <element signature="e#2995#2996#0" expanded="false" />
-            <element signature="e#3301#3302#0" expanded="false" />
-            <element signature="e#3331#3332#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1761,38 +1602,38 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_help.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7951613">
           <caret line="169" column="55" selection-start-line="169" selection-start-column="55" selection-end-line="169" selection-end-column="55" />
           <folding>
-            <element signature="e#827#860#0" expanded="true" />
-            <element signature="e#885#920#0" expanded="true" />
-            <element signature="e#946#981#0" expanded="true" />
-            <element signature="e#1005#1038#0" expanded="true" />
-            <element signature="e#1482#1510#0" expanded="true" />
-            <element signature="e#1664#1684#0" expanded="true" />
-            <element signature="e#2320#2338#0" expanded="true" />
-            <element signature="e#2418#2444#0" expanded="true" />
-            <element signature="e#2918#2936#0" expanded="true" />
-            <element signature="e#3016#3043#0" expanded="true" />
-            <element signature="e#3255#3282#0" expanded="true" />
-            <element signature="e#3436#3456#0" expanded="true" />
-            <element signature="e#3867#3894#0" expanded="true" />
-            <element signature="e#4049#4067#0" expanded="true" />
-            <element signature="e#4356#4382#0" expanded="true" />
-            <element signature="e#4587#4605#0" expanded="true" />
-            <element signature="e#6367#6395#0" expanded="true" />
-            <element signature="e#6429#6447#0" expanded="true" />
-            <element signature="e#6953#6971#0" expanded="true" />
-            <element signature="e#7059#7082#0" expanded="true" />
-            <element signature="e#7579#7597#0" expanded="true" />
-            <element signature="e#7677#7699#0" expanded="true" />
-            <element signature="e#8151#8175#0" expanded="true" />
+            <element signature="e#827#860#0" expanded="false" />
+            <element signature="e#885#920#0" expanded="false" />
+            <element signature="e#946#981#0" expanded="false" />
+            <element signature="e#1005#1038#0" expanded="false" />
+            <element signature="e#1482#1510#0" expanded="false" />
+            <element signature="e#1664#1684#0" expanded="false" />
+            <element signature="e#2320#2338#0" expanded="false" />
+            <element signature="e#2418#2444#0" expanded="false" />
+            <element signature="e#2918#2936#0" expanded="false" />
+            <element signature="e#3016#3043#0" expanded="false" />
+            <element signature="e#3255#3282#0" expanded="false" />
+            <element signature="e#3436#3456#0" expanded="false" />
+            <element signature="e#3867#3894#0" expanded="false" />
+            <element signature="e#4049#4067#0" expanded="false" />
+            <element signature="e#4356#4382#0" expanded="false" />
+            <element signature="e#4587#4605#0" expanded="false" />
+            <element signature="e#6367#6395#0" expanded="false" />
+            <element signature="e#6429#6447#0" expanded="false" />
+            <element signature="e#6953#6971#0" expanded="false" />
+            <element signature="e#7059#7082#0" expanded="false" />
+            <element signature="e#7579#7597#0" expanded="false" />
+            <element signature="e#7677#7699#0" expanded="false" />
+            <element signature="e#8151#8175#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/HelpFragment.java">
@@ -1800,17 +1641,133 @@
         <state vertical-scroll-proportion="0.86440676">
           <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
           <folding>
-            <element signature="e#1970#2139#0" expanded="true" />
-            <element signature="e#2138#2139#0" expanded="true" />
-            <element signature="e#2327#2366#0" expanded="true" />
-            <element signature="e#2688#2932#0" expanded="true" />
-            <element signature="e#2852#2904#0" expanded="true" />
-            <element signature="e#2931#2932#0" expanded="true" />
-            <element signature="e#3132#3179#0" expanded="true" />
-            <element signature="e#3410#3460#0" expanded="true" />
-            <element signature="e#3526#3763#0" expanded="true" />
-            <element signature="e#3690#3735#0" expanded="true" />
-            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#1970#2139#0" expanded="false" />
+            <element signature="e#2138#2139#0" expanded="false" />
+            <element signature="e#2327#2366#0" expanded="false" />
+            <element signature="e#2688#2932#0" expanded="false" />
+            <element signature="e#2852#2904#0" expanded="false" />
+            <element signature="e#2931#2932#0" expanded="false" />
+            <element signature="e#2852#2904#0" expanded="false" />
+            <element signature="e#3410#3460#0" expanded="false" />
+            <element signature="e#3526#3763#0" expanded="false" />
+            <element signature="e#3690#3735#0" expanded="false" />
+            <element signature="e#3762#3763#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_tutorial.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64354837">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="29" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/tutorial.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18335901">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/TutorialFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="86" column="43" selection-start-line="86" selection-start-column="43" selection-end-line="86" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60246533">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18335901">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/settings_item_boolean.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19193548">
+          <caret line="7" column="43" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18181819">
+          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
+          <folding>
+            <element signature="e#3262#3295#0" expanded="false" />
+            <element signature="e#3356#3628#0" expanded="false" />
+            <element signature="e#3553#3586#0" expanded="false" />
+            <element signature="e#3627#3628#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_settings.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6032258">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/values/licenses.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6286595">
+          <caret line="66" column="4" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding>
+            <element signature="method#onAttach#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#onDetach#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#initFab#0;class#BaseFragment#0" expanded="false" />
+            <element signature="e#2715#2716#0" expanded="false" />
+            <element signature="e#2767#2768#0" expanded="false" />
+            <element signature="method#onViewCreated#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#setFabEnable#0;class#BaseFragment#0" expanded="false" />
+            <element signature="e#3578#3579#0" expanded="false" />
+            <element signature="e#3617#3618#0" expanded="false" />
+            <element signature="method#showFab#0;class#BaseFragment#0" expanded="false" />
+            <element signature="method#hideFab#0;class#BaseFragment#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0338984">
+          <caret line="387" column="54" selection-start-line="387" selection-start-column="54" selection-end-line="387" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -55,7 +55,13 @@
     <string-array name="help_license_library_code_item_8">
         <item name="title">Icons: Google</item>
         <item name="link_site">https://github.com/google/material-design-icons</item>
-        <item name="link_license">http://creativecommons.org/licenses/by/4.0/</item>
+        <item name="link_license">http://creativecommons.org/licenses/by/4.0</item>
+    </string-array>
+
+    <string-array name="help_license_library_code_item_9">
+        <item name="title">Library: Lars Werkman</item>
+        <item name="link_site">https://github.com/LarsWerkman/HoloColorPicker</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
     <array name="help_license_library">
@@ -68,6 +74,7 @@
         <item>@array/help_license_library_code_item_6</item>
         <item>@array/help_license_library_code_item_7</item>
         <item>@array/help_license_library_code_item_8</item>
+        <item>@array/help_license_library_code_item_9</item>
     </array>
 
 </resources>
