@@ -26,6 +26,33 @@
         android:id="@+id/tutorial_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/icons_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="18dp"
+                android:gravity="left"
+                android:text="@string/help_icon_description_header"
+                android:textColor="@color/textLightMain"
+                android:textSize="23sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="18dp"
+                android:background="@color/textLightDivider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>

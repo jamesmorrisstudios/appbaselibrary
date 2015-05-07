@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -47,6 +48,27 @@ public class TutorialFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_tutorial, container, false);
         LinearLayout contView = (LinearLayout) view.findViewById(R.id.tutorial_container);
+        LinearLayout iconView = (LinearLayout) view.findViewById(R.id.icons_container);
+        //Icon Descriptions
+        TypedArray icons = getResources().obtainTypedArray(R.array.help_icons);
+        for (int i = 0; i < icons.length(); i++) {
+            int id = icons.getResourceId(i, 0);
+            if (id > 0) {
+                TypedArray item = getResources().obtainTypedArray(id);
+                if (item.length() == 2) {
+                    int idIcon = item.getResourceId(0, 0);
+                    int idDescription = item.getResourceId(1, 0);
+                    Drawable drawable = getResources().getDrawable(idIcon);
+                    String description = getResources().getString(idDescription);
+                    if(drawable != null) {
+                        addIconItem(iconView, drawable, description);
+                    }
+                }
+                item.recycle();
+            }
+        }
+        icons.recycle();
+        //Main Tutorial
         TypedArray tutorial = getResources().obtainTypedArray(R.array.help_tutorial);
         for (int i = 0; i < tutorial.length(); i++) {
             int id = tutorial.getResourceId(i, 0);
@@ -92,6 +114,16 @@ public class TutorialFragment extends BaseFragment {
             image.setVisibility(View.VISIBLE);
             image.setImageDrawable(drawable);
         }
+        container.addView(item);
+    }
+
+    private void addIconItem(@NonNull LinearLayout container, @NonNull Drawable icon, @NonNull String description) {
+        container.setVisibility(View.VISIBLE);
+        RelativeLayout item = (RelativeLayout) getActivity().getLayoutInflater().inflate(R.layout.icon_item, null);
+        ImageView iconView = (ImageView) item.findViewById(R.id.icon);
+        TextView descriptionView = (TextView) item.findViewById(R.id.description);
+        iconView.setImageDrawable(icon);
+        descriptionView.setText(description);
         container.addView(item);
     }
 

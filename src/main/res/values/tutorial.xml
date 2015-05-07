@@ -5,4 +5,8 @@
         <!-- Override to define your help tutorial -->
     </array>
 
+    <array name="help_icons">
+        <!-- Override to define your icon descriptions -->
+    </array>
+
 </resources>

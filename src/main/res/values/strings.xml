@@ -27,6 +27,8 @@
     <string name="help_link_gPlus">https://plus.google.com/116342052026616674911</string>
     <string name="help_link_fb">https://www.facebook.com/j.morris.studios</string>
 
+    <string name="help_icon_description_header">Icon Descriptions</string>
+
     <string name="todo">Coming Soon</string>
 
 </resources>
