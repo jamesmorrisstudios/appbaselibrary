@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="help_read_how">
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="help_watch_how">
+        <item name="android:visibility">visible</item>
+    </style>
+
+</resources>

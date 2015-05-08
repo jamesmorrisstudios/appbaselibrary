@@ -49,6 +49,7 @@ public class HelpFragment extends BaseFragment {
         ImageButton btnFB = (ImageButton) view.findViewById(R.id.btn_fb);
         ImageButton btnGPlus = (ImageButton) view.findViewById(R.id.btn_gplus);
         ButtonFlat rateNow = (ButtonFlat) view.findViewById(R.id.btn_rateNow);
+        ButtonFlat moreBy = (ButtonFlat) view.findViewById(R.id.btn_moreBy);
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,8 +59,7 @@ public class HelpFragment extends BaseFragment {
         watchHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //TODO
-                Utils.toastShort(getResources().getString(R.string.todo));
+                goToLink(getResources().getString(R.string.tutorial_link));
             }
         });
         license.setOnClickListener(new View.OnClickListener() {
@@ -72,28 +72,42 @@ public class HelpFragment extends BaseFragment {
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.help_link_twitter))));
+                goToLink(getResources().getString(R.string.help_link_twitter));
             }
         });
         btnFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.help_link_fb))));
+                goToLink(getResources().getString(R.string.help_link_fb));
             }
         });
         btnGPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.help_link_gPlus))));
+                goToLink(getResources().getString(R.string.help_link_gPlus));
             }
         });
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getResources().getString(R.string.store_link))));
+                goToLink(getResources().getString(R.string.store_link));
+            }
+        });
+        moreBy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToLink(getResources().getString(R.string.store_link_all));
             }
         });
         return view;
+    }
+
+    private void goToLink(String link) {
+        try{
+            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
+        } catch(Exception ex) {
+            Utils.toastShort(getResources().getString(R.string.help_link_error));
+        }
     }
 
     /**

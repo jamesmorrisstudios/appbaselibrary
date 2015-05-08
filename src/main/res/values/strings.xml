@@ -1,9 +1,4 @@
 <resources>
-    <string name="app_name">AppBaseLibrary</string>
-    <string name="app_short_name">Base</string>
-
-    <string name="store_link">Change This</string>
-
     <string name="agree">OK</string>
     <string name="disagree">Cancel</string>
     <string name="default_recycle_no_data">No items found</string>
@@ -17,6 +12,7 @@
 
     <string name="help_rate_question">Like this app?</string>
     <string name="help_rate_now">Rate It Now</string>
+    <string name="help_more_by">More Apps</string>
 
     <string name="help_about_header">About</string>
     <string name="help_about_studio">James Morris Studios</string>
@@ -26,6 +22,8 @@
     <string name="help_link_twitter">https://twitter.com/J_M_Studios</string>
     <string name="help_link_gPlus">https://plus.google.com/116342052026616674911</string>
     <string name="help_link_fb">https://www.facebook.com/j.morris.studios</string>
+
+    <string name="help_link_error">ERROR: Failed to open link</string>
 
     <string name="help_icon_description_header">Icon Descriptions</string>
 

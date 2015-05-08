@@ -45,6 +45,7 @@
             android:background="@color/textLightDivider" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+            style="@style/help_read_how"
             android:id="@+id/howToUseRead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -58,6 +59,7 @@
             android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+            style="@style/help_watch_how"
             android:id="@+id/howToUseWatch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -169,6 +171,18 @@
                 android:textSize="@dimen/item_size" />
 
         </LinearLayout>
+
+        <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+            android:id="@+id/btn_moreBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/textLightMain"
+            android:clickable="true"
+            android:text="@string/help_more_by"
+            android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
             android:id="@+id/helpLicense"

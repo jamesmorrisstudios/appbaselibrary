@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppBaseLibrary</string>
+    <string name="app_short_name">Base</string>
+
+    <string name="store_link">Change This</string>
+    <string name="store_link_all">Change This</string>
+    <string name="tutorial_link">Change This</string>
+
+</resources>
