@@ -10,7 +10,7 @@
     <!-- Blue 700 -->
     <color name="primaryDark">#1976D2</color>
     <!-- Blue 900 -->
-    <color name="primaryBackground">#0D47A1</color>
+    <color name="primaryBackground">#90CAF9</color>
 
     <color name="tintColor">@color/iconDark</color>
 

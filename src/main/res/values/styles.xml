@@ -7,6 +7,18 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
+        <item name="colorButtonNormal">@color/primary</item>
+
+        <!--
+        <item name="colorControlNormal">@color/accent</item>
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="colorSwitchThumbNormal">@color/accent</item>
+        -->
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight, and colorSwitchThumbNormal. -->
+
         <!-- Set the backgrounds so we don't redraw them -->
         <item name="android:windowBackground">@color/primaryBackground</item>
         <item name="android:colorBackground">@color/primaryBackground</item>

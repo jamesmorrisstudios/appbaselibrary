@@ -46,6 +46,7 @@ android {
 }
 
 dependencies {
+    compile 'com.android.support:support-v4:22.1.1'
     compile 'com.jamesmorrisstudios:utilitieslibrary:1.0'
     compile 'com.jamesmorrisstudios:materialuilibrary:1.0'
 }
