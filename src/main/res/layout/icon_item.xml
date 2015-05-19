@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.jamesmorrisstudios.appbaselibrary.views.TintImageView
         android:layout_marginLeft="24dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:layout_marginRight="2dp"
         android:id="@+id/icon"
+        android:tint="@color/textDarkMain"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_width="35dp"
@@ -22,7 +23,7 @@
         android:layout_centerVertical="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/textLightMain"
+        android:textColor="@color/textDarkMain"
         android:textSize="18sp"/>
 
 </RelativeLayout>

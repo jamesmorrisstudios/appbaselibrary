@@ -59,8 +59,8 @@
     </string-array>
 
     <string-array name="help_license_library_code_item_9">
-        <item name="title">Library: Lars Werkman</item>
-        <item name="link_site">https://github.com/LarsWerkman/HoloColorPicker</item>
+        <item name="title">Library: QuadFlask</item>
+        <item name="link_site">https://github.com/QuadFlask/colorpicker</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 

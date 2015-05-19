@@ -1,9 +1,8 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -21,9 +20,13 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.TutorialFragment;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.ColorSelector;
 import com.jamesmorrisstudios.materialuilibrary.dialogs.MaterialDialog;
+import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.ColorPickerView;
+import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.OnColorSelectedListener;
+import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
+import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.materialuilibrary.dialogs.time.TimePickerDialog;
+import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
@@ -391,9 +394,27 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void createColorPickerDialog(int intialColor, ColorSelector.OnColorSelectedListener onColorSelectedListener) {
-        ColorSelector colorSelector = new ColorSelector(this, intialColor, onColorSelectedListener);
-        colorSelector.show();
+    public void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener) {
+        ColorPickerDialogBuilder.with(this)
+            .setTitle("Choose LED Color")
+            .initialColor(intialColor)
+            .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
+            .noSliders()
+            .density(6)
+            .setOnColorSelectedListener(new OnColorSelectedListener() {
+                @Override
+                public void onColorSelected(int selectedColor) {
+
+                }
+            })
+            .setPositiveButton("OK", onColorPickerClickListener)
+            .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                }
+            })
+            .build()
+            .show();
     }
 
 }

@@ -36,7 +36,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/help_how_to_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/textLightMain"
+            android:textColor="@color/textDarkMain"
             android:textSize="@dimen/header_size" />
 
         <View
@@ -52,7 +52,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textLightMain"
+            android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
             android:text="@string/help_how_to_read"
@@ -66,7 +66,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textLightMain"
+            android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
             android:text="@string/help_how_to_watch"
@@ -79,7 +79,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/help_about_header"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/textLightMain"
+            android:textColor="@color/textDarkMain"
             android:textSize="@dimen/header_size" />
 
         <View
@@ -94,7 +94,7 @@
             android:gravity="center_horizontal"
             android:text="@string/help_about_studio"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textLightMain"
+            android:textColor="@color/textDarkMain"
             android:textSize="@dimen/item_size" />
 
         <TextView
@@ -105,7 +105,7 @@
             android:gravity="center_horizontal"
             android:text="@string/help_about_email"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textLightMain"
+            android:textColor="@color/textDarkMain"
             android:textColorLink="@color/accent"
             android:textSize="@dimen/item_size" />
 
@@ -156,6 +156,7 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="4dp"
+                android:textColor="@color/textDarkMain"
                 android:text="@string/help_rate_question"
                 android:textSize="@dimen/item_size" />
 
@@ -165,7 +166,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/textLightMain"
+                android:background="@color/textDarkMain"
                 android:clickable="true"
                 android:text="@string/help_rate_now"
                 android:textSize="@dimen/item_size" />
@@ -179,7 +180,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textLightMain"
+            android:background="@color/textDarkMain"
             android:clickable="true"
             android:text="@string/help_more_by"
             android:textSize="@dimen/item_size" />
@@ -191,7 +192,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textLightMain"
+            android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
             android:text="@string/help_license"
@@ -205,7 +206,7 @@
             android:layout_marginLeft="24dp"
             android:gravity="bottom|left"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textLightMain"
+            android:textColor="@color/textDarkMain"
             android:textSize="@dimen/item_small_size" />
 
     </LinearLayout>

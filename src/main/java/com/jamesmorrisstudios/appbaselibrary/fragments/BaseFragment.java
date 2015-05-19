@@ -10,8 +10,8 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.jamesmorrisstudios.materialuilibrary.dialogs.ColorSelector;
 import com.jamesmorrisstudios.materialuilibrary.dialogs.MaterialDialog;
+import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.materialuilibrary.dialogs.time.TimePickerDialog;
 import com.jamesmorrisstudios.materialuilibrary.floatingactionbutton.FloatingActionButton;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
@@ -163,7 +163,7 @@ public abstract class BaseFragment extends Fragment {
          */
         void createPromptDialog(@NonNull String title, @NonNull String content, MaterialDialog.ButtonCallback callback);
 
-        void createColorPickerDialog(int intialColor, ColorSelector.OnColorSelectedListener onColorSelectedListener);
+        void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener);
     }
 
     /**

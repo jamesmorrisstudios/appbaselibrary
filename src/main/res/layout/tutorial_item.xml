@@ -11,21 +11,21 @@
         android:layout_gravity="left"
         android:layout_marginLeft="18dp"
         android:gravity="left"
-        android:textColor="@color/textLightMain"
+        android:textColor="@color/textDarkMain"
         android:textSize="23sp" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginLeft="18dp"
-        android:background="@color/textLightDivider" />
+        android:background="@color/textDarkDivider" />
 
     <TextView
         android:id="@+id/textDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
-        android:textColor="@color/textLightMain"
+        android:textColor="@color/textDarkMain"
         android:textSize="18sp" />
 
     <ImageView
