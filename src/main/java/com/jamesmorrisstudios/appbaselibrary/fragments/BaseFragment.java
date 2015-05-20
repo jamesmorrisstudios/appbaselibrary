@@ -160,7 +160,6 @@ public abstract class BaseFragment extends Fragment {
          *
          * @param title    Title of the prompt
          * @param content  Content text
-         * @param callback Callback listener
          */
         void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative);
 

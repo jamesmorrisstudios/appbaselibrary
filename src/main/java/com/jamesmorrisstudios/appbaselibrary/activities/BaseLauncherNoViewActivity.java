@@ -128,9 +128,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
     public final void clearBackStack() {
         clearingBackStack = true;
-        while (hasBackStack()) {
-            getSupportFragmentManager().popBackStack();
-        }
+        getSupportFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
         clearingBackStack = false;
     }
 
@@ -394,7 +392,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener) {
         ColorPickerDialogBuilder.with(this)
-            .setTitle("Choose LED Color")
+            .setTitle("Choose Color")
             .initialColor(intialColor)
             .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
             .noSliders()
