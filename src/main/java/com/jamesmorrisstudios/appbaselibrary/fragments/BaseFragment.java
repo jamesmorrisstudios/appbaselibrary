@@ -2,6 +2,7 @@ package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
@@ -10,12 +11,12 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.RelativeLayout;
 
-import com.jamesmorrisstudios.materialuilibrary.dialogs.MaterialDialog;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.time.TimePickerDialog;
-import com.jamesmorrisstudios.materialuilibrary.floatingactionbutton.FloatingActionButton;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
+import com.jamesmorrisstudios.utilitieslibrary.controls.floatingactionbutton.FloatingActionButton;
+import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
+import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
 
 /**
  * Base app fragment
@@ -161,7 +162,7 @@ public abstract class BaseFragment extends Fragment {
          * @param content  Content text
          * @param callback Callback listener
          */
-        void createPromptDialog(@NonNull String title, @NonNull String content, MaterialDialog.ButtonCallback callback);
+        void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative);
 
         void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener);
     }

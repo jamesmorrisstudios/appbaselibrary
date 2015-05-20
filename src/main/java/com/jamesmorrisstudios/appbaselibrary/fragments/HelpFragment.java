@@ -13,8 +13,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
+import com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat;
 
 /**
  * Created by James on 4/29/2015.

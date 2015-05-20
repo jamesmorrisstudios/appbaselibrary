@@ -45,8 +45,4 @@
     <!-- Dividers -->
     <color name="textDarkDivider">#1E0D47A1</color>
 
-    <!--
-    <color name="mdtp_accent_color">@color/accent</color>
-    <color name="mdtp_accent_color_dark">@color/primaryDark</color>
-    -->
 </resources>

@@ -12,11 +12,11 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleAdapter;
-import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleContainer;
-import com.jamesmorrisstudios.materialuilibrary.listAdapters.BaseRecycleItem;
-import com.jamesmorrisstudios.materialuilibrary.recyclemanager.LayoutManager;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleItem;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
+import com.tonicartos.superslim.LayoutManager;
 
 import java.util.ArrayList;
 

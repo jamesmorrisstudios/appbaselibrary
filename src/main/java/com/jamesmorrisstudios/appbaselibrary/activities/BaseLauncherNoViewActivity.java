@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -20,13 +21,11 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.TutorialFragment;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.MaterialDialog;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.ColorPickerView;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.OnColorSelectedListener;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
-import com.jamesmorrisstudios.materialuilibrary.dialogs.time.TimePickerDialog;
-import com.jamesmorrisstudios.utilitieslibrary.Utils;
+import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
+import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
+import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
+import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
+import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
@@ -383,13 +382,12 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void createPromptDialog(@NonNull String title, @NonNull String content, MaterialDialog.ButtonCallback callback) {
-        new MaterialDialog.Builder(this)
-                .title(title)
-                .content(content)
-                .callback(callback)
-                .positiveText(R.string.agree)
-                .negativeText(R.string.disagree)
+    public void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative) {
+        new AlertDialog.Builder(this, R.style.alertDialog)
+                .setTitle(title)
+                .setMessage(content)
+                .setPositiveButton(R.string.agree, onPositive)
+                .setNegativeButton(R.string.disagree, onNegative)
                 .show();
     }
 

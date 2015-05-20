@@ -44,7 +44,7 @@
             android:layout_height="1dp"
             android:background="@color/textLightDivider" />
 
-        <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
             style="@style/help_read_how"
             android:id="@+id/howToUseRead"
             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
             android:text="@string/help_how_to_read"
             android:textSize="@dimen/item_size" />
 
-        <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
             style="@style/help_watch_how"
             android:id="@+id/howToUseWatch"
             android:layout_width="wrap_content"
@@ -160,7 +160,7 @@
                 android:text="@string/help_rate_question"
                 android:textSize="@dimen/item_size" />
 
-            <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+            <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
                 android:id="@+id/btn_rateNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -173,7 +173,7 @@
 
         </LinearLayout>
 
-        <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
             android:id="@+id/btn_moreBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -185,7 +185,7 @@
             android:text="@string/help_more_by"
             android:textSize="@dimen/item_size" />
 
-        <com.jamesmorrisstudios.materialuilibrary.controls.ButtonFlat
+        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
             android:id="@+id/helpLicense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

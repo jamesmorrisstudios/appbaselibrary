@@ -27,11 +27,12 @@
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
         <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_mtrl</item>
 
+        <!--
         <item name="md_dark_theme">false</item>
         <item name="md_background_color">@color/primaryLight</item>
         <item name="md_title_color">@color/textDarkMain</item>
         <item name="md_content_color">@color/textDarkSecondary</item>
-
+-->
         <item name="spinnerDropDownItemStyle">@style/CustomDropDownItemStyle</item>
 
     </style>
@@ -81,6 +82,17 @@
     <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="alertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/textDarkMain</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorSecondary">@color/textDarkSecondary</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/primaryLight</item>
     </style>
 
 
