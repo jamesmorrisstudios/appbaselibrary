@@ -61,11 +61,6 @@
         <item name="android:textColor">@color/textLightMain</item>
     </style>
 
-    <!-- Card view theme -->
-    <style name="Theme.cardView" parent="Theme.AppCompat">
-        <item name="android:textColorSecondary">@color/textDarkSecondary</item>
-    </style>
-
     <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>

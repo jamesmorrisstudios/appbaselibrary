@@ -9,19 +9,17 @@
     <color name="primaryLight">#f9f9f9</color>
     <!-- Blue 700 -->
     <color name="primaryDark">#1976D2</color>
-    <!-- Blue 900 -->
-    <color name="primaryBackground">#FAFAFA</color>
 
     <color name="tintColor">@color/iconDark</color>
 
-    <!-- Red A200 -->
+    <!-- Accent -->
     <color name="accent">#00E676</color>
     <color name="accentLight">#69F0AE</color>
     <color name="accentDark">#00C853</color>
     <color name="accentDisabled">#00C853</color>
 
     <!-- Red A200 at 80% opacity  -->
-    <color name="textAccent">#CCFF5252</color>
+    <color name="textAccent">#CC00E676</color>
     <color name="iconLight">@color/textLightMain</color>
     <color name="iconDark">@color/textDarkSecondary</color>
     <color name="dividerLight">#B6B6B6</color>

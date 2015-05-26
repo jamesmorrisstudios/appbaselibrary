@@ -108,7 +108,7 @@
             android:text="@string/help_about_email"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/textDarkMain"
-            android:textColorLink="@color/accent"
+            android:textColorLink="@color/textAccent"
             android:textSize="@dimen/item_size" />
 
         <TextView
@@ -121,7 +121,7 @@
             android:text="@string/help_about_site"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/textDarkMain"
-            android:textColorLink="@color/accent"
+            android:textColorLink="@color/textAccent"
             android:textSize="@dimen/item_size" />
 
         <!-- Social Media badges -->
