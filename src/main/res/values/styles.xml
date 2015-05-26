@@ -2,7 +2,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Set primary coloring in the app -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
@@ -16,23 +16,10 @@
         <item name="colorSwitchThumbNormal">@color/accent</item>
         -->
 
-        <!-- You can also set colorControlNormal, colorControlActivated
-         colorControlHighlight, and colorSwitchThumbNormal. -->
-
-        <!-- Set the backgrounds so we don't redraw them -->
-        <item name="android:windowBackground">@color/primaryBackground</item>
-        <item name="android:colorBackground">@color/primaryBackground</item>
-
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_mtrl</item>
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
         <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_mtrl</item>
 
-        <!--
-        <item name="md_dark_theme">false</item>
-        <item name="md_background_color">@color/primaryLight</item>
-        <item name="md_title_color">@color/textDarkMain</item>
-        <item name="md_content_color">@color/textDarkSecondary</item>
--->
         <item name="spinnerDropDownItemStyle">@style/CustomDropDownItemStyle</item>
 
     </style>

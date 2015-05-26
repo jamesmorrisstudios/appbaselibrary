@@ -16,7 +16,8 @@
 
     <string name="help_about_header">About</string>
     <string name="help_about_studio">James Morris Studios</string>
-    <string name="help_about_email">james.morris.studios@gmail.com</string>
+    <string name="help_about_email">support@jamesmorrisstudios.us</string>
+    <string name="help_about_site">www.jamesmorrisstudios.us</string>
     <string name="help_license">Licenses</string>
 
     <string name="help_link_twitter">https://twitter.com/J_M_Studios</string>

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.SwitchCompat;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.preferences.Preferences;
+
+import java.util.ArrayList;
 
 /**
  * Created by James on 4/29/2015.
@@ -46,8 +49,8 @@ public class SettingsFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        Log.v("SettingsFragment", "On Create View");
         LinearLayout settingsContainer = (LinearLayout) view.findViewById(R.id.settings_container);
-
         TypedArray settings = getResources().obtainTypedArray(R.array.settings_array);
         for (int i = 0; i < settings.length(); i++) {
             int id = settings.getResourceId(i, 0);
@@ -58,11 +61,11 @@ public class SettingsFragment extends BaseFragment {
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);
                     int idSecondary = item.getResourceId(3, 0);
-                    boolean type = getResources().getBoolean(idType);
+                    boolean defaultVal = getResources().getBoolean(idType);
                     String key = getResources().getString(idKey);
                     String primary = getResources().getString(idPrimary);
                     String secondary = getResources().getString(idSecondary);
-                    addBooleanSettingsItem(settingsContainer, primary, secondary, key);
+                    addBooleanSettingsItem(settingsContainer, primary, secondary, key, defaultVal);
                 }
                 item.recycle();
             }
@@ -71,16 +74,17 @@ public class SettingsFragment extends BaseFragment {
         return view;
     }
 
-    private void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key) {
+    private void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, boolean defaultValue) {
         View item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_boolean, null);
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
         TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
         SwitchCompat switchItem = (SwitchCompat) item.findViewById(R.id.switchItem);
-        switchItem.setChecked(Preferences.getBoolean(getString(R.string.settings_pref), key, true));
+        switchItem.setChecked(Preferences.getBoolean(getString(R.string.settings_pref), key, defaultValue));
         switchItem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Preferences.putBoolean(getString(R.string.settings_pref), key, isChecked);
+                Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
             }
         });
         primaryItem.setText(primary);
