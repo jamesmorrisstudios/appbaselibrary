@@ -30,4 +30,7 @@
 
     <string name="todo">Coming Soon</string>
 
+    <string name="settings_base_item_0_primary">Immersive (Fullscreen) Mode</string>
+    <string name="settings_base_item_0_secondary">Uncheck to show the navigation bar and status bar</string>
+
 </resources>

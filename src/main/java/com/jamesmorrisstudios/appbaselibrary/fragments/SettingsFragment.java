@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.app.Activity;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -24,18 +25,36 @@ import java.util.ArrayList;
 public class SettingsFragment extends BaseFragment {
     public static final String TAG = "SettingsFragment";
 
+    private OnSettingsListener settingListener;
+
     /**
      * Required empty public constructor
      */
-    public SettingsFragment() {
+    public SettingsFragment() {}
+
+    /**
+     * Attach to the activity
+     *
+     * @param activity Activity to attach
+     */
+    @Override
+    public void onAttach(@NonNull Activity activity) {
+        super.onAttach(activity);
+        try {
+            settingListener = (OnSettingsListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnSettingsListener");
+        }
     }
 
     /**
-     * @param savedInstanceState Saved instance state
+     * Detach from activity
      */
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onDetach() {
+        super.onDetach();
+        settingListener = null;
     }
 
     /**
@@ -50,10 +69,30 @@ public class SettingsFragment extends BaseFragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
         Log.v("SettingsFragment", "On Create View");
-        LinearLayout settingsContainer = (LinearLayout) view.findViewById(R.id.settings_container);
+        addSettingsOptions(view);
+        return view;
+    }
+
+    protected final LinearLayout getSettingsContainer(View view) {
+        return (LinearLayout) view.findViewById(R.id.settings_container);
+    }
+
+    protected final void addSettingsOptions(View view) {
+        LinearLayout settingsContainer = getSettingsContainer(view);
+        TypedArray settingsBase = getResources().obtainTypedArray(R.array.settings_base_array);
+        addSettings(settingsContainer, settingsBase);
+        settingsBase.recycle();
+        TypedArray settingsPlay = getResources().obtainTypedArray(R.array.settings_google_play_array);
+        addSettings(settingsContainer, settingsPlay);
+        settingsPlay.recycle();
         TypedArray settings = getResources().obtainTypedArray(R.array.settings_array);
-        for (int i = 0; i < settings.length(); i++) {
-            int id = settings.getResourceId(i, 0);
+        addSettings(settingsContainer, settings);
+        settings.recycle();
+    }
+
+    private void addSettings(LinearLayout settingsContainer, TypedArray settingsArr) {
+        for (int i = 0; i < settingsArr.length(); i++) {
+            int id = settingsArr.getResourceId(i, 0);
             if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);
                 if (item.length() == 4) {
@@ -70,8 +109,6 @@ public class SettingsFragment extends BaseFragment {
                 item.recycle();
             }
         }
-        settings.recycle();
-        return view;
     }
 
     private void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, boolean defaultValue) {
@@ -84,6 +121,7 @@ public class SettingsFragment extends BaseFragment {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 Preferences.putBoolean(getString(R.string.settings_pref), key, isChecked);
+                settingListener.onSettingsChanged();
                 Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
             }
         });
@@ -100,6 +138,14 @@ public class SettingsFragment extends BaseFragment {
     @Override
     protected void afterViewCreated() {
 
+    }
+
+    public interface OnSettingsListener {
+
+        /**
+         * Called on settings change event
+         */
+        void onSettingsChanged();
     }
 
 }

@@ -2,6 +2,8 @@ package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.os.Build;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -21,10 +23,12 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.TutorialFragment;
+import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
+import com.jamesmorrisstudios.utilitieslibrary.preferences.Preferences;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 /**
@@ -39,9 +43,19 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         BaseMainRecycleListFragment.OnMenuItemClickedListener,
         HelpFragment.OnHelpSubPageListener,
         BaseFragment.OnDialogListener,
-        BaseFragment.OnUtilListener {
+        BaseFragment.OnUtilListener,
+        SettingsFragment.OnSettingsListener {
 
     private boolean clearingBackStack = false;
+
+    /**
+     * @param savedInstanceState
+     */
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        updateImmersiveMode(true);
+    }
 
     /**
      * The fragment is changing. This is called right after the fragment is notified
@@ -249,7 +263,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @return The fragment
      */
     @NonNull
-    protected final SettingsFragment getSettingsFragment() {
+    protected SettingsFragment getSettingsFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         SettingsFragment fragment = (SettingsFragment) fragmentManager.findFragmentByTag(SettingsFragment.TAG);
         if (fragment == null) {
@@ -261,7 +275,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     /**
      * Loads the help fragment into the main view
      */
-    protected final void loadSettingsFragment() {
+    protected void loadSettingsFragment() {
         SettingsFragment fragment = getSettingsFragment();
         loadFragment(fragment, SettingsFragment.TAG, true);
         getSupportFragmentManager().executePendingTransactions();
@@ -362,6 +376,54 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onTutorialClicked() {
         loadTutorialFragment();
+    }
+
+    /**
+     * Called on settings change event
+     */
+    @Override
+    public void onSettingsChanged() {
+        updateImmersiveMode(true);
+    }
+
+    /**
+     * @param hasFocus
+     */
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        updateImmersiveMode(hasFocus);
+    }
+
+    /**
+     * @param hasFocus
+     */
+    protected final void updateImmersiveMode(boolean hasFocus) {
+        int newUiOptions = 0;
+        String pref = AppUtil.getContext().getString(R.string.settings_pref);
+        String key = AppUtil.getContext().getString(R.string.pref_immersive);
+        if (Preferences.getBoolean(pref, key, false)) {
+            if (hasFocus) {
+                if (Build.VERSION.SDK_INT >= 16) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                }
+                if (Build.VERSION.SDK_INT >= 19) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+                }
+                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+            }
+        } else {
+            if (hasFocus) {
+                if (Build.VERSION.SDK_INT >= 16) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                }
+                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+            }
+        }
     }
 
     /**
