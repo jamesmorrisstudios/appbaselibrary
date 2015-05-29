@@ -50,4 +50,5 @@ dependencies {
     compile 'com.android.support:support-v4:22.2.0'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.jamesmorrisstudios:utilitieslibrary:1.1'
+    compile 'com.jamesmorrisstudios:library:1.0'
 }

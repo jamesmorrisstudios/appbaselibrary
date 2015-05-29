@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -101,7 +102,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     protected abstract void startDataLoad(boolean forcedRefresh);
 
-    protected abstract void itemClicked(BaseRecycleItem item);
+    protected abstract void itemClick(@NonNull BaseRecycleContainer item);
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
@@ -163,7 +164,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      */
     @Override
     public void itemClicked(@NonNull BaseRecycleContainer item) {
-        itemClicked(item.getItem());
+        Log.v("BaseRecycleListFragment", "Item Clicked");
+        itemClick(item);
     }
 
     /**
