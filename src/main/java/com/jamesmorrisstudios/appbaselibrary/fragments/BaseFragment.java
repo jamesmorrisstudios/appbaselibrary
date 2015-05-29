@@ -3,17 +3,19 @@ package com.jamesmorrisstudios.appbaselibrary.fragments;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
-import com.jamesmorrisstudios.utilitieslibrary.controls.floatingactionbutton.FloatingActionButton;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
@@ -59,8 +61,23 @@ public abstract class BaseFragment extends Fragment {
 
     private void initFab() {
         if (getView() instanceof RelativeLayout) {
+            int[][] states = new int[][] {
+                    new int[] { android.R.attr.state_enabled}, // enabled
+                    new int[] {-android.R.attr.state_enabled}, // disabled
+                    new int[] {-android.R.attr.state_checked}, // unchecked
+                    new int[] { android.R.attr.state_pressed}  // pressed
+            };
+
+            int[] colors = new int[] {
+                    getResources().getColor(R.color.primary),
+                    getResources().getColor(R.color.primaryDisabled),
+                    getResources().getColor(R.color.primary),
+                    getResources().getColor(R.color.primaryLight)
+            };
+            ColorStateList myList = new ColorStateList(states, colors);
             RelativeLayout relativeLayout = (RelativeLayout) getView();
-            fab = new FloatingActionButton(getActivity().getApplicationContext());
+            fab = (FloatingActionButton) getActivity().getLayoutInflater().inflate(R.layout.fab, null);
+            fab.setBackgroundTintList(myList);
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             p.setMargins(0, 0, Utils.getDipInt(24), Utils.getDipInt(16));
             p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
@@ -107,7 +124,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected final void setFabIcon(@DrawableRes int resourceId) {
-        fab.setIcon(resourceId);
+        fab.setImageResource(resourceId);
     }
 
     protected void showFab() {
