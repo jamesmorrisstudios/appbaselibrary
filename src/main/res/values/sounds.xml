@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Override with your apps sound effects -->
+    <array name="sound_effects">
+
+    </array>
+
+    <array name="music">
+
+    </array>
+
+</resources>

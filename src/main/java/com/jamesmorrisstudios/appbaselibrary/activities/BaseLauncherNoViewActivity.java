@@ -23,6 +23,7 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.TutorialFragment;
+import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
@@ -89,6 +90,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onStart() {
         super.onStart();
+        Sounds.getInstance().onStart();
     }
 
     /**
@@ -113,6 +115,16 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onStop() {
         super.onStop();
+        Sounds.getInstance().onStop();
+    }
+
+    /**
+     * Activity stop
+     */
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        Sounds.getInstance().onDestroy();
     }
 
     /**
@@ -384,6 +396,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onSettingsChanged() {
         updateImmersiveMode(true);
+        Sounds.getInstance().reloadSettings();
     }
 
     /**

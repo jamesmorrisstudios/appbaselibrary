@@ -33,4 +33,10 @@
     <string name="settings_base_item_0_primary">Immersive (Fullscreen) Mode</string>
     <string name="settings_base_item_0_secondary">Uncheck to show the navigation bar and status bar</string>
 
+    <string name="settings_base_item_1_primary">Sound Effects</string>
+    <string name="settings_base_item_1_secondary">Uncheck to disable sound effects</string>
+
+    <string name="settings_base_item_2_primary">Music</string>
+    <string name="settings_base_item_2_secondary">Uncheck to disable music</string>
+
 </resources>
