@@ -49,8 +49,11 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
     }
 
     protected abstract void initHeader(View view);
+
     protected abstract void initItem(View view);
+
     protected abstract void bindHeader(BaseRecycleItem headerItem, boolean expanded);
+
     protected abstract void bindItem(BaseRecycleItem item, boolean expanded);
 
     public final void toggleExpanded() {
@@ -85,6 +88,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      */
     public interface cardClickListener {
         void cardClicked(int position);
+
         void toggleExpanded(int position);
     }
 

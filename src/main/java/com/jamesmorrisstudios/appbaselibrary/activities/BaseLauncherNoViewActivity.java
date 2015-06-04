@@ -22,14 +22,13 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainRecycleListFragme
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
-import com.jamesmorrisstudios.appbaselibrary.fragments.TutorialFragment;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Preferences;
+import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 /**
@@ -194,31 +193,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     /**
-     * Gets the tutorial fragment from the fragment manager.
-     * Creates the fragment if it does not exist yet.
-     *
-     * @return The fragment
-     */
-    @NonNull
-    protected final TutorialFragment getTutorialFragment() {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        TutorialFragment fragment = (TutorialFragment) fragmentManager.findFragmentByTag(TutorialFragment.TAG);
-        if (fragment == null) {
-            fragment = new TutorialFragment();
-        }
-        return fragment;
-    }
-
-    /**
-     * Loads the tutorial fragment into the main view
-     */
-    protected final void loadTutorialFragment() {
-        TutorialFragment fragment = getTutorialFragment();
-        loadFragment(fragment, TutorialFragment.TAG, true);
-        getSupportFragmentManager().executePendingTransactions();
-    }
-
-    /**
      * Gets the license fragment from the fragment manager.
      * Creates the fragment if it does not exist yet.
      *
@@ -323,13 +297,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             onFragmentChangeStart();
             if (addBackStack) {
                 getSupportFragmentManager().beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .addToBackStack(tag)
                         .replace(R.id.container, fragment, tag)
                         .commit();
             } else {
                 getSupportFragmentManager().beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
                         .replace(R.id.container, fragment, tag)
                         .commit();
             }
@@ -383,14 +357,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     /**
-     * Tutorial button clicked
-     */
-    @Override
-    public void onTutorialClicked() {
-        loadTutorialFragment();
-    }
-
-    /**
      * Called on settings change event
      */
     @Override
@@ -412,29 +378,31 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @param hasFocus
      */
     protected final void updateImmersiveMode(boolean hasFocus) {
-        int newUiOptions = 0;
-        String pref = AppUtil.getContext().getString(R.string.settings_pref);
-        String key = AppUtil.getContext().getString(R.string.pref_immersive);
-        if (Preferences.getBoolean(pref, key, false)) {
-            if (hasFocus) {
-                if (Build.VERSION.SDK_INT >= 16) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+        if (Build.VERSION.SDK_INT >= 11) {
+            int newUiOptions = 0;
+            String pref = AppUtil.getContext().getString(R.string.settings_pref);
+            String key = AppUtil.getContext().getString(R.string.pref_immersive);
+            if (Prefs.getBoolean(pref, key, false)) {
+                if (hasFocus) {
+                    if (Build.VERSION.SDK_INT >= 16) {
+                        newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                    }
+                    if (Build.VERSION.SDK_INT >= 19) {
+                        newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+                    }
+                    getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
                 }
-                if (Build.VERSION.SDK_INT >= 19) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            } else {
+                if (hasFocus) {
+                    if (Build.VERSION.SDK_INT >= 16) {
+                        newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                    }
+                    getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
                 }
-                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
-            }
-        } else {
-            if (hasFocus) {
-                if (Build.VERSION.SDK_INT >= 16) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-                }
-                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
             }
         }
     }
@@ -451,7 +419,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour) {
         TimePickerDialog time = new TimePickerDialog();
         time.initialize(listener, hour, minute, is24Hour);
-        time.show(getFragmentManager(), "TimePickerDialog");
+        time.show(getSupportFragmentManager(), "TimePickerDialog");
     }
 
     @Override
@@ -459,33 +427,33 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         new AlertDialog.Builder(this, R.style.alertDialog)
                 .setTitle(title)
                 .setMessage(content)
-                .setPositiveButton(R.string.agree, onPositive)
-                .setNegativeButton(R.string.disagree, onNegative)
+                .setPositiveButton(R.string.okay, onPositive)
+                .setNegativeButton(R.string.cancel, onNegative)
                 .show();
     }
 
     @Override
     public void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener) {
         ColorPickerDialogBuilder.with(this)
-            .setTitle("Choose Color")
-            .initialColor(intialColor)
-            .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
-            .noSliders()
-            .density(6)
-            .setOnColorSelectedListener(new OnColorSelectedListener() {
-                @Override
-                public void onColorSelected(int selectedColor) {
+                .setTitle(getResources().getString(R.string.chooseColor))
+                .initialColor(intialColor)
+                .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
+                .noSliders()
+                .density(6)
+                .setOnColorSelectedListener(new OnColorSelectedListener() {
+                    @Override
+                    public void onColorSelected(int selectedColor) {
 
-                }
-            })
-            .setPositiveButton("OK", onColorPickerClickListener)
-            .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            })
-            .build()
-            .show();
+                    }
+                })
+                .setPositiveButton(getResources().getString(R.string.okay), onColorPickerClickListener)
+                .setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .build()
+                .show();
     }
 
 }

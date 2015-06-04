@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Виберіть колір"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Матеріалів, не знайдено"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Як Використовувати"</string>
+    <string name="help_how_to_read">"Дізнайтеся, як"</string>
+    <string name="help_how_to_watch">"Дивитися Як"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Допомога &amp; Зворотній зв'язок"</string>
+    <string name="action_settings">"Налаштування"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Як це додаток?"</string>
+    <string name="help_rate_now">"Оцініть це"</string>
+    <string name="help_more_by">"Більше Додатків"</string>
+    <string name="help_about_header">"Про"</string>
+    <string name="help_license">"Ліцензії"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Не вдалося відкрити посилання"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Включити режим Immersive"</string>
+    <string name="settings_base_item_0_secondary">"Зніміть показати навігації і статус бари"</string>
+    <string name="settings_base_item_1_primary">"Включити звукові ефекти"</string>
+    <string name="settings_base_item_1_secondary">"Зніміть цей прапорець для відключення звукових ефектів"</string>
+    <string name="settings_base_item_2_primary">"Включити музику"</string>
+    <string name="settings_base_item_2_secondary">"Зніміть цей прапорець для відключення музики"</string>
+
+</resources>

@@ -1,6 +1,5 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
-import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
@@ -10,13 +9,18 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
+import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
+import com.nineoldandroids.animation.Animator;
+import com.nineoldandroids.view.ViewHelper;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 
@@ -29,7 +33,7 @@ public abstract class BaseFragment extends Fragment {
     protected OnDialogListener dialogListener;
     protected OnUtilListener utilListener;
     private FloatingActionButton fab;
-    private ObjectAnimator animShow, animHide;
+    private transient boolean animRunning = false;
     private float fabShownPos, fabHidePos;
 
     public abstract void onBack();
@@ -60,23 +64,35 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private void initFab() {
-        if (getView() instanceof RelativeLayout) {
-            int[][] states = new int[][] {
-                    new int[] { android.R.attr.state_enabled}, // enabled
-                    new int[] {-android.R.attr.state_enabled}, // disabled
-                    new int[] {-android.R.attr.state_checked}, // unchecked
-                    new int[] { android.R.attr.state_pressed}  // pressed
+        if(!(getView() instanceof ViewGroup)) {
+            return;
+        }
+        ViewGroup viewGroup = (ViewGroup) getView();
+        RelativeLayout relativeLayout = null;
+        if(viewGroup instanceof RelativeLayout) {
+            relativeLayout = (RelativeLayout)viewGroup;
+        } else if(viewGroup.getChildCount() == 1){
+            if(viewGroup.getChildAt(0) instanceof RelativeLayout) {
+                relativeLayout = (RelativeLayout)viewGroup.getChildAt(0);
+            }
+        }
+        if (relativeLayout != null) {
+            int[][] states = new int[][]{
+                    new int[]{android.R.attr.state_enabled}, // enabled
+                    new int[]{-android.R.attr.state_enabled}, // disabled
+                    new int[]{-android.R.attr.state_checked}, // unchecked
+                    new int[]{android.R.attr.state_pressed}  // pressed
             };
 
-            int[] colors = new int[] {
+            int[] colors = new int[]{
                     getResources().getColor(R.color.primary),
                     getResources().getColor(R.color.primaryDisabled),
                     getResources().getColor(R.color.primary),
                     getResources().getColor(R.color.primaryLight)
             };
             ColorStateList myList = new ColorStateList(states, colors);
-            RelativeLayout relativeLayout = (RelativeLayout) getView();
             fab = (FloatingActionButton) getActivity().getLayoutInflater().inflate(R.layout.fab, null);
+            Log.v("BaseFragment", "Got Here "+(fab != null));
             fab.setBackgroundTintList(myList);
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             p.setMargins(0, 0, Utils.getDipInt(24), Utils.getDipInt(16));
@@ -90,6 +106,8 @@ public abstract class BaseFragment extends Fragment {
                     fabClicked();
                 }
             });
+        } else {
+            Log.v("BaseFragment", "Parent is not RelativeLayout. unsupported fab");
         }
     }
 
@@ -116,15 +134,23 @@ public abstract class BaseFragment extends Fragment {
 
     protected final void setFabEnable(boolean enable) {
         if (enable) {
+            Log.v("BaseFragment", "Start enable");
             initFab();
-            fab.setVisibility(View.VISIBLE);
+            Log.v("BaseFragment", "After Init");
+            if(fab != null) {
+                fab.setVisibility(View.VISIBLE);
+            }
         } else {
-            fab.setVisibility(View.GONE);
+            if(fab != null) {
+                fab.setVisibility(View.GONE);
+            }
         }
     }
 
     protected final void setFabIcon(@DrawableRes int resourceId) {
-        fab.setImageResource(resourceId);
+        if(fab != null) {
+            fab.setImageResource(resourceId);
+        }
     }
 
     protected void showFab() {
@@ -132,14 +158,23 @@ public abstract class BaseFragment extends Fragment {
             return;
         }
         if (fabShownPos == 0 || fabHidePos == 0) {
-            fabShownPos = fab.getY();
+            fabShownPos = ViewHelper.getY(fab);
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if (animShow != null && animShow.isRunning() || fab.getY() == fabShownPos) {
+        if (animRunning || ViewHelper.getY(fab) == fabShownPos) {
             return;
         }
-        animShow = AnimatorControl.translateY(fab, (fabHidePos - fabShownPos), 0, 250, 0);
-        animShow.start();
+        AnimatorControl.translateYAutoStart(fab, (fabHidePos - fabShownPos), 0, 250, 0, new AnimatorStartEndListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                animRunning = true;
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                animRunning = false;
+            }
+        });
     }
 
     protected final void hideFab() {
@@ -147,14 +182,23 @@ public abstract class BaseFragment extends Fragment {
             return;
         }
         if (fabShownPos == 0 || fabHidePos == 0) {
-            fabShownPos = fab.getY();
+            fabShownPos = ViewHelper.getY(fab);
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if (animHide != null && animHide.isRunning() || fab.getY() == fabHidePos) {
+        if (animRunning || ViewHelper.getY(fab) == fabHidePos) {
             return;
         }
-        animHide = AnimatorControl.translateY(fab, 0, (fabHidePos - fabShownPos), 250, 0);
-        animHide.start();
+        AnimatorControl.translateYAutoStart(fab, 0, (fabHidePos - fabShownPos), 250, 0, new AnimatorStartEndListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                animRunning = true;
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                animRunning = false;
+            }
+        });
     }
 
     /**
@@ -175,8 +219,8 @@ public abstract class BaseFragment extends Fragment {
         /**
          * Build a ok/cancel prompt
          *
-         * @param title    Title of the prompt
-         * @param content  Content text
+         * @param title   Title of the prompt
+         * @param content Content text
          */
         void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative);
 

@@ -53,13 +53,13 @@ public class HelpFragment extends BaseFragment {
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                subPageListener.onTutorialClicked();
+                goToLink(getResources().getString(R.string.tutorial_link_read));
             }
         });
         watchHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToLink(getResources().getString(R.string.tutorial_link));
+                goToLink(getResources().getString(R.string.tutorial_link_watch));
             }
         });
         license.setOnClickListener(new View.OnClickListener() {
@@ -103,9 +103,9 @@ public class HelpFragment extends BaseFragment {
     }
 
     private void goToLink(String link) {
-        try{
+        try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
-        } catch(Exception ex) {
+        } catch (Exception ex) {
             Utils.toastShort(getResources().getString(R.string.help_link_error));
         }
     }
@@ -157,10 +157,5 @@ public class HelpFragment extends BaseFragment {
          * License fragment button clicked
          */
         void onLicenseClicked();
-
-        /**
-         * Tutorial fragment button clicked
-         */
-        void onTutorialClicked();
     }
 }

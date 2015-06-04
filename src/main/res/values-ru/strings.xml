@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Выберите цвет"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Материалов не найдено"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Как Использовать"</string>
+    <string name="help_how_to_read">"Узнайте, как"</string>
+    <string name="help_how_to_watch">"Смотреть Как"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Помощь &amp; Обратная связь"</string>
+    <string name="action_settings">"Настройки"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Как это приложение?"</string>
+    <string name="help_rate_now">"Оцените это"</string>
+    <string name="help_more_by">"Больше Приложений"</string>
+    <string name="help_about_header">"О"</string>
+    <string name="help_license">"Лицензии"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Не удалось открыть ссылку"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Включить режим Immersive"</string>
+    <string name="settings_base_item_0_secondary">"Снимите показать навигации и статус бары"</string>
+    <string name="settings_base_item_1_primary">"Включить звуковые эффекты"</string>
+    <string name="settings_base_item_1_secondary">"Снимите этот флажок для отключения звуковых эффектов"</string>
+    <string name="settings_base_item_2_primary">"Включить музыку"</string>
+    <string name="settings_base_item_2_secondary">"Снимите этот флажок для отключения музыки"</string>
+
+</resources>

@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Pilih Warna"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Tidak ada item yang ditemukan"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Cara Menggunakan"</string>
+    <string name="help_how_to_read">"Baca Bagaimana"</string>
+    <string name="help_how_to_watch">"Perhatikan Bagaimana"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Bantuan &amp; Feedback"</string>
+    <string name="action_settings">"Pengaturan"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Seperti aplikasi ini?"</string>
+    <string name="help_rate_now">"Beri Sekarang"</string>
+    <string name="help_more_by">"Lebih"</string>
+    <string name="help_about_header">"Tentang"</string>
+    <string name="help_license">"Lisensi"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Gagal membuka link"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Aktifkan mode Immersive"</string>
+    <string name="settings_base_item_0_secondary">"Hapus tanda centang untuk menunjukkan bar navigasi dan status"</string>
+    <string name="settings_base_item_1_primary">"Aktifkan Efek Suara"</string>
+    <string name="settings_base_item_1_secondary">"Hapus tanda centang untuk menonaktifkan efek suara"</string>
+    <string name="settings_base_item_2_primary">"Aktifkan Musik"</string>
+    <string name="settings_base_item_2_secondary">"Hapus tanda centang untuk menonaktifkan musik"</string>
+
+</resources>

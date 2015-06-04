@@ -67,15 +67,15 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         int sectionManager = -1;
         int sectionFirstPosition = 0;
 
-        for(int i=0; i<items.size(); i++) {
-            if(items.get(i).isHeader) {
+        for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).isHeader) {
                 sectionFirstPosition = i;
                 sectionManager = (sectionManager + 1) % 2;
             }
             mItemsTemp.add(new LineItem(sectionManager, sectionFirstPosition, items.get(i)));
         }
 
-        while(!mItems.isEmpty()) {
+        while (!mItems.isEmpty()) {
             mItems.remove(0);
         }
         mItems.addAll(mItemsTemp);
@@ -120,10 +120,10 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
 
             @Override
             public void toggleExpanded(int position) {
-                if(expandedPosition == position) { //This item was expanded
+                if (expandedPosition == position) { //This item was expanded
                     expandedPosition = -1;
                     notifyItemChanged(position);
-                } else if(expandedPosition >= 0) { //A Different item was expanded
+                } else if (expandedPosition >= 0) { //A Different item was expanded
                     int prev = expandedPosition;
                     expandedPosition = position;
                     notifyItemChanged(prev);
@@ -162,7 +162,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         if (item.reminder.isHeader) {
             lp.headerDisplay = mHeaderDisplay;
             //if (lp.isHeaderInline() || (mMarginsFixed && !lp.isHeaderOverlay())) {
-                lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
             //} else {
             //    lp.width = ViewGroup.LayoutParams.WRAP_CONTENT;
             //}

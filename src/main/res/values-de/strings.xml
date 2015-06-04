@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Wählen Sie Farbe"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Keine Einträge gefunden"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"So verwenden Sie"</string>
+    <string name="help_how_to_read">"Lesen Sie wie"</string>
+    <string name="help_how_to_watch">"Beobachten Sie, wie"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Hilfe &amp; Feedback"</string>
+    <string name="action_settings">"Einstellungen"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Gefällt Ihnen dieses app?"</string>
+    <string name="help_rate_now">"Jetzt bewerten"</string>
+    <string name="help_more_by">"Mehr Apps"</string>
+    <string name="help_about_header">"Über"</string>
+    <string name="help_license">"Lizenzen"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Fehler beim Link zu öffnen"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Aktivieren Immersive-Modus"</string>
+    <string name="settings_base_item_0_secondary">"Deaktivieren Sie die Option, um die Navigation und Statusleisten zeigen"</string>
+    <string name="settings_base_item_1_primary">"Aktivieren Sie Soundeffekte"</string>
+    <string name="settings_base_item_1_secondary">"Deaktivieren Sie die Option, um Sound-Effekte deaktivieren"</string>
+    <string name="settings_base_item_2_primary">"Musik aktivieren"</string>
+    <string name="settings_base_item_2_secondary">"Deaktivieren Sie die Option, um Musik zu deaktivieren"</string>
+
+</resources>

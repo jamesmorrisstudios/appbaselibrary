@@ -15,9 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Preferences;
-
-import java.util.ArrayList;
+import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 
 /**
  * Created by James on 4/29/2015.
@@ -30,7 +28,8 @@ public class SettingsFragment extends BaseFragment {
     /**
      * Required empty public constructor
      */
-    public SettingsFragment() {}
+    public SettingsFragment() {
+    }
 
     /**
      * Attach to the activity
@@ -116,11 +115,11 @@ public class SettingsFragment extends BaseFragment {
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
         TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
         SwitchCompat switchItem = (SwitchCompat) item.findViewById(R.id.switchItem);
-        switchItem.setChecked(Preferences.getBoolean(getString(R.string.settings_pref), key, defaultValue));
+        switchItem.setChecked(Prefs.getBoolean(getString(R.string.settings_pref), key, defaultValue));
         switchItem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                Preferences.putBoolean(getString(R.string.settings_pref), key, isChecked);
+                Prefs.putBoolean(getString(R.string.settings_pref), key, isChecked);
                 settingListener.onSettingsChanged();
                 Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
             }

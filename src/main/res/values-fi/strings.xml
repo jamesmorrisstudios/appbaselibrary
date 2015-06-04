@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Valitse Color"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Kohteita ei löytynyt"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Kuinka käyttää"</string>
+    <string name="help_how_to_read">"Lue Kuinka"</string>
+    <string name="help_how_to_watch">"Katso Kuinka"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Ohjeet ja palaute"</string>
+    <string name="action_settings">"Asetukset"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Kuten tämän sovelluksen?"</string>
+    <string name="help_rate_now">"Äänestä It Now"</string>
+    <string name="help_more_by">"Lisää sovelluksia"</string>
+    <string name="help_about_header">"Noin"</string>
+    <string name="help_license">"Lisenssit"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Avaaminen epäonnistui linkki"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Ota Mukaansatempaava tila"</string>
+    <string name="settings_base_item_0_secondary">"Poista valinnat näyttämään navigointia ja tilariviä"</string>
+    <string name="settings_base_item_1_primary">"Ota Äänitehosteet"</string>
+    <string name="settings_base_item_1_secondary">"Poista valinnat poistaa äänitehosteet"</string>
+    <string name="settings_base_item_2_primary">"Ota Musiikki"</string>
+    <string name="settings_base_item_2_secondary">"Poista valinnat poistaa musiikkia"</string>
+
+</resources>

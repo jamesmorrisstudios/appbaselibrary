@@ -11,7 +11,7 @@ import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Preferences;
+import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 
 import java.util.HashMap;
 
@@ -21,21 +21,20 @@ import java.util.HashMap;
 public class Sounds {
 
     private static Sounds instance = null;
-
-    private Sounds() {}
-
-    public static Sounds getInstance() {
-        if(instance == null) {
-            instance = new Sounds();
-        }
-        return instance;
-    }
-
     private MediaPlayer musicPlayer = null;
     private SoundPool soundPool = null;
     private boolean soundEffectLoaded = false;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
+    private Sounds() {
+    }
+
+    public static Sounds getInstance() {
+        if (instance == null) {
+            instance = new Sounds();
+        }
+        return instance;
+    }
 
     public final void onStart() {
         soundEffectEnabled = getPrefSoundEffect();
@@ -55,16 +54,16 @@ public class Sounds {
 
     public final void reloadSettings() {
         boolean soundEffect = getPrefSoundEffect();
-        if(soundEffect != soundEffectEnabled) {
-            if(soundEffect) {
+        if (soundEffect != soundEffectEnabled) {
+            if (soundEffect) {
                 startSoundEffects();
             } else {
                 stopSoundEffects();
             }
         }
         boolean music = getPrefMusic();
-        if(music != musicEnabled) {
-            if(music) {
+        if (music != musicEnabled) {
+            if (music) {
                 startMusic();
             } else {
                 stopMusic();
@@ -75,13 +74,13 @@ public class Sounds {
     private boolean getPrefSoundEffect() {
         String pref = AppUtil.getContext().getString(R.string.settings_pref);
         String keySound = AppUtil.getContext().getString(R.string.pref_sound_effect);
-        return Preferences.getBoolean(pref, keySound, true);
+        return Prefs.getBoolean(pref, keySound, true);
     }
 
     private boolean getPrefMusic() {
         String pref = AppUtil.getContext().getString(R.string.settings_pref);
         String keyMusic = AppUtil.getContext().getString(R.string.pref_sound_effect);
-        return Preferences.getBoolean(pref, keyMusic, true);
+        return Prefs.getBoolean(pref, keyMusic, true);
     }
 
     /**
@@ -94,16 +93,16 @@ public class Sounds {
     }
 
     public final void playSoundEffect(@RawRes int itemRes) {
-        if(areSoundEffectsReady()) {
+        if (areSoundEffectsReady()) {
             int soundId = getSoundId(itemRes);
-            if(soundId != 0) {
+            if (soundId != 0) {
                 soundPool.play(soundId, 1f, 1f, 0, 0, 1f);
             }
         }
     }
 
     private int getSoundId(@RawRes int itemRes) {
-        if(soundIdMap.containsKey(itemRes)) {
+        if (soundIdMap.containsKey(itemRes)) {
             return soundIdMap.get(itemRes);
         }
         return 0;
@@ -166,11 +165,11 @@ public class Sounds {
         if (musicEnabled && musicPlayer == null) {
             TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.music);
             int musicId = 0;
-            if(sounds.length() >= 1) {
+            if (sounds.length() >= 1) {
                 musicId = sounds.getResourceId(0, 0);
             }
             sounds.recycle();
-            if(musicId == 0) {
+            if (musicId == 0) {
                 return;
             }
             musicPlayer = MediaPlayer.create(AppUtil.getContext(), musicId);

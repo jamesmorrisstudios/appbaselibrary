@@ -45,8 +45,8 @@
             android:background="@color/textLightDivider" />
 
         <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
-            style="@style/help_read_how"
             android:id="@+id/howToUseRead"
+            style="@style/help_read_how"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -59,8 +59,8 @@
             android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
-            style="@style/help_watch_how"
             android:id="@+id/howToUseWatch"
+            style="@style/help_watch_how"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -88,10 +88,10 @@
             android:background="@color/textLightDivider" />
 
         <TextView
-            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="2dp"
             android:gravity="center_horizontal"
             android:text="@string/help_about_studio"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -99,10 +99,10 @@
             android:textSize="@dimen/item_size" />
 
         <TextView
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="2dp"
             android:autoLink="web|email"
             android:gravity="center_horizontal"
             android:text="@string/help_about_email"
@@ -112,10 +112,10 @@
             android:textSize="@dimen/item_size" />
 
         <TextView
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_margin="2dp"
             android:autoLink="web"
             android:gravity="center_horizontal"
             android:text="@string/help_about_site"
@@ -171,8 +171,8 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="4dp"
-                android:textColor="@color/textDarkMain"
                 android:text="@string/help_rate_question"
+                android:textColor="@color/textDarkMain"
                 android:textSize="@dimen/item_size" />
 
             <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat

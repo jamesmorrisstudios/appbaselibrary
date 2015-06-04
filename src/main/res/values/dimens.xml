@@ -5,6 +5,4 @@
     <dimen name="header_small_size">18sp</dimen>
     <dimen name="item_size">18sp</dimen>
     <dimen name="item_small_size">15sp</dimen>
-
-
 </resources>

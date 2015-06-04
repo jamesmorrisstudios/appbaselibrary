@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Vybrat barvu"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Nebyly nalezeny žádné položky"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Jak Používat"</string>
+    <string name="help_how_to_read">"Přečtěte si, jak"</string>
+    <string name="help_how_to_watch">"Podívejte se, jak"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Help &amp; Zpětná vazba"</string>
+    <string name="action_settings">"Nastavení"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Stejně jako tuto aplikaci?"</string>
+    <string name="help_rate_now">"Hodnotit teď"</string>
+    <string name="help_more_by">"Další Aplikace"</string>
+    <string name="help_about_header">"O"</string>
+    <string name="help_license">"Licence"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Nepodařilo se otevřít odkaz"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Povolit pohlcující režim"</string>
+    <string name="settings_base_item_0_secondary">"Zrušte zaškrtnutí políčka pro zobrazení navigačních a stavové lišty"</string>
+    <string name="settings_base_item_1_primary">"Povolení zvukových efektů"</string>
+    <string name="settings_base_item_1_secondary">"Zrušte zaškrtnutí vypnout zvukové efekty"</string>
+    <string name="settings_base_item_2_primary">"Povolit Hudba"</string>
+    <string name="settings_base_item_2_secondary">"Zrušte zaškrtnutí vypnout hudbu"</string>
+
+</resources>

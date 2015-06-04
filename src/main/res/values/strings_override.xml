@@ -5,6 +5,7 @@
 
     <string name="store_link">Change This</string>
     <string name="store_link_all">Change This</string>
-    <string name="tutorial_link">Change This</string>
+    <string name="tutorial_link_read">Change This</string>
+    <string name="tutorial_link_watch">Change This</string>
 
 </resources>

@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="settings_pref">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
+    <string translatable="false" name="settings_pref">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
 
     <!-- Override to define your help tutorial -->
-    <array name="settings_array">
+    <array translatable="false" name="settings_array">
 
     </array>
 
-    <array name="settings_google_play_array">
+    <array translatable="false" name="settings_google_play_array">
 
     </array>
 
     <!-- Override to define your help tutorial -->
-    <array name="settings_base_array">
+    <array translatable="false" name="settings_base_array">
         <item>@array/settings_base_item_0</item>
         <item>@array/settings_base_item_1</item>
         <item>@array/settings_base_item_2</item>
     </array>
 
     <!-- Immersive Mode Enable -->
-    <array name="settings_base_item_0">
+    <array translatable="false" name="settings_base_item_0">
         <item name="defaultValue">@bool/settings_base_item_0_default_value</item>
         <item name="key">@string/settings_base_item_0_key</item>
         <item name="primary">@string/settings_base_item_0_primary</item>
@@ -28,8 +28,8 @@
     </array>
 
     <bool name="settings_base_item_0_default_value">false</bool>
-    <string name="settings_base_item_0_key">@string/pref_immersive</string>
-    <string name="pref_immersive">PREF_IMMERSIVE</string>
+    <string translatable="false" name="settings_base_item_0_key">@string/pref_immersive</string>
+    <string translatable="false" name="pref_immersive">PREF_IMMERSIVE</string>
 
     <!-- Sound Effects -->
     <array name="settings_base_item_1">
@@ -40,8 +40,8 @@
     </array>
 
     <bool name="settings_base_item_1_default_value">true</bool>
-    <string name="settings_base_item_1_key">@string/pref_sound_effect</string>
-    <string name="pref_sound_effect">PREF_SOUND_EFFECT</string>
+    <string translatable="false" name="settings_base_item_1_key">@string/pref_sound_effect</string>
+    <string translatable="false" name="pref_sound_effect">PREF_SOUND_EFFECT</string>
 
     <!-- Music -->
     <array name="settings_base_item_2">

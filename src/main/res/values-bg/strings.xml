@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Изберете Color"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Не са намерени артикули"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Как Да Използвам"</string>
+    <string name="help_how_to_read">"Прочетете как"</string>
+    <string name="help_how_to_watch">"Гледайте Как"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Помощ &amp; Обратна връзка"</string>
+    <string name="action_settings">"Settings"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Подобно на това приложение?"</string>
+    <string name="help_rate_now">"Оцени го сега"</string>
+    <string name="help_more_by">"Още Приложения"</string>
+    <string name="help_about_header">"Около"</string>
+    <string name="help_license">"Лицензи"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Неуспех при отваряне на линк"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Активиране на режим за виртуална реалност"</string>
+    <string name="settings_base_item_0_secondary">"Махнете отметката, за да покаже, навигация и за състоянието на баровете"</string>
+    <string name="settings_base_item_1_primary">"Активиране на звукови ефекти"</string>
+    <string name="settings_base_item_1_secondary">"Махнете отметката, за да забраните на звукови ефекти"</string>
+    <string name="settings_base_item_2_primary">"Активиране Music"</string>
+    <string name="settings_base_item_2_secondary">"Махнете отметката, за да забраните на музика"</string>
+
+</resources>

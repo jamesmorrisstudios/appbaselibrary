@@ -1,0 +1,35 @@
+<resources>
+    <!-- Dialogs -->
+    <string name="chooseColor">"Renk seç"</string>
+
+    <!-- Default no data message -->
+    <string name="default_recycle_no_data">"Hiç öğe bulunamadı"</string>
+
+    <!-- Tutorial headings -->
+    <string name="help_how_to_header">"Nasıl Kullanılır"</string>
+    <string name="help_how_to_read">"Nasıl Oku"</string>
+    <string name="help_how_to_watch">"Nasıl İzle"</string>
+
+    <!-- Toolbar menu options -->
+    <string name="action_help">"Yardım ve Geribildirim"</string>
+    <string name="action_settings">"Ayarlar"</string>
+
+    <!-- Help/about headings -->
+    <string name="help_rate_question">"Bu app gibi mi?"</string>
+    <string name="help_rate_now">"Şimdi Oranı"</string>
+    <string name="help_more_by">"Daha Fazla Uygulama"</string>
+    <string name="help_about_header">"Yaklaşık"</string>
+    <string name="help_license">"Lisanslar"</string>
+
+    <!-- Error Popup -->
+    <string name="help_link_error">"Bağlantıyı açılamadı"</string>
+
+    <!-- Settings -->
+    <string name="settings_base_item_0_primary">"Sürükleyici Modu Etkinleştir"</string>
+    <string name="settings_base_item_0_secondary">"Navigasyon ve durum çubukları göstermek için işareti kaldırın"</string>
+    <string name="settings_base_item_1_primary">"Ses Efektleri Enable"</string>
+    <string name="settings_base_item_1_secondary">"Ses efektleri devre dışı bırakmak için işaretini kaldırın"</string>
+    <string name="settings_base_item_2_primary">"Müzik etkinleştirin"</string>
+    <string name="settings_base_item_2_secondary">"Müzik devre dışı bırakmak için işaretini kaldırın"</string>
+
+</resources>

@@ -20,10 +20,10 @@
 
     <TextView
         android:id="@+id/license_site"
-        android:layout_margin="2dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
         android:autoLink="web|email"
         android:gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -33,10 +33,10 @@
 
     <TextView
         android:id="@+id/license_license"
-        android:layout_margin="2dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_margin="2dp"
         android:autoLink="web"
         android:gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceMedium"

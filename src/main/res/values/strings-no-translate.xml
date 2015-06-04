@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string translatable="false" name="help_about_studio">James Morris Studios</string>
+    <string translatable="false" name="help_about_email">support@jamesmorrisstudios.us</string>
+    <string translatable="false" name="help_about_site">www.jamesmorrisstudios.us</string>
+
+    <string translatable="false" name="help_link_twitter">https://twitter.com/J_M_Studios</string>
+    <string translatable="false" name="help_link_gPlus">https://plus.google.com/116342052026616674911</string>
+    <string translatable="false" name="help_link_fb">https://www.facebook.com/j.morris.studios</string>
+
+    <string translatable="false" name="todo">Coming Soon</string>
+
+</resources>
