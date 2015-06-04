@@ -55,6 +55,8 @@ public class Sounds {
     public final void reloadSettings() {
         boolean soundEffect = getPrefSoundEffect();
         if (soundEffect != soundEffectEnabled) {
+            soundEffectEnabled = soundEffect;
+            Log.v("Sounds", "Sound Effects... "+soundEffect);
             if (soundEffect) {
                 startSoundEffects();
             } else {
@@ -63,6 +65,8 @@ public class Sounds {
         }
         boolean music = getPrefMusic();
         if (music != musicEnabled) {
+            musicEnabled = music;
+            Log.v("Sounds", "Music... "+music);
             if (music) {
                 startMusic();
             } else {
@@ -79,7 +83,7 @@ public class Sounds {
 
     private boolean getPrefMusic() {
         String pref = AppUtil.getContext().getString(R.string.settings_pref);
-        String keyMusic = AppUtil.getContext().getString(R.string.pref_sound_effect);
+        String keyMusic = AppUtil.getContext().getString(R.string.pref_music);
         return Prefs.getBoolean(pref, keyMusic, true);
     }
 
