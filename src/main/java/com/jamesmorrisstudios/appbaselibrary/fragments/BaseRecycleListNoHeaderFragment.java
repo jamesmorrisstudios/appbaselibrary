@@ -72,14 +72,14 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
     /**
      * @return Number of columns to show
      */
-    private int getNumberColumns() {
+    protected int getNumberColumns() {
         switch (Utils.getOrientation()) {
             case PORTRAIT:
                 switch (Utils.getScreenSize()) {
                     case SMALL:
                         return 1;
                     case NORMAL:
-                        return 2;
+                        return 1;
                     case LARGE:
                         return 2;
                     case XLARGE:

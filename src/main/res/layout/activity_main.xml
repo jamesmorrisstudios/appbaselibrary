@@ -31,7 +31,7 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="@style/myToolbar"
-            app:popupTheme="@style/ThemeOverlay.toolbar"></android.support.v7.widget.Toolbar>
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
         <FrameLayout
             android:id="@+id/container"

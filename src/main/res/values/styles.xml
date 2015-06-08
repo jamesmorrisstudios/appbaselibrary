@@ -20,10 +20,12 @@
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
         <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_mtrl</item>
 
+        <!--
         <item name="spinnerDropDownItemStyle">@style/CustomDropDownItemStyle</item>
-
+-->
     </style>
 
+    <!--
     <style name="CustomDropDownItemStyle">
         parent="@android:style/Widget.AppCompat.Dark.DropDownItem.Spinner">
         <item name="android:textAppearance">@style/CustomDropDownItemTextStyle</item>
@@ -39,6 +41,7 @@
     <style name="MyDropDownListView" parent="@style/Widget.AppCompat.ListView.DropDown">
         <item name="android:background">@color/primary</item>
     </style>
+    -->
 
     <style name="myToolbar" parent="ThemeOverlay.AppCompat.Light">
         <!-- Title text -->
@@ -58,10 +61,12 @@
     </style>
 
     <!-- Theme for the toolbars in the app-->
+    <!--
     <style name="ThemeOverlay.toolbar" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:colorBackground">@color/primaryDark</item>
         <item name="android:textColor">@color/textLightMain</item>
     </style>
+    -->
 
     <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>

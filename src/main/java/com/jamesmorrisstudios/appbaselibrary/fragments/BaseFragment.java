@@ -37,6 +37,24 @@ public abstract class BaseFragment extends Fragment {
     private float fabShownPos, fabHidePos;
 
     public abstract void onBack();
+    public abstract boolean showToolbarTitle();
+
+    /**
+     * @param savedInstanceState Saved instance state
+     */
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    public void onStart() {
+        super.onStart();
+        if(showToolbarTitle()) {
+            utilListener.showToolbarTitle();
+        } else {
+            utilListener.hideToolbarTitle();
+        }
+    }
 
     /**
      * @param activity Activity to attach to
@@ -241,6 +259,16 @@ public abstract class BaseFragment extends Fragment {
          * Hides the keyboard
          */
         void hideKeyboard();
+
+        /**
+         * Hides the toolbar title
+         */
+        void hideToolbarTitle();
+
+        /**
+         * Shows the toolbar title
+         */
+        void showToolbarTitle();
     }
 
 }

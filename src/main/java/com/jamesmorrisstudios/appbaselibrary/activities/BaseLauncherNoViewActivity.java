@@ -339,6 +339,22 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     @Override
+    public void hideToolbarTitle() {
+        ActionBar actionbar = getSupportActionBar();
+        if(actionbar != null) {
+            actionbar.setDisplayShowTitleEnabled(false);
+        }
+    }
+
+    @Override
+    public void showToolbarTitle() {
+        ActionBar actionbar = getSupportActionBar();
+        if(actionbar != null) {
+            actionbar.setDisplayShowTitleEnabled(true);
+        }
+    }
+
+    @Override
     public void onSettingsClicked() {
         loadSettingsFragment();
     }

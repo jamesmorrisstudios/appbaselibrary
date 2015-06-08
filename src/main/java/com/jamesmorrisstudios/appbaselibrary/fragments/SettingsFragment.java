@@ -135,6 +135,11 @@ public class SettingsFragment extends BaseFragment {
     }
 
     @Override
+    public boolean showToolbarTitle() {
+        return true;
+    }
+
+    @Override
     protected void afterViewCreated() {
 
     }

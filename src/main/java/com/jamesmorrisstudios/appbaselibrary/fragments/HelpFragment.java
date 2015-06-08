@@ -145,6 +145,11 @@ public class HelpFragment extends BaseFragment {
 
     }
 
+    @Override
+    public boolean showToolbarTitle() {
+        return true;
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
