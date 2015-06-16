@@ -14,9 +14,8 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderAdapter;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderContainer;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
 import java.util.ArrayList;
@@ -117,7 +116,6 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        boolean mAreMarginsFixed = false;
         ViewHolder mViews = new ViewHolder(view);
         mAdapter = getAdapter(this);
         mViews.setAdapter(mAdapter);
@@ -139,9 +137,9 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
 
     protected abstract void startDataLoad(boolean forcedRefresh);
 
-    protected abstract void itemClick(@NonNull BaseRecycleContainer item);
+    protected abstract void itemClick(@NonNull BaseRecycleNoHeaderContainer item);
 
-    protected final void applyData(ArrayList<BaseRecycleContainer> data) {
+    protected final void applyData(ArrayList<BaseRecycleNoHeaderContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
             mAdapter.setItems(data);
             hideNoDataText();
@@ -149,6 +147,12 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
             showNoDataText();
         }
         endRefresh();
+    }
+
+    protected final void startRefresh(boolean forceReload) {
+        mSwipeRefreshLayout.setRefreshing(true);
+        isRefreshing = true;
+        startDataLoad(forceReload);
     }
 
     /**
@@ -200,7 +204,7 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
      * @param item Clicked reminder item
      */
     @Override
-    public void itemClicked(@NonNull BaseRecycleContainer item) {
+    public void itemClicked(@NonNull BaseRecycleNoHeaderContainer item) {
         Log.v("BaseRecycleListFragment", "Item Clicked");
         itemClick(item);
     }

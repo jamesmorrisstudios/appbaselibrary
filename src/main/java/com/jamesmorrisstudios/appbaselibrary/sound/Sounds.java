@@ -16,6 +16,7 @@ import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 import java.util.HashMap;
 
 /**
+ *
  * Created by James on 5/30/2015.
  */
 public class Sounds {
@@ -26,8 +27,7 @@ public class Sounds {
     private boolean soundEffectLoaded = false;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
-    private Sounds() {
-    }
+    private Sounds() {}
 
     public static Sounds getInstance() {
         if (instance == null) {
@@ -96,6 +96,7 @@ public class Sounds {
         return soundPool != null && soundEffectLoaded;
     }
 
+    @SuppressWarnings("unused")
     public final void playSoundEffect(@RawRes int itemRes) {
         if (areSoundEffectsReady()) {
             int soundId = getSoundId(itemRes);
@@ -115,6 +116,7 @@ public class Sounds {
     /**
      * Initializes the sound effects engine
      */
+    @SuppressWarnings("deprecation")
     private void startSoundEffects() {
         if (soundEffectEnabled && soundPool == null) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

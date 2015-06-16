@@ -113,6 +113,12 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         endRefresh();
     }
 
+    protected final void startRefresh(boolean forceReload) {
+        mSwipeRefreshLayout.setRefreshing(true);
+        isRefreshing = true;
+        startDataLoad(forceReload);
+    }
+
     /**
      * Finish up a refresh and hide the spinner
      */

@@ -29,7 +29,7 @@ import java.util.ArrayList;
 /**
  * Reminder adapter class to manage the recyclerView
  */
-public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
+public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<BaseRecycleNoHeaderViewHolder> {
     public static final String TAG = "BaseRecycleAdapter";
     private final ArrayList<LineItem> mItems;
     private OnItemClickListener mListener;
@@ -51,7 +51,7 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      *
      * @param items List of items to set.
      */
-    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
+    public final void setItems(@NonNull ArrayList<BaseRecycleNoHeaderContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
@@ -71,9 +71,9 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      * @return The reminder view holder
      */
     @Override
-    public BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseRecycleNoHeaderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(getItemResId(), parent, false);
-        return getViewHolder(view, new BaseRecycleViewHolder.cardClickListener() {
+        return getViewHolder(view, new BaseRecycleNoHeaderViewHolder.cardClickListener() {
             @Override
             public void cardClicked(int position) {
                 mListener.itemClicked(mItems.get(position).reminder);
@@ -97,7 +97,7 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
         });
     }
 
-    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
+    protected abstract BaseRecycleNoHeaderViewHolder getViewHolder(@NonNull View view, @Nullable BaseRecycleNoHeaderViewHolder.cardClickListener mListener);
 
     @LayoutRes
     protected abstract int getItemResId();
@@ -109,7 +109,7 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      * @param position Position
      */
     @Override
-    public void onBindViewHolder(@NonNull BaseRecycleViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BaseRecycleNoHeaderViewHolder holder, int position) {
         final LineItem item = mItems.get(position);
         holder.bindItem(item.reminder, position == expandedPosition);
     }
@@ -126,21 +126,21 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      * Reminder click interface
      */
     public interface OnItemClickListener {
-        void itemClicked(BaseRecycleContainer item);
+        void itemClicked(BaseRecycleNoHeaderContainer item);
     }
 
     /**
      * Individual line item for each item in recyclerView. These are recycled.
      */
     private static class LineItem {
-        public BaseRecycleContainer reminder;
+        public BaseRecycleNoHeaderContainer reminder;
 
         /**
          * Constructor
          *
          * @param reminder             Reminder line item data
          */
-        public LineItem(@NonNull BaseRecycleContainer reminder) {
+        public LineItem(@NonNull BaseRecycleNoHeaderContainer reminder) {
             this.reminder = reminder;
         }
     }

@@ -2,6 +2,7 @@ package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -379,6 +380,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public void onSettingsChanged() {
         updateImmersiveMode(true);
         Sounds.getInstance().reloadSettings();
+    }
+
+    @Override
+    public final void restartActivity() {
+        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
 
     /**

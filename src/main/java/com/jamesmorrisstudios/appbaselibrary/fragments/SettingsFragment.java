@@ -89,28 +89,30 @@ public class SettingsFragment extends BaseFragment {
         settings.recycle();
     }
 
-    private void addSettings(LinearLayout settingsContainer, TypedArray settingsArr) {
+    protected void addSettings(LinearLayout settingsContainer, TypedArray settingsArr) {
         for (int i = 0; i < settingsArr.length(); i++) {
             int id = settingsArr.getResourceId(i, 0);
             if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);
-                if (item.length() == 4) {
+                if (item.length() == 5) {
                     int idType = item.getResourceId(0, 0);
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);
                     int idSecondary = item.getResourceId(3, 0);
+                    int idRestart = item.getResourceId(4, 0);
                     boolean defaultVal = getResources().getBoolean(idType);
+                    boolean restartVal = getResources().getBoolean(idRestart);
                     String key = getResources().getString(idKey);
                     String primary = getResources().getString(idPrimary);
                     String secondary = getResources().getString(idSecondary);
-                    addBooleanSettingsItem(settingsContainer, primary, secondary, key, defaultVal);
+                    addBooleanSettingsItem(settingsContainer, primary, secondary, key, defaultVal, restartVal);
                 }
                 item.recycle();
             }
         }
     }
 
-    private void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, boolean defaultValue) {
+    protected void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, boolean defaultValue, final boolean restartActivity) {
         View item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_boolean, null);
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
         TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
@@ -122,6 +124,9 @@ public class SettingsFragment extends BaseFragment {
                 Prefs.putBoolean(getString(R.string.settings_pref), key, isChecked);
                 settingListener.onSettingsChanged();
                 Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
+                if(restartActivity) {
+                    settingListener.restartActivity();
+                }
             }
         });
         primaryItem.setText(primary);
@@ -145,6 +150,8 @@ public class SettingsFragment extends BaseFragment {
     }
 
     public interface OnSettingsListener {
+
+        void restartActivity();
 
         /**
          * Called on settings change event

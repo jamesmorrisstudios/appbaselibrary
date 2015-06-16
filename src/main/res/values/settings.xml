@@ -25,8 +25,10 @@
         <item name="key">@string/settings_base_item_0_key</item>
         <item name="primary">@string/settings_base_item_0_primary</item>
         <item name="secondary">@string/settings_base_item_0_secondary</item>
+        <item name="restart">@bool/settings_base_item_0_restart</item>
     </array>
 
+    <bool name="settings_base_item_0_restart">false</bool>
     <bool name="settings_base_item_0_default_value">false</bool>
     <string translatable="false" name="settings_base_item_0_key">@string/pref_immersive</string>
     <string translatable="false" name="pref_immersive">PREF_IMMERSIVE</string>
@@ -37,8 +39,10 @@
         <item name="key">@string/settings_base_item_1_key</item>
         <item name="primary">@string/settings_base_item_1_primary</item>
         <item name="secondary">@string/settings_base_item_1_secondary</item>
+        <item name="restart">@bool/settings_base_item_1_restart</item>
     </array>
 
+    <bool name="settings_base_item_1_restart">false</bool>
     <bool name="settings_base_item_1_default_value">true</bool>
     <string translatable="false" name="settings_base_item_1_key">@string/pref_sound_effect</string>
     <string translatable="false" name="pref_sound_effect">PREF_SOUND_EFFECT</string>
@@ -49,8 +53,10 @@
         <item name="key">@string/settings_base_item_2_key</item>
         <item name="primary">@string/settings_base_item_2_primary</item>
         <item name="secondary">@string/settings_base_item_2_secondary</item>
+        <item name="restart">@bool/settings_base_item_2_restart</item>
     </array>
 
+    <bool name="settings_base_item_2_restart">false</bool>
     <bool name="settings_base_item_2_default_value">true</bool>
     <string name="settings_base_item_2_key">@string/pref_music</string>
     <string name="pref_music">PREF_MUSIC</string>
