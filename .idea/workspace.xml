@@ -84,7 +84,21 @@
     <favorites_list name="appbaselibrary" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="BaseRecycleListFragment.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25396827">
+              <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="45" selection-end-column="132" />
+              <folding>
+                <element signature="e#3616#3991#0" expanded="true" />
+                <element signature="e#3990#3991#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1042,8 +1056,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/sound/Sounds.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java" />
         <option value="$PROJECT_DIR$/src/main/res/values/settings.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherNoViewActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherNoViewActivity.java" />
       </list>
     </option>
   </component>
@@ -1096,6 +1110,118 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="appbaselibrary" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fragments" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1340,12 +1466,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1918" height="1038" extended-state="1" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1358,15 +1486,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2335845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2335845" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2573696" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2573696" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29478458" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5744445" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1524,16 +1650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_recycle.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8108108">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1664,6 +1780,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3328592">
           <caret line="35" column="22" selection-start-line="35" selection-start-column="22" selection-end-line="35" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1737,6 +1856,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7030075">
           <caret line="30" column="19" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1762,29 +1882,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55058366">
-          <caret line="115" column="1" selection-start-line="115" selection-start-column="1" selection-end-line="115" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListNoHeaderFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3385214">
           <caret line="144" column="29" selection-start-line="144" selection-start-column="29" selection-end-line="144" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherNoViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17852975">
-          <caret line="417" column="54" selection-start-line="417" selection-start-column="54" selection-end-line="417" selection-end-column="54" />
           <folding>
-            <element signature="e#14868#14881#0" expanded="false" />
-            <element signature="e#14930#14945#0" expanded="false" />
-            <element signature="e#15649#15688#0" expanded="false" />
-            <element signature="e#15753#15794#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1802,6 +1905,105 @@
         <state vertical-scroll-proportion="0.008168028">
           <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/fragment_recycle.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14143094">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherNoViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4571428">
+          <caret line="156" column="9" selection-start-line="156" selection-start-column="9" selection-end-line="156" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onCreate#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onCreate#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onFragmentChangeStart#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#initOnCreate#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#initOnCreate#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="e#3421#3455#0" expanded="true" />
+            <element signature="docComment;method#onStart#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onStart#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onResume#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onPause#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onStop#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onStop#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onDestroy#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onBackStackChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onBackStackChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#shouldDisplayHomeUp#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#clearBackStack#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onSupportNavigateUp#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onSupportNavigateUp#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onBackPressed#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onBackPressed#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#backUpPressed#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#backUpPressed#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#getLicenseFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#getLicenseFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#loadLicenseFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#loadLicenseFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#getHelpFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#getHelpFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#loadHelpFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#loadHelpFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#getSettingsFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#getSettingsFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#loadSettingsFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#loadSettingsFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#getMainFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#loadFragment#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#isFragmentUIActive#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#isFragmentUIActive#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#hideKeyboard#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#hideKeyboard#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#hideToolbarTitle#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#showToolbarTitle#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onLicenseClicked#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onSettingsChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onSettingsChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#restartActivity#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#onWindowFocusChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#onWindowFocusChanged#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="docComment;method#updateImmersiveMode#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#updateImmersiveMode#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="e#12950#13004#0" expanded="true" />
+            <element signature="e#13031#13086#0" expanded="true" />
+            <element signature="docComment;method#createTimePickerDialog#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#createTimePickerDialog#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="method#createPromptDialog#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="e#15106#15119#0" expanded="true" />
+            <element signature="e#15168#15183#0" expanded="true" />
+            <element signature="method#createColorPickerDialog#0;class#BaseLauncherNoViewActivity#0" expanded="false" />
+            <element signature="e#15425#15471#0" expanded="true" />
+            <element signature="class#15683:15850" expanded="false" />
+            <element signature="method#onColorSelected#0;class#15683:15850" expanded="false" />
+            <element signature="e#15887#15926#0" expanded="true" />
+            <element signature="e#15991#16032#0" expanded="true" />
+            <element signature="class#16038:16220" expanded="false" />
+            <element signature="method#onClick#0;class#16038:16220" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25396827">
+          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="45" selection-end-column="132" />
+          <folding>
+            <element signature="e#3616#3991#0" expanded="true" />
+            <element signature="e#3990#3991#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

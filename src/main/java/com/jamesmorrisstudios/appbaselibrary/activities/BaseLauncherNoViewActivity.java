@@ -69,6 +69,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     protected abstract void onFragmentChangeEnd();
 
     /**
+     * The we just went back to the home fragment
+     */
+    protected abstract void onBackToHome();
+
+    /**
      * This handles all the on create work after the view has been set.
      * This is normally called from onCreate. If you are supplying your own view in onCreate
      * then you must call this manually.
@@ -144,7 +149,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public final void shouldDisplayHomeUp() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(hasBackStack());
+            boolean hasBackStack = hasBackStack();
+            actionBar.setDisplayHomeAsUpEnabled(hasBackStack);
+            if(!hasBackStack) {
+                onBackToHome();
+            }
         }
     }
 
