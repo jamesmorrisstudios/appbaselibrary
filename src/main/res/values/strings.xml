@@ -32,4 +32,6 @@
     <string name="settings_base_item_2_primary">Enable Music</string>
     <string name="settings_base_item_2_secondary">Uncheck to disable music</string>
 
+    <string name="action_share">Share</string>
+
 </resources>

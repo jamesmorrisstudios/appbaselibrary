@@ -14,6 +14,7 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderContainer;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
@@ -144,6 +145,7 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
             mAdapter.setItems(data);
             hideNoDataText();
         } else {
+            mAdapter.setItems(new ArrayList<BaseRecycleNoHeaderContainer>());
             showNoDataText();
         }
         endRefresh();

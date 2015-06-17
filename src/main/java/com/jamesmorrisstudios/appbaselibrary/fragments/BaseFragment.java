@@ -2,7 +2,12 @@ package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.ColorStateList;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
@@ -22,6 +27,8 @@ import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.Color
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.view.ViewHelper;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
+
+import java.io.FileWriter;
 
 
 /**
@@ -217,6 +224,47 @@ public abstract class BaseFragment extends Fragment {
                 animRunning = false;
             }
         });
+    }
+
+    protected final void shareView(final String title) {
+        View view = getView();
+        if (view == null) {
+            return;
+        }
+        Bitmap imageSrc = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
+        Canvas c = new Canvas(imageSrc);
+        view.draw(c);
+
+        AsyncTask<Bitmap, Void, Uri> taskShare = new AsyncTask<Bitmap, Void, Uri>() {
+            @Override
+            protected Uri doInBackground(Bitmap... params) {
+                Bitmap image = params[0];
+
+                int maxEdge = 1024;
+                if(image.getWidth() > maxEdge || image.getHeight() > maxEdge) {
+                    float scaleFactor = Math.min(maxEdge * 1.0f / image.getWidth(), maxEdge * 1.0f / image.getHeight());
+                    int width = Math.round(image.getWidth() * scaleFactor);
+                    int height = Math.round(image.getHeight() * scaleFactor);
+                    image = Bitmap.createScaledBitmap(image, width, height, true);
+                }
+                //int maxHeight = 1024;
+                //if (image.getHeight() > maxHeight) {
+                //    int width = Math.round((maxHeight * image.getWidth() * 1.0f) / image.getHeight());
+                //     image = Bitmap.createScaledBitmap(image, width, maxHeight, true);
+                //}
+                com.jamesmorrisstudios.utilitieslibrary.FileWriter.writeImage("ShareImage.png", image, true);
+                return Uri.fromFile(com.jamesmorrisstudios.utilitieslibrary.FileWriter.getFile("ShareImage.png", true));
+            }
+
+            @Override
+            protected void onPostExecute(Uri uri) {
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.putExtra(Intent.EXTRA_STREAM, uri);
+                share.setType("image/png");
+                startActivity(Intent.createChooser(share, title));
+            }
+        };
+        taskShare.execute(imageSrc);
     }
 
     /**

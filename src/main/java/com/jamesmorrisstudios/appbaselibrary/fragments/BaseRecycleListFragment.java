@@ -108,6 +108,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             mAdapter.setItems(data);
             hideNoDataText();
         } else {
+            mAdapter.setItems(new ArrayList<BaseRecycleContainer>());
             showNoDataText();
         }
         endRefresh();
