@@ -226,7 +226,14 @@ public abstract class BaseFragment extends Fragment {
         });
     }
 
-    protected final void shareView(final String title) {
+    protected final void shareText(@NonNull String chooserTitle, @NonNull String shareText) {
+        Intent share = new Intent(Intent.ACTION_SEND);
+        share.setType("text/plain");
+        share.putExtra(Intent.EXTRA_TEXT, shareText);
+        startActivity(Intent.createChooser(share, chooserTitle));
+    }
+
+    protected final void shareView(@NonNull final String chooserTitle, @Nullable final String shareText) {
         View view = getView();
         if (view == null) {
             return;
@@ -239,7 +246,6 @@ public abstract class BaseFragment extends Fragment {
             @Override
             protected Uri doInBackground(Bitmap... params) {
                 Bitmap image = params[0];
-
                 int maxEdge = 1024;
                 if(image.getWidth() > maxEdge || image.getHeight() > maxEdge) {
                     float scaleFactor = Math.min(maxEdge * 1.0f / image.getWidth(), maxEdge * 1.0f / image.getHeight());
@@ -247,11 +253,6 @@ public abstract class BaseFragment extends Fragment {
                     int height = Math.round(image.getHeight() * scaleFactor);
                     image = Bitmap.createScaledBitmap(image, width, height, true);
                 }
-                //int maxHeight = 1024;
-                //if (image.getHeight() > maxHeight) {
-                //    int width = Math.round((maxHeight * image.getWidth() * 1.0f) / image.getHeight());
-                //     image = Bitmap.createScaledBitmap(image, width, maxHeight, true);
-                //}
                 com.jamesmorrisstudios.utilitieslibrary.FileWriter.writeImage("ShareImage.png", image, true);
                 return Uri.fromFile(com.jamesmorrisstudios.utilitieslibrary.FileWriter.getFile("ShareImage.png", true));
             }
@@ -260,8 +261,13 @@ public abstract class BaseFragment extends Fragment {
             protected void onPostExecute(Uri uri) {
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.putExtra(Intent.EXTRA_STREAM, uri);
-                share.setType("image/png");
-                startActivity(Intent.createChooser(share, title));
+                if(shareText == null || shareText.isEmpty()) {
+                    share.setType("image/png");
+                } else {
+                    share.setType("*/*");
+                    share.putExtra(Intent.EXTRA_TEXT, shareText);
+                }
+                startActivity(Intent.createChooser(share, chooserTitle));
             }
         };
         taskShare.execute(imageSrc);

@@ -78,12 +78,12 @@ public class SettingsFragment extends BaseFragment {
 
     protected final void addSettingsOptions(View view) {
         LinearLayout settingsContainer = getSettingsContainer(view);
-        TypedArray settingsBase = getResources().obtainTypedArray(R.array.settings_base_array);
-        addSettings(settingsContainer, settingsBase);
-        settingsBase.recycle();
         TypedArray settingsPlay = getResources().obtainTypedArray(R.array.settings_google_play_array);
         addSettings(settingsContainer, settingsPlay);
         settingsPlay.recycle();
+        TypedArray settingsBase = getResources().obtainTypedArray(R.array.settings_base_array);
+        addSettings(settingsContainer, settingsBase);
+        settingsBase.recycle();
         TypedArray settings = getResources().obtainTypedArray(R.array.settings_array);
         addSettings(settingsContainer, settings);
         settings.recycle();

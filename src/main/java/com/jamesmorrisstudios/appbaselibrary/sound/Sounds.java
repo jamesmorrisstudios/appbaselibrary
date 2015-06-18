@@ -142,10 +142,10 @@ public class Sounds {
             //Add the built in sound effects
             TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.sound_effects);
             for (int i = 0; i < sounds.length(); i++) {
-                Log.v("SOUNDS", "Have an ID");
+                //Log.v("SOUNDS", "Have an ID");
                 int id = sounds.getResourceId(i, 0);
                 if (id > 0) {
-                    Log.v("SOUNDS", "Adding to sound pool");
+                    //Log.v("SOUNDS", "Adding to sound pool");
                     soundIdMap.put(id, soundPool.load(AppUtil.getContext(), id, 1));
                 }
             }
