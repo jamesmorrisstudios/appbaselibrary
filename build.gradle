@@ -23,16 +23,13 @@ uploadArchives {
 apply plugin: 'com.android.library'
 
 repositories {
-    maven {
-        url "https://oss.sonatype.org/content/repositories/snapshots"
-    }
     mavenLocal()
     mavenCentral()
 }
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "22.0.1"
+    buildToolsVersion "23.0.0 rc2"
 
     defaultConfig {
         minSdkVersion 10
