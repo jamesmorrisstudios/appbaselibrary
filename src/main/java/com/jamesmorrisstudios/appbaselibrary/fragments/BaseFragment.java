@@ -28,8 +28,6 @@ import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.view.ViewHelper;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
-import java.io.FileWriter;
-
 
 /**
  * Base app fragment
@@ -44,6 +42,7 @@ public abstract class BaseFragment extends Fragment {
     private float fabShownPos, fabHidePos;
 
     public abstract void onBack();
+
     public abstract boolean showToolbarTitle();
 
     /**
@@ -56,7 +55,7 @@ public abstract class BaseFragment extends Fragment {
 
     public void onStart() {
         super.onStart();
-        if(showToolbarTitle()) {
+        if (showToolbarTitle()) {
             utilListener.showToolbarTitle();
         } else {
             utilListener.hideToolbarTitle();
@@ -89,16 +88,16 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private void initFab() {
-        if(!(getView() instanceof ViewGroup)) {
+        if (!(getView() instanceof ViewGroup)) {
             return;
         }
         ViewGroup viewGroup = (ViewGroup) getView();
         RelativeLayout relativeLayout = null;
-        if(viewGroup instanceof RelativeLayout) {
-            relativeLayout = (RelativeLayout)viewGroup;
-        } else if(viewGroup.getChildCount() == 1){
-            if(viewGroup.getChildAt(0) instanceof RelativeLayout) {
-                relativeLayout = (RelativeLayout)viewGroup.getChildAt(0);
+        if (viewGroup instanceof RelativeLayout) {
+            relativeLayout = (RelativeLayout) viewGroup;
+        } else if (viewGroup.getChildCount() == 1) {
+            if (viewGroup.getChildAt(0) instanceof RelativeLayout) {
+                relativeLayout = (RelativeLayout) viewGroup.getChildAt(0);
             }
         }
         if (relativeLayout != null) {
@@ -117,7 +116,7 @@ public abstract class BaseFragment extends Fragment {
             };
             ColorStateList myList = new ColorStateList(states, colors);
             fab = (FloatingActionButton) getActivity().getLayoutInflater().inflate(R.layout.fab, null);
-            Log.v("BaseFragment", "Got Here "+(fab != null));
+            Log.v("BaseFragment", "Got Here " + (fab != null));
             fab.setBackgroundTintList(myList);
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             p.setMargins(0, 0, Utils.getDipInt(24), Utils.getDipInt(16));
@@ -162,18 +161,18 @@ public abstract class BaseFragment extends Fragment {
             Log.v("BaseFragment", "Start enable");
             initFab();
             Log.v("BaseFragment", "After Init");
-            if(fab != null) {
+            if (fab != null) {
                 fab.setVisibility(View.VISIBLE);
             }
         } else {
-            if(fab != null) {
+            if (fab != null) {
                 fab.setVisibility(View.GONE);
             }
         }
     }
 
     protected final void setFabIcon(@DrawableRes int resourceId) {
-        if(fab != null) {
+        if (fab != null) {
             fab.setImageResource(resourceId);
         }
     }
@@ -247,7 +246,7 @@ public abstract class BaseFragment extends Fragment {
             protected Uri doInBackground(Bitmap... params) {
                 Bitmap image = params[0];
                 int maxEdge = 1024;
-                if(image.getWidth() > maxEdge || image.getHeight() > maxEdge) {
+                if (image.getWidth() > maxEdge || image.getHeight() > maxEdge) {
                     float scaleFactor = Math.min(maxEdge * 1.0f / image.getWidth(), maxEdge * 1.0f / image.getHeight());
                     int width = Math.round(image.getWidth() * scaleFactor);
                     int height = Math.round(image.getHeight() * scaleFactor);
@@ -261,7 +260,7 @@ public abstract class BaseFragment extends Fragment {
             protected void onPostExecute(Uri uri) {
                 Intent share = new Intent(Intent.ACTION_SEND);
                 share.putExtra(Intent.EXTRA_STREAM, uri);
-                if(shareText == null || shareText.isEmpty()) {
+                if (shareText == null || shareText.isEmpty()) {
                     share.setType("image/png");
                 } else {
                     share.setType("*/*");

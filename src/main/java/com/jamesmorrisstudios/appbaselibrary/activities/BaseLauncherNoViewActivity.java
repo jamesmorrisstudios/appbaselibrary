@@ -1,11 +1,16 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -15,8 +20,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ProgressBar;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainRecycleListFragment;
@@ -24,12 +34,15 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
+import com.jamesmorrisstudios.utilitieslibrary.Bus;
+import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
+import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 /**
@@ -47,6 +60,36 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         BaseFragment.OnUtilListener,
         SettingsFragment.OnSettingsListener {
 
+    private static final int NOTIFICATION_RESULT = 5010;
+    private ProgressBar spinner;
+    private RingtoneRequest ringtoneRequest = null;
+    private final Object busListener = new Object() {
+        @Subscribe
+        public void onRingtoneRequest(final RingtoneRequest request) {
+            BaseLauncherNoViewActivity.this.ringtoneRequest = request;
+            BaseLauncherNoViewActivity.this.createRingtoneDialog(request.currentTone, request.title);
+        }
+
+        @Subscribe
+        public void onColorPickerRequest(ColorPickerRequest request) {
+            createColorPickerDialog(request.initialColor, request.onColorPickerClickListener);
+        }
+
+        @Subscribe
+        public void onPromptDialogRequest(PromptDialogRequest request) {
+            createPromptDialog(request.title, request.content, request.onPositive, request.onNegative);
+        }
+
+        @Subscribe
+        public void onTimePickerDialogRequest(TimePickerRequest request) {
+            createTimePickerDialog(request.onTimeSetListener, request.hour, request.minute, request.is24Hour);
+        }
+
+        @Subscribe
+        public void onAppBaseEvent(AppBaseEvent event) {
+            BaseLauncherNoViewActivity.this.onAppBaseEvent(event);
+        }
+    };
     private boolean clearingBackStack = false;
 
     /**
@@ -56,6 +99,31 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         updateImmersiveMode(true);
+    }
+
+    /**
+     * Activity callback result for popup actions.
+     *
+     * @param requestCode Request code
+     * @param resultCode  Result code status
+     * @param intent      Result intent
+     */
+    public void onActivityResult(final int requestCode, final int resultCode, @NonNull final Intent intent) {
+        if (resultCode == Activity.RESULT_OK && requestCode == NOTIFICATION_RESULT) {
+            Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+            String name = null;
+            if (uri != null) {
+                Ringtone ringtone = RingtoneManager.getRingtone(AppUtil.getContext(), uri);
+                if (ringtone != null) {
+                    name = ringtone.getTitle(AppUtil.getContext());
+                }
+            }
+            if(ringtoneRequest != null) {
+                ringtoneRequest.listener.ringtoneResponse(uri, name);
+                ringtoneRequest = null;
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, intent);
     }
 
     /**
@@ -79,6 +147,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * then you must call this manually.
      */
     protected final void initOnCreate() {
+        spinner = (ProgressBar)findViewById(R.id.progressBar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getString(R.string.app_short_name));
         setSupportActionBar(toolbar);
@@ -95,6 +164,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onStart() {
         super.onStart();
+        Bus.register(busListener);
         Sounds.getInstance().onStart();
     }
 
@@ -120,6 +190,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onStop() {
         super.onStop();
+        Bus.unregister(busListener);
         Sounds.getInstance().onStop();
     }
 
@@ -151,7 +222,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         if (actionBar != null) {
             boolean hasBackStack = hasBackStack();
             actionBar.setDisplayHomeAsUpEnabled(hasBackStack);
-            if(!hasBackStack) {
+            if (!hasBackStack) {
                 onBackToHome();
             }
         }
@@ -351,7 +422,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void hideToolbarTitle() {
         ActionBar actionbar = getSupportActionBar();
-        if(actionbar != null) {
+        if (actionbar != null) {
             actionbar.setDisplayShowTitleEnabled(false);
         }
     }
@@ -359,7 +430,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void showToolbarTitle() {
         ActionBar actionbar = getSupportActionBar();
-        if(actionbar != null) {
+        if (actionbar != null) {
             actionbar.setDisplayShowTitleEnabled(true);
         }
     }
@@ -440,6 +511,17 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
     }
 
+    public void onAppBaseEvent(AppBaseEvent event) {
+        switch(event) {
+            case SHOW_SPINNER:
+                spinner.setVisibility(View.VISIBLE);
+                break;
+            case HIDE_SPINNER:
+                spinner.setVisibility(View.GONE);
+                break;
+        }
+    }
+
     /**
      * Create a time picker dialog
      *
@@ -456,7 +538,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative) {
+    public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @NonNull DialogInterface.OnClickListener onNegative) {
         new AlertDialog.Builder(this, R.style.alertDialog)
                 .setTitle(title)
                 .setMessage(content)
@@ -466,7 +548,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     @Override
-    public void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener) {
+    public void createColorPickerDialog(int intialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
         ColorPickerDialogBuilder.with(this)
                 .setTitle(getResources().getString(R.string.chooseColor))
                 .initialColor(intialColor)
@@ -487,6 +569,27 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 })
                 .build()
                 .show();
+    }
+
+    public void createRingtoneDialog(@Nullable Uri currentTone, @NonNull String title) {
+        Uri defaultUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        if(currentTone != null) {
+            defaultUri = currentTone;
+        }
+        Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, title);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
+        try {
+            startActivityForResult(intent, NOTIFICATION_RESULT);
+        } catch (Exception ex) {
+            Utils.toastShort(getString(R.string.help_link_error));
+        }
+    }
+
+    public enum AppBaseEvent {
+        SHOW_SPINNER, HIDE_SPINNER
     }
 
 }

@@ -6,7 +6,7 @@
     <string name="default_recycle_no_data">No items found</string>
 
     <!-- Tutorial headings -->
-    <string name="help_how_to_header">How To Use</string>
+
     <string name="help_how_to_read">Read How</string>
     <string name="help_how_to_watch">Watch How</string>
 
@@ -31,7 +31,5 @@
     <string name="settings_base_item_1_secondary">Uncheck to disable sound effects</string>
     <string name="settings_base_item_2_primary">Enable Music</string>
     <string name="settings_base_item_2_secondary">Uncheck to disable music</string>
-
-    <string name="action_share">Share</string>
 
 </resources>

@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,7 +15,6 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderContainer;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
@@ -81,7 +81,7 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
                     case NORMAL:
                         return 1;
                     case LARGE:
-                        return 2;
+                        return 1;
                     case XLARGE:
                         return 2;
                     case UNDEFINED:
@@ -94,11 +94,11 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
                     case SMALL:
                         return 1;
                     case NORMAL:
-                        return 2;
+                        return 1;
                     case LARGE:
                         return 2;
                     case XLARGE:
-                        return 3;
+                        return 2;
                     case UNDEFINED:
                         return 2;
                     default:

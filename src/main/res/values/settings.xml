@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string translatable="false" name="settings_pref">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
+    <string name="settings_pref" translatable="false">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
 
     <!-- Override to define your help tutorial -->
-    <array translatable="false" name="settings_array">
+    <array name="settings_array" translatable="false">
 
     </array>
 
-    <array translatable="false" name="settings_google_play_array">
+    <array name="settings_google_play_array" translatable="false">
 
     </array>
 
     <!-- Override to define your help tutorial -->
-    <array translatable="false" name="settings_base_array">
+    <array name="settings_base_array" translatable="false">
         <item>@array/settings_base_item_0</item>
         <item>@array/settings_base_item_1</item>
         <item>@array/settings_base_item_2</item>
     </array>
 
     <!-- Immersive Mode Enable -->
-    <array translatable="false" name="settings_base_item_0">
+    <array name="settings_base_item_0" translatable="false">
         <item name="defaultValue">@bool/settings_base_item_0_default_value</item>
         <item name="key">@string/settings_base_item_0_key</item>
         <item name="primary">@string/settings_base_item_0_primary</item>
@@ -30,8 +30,8 @@
 
     <bool name="settings_base_item_0_restart">false</bool>
     <bool name="settings_base_item_0_default_value">false</bool>
-    <string translatable="false" name="settings_base_item_0_key">@string/pref_immersive</string>
-    <string translatable="false" name="pref_immersive">PREF_IMMERSIVE</string>
+    <string name="settings_base_item_0_key" translatable="false">@string/pref_immersive</string>
+    <string name="pref_immersive" translatable="false">PREF_IMMERSIVE</string>
 
     <!-- Sound Effects -->
     <array name="settings_base_item_1">
@@ -44,8 +44,8 @@
 
     <bool name="settings_base_item_1_restart">false</bool>
     <bool name="settings_base_item_1_default_value">true</bool>
-    <string translatable="false" name="settings_base_item_1_key">@string/pref_sound_effect</string>
-    <string translatable="false" name="pref_sound_effect">PREF_SOUND_EFFECT</string>
+    <string name="settings_base_item_1_key" translatable="false">@string/pref_sound_effect</string>
+    <string name="pref_sound_effect" translatable="false">PREF_SOUND_EFFECT</string>
 
     <!-- Music -->
     <array name="settings_base_item_2">
@@ -58,7 +58,7 @@
 
     <bool name="settings_base_item_2_restart">false</bool>
     <bool name="settings_base_item_2_default_value">true</bool>
-    <string name="settings_base_item_2_key">@string/pref_music</string>
-    <string name="pref_music">PREF_MUSIC</string>
+    <string name="settings_base_item_2_key" translatable="false">@string/pref_music</string>
+    <string name="pref_music" translatable="false">PREF_MUSIC</string>
 
 </resources>

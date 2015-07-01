@@ -6,7 +6,6 @@
     <string name="default_recycle_no_data">"कोई आइटम नहीं मिला"</string>
 
     <!-- Tutorial headings -->
-    <string name="help_how_to_header">"का उपयोग कैसे करें"</string>
     <string name="help_how_to_read">"कैसे पढ़ें"</string>
     <string name="help_how_to_watch">"कैसे घड़ी"</string>
 

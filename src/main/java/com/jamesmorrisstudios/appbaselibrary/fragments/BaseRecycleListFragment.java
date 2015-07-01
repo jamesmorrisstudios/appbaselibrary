@@ -115,6 +115,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     protected final void startRefresh(boolean forceReload) {
+        hideNoDataText();
         mSwipeRefreshLayout.setRefreshing(true);
         isRefreshing = true;
         startDataLoad(forceReload);
@@ -139,6 +140,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
+                    hideNoDataText();
                     startDataLoad(true);
                 }
             });

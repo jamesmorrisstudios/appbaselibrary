@@ -16,7 +16,6 @@ import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 import java.util.HashMap;
 
 /**
- *
  * Created by James on 5/30/2015.
  */
 public class Sounds {
@@ -27,7 +26,9 @@ public class Sounds {
     private boolean soundEffectLoaded = false;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
-    private Sounds() {}
+
+    private Sounds() {
+    }
 
     public static Sounds getInstance() {
         if (instance == null) {
@@ -56,7 +57,7 @@ public class Sounds {
         boolean soundEffect = getPrefSoundEffect();
         if (soundEffect != soundEffectEnabled) {
             soundEffectEnabled = soundEffect;
-            Log.v("Sounds", "Sound Effects... "+soundEffect);
+            Log.v("Sounds", "Sound Effects... " + soundEffect);
             if (soundEffect) {
                 startSoundEffects();
             } else {
@@ -66,7 +67,7 @@ public class Sounds {
         boolean music = getPrefMusic();
         if (music != musicEnabled) {
             musicEnabled = music;
-            Log.v("Sounds", "Music... "+music);
+            Log.v("Sounds", "Music... " + music);
             if (music) {
                 startMusic();
             } else {

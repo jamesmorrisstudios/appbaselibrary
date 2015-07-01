@@ -16,6 +16,7 @@
 
 package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 
+import android.content.Intent;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -38,7 +39,7 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
     /**
      * Constructor
      *
-     * @param mListener  Item Click listener
+     * @param mListener Item Click listener
      */
     public BaseRecycleNoHeaderAdapter(@NonNull OnItemClickListener mListener) {
         this.mListener = mListener;
@@ -138,7 +139,7 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
         /**
          * Constructor
          *
-         * @param reminder             Reminder line item data
+         * @param reminder Reminder line item data
          */
         public LineItem(@NonNull BaseRecycleNoHeaderContainer reminder) {
             this.reminder = reminder;
