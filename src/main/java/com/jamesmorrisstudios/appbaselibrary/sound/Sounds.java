@@ -6,6 +6,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Build;
+import android.os.Handler;
 import android.support.annotation.RawRes;
 import android.util.Log;
 
@@ -19,16 +20,16 @@ import java.util.HashMap;
  * Created by James on 5/30/2015.
  */
 public class Sounds {
-
     private static Sounds instance = null;
-    private MediaPlayer musicPlayer = null;
+    private MediaPlayer musicPrimary = null, musicSecondary = null;
     private SoundPool soundPool = null;
-    private boolean soundEffectLoaded = false;
+    private boolean soundEffectLoaded = false, musicPrimaryActive = true;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
+    private Handler musicFade = new Handler();
+    private float volumeMusicPrimary = 0.5f, volumeMusicSecondary = 0.5f;
 
-    private Sounds() {
-    }
+    private Sounds() {}
 
     public static Sounds getInstance() {
         if (instance == null) {
@@ -168,37 +169,114 @@ public class Sounds {
         }
     }
 
+    public final void playMusicPrimary(boolean crossfade, boolean restart) {
+        musicPrimaryActive = true;
+        if(musicSecondary != null) {
+            if(crossfade) {
+                fadeOutMusic(musicSecondary, 0.5f);
+            } else {
+                musicSecondary.pause();
+            }
+        }
+        if(musicPrimary != null) {
+            if(restart) {
+                musicPrimary.seekTo(0);
+            }
+            if(crossfade) {
+                musicPrimary.setVolume(0, 0);
+                musicPrimary.start();
+                fadeInMusic(musicPrimary, 0.0f);
+            } else {
+                musicPrimary.start();
+            }
+        }
+    }
+
+    public final void playMusicSecondary(boolean crossfade, boolean restart) {
+        musicPrimaryActive = false;
+        if(musicPrimary != null) {
+            if(crossfade) {
+                fadeOutMusic(musicPrimary, 0.5f);
+            } else {
+                musicPrimary.pause();
+            }
+        }
+        if(musicSecondary != null) {
+            if(restart) {
+                musicSecondary.seekTo(0);
+            }
+            if(crossfade) {
+                musicSecondary.setVolume(0, 0);
+                musicSecondary.start();
+                fadeInMusic(musicSecondary, 0.0f);
+            } else {
+                musicSecondary.start();
+            }
+        }
+    }
+
     private void startMusic() {
-        if (musicEnabled && musicPlayer == null) {
+        if (musicEnabled && musicPrimary == null) {
             TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.music);
-            int musicId = 0;
-            if (sounds.length() >= 1) {
-                musicId = sounds.getResourceId(0, 0);
+            int musicPrimaryId = 0;
+            int musicSecondaryId = 0;
+            if (sounds.length() == 1) {
+                musicPrimaryId = sounds.getResourceId(0, 0);
+            } else if(sounds.length() >= 2) {
+                musicPrimaryId = sounds.getResourceId(0, 0);
+                musicSecondaryId = sounds.getResourceId(1, 0);
             }
             sounds.recycle();
-            if (musicId == 0) {
-                return;
-            }
-            musicPlayer = MediaPlayer.create(AppUtil.getContext(), musicId);
-            musicPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    if (mp == musicPlayer) {
-                        musicPlayer.setLooping(true);
-                        musicPlayer.setVolume(0.5f, 0.5f);
-                        musicPlayer.start();
+            if (musicPrimaryId != 0) {
+                Log.v("Sounds", "Create Primary Music");
+                musicPrimary = MediaPlayer.create(AppUtil.getContext(), musicPrimaryId);
+                musicPrimary.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        if (mp == musicPrimary) {
+                            if(musicPrimaryActive) {
+                                musicPrimary.setLooping(true);
+                                musicPrimary.setVolume(0.5f, 0.5f);
+                                musicPrimary.start();
+                            }
+                        }
                     }
-                }
-            });
+                });
+            }
+            if (musicSecondaryId != 0) {
+                Log.v("Sounds", "Create Secondary Music");
+                musicSecondary = MediaPlayer.create(AppUtil.getContext(), musicSecondaryId);
+                musicSecondary.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        if (mp == musicSecondary) {
+                            if(!musicPrimaryActive) {
+                                musicSecondary.setLooping(true);
+                                musicSecondary.setVolume(0.5f, 0.5f);
+                                musicSecondary.start();
+                            }
+                        }
+                    }
+                });
+            }
         } else if (musicEnabled) {
-            musicPlayer.start();
+            if(musicPrimaryActive) {
+                musicPrimary.start();
+            } else {
+                musicSecondary.start();
+            }
         }
     }
 
     private void stopMusic() {
-        if (musicPlayer != null) {
-            if (musicPlayer.isPlaying()) {
-                musicPlayer.pause();
+        if (musicPrimary != null) {
+            if (musicPrimary.isPlaying()) {
+                musicPrimary.pause();
+            }
+        }
+        if (musicSecondary != null) {
+            if (musicSecondary.isPlaying()) {
+                musicSecondary.pause();
             }
         }
     }
@@ -207,14 +285,51 @@ public class Sounds {
      * Stops and releases all holds on the playing music to free memory
      */
     private void destroyMusic() {
-        if (musicPlayer != null) {
-            if (musicPlayer.isPlaying()) {
-                musicPlayer.stop();
+        if (musicPrimary != null) {
+            if (musicPrimary.isPlaying()) {
+                musicPrimary.stop();
             }
-            musicPlayer.reset();
-            musicPlayer.release();
-            musicPlayer = null;
+            musicPrimary.reset();
+            musicPrimary.release();
+            musicPrimary = null;
         }
+        if (musicSecondary != null) {
+            if (musicSecondary.isPlaying()) {
+                musicSecondary.stop();
+            }
+            musicSecondary.reset();
+            musicSecondary.release();
+            musicSecondary = null;
+        }
+    }
+
+    private void fadeInMusic(final MediaPlayer player, final float volume) {
+        if(volume >= 0.5f) {
+            Log.v("Sounds", "Complete fade in");
+            return;
+        }
+        musicFade.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                player.setVolume(volume, volume);
+                fadeInMusic(player, volume+0.02f);
+            }
+        }, 50);
+    }
+
+    private void fadeOutMusic(final MediaPlayer player, final float volume) {
+        if(volume <= 0) {
+            Log.v("Sounds", "Pause after fade");
+            player.pause();
+            return;
+        }
+        musicFade.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                player.setVolume(volume, volume);
+                fadeOutMusic(player, volume - 0.02f);
+            }
+        }, 50);
     }
 
 }
