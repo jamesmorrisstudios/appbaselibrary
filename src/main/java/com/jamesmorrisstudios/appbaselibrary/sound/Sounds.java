@@ -23,11 +23,12 @@ public class Sounds {
     private static Sounds instance = null;
     private MediaPlayer musicPrimary = null, musicSecondary = null;
     private SoundPool soundPool = null;
-    private boolean soundEffectLoaded = false, musicPrimaryActive = true;
+    private boolean soundEffectLoaded = false, musicPrimaryActive = true, musicPrimaryLoaded = false, musicSecondaryLoaded = false;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
     private Handler musicFade = new Handler();
-    private float volumeMusicPrimary = 0.5f, volumeMusicSecondary = 0.5f;
+    private MusicFadeIn musicFadeIn = new MusicFadeIn();
+    private MusicFadeOut musicFadeOut = new MusicFadeOut();
 
     private Sounds() {}
 
@@ -170,52 +171,61 @@ public class Sounds {
     }
 
     public final void playMusicPrimary(boolean crossfade, boolean restart) {
+        Log.v("Sounds", "Play music primary");
         musicPrimaryActive = true;
-        if(musicSecondary != null) {
+        cancelMusicFade();
+        if(musicSecondary != null && musicSecondaryLoaded && musicSecondary.isPlaying()) {
             if(crossfade) {
                 fadeOutMusic(musicSecondary, 0.5f);
             } else {
                 musicSecondary.pause();
             }
         }
-        if(musicPrimary != null) {
+        if(musicPrimary != null && musicPrimaryLoaded) {
             if(restart) {
                 musicPrimary.seekTo(0);
             }
             if(crossfade) {
                 musicPrimary.setVolume(0, 0);
+                musicPrimary.setLooping(true);
                 musicPrimary.start();
                 fadeInMusic(musicPrimary, 0.0f);
             } else {
+                musicPrimary.setLooping(true);
                 musicPrimary.start();
             }
         }
     }
 
     public final void playMusicSecondary(boolean crossfade, boolean restart) {
+        Log.v("Sounds", "Play music secondary");
         musicPrimaryActive = false;
-        if(musicPrimary != null) {
+        cancelMusicFade();
+        if(musicPrimary != null && musicPrimaryLoaded && musicPrimary.isPlaying()) {
             if(crossfade) {
                 fadeOutMusic(musicPrimary, 0.5f);
             } else {
                 musicPrimary.pause();
             }
         }
-        if(musicSecondary != null) {
+        if(musicSecondary != null && musicSecondaryLoaded) {
             if(restart) {
                 musicSecondary.seekTo(0);
             }
             if(crossfade) {
                 musicSecondary.setVolume(0, 0);
+                musicSecondary.setLooping(true);
                 musicSecondary.start();
                 fadeInMusic(musicSecondary, 0.0f);
             } else {
+                musicSecondary.setLooping(true);
                 musicSecondary.start();
             }
         }
     }
 
     private void startMusic() {
+        Log.v("Sounds", "Start Music");
         if (musicEnabled && musicPrimary == null) {
             TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.music);
             int musicPrimaryId = 0;
@@ -234,10 +244,13 @@ public class Sounds {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
                         if (mp == musicPrimary) {
+                            Log.v("Sounds", "Create Primary Music Complete");
+                            musicPrimaryLoaded = true;
                             if(musicPrimaryActive) {
                                 musicPrimary.setLooping(true);
-                                musicPrimary.setVolume(0.5f, 0.5f);
+                                musicPrimary.setVolume(0.0f, 0.0f);
                                 musicPrimary.start();
+                                fadeInMusic(musicPrimary, 0.0f);
                             }
                         }
                     }
@@ -250,10 +263,13 @@ public class Sounds {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
                         if (mp == musicSecondary) {
+                            Log.v("Sounds", "Create Secondary Music Complete");
+                            musicSecondaryLoaded = true;
                             if(!musicPrimaryActive) {
                                 musicSecondary.setLooping(true);
-                                musicSecondary.setVolume(0.5f, 0.5f);
+                                musicSecondary.setVolume(0.0f, 0.0f);
                                 musicSecondary.start();
+                                fadeInMusic(musicSecondary, 0.0f);
                             }
                         }
                     }
@@ -269,6 +285,7 @@ public class Sounds {
     }
 
     private void stopMusic() {
+        Log.v("Sounds", "Stop Music");
         if (musicPrimary != null) {
             if (musicPrimary.isPlaying()) {
                 musicPrimary.pause();
@@ -285,6 +302,8 @@ public class Sounds {
      * Stops and releases all holds on the playing music to free memory
      */
     private void destroyMusic() {
+        Log.v("Sounds", "Destroy Music");
+        /*
         if (musicPrimary != null) {
             if (musicPrimary.isPlaying()) {
                 musicPrimary.stop();
@@ -301,35 +320,73 @@ public class Sounds {
             musicSecondary.release();
             musicSecondary = null;
         }
+        musicPrimaryLoaded = false;
+        musicSecondaryLoaded = false;
+        */
+    }
+
+    private void cancelMusicFade() {
+        musicFade.removeCallbacks(musicFadeIn);
+        musicFade.removeCallbacks(musicFadeOut);
     }
 
     private void fadeInMusic(final MediaPlayer player, final float volume) {
-        if(volume >= 0.5f) {
-            Log.v("Sounds", "Complete fade in");
+        if(!player.isPlaying()) {
             return;
         }
-        musicFade.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                player.setVolume(volume, volume);
-                fadeInMusic(player, volume+0.02f);
-            }
-        }, 50);
+        if(volume >= 0.5f) {
+            return;
+        }
+        musicFadeIn.setValues(player, volume);
+        musicFade.postDelayed(musicFadeIn, 50);
     }
 
     private void fadeOutMusic(final MediaPlayer player, final float volume) {
+        if(!player.isPlaying()) {
+            return;
+        }
         if(volume <= 0) {
-            Log.v("Sounds", "Pause after fade");
             player.pause();
             return;
         }
-        musicFade.postDelayed(new Runnable() {
-            @Override
-            public void run() {
+        musicFadeOut.setValues(player, volume);
+        musicFade.postDelayed(musicFadeOut, 50);
+    }
+
+    private class MusicFadeIn implements Runnable {
+        private MediaPlayer player;
+        private float volume;
+
+        public final void setValues(MediaPlayer player, final float volume) {
+            this.player = player;
+            this.volume = volume;
+        }
+
+        @Override
+        public void run() {
+            if(musicPrimaryLoaded && musicSecondaryLoaded && player.isPlaying()) {
                 player.setVolume(volume, volume);
-                fadeOutMusic(player, volume - 0.02f);
+                fadeInMusic(player, volume + 0.05f);
             }
-        }, 50);
+        }
+    }
+
+    private class MusicFadeOut implements Runnable {
+        private MediaPlayer player;
+        private float volume;
+
+        public final void setValues(MediaPlayer player, final float volume) {
+            this.player = player;
+            this.volume = volume;
+        }
+
+        @Override
+        public void run() {
+            if(musicPrimaryLoaded && musicSecondaryLoaded && player.isPlaying()) {
+                player.setVolume(volume, volume);
+                fadeOutMusic(player, volume - 0.05f);
+            }
+        }
     }
 
 }
