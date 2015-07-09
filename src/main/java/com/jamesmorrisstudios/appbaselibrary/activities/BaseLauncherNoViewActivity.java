@@ -24,12 +24,14 @@ import android.widget.ProgressBar;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainRecycleListFragment;
+import com.jamesmorrisstudios.appbaselibrary.fragments.EditTextListDialog;
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
@@ -45,6 +47,8 @@ import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
+import java.util.ArrayList;
+
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
  * along with help and settings fragments. Extend the mainFragment for your main page
@@ -56,7 +60,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         BaseMainFragment.OnMenuItemClickedListener,
         BaseMainRecycleListFragment.OnMenuItemClickedListener,
         HelpFragment.OnHelpSubPageListener,
-        BaseFragment.OnDialogListener,
         BaseFragment.OnUtilListener,
         SettingsFragment.OnSettingsListener {
 
@@ -86,9 +89,15 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
 
         @Subscribe
+        public void onEditMessageRequest(@NonNull EditTextListRequest request) {
+            showEditTextListDialog(request.messages, request.onPositive, request.onNegative);
+        }
+
+        @Subscribe
         public void onAppBaseEvent(AppBaseEvent event) {
             BaseLauncherNoViewActivity.this.onAppBaseEvent(event);
         }
+
     };
     private boolean clearingBackStack = false;
 
@@ -122,6 +131,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 ringtoneRequest.listener.ringtoneResponse(uri, name);
                 ringtoneRequest = null;
             }
+            Utils.unlockOrientation(this);
         }
         super.onActivityResult(requestCode, resultCode, intent);
     }
@@ -530,14 +540,12 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @param minute   Start minute
      * @param is24Hour True if 24 hour mode
      */
-    @Override
     public void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour) {
         TimePickerDialog time = new TimePickerDialog();
         time.initialize(listener, hour, minute, is24Hour);
         time.show(getSupportFragmentManager(), "TimePickerDialog");
     }
 
-    @Override
     public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @NonNull DialogInterface.OnClickListener onNegative) {
         new AlertDialog.Builder(this, R.style.alertDialog)
                 .setTitle(title)
@@ -547,11 +555,10 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
-    @Override
-    public void createColorPickerDialog(int intialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
+    public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
         ColorPickerDialogBuilder.with(this)
                 .setTitle(getResources().getString(R.string.chooseColor))
-                .initialColor(intialColor)
+                .initialColor(initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
                 .noSliders()
                 .density(6)
@@ -582,10 +589,18 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
         try {
+            Utils.lockOrientationCurrent(this);
             startActivityForResult(intent, NOTIFICATION_RESULT);
         } catch (Exception ex) {
             Utils.toastShort(getString(R.string.help_link_error));
         }
+    }
+
+    public void showEditTextListDialog(@NonNull ArrayList<String> messages, @NonNull EditTextListDialog.EditMessageListener onPositive, @Nullable View.OnClickListener onNegative) {
+        FragmentManager fm = getSupportFragmentManager();
+        EditTextListDialog editTextListDialog = new EditTextListDialog();
+        editTextListDialog.setData(messages, onPositive, onNegative);
+        editTextListDialog.show(fm, "fragment_edit_text_list");
     }
 
     public enum AppBaseEvent {

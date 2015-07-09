@@ -35,7 +35,6 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
  * Created by James on 4/29/2015.
  */
 public abstract class BaseFragment extends Fragment {
-    protected OnDialogListener dialogListener;
     protected OnUtilListener utilListener;
     private FloatingActionButton fab;
     private transient boolean animRunning = false;
@@ -69,7 +68,6 @@ public abstract class BaseFragment extends Fragment {
     public void onAttach(@NonNull Activity activity) {
         super.onAttach(activity);
         try {
-            dialogListener = (OnDialogListener) activity;
             utilListener = (OnUtilListener) activity;
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
@@ -83,7 +81,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDetach() {
         super.onDetach();
-        dialogListener = null;
         utilListener = null;
     }
 
@@ -270,32 +267,6 @@ public abstract class BaseFragment extends Fragment {
             }
         };
         taskShare.execute(imageSrc);
-    }
-
-    /**
-     *
-     */
-    public interface OnDialogListener {
-
-        /**
-         * Build a new time picker dialog
-         *
-         * @param listener Return listener
-         * @param hour     Start hour
-         * @param minute   Start minute
-         * @param is24Hour True if 24 hour mode
-         */
-        void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour);
-
-        /**
-         * Build a ok/cancel prompt
-         *
-         * @param title   Title of the prompt
-         * @param content Content text
-         */
-        void createPromptDialog(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative);
-
-        void createColorPickerDialog(int intialColor, ColorPickerClickListener onColorPickerClickListener);
     }
 
     /**

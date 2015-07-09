@@ -11,8 +11,8 @@ public class ColorPickerRequest {
     public final int initialColor;
     public final ColorPickerClickListener onColorPickerClickListener;
 
-    public ColorPickerRequest(int intialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
-        this.initialColor = intialColor;
+    public ColorPickerRequest(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
+        this.initialColor = initialColor;
         this.onColorPickerClickListener = onColorPickerClickListener;
     }
 
