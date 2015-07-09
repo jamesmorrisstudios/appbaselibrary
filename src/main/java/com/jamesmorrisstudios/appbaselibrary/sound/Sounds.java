@@ -21,14 +21,16 @@ import java.util.HashMap;
  */
 public class Sounds {
     private static Sounds instance = null;
-    private MediaPlayer musicPrimary = null, musicSecondary = null;
     private SoundPool soundPool = null;
-    private boolean soundEffectLoaded = false, musicPrimaryActive = true, musicPrimaryLoaded = false, musicSecondaryLoaded = false;
+    private boolean soundEffectLoaded = false;
     private HashMap<Integer, Integer> soundIdMap;
     private boolean soundEffectEnabled = true, musicEnabled = true;
     private Handler musicFade = new Handler();
     private MusicFadeIn musicFadeIn = new MusicFadeIn();
     private MusicFadeOut musicFadeOut = new MusicFadeOut();
+    private boolean musicPrimaryActive = true;
+    private boolean[] musicLoaded = new boolean[2];
+    private MediaPlayer[] music = new MediaPlayer[2];
 
     private Sounds() {}
 
@@ -172,61 +174,67 @@ public class Sounds {
 
     public final void playMusicPrimary(boolean crossfade, boolean restart) {
         Log.v("Sounds", "Play music primary");
+        if(!musicEnabled){
+            return;
+        }
         musicPrimaryActive = true;
         cancelMusicFade();
-        if(musicSecondary != null && musicSecondaryLoaded && musicSecondary.isPlaying()) {
+        if(music[1] != null && musicLoaded[1] && music[1].isPlaying()) {
             if(crossfade) {
-                fadeOutMusic(musicSecondary, 0.5f);
+                fadeOutMusic(1, 0.5f);
             } else {
-                musicSecondary.pause();
+                music[1].pause();
             }
         }
-        if(musicPrimary != null && musicPrimaryLoaded) {
+        if(music[0] != null && musicLoaded[0]) {
             if(restart) {
-                musicPrimary.seekTo(0);
+                music[0].seekTo(0);
             }
             if(crossfade) {
-                musicPrimary.setVolume(0, 0);
-                musicPrimary.setLooping(true);
-                musicPrimary.start();
-                fadeInMusic(musicPrimary, 0.0f);
+                music[0].setVolume(0, 0);
+                music[0].setLooping(true);
+                music[0].start();
+                fadeInMusic(0, 0.0f);
             } else {
-                musicPrimary.setLooping(true);
-                musicPrimary.start();
+                music[0].setLooping(true);
+                music[0].start();
             }
         }
     }
 
     public final void playMusicSecondary(boolean crossfade, boolean restart) {
         Log.v("Sounds", "Play music secondary");
+        if(!musicEnabled){
+            return;
+        }
         musicPrimaryActive = false;
         cancelMusicFade();
-        if(musicPrimary != null && musicPrimaryLoaded && musicPrimary.isPlaying()) {
+        if(music[0] != null && musicLoaded[0] && music[0].isPlaying()) {
             if(crossfade) {
-                fadeOutMusic(musicPrimary, 0.5f);
+                fadeOutMusic(0, 0.5f);
             } else {
-                musicPrimary.pause();
+                music[0].pause();
             }
         }
-        if(musicSecondary != null && musicSecondaryLoaded) {
+        if(music[1] != null && musicLoaded[1]) {
             if(restart) {
-                musicSecondary.seekTo(0);
+                music[1].seekTo(0);
             }
             if(crossfade) {
-                musicSecondary.setVolume(0, 0);
-                musicSecondary.setLooping(true);
-                musicSecondary.start();
-                fadeInMusic(musicSecondary, 0.0f);
+                music[1].setVolume(0, 0);
+                music[1].setLooping(true);
+                music[1].start();
+                fadeInMusic(1, 0.0f);
             } else {
-                musicSecondary.setLooping(true);
-                musicSecondary.start();
+                music[1].setLooping(true);
+                music[1].start();
             }
         }
     }
 
     private void startMusic() {
         Log.v("Sounds", "Start Music");
-        if (musicEnabled && musicPrimary == null) {
+        if (musicEnabled && music[0] == null) {
             TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.music);
             int musicPrimaryId = 0;
             int musicSecondaryId = 0;
@@ -239,18 +247,18 @@ public class Sounds {
             sounds.recycle();
             if (musicPrimaryId != 0) {
                 Log.v("Sounds", "Create Primary Music");
-                musicPrimary = MediaPlayer.create(AppUtil.getContext(), musicPrimaryId);
-                musicPrimary.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                music[0] = MediaPlayer.create(AppUtil.getContext(), musicPrimaryId);
+                music[0].setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
-                        if (mp == musicPrimary) {
+                        if (mp == music[0]) {
                             Log.v("Sounds", "Create Primary Music Complete");
-                            musicPrimaryLoaded = true;
-                            if(musicPrimaryActive) {
-                                musicPrimary.setLooping(true);
-                                musicPrimary.setVolume(0.0f, 0.0f);
-                                musicPrimary.start();
-                                fadeInMusic(musicPrimary, 0.0f);
+                            musicLoaded[0] = true;
+                            if (musicPrimaryActive) {
+                                music[0].setLooping(true);
+                                music[0].setVolume(0.0f, 0.0f);
+                                music[0].start();
+                                fadeInMusic(0, 0.0f);
                             }
                         }
                     }
@@ -258,18 +266,18 @@ public class Sounds {
             }
             if (musicSecondaryId != 0) {
                 Log.v("Sounds", "Create Secondary Music");
-                musicSecondary = MediaPlayer.create(AppUtil.getContext(), musicSecondaryId);
-                musicSecondary.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                music[1] = MediaPlayer.create(AppUtil.getContext(), musicSecondaryId);
+                music[1].setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
-                        if (mp == musicSecondary) {
+                        if (mp == music[1]) {
                             Log.v("Sounds", "Create Secondary Music Complete");
-                            musicSecondaryLoaded = true;
+                            musicLoaded[1] = true;
                             if(!musicPrimaryActive) {
-                                musicSecondary.setLooping(true);
-                                musicSecondary.setVolume(0.0f, 0.0f);
-                                musicSecondary.start();
-                                fadeInMusic(musicSecondary, 0.0f);
+                                music[1].setLooping(true);
+                                music[1].setVolume(0.0f, 0.0f);
+                                music[1].start();
+                                fadeInMusic(1, 0.0f);
                             }
                         }
                     }
@@ -277,23 +285,23 @@ public class Sounds {
             }
         } else if (musicEnabled) {
             if(musicPrimaryActive) {
-                musicPrimary.start();
+                music[0].start();
             } else {
-                musicSecondary.start();
+                music[1].start();
             }
         }
     }
 
     private void stopMusic() {
         Log.v("Sounds", "Stop Music");
-        if (musicPrimary != null) {
-            if (musicPrimary.isPlaying()) {
-                musicPrimary.pause();
+        if (music[0] != null) {
+            if (music[0].isPlaying()) {
+                music[0].pause();
             }
         }
-        if (musicSecondary != null) {
-            if (musicSecondary.isPlaying()) {
-                musicSecondary.pause();
+        if (music[1] != null) {
+            if (music[1].isPlaying()) {
+                music[1].pause();
             }
         }
     }
@@ -330,61 +338,61 @@ public class Sounds {
         musicFade.removeCallbacks(musicFadeOut);
     }
 
-    private void fadeInMusic(final MediaPlayer player, final float volume) {
-        if(!player.isPlaying()) {
+    private void fadeInMusic(int playerIndex, final float volume) {
+        if(!music[playerIndex].isPlaying()) {
             return;
         }
         if(volume >= 0.5f) {
             return;
         }
-        musicFadeIn.setValues(player, volume);
+        musicFadeIn.setValues(playerIndex, volume);
         musicFade.postDelayed(musicFadeIn, 50);
     }
 
-    private void fadeOutMusic(final MediaPlayer player, final float volume) {
-        if(!player.isPlaying()) {
+    private void fadeOutMusic(int playerIndex, final float volume) {
+        if(!music[playerIndex].isPlaying()) {
             return;
         }
         if(volume <= 0) {
-            player.pause();
+            music[playerIndex].pause();
             return;
         }
-        musicFadeOut.setValues(player, volume);
+        musicFadeOut.setValues(playerIndex, volume);
         musicFade.postDelayed(musicFadeOut, 50);
     }
 
     private class MusicFadeIn implements Runnable {
-        private MediaPlayer player;
+        private int playerIndex;
         private float volume;
 
-        public final void setValues(MediaPlayer player, final float volume) {
-            this.player = player;
+        public final void setValues(int playerIndex, final float volume) {
+            this.playerIndex = playerIndex;
             this.volume = volume;
         }
 
         @Override
         public void run() {
-            if(musicPrimaryLoaded && musicSecondaryLoaded && player.isPlaying()) {
-                player.setVolume(volume, volume);
-                fadeInMusic(player, volume + 0.05f);
+            if(musicLoaded[playerIndex] && music[playerIndex].isPlaying()) {
+                music[playerIndex].setVolume(volume, volume);
+                fadeInMusic(playerIndex, volume + 0.05f);
             }
         }
     }
 
     private class MusicFadeOut implements Runnable {
-        private MediaPlayer player;
+        private int playerIndex;
         private float volume;
 
-        public final void setValues(MediaPlayer player, final float volume) {
-            this.player = player;
+        public final void setValues(int playerIndex, final float volume) {
+            this.playerIndex = playerIndex;
             this.volume = volume;
         }
 
         @Override
         public void run() {
-            if(musicPrimaryLoaded && musicSecondaryLoaded && player.isPlaying()) {
-                player.setVolume(volume, volume);
-                fadeOutMusic(player, volume - 0.05f);
+            if(musicLoaded[playerIndex] && music[playerIndex].isPlaying()) {
+                music[playerIndex].setVolume(volume, volume);
+                fadeOutMusic(playerIndex, volume - 0.05f);
             }
         }
     }

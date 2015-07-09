@@ -378,13 +378,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             onFragmentChangeStart();
             if (addBackStack) {
                 getSupportFragmentManager().beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .setTransition(FragmentTransaction.TRANSIT_NONE)
                         .addToBackStack(tag)
                         .replace(R.id.container, fragment, tag)
                         .commit();
             } else {
                 getSupportFragmentManager().beginTransaction()
-                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .setTransition(FragmentTransaction.TRANSIT_NONE)
                         .replace(R.id.container, fragment, tag)
                         .commit();
             }
