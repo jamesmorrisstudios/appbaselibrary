@@ -92,7 +92,6 @@ public class EditTextListDialog extends DialogFragment {
             @Override
             public void onClick(View v) {
                 if(onPositive != null && adapter != null) {
-                    Log.v("EditMessageDialog", adapter.getItem(0).text+" "+adapter.getItem(1).text);
                     onPositive.onPositive(adapter.getItems());
                 }
                 list.post(new Runnable() {
@@ -155,6 +154,7 @@ public class EditTextListDialog extends DialogFragment {
 
         public ListAdapter(Context context, int resource, List<StringWrapper> items) {
             super(context, resource, items);
+            Log.v("EditTextListDialog", "Item Count: "+getCount());
         }
 
         public ArrayList<String> getItems() {

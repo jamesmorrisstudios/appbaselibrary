@@ -27,6 +27,7 @@ import android.view.View;
 public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     //Click listener
     private cardClickListener mListener;
+    private boolean isDummyItem;
 
     /**
      * Constructor
@@ -34,10 +35,13 @@ public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHol
      * @param view      Parent view
      * @param mListener Click listener. Null if none desired
      */
-    public BaseRecycleNoHeaderViewHolder(@NonNull View view, @Nullable cardClickListener mListener) {
+    public BaseRecycleNoHeaderViewHolder(@NonNull View view, boolean isDummyItem, @Nullable cardClickListener mListener) {
         super(view);
+        this.isDummyItem = isDummyItem;
         this.mListener = mListener;
-        initItem(view);
+        if(!isDummyItem) {
+            initItem(view);
+        }
     }
 
     protected abstract void initItem(View view);
@@ -54,7 +58,9 @@ public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHol
      * @param data Data to bind
      */
     public void bindItem(@NonNull final BaseRecycleNoHeaderContainer data, boolean expanded) {
-        bindItem(data.getItem(), expanded);
+        if(!isDummyItem) {
+            bindItem(data.getItem(), expanded);
+        }
     }
 
     /**

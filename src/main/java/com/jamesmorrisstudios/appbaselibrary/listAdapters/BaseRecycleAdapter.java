@@ -24,6 +24,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.tonicartos.superslim.GridSLM;
 import com.tonicartos.superslim.LinearSLM;
@@ -35,6 +36,7 @@ import java.util.ArrayList;
  */
 public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
     public static final String TAG = "BaseRecycleAdapter";
+    private static final int VIEW_TYPE_DUMMY = 0x02;
     private static final int VIEW_TYPE_HEADER = 0x01;
     private static final int VIEW_TYPE_CONTENT = 0x00;
     private final ArrayList<LineItem> mItems;
@@ -104,15 +106,19 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     @Override
     public BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
-        boolean isHeader;
+        boolean isHeader, isDummyItem = false;
         if (viewType == VIEW_TYPE_HEADER) {
             view = LayoutInflater.from(parent.getContext()).inflate(getHeaderResId(), parent, false);
             isHeader = true;
-        } else {
+        } else if(viewType == VIEW_TYPE_CONTENT) {
             view = LayoutInflater.from(parent.getContext()).inflate(getItemResId(), parent, false);
             isHeader = false;
+        } else {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_dummy_item, parent, false);
+            isHeader = false;
+            isDummyItem = true;
         }
-        return getViewHolder(view, isHeader, new BaseRecycleViewHolder.cardClickListener() {
+        return getViewHolder(view, isHeader, isDummyItem, new BaseRecycleViewHolder.cardClickListener() {
             @Override
             public void cardClicked(int position) {
                 mListener.itemClicked(mItems.get(position).reminder);
@@ -136,7 +142,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         });
     }
 
-    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
+    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
 
     @LayoutRes
     protected abstract int getHeaderResId();
@@ -258,6 +264,9 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      */
     @Override
     public int getItemViewType(int position) {
+        if(mItems.get(position).reminder.isDummyItem) {
+            return VIEW_TYPE_DUMMY;
+        }
         return mItems.get(position).reminder.isHeader ? VIEW_TYPE_HEADER : VIEW_TYPE_CONTENT;
     }
 

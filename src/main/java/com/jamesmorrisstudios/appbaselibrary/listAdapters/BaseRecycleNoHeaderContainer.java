@@ -22,12 +22,17 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
  * Created by James on 3/31/2015.
  */
 public abstract class BaseRecycleNoHeaderContainer {
+    public final boolean isDummyItem;
 
     /**
      *
      */
     public BaseRecycleNoHeaderContainer() {
+        this.isDummyItem = false;
+    }
 
+    public BaseRecycleNoHeaderContainer(boolean isDummyItem) {
+        this.isDummyItem = isDummyItem;
     }
 
 

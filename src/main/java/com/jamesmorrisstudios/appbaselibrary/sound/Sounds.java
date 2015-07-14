@@ -177,6 +177,10 @@ public class Sounds {
         if(!musicEnabled){
             return;
         }
+        if(musicPrimaryActive && music[0].isPlaying()) {
+            return;
+        }
+        Log.v("Sounds", "Play music primary settings");
         musicPrimaryActive = true;
         cancelMusicFade();
         if(music[1] != null && musicLoaded[1] && music[1].isPlaying()) {
@@ -207,6 +211,10 @@ public class Sounds {
         if(!musicEnabled){
             return;
         }
+        if(!musicPrimaryActive && music[1].isPlaying()) {
+            return;
+        }
+        Log.v("Sounds", "Play music secondary setting");
         musicPrimaryActive = false;
         cancelMusicFade();
         if(music[0] != null && musicLoaded[0] && music[0].isPlaying()) {
@@ -343,6 +351,7 @@ public class Sounds {
             return;
         }
         if(volume >= 0.5f) {
+            Log.v("Sounds", "Fade In Complete");
             return;
         }
         musicFadeIn.setValues(playerIndex, volume);
@@ -355,6 +364,7 @@ public class Sounds {
         }
         if(volume <= 0) {
             music[playerIndex].pause();
+            Log.v("Sounds", "Fade Out Complete");
             return;
         }
         musicFadeOut.setValues(playerIndex, volume);

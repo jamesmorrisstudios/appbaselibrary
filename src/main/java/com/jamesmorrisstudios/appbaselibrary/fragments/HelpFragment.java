@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.utilitieslibrary.Bus;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat;
 
@@ -28,6 +29,10 @@ public class HelpFragment extends BaseFragment {
      * Required empty constructor
      */
     public HelpFragment() {
+    }
+
+    public enum HelpEvent {
+        READ_TUTORIAL, WATCH_TUTORIAL, GOTO_TWITTER, GOTO_FB, GOTO_GPLUS, GOTO_RATE, GOTO_MORE;
     }
 
     /**
@@ -53,12 +58,14 @@ public class HelpFragment extends BaseFragment {
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.READ_TUTORIAL);
                 goToLink(getResources().getString(R.string.tutorial_link_read));
             }
         });
         watchHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.WATCH_TUTORIAL);
                 goToLink(getResources().getString(R.string.tutorial_link_watch));
             }
         });
@@ -72,30 +79,35 @@ public class HelpFragment extends BaseFragment {
         btnTwitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.GOTO_TWITTER);
                 goToLink(getResources().getString(R.string.help_link_twitter));
             }
         });
         btnFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.GOTO_FB);
                 goToLink(getResources().getString(R.string.help_link_fb));
             }
         });
         btnGPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.GOTO_GPLUS);
                 goToLink(getResources().getString(R.string.help_link_gPlus));
             }
         });
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.GOTO_RATE);
                 goToLink(getResources().getString(R.string.store_link));
             }
         });
         moreBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bus.postEnum(HelpEvent.GOTO_MORE);
                 goToLink(getResources().getString(R.string.store_link_all));
             }
         });

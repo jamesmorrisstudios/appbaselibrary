@@ -23,6 +23,7 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
  */
 public abstract class BaseRecycleContainer {
     public final boolean isHeader;
+    public final boolean isDummyItem;
 
     /**
      * Constructor for header
@@ -31,6 +32,12 @@ public abstract class BaseRecycleContainer {
      */
     public BaseRecycleContainer(boolean isHeader) {
         this.isHeader = isHeader;
+        this.isDummyItem = false;
+    }
+
+    public BaseRecycleContainer(boolean isHeader, boolean isDummyItem) {
+        this.isHeader = isHeader;
+        this.isDummyItem = isDummyItem;
     }
 
     public abstract BaseRecycleItem getHeaderItem();

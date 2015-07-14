@@ -75,7 +75,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
         @Subscribe
         public void onColorPickerRequest(ColorPickerRequest request) {
-            createColorPickerDialog(request.initialColor, request.onColorPickerClickListener);
+            createColorPickerDialog(request.initialColor, request.onColorPickerClickListener, request.onNegative, request.onDisable);
         }
 
         @Subscribe
@@ -555,8 +555,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
-    public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
-        ColorPickerDialogBuilder.with(this)
+    public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
+        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this)
                 .setTitle(getResources().getString(R.string.chooseColor))
                 .initialColor(initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
@@ -569,13 +569,16 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     }
                 })
                 .setPositiveButton(getResources().getString(R.string.okay), onColorPickerClickListener)
-                .setNegativeButton(getResources().getString(R.string.cancel), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                    }
-                })
-                .build()
-                .show();
+                .setNegativeButton(getResources().getString(R.string.cancel), onNegative);
+                if(onDisable != null) {
+                    builder.setNeutralButton(getResources().getString(R.string.disable), new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    });
+                }
+                builder.build().show();
     }
 
     public void createRingtoneDialog(@Nullable Uri currentTone, @NonNull String title) {

@@ -39,6 +39,7 @@ public abstract class BaseFragment extends Fragment {
     private FloatingActionButton fab;
     private transient boolean animRunning = false;
     private float fabShownPos, fabHidePos;
+    private boolean fabAutoHide = true;
 
     public abstract void onBack();
 
@@ -174,7 +175,19 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
-    protected void showFab() {
+    protected final void showFabAuto() {
+        if(fabAutoHide) {
+            showFab();
+        }
+    }
+
+    protected final void hideFabAuto() {
+        if(fabAutoHide) {
+            hideFab();
+        }
+    }
+
+    protected final void showFab() {
         if (fab == null) {
             return;
         }
@@ -220,6 +233,13 @@ public abstract class BaseFragment extends Fragment {
                 animRunning = false;
             }
         });
+    }
+
+    protected final void setFabAutoHide(boolean fabAutoHide) {
+        this.fabAutoHide = fabAutoHide;
+        if(!fabAutoHide) {
+            showFab();
+        }
     }
 
     protected final void shareText(@NonNull String chooserTitle, @NonNull String shareText) {

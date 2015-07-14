@@ -1,6 +1,5 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -17,6 +16,7 @@ import android.widget.TextView;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderContainer;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderDummyItem;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ import java.util.ArrayList;
  * Created by James on 4/29/2015.
  */
 public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment implements BaseRecycleNoHeaderAdapter.OnItemClickListener {
-    private boolean isRefreshing = false;
+    private boolean isRefreshing = false, dummyItem = false;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private BaseRecycleNoHeaderAdapter mAdapter = null;
     private TextView noDataText;
@@ -126,9 +126,9 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 if (dy > 0) {
-                    hideFab();
+                    hideFabAuto();
                 } else if (dy < 0) {
-                    showFab();
+                    showFabAuto();
                 }
             }
         });
@@ -142,6 +142,9 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
 
     protected final void applyData(ArrayList<BaseRecycleNoHeaderContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
+            if(dummyItem) {
+                data.add(new BaseRecycleNoHeaderDummyItem());
+            }
             mAdapter.setItems(data);
             hideNoDataText();
         } else {

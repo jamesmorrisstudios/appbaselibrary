@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleItem;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.tonicartos.superslim.LayoutManager;
 
@@ -24,7 +26,7 @@ import java.util.ArrayList;
  * Created by James on 4/29/2015.
  */
 public abstract class BaseRecycleListFragment extends BaseFragment implements BaseRecycleAdapter.OnItemClickListener {
-    private boolean isRefreshing = false;
+    private boolean isRefreshing = false, dummyItem = false;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private BaseRecycleAdapter mAdapter = null;
     private TextView noDataText;
@@ -89,9 +91,9 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 if (dy > 0) {
-                    hideFab();
+                    hideFabAuto();
                 } else if (dy < 0) {
-                    showFab();
+                    showFabAuto();
                 }
             }
         });
@@ -105,6 +107,9 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
+            if(dummyItem) {
+                data.add(new BaseRecycleDummyItem());
+            }
             mAdapter.setItems(data);
             hideNoDataText();
         } else {
@@ -119,6 +124,10 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         mSwipeRefreshLayout.setRefreshing(true);
         isRefreshing = true;
         startDataLoad(forceReload);
+    }
+
+    protected final void setDummyItem(boolean dummyItem) {
+        this.dummyItem = dummyItem;
     }
 
     /**

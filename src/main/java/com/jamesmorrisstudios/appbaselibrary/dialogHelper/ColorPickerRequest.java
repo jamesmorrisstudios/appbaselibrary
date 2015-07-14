@@ -1,6 +1,8 @@
 package com.jamesmorrisstudios.appbaselibrary.dialogHelper;
 
+import android.content.DialogInterface;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 
@@ -10,10 +12,13 @@ import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.Color
 public class ColorPickerRequest {
     public final int initialColor;
     public final ColorPickerClickListener onColorPickerClickListener;
+    public final DialogInterface.OnClickListener onNegative, onDisable;
 
-    public ColorPickerRequest(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener) {
+    public ColorPickerRequest(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
         this.initialColor = initialColor;
         this.onColorPickerClickListener = onColorPickerClickListener;
+        this.onNegative = onNegative;
+        this.onDisable = onDisable;
     }
 
 }
