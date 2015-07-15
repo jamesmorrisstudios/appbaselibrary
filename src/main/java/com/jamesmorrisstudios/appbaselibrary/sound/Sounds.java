@@ -107,7 +107,11 @@ public class Sounds {
             int soundId = getSoundId(itemRes);
             if (soundId != 0) {
                 soundPool.play(soundId, 1f, 1f, 0, 0, 1f);
+            } else {
+                Log.e("Sounds", "Failed to load sound effect");
             }
+        } else {
+            Log.w("Sounds", "Sound effects not ready");
         }
     }
 
