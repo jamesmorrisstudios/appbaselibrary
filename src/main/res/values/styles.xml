@@ -9,6 +9,7 @@
         <item name="colorAccent">@color/accent</item>
         <item name="colorButtonNormal">@color/primary</item>
         <item name="colorControlNormal">@color/primaryDark</item>
+        <!--<item name="android:background">@color/background</item>-->
         <!--
         <item name="colorControlNormal">@color/accent</item>
         <item name="colorControlActivated">@color/accent</item>
@@ -20,6 +21,10 @@
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
         <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_mtrl</item>
 
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
     </style>
 
     <style name="toolbarLight" parent="ThemeOverlay.AppCompat.Light">

@@ -45,6 +45,10 @@ public abstract class BaseFragment extends Fragment {
 
     public abstract boolean showToolbarTitle();
 
+    protected abstract void saveState(Bundle bundle);
+
+    protected abstract void restoreState(Bundle bundle);
+
     /**
      * @param savedInstanceState Saved instance state
      */
@@ -133,6 +137,11 @@ public abstract class BaseFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onSaveInstanceState(Bundle bundle) {
+        saveState(bundle);
+    }
+
     /**
      * View creation done
      *
@@ -142,6 +151,9 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(savedInstanceState != null) {
+            restoreState(savedInstanceState);
+        }
         afterViewCreated();
     }
 

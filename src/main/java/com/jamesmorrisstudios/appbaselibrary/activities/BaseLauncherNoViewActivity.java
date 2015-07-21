@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.TypedArray;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
@@ -18,8 +19,10 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
@@ -38,12 +41,17 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
 import com.jamesmorrisstudios.utilitieslibrary.Bus;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
+import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
+import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorEndListener;
+import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
+import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartListener;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
+import com.nineoldandroids.animation.Animator;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
@@ -64,6 +72,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         SettingsFragment.OnSettingsListener {
 
     private static final int NOTIFICATION_RESULT = 5010;
+    private FrameLayout container;
+    private Toolbar toolbar;
     private ProgressBar spinner;
     private RingtoneRequest ringtoneRequest = null;
     private final Object busListener = new Object() {
@@ -106,6 +116,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         updateImmersiveMode(true);
     }
@@ -157,8 +168,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * then you must call this manually.
      */
     protected final void initOnCreate() {
+        container = (FrameLayout) findViewById(R.id.container);
         spinner = (ProgressBar)findViewById(R.id.progressBar);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle(getString(R.string.app_short_name));
         setSupportActionBar(toolbar);
         getSupportFragmentManager().addOnBackStackChangedListener(this);
@@ -529,7 +541,66 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             case HIDE_SPINNER:
                 spinner.setVisibility(View.GONE);
                 break;
+            case SHOW_TOOLBAR_INSTANT:
+                toggleShowToolbar(true, true);
+                break;
+            case HIDE_TOOLBAR_INSTANT:
+                toggleShowToolbar(false, true);
+                break;
+            case SHOW_TOOLBAR_ANIM:
+                toggleShowToolbar(true, false);
+                break;
+            case HIDE_TOOLBAR_ANIM:
+                toggleShowToolbar(false, false);
+                break;
+            case TOOLBAR_OVERLAY_ENABLE:
+                toggleToolbarOverlay(true);
+                break;
+            case TOOLBAR_OVERLAY_DISABLE:
+                toggleToolbarOverlay(false);
+                break;
         }
+    }
+
+    private void toggleShowToolbar(boolean show, boolean instant) {
+        if(instant) {
+            if (show) {
+                toolbar.setVisibility(View.VISIBLE);
+            } else {
+                toolbar.setVisibility(View.GONE);
+            }
+        } else {
+            if(show) {
+                AnimatorControl.translateYAutoStart(toolbar, -toolbar.getHeight(), 0, 100, 0, new AnimatorStartListener() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        toolbar.setVisibility(View.VISIBLE);
+                    }
+                });
+            } else {
+                AnimatorControl.translateYAutoStart(toolbar, 0, -toolbar.getHeight(), 100, 0, new AnimatorEndListener() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        toolbar.setVisibility(View.GONE);
+                    }
+                });
+            }
+        }
+    }
+
+    private void toggleToolbarOverlay(boolean enable) {
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+        if(enable) {
+            //Margin to 0
+            params.topMargin = 0;
+        } else {
+            //Margin to actionbarsize
+            final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
+            int mActionBarSize = (int) styledAttributes.getDimension(0, 0);
+            styledAttributes.recycle();
+            params.topMargin = mActionBarSize;
+        }
+        container.setLayoutParams(params);
     }
 
     /**
@@ -607,7 +678,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public enum AppBaseEvent {
-        SHOW_SPINNER, HIDE_SPINNER
+        SHOW_SPINNER, HIDE_SPINNER, SHOW_TOOLBAR_INSTANT, HIDE_TOOLBAR_INSTANT, SHOW_TOOLBAR_ANIM, HIDE_TOOLBAR_ANIM,
+        TOOLBAR_OVERLAY_ENABLE, TOOLBAR_OVERLAY_DISABLE
     }
 
 }

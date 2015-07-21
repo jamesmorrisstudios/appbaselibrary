@@ -120,6 +120,16 @@ public class LicenseFragment extends BaseFragment {
     }
 
     @Override
+    protected void saveState(Bundle bundle) {
+
+    }
+
+    @Override
+    protected void restoreState(Bundle bundle) {
+
+    }
+
+    @Override
     protected void afterViewCreated() {
 
     }

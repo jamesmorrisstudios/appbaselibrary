@@ -12,6 +12,8 @@
 
     <color name="tintColor">@color/iconDark</color>
 
+    <color name="background">@color/background_material_light</color>
+
     <!-- Accent -->
     <color name="accent">#00E676</color>
     <color name="accentLight">#69F0AE</color>
