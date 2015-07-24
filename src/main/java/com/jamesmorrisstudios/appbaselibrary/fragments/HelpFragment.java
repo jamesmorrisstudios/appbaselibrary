@@ -118,7 +118,7 @@ public class HelpFragment extends BaseFragment {
         try {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
         } catch (Exception ex) {
-            Utils.toastShort(getResources().getString(R.string.help_link_error));
+            Utils.toastShort(getResources().getString(R.string.failed_open_link));
         }
     }
 

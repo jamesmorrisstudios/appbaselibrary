@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Vybrať farbu"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Neboli nájdené žiadne položky"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Prečítajte si, ako"</string>
-    <string name="help_how_to_watch">"Pozrite sa, ako"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Help &amp; Spätná väzba"</string>
-    <string name="action_settings">"Nastavenie"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Rovnako ako túto aplikáciu?"</string>
-    <string name="help_rate_now">"Hodnotiť teraz"</string>
-    <string name="help_more_by">"Ďalšie Aplikácia"</string>
-    <string name="help_about_header">"O"</string>
-    <string name="help_license">"Licencie"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Nepodarilo sa otvoriť odkaz"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Povoliť pohlcujúce režim"</string>

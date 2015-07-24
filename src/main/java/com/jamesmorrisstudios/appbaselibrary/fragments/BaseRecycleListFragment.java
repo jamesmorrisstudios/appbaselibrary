@@ -16,7 +16,6 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleItem;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.tonicartos.superslim.LayoutManager;
 

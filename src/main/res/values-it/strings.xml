@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Scegli Colore"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Nessun elemento trovato"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Leggi Come"</string>
-    <string name="help_how_to_watch">"Guarda come"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Feedback &amp; Aiuto"</string>
-    <string name="action_settings">"Impostazioni"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Ti piace questa app?"</string>
-    <string name="help_rate_now">"Rate It Now"</string>
-    <string name="help_more_by">"Più App"</string>
-    <string name="help_about_header">"Su"</string>
-    <string name="help_license">"Licenze"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Impossibile aprire il collegamento"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Attiva modalità immersiva"</string>

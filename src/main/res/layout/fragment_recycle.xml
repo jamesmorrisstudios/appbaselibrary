@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="@string/default_recycle_no_data"
+        android:text="@string/no_items_found"
         android:textColor="@color/textDarkMain"
         android:textSize="20sp"
         android:visibility="gone" />

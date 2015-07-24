@@ -1,7 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
@@ -23,10 +22,8 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.nineoldandroids.animation.Animator;
 import com.nineoldandroids.view.ViewHelper;
-import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 
 /**

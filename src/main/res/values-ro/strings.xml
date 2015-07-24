@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Alege culoare"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Nici un articole găsite"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Citește Cum"</string>
-    <string name="help_how_to_watch">"Uita-te la Cum"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Ajutor &amp; Feedback"</string>
-    <string name="action_settings">"Setări"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Ca această aplicație?"</string>
-    <string name="help_rate_now">"Evalueaza acum"</string>
-    <string name="help_more_by">"Mai Multe Aplicatii"</string>
-    <string name="help_about_header">"Despre"</string>
-    <string name="help_license">"Licențe"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Nu a reușit să deschidă link"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Activați Modul copleșitoare"</string>

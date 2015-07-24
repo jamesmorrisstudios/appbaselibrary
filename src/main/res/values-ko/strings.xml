@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"색상 선택"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"발견 된 항목이 없습니다"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"어떻게 읽기"</string>
-    <string name="help_how_to_watch">"어떻게하세요?"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"도움말 및 피드백"</string>
-    <string name="action_settings">"설정"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"이 응용 프로그램처럼?"</string>
-    <string name="help_rate_now">"지금 평가"</string>
-    <string name="help_more_by">"더 많은 앱"</string>
-    <string name="help_about_header">"약"</string>
-    <string name="help_license">"라이센스"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"링크를 열 수 없습니다"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"몰입 모드 사용"</string>

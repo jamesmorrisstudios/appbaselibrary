@@ -41,7 +41,7 @@
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
         <!-- background of the  -->
-        <!-- <item name="android:background">@color/color_primary</item> -->
+        <!--<item name="android:background">@color/primary</item>-->
     </style>
 
     <style name="toolbarDark" parent="ThemeOverlay.AppCompat">

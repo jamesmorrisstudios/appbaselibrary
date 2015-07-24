@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Kies Kleur"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Geen items gevonden"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Lees"</string>
-    <string name="help_how_to_watch">"Kijk hoe"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Help &amp; feedback"</string>
-    <string name="action_settings">"Instellingen"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Net als deze app?"</string>
-    <string name="help_rate_now">"Beoordeel It Now"</string>
-    <string name="help_more_by">"Meer Apps"</string>
-    <string name="help_about_header">"Over"</string>
-    <string name="help_license">"Licenties"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Mislukt koppeling te openen"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Inschakelen Meeslepende Mode"</string>

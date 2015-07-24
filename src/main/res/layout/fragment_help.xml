@@ -56,7 +56,7 @@
             android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="@string/help_how_to_read"
+            android:text="@string/read_how"
             android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
@@ -70,7 +70,7 @@
             android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="@string/help_how_to_watch"
+            android:text="@string/watch_how"
             android:textSize="@dimen/item_size" />
 
         <!-- About  -->
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@string/help_about_header"
+            android:text="@string/about"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/textDarkMain"
             android:textSize="@dimen/header_size" />
@@ -172,7 +172,7 @@
                 android:layout_marginBottom="4dp"
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="4dp"
-                android:text="@string/help_rate_question"
+                android:text="@string/like_this_app"
                 android:textColor="@color/textDarkMain"
                 android:textSize="@dimen/item_size" />
 
@@ -184,7 +184,7 @@
                 android:layout_marginTop="4dp"
                 android:background="@color/textDarkMain"
                 android:clickable="true"
-                android:text="@string/help_rate_now"
+                android:text="@string/rate_now"
                 android:textSize="@dimen/item_size" />
 
         </LinearLayout>
@@ -198,7 +198,7 @@
             android:layout_marginTop="4dp"
             android:background="@color/textDarkMain"
             android:clickable="true"
-            android:text="@string/help_more_by"
+            android:text="@string/more_apps"
             android:textSize="@dimen/item_size" />
 
         <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
@@ -211,7 +211,7 @@
             android:background="@color/textDarkMain"
             android:clickable="true"
             android:gravity="center_horizontal"
-            android:text="@string/help_license"
+            android:text="@string/licenses"
             android:textSize="@dimen/item_size" />
 
         <TextView

@@ -22,7 +22,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/switchItem"
-        android:singleLine="true"
+        android:singleLine="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/textDarkMain"
         android:textSize="18sp" />

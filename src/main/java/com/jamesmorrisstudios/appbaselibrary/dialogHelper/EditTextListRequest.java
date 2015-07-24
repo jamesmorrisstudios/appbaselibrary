@@ -4,9 +4,9 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-import com.jamesmorrisstudios.appbaselibrary.fragments.EditTextListDialog;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
 
-import java.lang.String;import java.util.ArrayList;
+import java.util.ArrayList;
 
 /**
  * Created by James on 6/30/2015.

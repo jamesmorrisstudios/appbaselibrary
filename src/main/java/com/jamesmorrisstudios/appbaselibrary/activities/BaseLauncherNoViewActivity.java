@@ -10,6 +10,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,7 +20,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
@@ -30,11 +30,15 @@ import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceIconRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRadioRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.TimePickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainRecycleListFragment;
-import com.jamesmorrisstudios.appbaselibrary.fragments.EditTextListDialog;
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
@@ -43,7 +47,6 @@ import com.jamesmorrisstudios.utilitieslibrary.Bus;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorEndListener;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartListener;
 import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
@@ -72,9 +75,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         SettingsFragment.OnSettingsListener {
 
     private static final int NOTIFICATION_RESULT = 5010;
+
     private FrameLayout container;
     private Toolbar toolbar;
     private ProgressBar spinner;
+
     private RingtoneRequest ringtoneRequest = null;
     private final Object busListener = new Object() {
         @Subscribe
@@ -108,6 +113,20 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             BaseLauncherNoViewActivity.this.onAppBaseEvent(event);
         }
 
+        @Subscribe
+        public void onSingleChoiceRequest(SingleChoiceRequest request) {
+            BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.items, request.clickListener, request.onNegative);
+        }
+
+        @Subscribe
+        public void onSingleChoiceRadioRequest(SingleChoiceRadioRequest request) {
+            BaseLauncherNoViewActivity.this.createSingleChoiceRadioDialog(request.title, request.items, request.defaultValue, request.clickListener, request.onPositive, request.onNegative);
+        }
+
+        @Subscribe
+        public void onSingleChoiceIconRequest(SingleChoiceIconRequest request) {
+            BaseLauncherNoViewActivity.this.createSingleChoiceIconDialog(request.title, request.items, request.onOptionPickedListener);
+        }
     };
     private boolean clearingBackStack = false;
 
@@ -128,19 +147,21 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @param resultCode  Result code status
      * @param intent      Result intent
      */
-    public void onActivityResult(final int requestCode, final int resultCode, @NonNull final Intent intent) {
-        if (resultCode == Activity.RESULT_OK && requestCode == NOTIFICATION_RESULT) {
-            Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
-            String name = null;
-            if (uri != null) {
-                Ringtone ringtone = RingtoneManager.getRingtone(AppUtil.getContext(), uri);
-                if (ringtone != null) {
-                    name = ringtone.getTitle(AppUtil.getContext());
+    public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
+        if (requestCode == NOTIFICATION_RESULT) {
+            if(resultCode == Activity.RESULT_OK) {
+                Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+                String name = null;
+                if (uri != null) {
+                    Ringtone ringtone = RingtoneManager.getRingtone(AppUtil.getContext(), uri);
+                    if (ringtone != null) {
+                        name = ringtone.getTitle(AppUtil.getContext());
+                    }
                 }
-            }
-            if(ringtoneRequest != null) {
-                ringtoneRequest.listener.ringtoneResponse(uri, name);
-                ringtoneRequest = null;
+                if (ringtoneRequest != null) {
+                    ringtoneRequest.listener.ringtoneResponse(uri, name);
+                    ringtoneRequest = null;
+                }
             }
             Utils.unlockOrientation(this);
         }
@@ -589,18 +610,17 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     private void toggleToolbarOverlay(boolean enable) {
-        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+        // FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
         if(enable) {
-            //Margin to 0
-            params.topMargin = 0;
+            //Padding to 0
+            container.setPadding(container.getPaddingLeft(), 0, container.getPaddingTop(), container.getPaddingBottom());
         } else {
-            //Margin to actionbarsize
+            //Padding to actionbarsize
             final TypedArray styledAttributes = getTheme().obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
             int mActionBarSize = (int) styledAttributes.getDimension(0, 0);
             styledAttributes.recycle();
-            params.topMargin = mActionBarSize;
+            container.setPadding(container.getPaddingLeft(), mActionBarSize, container.getPaddingTop(), container.getPaddingBottom());
         }
-        container.setLayoutParams(params);
     }
 
     /**
@@ -626,9 +646,39 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
+    public void createSingleChoiceDialog(@NonNull String title, @NonNull String[] items, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+                .setTitle(title)
+                .setItems(items, clickListener);
+        if(onNegative != null) {
+            builder.setNegativeButton(R.string.cancel, onNegative);
+        }
+        builder.show();
+    }
+
+    public void createSingleChoiceRadioDialog(@NonNull String title, @NonNull String[] items, int defaultValue, @NonNull DialogInterface.OnClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+                .setTitle(title)
+                .setPositiveButton(R.string.okay, onPositive)
+                .setSingleChoiceItems(items, defaultValue, clickListener);
+        if(onNegative != null) {
+            builder.setNegativeButton(R.string.cancel, onNegative);
+        }
+        builder.show();
+    }
+
+    public void createSingleChoiceIconDialog(@NonNull String title, @NonNull @DrawableRes int[] items, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
+        SingleChoiceIconDialogBuilder.with(this)
+                .setTitle(title)
+                .setItems(items)
+                .setOnOptionPicked(onOptionPickedListener)
+                .build()
+                .show();
+    }
+
     public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
         ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this)
-                .setTitle(getResources().getString(R.string.chooseColor))
+                .setTitle(getResources().getString(R.string.choose_color))
                 .initialColor(initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
                 .noSliders()
@@ -636,18 +686,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .setOnColorSelectedListener(new OnColorSelectedListener() {
                     @Override
                     public void onColorSelected(int selectedColor) {
-
+                        //Unused as the onPositive call gives the same info
                     }
                 })
                 .setPositiveButton(getResources().getString(R.string.okay), onColorPickerClickListener)
                 .setNegativeButton(getResources().getString(R.string.cancel), onNegative);
                 if(onDisable != null) {
-                    builder.setNeutralButton(getResources().getString(R.string.disable), new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-
-                        }
-                    });
+                    builder.setNeutralButton(getResources().getString(R.string.disable), onDisable);
                 }
                 builder.build().show();
     }
@@ -666,7 +711,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             Utils.lockOrientationCurrent(this);
             startActivityForResult(intent, NOTIFICATION_RESULT);
         } catch (Exception ex) {
-            Utils.toastShort(getString(R.string.help_link_error));
+            Utils.unlockOrientation(this);
+            Utils.toastShort(getString(R.string.failed_open_link));
         }
     }
 

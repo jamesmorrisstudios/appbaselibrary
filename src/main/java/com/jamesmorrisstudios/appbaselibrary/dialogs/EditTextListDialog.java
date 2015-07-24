@@ -1,4 +1,4 @@
-package com.jamesmorrisstudios.appbaselibrary.fragments;
+package com.jamesmorrisstudios.appbaselibrary.dialogs;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -20,10 +20,6 @@ import android.widget.ListView;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat;
 
-import java.lang.CharSequence;
-import java.lang.Override;
-import java.lang.Runnable;
-import java.lang.String;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -109,7 +105,7 @@ public class EditTextListDialog extends DialogFragment {
         this.messages = new ArrayList<>(messages);
         this.onPositive = onPositive;
         this.onNegative = onNegative;
-    }
+}
 
     public interface EditMessageListener {
         void onPositive(ArrayList<String> messages);

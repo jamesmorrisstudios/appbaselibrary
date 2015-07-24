@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Triar color"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Els articles no s'han"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Llegir Com"</string>
-    <string name="help_how_to_watch">"Vegi com"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Ajuda i Comentaris"</string>
-    <string name="action_settings">"Ajustos"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"T'agrada aquesta aplicació?"</string>
-    <string name="help_rate_now">"Vota ja!"</string>
-    <string name="help_more_by">"Més aplicacions"</string>
-    <string name="help_about_header">"Sobre"</string>
-    <string name="help_license">"Llicències"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Error en obrir l'enllaç"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Activa el mode d'immersió"</string>

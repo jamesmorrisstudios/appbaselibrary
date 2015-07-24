@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Choisir la couleur"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Aucun élément trouvé"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Lire Comment"</string>
-    <string name="help_how_to_watch">"Comment regarder"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Aide &amp; Commentaires"</string>
-    <string name="action_settings">"Paramètres"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Vous aimez cette application?"</string>
-    <string name="help_rate_now">"Noter It Now"</string>
-    <string name="help_more_by">"Plus D'Applications"</string>
-    <string name="help_about_header">"Environ"</string>
-    <string name="help_license">"Licences"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Impossible d'ouvrir le lien"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Activer le mode immersif"</string>

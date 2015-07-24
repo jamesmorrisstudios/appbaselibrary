@@ -1,27 +1,4 @@
 <resources>
-    <!-- Dialogs -->
-    <string name="chooseColor">"Vælg Farve"</string>
-
-    <!-- Default no data message -->
-    <string name="default_recycle_no_data">"Ingen emner fundet"</string>
-
-    <!-- Tutorial headings -->
-    <string name="help_how_to_read">"Læs hvordan"</string>
-    <string name="help_how_to_watch">"Se hvordan"</string>
-
-    <!-- Toolbar menu options -->
-    <string name="action_help">"Hjælp &amp; Feedback"</string>
-    <string name="action_settings">"Indstillinger"</string>
-
-    <!-- Help/about headings -->
-    <string name="help_rate_question">"Ligesom denne app?"</string>
-    <string name="help_rate_now">"Bedøm det nu"</string>
-    <string name="help_more_by">"Flere apps"</string>
-    <string name="help_about_header">"Cirka"</string>
-    <string name="help_license">"Licenser"</string>
-
-    <!-- Error Popup -->
-    <string name="help_link_error">"Kunne ikke åbne link"</string>
 
     <!-- Settings -->
     <string name="settings_base_item_0_primary">"Aktiver Immersive tilstand"</string>
