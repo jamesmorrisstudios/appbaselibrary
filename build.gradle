@@ -24,12 +24,13 @@ apply plugin: 'com.android.library'
 
 repositories {
     mavenLocal()
+    maven { url "https://jitpack.io" }
     mavenCentral()
 }
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "23.0.0 rc3"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         minSdkVersion 10
@@ -49,7 +50,10 @@ dependencies {
     compile 'com.android.support:design:22.2.1'
     compile 'com.android.support:support-v4:22.2.1'
     compile 'com.android.support:appcompat-v7:22.2.1'
-    compile 'com.jamesmorrisstudios:utilitieslibrary:1.1'
-    compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0'
     compile 'com.nineoldandroids:library:2.4.0'
+
+    //compile 'com.jamesmorrisstudios:utilitieslibrary:1.1' //Local repo
+    //compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0' //Local repo
+    compile 'com.github.morris-james:UtilitiesLibrary:v1.1.1' //Github
+    compile 'com.github.morris-james:MaterialDateTimePicker:v1.3.2.custom' //Github
 }
