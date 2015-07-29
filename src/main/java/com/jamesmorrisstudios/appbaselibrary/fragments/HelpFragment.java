@@ -59,14 +59,14 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.READ_TUTORIAL);
-                goToLink(getResources().getString(R.string.tutorial_link_read));
+                Utils.openLink(getResources().getString(R.string.tutorial_link_read));
             }
         });
         watchHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.WATCH_TUTORIAL);
-                goToLink(getResources().getString(R.string.tutorial_link_watch));
+                Utils.openLink(getResources().getString(R.string.tutorial_link_watch));
             }
         });
         license.setOnClickListener(new View.OnClickListener() {
@@ -80,46 +80,38 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_TWITTER);
-                goToLink(getResources().getString(R.string.help_link_twitter));
+                Utils.openLink(getResources().getString(R.string.help_link_twitter));
             }
         });
         btnFB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_FB);
-                goToLink(getResources().getString(R.string.help_link_fb));
+                Utils.openLink(getResources().getString(R.string.help_link_fb));
             }
         });
         btnGPlus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_GPLUS);
-                goToLink(getResources().getString(R.string.help_link_gPlus));
+                Utils.openLink(getResources().getString(R.string.help_link_gPlus));
             }
         });
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_RATE);
-                goToLink(getResources().getString(R.string.store_link));
+                Utils.openLink(getResources().getString(R.string.store_link));
             }
         });
         moreBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_MORE);
-                goToLink(getResources().getString(R.string.store_link_all));
+                Utils.openLink(getResources().getString(R.string.store_link_all));
             }
         });
         return view;
-    }
-
-    private void goToLink(String link) {
-        try {
-            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(link)));
-        } catch (Exception ex) {
-            Utils.toastShort(getResources().getString(R.string.failed_open_link));
-        }
     }
 
     /**
