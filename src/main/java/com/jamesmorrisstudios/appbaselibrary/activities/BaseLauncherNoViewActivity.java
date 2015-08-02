@@ -148,10 +148,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @param intent      Result intent
      */
     public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
+        super.onActivityResult(requestCode, resultCode, intent);
         if (requestCode == NOTIFICATION_RESULT) {
-            if(resultCode == Activity.RESULT_OK) {
-                Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+            if(resultCode == Activity.RESULT_OK && intent != null && intent.hasExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI)) {
                 String name = null;
+                Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
                 if (uri != null) {
                     Ringtone ringtone = RingtoneManager.getRingtone(AppUtil.getContext(), uri);
                     if (ringtone != null) {
@@ -165,7 +166,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             }
             Utils.unlockOrientation(this);
         }
-        super.onActivityResult(requestCode, resultCode, intent);
     }
 
     /**

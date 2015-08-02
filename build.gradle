@@ -54,6 +54,6 @@ dependencies {
 
     //compile 'com.jamesmorrisstudios:utilitieslibrary:1.1' //Local repo
     //compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0' //Local repo
-    compile 'com.github.morris-james:UtilitiesLibrary:v1.1.1' //Github
-    compile 'com.github.morris-james:MaterialDateTimePicker:v1.3.2.custom' //Github
+    compile 'com.github.morris-james:UtilitiesLibrary:v1.1.1' //Jitpack
+    compile 'com.github.morris-james:MaterialDateTimePicker:v1.3.2.custom' //Jitpack
 }
