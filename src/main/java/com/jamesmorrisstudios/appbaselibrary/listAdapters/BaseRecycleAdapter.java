@@ -44,6 +44,8 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     private int mHeaderDisplay;
     private boolean mMarginsFixed;
     private int expandedPosition = -1;
+    private int sectionManager = -1;
+    private int sectionFirstPosition = 0;
 
     /**
      * Constructor
@@ -66,8 +68,8 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
 
-        int sectionManager = -1;
-        int sectionFirstPosition = 0;
+        sectionManager = -1;
+        sectionFirstPosition = 0;
 
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).isHeader) {
@@ -83,17 +85,23 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         mItems.addAll(mItemsTemp);
 
         notifyDataSetChanged();
+    }
 
-        /*
-        while (!mItems.isEmpty()) {
-            mItems.remove(0);
-        }
+    public final void addItems(@NonNull ArrayList<BaseRecycleContainer> items, boolean hasHeader) {
+        ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
-            mItems.add(new LineItem(0, 0, items.get(i)));
+            if (items.get(i).isHeader) {
+                sectionFirstPosition = mItems.size() + i;
+                sectionManager = (sectionManager + 1) % 2;
+            }
+            mItemsTemp.add(new LineItem(sectionManager, sectionFirstPosition, items.get(i)));
         }
-        notifyDataSetChanged();
-        notifyHeaderChanges();
-        */
+        int indexStart = mItems.size();
+        mItems.addAll(mItemsTemp);
+        notifyItemRangeInserted(indexStart, mItemsTemp.size());
+        if(hasHeader) {
+            notifyHeaderChanges();
+        }
     }
 
     /**
@@ -177,15 +185,23 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
             lp.headerStartMarginIsAuto = !mMarginsFixed;
         }
         lp.setSlm(getSectionLayoutManager());
-        lp.setNumColumns(getNumberColumns());
+        if(getColumnWidth() != -1) {
+            lp.setColumnWidth(getColumnWidth());
+        } else {
+            lp.setNumColumns(getNumberColumns());
+        }
         lp.setFirstPosition(item.sectionFirstPosition);
         itemView.setLayoutParams(lp);
+    }
+
+    protected int getColumnWidth() {
+        return -1;
     }
 
     /**
      * @return Number of columns to show
      */
-    private int getNumberColumns() {
+    protected int getNumberColumns() {
         switch (Utils.getOrientation()) {
             case PORTRAIT:
                 switch (Utils.getScreenSize()) {

@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
@@ -22,9 +23,6 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
 import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
-import com.nineoldandroids.animation.Animator;
-import com.nineoldandroids.view.ViewHelper;
-
 
 /**
  * Base app fragment
@@ -201,10 +199,10 @@ public abstract class BaseFragment extends Fragment {
             return;
         }
         if (fabShownPos == 0 || fabHidePos == 0) {
-            fabShownPos = ViewHelper.getY(fab);
+            fabShownPos = fab.getY();
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if (animRunning || ViewHelper.getY(fab) == fabShownPos) {
+        if (animRunning || fab.getY() == fabShownPos) {
             return;
         }
         AnimatorControl.translateYAutoStart(fab, (fabHidePos - fabShownPos), 0, 250, 0, new AnimatorStartEndListener() {
@@ -225,10 +223,10 @@ public abstract class BaseFragment extends Fragment {
             return;
         }
         if (fabShownPos == 0 || fabHidePos == 0) {
-            fabShownPos = ViewHelper.getY(fab);
+            fabShownPos = fab.getY();
             fabHidePos = fabShownPos + Utils.getDipInt(24) + fab.getHeight();
         }
-        if (animRunning || ViewHelper.getY(fab) == fabHidePos) {
+        if (animRunning || fab.getY() == fabHidePos) {
             return;
         }
         AnimatorControl.translateYAutoStart(fab, 0, (fabHidePos - fabShownPos), 250, 0, new AnimatorStartEndListener() {

@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -54,7 +55,6 @@ import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelect
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
-import com.nineoldandroids.animation.Animator;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 

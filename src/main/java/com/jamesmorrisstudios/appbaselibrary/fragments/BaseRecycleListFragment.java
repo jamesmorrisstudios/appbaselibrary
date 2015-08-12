@@ -63,8 +63,33 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                     }
                 });
         mSwipeRefreshLayout.setEnabled(false);
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (!recyclerView.canScrollVertically(1)) {
+                    onScrolledToEnd();
+                } else if (dy < 0) {
+                    onScrolledUp();
+                } else if (dy > 0) {
+                    onScrolledDown();
+                }
+            }
+        });
         isRefreshing = true;
         return view;
+    }
+
+    private void onScrolledUp() {
+
+    }
+
+    private void onScrolledDown() {
+
+    }
+
+    private void onScrolledToEnd() {
+        startMoreDataLoad();
     }
 
     /**
@@ -102,6 +127,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     protected abstract void startDataLoad(boolean forcedRefresh);
 
+    protected abstract void startMoreDataLoad();
+
     protected abstract void itemClick(@NonNull BaseRecycleContainer item);
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
@@ -114,6 +141,17 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         } else {
             mAdapter.setItems(new ArrayList<BaseRecycleContainer>());
             showNoDataText();
+        }
+        endRefresh();
+    }
+
+    protected final void appendData(ArrayList<BaseRecycleContainer> data, boolean hasHeader) {
+        if (mAdapter != null && data != null && !data.isEmpty()) {
+            if(dummyItem) {
+                data.add(new BaseRecycleDummyItem());
+            }
+            mAdapter.addItems(data, hasHeader);
+            hideNoDataText();
         }
         endRefresh();
     }
