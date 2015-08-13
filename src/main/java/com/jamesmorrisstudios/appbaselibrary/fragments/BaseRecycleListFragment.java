@@ -16,8 +16,9 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
+import com.jamesmorrisstudios.appbaselibrary.superslim.LayoutManager;
+import com.jamesmorrisstudios.appbaselibrary.superslim.SlimRecyclerView;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
-import com.tonicartos.superslim.LayoutManager;
 
 import java.util.ArrayList;
 
@@ -108,7 +109,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         mAdapter = getAdapter(mHeaderDisplay, this);
         mAdapter.setMarginsFixed(mAreMarginsFixed);
         mAdapter.setHeaderDisplay(mHeaderDisplay);
-        mViews.setAdapter(mAdapter);
+        mViews.setAdapter(getAdapterToSet());
         startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -124,6 +125,10 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
+
+    protected RecyclerView.Adapter getAdapterToSet() {
+        return mAdapter;
+    }
 
     protected abstract void startDataLoad(boolean forcedRefresh);
 
@@ -214,7 +219,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     /**
-     * @param item Clicked reminder item
+     * @param item Clicked container item
      */
     @Override
     public void itemClicked(@NonNull BaseRecycleContainer item) {

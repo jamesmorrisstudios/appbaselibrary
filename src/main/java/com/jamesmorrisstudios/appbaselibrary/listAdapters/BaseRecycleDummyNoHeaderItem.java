@@ -3,14 +3,20 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 /**
  * Created by James on 7/10/2015.
  */
-public class BaseRecycleNoHeaderDummyItem extends BaseRecycleNoHeaderContainer {
+public class BaseRecycleDummyNoHeaderItem extends BaseRecycleNoHeaderContainer {
+
 
     /**
      * Constructor for dummy item
      *
      */
-    public BaseRecycleNoHeaderDummyItem() {
+    public BaseRecycleDummyNoHeaderItem() {
         super(true);
+    }
+
+    @Override
+    public BaseRecycleItem getHeader() {
+        return null;
     }
 
     @Override

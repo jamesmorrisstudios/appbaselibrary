@@ -24,10 +24,11 @@ import android.view.View;
 /**
  * Reminder view holder for use in RecyclerView
  */
-public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public abstract class BaseRecycleViewNoHeaderHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     //Click listener
     private cardClickListener mListener;
-    private boolean isDummyItem;
+    //Type of view. header or normal
+    private boolean isHeader, isDummyItem;
 
     /**
      * Constructor
@@ -35,16 +36,25 @@ public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHol
      * @param view      Parent view
      * @param mListener Click listener. Null if none desired
      */
-    public BaseRecycleNoHeaderViewHolder(@NonNull View view, boolean isDummyItem, @Nullable cardClickListener mListener) {
+    public BaseRecycleViewNoHeaderHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable cardClickListener mListener) {
         super(view);
+        this.isHeader = isHeader;
         this.isDummyItem = isDummyItem;
         this.mListener = mListener;
         if(!isDummyItem) {
-            initItem(view);
+            if (isHeader) {
+                initHeader(view);
+            } else {
+                initItem(view);
+            }
         }
     }
 
+    protected abstract void initHeader(View view);
+
     protected abstract void initItem(View view);
+
+    protected abstract void bindHeader(BaseRecycleItem headerItem, boolean expanded);
 
     protected abstract void bindItem(BaseRecycleItem item, boolean expanded);
 
@@ -59,7 +69,11 @@ public abstract class BaseRecycleNoHeaderViewHolder extends RecyclerView.ViewHol
      */
     public void bindItem(@NonNull final BaseRecycleNoHeaderContainer data, boolean expanded) {
         if(!isDummyItem) {
-            bindItem(data.getItem(), expanded);
+            if (isHeader) {
+                bindHeader(data.getHeader(), expanded);
+            } else {
+                bindItem(data.getItem(), expanded);
+            }
         }
     }
 

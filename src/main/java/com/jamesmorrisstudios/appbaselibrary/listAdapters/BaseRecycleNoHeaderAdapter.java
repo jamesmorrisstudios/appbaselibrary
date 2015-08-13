@@ -20,6 +20,7 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,8 +32,9 @@ import java.util.ArrayList;
 /**
  * Reminder adapter class to manage the recyclerView
  */
-public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<BaseRecycleNoHeaderViewHolder> {
+public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<BaseRecycleViewNoHeaderHolder> {
     public static final String TAG = "BaseRecycleAdapter";
+    private static final int VIEW_TYPE_HEADER = 0x03;
     private static final int VIEW_TYPE_DUMMY = 0x02;
     private static final int VIEW_TYPE_CONTENT = 0x00;
     private final ArrayList<LineItem> mItems;
@@ -67,28 +69,42 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
         notifyDataSetChanged();
     }
 
+    public final void addItems(@NonNull ArrayList<BaseRecycleNoHeaderContainer> items, boolean hasHeader) {
+        ArrayList<LineItem> mItemsTemp = new ArrayList<>();
+        for (int i = 0; i < items.size(); i++) {
+            mItemsTemp.add(new LineItem(items.get(i)));
+        }
+        int indexStart = mItems.size();
+        mItems.addAll(mItemsTemp);
+        notifyItemRangeInserted(indexStart, mItemsTemp.size());
+    }
+
     /**
      * Creates a view holder for one of the item views
      *
      * @param parent   Parent view
      * @param viewType Type of view
-     * @return The reminder view holder
+     * @return The container view holder
      */
     @Override
-    public BaseRecycleNoHeaderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public BaseRecycleViewNoHeaderHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         boolean isDummyItem = false;
+        boolean isHeader = false;
         View view;
         if(viewType == VIEW_TYPE_CONTENT) {
             view = LayoutInflater.from(parent.getContext()).inflate(getItemResId(), parent, false);
+        } else if(viewType == VIEW_TYPE_HEADER) {
+            view = LayoutInflater.from(parent.getContext()).inflate(getHeaderResId(), parent, false);
+            isHeader = true;
         } else {
             view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_dummy_item, parent, false);
             isDummyItem = true;
         }
 
-        return getViewHolder(view, isDummyItem, new BaseRecycleNoHeaderViewHolder.cardClickListener() {
+        return getViewHolder(view, isHeader, isDummyItem, new BaseRecycleViewNoHeaderHolder.cardClickListener() {
             @Override
             public void cardClicked(int position) {
-                mListener.itemClicked(mItems.get(position).reminder);
+                mListener.itemClicked(mItems.get(position).data);
             }
 
             @Override
@@ -109,10 +125,13 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
         });
     }
 
-    protected abstract BaseRecycleNoHeaderViewHolder getViewHolder(@NonNull View view, boolean isDummyItem, @Nullable BaseRecycleNoHeaderViewHolder.cardClickListener mListener);
+    protected abstract BaseRecycleViewNoHeaderHolder getViewHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable BaseRecycleViewNoHeaderHolder.cardClickListener mListener);
 
     @LayoutRes
     protected abstract int getItemResId();
+
+    @LayoutRes
+    protected abstract int getHeaderResId();
 
     /**
      * Binds a view holder data set in the given position
@@ -121,9 +140,16 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      * @param position Position
      */
     @Override
-    public void onBindViewHolder(@NonNull BaseRecycleNoHeaderViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull BaseRecycleViewNoHeaderHolder holder, int position) {
         final LineItem item = mItems.get(position);
-        holder.bindItem(item.reminder, position == expandedPosition);
+        holder.bindItem(item.data, position == expandedPosition);
+
+        if(item.data.isHeader) {
+            StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams)holder.itemView.getLayoutParams();
+            if(params != null) {
+                params.setFullSpan(true);
+            }
+        }
     }
 
     /**
@@ -136,8 +162,10 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
 
     @Override
     public int getItemViewType(int position) {
-        if(mItems.get(position).reminder.isDummyItem) {
+        if(mItems.get(position).data.isDummyItem) {
             return VIEW_TYPE_DUMMY;
+        } else if(mItems.get(position).data.isHeader) {
+            return VIEW_TYPE_HEADER;
         }
         return VIEW_TYPE_CONTENT;
     }
@@ -153,15 +181,15 @@ public abstract class BaseRecycleNoHeaderAdapter extends RecyclerView.Adapter<Ba
      * Individual line item for each item in recyclerView. These are recycled.
      */
     private static class LineItem {
-        public BaseRecycleNoHeaderContainer reminder;
+        public BaseRecycleNoHeaderContainer data;
 
         /**
          * Constructor
          *
-         * @param reminder Reminder line item data
+         * @param data Reminder line item data
          */
-        public LineItem(@NonNull BaseRecycleNoHeaderContainer reminder) {
-            this.reminder = reminder;
+        public LineItem(@NonNull BaseRecycleNoHeaderContainer data) {
+            this.data = data;
         }
     }
 }

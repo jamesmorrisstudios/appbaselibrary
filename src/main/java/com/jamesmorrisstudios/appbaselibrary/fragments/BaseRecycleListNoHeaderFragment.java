@@ -14,9 +14,9 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyNoHeaderItem;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderContainer;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleNoHeaderDummyItem;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
 import java.util.ArrayList;
@@ -64,10 +64,37 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
                         }
                     }
                 });
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                if (!recyclerView.canScrollVertically(1)) {
+                    onScrolledToEnd();
+                } else if (dy < 0) {
+                    onScrolledUp();
+                } else if (dy > 0) {
+                    onScrolledDown();
+                }
+            }
+        });
         mSwipeRefreshLayout.setEnabled(false);
         isRefreshing = true;
         return view;
     }
+
+    private void onScrolledUp() {
+
+    }
+
+    private void onScrolledDown() {
+
+    }
+
+    private void onScrolledToEnd() {
+        startMoreDataLoad();
+    }
+
+
 
     /**
      * @return Number of columns to show
@@ -119,7 +146,7 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
         super.onViewCreated(view, savedInstanceState);
         ViewHolder mViews = new ViewHolder(view);
         mAdapter = getAdapter(this);
-        mViews.setAdapter(mAdapter);
+        mViews.setAdapter(getAdapterToSet());
         startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -136,20 +163,37 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
 
     protected abstract BaseRecycleNoHeaderAdapter getAdapter(@NonNull BaseRecycleNoHeaderAdapter.OnItemClickListener mListener);
 
+    protected RecyclerView.Adapter getAdapterToSet() {
+        return mAdapter;
+    }
+
     protected abstract void startDataLoad(boolean forcedRefresh);
+
+    protected abstract void startMoreDataLoad();
 
     protected abstract void itemClick(@NonNull BaseRecycleNoHeaderContainer item);
 
     protected final void applyData(ArrayList<BaseRecycleNoHeaderContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
             if(dummyItem) {
-                data.add(new BaseRecycleNoHeaderDummyItem());
+                data.add(new BaseRecycleDummyNoHeaderItem());
             }
             mAdapter.setItems(data);
             hideNoDataText();
         } else {
             mAdapter.setItems(new ArrayList<BaseRecycleNoHeaderContainer>());
             showNoDataText();
+        }
+        endRefresh();
+    }
+
+    protected final void appendData(ArrayList<BaseRecycleNoHeaderContainer> data, boolean hasHeader) {
+        if (mAdapter != null && data != null && !data.isEmpty()) {
+            if(dummyItem) {
+                data.add(new BaseRecycleDummyNoHeaderItem());
+            }
+            mAdapter.addItems(data, hasHeader);
+            hideNoDataText();
         }
         endRefresh();
     }
@@ -206,7 +250,7 @@ public abstract class BaseRecycleListNoHeaderFragment extends BaseFragment imple
     }
 
     /**
-     * @param item Clicked reminder item
+     * @param item Clicked container item
      */
     @Override
     public void itemClicked(@NonNull BaseRecycleNoHeaderContainer item) {

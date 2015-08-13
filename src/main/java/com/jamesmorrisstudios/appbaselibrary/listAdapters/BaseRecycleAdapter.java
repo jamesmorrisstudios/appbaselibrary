@@ -20,14 +20,15 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.superslim.GridSLM;
+import com.jamesmorrisstudios.appbaselibrary.superslim.LinearSLM;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
-import com.tonicartos.superslim.GridSLM;
-import com.tonicartos.superslim.LinearSLM;
 
 import java.util.ArrayList;
 
@@ -57,6 +58,20 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         this.mListener = mListener;
         this.mHeaderDisplay = headerMode;
         mItems = new ArrayList<>();
+
+        registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onChanged() {
+                super.onChanged();
+                Log.v("RecycleAdapter", "Items Changed: ");
+            }
+
+            @Override
+            public void onItemRangeInserted(int positionStart, int itemCount) {
+                super.onItemRangeInserted(positionStart, itemCount);
+                    Log.v("RecycleAdapter", "Items Inserted: "+positionStart+" "+itemCount);
+            }
+        });
     }
 
     /**
@@ -109,7 +124,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      *
      * @param parent   Parent view
      * @param viewType Type of view
-     * @return The reminder view holder
+     * @return The container view holder
      */
     @Override
     public BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -129,7 +144,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         return getViewHolder(view, isHeader, isDummyItem, new BaseRecycleViewHolder.cardClickListener() {
             @Override
             public void cardClicked(int position) {
-                mListener.itemClicked(mItems.get(position).reminder);
+                mListener.itemClicked(mItems.get(position).container);
             }
 
             @Override
@@ -169,17 +184,17 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         final LineItem item = mItems.get(position);
         final View itemView = holder.itemView;
 
-        holder.bindItem(item.reminder, position == expandedPosition);
+        holder.bindItem(item.container, position == expandedPosition);
 
         final GridSLM.LayoutParams lp = GridSLM.LayoutParams.from(itemView.getLayoutParams());
         // Overrides xml attrs, could use different layouts too.
-        if (item.reminder.isHeader) {
+        if (item.container.isHeader) {
             lp.headerDisplay = mHeaderDisplay;
-            //if (lp.isHeaderInline() || (mMarginsFixed && !lp.isHeaderOverlay())) {
-            lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
-            //} else {
-            //    lp.width = ViewGroup.LayoutParams.WRAP_CONTENT;
-            //}
+            if (lp.isHeaderInline() || (mMarginsFixed && !lp.isHeaderOverlay())) {
+                lp.width = ViewGroup.LayoutParams.MATCH_PARENT;
+            } else {
+                lp.width = ViewGroup.LayoutParams.WRAP_CONTENT;
+            }
 
             lp.headerEndMarginIsAuto = !mMarginsFixed;
             lp.headerStartMarginIsAuto = !mMarginsFixed;
@@ -193,6 +208,8 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         lp.setFirstPosition(item.sectionFirstPosition);
         itemView.setLayoutParams(lp);
     }
+
+
 
     protected int getColumnWidth() {
         return -1;
@@ -280,10 +297,10 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      */
     @Override
     public int getItemViewType(int position) {
-        if(mItems.get(position).reminder.isDummyItem) {
+        if(mItems.get(position).container.isDummyItem) {
             return VIEW_TYPE_DUMMY;
         }
-        return mItems.get(position).reminder.isHeader ? VIEW_TYPE_HEADER : VIEW_TYPE_CONTENT;
+        return mItems.get(position).container.isHeader ? VIEW_TYPE_HEADER : VIEW_TYPE_CONTENT;
     }
 
     /**
@@ -316,7 +333,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     private void notifyHeaderChanges() {
         for (int i = 0; i < mItems.size(); i++) {
             LineItem item = mItems.get(i);
-            if (item.reminder.isHeader) {
+            if (item.container.isHeader) {
                 notifyItemChanged(i);
             }
         }
@@ -335,19 +352,19 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     private static class LineItem {
         public int sectionManager;
         public int sectionFirstPosition;
-        public BaseRecycleContainer reminder;
+        public BaseRecycleContainer container;
 
         /**
          * Constructor
          *
          * @param sectionManager       Section manager
          * @param sectionFirstPosition First position in section
-         * @param reminder             Reminder line item data
+         * @param container             Reminder line item data
          */
-        public LineItem(int sectionManager, int sectionFirstPosition, @NonNull BaseRecycleContainer reminder) {
+        public LineItem(int sectionManager, int sectionFirstPosition, @NonNull BaseRecycleContainer container) {
             this.sectionManager = sectionManager;
             this.sectionFirstPosition = sectionFirstPosition;
-            this.reminder = reminder;
+            this.container = container;
         }
     }
 }

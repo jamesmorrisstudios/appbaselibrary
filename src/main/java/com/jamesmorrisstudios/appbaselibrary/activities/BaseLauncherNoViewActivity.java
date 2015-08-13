@@ -21,6 +21,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
@@ -59,6 +60,8 @@ import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Set;
 
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
@@ -154,9 +157,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 String name = null;
                 Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
                 if (uri != null) {
-                    Ringtone ringtone = RingtoneManager.getRingtone(AppUtil.getContext(), uri);
+                    Ringtone ringtone = RingtoneManager.getRingtone(this, uri);
                     if (ringtone != null) {
-                        name = ringtone.getTitle(AppUtil.getContext());
+                        name = ringtone.getTitle(this);
                     }
                 }
                 if (ringtoneRequest != null) {
