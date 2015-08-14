@@ -5,6 +5,7 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
  */
 public class BaseRecycleDummyItem extends BaseRecycleContainer {
 
+
     /**
      * Constructor for dummy item
      *
@@ -14,7 +15,7 @@ public class BaseRecycleDummyItem extends BaseRecycleContainer {
     }
 
     @Override
-    public BaseRecycleItem getHeaderItem() {
+    public BaseRecycleItem getHeader() {
         return null;
     }
 

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +14,9 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
-import com.jamesmorrisstudios.appbaselibrary.superslim.LayoutManager;
-import com.jamesmorrisstudios.appbaselibrary.superslim.SlimRecyclerView;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
 
 import java.util.ArrayList;
@@ -51,6 +50,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         noDataText = (TextView) view.findViewById(R.id.empty_view);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
+        StaggeredGridLayoutManager llm = new StaggeredGridLayoutManager(getNumberColumns(), StaggeredGridLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(llm);
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.accent);
         mSwipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(
@@ -63,7 +64,6 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                         }
                     }
                 });
-        mSwipeRefreshLayout.setEnabled(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
@@ -77,6 +77,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 }
             }
         });
+        mSwipeRefreshLayout.setEnabled(false);
         isRefreshing = true;
         return view;
     }
@@ -93,6 +94,87 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         startMoreDataLoad();
     }
 
+
+
+    /**
+     * @return Number of columns to show
+     */
+    protected int getNumberColumns() {
+        return getNumberColumnsNarrow();
+    }
+
+    protected final int getNumberColumnsWide() {
+        switch (Utils.getOrientation()) {
+            case PORTRAIT:
+                switch (Utils.getScreenSize()) {
+                    case SMALL:
+                        return 1;
+                    case NORMAL:
+                        return 1;
+                    case LARGE:
+                        return 1;
+                    case XLARGE:
+                        return 2;
+                    case UNDEFINED:
+                        return 1;
+                    default:
+                        return 1;
+                }
+            case LANDSCAPE:
+                switch (Utils.getScreenSize()) {
+                    case SMALL:
+                        return 1;
+                    case NORMAL:
+                        return 1;
+                    case LARGE:
+                        return 2;
+                    case XLARGE:
+                        return 2;
+                    case UNDEFINED:
+                        return 2;
+                    default:
+                        return 2;
+                }
+        }
+        return 1;
+    }
+
+    protected final int getNumberColumnsNarrow() {
+        switch (Utils.getOrientation()) {
+            case PORTRAIT:
+                switch (Utils.getScreenSize()) {
+                    case SMALL:
+                        return 1;
+                    case NORMAL:
+                        return 1;
+                    case LARGE:
+                        return 1;
+                    case XLARGE:
+                        return 2;
+                    case UNDEFINED:
+                        return 1;
+                    default:
+                        return 1;
+                }
+            case LANDSCAPE:
+                switch (Utils.getScreenSize()) {
+                    case SMALL:
+                        return 1;
+                    case NORMAL:
+                        return 2;
+                    case LARGE:
+                        return 2;
+                    case XLARGE:
+                        return 2;
+                    case UNDEFINED:
+                        return 2;
+                    default:
+                        return 2;
+                }
+        }
+        return 1;
+    }
+
     /**
      * View creation done
      *
@@ -102,13 +184,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        int mHeaderDisplay = LayoutManager.LayoutParams.HEADER_INLINE;  //getResources().getInteger(R.integer.default_header_display); //LayoutManager.LayoutParams.HEADER_INLINE;
-        boolean mAreMarginsFixed = false;
         ViewHolder mViews = new ViewHolder(view);
-        mViews.initViews(new LayoutManager(getActivity()));
-        mAdapter = getAdapter(mHeaderDisplay, this);
-        mAdapter.setMarginsFixed(mAreMarginsFixed);
-        mAdapter.setHeaderDisplay(mHeaderDisplay);
+        mAdapter = getAdapter(this);
         mViews.setAdapter(getAdapterToSet());
         startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -124,7 +201,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         });
     }
 
-    protected abstract BaseRecycleAdapter getAdapter(int headerMode, @NonNull BaseRecycleAdapter.OnItemClickListener mListener);
+    protected abstract BaseRecycleAdapter getAdapter(@NonNull BaseRecycleAdapter.OnItemClickListener mListener);
 
     protected RecyclerView.Adapter getAdapterToSet() {
         return mAdapter;
@@ -162,7 +239,6 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     protected final void startRefresh(boolean forceReload) {
-        hideNoDataText();
         mSwipeRefreshLayout.setRefreshing(true);
         isRefreshing = true;
         startDataLoad(forceReload);
@@ -191,7 +267,6 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
                 @Override
                 public void onRefresh() {
-                    hideNoDataText();
                     startDataLoad(true);
                 }
             });
@@ -227,6 +302,11 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         itemClick(item);
     }
 
+    @Override
+    public void itemClicked(int position) {
+        //Unused
+    }
+
     /**
      * View holder class
      */
@@ -245,7 +325,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         /**
          * @param lm Set with layout manager
          */
-        public void initViews(@NonNull LayoutManager lm) {
+        public void initViews(@NonNull StaggeredGridLayoutManager lm) {
             mRecyclerView.setLayoutManager(lm);
         }
 

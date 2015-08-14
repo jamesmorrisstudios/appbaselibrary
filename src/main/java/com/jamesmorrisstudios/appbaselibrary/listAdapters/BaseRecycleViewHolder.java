@@ -34,7 +34,6 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      * Constructor
      *
      * @param view      Parent view
-     * @param isHeader  True if header item, false for normal
      * @param mListener Click listener. Null if none desired
      */
     public BaseRecycleViewHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable cardClickListener mListener) {
@@ -71,7 +70,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
     public void bindItem(@NonNull final BaseRecycleContainer data, boolean expanded) {
         if(!isDummyItem) {
             if (isHeader) {
-                bindHeader(data.getHeaderItem(), expanded);
+                bindHeader(data.getHeader(), expanded);
             } else {
                 bindItem(data.getItem(), expanded);
             }
