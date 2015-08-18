@@ -1,10 +1,12 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
+import android.Manifest;
 import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.TypedArray;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -702,6 +704,17 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createRingtoneDialog(@Nullable Uri currentTone, @NonNull String title) {
+        /*
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+
+            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 6000);
+
+
+
+
+        }
+*/
+
         Uri defaultUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         if(currentTone != null) {
             defaultUri = currentTone;
