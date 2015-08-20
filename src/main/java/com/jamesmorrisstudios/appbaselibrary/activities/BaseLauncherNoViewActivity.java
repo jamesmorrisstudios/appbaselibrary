@@ -80,17 +80,19 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         SettingsFragment.OnSettingsListener {
 
     private static final int NOTIFICATION_RESULT = 5010;
+    private static final int REQUEST_READ_STORAGE = 6000;
 
     private FrameLayout container;
     private Toolbar toolbar;
     private ProgressBar spinner;
 
+    private boolean useAutoLock = false;
+
     private RingtoneRequest ringtoneRequest = null;
     private final Object busListener = new Object() {
         @Subscribe
         public void onRingtoneRequest(final RingtoneRequest request) {
-            BaseLauncherNoViewActivity.this.ringtoneRequest = request;
-            BaseLauncherNoViewActivity.this.createRingtoneDialog(request.currentTone, request.title);
+            BaseLauncherNoViewActivity.this.createRingtoneDialog(request.currentTone, request.title, request.listener);
         }
 
         @Subscribe
@@ -703,32 +705,44 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 builder.build().show();
     }
 
-    public void createRingtoneDialog(@Nullable Uri currentTone, @NonNull String title) {
-        /*
-        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-
-            requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 6000);
-
-
-
-
+    public void createRingtoneDialog(@Nullable Uri currentTone, @NonNull String title, @NonNull RingtoneRequest.RingtoneRequestListener listener) {
+        this.ringtoneRequest = new RingtoneRequest(currentTone, title, listener);
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_STORAGE);
+            } else {
+                createRingtoneDialogSub();
+            }
+        } else {
+            createRingtoneDialogSub();
         }
-*/
+    }
 
+    private void createRingtoneDialogSub() {
+        if(ringtoneRequest == null) {
+            return;
+        }
         Uri defaultUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        if(currentTone != null) {
-            defaultUri = currentTone;
+        if(ringtoneRequest.currentTone != null) {
+            defaultUri = ringtoneRequest.currentTone;
         }
         Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, title);
+        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, ringtoneRequest.title);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
         try {
-            Utils.lockOrientationCurrent(this);
+            if(Utils.getOrientationLock(this) == Utils.Orientation.UNDEFINED) {
+                Utils.lockOrientationCurrent(this);
+                useAutoLock = true;
+            } else {
+                useAutoLock = false;
+            }
             startActivityForResult(intent, NOTIFICATION_RESULT);
         } catch (Exception ex) {
-            Utils.unlockOrientation(this);
+            if(useAutoLock) {
+                Utils.unlockOrientation(this);
+            }
             Utils.toastShort(getString(R.string.failed_open_link));
         }
     }
@@ -738,6 +752,25 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         EditTextListDialog editTextListDialog = new EditTextListDialog();
         editTextListDialog.setData(messages, onPositive, onNegative);
         editTextListDialog.show(fm, "fragment_edit_text_list");
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+        switch (requestCode) {
+            case REQUEST_READ_STORAGE: {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.v("BaseActivity", "Permission Granted for external storage");
+                    createRingtoneDialogSub();
+                } else {
+                    Log.v("BaseActivity", "Permission Denied for external storage");
+                    createRingtoneDialogSub();
+                }
+                if(useAutoLock) {
+                    Utils.unlockOrientation(this);
+                }
+                break;
+            }
+        }
     }
 
     public enum AppBaseEvent {

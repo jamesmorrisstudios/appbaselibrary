@@ -35,7 +35,7 @@ android {
 
     defaultConfig {
         minSdkVersion 14
-        targetSdkVersion 22
+        targetSdkVersion 23
         versionCode 2
         versionName "1.1"
     }
@@ -48,9 +48,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:design:22.2.1'
-    compile 'com.android.support:support-v4:22.2.1'
-    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:23.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
+    compile 'com.android.support:appcompat-v7:23.0.0'
 
     compile 'com.jamesmorrisstudios:utilitieslibrary:1.1' //Local repo
     compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0' //Local repo

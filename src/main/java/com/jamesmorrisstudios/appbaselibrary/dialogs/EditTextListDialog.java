@@ -14,11 +14,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ import java.util.List;
 public class EditTextListDialog extends DialogFragment {
 
     private ListView list;
-    private ButtonFlat btnCancel, btnOk;
+    private Button btnCancel, btnOk;
     private ArrayList<String> messages = null;
     private ListAdapter adapter = null;
     private EditMessageListener onPositive;
@@ -48,8 +48,8 @@ public class EditTextListDialog extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.edit_text_list_dialog, container);
         list = (ListView) view.findViewById(R.id.list);
-        btnCancel = (ButtonFlat) view.findViewById(R.id.btn_cancel);
-        btnOk = (ButtonFlat) view.findViewById(R.id.btn_ok);
+        btnCancel = (Button) view.findViewById(R.id.btn_cancel);
+        btnOk = (Button) view.findViewById(R.id.btn_ok);
 
         if(messages != null) {
             adapter = new ListAdapter(getActivity(), R.layout.edit_text_list_line_item, wrapString(messages));

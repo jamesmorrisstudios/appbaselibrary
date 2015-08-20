@@ -9,13 +9,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.utilitieslibrary.Bus;
 import com.jamesmorrisstudios.utilitieslibrary.Utils;
-import com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat;
 
 /**
  * Created by James on 4/29/2015.
@@ -46,15 +46,15 @@ public class HelpFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_help, container, false);
-        ButtonFlat readHow = (ButtonFlat) view.findViewById(R.id.howToUseRead);
-        ButtonFlat watchHow = (ButtonFlat) view.findViewById(R.id.howToUseWatch);
-        ButtonFlat license = (ButtonFlat) view.findViewById(R.id.helpLicense);
+        Button readHow = (Button) view.findViewById(R.id.howToUseRead);
+        Button watchHow = (Button) view.findViewById(R.id.howToUseWatch);
+        Button license = (Button) view.findViewById(R.id.helpLicense);
         TextView version = (TextView) view.findViewById(R.id.versionName);
         ImageButton btnTwitter = (ImageButton) view.findViewById(R.id.btn_twitter);
         ImageButton btnFB = (ImageButton) view.findViewById(R.id.btn_fb);
         ImageButton btnGPlus = (ImageButton) view.findViewById(R.id.btn_gplus);
-        ButtonFlat rateNow = (ButtonFlat) view.findViewById(R.id.btn_rateNow);
-        ButtonFlat moreBy = (ButtonFlat) view.findViewById(R.id.btn_moreBy);
+        Button rateNow = (Button) view.findViewById(R.id.btn_rateNow);
+        Button moreBy = (Button) view.findViewById(R.id.btn_moreBy);
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

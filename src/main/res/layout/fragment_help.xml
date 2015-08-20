@@ -45,7 +45,9 @@
             android:layout_height="1dp"
             android:background="@color/textLightDivider" />
 
-        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/textDarkMain"
             android:id="@+id/howToUseRead"
             style="@style/help_read_how"
             android:layout_width="wrap_content"
@@ -53,13 +55,13 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textDarkMain"
-            android:clickable="true"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="@string/read_how"
             android:textSize="@dimen/item_size" />
 
-        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/textDarkMain"
             android:id="@+id/howToUseWatch"
             style="@style/help_watch_how"
             android:layout_width="wrap_content"
@@ -67,9 +69,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textDarkMain"
-            android:clickable="true"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="@string/watch_how"
             android:textSize="@dimen/item_size" />
 
@@ -176,41 +176,42 @@
                 android:textColor="@color/textDarkMain"
                 android:textSize="@dimen/item_size" />
 
-            <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
+            <Button
+                android:background="?android:attr/selectableItemBackground"
+                android:textColor="@color/textDarkMain"
                 android:id="@+id/btn_rateNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:layout_marginTop="4dp"
-                android:background="@color/textDarkMain"
-                android:clickable="true"
                 android:text="@string/rate_now"
                 android:textSize="@dimen/item_size" />
 
         </LinearLayout>
 
-        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/textDarkMain"
             android:id="@+id/btn_moreBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textDarkMain"
-            android:clickable="true"
+            android:gravity="center"
             android:text="@string/more_apps"
             android:textSize="@dimen/item_size" />
 
-        <com.jamesmorrisstudios.utilitieslibrary.controls.ButtonFlat
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/textDarkMain"
             android:id="@+id/helpLicense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
-            android:background="@color/textDarkMain"
-            android:clickable="true"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:text="@string/licenses"
             android:textSize="@dimen/item_size" />
 
