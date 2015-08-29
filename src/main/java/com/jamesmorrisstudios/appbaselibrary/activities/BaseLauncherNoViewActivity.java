@@ -32,6 +32,7 @@ import android.widget.ProgressBar;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceIconRequest;
@@ -62,8 +63,6 @@ import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Set;
 
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
@@ -128,6 +127,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         @Subscribe
         public void onSingleChoiceRadioRequest(SingleChoiceRadioRequest request) {
             BaseLauncherNoViewActivity.this.createSingleChoiceRadioDialog(request.title, request.items, request.defaultValue, request.clickListener, request.onPositive, request.onNegative);
+        }
+
+        @Subscribe
+        public void onMultiChoiceRadioRequest(MultiChoiceRequest request) {
+            BaseLauncherNoViewActivity.this.createMultiChoiceDialog(request.title, request.items, request.checkedItems, request.clickListener, request.onPositive, request.onNegative);
         }
 
         @Subscribe
@@ -669,6 +673,17 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .setTitle(title)
                 .setPositiveButton(R.string.okay, onPositive)
                 .setSingleChoiceItems(items, defaultValue, clickListener);
+        if(onNegative != null) {
+            builder.setNegativeButton(R.string.cancel, onNegative);
+        }
+        builder.show();
+    }
+
+    public void createMultiChoiceDialog(@NonNull String title, @NonNull String[] items, boolean[] checkedItems, @NonNull DialogInterface.OnMultiChoiceClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+                .setTitle(title)
+                .setPositiveButton(R.string.okay, onPositive)
+                .setMultiChoiceItems(items, checkedItems, clickListener);
         if(onNegative != null) {
             builder.setNegativeButton(R.string.cancel, onNegative);
         }

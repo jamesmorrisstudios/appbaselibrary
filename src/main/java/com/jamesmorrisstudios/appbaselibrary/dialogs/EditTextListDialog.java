@@ -16,6 +16,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
@@ -29,7 +30,7 @@ import java.util.List;
 public class EditTextListDialog extends DialogFragment {
 
     private ListView list;
-    private Button btnCancel, btnOk;
+    private Button btnCancel, btnOk, btnAdd;
     private ArrayList<String> messages = null;
     private ListAdapter adapter = null;
     private EditMessageListener onPositive;
@@ -50,6 +51,7 @@ public class EditTextListDialog extends DialogFragment {
         list = (ListView) view.findViewById(R.id.list);
         btnCancel = (Button) view.findViewById(R.id.btn_cancel);
         btnOk = (Button) view.findViewById(R.id.btn_ok);
+        btnAdd = (Button) view.findViewById(R.id.btn_add);
 
         if(messages != null) {
             adapter = new ListAdapter(getActivity(), R.layout.edit_text_list_line_item, wrapString(messages));
@@ -97,6 +99,12 @@ public class EditTextListDialog extends DialogFragment {
                 });
             }
         });
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                adapter.add(new StringWrapper(""));
+            }
+        });
         return view;
     }
 
@@ -104,7 +112,7 @@ public class EditTextListDialog extends DialogFragment {
         this.messages = new ArrayList<>(messages);
         this.onPositive = onPositive;
         this.onNegative = onNegative;
-}
+    }
 
     public interface EditMessageListener {
         void onPositive(ArrayList<String> messages);
@@ -143,10 +151,6 @@ public class EditTextListDialog extends DialogFragment {
 
     class ListAdapter extends ArrayAdapter<StringWrapper> {
 
-        public ListAdapter(Context context, int textViewResourceId) {
-            super(context, textViewResourceId);
-        }
-
         public ListAdapter(Context context, int resource, List<StringWrapper> items) {
             super(context, resource, items);
             Log.v("EditTextListDialog", "Item Count: "+getCount());
@@ -160,11 +164,14 @@ public class EditTextListDialog extends DialogFragment {
             return wrapList;
         }
 
+
+
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            StringWrapper item = getItem(position);
+            final StringWrapper item = getItem(position);
 
             EditText editText;
+            ImageView delete;
             View view = convertView;
 
             if (view == null) {
@@ -172,16 +179,25 @@ public class EditTextListDialog extends DialogFragment {
                 vi = LayoutInflater.from(getContext());
                 view = vi.inflate(R.layout.edit_text_list_line_item, null);
                 editText = (EditText) view.findViewById(R.id.text1);
+                delete = (ImageView) view.findViewById(R.id.delete1);
             } else {
                 editText = (EditText) view.findViewById(R.id.text1);
+                delete = (ImageView) view.findViewById(R.id.delete1);
                 for(int i=0; i<getCount(); i++) {
                     editText.removeTextChangedListener(getItem(i).textWatcher);
+                    delete.setOnClickListener(null);
                 }
             }
 
             if (item != null) {
                 editText.setText(item.text);
                 editText.addTextChangedListener(item.textWatcher);
+                delete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        remove(item);
+                    }
+                });
             }
             return view;
         }
