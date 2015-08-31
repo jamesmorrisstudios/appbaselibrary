@@ -52,8 +52,8 @@ dependencies {
     compile 'com.android.support:support-v4:23.0.0'
     compile 'com.android.support:appcompat-v7:23.0.0'
 
-    compile 'com.jamesmorrisstudios:utilitieslibrary:1.1' //Local repo
-    compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0' //Local repo
-    //compile 'com.github.morris-james:UtilitiesLibrary:v1.1.1' //Jitpack
-    //compile 'com.github.morris-james:MaterialDateTimePicker:v1.3.2.custom' //Jitpack
+    //compile 'com.jamesmorrisstudios:utilitieslibrary:1.1' //Local repo
+    //compile 'com.jamesmorrisstudios:datetimepickerlibrary:1.0' //Local repo
+    compile 'com.github.morris-james:UtilitiesLibrary:v1.1.2' //Jitpack
+    compile 'com.github.morris-james:MaterialDateTimePicker:v1.3.3' //Jitpack
 }
