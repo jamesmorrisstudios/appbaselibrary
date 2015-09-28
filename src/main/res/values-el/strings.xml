@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Ημέρα"</string>
+    <!-- -->
+    <string name="day_plural">"Ημέρες"</string>
+    <!-- -->
+    <string name="hour_singular">"Ώρα"</string>
+    <!-- -->
+    <string name="hour_plural">"Ώρες"</string>
+    <!-- -->
+    <string name="minute_singular">"ΣΤΙΓΜΗΣ"</string>
+    <!-- -->
+    <string name="minute_plural">"Λεπτά"</string>
+    <!-- -->
+    <string name="second_singular">"Δεύτερη"</string>
+    <!-- -->
+    <string name="second_plural">"Δευτερόλεπτα"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Ένα"</string>
+    <!-- -->
+    <string name="two">"Δυο"</string>
+    <!-- -->
+    <string name="three">"Τρία"</string>
+    <!-- -->
+    <string name="four">"Τέσσερα"</string>
+    <!-- -->
+    <string name="five">"Πέντε"</string>
+    <!-- -->
+    <string name="six">"Έξι"</string>
+    <!-- -->
+    <string name="seven">"Επτά"</string>
+    <!-- -->
+    <string name="eight">"Οκτώ"</string>
+    v
+    <string name="nine">"Εννέα"</string>
+    <!-- -->
+    <string name="ten">"Δέκα"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"Πρώτη"</string>
+    <!-- -->
+    <string name="second">"Δεύτερη"</string>
+    <!-- -->
+    <string name="third">"Τρίτο"</string>
+    <!-- -->
+    <string name="fourth">"Τέταρτον"</string>
+    <!-- -->
+    <string name="fifth">"Πέμπτον"</string>
+    <!-- -->
+    <string name="sixth">"Έκτη"</string>
+    <!-- -->
+    <string name="seventh">"Έβδομο"</string>
+    <!-- -->
+    <string name="eighth">"Όγδοο"</string>
+    <!-- -->
+    <string name="ninth">"Ένατη"</string>
+    <!-- -->
+    <string name="tenth">"Δέκατη"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Ημέρες της εβδομάδας"</string>
+    <!-- -->
+    <string name="day_sunday">"Κυριακή"</string>
+    <!-- -->
+    <string name="day_monday">"Δευτέρα"</string>
+    <!-- -->
+    <string name="day_tuesday">"Τρίτη"</string>
+    <!-- -->
+    <string name="day_wednesday">"Τετάρτη"</string>
+    <!-- -->
+    <string name="day_thursday">"Πέμπτη"</string>
+    <!-- -->
+    <string name="day_friday">"Παρασκευή"</string>
+    <!-- -->
+    <string name="day_saturday">"Σάββατο"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Ωρα ΕΝΑΡΞΗΣ"</string>
+    <string name="end_time">"Ώρα λήξης"</string>
+    <string name="timing_type">"Τύπος Χρονοδιάγραμμα"</string>
+    <string name="edit_times">"Επεξεργασία Times"</string>
+    <string name="time">"Ώρα"</string>
+    <string name="times">"Φορές"</string>
+    <string name="timing">"Χρονοδιάγραμμα"</string>
+    <string name="today">"Σήμερα"</string>
+    <string name="tomorrow">"Αύριο"</string>
+    <string name="yesterday">"Εχθές"</string>
+    <string name="daily">"Ημερήσια"</string>
+    <string name="weekly">"Εβδομαδιαία"</string>
+    <string name="week">"Εβδομάδα"</string>
+    <string name="weeks">"Εβδομάδες"</string>
+    <string name="all_time">"Συνεχώς"</string>
+    <string name="next_week">"Την επόμενη εβδομάδα"</string>
+    <string name="last_week">"Την προηγούμενη εβδομάδα"</string>
+    <string name="once_month">"Μια φορά το μήνα"</string>
+    <string name="twice_month">"Δύο φορές το μήνα"</string>
+    <string name="every_week">"Καθε εβδομαδα"</string>
+    <string name="every_other_week">"Κάθε δεύτερη εβδομάδα"</string>
+    <string name="lifetime">"Διάρκεια Ζωής"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Pattern 1"</string>
+    <string name="pattern_2">"Pattern 2"</string>
+    <string name="pattern_3">"Pattern 3"</string>
+    <string name="pattern_4">"Μοτίβο 4"</string>
+    <string name="pattern_5">"Μοτίβο 5"</string>
+    <string name="pattern_6">"Pattern 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"Εισαγωγή"</string>
+    <string name="export">"Εξαγωγή"</string>
+    <string name="import_log">"Εισαγωγή Είσοδος"</string>
+    <string name="export_log">"Εξαγωγή Είσοδος"</string>
+    <string name="import_reminder">"Εισαγωγή Υπενθύμιση"</string>
+    <string name="export_reminder">"Εξαγωγή Υπενθύμιση"</string>
+    <string name="import_all">"Εισαγωγή όλων"</string>
+    <string name="export_all">"Εξαγωγή Όλα"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Δημόσιο"</string>
+    <string name="private_">"Προσωπικά"</string>
+    <string name="default_">"Προεπιλογή"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Χαμηλή"</string>
+    <string name="mid">"Στα μέσα"</string>
+    <string name="high">"Υψηλή"</string>
+    <string name="min">"Ελάχιστη"</string>
+    <string name="max">"Μέγιστη"</string>
+    <string name="minimum">"Ελάχιστο"</string>
+    <string name="medium">"Μέτρια"</string>
+    <string name="maximum">"Μέγιστη"</string>
+    <string name="small">"Μικρό"</string>
+    <string name="large">"Μεγάλο"</string>
+    <string name="short_">"Σύντομο"</string>
+    <string name="long_">"Μακριά"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Δυσκολία"</string>
+    <string name="select_difficulty">"Επιλέξτε Δυσκολία"</string>
+    <string name="easy">"Εύκολο"</string>
+    <string name="normal">"Κανονική"</string>
+    <string name="hard">"Σκληρά"</string>
+    <string name="quick">"Γρήγορη"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Ενεργοποίηση"</string>
+    <string name="enabled">"Ενεργοποιήθηκε"</string>
+    <string name="disable">"Απενεργοποίηση"</string>
+    <string name="disabled">"Άτομα με ειδικές ανάγκες"</string>
+    <string name="lock">"Κλειδώστε"</string>
+    <string name="locked">"Κλειδωμένο"</string>
+    <string name="unlock">"Ξεκλειδώστε"</string>
+    <string name="unlocked">"Ξεκλείδωτη"</string>
+    <string name="open">"Ανοιχτό"</string>
+    <string name="opened">"Άνοιξε"</string>
+    <string name="close">"Κλείσιμο"</string>
+    <string name="closed">"Κλειστό"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"Σφάλμα"</string>
+    <string name="fail">"Fail"</string>
+    <string name="failed">"Αποτυχία"</string>
+    <string name="success">"Επιτυχία"</string>
+    <string name="successful">"Η επιτυχής"</string>
+    <string name="valid">"Ισχύει"</string>
+    <string name="invalid">"Άκυρη"</string>
+    <string name="failed_open_link">"Απέτυχε να ανοίξει σύνδεσμο"</string>
+    <string name="app_open_fail">"Απέτυχε να ανοίξει το app"</string>
+    <string name="no_items_found">"Δεν βρέθηκαν στοιχεία"</string>
+    <string name="data_load_fail">"Απέτυχε να φορτώσει λίστα"</string>
+    <string name="invalid_time">"Μη έγκυρη ώρα"</string>
+    <string name="complete">"Ολοκλήρωση"</string>
+    <string name="completed">"Ολοκληρώθηκε"</string>
+    <string name="incomplete">"Ατελής"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Βοήθεια"</string>
+    <string name="about">"Σχετικά με"</string>
+    <string name="settings">"Ρυθμίσεις"</string>
+    <string name="help_and_feedback">"Βοήθεια &amp; Επικοινωνία"</string>
+    <string name="like_this_app">"Σας αρέσει αυτό το app;"</string>
+    <string name="rate_now">"Βαθμολογήστε το τώρα"</string>
+    <string name="more_apps">"Περισσότερες εφαρμογές"</string>
+    <string name="how_to_use">"Πώς να χρησιμοποιήσει"</string>
+    <string name="how_to_play">"Πώς να παίξεις"</string>
+    <string name="read_how">"Διαβάστε πώς"</string>
+    <string name="watch_how">"Παρακολουθήστε Πόσο"</string>
+    <string name="licenses">"Άδειες"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"προβολή"</string>
+    <string name="shown">"Ορατή"</string>
+    <string name="shown_again">"Θα εμφανιστεί ξανά"</string>
+    <string name="hide">"Απόκρυψη"</string>
+    <string name="Hidden">"Κρυμμένο"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"Εντάξει"</string>
+    <string name="cancel">"Ακύρωση"</string>
+    <string name="yes">"Ναί"</string>
+    <string name="no">"Κανένα"</string>
+    <string name="maybe">"Ίσως"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Κανένας"</string>
+    <string name="all">"Όλα"</string>
+    <string name="last">"Τελευταία"</string>
+    <string name="every">"Κάθε"</string>
+    <string name="other">"Άλλα"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Icon"</string>
+    <string name="choose_icon">"Επιλέξτε Icon"</string>
+    <string name="logo">"Λογότυπο"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Αναβολή"</string>
+    <string name="snoozed">"Snoozed"</string>
+    <string name="auto_snooze">"Αυτόματη Αναβολή"</string>
+    <string name="manual_snooze">"Εγχειρίδιο Αναβολή"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"Μήνυμα"</string>
+    <string name="messages">"Μηνύματα"</string>
+    <string name="num_messages">"Αριθμός μηνυμάτων"</string>
+    <string name="edit_messages">"Επεξεργασία Μηνύματα"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Προσθήκη"</string>
+    <string name="added">"Προστέθηκε"</string>
+    <string name="add_item">"Προσθήκη στοιχείου"</string>
+    <string name="remove">"Κατάργηση"</string>
+    <string name="removed">"Αφαιρέθηκε"</string>
+    <string name="remove_item">"Αφαίρεσηαντικειμένου"</string>
+    <string name="delete">"Διαγραφή"</string>
+    <string name="duplicate">"Διπλότυπο"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Ευχαριστώ"</string>
+    <string name="youre_welcome">"Παρακαλώ"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Δωρεάν"</string>
+    <string name="pull">"Τραβήξτε"</string>
+    <string name="wild">"Άγρια"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Εσείς"</string>
+    <string name="me">"Εμένα"</string>
+    <string name="us">"Εμάς"</string>
+    <string name="them">"Τους"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Επιτεύγματα"</string>
+    <string name="leaderboards">"Leaderboards"</string>
+    <string name="high_scores">"Υψηλά σκορ"</string>
+    <string name="my_circles">"Κύκλοι μου"</string>
+    <string name="invitations">"Προσκλήσεις"</string>
+    <string name="options">"Επιλογές"</string>
+    <string name="game_options">"Επιλογές Παιχνιδιού"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"Σχόλια"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Ρεβάνς"</string>
+    <string name="try_again">"Προσπάθησε ξανά"</string>
+    <string name="touch_continue">"Αγγίξτε για να συνεχίσετε"</string>
+    <string name="touch_resume">"Αγγίξτε για συνέχιση της"</string>
+    <string name="pause">"Παύση"</string>
+    <string name="pause_game">"Παύση παιχνίδι"</string>
+    <string name="resume">"Συνέχιση"</string>
+    <string name="resume_game">"Συνέχιση Παιχνιδιού"</string>
+    <string name="new_">"Νέα"</string>
+    <string name="new_game">"Νέο παιχνίδι"</string>
+    <string name="select_save">"Επιλέξτε Αποθήκευση"</string>
+    <string name="save">"Αποθηκεύσετε"</string>
+    <string name="save_game">"Αποθήκευση παιχνιδιού"</string>
+    <string name="load_game">"Load Game"</string>
+    <string name="load">"Φορτίο"</string>
+    <string name="game_over">"Τέλος παιχνιδιού"</string>
+    <string name="start">"Εκκίνηση"</string>
+    <string name="start_game">"Ξεκίνα το παιχνίδι"</string>
+    <string name="end">"Τέλος"</string>
+    <string name="end_game">"Τέλος Παιχνιδιού"</string>
+    <string name="stop">"Stop"</string>
+    <string name="stop_game">"Διακοπή Παιχνιδιού"</string>
+    <string name="start_new_game_title">"Start New Game"</string>
+    <string name="start_new_game_prompt">"Είστε σίγουροι ότι θέλετε να ξεκινήσετε ένα νέο παιχνίδι;"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Τρέχουσα βαθμολογία"</string>
+    <string name="top_score">"Υψηλότερη βαθμολογία"</string>
+    <string name="score">"Βαθμολογία"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Ειδικά"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Σειρά σου"</string>
+    <string name="their_turn">"Με τη σειρά τους"</string>
+    <string name="turn">"Γυρίστε"</string>
+    <string name="turns">"Ενεργοποιεί"</string>
+    <string name="round">"Γύρος"</string>
+    <string name="rounds">"Γύροι"</string>
+    <string name="matches">"Σπίρτα"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Κερδίζεις"</string>
+    <string name="you_won">"Κέρδισες"</string>
+    <string name="you_lost">"Έχασες"</string>
+    <string name="you_lose">"Εσύ χάνεις"</string>
+    <string name="you_tied">"Μπορείτε συνδεδεμένοι"</string>
+    <string name="winner">"Νικητής"</string>
+    <string name="winners">"Νικητές"</string>
+    <string name="loser">"Χαμένε"</string>
+    <string name="Losers">"Χαμένοι"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Αγορά"</string>
+    <string name="purchase">"Αγορά"</string>
+    <string name="diamond">"Διαμάντι"</string>
+    <string name="diamonds">"Διαμάντια"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Συνδεθείτε"</string>
+    <string name="signed_in">"Υπεγράφη στην"</string>
+    <string name="sign_out">"Αποσυνδέομαι"</string>
+    <string name="signed_out">"Υπεγράφη Out"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Σύνδεσμοι"</string>
+    <string name="ads">"Διαφημίσεις"</string>
+    <string name="remove_ads">"Αφαίρεσε τις διαφημίσεις"</string>
+    <string name="ads_removed">"Διαφημίσεις Αφαιρέθηκε"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Αριθμός Παικτών"</string>
+    <string name="player">"Παίκτης"</string>
+    <string name="players">"Παίκτες"</string>
+    <string name="player_1">"Παίκτης 1"</string>
+    <string name="player_2">"Παίκτης 2"</string>
+    <string name="player_3">"Player 3"</string>
+    <string name="player_4">"Παίκτης 4"</string>
+    <string name="player_5">"Παίκτης 5"</string>
+    <string name="player_6">"Παίκτης 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Ομάδα"</string>
+    <string name="teams">"Ομάδες"</string>
+    <string name="team_1">"Νίκη της Ομάδας 1"</string>
+    <string name="team_2">"Νίκη της Ομάδας 2"</string>
+    <string name="team_3">"Ομάδα 3"</string>
+    <string name="team_4">"Ομάδα 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Αλλαγές Απερρίφθη"</string>
+    <string name="reminder_save">"Οι αλλαγές αποθηκεύτηκαν"</string>
+    <string name="reminder_delete">"Υπενθύμιση Διαγράφεται"</string>
+    <string name="reminder_duplicate">"Υπενθύμιση Διπλασιασμός"</string>
+    <string name="no_changes">"Δεν υπάρχουν αλλαγές"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Ενεργοποίηση Μοναδική λειτουργία"</string>
+    <string name="settings_base_item_0_secondary">"Καταργήστε την επιλογή για να δείξει τις γραμμές πλοήγησης και το καθεστώς"</string>
+    <string name="settings_base_item_1_primary">"Ενεργοποίηση Ηχητικά Εφέ"</string>
+    <string name="settings_base_item_1_secondary">"Καταργήστε την επιλογή για να απενεργοποιήσετε τα ηχητικά εφέ"</string>
+    <string name="settings_base_item_2_primary">"Ενεργοποίηση Μουσική"</string>
+    <string name="settings_base_item_2_secondary">"Καταργήστε την επιλογή για να απενεργοποιήσετε τη μουσική"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"ΣΦΑΛΜΑ: Δεν είναι δυνατή η εγκατάσταση στην τιμολόγηση app"</string>
+    <string name="failed_purchase">"ΣΦΑΛΜΑ: Απέτυχε να αγοράσετε το προϊόν"</string>
+    <string name="failed_load_google_page">"Απέτυχε η φόρτωση της σελίδας"</string>
+    <string name="requires_google_play">"Η δράση αυτή απαιτεί Αγώνες του Google Play"</string>
+    <string name="compare_profiles">"Σύγκριση Παίξτε παιχνίδια Προφίλ"</string>
+    <string name="view_profile">"Προβολή Παιχνίδι Παιχνίδια Προφίλ"</string>
+    <string name="gamehelper_license_failed">"Έλεγχος άδειας απέτυχε."</string>
+    <string name="gamehelper_unknown_error">"Άγνωστο σφάλμα."</string>
+    <string name="network_failure">"Δίκτυο αποτυχία σύνδεσης"</string>
+    <string name="gamehelper_sign_in_failed">"Αποτυχία να συνδεθείτε. Ελέγξτε τη σύνδεση δικτύου σας και δοκιμάστε ξανά."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Δεν έχετε ακόμα υπενθυμίσεις."</string>
+    <string name="delete_reminder_prompt_title">"Διαγραφή υπενθύμισης"</string>
+    <string name="delete_reminder_prompt_content">"Είστε σίγουροι ότι θέλετε να διαγράψετε αυτό το υπενθύμιση;"</string>
+    <string name="cancel_reminder_prompt_title">"Απορρίψετε τις αλλαγές"</string>
+    <string name="cancel_reminder_prompt_content">"Είστε σίγουροι ότι θέλετε να απορρίψετε τις αλλαγές σας;"</string>
+    <string name="duplicate_reminder_prompt_title">"Διπλότυπο Υπενθύμιση"</string>
+    <string name="duplicate_reminder_prompt_content">"Είστε σίγουροι ότι θέλετε να δημιουργήσετε αντίγραφο αυτής της υπενθύμισης;"</string>
+    <string name="notification_theme_title">"Παρακαλώ επιλέξτε το στυλ που ταιριάζει με την κοινοποίηση του τηλεφώνου σας"</string>
+    <string name="alerts_per_day">"Υπενθυμίσεις ανά ημέρα"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Ειδοποίηση ανοίγει περίληψη"</string>
+    <string name="randremind_settings_0_secondary">"Καταργήστε την επιλογή για να κάνει την κοινοποίηση σιωπηλά αναγνωρίζουν"</string>
+    <string name="randremind_settings_1_primary">"Χρήση προσαρμοσμένης ειδοποίησης"</string>
+    <string name="randremind_settings_1_secondary">"Καταργήστε την επιλογή για να απενεργοποιήσετε το προσαρμοσμένο κοινοποίηση και να επανέλθει στο καθιερωμένο σύστημα"</string>
+    <string name="randremind_settings_2_primary">"Χρησιμοποιούν την παράλληλη κοινοποίηση"</string>
+    <string name="randremind_settings_2_secondary">"Καταργήστε την επιλογή για να επιτραπεί η κοινοποίηση είναι αποκρυφτούν περνώντας μακριά. Συνεχίζεται κοινοποιήσεις δεν υποστηρίζονται στο Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Χρησιμοποιήστε θέμα κοινοποίηση ανοιχτόχρωμο φόντο και σκοτεινό κείμενο"</string>
+    <string name="randremind_settings_3_secondary">"Καταργήστε την επιλογή για να χρησιμοποιήσετε σκοτεινό θέμα κοινοποίηση σε σκούρο φόντο και ανοιχτόχρωμο κείμενο"</string>
+    <string name="randremind_settings_4_primary">"Πρώτη ημέρα της εβδομάδας"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Απόκρυψη διαφημιστικά banners"</string>
+    <string name="google_play_settings_0_secondary">"Καταργήστε την επιλογή για να κρύψει τις διαφημίσεις banner, αλλά μπορεί να έχει πλήρη σελίδα διαφημίσεις, αντί"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Επεξεργασία"</string>
+    <string name="in_order">"Για να"</string>
+    <string name="ordering">"Παραγγελία"</string>
+    <string name="preview">"Προεπισκόπηση"</string>
+    <string name="share">"Μοιραστείτε"</string>
+    <string name="share_game">"Μοιραστείτε το παιχνίδι"</string>
+    <string name="download">"Λήψη"</string>
+    <string name="view">"Θέα"</string>
+    <string name="automatic">"Αυτόματη"</string>
+    <string name="manual">"Εγχειρίδιο"</string>
+    <string name="local">"Τοπικά"</string>
+    <string name="online">"Συνδεδεμένοι"</string>
+    <string name="offline">"Αποσυνδεδεμένος"</string>
+    <string name="header">"Επικεφαλίδα"</string>
+    <string name="footer">"Τελικοί"</string>
+    <string name="custom">"Έθιμο"</string>
+    <string name="title">"Τίτλος"</string>
+    <string name="notification">"Κοινοποίηση"</string>
+    <string name="select_notification">"Επιλέξτε Κοινοποίηση"</string>
+    <string name="color">"Χρώμα"</string>
+    <string name="tone">"Τόνος"</string>
+    <string name="sound">"Ήχος"</string>
+    <string name="random">"Τυχαία"</string>
+    <string name="specific">"Ειδικά"</string>s
+    <string name="repeat">"Επανάληψη"</string>
+    <string name="alarm">"Συναγερμός"</string>
+    <string name="vibrate">"Δόνηση"</string>
+    <string name="general">"Γενικά"</string>
+    <string name="range">"Σειρά"</string>
+    <string name="priority">"Προτεραιότητα"</string>
+    <string name="accent">"Προφορά"</string>
+    <string name="accent_color">"Χρώμα Accent"</string>
+    <string name="choose_color">"Επιλέξτε Χρώμα"</string>
+    <string name="get">"Get"</string>
+    <string name="type">"Τύπος"</string>
+    <string name="missed">"Αναπάντητες"</string>
+
+</resources>

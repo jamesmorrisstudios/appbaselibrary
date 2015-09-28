@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Ngày"</string>
+    <!-- -->
+    <string name="day_plural">"Ngày"</string>
+    <!-- -->
+    <string name="hour_singular">"Giờ"</string>
+    <!-- -->
+    <string name="hour_plural">"Giờ"</string>
+    <!-- -->
+    <string name="minute_singular">"Phút"</string>
+    <!-- -->
+    <string name="minute_plural">"Phút"</string>
+    <!-- -->
+    <string name="second_singular">"Thứ hai"</string>
+    <!-- -->
+    <string name="second_plural">"Giây"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Một"</string>
+    <!-- -->
+    <string name="two">"Hai"</string>
+    <!-- -->
+    <string name="three">"Ba"</string>
+    <!-- -->
+    <string name="four">"Bốn"</string>
+    <!-- -->
+    <string name="five">"Năm"</string>
+    <!-- -->
+    <string name="six">"Sáu"</string>
+    <!-- -->
+    <string name="seven">"Bảy"</string>
+    <!-- -->
+    <string name="eight">"Tám"</string>
+    v
+    <string name="nine">"Chín"</string>
+    <!-- -->
+    <string name="ten">"Mười"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"Đầu tiên"</string>
+    <!-- -->
+    <string name="second">"Thứ hai"</string>
+    <!-- -->
+    <string name="third">"Thứ ba"</string>
+    <!-- -->
+    <string name="fourth">"Thứ tư"</string>
+    <!-- -->
+    <string name="fifth">"Thứ năm"</string>
+    <!-- -->
+    <string name="sixth">"Thứ sáu"</string>
+    <!-- -->
+    <string name="seventh">"Thứ bảy"</string>
+    <!-- -->
+    <string name="eighth">"Thứ tám"</string>
+    <!-- -->
+    <string name="ninth">"Thứ chín"</string>
+    <!-- -->
+    <string name="tenth">"Thứ mười"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Days Of Week"</string>
+    <!-- -->
+    <string name="day_sunday">"Chủ nhật"</string>
+    <!-- -->
+    <string name="day_monday">"Thứ Hai"</string>
+    <!-- -->
+    <string name="day_tuesday">"Thứ ba"</string>
+    <!-- -->
+    <string name="day_wednesday">"Thứ tư"</string>
+    <!-- -->
+    <string name="day_thursday">"Thứ năm"</string>
+    <!-- -->
+    <string name="day_friday">"Thứ sáu"</string>
+    <!-- -->
+    <string name="day_saturday">"Thứ bảy"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Thời gian bắt đầu"</string>
+    <string name="end_time">"Thời gian kết thúc"</string>
+    <string name="timing_type">"Loại thời gian"</string>
+    <string name="edit_times">"Chỉnh sửa lần"</string>
+    <string name="time">"Thời gian"</string>
+    <string name="times">"Thời gian"</string>
+    <string name="timing">"Timing"</string>
+    <string name="today">"Hôm nay"</string>
+    <string name="tomorrow">"Ngày mai"</string>
+    <string name="yesterday">"Hôm qua"</string>
+    <string name="daily">"Hằng ngày"</string>
+    <string name="weekly">"Hàng tuần"</string>
+    <string name="week">"Tuần"</string>
+    <string name="weeks">"Tuần"</string>
+    <string name="all_time">"Tất cả thời gian"</string>
+    <string name="next_week">"Tuần tới"</string>
+    <string name="last_week">"Tuần trước"</string>
+    <string name="once_month">"Mỗi tháng một lần"</string>
+    <string name="twice_month">"Hai lần một tháng"</string>
+    <string name="every_week">"Hàng tuần"</string>
+    <string name="every_other_week">"Mỗi tuần khác"</string>
+    <string name="lifetime">"Cả đời"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Mẫu 1"</string>
+    <string name="pattern_2">"Mẫu 2"</string>
+    <string name="pattern_3">"Pattern 3"</string>
+    <string name="pattern_4">"Pattern 4"</string>
+    <string name="pattern_5">"Pattern 5"</string>
+    <string name="pattern_6">"Pattern 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"Nhập khẩu"</string>
+    <string name="export">"Xuất khẩu"</string>
+    <string name="import_log">"Đăng nhập"</string>
+    <string name="export_log">"Xuất Nhập"</string>
+    <string name="import_reminder">"Nhập Reminder"</string>
+    <string name="export_reminder">"Xuất Reminder"</string>
+    <string name="import_all">"Nhập Tất cả"</string>
+    <string name="export_all">"Xuất Tất cả"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Công cộng"</string>
+    <string name="private_">"Riêng"</string>
+    <string name="default_">"Vỡ nợ"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Thấp"</string>
+    <string name="mid">"Khoảng giữa"</string>
+    <string name="high">"Cao"</string>
+    <string name="min">"Min"</string>
+    <string name="max">"Max"</string>
+    <string name="minimum">"Tối thiểu"</string>
+    <string name="medium">"Trung bình"</string>
+    <string name="maximum">"Tối đa"</string>
+    <string name="small">"Nhỏ bé"</string>
+    <string name="large">"Lớn"</string>
+    <string name="short_">"Ngắn"</string>
+    <string name="long_">"Dài"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Khó khăn"</string>
+    <string name="select_difficulty">"Chọn Khó"</string>
+    <string name="easy">"Easy"</string>
+    <string name="normal">"Bình thường"</string>
+    <string name="hard">"Cứng"</string>
+    <string name="quick">"Nhanh chóng"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Cho phép"</string>
+    <string name="enabled">"Bật"</string>
+    <string name="disable">"Vô hiệu hoá"</string>
+    <string name="disabled">"Tàn tật"</string>
+    <string name="lock">"Khóa"</string>
+    <string name="locked">"Đã bị khoá"</string>
+    <string name="unlock">"Mở khóa"</string>
+    <string name="unlocked">"Unlocked"</string>
+    <string name="open">"Mở"</string>
+    <string name="opened">"Khai trương"</string>
+    <string name="close">"Gần"</string>
+    <string name="closed">"Đóng"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"lỗi"</string>
+    <string name="fail">"Thất bại"</string>
+    <string name="failed">"Thất bại"</string>
+    <string name="success">"Sự thành công"</string>
+    <string name="successful">"Thành công"</string>
+    <string name="valid">"Có hiệu lực"</string>
+    <string name="invalid">"Vô hiệu"</string>
+    <string name="failed_open_link">"Không thể mở liên kết"</string>
+    <string name="app_open_fail">"Không thể mở ứng dụng"</string>
+    <string name="no_items_found">"Không tìm thấy mục"</string>
+    <string name="data_load_fail">"Không thể tải danh sách"</string>
+    <string name="invalid_time">"Thời gian không hợp lệ"</string>
+    <string name="complete">"Hoàn thành"</string>
+    <string name="completed">"Đã hoàn thành"</string>
+    <string name="incomplete">"Không đầy đủ"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Cứu giúp"</string>
+    <string name="about">"Về"</string>
+    <string name="settings">"Cài đặt"</string>
+    <string name="help_and_feedback">"Help &amp; Phản hồi"</string>
+    <string name="like_this_app">"Giống như ứng dụng này?"</string>
+    <string name="rate_now">"Đánh giá It Now"</string>
+    <string name="more_apps">"Thêm nhiều ứng dụng"</string>
+    <string name="how_to_use">"Làm thế nào để sử dụng"</string>
+    <string name="how_to_play">"Cách chơi"</string>
+    <string name="read_how">"Đọc Làm thế nào"</string>
+    <string name="watch_how">"Xem thế nào"</string>
+    <string name="licenses">"Giấy phép"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"Buổi diễn"</string>
+    <string name="shown">"Thể hiện"</string>
+    <string name="shown_again">"Một lần nữa thể hiện"</string>
+    <string name="hide">"Giấu"</string>
+    <string name="Hidden">"Giấu"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"được"</string>
+    <string name="cancel">"Hủy bỏ"</string>
+    <string name="yes">"Vâng"</string>
+    <string name="no">"Không"</string>
+    <string name="maybe">"Có lẽ"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Không ai"</string>
+    <string name="all">"Tất cả"</string>
+    <string name="last">"Cuối cùng"</string>
+    <string name="every">"Tất cả"</string>
+    <string name="other">"Khác"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Biểu tượng"</string>
+    <string name="choose_icon">"Chọn Icon"</string>
+    <string name="logo">"Logo"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Giấc ngũ ngắn"</string>
+    <string name="snoozed">"Báo lại"</string>
+    <string name="auto_snooze">"Auto Snooze"</string>
+    <string name="manual_snooze">"Manual Snooze"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"Thông điệp"</string>
+    <string name="messages">"Tin nhắn"</string>
+    <string name="num_messages">"Số tin nhắn"</string>
+    <string name="edit_messages">"Chỉnh sửa tin nhắn"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Thêm vào"</string>
+    <string name="added">"Thêm"</string>
+    <string name="add_item">"Bổ sung mục"</string>
+    <string name="remove">"Hủy bỏ"</string>
+    <string name="removed">"Loại bỏ"</string>
+    <string name="remove_item">"Loại bỏ mặt hàng"</string>
+    <string name="delete">"Xóa bỏ"</string>
+    <string name="duplicate">"Duplicate"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Cam on"</string>
+    <string name="youre_welcome">"Không có gì"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Tự do"</string>
+    <string name="pull">"Kéo"</string>
+    <string name="wild">"Hoang dại"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Bạn"</string>
+    <string name="me">"Tôi"</string>
+    <string name="us">"Chúng tôi"</string>
+    <string name="them">"Họ"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Thành tích đạt được"</string>
+    <string name="leaderboards">"Leaderboards"</string>
+    <string name="high_scores">"Điểm cao"</string>
+    <string name="my_circles">"Vòng của tôi"</string>
+    <string name="invitations">"Giấy mời"</string>
+    <string name="options">"Tùy chọn"</string>
+    <string name="game_options">"Tùy chọn trò chơi"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"Khách"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Trận tái đấu"</string>
+    <string name="try_again">"Thử lại"</string>
+    <string name="touch_continue">"Chạm để tiếp tục"</string>
+    <string name="touch_resume">"Chạm để Resume"</string>
+    <string name="pause">"Tạm ngừng"</string>
+    <string name="pause_game">"Pause game"</string>
+    <string name="resume">"Tiếp tục"</string>
+    <string name="resume_game">"Resume game"</string>
+    <string name="new_">"Mới"</string>
+    <string name="new_game">"Trò chơi mới"</string>
+    <string name="select_save">"Chọn Save"</string>
+    <string name="save">"Lưu"</string>
+    <string name="save_game">"Lưu trò chơi"</string>
+    <string name="load_game">"Tải trò chơi"</string>
+    <string name="load">"Tải"</string>
+    <string name="game_over">"Kết thúc"</string>
+    <string name="start">"Bắt đầu"</string>
+    <string name="start_game">"Bắt đầu trò chơi"</string>
+    <string name="end">"Đầu cuối"</string>
+    <string name="end_game">"End Game"</string>
+    <string name="stop">"Dừng lại"</string>
+    <string name="stop_game">"Dừng game"</string>
+    <string name="start_new_game_title">"Bắt đầu New Game"</string>
+    <string name="start_new_game_prompt">"Bạn có chắc chắn muốn bắt đầu một trò chơi mới?"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Điểm hiện tại"</string>
+    <string name="top_score">"Top Điểm"</string>
+    <string name="score">"Số điểm"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Đặc biệt"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Lượt của bạn"</string>
+    <string name="their_turn">"Bật họ"</string>
+    <string name="turn">"Bật"</string>
+    <string name="turns">"Turns"</string>
+    <string name="round">"Tròn"</string>
+    <string name="rounds">"Viên đạn"</string>
+    <string name="matches">"Kết quả các trận"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Bạn thắng"</string>
+    <string name="you_won">"Bạn đã thắng"</string>
+    <string name="you_lost">"Bạn quên"</string>
+    <string name="you_lose">"Bạn thua"</string>
+    <string name="you_tied">"Bạn Tied"</string>
+    <string name="winner">"Người chiến thắng"</string>
+    <string name="winners">"Người chiến thắng"</string>
+    <string name="loser">"Người thua"</string>
+    <string name="Losers">"Losers"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Mua"</string>
+    <string name="purchase">"Mua"</string>
+    <string name="diamond">"Kim cương"</string>
+    <string name="diamonds">"Diamonds"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Đăng nhập"</string>
+    <string name="signed_in">"Trong ký"</string>
+    <string name="sign_out">"Đăng xuất"</string>
+    <string name="signed_out">"Ký Out"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Tài trợ"</string>
+    <string name="ads">"Quảng cáo"</string>
+    <string name="remove_ads">"Loại bỏ các quảng cáo"</string>
+    <string name="ads_removed">"Quảng cáo Removed"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Số người chơi"</string>
+    <string name="player">"Người chơi"</string>
+    <string name="players">"Người chơi"</string>
+    <string name="player_1">"Player 1"</string>
+    <string name="player_2">"Cầu thủ 2"</string>
+    <string name="player_3">"Máy nghe nhạc 3"</string>
+    <string name="player_4">"Cầu thủ 4"</string>
+    <string name="player_5">"Player 5"</string>
+    <string name="player_6">"Player 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Đội"</string>
+    <string name="teams">"Đội"</string>
+    <string name="team_1">"Team 1"</string>
+    <string name="team_2">"Team 2"</string>
+    <string name="team_3">"Đội 3"</string>
+    <string name="team_4">"Đội 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Thay đổi Phế"</string>
+    <string name="reminder_save">"Những thay đổi đã lưu"</string>
+    <string name="reminder_delete">"Reminder Deleted"</string>
+    <string name="reminder_duplicate">"Reminder trùng lặp"</string>
+    <string name="no_changes">"Không thay đổi"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Kích hoạt chế độ Immersive"</string>
+    <string name="settings_base_item_0_secondary">"Bỏ chọn để hiển thị các thanh điều hướng và tình trạng"</string>
+    <string name="settings_base_item_1_primary">"Kích hoạt tính năng Hiệu ứng âm thanh"</string>
+    <string name="settings_base_item_1_secondary">"Bỏ chọn để vô hiệu hóa hiệu ứng âm thanh"</string>
+    <string name="settings_base_item_2_primary">"Kích hoạt tính năng âm nhạc"</string>
+    <string name="settings_base_item_2_secondary">"Bỏ chọn để vô hiệu hóa âm nhạc"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"LỖI: Không thể thiết lập trong thanh toán ứng dụng"</string>
+    <string name="failed_purchase">"LỖI: Không mua hàng"</string>
+    <string name="failed_load_google_page">"Không thể tải trang"</string>
+    <string name="requires_google_play">"Hành động này đòi hỏi Play Games Google"</string>
+    <string name="compare_profiles">"So sánh Chơi Games Profiles"</string>
+    <string name="view_profile">"Xem Play Games Hồ sơ"</string>
+    <string name="gamehelper_license_failed">"Kiểm tra giấy phép thất bại."</string>
+    <string name="gamehelper_unknown_error">"Lỗi không rõ."</string>
+    <string name="network_failure">"Network Connection Failure"</string>
+    <string name="gamehelper_sign_in_failed">"Không thể đăng nhập. Vui lòng kiểm tra kết nối mạng của bạn và thử lại."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Bạn không có nhắc nhở nào."</string>
+    <string name="delete_reminder_prompt_title">"Xóa Reminder"</string>
+    <string name="delete_reminder_prompt_content">"Bạn có chắc chắn muốn xóa lời nhắc nhở này?"</string>
+    <string name="cancel_reminder_prompt_title">"Loại bỏ những thay đổi"</string>
+    <string name="cancel_reminder_prompt_content">"Bạn có chắc chắn muốn hủy các thay đổi của bạn?"</string>
+    <string name="duplicate_reminder_prompt_title">"Reminder Duplicate"</string>
+    <string name="duplicate_reminder_prompt_content">"Bạn có chắc chắn muốn lặp lại lời nhắc nhở này?"</string>
+    <string name="notification_theme_title">"Vui lòng chọn các phong cách thông báo phù hợp với điện thoại của bạn"</string>
+    <string name="alerts_per_day">"Nhắc nhở mỗi ngày"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Thông báo mở tóm tắt"</string>
+    <string name="randremind_settings_0_secondary">"Bỏ chọn để làm cho thông báo âm thầm thừa nhận"</string>
+    <string name="randremind_settings_1_primary">"Sử dụng thông báo tùy chỉnh"</string>
+    <string name="randremind_settings_1_secondary">"Bỏ chọn để vô hiệu hóa các thông báo tùy chỉnh và quay trở lại hệ thống tiêu chuẩn"</string>
+    <string name="randremind_settings_2_primary">"Sử dụng thông báo liên tục"</string>
+    <string name="randremind_settings_2_secondary">"Bỏ chọn để cho phép các thông báo được bãi miễn bằng swiping nó đi. Thông báo liên tục không được hỗ trợ trên Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Sử dụng theme thông báo của một nền màu sáng và chữ màu tối"</string>
+    <string name="randremind_settings_3_secondary">"Bỏ chọn để sử dụng theme thông báo đen tối của một nền bóng tối và ánh sáng văn bản"</string>
+    <string name="randremind_settings_4_primary">"Ngày đầu tiên của tuần"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Ẩn Banner quảng cáo"</string>
+    <string name="google_play_settings_0_secondary">"Bỏ chọn để ẩn các banner quảng cáo, nhưng cho thấy các quảng cáo trang đầy đủ thay vì"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Chỉnh sửa"</string>
+    <string name="in_order">"Trong Đặt hàng"</string>
+    <string name="ordering">"Thứ tự"</string>
+    <string name="preview">"Xem trước"</string>
+    <string name="share">"Phần"</string>
+    <string name="share_game">"Chia sẻ trò chơi"</string>
+    <string name="download">"Tải về"</string>
+    <string name="view">"Xem"</string>
+    <string name="automatic">"Tự động"</string>
+    <string name="manual">"Hướng dẫn sử dụng"</string>
+    <string name="local">"Địa phương"</string>
+    <string name="online">"Trực tuyến"</string>
+    <string name="offline">"Ẩn"</string>
+    <string name="header">"Cú đội đầu"</string>
+    <string name="footer">"Footer"</string>
+    <string name="custom">"Phong tục"</string>
+    <string name="title">"Tiêu đề"</string>
+    <string name="notification">"Thông báo"</string>
+    <string name="select_notification">"Chọn thông báo"</string>
+    <string name="color">"Màu"</string>
+    <string name="tone">"Giọng"</string>
+    <string name="sound">"Âm thanh"</string>
+    <string name="random">"Ngẫu nhiên"</string>
+    <string name="specific">"Đặc biệt"</string>s
+    <string name="repeat">"Lặp lại"</string>
+    <string name="alarm">"báo thức"</string>
+    <string name="vibrate">"Rung"</string>
+    <string name="general">"Tổng hợp"</string>
+    <string name="range">"Phạm vi"</string>
+    <string name="priority">"Quyền ưu tiên"</string>
+    <string name="accent">"Giọng"</string>
+    <string name="accent_color">"Accent Màu"</string>
+    <string name="choose_color">"Chọn màu"</string>
+    <string name="get">"Được"</string>
+    <string name="type">"Kiểu"</string>
+    <string name="missed">"Hỏng"</string>
+
+</resources>

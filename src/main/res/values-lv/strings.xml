@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Day"</string>
+    <!-- -->
+    <string name="day_plural">"Dienas"</string>
+    <!-- -->
+    <string name="hour_singular">"Stunda"</string>
+    <!-- -->
+    <string name="hour_plural">"Stundas"</string>
+    <!-- -->
+    <string name="minute_singular">"Minūte"</string>
+    <!-- -->
+    <string name="minute_plural">"Minūtes"</string>
+    <!-- -->
+    <string name="second_singular">"Otrais"</string>
+    <!-- -->
+    <string name="second_plural">"Sekundes"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Viens"</string>
+    <!-- -->
+    <string name="two">"Divi"</string>
+    <!-- -->
+    <string name="three">"Trīs"</string>
+    <!-- -->
+    <string name="four">"Četri"</string>
+    <!-- -->
+    <string name="five">"Pieci"</string>
+    <!-- -->
+    <string name="six">"Seši"</string>
+    <!-- -->
+    <string name="seven">"Septiņi"</string>
+    <!-- -->
+    <string name="eight">"Astoņi"</string>
+    v
+    <string name="nine">"Deviņi"</string>
+    <!-- -->
+    <string name="ten">"Desmit"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"Pirmais"</string>
+    <!-- -->
+    <string name="second">"Otrais"</string>
+    <!-- -->
+    <string name="third">"Trešais"</string>
+    <!-- -->
+    <string name="fourth">"Ceturtais"</string>
+    <!-- -->
+    <string name="fifth">"Piektais"</string>
+    <!-- -->
+    <string name="sixth">"Sestais"</string>
+    <!-- -->
+    <string name="seventh">"Septītais"</string>
+    <!-- -->
+    <string name="eighth">"Astotais"</string>
+    <!-- -->
+    <string name="ninth">"Devītais"</string>
+    <!-- -->
+    <string name="tenth">"Desmitais"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Dienas Nedēļas"</string>
+    <!-- -->
+    <string name="day_sunday">"Svētdiena"</string>
+    <!-- -->
+    <string name="day_monday">"Pirmdiena"</string>
+    <!-- -->
+    <string name="day_tuesday">"Otrdiena"</string>
+    <!-- -->
+    <string name="day_wednesday">"Trešdiena"</string>
+    <!-- -->
+    <string name="day_thursday">"Ceturtdiena"</string>
+    <!-- -->
+    <string name="day_friday">"Piektdiena"</string>
+    <!-- -->
+    <string name="day_saturday">"Sestdiena"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Sākuma laiks"</string>
+    <string name="end_time">"Beigu laiks"</string>
+    <string name="timing_type">"Laiks Type"</string>
+    <string name="edit_times">"Edit Times"</string>
+    <string name="time">"Laiks"</string>
+    <string name="times">"Times"</string>
+    <string name="timing">"Laika noteikšana"</string>
+    <string name="today">"Šodien"</string>
+    <string name="tomorrow">"Rīt"</string>
+    <string name="yesterday">"Vakar"</string>
+    <string name="daily">"Katru dienu"</string>
+    <string name="weekly">"Katru nedēļu"</string>
+    <string name="week">"Nedēļa"</string>
+    <string name="weeks">"Weeks"</string>
+    <string name="all_time">"Visu laiku"</string>
+    <string name="next_week">"Nākamnedēļ"</string>
+    <string name="last_week">"Pagājušajā nedēļā"</string>
+    <string name="once_month">"Reizi mēnesī"</string>
+    <string name="twice_month">"Divreiz mēnesī"</string>
+    <string name="every_week">"Katru nedēļu"</string>
+    <string name="every_other_week">"Katru otro nedēļu"</string>
+    <string name="lifetime">"Mūžs"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Pattern 1"</string>
+    <string name="pattern_2">"Pattern 2"</string>
+    <string name="pattern_3">"Pattern 3"</string>
+    <string name="pattern_4">"Pattern 4"</string>
+    <string name="pattern_5">"Pattern 5"</string>
+    <string name="pattern_6">"Pattern 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"Imports"</string>
+    <string name="export">"Eksports"</string>
+    <string name="import_log">"Imports Log"</string>
+    <string name="export_log">"Eksporta Log"</string>
+    <string name="import_reminder">"Imports Atgādinājums"</string>
+    <string name="export_reminder">"Eksporta Atgādinājums"</string>
+    <string name="import_all">"Importēt All"</string>
+    <string name="export_all">"Export All"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Publisks"</string>
+    <string name="private_">"Privāts"</string>
+    <string name="default_">"Default"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Zems"</string>
+    <string name="mid">"Mid"</string>
+    <string name="high">"Augsts"</string>
+    <string name="min">"Min"</string>
+    <string name="max">"Max"</string>
+    <string name="minimum">"Minimums"</string>
+    <string name="medium">"Vidējs"</string>
+    <string name="maximum">"Maksimums"</string>
+    <string name="small">"Mazs"</string>
+    <string name="large">"Liels"</string>
+    <string name="short_">"Īss"</string>
+    <string name="long_">"Garš"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Grūtības"</string>
+    <string name="select_difficulty">"Izvēlieties Grūtības"</string>
+    <string name="easy">"Viegli"</string>
+    <string name="normal">"Normāls"</string>
+    <string name="hard">"Grūti"</string>
+    <string name="quick">"Ātrs"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Ieslēgt"</string>
+    <string name="enabled">"Enabled"</string>
+    <string name="disable">"Atslēgt"</string>
+    <string name="disabled">"Invalīdu"</string>
+    <string name="lock">"Slēdzene"</string>
+    <string name="locked">"Slēgts"</string>
+    <string name="unlock">"Atslēgt"</string>
+    <string name="unlocked">"Unlocked"</string>
+    <string name="open">"Atvērts"</string>
+    <string name="opened">"Atvērts"</string>
+    <string name="close">"Aizvērt"</string>
+    <string name="closed">"Slēgts"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"Kļūda"</string>
+    <string name="fail">"Neizdoties"</string>
+    <string name="failed">"Neizdevās"</string>
+    <string name="success">"Veiksme"</string>
+    <string name="successful">"Veiksmīgs"</string>
+    <string name="valid">"Derīgs"</string>
+    <string name="invalid">"Nederīgs"</string>
+    <string name="failed_open_link">"Neizdevās atvērt saiti"</string>
+    <string name="app_open_fail">"Neizdevās atvērt lietotni"</string>
+    <string name="no_items_found">"Preces nav atrastas"</string>
+    <string name="data_load_fail">"Neizdevās ielādēt sarakstu"</string>
+    <string name="invalid_time">"Nederīgs laiks"</string>
+    <string name="complete">"Pilnīgs"</string>
+    <string name="completed">"Pabeigts"</string>
+    <string name="incomplete">"Nepilnīgs"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Palīdzēt"</string>
+    <string name="about">"Par"</string>
+    <string name="settings">"Settings"</string>
+    <string name="help_and_feedback">"Palīdzība un Atsauksmes"</string>
+    <string name="like_this_app">"Tāpat kā šī app?"</string>
+    <string name="rate_now">"Novērtēt to tagad"</string>
+    <string name="more_apps">"Vairāk Apps"</string>
+    <string name="how_to_use">"Kā izmantot"</string>
+    <string name="how_to_play">"Kā spēlēt"</string>
+    <string name="read_how">"Lasīt Kā"</string>
+    <string name="watch_how">"Skatīties Kā"</string>
+    <string name="licenses">"Licences"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"Parādīt"</string>
+    <string name="shown">"Parādīts"</string>
+    <string name="shown_again">"Parādīts Again"</string>
+    <string name="hide">"Paslēpt"</string>
+    <string name="Hidden">"Slēpts"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"labi"</string>
+    <string name="cancel">"Atcelt"</string>
+    <string name="yes">"Jā"</string>
+    <string name="no">"Nē"</string>
+    <string name="maybe">"Var būt"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Neviens"</string>
+    <string name="all">"Visi"</string>
+    <string name="last">"Pēdējais"</string>
+    <string name="every">"Ik"</string>
+    <string name="other">"Cits"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Ikona"</string>
+    <string name="choose_icon">"Izvēlieties Icon"</string>
+    <string name="logo">"Logotips"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Snaust"</string>
+    <string name="snoozed">"Atlikti"</string>
+    <string name="auto_snooze">"Auto Atlikt"</string>
+    <string name="manual_snooze">"Manual Atlikt"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"Ziņa"</string>
+    <string name="messages">"Ziņojumi"</string>
+    <string name="num_messages">"Ziņojumu skaits"</string>
+    <string name="edit_messages">"Rediģēt ziņojumus"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Pievienot"</string>
+    <string name="added">"Pievienots"</string>
+    <string name="add_item">"Pievienot objektu"</string>
+    <string name="remove">"Noņemt"</string>
+    <string name="removed">"Noņemts"</string>
+    <string name="remove_item">"Noņemt Postenis"</string>
+    <string name="delete">"Izdzēst"</string>
+    <string name="duplicate">"Dublēt"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Paldies"</string>
+    <string name="youre_welcome">"Nav par ko"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Brīvs"</string>
+    <string name="pull">"Vilkt"</string>
+    <string name="wild">"Neapdomāts"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Jūs"</string>
+    <string name="me">"Mani"</string>
+    <string name="us">"Mūs"</string>
+    <string name="them">"Viņiem"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Sasniegumi"</string>
+    <string name="leaderboards">"Līderu"</string>
+    <string name="high_scores">"Rekordus"</string>
+    <string name="my_circles">"Mani Circles"</string>
+    <string name="invitations">"Ielūgumi"</string>
+    <string name="options">"Iespējas"</string>
+    <string name="game_options">"Spēļu iespējas"</string>
+    <string name="automatch">"Automātiska uzdevumu"</string>
+    <string name="guest">"Viesis"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Mačs"</string>
+    <string name="try_again">"Mēģini vēlreiz"</string>
+    <string name="touch_continue">"Pieskarties, lai turpinātu"</string>
+    <string name="touch_resume">"Pieskarieties, lai Resume"</string>
+    <string name="pause">"Pauze"</string>
+    <string name="pause_game">"Pauze Game"</string>
+    <string name="resume">"Turpināt"</string>
+    <string name="resume_game">"Resume Game"</string>
+    <string name="new_">"Jauns"</string>
+    <string name="new_game">"Jauna spēle"</string>
+    <string name="select_save">"Izvēlieties Saglabāt"</string>
+    <string name="save">"Saglabāt"</string>
+    <string name="save_game">"Save Game"</string>
+    <string name="load_game">"Load Game"</string>
+    <string name="load">"Slodze"</string>
+    <string name="game_over">"Spēle beigusies"</string>
+    <string name="start">"Sākums"</string>
+    <string name="start_game">"Start Game"</string>
+    <string name="end">"Gals"</string>
+    <string name="end_game">"End Game"</string>
+    <string name="stop">"Apstāties"</string>
+    <string name="stop_game">"Stop Game"</string>
+    <string name="start_new_game_title">"Sākt jaunu spēli"</string>
+    <string name="start_new_game_prompt">"Vai jūs tiešām vēlaties, lai sāktu jaunu spēli?"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Pašreizējais Score"</string>
+    <string name="top_score">"Top Score"</string>
+    <string name="score">"Score"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Special"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Tava kārta"</string>
+    <string name="their_turn">"Savukārt"</string>
+    <string name="turn">"Pagrieziens"</string>
+    <string name="turns">"Pagriezieni"</string>
+    <string name="round">"Apaļš"</string>
+    <string name="rounds">"Kārtas"</string>
+    <string name="matches">"Sērkociņi"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Tu uzvari"</string>
+    <string name="you_won">"Tu uzvarēji"</string>
+    <string name="you_lost">"Tu zaudēji"</string>
+    <string name="you_lose">"Tu zaudē"</string>
+    <string name="you_tied">"Jūs Saistītus"</string>
+    <string name="winner">"Uzvarētājs"</string>
+    <string name="winners">"Uzvarētāji"</string>
+    <string name="loser">"Zaudētājs"</string>
+    <string name="Losers">"Zaudētāji"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Nopirkt"</string>
+    <string name="purchase">"Pirkuma"</string>
+    <string name="diamond">"Dimanta"</string>
+    <string name="diamonds">"Diamonds"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Ielogoties"</string>
+    <string name="signed_in">"Parakstīts"</string>
+    <string name="sign_out">"Izrakstīties"</string>
+    <string name="signed_out">"Parakstīts Out"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Sponsored"</string>
+    <string name="ads">"Reklāmas"</string>
+    <string name="remove_ads">"Noņemt reklāmas"</string>
+    <string name="ads_removed">"Reklāmas Noņemts"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Dalībnieku skaits"</string>
+    <string name="player">"Spēlētājs"</string>
+    <string name="players">"Spēlētāji"</string>
+    <string name="player_1">"Player 1"</string>
+    <string name="player_2">"Player 2"</string>
+    <string name="player_3">"Player 3"</string>
+    <string name="player_4">"Spēlētāja 4"</string>
+    <string name="player_5">"Player 5"</string>
+    <string name="player_6">"Spēlētāja 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Komanda"</string>
+    <string name="teams">"Teams"</string>
+    <string name="team_1">"Team 1"</string>
+    <string name="team_2">"Team 2"</string>
+    <string name="team_3">"Team 3"</string>
+    <string name="team_4">"Team 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Izmaiņas Nolietotas"</string>
+    <string name="reminder_save">"Izmaiņas Saglabātās"</string>
+    <string name="reminder_delete">"Atgādinājums Svītrots"</string>
+    <string name="reminder_duplicate">"Atgādinājums Dublētais"</string>
+    <string name="no_changes">"Bez izmaiņām"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Ieslēgt immersive Mode"</string>
+    <string name="settings_base_item_0_secondary">"Noņemiet parādīt navigācijas un statusa bāri"</string>
+    <string name="settings_base_item_1_primary">"Aktivizēt skaņas efekti"</string>
+    <string name="settings_base_item_1_secondary">"Noņemiet atslēgt skaņas efektus"</string>
+    <string name="settings_base_item_2_primary">"Ieslēgt Mūzika"</string>
+    <string name="settings_base_item_2_secondary">"Noņemiet atslēgt mūziku"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"KĻŪDA: Nevar iestatījumu app rēķinu"</string>
+    <string name="failed_purchase">"KĻŪDA: Neizdevās iegādāties posteni"</string>
+    <string name="failed_load_google_page">"Neizdevās ielādēt lapu"</string>
+    <string name="requires_google_play">"Šī darbība ir nepieciešama Google Play spēles"</string>
+    <string name="compare_profiles">"Salīdzināt Spēlēt Spēles Profili"</string>
+    <string name="view_profile">"Skatīt spēlēt spēles profilu"</string>
+    <string name="gamehelper_license_failed">"Licence pārbaude neizdevās."</string>
+    <string name="gamehelper_unknown_error">"Nezināma kļūda."</string>
+    <string name="network_failure">"Network Connection Nespēja"</string>
+    <string name="gamehelper_sign_in_failed">"Neizdevās pierakstīties. Lūdzu, pārbaudiet tīkla savienojumu un mēģiniet vēlreiz."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Jums nav atgādinājumi vēl."</string>
+    <string name="delete_reminder_prompt_title">"Dzēst Atgādinājums"</string>
+    <string name="delete_reminder_prompt_content">"Vai tiešām vēlaties dzēst šo atgādinājumu?"</string>
+    <string name="cancel_reminder_prompt_title">"Atmest izmaiņas"</string>
+    <string name="cancel_reminder_prompt_content">"Vai jūs tiešām vēlaties atmest izmaiņas?"</string>
+    <string name="duplicate_reminder_prompt_title">"Dublikāts Atgādinājums"</string>
+    <string name="duplicate_reminder_prompt_content">"Vai jūs tiešām vēlaties, lai dublēt šo atgādinājumu?"</string>
+    <string name="notification_theme_title">"Lūdzu, izvēlieties paziņojumu stilu, kas atbilst jūsu tālruni"</string>
+    <string name="alerts_per_day">"Atgādinājumi par dienu"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Paziņošana atver kopsavilkumu"</string>
+    <string name="randremind_settings_0_secondary">"Noņemiet izdarīt paziņojumu klusi atzīt"</string>
+    <string name="randremind_settings_1_primary">"Izmantot pielāgotu paziņojumu"</string>
+    <string name="randremind_settings_1_secondary">"Noņemiet atslēgt pasūtījuma paziņojumu un atgriezties pie standarta sistēmu"</string>
+    <string name="randremind_settings_2_primary">"Izmantot notiekošo paziņojumu"</string>
+    <string name="randremind_settings_2_secondary">"Noņemiet ļaut paziņojums būt dismissible uzsitot to prom. Pašreizējie paziņojumi netiek atbalstīti Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Izmantojiet paziņošanas tēma gaiša fona un tumši tekstu"</string>
+    <string name="randremind_settings_3_secondary">"Noņemiet atzīmi izmantot tumšo paziņošanas tēmu tumša fona un gaismas tekstu"</string>
+    <string name="randremind_settings_4_primary">"Pirmā nedēļas diena"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Slēpt Banner Ads"</string>
+    <string name="google_play_settings_0_secondary">"Noņemiet lai slēptu reklāmas bannerus, bet gan parādīt pilnu lapu reklāmas"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Rediģēt"</string>
+    <string name="in_order">"Kārtībā"</string>
+    <string name="ordering">"Pasūtīšana"</string>
+    <string name="preview">"Preview"</string>
+    <string name="share">"Akcija"</string>
+    <string name="share_game">"Share Game"</string>
+    <string name="download">"Download"</string>
+    <string name="view">"Skats"</string>
+    <string name="automatic">"Automātisks"</string>
+    <string name="manual">"Pamācība"</string>
+    <string name="local">"Vietējs"</string>
+    <string name="online">"Online"</string>
+    <string name="offline">"Offline"</string>
+    <string name="header">"Galvene"</string>
+    <string name="footer">"Futbols"</string>
+    <string name="custom">"Paraža"</string>
+    <string name="title">"Virsraksts"</string>
+    <string name="notification">"Paziņojums"</string>
+    <string name="select_notification">"Izvēlieties Paziņojums"</string>
+    <string name="color">"Krāsa"</string>
+    <string name="tone">"Tonis"</string>
+    <string name="sound">"Skaņa"</string>
+    <string name="random">"Random"</string>
+    <string name="specific">"Specifisks"</string>s
+    <string name="repeat">"Atkārtojums"</string>
+    <string name="alarm">"Signalizācija"</string>
+    <string name="vibrate">"Vibrēt"</string>
+    <string name="general">"General"</string>
+    <string name="range">"Diapazons"</string>
+    <string name="priority">"Prioritāte"</string>
+    <string name="accent">"Akcents"</string>
+    <string name="accent_color">"Accent Color"</string>
+    <string name="choose_color">"Izvēlēties krāsu"</string>
+    <string name="get">"Nokļūt"</string>
+    <string name="type">"Type"</string>
+    <string name="missed">"Neatbildētie"</string>
+
+</resources>

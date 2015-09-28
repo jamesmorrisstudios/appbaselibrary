@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Ден"</string>
+    <!-- -->
+    <string name="day_plural">"Дни"</string>
+    <!-- -->
+    <string name="hour_singular">"Час"</string>
+    <!-- -->
+    <string name="hour_plural">"Часове"</string>
+    <!-- -->
+    <string name="minute_singular">"Минута"</string>
+    <!-- -->
+    <string name="minute_plural">"Минути"</string>
+    <!-- -->
+    <string name="second_singular">"Втори"</string>
+    <!-- -->
+    <string name="second_plural">"Секунди"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Един"</string>
+    <!-- -->
+    <string name="two">"Двама"</string>
+    <!-- -->
+    <string name="three">"Три"</string>
+    <!-- -->
+    <string name="four">"Четири"</string>
+    <!-- -->
+    <string name="five">"Пет"</string>
+    <!-- -->
+    <string name="six">"Шест"</string>
+    <!-- -->
+    <string name="seven">"Седем"</string>
+    <!-- -->
+    <string name="eight">"Осем"</string>
+    v
+    <string name="nine">"Девет"</string>
+    <!-- -->
+    <string name="ten">"Десет"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"Първи"</string>
+    <!-- -->
+    <string name="second">"Втори"</string>
+    <!-- -->
+    <string name="third">"Трета"</string>
+    <!-- -->
+    <string name="fourth">"Четвърти"</string>
+    <!-- -->
+    <string name="fifth">"Пети"</string>
+    <!-- -->
+    <string name="sixth">"Шести"</string>
+    <!-- -->
+    <string name="seventh">"Седми"</string>
+    <!-- -->
+    <string name="eighth">"Осма"</string>
+    <!-- -->
+    <string name="ninth">"Девети"</string>
+    <!-- -->
+    <string name="tenth">"Десети"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Дни от седмицата"</string>
+    <!-- -->
+    <string name="day_sunday">"Неделя"</string>
+    <!-- -->
+    <string name="day_monday">"Понеделник"</string>
+    <!-- -->
+    <string name="day_tuesday">"Вторник"</string>
+    <!-- -->
+    <string name="day_wednesday">"Сряда"</string>
+    <!-- -->
+    <string name="day_thursday">"Четвъртък"</string>
+    <!-- -->
+    <string name="day_friday">"Петък"</string>
+    <!-- -->
+    <string name="day_saturday">"Събота"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Начален час"</string>
+    <string name="end_time">"End Time"</string>
+    <string name="timing_type">"Timing Type"</string>
+    <string name="edit_times">"Edit Times"</string>
+    <string name="time">"Време"</string>
+    <string name="times">"Пъти"</string>
+    <string name="timing">"Синхронизиране"</string>
+    <string name="today">"Днес"</string>
+    <string name="tomorrow">"Утре"</string>
+    <string name="yesterday">"Вчера"</string>
+    <string name="daily">"Ежедневно"</string>
+    <string name="weekly">"Седмично"</string>
+    <string name="week">"Седмица"</string>
+    <string name="weeks">"Седмици"</string>
+    <string name="all_time">"All Time"</string>
+    <string name="next_week">"Следващата седмица"</string>
+    <string name="last_week">"Миналата седмица"</string>
+    <string name="once_month">"Веднъж месечно"</string>
+    <string name="twice_month">"Два пъти месечно"</string>
+    <string name="every_week">"Всяка седмица"</string>
+    <string name="every_other_week">"През седмица"</string>
+    <string name="lifetime">"Живот"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Pattern 1"</string>
+    <string name="pattern_2">"Pattern 2"</string>
+    <string name="pattern_3">"Модела 3"</string>
+    <string name="pattern_4">"Модела 4"</string>
+    <string name="pattern_5">"Модела 5"</string>
+    <string name="pattern_6">"Модела 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"Внос"</string>
+    <string name="export">"Износ"</string>
+    <string name="import_log">"Внос Log"</string>
+    <string name="export_log">"Export Log"</string>
+    <string name="import_reminder">"Внос Reminder"</string>
+    <string name="export_reminder">"Export Reminder"</string>
+    <string name="import_all">"Import All"</string>
+    <string name="export_all">"Export All"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Публичен"</string>
+    <string name="private_">"Частен"</string>
+    <string name="default_">"По подразбиране"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Нисък"</string>
+    <string name="mid">"Среден"</string>
+    <string name="high">"Високо"</string>
+    <string name="min">"Min"</string>
+    <string name="max">"Max"</string>
+    <string name="minimum">"Минимум"</string>
+    <string name="medium">"Среда"</string>
+    <string name="maximum">"Максимален"</string>
+    <string name="small">"Малък"</string>
+    <string name="large">"Голям"</string>
+    <string name="short_">"Кратко"</string>
+    <string name="long_">"Дълго"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Затруднение"</string>
+    <string name="select_difficulty">"Изберете Трудност"</string>
+    <string name="easy">"Лесно"</string>
+    <string name="normal">"Нормален"</string>
+    <string name="hard">"Твърд"</string>
+    <string name="quick">"Бърз"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Разрешаване"</string>
+    <string name="enabled">"Enabled"</string>
+    <string name="disable">"Правя неспособен"</string>
+    <string name="disabled">"хора с увреждания"</string>
+    <string name="lock">"Заключвам"</string>
+    <string name="locked">"Заключен"</string>
+    <string name="unlock">"Отключвам"</string>
+    <string name="unlocked">"Unlocked"</string>
+    <string name="open">"Отворено"</string>
+    <string name="opened">"Отворен"</string>
+    <string name="close">"Близо"</string>
+    <string name="closed">"Затворен"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"Грешка"</string>
+    <string name="fail">"Fail"</string>
+    <string name="failed">"Не успя"</string>
+    <string name="success">"Успех"</string>
+    <string name="successful">"Успешен"</string>
+    <string name="valid">"Валиден"</string>
+    <string name="invalid">"Невалиден"</string>
+    <string name="failed_open_link">"Неуспех при отваряне на линк"</string>
+    <string name="app_open_fail">"Неуспех при отваряне на приложението"</string>
+    <string name="no_items_found">"Не са намерени артикули"</string>
+    <string name="data_load_fail">"Неуспех при зареждане на списък"</string>
+    <string name="invalid_time">"Невалиден време"</string>
+    <string name="complete">"Пълен"</string>
+    <string name="completed">"Завършен"</string>
+    <string name="incomplete">"Непълен"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Помощ"</string>
+    <string name="about">"Около"</string>
+    <string name="settings">"Настройки"</string>
+    <string name="help_and_feedback">"Помощ &amp; Обратна връзка"</string>
+    <string name="like_this_app">"Подобно на това приложение?"</string>
+    <string name="rate_now">"Оцени го сега"</string>
+    <string name="more_apps">"Още приложения"</string>
+    <string name="how_to_use">"Как да използвам"</string>
+    <string name="how_to_play">"Как да играя"</string>
+    <string name="read_how">"Прочетете как"</string>
+    <string name="watch_how">"Гледайте Как"</string>
+    <string name="licenses">"Лицензи"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"Шоу"</string>
+    <string name="shown">"Посочен"</string>
+    <string name="shown_again">"Показани Again"</string>
+    <string name="hide">"Крия"</string>
+    <string name="Hidden">"Скрит"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"Добре"</string>
+    <string name="cancel">"Отказ"</string>
+    <string name="yes">"Да"</string>
+    <string name="no">"Не"</string>
+    <string name="maybe">"Може би"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Никой"</string>
+    <string name="all">"Всички"</string>
+    <string name="last">"Последно"</string>
+    <string name="every">"Всеки"</string>
+    <string name="other">"Друг"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Икона"</string>
+    <string name="choose_icon">"Изберете Icon"</string>
+    <string name="logo">"Logo"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Дрямка"</string>
+    <string name="snoozed">"Отложени"</string>
+    <string name="auto_snooze">"Auto Snooze"</string>
+    <string name="manual_snooze">"Manual Snooze"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"Съобщение"</string>
+    <string name="messages">"Съобщения"</string>
+    <string name="num_messages">"Брой на съобщенията"</string>
+    <string name="edit_messages">"Редактирай Съобщения"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Добави"</string>
+    <string name="added">"Добавен"</string>
+    <string name="add_item">"Добави Точка"</string>
+    <string name="remove">"Премахни"</string>
+    <string name="removed">"Премахнато"</string>
+    <string name="remove_item">"Махни Точка"</string>
+    <string name="delete">"Изтривам"</string>
+    <string name="duplicate">"Дубликат"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Благодаря"</string>
+    <string name="youre_welcome">"Пак заповядай"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Безплатно"</string>
+    <string name="pull">"Дръпни"</string>
+    <string name="wild">"Див"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Вие"</string>
+    <string name="me">"Мен"</string>
+    <string name="us">"Нас"</string>
+    <string name="them">"Тях"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Постижения"</string>
+    <string name="leaderboards">"Класирания"</string>
+    <string name="high_scores">"Рекордите"</string>
+    <string name="my_circles">"Моят Circles"</string>
+    <string name="invitations">"Покани"</string>
+    <string name="options">"Опции"</string>
+    <string name="game_options">"Опции за игра"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"Гост"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Повторен мач"</string>
+    <string name="try_again">"Опитай отново"</string>
+    <string name="touch_continue">"Докоснете, за да продължите"</string>
+    <string name="touch_resume">"Докоснете, за да Resume"</string>
+    <string name="pause">"Пауза"</string>
+    <string name="pause_game">"Pause Game"</string>
+    <string name="resume">"Продължи"</string>
+    <string name="resume_game">"Resume Game"</string>
+    <string name="new_">"Нов"</string>
+    <string name="new_game">"Нова игра"</string>
+    <string name="select_save">"Изберете Save"</string>
+    <string name="save">"Save"</string>
+    <string name="save_game">"Запази играта"</string>
+    <string name="load_game">"Load Game"</string>
+    <string name="load">"Натоварване"</string>
+    <string name="game_over">"Играта приключи"</string>
+    <string name="start">"Начало"</string>
+    <string name="start_game">"Start Game"</string>
+    <string name="end">"Край"</string>
+    <string name="end_game">"End Game"</string>
+    <string name="stop">"Спри се"</string>
+    <string name="stop_game">"Stop Game"</string>
+    <string name="start_new_game_title">"Започнете New Game"</string>
+    <string name="start_new_game_prompt">"Сигурни ли сте че искате да започнете нова игра?"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Текущ рейтинг"</string>
+    <string name="top_score">"Топ рейтинг"</string>
+    <string name="score">"Резултат"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Специален"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Твой ред"</string>
+    <string name="their_turn">"Тяхната Turn"</string>
+    <string name="turn">"Завой"</string>
+    <string name="turns">"Завои"</string>
+    <string name="round">"Кръгъл"</string>
+    <string name="rounds">"Уикенд"</string>
+    <string name="matches">"Кибрит"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Печелиш"</string>
+    <string name="you_won">"Ти спечели"</string>
+    <string name="you_lost">"Ти загуби"</string>
+    <string name="you_lose">"Ти загуби"</string>
+    <string name="you_tied">"Можете Вързан"</string>
+    <string name="winner">"Победител"</string>
+    <string name="winners">"Winners"</string>
+    <string name="loser">"Загубеняк"</string>
+    <string name="Losers">"Losers"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Купувам"</string>
+    <string name="purchase">"Покупка"</string>
+    <string name="diamond">"Диамант"</string>
+    <string name="diamonds">"Diamonds"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Впиши се"</string>
+    <string name="signed_in">"Подписано В"</string>
+    <string name="sign_out">"Отписване"</string>
+    <string name="signed_out">"Подписано Out"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Спонсорирани"</string>
+    <string name="ads">"Обяви"</string>
+    <string name="remove_ads">"Премахване на рекламите"</string>
+    <string name="ads_removed">"Обяви Премахнати"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Брой Играчи"</string>
+    <string name="player">"Плейър"</string>
+    <string name="players">"Играчи"</string>
+    <string name="player_1">"Играч 1"</string>
+    <string name="player_2">"Играч 2"</string>
+    <string name="player_3">"Играч 3"</string>
+    <string name="player_4">"Player 4"</string>
+    <string name="player_5">"Player 5"</string>
+    <string name="player_6">"Player 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Отбор"</string>
+    <string name="teams">"Отбори"</string>
+    <string name="team_1">"Отбор 1"</string>
+    <string name="team_2">"Отбор 2"</string>
+    <string name="team_3">"Team 3"</string>
+    <string name="team_4">"Team 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Промени Бракуваните"</string>
+    <string name="reminder_save">"Промени Saved"</string>
+    <string name="reminder_delete">"Reminder изтрит"</string>
+    <string name="reminder_duplicate">"Reminder Дублирани"</string>
+    <string name="no_changes">"Няма промени"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Активиране Immersive Mode"</string>
+    <string name="settings_base_item_0_secondary">"Махнете отметката, за да покаже, навигация и за състоянието на баровете"</string>
+    <string name="settings_base_item_1_primary">"Активиране на звукови ефекти"</string>
+    <string name="settings_base_item_1_secondary">"Махнете отметката, за да забраните на звукови ефекти"</string>
+    <string name="settings_base_item_2_primary">"Активиране Music"</string>
+    <string name="settings_base_item_2_secondary">"Махнете отметката, за да забраните на музика"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"ГРЕШКА: Не може да настроите в приложение за фактуриране"</string>
+    <string name="failed_purchase">"ГРЕШКА: Не може да се закупи артикул"</string>
+    <string name="failed_load_google_page">"Неуспех при зареждане на страницата"</string>
+    <string name="requires_google_play">"Това действие изисква Google Play Games"</string>
+    <string name="compare_profiles">"Сравни играят игри Профили"</string>
+    <string name="view_profile">"Виж играят игри Профил"</string>
+    <string name="gamehelper_license_failed">"Проверка License провали."</string>
+    <string name="gamehelper_unknown_error">"Неизвестна грешка."</string>
+    <string name="network_failure">"Network Connection Неизпълнение"</string>
+    <string name="gamehelper_sign_in_failed">"Неуспех да влезете. Моля, проверете връзката си и опитайте отново."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Вие нямате напомняния, все още."</string>
+    <string name="delete_reminder_prompt_title">"Изтрий Reminder"</string>
+    <string name="delete_reminder_prompt_content">"Сигурни ли сте, че искате да изтриете това напомняне?"</string>
+    <string name="cancel_reminder_prompt_title">"Отхвърлите промените"</string>
+    <string name="cancel_reminder_prompt_content">"Сигурни ли сте че искате да отхвърлите промените си?"</string>
+    <string name="duplicate_reminder_prompt_title">"Duplicate Reminder"</string>
+    <string name="duplicate_reminder_prompt_content">"Сигурни ли сте че искате да дублира това напомняне?"</string>
+    <string name="notification_theme_title">"Моля изберете стил за уведомяване, който съвпада с вашия телефон"</string>
+    <string name="alerts_per_day">"Напомняне на ден"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Уведомление отваря резюме"</string>
+    <string name="randremind_settings_0_secondary">"Махнете отметката да направи нотификация мълчаливо потвърдя"</string>
+    <string name="randremind_settings_1_primary">"Използвайте обичай уведомяване"</string>
+    <string name="randremind_settings_1_secondary">"Махнете отметката, за да забраните обичай нотификацията и се върне към стандартната система"</string>
+    <string name="randremind_settings_2_primary">"Използвайте продължаващата уведомяване"</string>
+    <string name="randremind_settings_2_secondary">"Махнете отметката, за да се даде възможност на уведомлението за dismissible като го прекарате с кола. Продължаващите уведомления не се поддържат в Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Използвайте тема уведомление за светъл фон и тъмен текст"</string>
+    <string name="randremind_settings_3_secondary">"Махнете отметката да използвате тъмна палитра уведомяване на тъмен фон и светъл текст"</string>
+    <string name="randremind_settings_4_primary">"Първи ден от седмицата"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Скриване на банер реклами"</string>
+    <string name="google_play_settings_0_secondary">"Махнете отметката, за да скриете банер реклами, но показват пълни страници реклами вместо"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Редактирам"</string>
+    <string name="in_order">"В ред"</string>
+    <string name="ordering">"Подреждане"</string>
+    <string name="preview">"Предварителен преглед"</string>
+    <string name="share">"Сподели"</string>
+    <string name="share_game">"Сподели Game"</string>
+    <string name="download">"Download"</string>
+    <string name="view">"Изглед"</string>
+    <string name="automatic">"Автоматичен"</string>
+    <string name="manual">"Наръчник"</string>
+    <string name="local">"Местен"</string>
+    <string name="online">"На линия"</string>
+    <string name="offline">"Извън линия"</string>
+    <string name="header">"Удар с глава"</string>
+    <string name="footer">"Footer"</string>
+    <string name="custom">"Обичай"</string>
+    <string name="title">"Заглавие"</string>
+    <string name="notification">"Нотификация"</string>
+    <string name="select_notification">"Изберете Уведомление"</string>
+    <string name="color">"Цвят"</string>
+    <string name="tone">"Тон"</string>
+    <string name="sound">"Звук"</string>
+    <string name="random">"Произволен"</string>
+    <string name="specific">"Специфичен"</string>s
+    <string name="repeat">"Повторение"</string>
+    <string name="alarm">"Аларма"</string>
+    <string name="vibrate">"Люлея се"</string>
+    <string name="general">"Общ"</string>
+    <string name="range">"Диапазон"</string>
+    <string name="priority">"Приоритет"</string>
+    <string name="accent">"Ударение"</string>
+    <string name="accent_color">"Акцент Color"</string>
+    <string name="choose_color">"Изберете Color"</string>
+    <string name="get">"Получавам"</string>
+    <string name="type">"Тип"</string>
+    <string name="missed">"Пропуснато"</string>
+
+</resources>

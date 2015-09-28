@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Day"</string>
+    <!-- -->
+    <string name="day_plural">"Dny"</string>
+    <!-- -->
+    <string name="hour_singular">"Hodina"</string>
+    <!-- -->
+    <string name="hour_plural">"Hodiny"</string>
+    <!-- -->
+    <string name="minute_singular">"Minute"</string>
+    <!-- -->
+    <string name="minute_plural">"Minutes"</string>
+    <!-- -->
+    <string name="second_singular">"Druhý"</string>
+    <!-- -->
+    <string name="second_plural">"Sekundy"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Jeden"</string>
+    <!-- -->
+    <string name="two">"Dva"</string>
+    <!-- -->
+    <string name="three">"Tři"</string>
+    <!-- -->
+    <string name="four">"Čtyři"</string>
+    <!-- -->
+    <string name="five">"Pět"</string>
+    <!-- -->
+    <string name="six">"Šest"</string>
+    <!-- -->
+    <string name="seven">"Sedm"</string>
+    <!-- -->
+    <string name="eight">"Osm"</string>
+    v
+    <string name="nine">"Devítka"</string>
+    <!-- -->
+    <string name="ten">"Desítka"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"První"</string>
+    <!-- -->
+    <string name="second">"Druhý"</string>
+    <!-- -->
+    <string name="third">"Třetí"</string>
+    <!-- -->
+    <string name="fourth">"Čtvrtá"</string>
+    <!-- -->
+    <string name="fifth">"Pátý"</string>
+    <!-- -->
+    <string name="sixth">"Šestá"</string>
+    <!-- -->
+    <string name="seventh">"Sedmá"</string>
+    <!-- -->
+    <string name="eighth">"Osmá"</string>
+    <!-- -->
+    <string name="ninth">"Devátá"</string>
+    <!-- -->
+    <string name="tenth">"Desátý"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Dny v týdnu"</string>
+    <!-- -->
+    <string name="day_sunday">"Neděle"</string>
+    <!-- -->
+    <string name="day_monday">"Pondělí"</string>
+    <!-- -->
+    <string name="day_tuesday">"Úterý"</string>
+    <!-- -->
+    <string name="day_wednesday">"Středa"</string>
+    <!-- -->
+    <string name="day_thursday">"Čtvrtek"</string>
+    <!-- -->
+    <string name="day_friday">"Pátek"</string>
+    <!-- -->
+    <string name="day_saturday">"Sobota"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Doba spuštění"</string>
+    <string name="end_time">"Čas ukončení"</string>
+    <string name="timing_type">"Načasování Type"</string>
+    <string name="edit_times">"Edit Times"</string>
+    <string name="time">"Doba"</string>
+    <string name="times">"Doba"</string>
+    <string name="timing">"Načasování"</string>
+    <string name="today">"Dnes"</string>
+    <string name="tomorrow">"Zítřek"</string>
+    <string name="yesterday">"Včerejšek"</string>
+    <string name="daily">"Denně"</string>
+    <string name="weekly">"Týdenní"</string>
+    <string name="week">"Týden"</string>
+    <string name="weeks">"Týdny"</string>
+    <string name="all_time">"Pořád"</string>
+    <string name="next_week">"Příští týden"</string>
+    <string name="last_week">"Minulý týden"</string>
+    <string name="once_month">"Jednou měsíčně"</string>
+    <string name="twice_month">"Dvakrát za měsíc"</string>
+    <string name="every_week">"Každý týden"</string>
+    <string name="every_other_week">"Každý druhý týden"</string>
+    <string name="lifetime">"Život"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Vzor 1"</string>
+    <string name="pattern_2">"Vzor 2"</string>
+    <string name="pattern_3">"Vzor 3"</string>
+    <string name="pattern_4">"Vzor 4"</string>
+    <string name="pattern_5">"Vzor 5"</string>
+    <string name="pattern_6">"Vzor 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"Dovoz"</string>
+    <string name="export">"Export"</string>
+    <string name="import_log">"Importovat Log"</string>
+    <string name="export_log">"Export Log"</string>
+    <string name="import_reminder">"Importovat Připomenutí"</string>
+    <string name="export_reminder">"Export Připomenutí"</string>
+    <string name="import_all">"Importovat vše"</string>
+    <string name="export_all">"Export Vše"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Veřejný"</string>
+    <string name="private_">"Soukromé"</string>
+    <string name="default_">"Výchozí"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Nízká"</string>
+    <string name="mid">"Mid"</string>
+    <string name="high">"Vysoká"</string>
+    <string name="min">"Min"</string>
+    <string name="max">"Max"</string>
+    <string name="minimum">"Minimum"</string>
+    <string name="medium">"Médium"</string>
+    <string name="maximum">"Maximum"</string>
+    <string name="small">"Malý"</string>
+    <string name="large">"Rozsáhlý"</string>
+    <string name="short_">"Short"</string>
+    <string name="long_">"Dlouhé"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Obtížnost"</string>
+    <string name="select_difficulty">"Vybrat Obtížnost"</string>
+    <string name="easy">"Easy"</string>
+    <string name="normal">"Normální"</string>
+    <string name="hard">"Hard"</string>
+    <string name="quick">"Quick"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Aktivovat"</string>
+    <string name="enabled">"Povoleno"</string>
+    <string name="disable">"Zakázat"</string>
+    <string name="disabled">"Zakázáno"</string>
+    <string name="lock">"Zamknout"</string>
+    <string name="locked">"Uzamčené"</string>
+    <string name="unlock">"Odemknout"</string>
+    <string name="unlocked">"Odemčený"</string>
+    <string name="open">"Otevřeno"</string>
+    <string name="opened">"Otevřeno"</string>
+    <string name="close">"V blízkosti"</string>
+    <string name="closed">"Zavřeno"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"Error"</string>
+    <string name="fail">"Selhat"</string>
+    <string name="failed">"Nepodařilo"</string>
+    <string name="success">"Úspěch"</string>
+    <string name="successful">"Úspěšný"</string>
+    <string name="valid">"Platný"</string>
+    <string name="invalid">"Neplatný"</string>
+    <string name="failed_open_link">"Nepodařilo se otevřít odkaz"</string>
+    <string name="app_open_fail">"Nepodařilo se otevřít aplikaci"</string>
+    <string name="no_items_found">"Nebyly nalezeny žádné položky"</string>
+    <string name="data_load_fail">"Nepodařilo se načíst seznam"</string>
+    <string name="invalid_time">"Neplatný čas"</string>
+    <string name="complete">"Kompletní"</string>
+    <string name="completed">"Dokončeno"</string>
+    <string name="incomplete">"Neúplné"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Pomoc"</string>
+    <string name="about">"O"</string>
+    <string name="settings">"Nastavení"</string>
+    <string name="help_and_feedback">"Pomoc &amp; Zpětná vazba"</string>
+    <string name="like_this_app">"Stejně jako tuto aplikaci?"</string>
+    <string name="rate_now">"Hodnotit It Now"</string>
+    <string name="more_apps">"Další aplikace"</string>
+    <string name="how_to_use">"Jak používat"</string>
+    <string name="how_to_play">"Jak hrát"</string>
+    <string name="read_how">"Přečtěte si Jak"</string>
+    <string name="watch_how">"Podívejte se, jak"</string>
+    <string name="licenses">"Licence"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"Show"</string>
+    <string name="shown">"Zobrazovat"</string>
+    <string name="shown_again">"Zobrazovat Again"</string>
+    <string name="hide">"Schovat"</string>
+    <string name="Hidden">"Skrytý"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"Dobře"</string>
+    <string name="cancel">"Zrušit"</string>
+    <string name="yes">"Ano,"</string>
+    <string name="no">"Žádný"</string>
+    <string name="maybe">"Možná"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Žádný"</string>
+    <string name="all">"Všichni"</string>
+    <string name="last">"Jako poslední"</string>
+    <string name="every">"Každý"</string>
+    <string name="other">"Jiný"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Ikona"</string>
+    <string name="choose_icon">"Vybrat ikonu"</string>
+    <string name="logo">"Logo"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Snooze"</string>
+    <string name="snoozed">"Dřímal"</string>
+    <string name="auto_snooze">"Auto Snooze"</string>
+    <string name="manual_snooze">"Manuální Snooze"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"Zpráva"</string>
+    <string name="messages">"Zprávy"</string>
+    <string name="num_messages">"Počet zpráv"</string>
+    <string name="edit_messages">"Upravit Zprávy"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Přidat"</string>
+    <string name="added">"Přidáno"</string>
+    <string name="add_item">"Přidat položku"</string>
+    <string name="remove">"Odstranit"</string>
+    <string name="removed">"Odstraněno"</string>
+    <string name="remove_item">"Odstranit položku"</string>
+    <string name="delete">"Smazat"</string>
+    <string name="duplicate">"Duplicitní"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Děkuji"</string>
+    <string name="youre_welcome">"Nemáš zač"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Volný"</string>
+    <string name="pull">"Vytáhnout"</string>
+    <string name="wild">"Wild"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Ty"</string>
+    <string name="me">"Mě"</string>
+    <string name="us">"Námi"</string>
+    <string name="them">"Jim"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Úspěchy"</string>
+    <string name="leaderboards">"Žebříčky"</string>
+    <string name="high_scores">"Vysoké skóre"</string>
+    <string name="my_circles">"Mých kruhů"</string>
+    <string name="invitations">"Pozvánky"</string>
+    <string name="options">"Možnosti"</string>
+    <string name="game_options">"Možnosti hry"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"Host"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Rematch"</string>
+    <string name="try_again">"Zkuste znovu"</string>
+    <string name="touch_continue">"Dotykem Pokračovat"</string>
+    <string name="touch_resume">"Dotykem Pokračovat"</string>
+    <string name="pause">"Pauza"</string>
+    <string name="pause_game">"Pause Game"</string>
+    <string name="resume">"Resumé"</string>
+    <string name="resume_game">"Resume Game"</string>
+    <string name="new_">"Nový"</string>
+    <string name="new_game">"Nová hra"</string>
+    <string name="select_save">"Vyberte Uložit"</string>
+    <string name="save">"Save"</string>
+    <string name="save_game">"Uložit hru"</string>
+    <string name="load_game">"Nahrát hru"</string>
+    <string name="load">"Load"</string>
+    <string name="game_over">"konec hry"</string>
+    <string name="start">"Začátek"</string>
+    <string name="start_game">"Začít hru"</string>
+    <string name="end">"Konec"</string>
+    <string name="end_game">"End Game"</string>
+    <string name="stop">"Stop"</string>
+    <string name="stop_game">"Zastavit hru"</string>
+    <string name="start_new_game_title">"Začít novou hru"</string>
+    <string name="start_new_game_prompt">"Jste si jisti, že chcete začít novou hru?"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Aktuální skóre"</string>
+    <string name="top_score">"Top Score"</string>
+    <string name="score">"Skóre"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Odborný"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Tvůj tah"</string>
+    <string name="their_turn">"Jejich Turn"</string>
+    <string name="turn">"Otočit se"</string>
+    <string name="turns">"Otáčky"</string>
+    <string name="round">"Round"</string>
+    <string name="rounds">"Rounds"</string>
+    <string name="matches">"Zápasy"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Vyhrál jsi"</string>
+    <string name="you_won">"Vyhrál jsi"</string>
+    <string name="you_lost">"Prohrál jsi"</string>
+    <string name="you_lose">"Prohrál jsi"</string>
+    <string name="you_tied">"Ty Vázaný"</string>
+    <string name="winner">"Výherce"</string>
+    <string name="winners">"Vítězové"</string>
+    <string name="loser">"Poražený"</string>
+    <string name="Losers">"Poražení"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Koupit"</string>
+    <string name="purchase">"Nákup"</string>
+    <string name="diamond">"Diamond"</string>
+    <string name="diamonds">"Kule"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Podepiš"</string>
+    <string name="signed_in">"Podepsáno v"</string>
+    <string name="sign_out">"Odhlásit se"</string>
+    <string name="signed_out">"Odhlášen"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Sponzorovaný"</string>
+    <string name="ads">"Reklamy"</string>
+    <string name="remove_ads">"Odstranit reklamy"</string>
+    <string name="ads_removed">"Reklamy Odstraněno"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Počet hráčů"</string>
+    <string name="player">"Hráč"</string>
+    <string name="players">"Přehrávače"</string>
+    <string name="player_1">"Hráč 1"</string>
+    <string name="player_2">"Hráč 2"</string>
+    <string name="player_3">"Hráč 3"</string>
+    <string name="player_4">"Přehrávač 4"</string>
+    <string name="player_5">"Player 5"</string>
+    <string name="player_6">"Player 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Družstvo"</string>
+    <string name="teams">"Týmy"</string>
+    <string name="team_1">"Tým 1"</string>
+    <string name="team_2">"Team 2"</string>
+    <string name="team_3">"Team 3"</string>
+    <string name="team_4">"Team 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Změny Vyřazené"</string>
+    <string name="reminder_save">"Změny byly uloženy"</string>
+    <string name="reminder_delete">"Připomenutí Deleted"</string>
+    <string name="reminder_duplicate">"Připomenutí Duplicitní"</string>
+    <string name="no_changes">"Žádné změny"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Povolit pohlcující režim"</string>
+    <string name="settings_base_item_0_secondary">"Zrušte zaškrtnutí políčka pro zobrazení navigačních a stavové lišty"</string>
+    <string name="settings_base_item_1_primary">"Povolení zvukových efektů"</string>
+    <string name="settings_base_item_1_secondary">"Zrušte zaškrtnutí vypnout zvukové efekty"</string>
+    <string name="settings_base_item_2_primary">"Povolit Hudba"</string>
+    <string name="settings_base_item_2_secondary">"Zrušte zaškrtnutí vypnout hudbu"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"Chyba: Nelze nastavit v app účtování"</string>
+    <string name="failed_purchase">"CHYBA: Nepodařilo se nákup zboží"</string>
+    <string name="failed_load_google_page">"Nepodařilo se načíst stránku"</string>
+    <string name="requires_google_play">"Tato akce vyžaduje Google Play Games"</string>
+    <string name="compare_profiles">"Porovnat Hrát hry profily"</string>
+    <string name="view_profile">"Zobrazit Play Games profil"</string>
+    <string name="gamehelper_license_failed">"Kontrola licence selhala."</string>
+    <string name="gamehelper_unknown_error">"Neznámá chyba."</string>
+    <string name="network_failure">"Selhání síťového připojení"</string>
+    <string name="gamehelper_sign_in_failed">"Nepodařilo se přihlásit. Zkontrolujte prosím připojení k síti a zkuste to znovu."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Nemáte zatím žádné připomínky."</string>
+    <string name="delete_reminder_prompt_title">"Vymazat připomenutí"</string>
+    <string name="delete_reminder_prompt_content">"Jste si jisti, že chcete smazat toto připomenutí?"</string>
+    <string name="cancel_reminder_prompt_title">"Zrušit změny"</string>
+    <string name="cancel_reminder_prompt_content">"Jste si jisti, že chcete změny zrušit?"</string>
+    <string name="duplicate_reminder_prompt_title">"Duplicate Připomínka"</string>
+    <string name="duplicate_reminder_prompt_content">"Jste si jisti, že chcete duplikovat toto připomenutí?"</string>
+    <string name="notification_theme_title">"Prosím, vyberte styl oznámení, který odpovídá vašemu telefonu"</string>
+    <string name="alerts_per_day">"Upomínky za den"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Oznámení se otevře shrnutí"</string>
+    <string name="randremind_settings_0_secondary">"Zrušte zaškrtnutí políčka, aby oznámení mlčky potvrdit"</string>
+    <string name="randremind_settings_1_primary">"Použít vlastní oznámení"</string>
+    <string name="randremind_settings_1_secondary">"Zrušte zaškrtnutí zakázat vlastní oznámení a vrátit se k standardní systém"</string>
+    <string name="randremind_settings_2_primary">"Použít probíhající oznámení"</string>
+    <string name="randremind_settings_2_secondary">"Zrušte zaškrtnutí, aby oznámení za dismissible přejetím to pryč. Probíhající oznámení nejsou podporovány Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Použití oznámení tématem světlém pozadí a tmavé textu"</string>
+    <string name="randremind_settings_3_secondary">"Zrušte zaškrtnutí políčka použít tmavé oznámení téma tmavém pozadí a světlý text"</string>
+    <string name="randremind_settings_4_primary">"První den v týdnu"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Skrýt bannerové reklamy"</string>
+    <string name="google_play_settings_0_secondary">"Zrušte zaškrtnutí skrýt bannerové reklamy, ale místo toho zobrazovat veškeré reklamy stránek"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Edit"</string>
+    <string name="in_order">"V pořádku"</string>
+    <string name="ordering">"Řazení"</string>
+    <string name="preview">"Náhled"</string>
+    <string name="share">"Sdílet"</string>
+    <string name="share_game">"Share Game"</string>
+    <string name="download">"Ke stažení"</string>
+    <string name="view">"Pohled"</string>
+    <string name="automatic">"Automatická"</string>
+    <string name="manual">"Manuální"</string>
+    <string name="local">"Lokální"</string>
+    <string name="online">"Online"</string>
+    <string name="offline">"Offline"</string>
+    <string name="header">"Záhlaví"</string>
+    <string name="footer">"Zápatí"</string>
+    <string name="custom">"Vlastní"</string>
+    <string name="title">"Nadpis"</string>
+    <string name="notification">"Oznámení"</string>
+    <string name="select_notification">"Select Notification"</string>
+    <string name="color">"Barva"</string>
+    <string name="tone">"Tone"</string>
+    <string name="sound">"Znít"</string>
+    <string name="random">"Náhodný"</string>
+    <string name="specific">"Specifické"</string>s
+    <string name="repeat">"Opakování"</string>
+    <string name="alarm">"Alarm"</string>
+    <string name="vibrate">"Vibrovat"</string>
+    <string name="general">"Obecné"</string>
+    <string name="range">"Rozsah"</string>
+    <string name="priority">"Priorita"</string>
+    <string name="accent">"Přízvuk"</string>
+    <string name="accent_color">"Accent Color"</string>
+    <string name="choose_color">"Vybrat barvu"</string>
+    <string name="get">"Dostat se"</string>
+    <string name="type">"Druh"</string>
+    <string name="missed">"Zmeškaný"</string>
+
+</resources>

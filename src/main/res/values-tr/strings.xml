@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"Gün"</string>
+    <!-- -->
+    <string name="day_plural">"Gün"</string>
+    <!-- -->
+    <string name="hour_singular">"Saat"</string>
+    <!-- -->
+    <string name="hour_plural">"Saat"</string>
+    <!-- -->
+    <string name="minute_singular">"Dakika"</string>
+    <!-- -->
+    <string name="minute_plural">"Dakika"</string>
+    <!-- -->
+    <string name="second_singular">"İkinci"</string>
+    <!-- -->
+    <string name="second_plural">"Saniye"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"Bir"</string>
+    <!-- -->
+    <string name="two">"Ikisi"</string>
+    <!-- -->
+    <string name="three">"Üç"</string>
+    <!-- -->
+    <string name="four">"Dört"</string>
+    <!-- -->
+    <string name="five">"Beş"</string>
+    <!-- -->
+    <string name="six">"Altı"</string>
+    <!-- -->
+    <string name="seven">"Yedi"</string>
+    <!-- -->
+    <string name="eight">"Sekiz"</string>
+    v
+    <string name="nine">"Dokuz"</string>
+    <!-- -->
+    <string name="ten">"On"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"Ilk olarak"</string>
+    <!-- -->
+    <string name="second">"İkinci"</string>
+    <!-- -->
+    <string name="third">"Üçüncü"</string>
+    <!-- -->
+    <string name="fourth">"Dördüncü"</string>
+    <!-- -->
+    <string name="fifth">"Beşinci"</string>
+    <!-- -->
+    <string name="sixth">"Altıncı"</string>
+    <!-- -->
+    <string name="seventh">"Yedinci"</string>
+    <!-- -->
+    <string name="eighth">"Sekizinci"</string>
+    <!-- -->
+    <string name="ninth">"Dokuzuncu"</string>
+    <!-- -->
+    <string name="tenth">"Onuncu"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"Haftanın günleri"</string>
+    <!-- -->
+    <string name="day_sunday">"Pazar"</string>
+    <!-- -->
+    <string name="day_monday">"Pazartesi"</string>
+    <!-- -->
+    <string name="day_tuesday">"Salı"</string>
+    <!-- -->
+    <string name="day_wednesday">"Çarşamba"</string>
+    <!-- -->
+    <string name="day_thursday">"Perşembe"</string>
+    <!-- -->
+    <string name="day_friday">"Cuma"</string>
+    <!-- -->
+    <string name="day_saturday">"Cumartesi"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"Başlama zamanı"</string>
+    <string name="end_time">"Bitiş zamanı"</string>
+    <string name="timing_type">"Zamanlama Tipi"</string>
+    <string name="edit_times">"Düzenleme Times"</string>
+    <string name="time">"Zaman"</string>
+    <string name="times">"Kez"</string>
+    <string name="timing">"Zamanlama"</string>
+    <string name="today">"Bugün mü"</string>
+    <string name="tomorrow">"Yarın"</string>
+    <string name="yesterday">"Dün"</string>
+    <string name="daily">"Günlük"</string>
+    <string name="weekly">"Haftalık"</string>
+    <string name="week">"Hafta"</string>
+    <string name="weeks">"Hafta"</string>
+    <string name="all_time">"Her zaman"</string>
+    <string name="next_week">"Gelecek hafta"</string>
+    <string name="last_week">"Geçen hafta"</string>
+    <string name="once_month">"Ayda bir"</string>
+    <string name="twice_month">"Ayda iki kere"</string>
+    <string name="every_week">"Her hafta"</string>
+    <string name="every_other_week">"Her hafta"</string>
+    <string name="lifetime">"Ömür"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"Desen 1"</string>
+    <string name="pattern_2">"Desen 2"</string>
+    <string name="pattern_3">"Desen 3"</string>
+    <string name="pattern_4">"Desen 4"</string>
+    <string name="pattern_5">"Desen 5"</string>
+    <string name="pattern_6">"Desen 6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"İthalat"</string>
+    <string name="export">"Ihracat"</string>
+    <string name="import_log">"İthalat Günlüğü"</string>
+    <string name="export_log">"İhracat Günlüğü"</string>
+    <string name="import_reminder">"İthalat Hatırlatma"</string>
+    <string name="export_reminder">"İhracat Hatırlatma"</string>
+    <string name="import_all">"İthalat Tüm"</string>
+    <string name="export_all">"İhracat Tüm"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"Kamu"</string>
+    <string name="private_">"Özel"</string>
+    <string name="default_">"Standart"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"Düşük"</string>
+    <string name="mid">"Orta"</string>
+    <string name="high">"Üst"</string>
+    <string name="min">"Min"</string>
+    <string name="max">"Maksimum"</string>
+    <string name="minimum">"Minimum"</string>
+    <string name="medium">"Orta"</string>
+    <string name="maximum">"En yüksek"</string>
+    <string name="small">"Küçük"</string>
+    <string name="large">"Büyük"</string>
+    <string name="short_">"Kısa"</string>
+    <string name="long_">"Uzun"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"Zorluk"</string>
+    <string name="select_difficulty">"Seçin Zorluk"</string>
+    <string name="easy">"Basit"</string>
+    <string name="normal">"Normal"</string>
+    <string name="hard">"Sert"</string>
+    <string name="quick">"Çabuk"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"Enable"</string>
+    <string name="enabled">"Etkin"</string>
+    <string name="disable">"Devre Dışı Bırak"</string>
+    <string name="disabled">"Engelli"</string>
+    <string name="lock">"Kilitlemek"</string>
+    <string name="locked">"Kilitli"</string>
+    <string name="unlock">"Kilidini açmak"</string>
+    <string name="unlocked">"Kilitsiz"</string>
+    <string name="open">"Açık"</string>
+    <string name="opened">"Açılmış"</string>
+    <string name="close">"Kapat"</string>
+    <string name="closed">"Kapalı"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"Hata"</string>
+    <string name="fail">"Fail"</string>
+    <string name="failed">"Başarısız"</string>
+    <string name="success">"Başarı"</string>
+    <string name="successful">"Başarılı"</string>
+    <string name="valid">"Geçerli"</string>
+    <string name="invalid">"Hükümsüz"</string>
+    <string name="failed_open_link">"Bağlantıyı açılamadı"</string>
+    <string name="app_open_fail">"Uygulamayı açılamadı"</string>
+    <string name="no_items_found">"Bulunamadı öğe"</string>
+    <string name="data_load_fail">"Listeyi yüklenemedi"</string>
+    <string name="invalid_time">"Geçersiz zaman"</string>
+    <string name="complete">"Komple"</string>
+    <string name="completed">"Tamamlanan"</string>
+    <string name="incomplete">"Tamamlanmamış"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"Yardım Edin"</string>
+    <string name="about">"Yaklaşık"</string>
+    <string name="settings">"Ayarlar"</string>
+    <string name="help_and_feedback">"Yardım ve Geribildirim"</string>
+    <string name="like_this_app">"Bu app beğendiniz mi?"</string>
+    <string name="rate_now">"Şimdi Oranı"</string>
+    <string name="more_apps">"Daha fazla uygulama"</string>
+    <string name="how_to_use">"Nasıl kullanılır"</string>
+    <string name="how_to_play">"Nasıl oynanır"</string>
+    <string name="read_how">"Nasıl Oku"</string>
+    <string name="watch_how">"Nasıl İzle"</string>
+    <string name="licenses">"Lisanslar"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"Göster"</string>
+    <string name="shown">"Gösterildiği"</string>
+    <string name="shown_again">"Yine Gösterildi"</string>
+    <string name="hide">"Gizlemek"</string>
+    <string name="Hidden">"Gizlenmiş"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"tamam"</string>
+    <string name="cancel">"Iptal etmek"</string>
+    <string name="yes">"Evet"</string>
+    <string name="no">"Hayır"</string>
+    <string name="maybe">"Belki"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"Hiçbiri"</string>
+    <string name="all">"Hepsi"</string>
+    <string name="last">"Geçen"</string>
+    <string name="every">"Her türlü"</string>
+    <string name="other">"Öteki"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"Ikon"</string>
+    <string name="choose_icon">"Simge Seç"</string>
+    <string name="logo">"Logo"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"Erteleme"</string>
+    <string name="snoozed">"Ertelendi"</string>
+    <string name="auto_snooze">"Otomatik Erteleme"</string>
+    <string name="manual_snooze">"Manuel Erteleme"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"İleti"</string>
+    <string name="messages">"Mesajlar"</string>
+    <string name="num_messages">"Mesajlar sayısı"</string>
+    <string name="edit_messages">"Düzenleme Mesajları"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"Eklemek"</string>
+    <string name="added">"Eklenen"</string>
+    <string name="add_item">"Öğe eklemek"</string>
+    <string name="remove">"Kaldır"</string>
+    <string name="removed">"Kaldırıldı"</string>
+    <string name="remove_item">"Öğeyi Kaldır"</string>
+    <string name="delete">"Silmek"</string>
+    <string name="duplicate">"Çoğaltın"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"Teşekkür ederim"</string>
+    <string name="youre_welcome">"Birşey değil"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"Ücretsiz"</string>
+    <string name="pull">"Çek"</string>
+    <string name="wild">"Yabani"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"Sen"</string>
+    <string name="me">"Beni"</string>
+    <string name="us">"Bize"</string>
+    <string name="them">"Onları"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"Başarılar"</string>
+    <string name="leaderboards">"Liderler"</string>
+    <string name="high_scores">"Yüksek puanlar"</string>
+    <string name="my_circles">"Benim Çemberleri"</string>
+    <string name="invitations">"Davetiyeler"</string>
+    <string name="options">"Seçenekler"</string>
+    <string name="game_options">"Oyun Seçenekleri"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"Misafir"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"Rövanş"</string>
+    <string name="try_again">"Tekrar dene"</string>
+    <string name="touch_continue">"Devam için dokunun"</string>
+    <string name="touch_resume">"Devam için dokunun"</string>
+    <string name="pause">"Pause"</string>
+    <string name="pause_game">"Pause Oyunu"</string>
+    <string name="resume">"Devam"</string>
+    <string name="resume_game">"Oyuna devam et"</string>
+    <string name="new_">"Yeni"</string>
+    <string name="new_game">"Yeni oyun"</string>
+    <string name="select_save">"Kaydet'i seçin"</string>
+    <string name="save">"Kaydet"</string>
+    <string name="save_game">"Oyunu kaydet"</string>
+    <string name="load_game">"Oyunu yükle"</string>
+    <string name="load">"Yük"</string>
+    <string name="game_over">"Oyun bitti"</string>
+    <string name="start">"Başlangıç"</string>
+    <string name="start_game">"Oyuna başlamak"</string>
+    <string name="end">"Son"</string>
+    <string name="end_game">"Oyun sonu"</string>
+    <string name="stop">"Dur"</string>
+    <string name="stop_game">"Dur Oyunu"</string>
+    <string name="start_new_game_title">"Yeni Oyun Başlat"</string>
+    <string name="start_new_game_prompt">"Eğer yeni bir oyun başlatmak istediğinizden emin misiniz?"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"Güncel Skor"</string>
+    <string name="top_score">"En Skor"</string>
+    <string name="score">"Gol"</string>
+    <string name="combo">"Kombo"</string>
+    <string name="special">"Özel"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"Senin sıran"</string>
+    <string name="their_turn">"Onların açın"</string>
+    <string name="turn">"Dönüş"</string>
+    <string name="turns">"Dönüşler"</string>
+    <string name="round">"Yuvarlak"</string>
+    <string name="rounds">"Yuvarlar"</string>
+    <string name="matches">"Maçlar"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"Sen kazandın"</string>
+    <string name="you_won">"Kazandın"</string>
+    <string name="you_lost">"Kaybettin"</string>
+    <string name="you_lose">"Kaybettin"</string>
+    <string name="you_tied">"Sen Tied"</string>
+    <string name="winner">"Galip"</string>
+    <string name="winners">"Kazananlar"</string>
+    <string name="loser">"Ezik"</string>
+    <string name="Losers">"Kaybedenler"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"Satın"</string>
+    <string name="purchase">"Satınalma"</string>
+    <string name="diamond">"Pırlanta"</string>
+    <string name="diamonds">"Elmaslar"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"Giriş yap"</string>
+    <string name="signed_in">"Giriş yapıldı"</string>
+    <string name="sign_out">"Oturumu Kapat"</string>
+    <string name="signed_out">"Out İmzalı"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"Sponsorlu"</string>
+    <string name="ads">"Reklamlar"</string>
+    <string name="remove_ads">"Reklamları kaldır"</string>
+    <string name="ads_removed">"Reklamlar kaldırıldı"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"Oyuncu Sayısı"</string>
+    <string name="player">"Player"</string>
+    <string name="players">"Oyuncular"</string>
+    <string name="player_1">"Oyuncu 1"</string>
+    <string name="player_2">"Oyuncu 2"</string>
+    <string name="player_3">"Oyuncu 3"</string>
+    <string name="player_4">"Oyuncu 4"</string>
+    <string name="player_5">"Oyuncu 5"</string>
+    <string name="player_6">"Oyuncu 6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"Ekip"</string>
+    <string name="teams">"Takımlar"</string>
+    <string name="team_1">"Takım 1"</string>
+    <string name="team_2">"Takım 2"</string>
+    <string name="team_3">"Takım 3"</string>
+    <string name="team_4">"Takım 4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"Değişiklikler Atılan"</string>
+    <string name="reminder_save">"Değişiklikler Kaydedildi"</string>
+    <string name="reminder_delete">"Hatırlatma Silindi"</string>
+    <string name="reminder_duplicate">"Hatırlatma Yinelenen"</string>
+    <string name="no_changes">"Değişiklik yok"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"Sürükleyici Modu Etkinleştir"</string>
+    <string name="settings_base_item_0_secondary">"Navigasyon ve durum çubukları göstermek için işareti kaldırın"</string>
+    <string name="settings_base_item_1_primary">"Ses Efektleri etkinleştir"</string>
+    <string name="settings_base_item_1_secondary">"Ses efektleri devre dışı bırakmak için işaretini kaldırın"</string>
+    <string name="settings_base_item_2_primary">"Müzik etkinleştirin"</string>
+    <string name="settings_base_item_2_secondary">"Müzik devre dışı bırakmak için işaretini kaldırın"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"HATA: app fatura kurulum yapılamıyor"</string>
+    <string name="failed_purchase">"HATA: Öğeyi satın almak için başarısız oldu"</string>
+    <string name="failed_load_google_page">"Sayfa yüklenemedi"</string>
+    <string name="requires_google_play">"Bu eylem Google Play Games gerektirir"</string>
+    <string name="compare_profiles">"Oyun Oyna Profilleri karşılaştır"</string>
+    <string name="view_profile">"Profil Oyun Oyna Profili"</string>
+    <string name="gamehelper_license_failed">"Lisans denetimi başarısız oldu."</string>
+    <string name="gamehelper_unknown_error">"Bilinmeyen hata."</string>
+    <string name="network_failure">"Ağ Bağlantısı Hatası"</string>
+    <string name="gamehelper_sign_in_failed">"Oturum açılamadı. Lütfen ağ bağlantınızı kontrol edin ve tekrar deneyin."</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"Henüz hiçbir hatırlatmalar var."</string>
+    <string name="delete_reminder_prompt_title">"Hatırlatma sil"</string>
+    <string name="delete_reminder_prompt_content">"Bu hatırlatma silmek istediğinizden emin misiniz?"</string>
+    <string name="cancel_reminder_prompt_title">"Değişiklikleri gözardı et"</string>
+    <string name="cancel_reminder_prompt_content">"Yaptığınız değişiklikleri iptal etmek istediğinizden emin misiniz?"</string>
+    <string name="duplicate_reminder_prompt_title">"Çift Hatırlatma"</string>
+    <string name="duplicate_reminder_prompt_content">"Bu hatırlatma çoğaltmak istediğinizden emin misiniz?"</string>
+    <string name="notification_theme_title">"Telefonunuzu uyan bildirim stilini seçiniz"</string>
+    <string name="alerts_per_day">"Günlük Hatırlatmalar"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"Bildirim özeti açar"</string>
+    <string name="randremind_settings_0_secondary">"Sessizce kabul bildirimi yapmak için işaretini kaldırın"</string>
+    <string name="randremind_settings_1_primary">"Özel bildirim kullanın"</string>
+    <string name="randremind_settings_1_secondary">"Özel bildirim devre dışı bırakmak ve standart sisteme geri dönmek için işareti kaldırın"</string>
+    <string name="randremind_settings_2_primary">"Devam eden bildirim kullanın"</string>
+    <string name="randremind_settings_2_secondary">"Işaretini kaldırın bildirim o uzakta kaydırarak bırakabileceğinizi olmasını sağlamak için. Devam eden bildirimler Android Wear desteklenmez"</string>
+    <string name="randremind_settings_3_primary">"Hafif bir arka plan ve koyu metin bildirimi temayı kullanın"</string>
+    <string name="randremind_settings_3_secondary">"Koyu arka plan ve açık metin koyu bildirim tema kullanmak için işaretini kaldırın"</string>
+    <string name="randremind_settings_4_primary">"Haftanın ilk günü"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"Banner Reklamları Gizle"</string>
+    <string name="google_play_settings_0_secondary">"Banner reklamları gizlemek yerine tam sayfa reklamları göstermek için işareti kaldırın"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"Düzenleme"</string>
+    <string name="in_order">"Sırayla"</string>
+    <string name="ordering">"Sipariş"</string>
+    <string name="preview">"Önizleme"</string>
+    <string name="share">"Paylaş"</string>
+    <string name="share_game">"Hisse Oyunu"</string>
+    <string name="download">"İndir"</string>
+    <string name="view">"Görünüm"</string>
+    <string name="automatic">"Otomatik"</string>
+    <string name="manual">"Manuel"</string>
+    <string name="local">"Yerel"</string>
+    <string name="online">"Çevrimiçi"</string>
+    <string name="offline">"Çevrimdışı"</string>
+    <string name="header">"Üstbilgi"</string>
+    <string name="footer">"Altbilgi"</string>
+    <string name="custom">"Görenek"</string>
+    <string name="title">"Başlık"</string>
+    <string name="notification">"Bildirim"</string>
+    <string name="select_notification">"Seçin Bildirim"</string>
+    <string name="color">"Renk"</string>
+    <string name="tone">"Ton"</string>
+    <string name="sound">"Ses"</string>
+    <string name="random">"Rasgele"</string>
+    <string name="specific">"Özgül"</string>s
+    <string name="repeat">"Tekrarlama"</string>
+    <string name="alarm">"Alarm"</string>
+    <string name="vibrate">"Titreşim"</string>
+    <string name="general">"General"</string>
+    <string name="range">"Menzil"</string>
+    <string name="priority">"Öncelik"</string>
+    <string name="accent">"Accent"</string>
+    <string name="accent_color">"Accent Renk"</string>
+    <string name="choose_color">"Renk seç"</string>
+    <string name="get">"Get"</string>
+    <string name="type">"Tip"</string>
+    <string name="missed">"Cevapsız"</string>
+
+</resources>

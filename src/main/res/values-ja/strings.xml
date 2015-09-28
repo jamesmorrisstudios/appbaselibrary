@@ -1,0 +1,549 @@
+<!--
+  ~ Copyright (c) 2015.   James Morris Studios
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~          http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  --><resources>
+
+    <!--
+        Time
+     -->
+    <!-- -->
+    <string name="day_singular">"デイ"</string>
+    <!-- -->
+    <string name="day_plural">"日"</string>
+    <!-- -->
+    <string name="hour_singular">"1時間"</string>
+    <!-- -->
+    <string name="hour_plural">"営業時間"</string>
+    <!-- -->
+    <string name="minute_singular">"分"</string>
+    <!-- -->
+    <string name="minute_plural">"ミニッツ"</string>
+    <!-- -->
+    <string name="second_singular">"2番目"</string>
+    <!-- -->
+    <string name="second_plural">"秒"</string>
+
+    <!--
+        Numbers
+    -->
+    <!-- -->
+    <string name="one">"1"</string>
+    <!-- -->
+    <string name="two">"2"</string>
+    <!-- -->
+    <string name="three">"3"</string>
+    <!-- -->
+    <string name="four">"四"</string>
+    <!-- -->
+    <string name="five">"五"</string>
+    <!-- -->
+    <string name="six">"シックス"</string>
+    <!-- -->
+    <string name="seven">"セブン"</string>
+    <!-- -->
+    <string name="eight">"8"</string>
+    v
+    <string name="nine">"9"</string>
+    <!-- -->
+    <string name="ten">"十"</string>
+
+    <!--
+        Number Designations
+    -->
+    <!-- -->
+    <string name="first">"最初"</string>
+    <!-- -->
+    <string name="second">"2番目"</string>
+    <!-- -->
+    <string name="third">"三番"</string>
+    <!-- -->
+    <string name="fourth">"第4"</string>
+    <!-- -->
+    <string name="fifth">"第5"</string>
+    <!-- -->
+    <string name="sixth">"第6"</string>
+    <!-- -->
+    <string name="seventh">"第7"</string>
+    <!-- -->
+    <string name="eighth">"第8"</string>
+    <!-- -->
+    <string name="ninth">"第9"</string>
+    <!-- -->
+    <string name="tenth">"10分の1"</string>
+
+    <!--
+        Days of the week
+    -->
+    <!-- -->
+    <string name="days_of_week">"曜日"</string>
+    <!-- -->
+    <string name="day_sunday">"日曜日"</string>
+    <!-- -->
+    <string name="day_monday">"月曜日"</string>
+    <!-- -->
+    <string name="day_tuesday">"火曜日"</string>
+    <!-- -->
+    <string name="day_wednesday">"水曜日"</string>
+    <!-- -->
+    <string name="day_thursday">"木曜日"</string>
+    <!-- -->
+    <string name="day_friday">"金曜日"</string>
+    <!-- -->
+    <string name="day_saturday">"土曜日"</string>
+
+    <!--
+        Timing
+    -->
+    <string name="start_time">"始まる時間"</string>
+    <string name="end_time">"終了時間"</string>
+    <string name="timing_type">"タイミングタイプ"</string>
+    <string name="edit_times">"編集タイムズ"</string>
+    <string name="time">"タイム"</string>
+    <string name="times">"タイムズ"</string>
+    <string name="timing">"タイミング"</string>
+    <string name="today">"今日"</string>
+    <string name="tomorrow">"トゥモロー"</string>
+    <string name="yesterday">"昨日"</string>
+    <string name="daily">"デイリー"</string>
+    <string name="weekly">"ウィークリー"</string>
+    <string name="week">"1週間"</string>
+    <string name="weeks">"ウィークス"</string>
+    <string name="all_time">"すべての時間"</string>
+    <string name="next_week">"来週"</string>
+    <string name="last_week">"先週"</string>
+    <string name="once_month">"月に1回"</string>
+    <string name="twice_month">"月に二回"</string>
+    <string name="every_week">"各週"</string>
+    <string name="every_other_week">"1週間おきに"</string>
+    <string name="lifetime">"一生"</string>
+
+    <!--
+        Patterns
+    -->
+    <string name="pattern_1">"パターン1"</string>
+    <string name="pattern_2">"パターン2"</string>
+    <string name="pattern_3">"パターン3"</string>
+    <string name="pattern_4">"パターン4"</string>
+    <string name="pattern_5">"パターン5"</string>
+    <string name="pattern_6">"パターン6"</string>
+
+    <!--
+        Import/Export
+    -->
+    <string name="import_">"インポート"</string>
+    <string name="export">"エクスポート"</string>
+    <string name="import_log">"インポートログ"</string>
+    <string name="export_log">"エクスポートログ"</string>
+    <string name="import_reminder">"インポートリマインダー"</string>
+    <string name="export_reminder">"エクスポートリマインダー"</string>
+    <string name="import_all">"すべてインポート"</string>
+    <string name="export_all">"すべてエクスポート"</string>
+
+    <!--
+        Protection level
+    -->
+    <string name="public_">"公開"</string>
+    <string name="private_">"プライベート"</string>
+    <string name="default_">"デフォルト"</string>
+
+    <!--
+       Min/Max/size//length
+    -->
+    <string name="low">"ロー"</string>
+    <string name="mid">"中間の"</string>
+    <string name="high">"ハイ"</string>
+    <string name="min">"ミン"</string>
+    <string name="max">"マックス"</string>
+    <string name="minimum">"最小"</string>
+    <string name="medium">"媒質"</string>
+    <string name="maximum">"最大限の"</string>
+    <string name="small">"小さい"</string>
+    <string name="large">"ラージ"</string>
+    <string name="short_">"ショート"</string>
+    <string name="long_">"ロング"</string>
+
+    <!--
+       Difficulty/Game Options
+    -->
+    <string name="difficulty">"難易度"</string>
+    <string name="select_difficulty">"難易度を選択します"</string>
+    <string name="easy">"イージー"</string>
+    <string name="normal">"ノーマル"</string>
+    <string name="hard">"硬いです"</string>
+    <string name="quick">"クイック"</string>
+
+    <!--
+       Enable/Disable/Lock
+    -->
+    <string name="enable">"有効"</string>
+    <string name="enabled">"有効"</string>
+    <string name="disable">"無効にします"</string>
+    <string name="disabled">"無効"</string>
+    <string name="lock">"ロック"</string>
+    <string name="locked">"ロック"</string>
+    <string name="unlock">"ロック解除"</string>
+    <string name="unlocked">"ロック解除"</string>
+    <string name="open">"オープン"</string>
+    <string name="opened">"オープン"</string>
+    <string name="close">"クローズ"</string>
+    <string name="closed">"クローズ"</string>
+
+    <!--
+       Success/Fail/Error/Valid
+    -->
+    <string name="error">"エラー"</string>
+    <string name="fail">"失敗"</string>
+    <string name="failed">"失敗しました。"</string>
+    <string name="success">"サクセス"</string>
+    <string name="successful">"成功"</string>
+    <string name="valid">"正当な"</string>
+    <string name="invalid">"無効"</string>
+    <string name="failed_open_link">"リンクを開くことができませんでした"</string>
+    <string name="app_open_fail">"アプリを開くことができませんでした"</string>
+    <string name="no_items_found">"見つかったアイテムはありません"</string>
+    <string name="data_load_fail">"リストの読み込みに失敗しました"</string>
+    <string name="invalid_time">"無効な時間"</string>
+    <string name="complete">"コンプリート"</string>
+    <string name="completed">"完了"</string>
+    <string name="incomplete">"不完全な"</string>
+
+    <!--
+        Common Menu Pages
+    -->
+    <string name="help">"助けて"</string>
+    <string name="about">"について"</string>
+    <string name="settings">"[設定]"</string>
+    <string name="help_and_feedback">"ヘルプ＆フィードバック"</string>
+    <string name="like_this_app">"このアプリ、気に入りましたか？"</string>
+    <string name="rate_now">"今それを評価します"</string>
+    <string name="more_apps">"その他のアプリ"</string>
+    <string name="how_to_use">"使用する方法"</string>
+    <string name="how_to_play">"遊び方"</string>
+    <string name="read_how">"どのように読みます"</string>
+    <string name="watch_how">"どのように見ます"</string>
+    <string name="licenses">"ライセンス"</string>
+
+    <!--
+        Visibility
+    -->
+    <string name="show">"ショー"</string>
+    <string name="shown">"示します"</string>
+    <string name="shown_again">"再表示"</string>
+    <string name="hide">"隠します"</string>
+    <string name="Hidden">"ヒドゥン"</string>
+
+    <!--
+        Prompts
+    -->
+    <string name="okay">"[OK]"</string>
+    <string name="cancel">"キャンセル"</string>
+    <string name="yes">"はい"</string>
+    <string name="no">"ノー"</string>
+    <string name="maybe">"多分"</string>
+
+    <!--
+        All or None
+    -->
+    <string name="none">"なし"</string>
+    <string name="all">"オール"</string>
+    <string name="last">"ラスト"</string>
+    <string name="every">"すべて"</string>
+    <string name="other">"その他"</string>
+
+
+    <!--
+        Icons and Logos
+    -->
+    <string name="icon">"アイコン"</string>
+    <string name="choose_icon">"アイコンを選択してください"</string>
+    <string name="logo">"ロゴ"</string>
+
+    <!--
+        Snooze
+    -->
+    <string name="snooze">"スヌーズ"</string>
+    <string name="snoozed">"スヌーズ"</string>
+    <string name="auto_snooze">"自動スヌーズ"</string>
+    <string name="manual_snooze">"マニュアルスヌーズ"</string>
+
+    <!--
+        Messages
+    -->
+    <string name="message">"メッセージ"</string>
+    <string name="messages">"メッセージ"</string>
+    <string name="num_messages">"メッセージ数"</string>
+    <string name="edit_messages">"メッセージを編集"</string>
+
+    <!--
+        Add/Remove/Delete/Duplicate/etc
+    -->
+    <string name="add">"追加"</string>
+    <string name="added">"追加"</string>
+    <string name="add_item">"アイテムの追加"</string>
+    <string name="remove">"削除"</string>
+    <string name="removed">"削除されました"</string>
+    <string name="remove_item">"商品の削除"</string>
+    <string name="delete">"削除"</string>
+    <string name="duplicate">"重複"</string>
+
+    <!--
+        polite statements
+    -->
+    <string name="thank_you">"ありがとう"</string>
+    <string name="youre_welcome">"どういたしまして"</string>
+
+    <!--
+        Card Types
+    -->
+    <string name="free">"フリー"</string>
+    <string name="pull">"引く"</string>
+    <string name="wild">"ワイルド"</string>
+
+    <!--
+        Person Naming
+    -->
+    <string name="you">"君が"</string>
+    <string name="me">"私に"</string>
+    <string name="us">"お問い合わせ"</string>
+    <string name="them">"それら"</string>
+
+    <!--
+        Game Menu
+    -->
+    <string name="achievements">"実績"</string>
+    <string name="leaderboards">"リーダーボード"</string>
+    <string name="high_scores">"高得点"</string>
+    <string name="my_circles">"マイサークル"</string>
+    <string name="invitations">"招待状"</string>
+    <string name="options">"オプション"</string>
+    <string name="game_options">"ゲームのオプション"</string>
+    <string name="automatch">"Automatch"</string>
+    <string name="guest">"ゲスト"</string>
+
+    <!--
+        Game State
+        Pause/Resume/start/stop
+    -->
+    <string name="rematch">"再試合"</string>
+    <string name="try_again">"再試行する"</string>
+    <string name="touch_continue">"続行するためにタッチ"</string>
+    <string name="touch_resume">"再開にタッチ"</string>
+    <string name="pause">"一時停止"</string>
+    <string name="pause_game">"一時停止ゲーム"</string>
+    <string name="resume">"履歴書"</string>
+    <string name="resume_game">"再開ゲーム"</string>
+    <string name="new_">"新"</string>
+    <string name="new_game">"新しいゲーム"</string>
+    <string name="select_save">"[保存]を選択します"</string>
+    <string name="save">"セーブ"</string>
+    <string name="save_game">"保存ゲーム"</string>
+    <string name="load_game">"ロードゲーム"</string>
+    <string name="load">"ロード"</string>
+    <string name="game_over">"ゲームオーバー"</string>
+    <string name="start">"スタート"</string>
+    <string name="start_game">"スタートゲーム"</string>
+    <string name="end">"終わり"</string>
+    <string name="end_game">"終盤"</string>
+    <string name="stop">"停止"</string>
+    <string name="stop_game">"ストップゲーム"</string>
+    <string name="start_new_game_title">"新しいゲームを開始します"</string>
+    <string name="start_new_game_prompt">"あなたは新しいゲームを開始してもよろしいですか？"</string>
+
+    <!--
+        Scoring
+    -->
+    <string name="current_score">"現在のスコア"</string>
+    <string name="top_score">"トップスコア"</string>
+    <string name="score">"スコア"</string>
+    <string name="combo">"組み合わせ"</string>
+    <string name="special">"特別"</string>
+
+    <!--
+        Turn/Rounds
+    -->
+    <string name="your_turn">"あなたのターン"</string>
+    <string name="their_turn">"自分の順番"</string>
+    <string name="turn">"順番"</string>
+    <string name="turns">"ターン"</string>
+    <string name="round">"ラウンド"</string>
+    <string name="rounds">"ラウンド"</string>
+    <string name="matches">"マッチ"</string>
+
+    <!--
+        Win/Loss
+    -->
+    <string name="you_win">"あなたが勝ちます"</string>
+    <string name="you_won">"あなたウォン"</string>
+    <string name="you_lost">"あなたが負けた"</string>
+    <string name="you_lose">"あなたは負けます"</string>
+    <string name="you_tied">"あなたはタイド"</string>
+    <string name="winner">"ウィナー"</string>
+    <string name="winners">"受賞者"</string>
+    <string name="loser">"敗者"</string>
+    <string name="Losers">"負け組"</string>
+
+    <!--
+        Currency management
+    -->
+    <string name="buy">"購入"</string>
+    <string name="purchase">"購入"</string>
+    <string name="diamond">"ダイヤモンド"</string>
+    <string name="diamonds">"ダイヤモンド"</string>
+
+    <!--
+        Sign in and out
+    -->
+    <string name="sign_in">"ログイン"</string>
+    <string name="signed_in">"で署名されました"</string>
+    <string name="sign_out">"サインアウト"</string>
+    <string name="signed_out">"サインアウト"</string>
+
+    <!--
+        Ads
+    -->
+    <string name="sponsored">"スポンサー"</string>
+    <string name="ads">"広告"</string>
+    <string name="remove_ads">"広告を取り除きます"</string>
+    <string name="ads_removed">"削除された広告"</string>
+
+    <!--
+        Players
+    -->
+    <string name="number_players">"プレイヤー数"</string>
+    <string name="player">"プレーヤー"</string>
+    <string name="players">"プレーヤー"</string>
+    <string name="player_1">"プレイヤー1"</string>
+    <string name="player_2">"プレーヤー2"</string>
+    <string name="player_3">"プレーヤー3"</string>
+    <string name="player_4">"プレイヤー4"</string>
+    <string name="player_5">"プレーヤー5"</string>
+    <string name="player_6">"プレーヤー6"</string>
+
+    <!--
+        Team numbers
+    -->
+    <string name="team">"チーム"</string>
+    <string name="teams">"チーム"</string>
+    <string name="team_1">"チーム1"</string>
+    <string name="team_2">"チーム2"</string>
+    <string name="team_3">"チーム3"</string>
+    <string name="team_4">"チーム4"</string>
+
+    <!--
+        Toast Messages
+    -->
+    <string name="reminder_cancel">"変更は廃棄"</string>
+    <string name="reminder_save">"変更保存"</string>
+    <string name="reminder_delete">"リマインダー削除"</string>
+    <string name="reminder_duplicate">"リマインダー重複"</string>
+    <string name="no_changes">"変更なし"</string>
+
+	<!--
+	    Base App Settings
+	-->
+    <string name="settings_base_item_0_primary">"没入型モードを有効にします"</string>
+    <string name="settings_base_item_0_secondary">"ナビゲーションバーやステータスバーを表示のチェックを外し"</string>
+    <string name="settings_base_item_1_primary">"サウンドエフェクトを有効にします"</string>
+    <string name="settings_base_item_1_secondary">"効果音を無効にするのチェックを外します"</string>
+    <string name="settings_base_item_2_primary">"音楽を有効にします"</string>
+    <string name="settings_base_item_2_secondary">"音楽を無効にするのチェックを外します"</string>
+
+    <!--
+        Google Play specific
+    -->
+    <string name="unable_setup_iap">"ERROR：アプリ課金でセットアップすることができません"</string>
+    <string name="failed_purchase">"ERROR：失敗したアイテムを購入します"</string>
+    <string name="failed_load_google_page">"ページの読み込みに失敗しました"</string>
+    <string name="requires_google_play">"このアクションは、Google Playのゲームを必要とします"</string>
+    <string name="compare_profiles">"ゲームプロファイルを再生比較"</string>
+    <string name="view_profile">"ビュープレイゲームプロフィール"</string>
+    <string name="gamehelper_license_failed">"ライセンスチェックに失敗しました。"</string>
+    <string name="gamehelper_unknown_error">"不明なエラー。"</string>
+    <string name="network_failure">"ネットワーク接続の失敗"</string>
+    <string name="gamehelper_sign_in_failed">"ログインに失敗しました。ネットワーク接続を確認して、もう一度お試しください。"</string>
+
+    <!--
+        Randomly RemindMe Specific
+    -->
+    <string name="no_reminders_yet">"あなたはまだリマインダを持っていません。"</string>
+    <string name="delete_reminder_prompt_title">"リマインダーを削除"</string>
+    <string name="delete_reminder_prompt_content">"あなたはこのアラームを削除してもよろしいですか？"</string>
+    <string name="cancel_reminder_prompt_title">"変更の破棄"</string>
+    <string name="cancel_reminder_prompt_content">"あなたの変更を破棄してもよろしいですか？"</string>
+    <string name="duplicate_reminder_prompt_title">"重複リマインダー"</string>
+    <string name="duplicate_reminder_prompt_content">"あなたはこのリマインダーを複製してもよろしいですか？"</string>
+    <string name="notification_theme_title">"お使いの携帯電話に一致する通知のスタイルを選択してください"</string>
+    <string name="alerts_per_day">"日あたりのリマインダー"</string>
+
+    <!--
+        Randomly RemindMe Settings
+    -->
+    <string name="randremind_settings_0_primary">"通知は、要約を開きます"</string>
+    <string name="randremind_settings_0_secondary">"黙って認める通知をするチェックを外します"</string>
+    <string name="randremind_settings_1_primary">"カスタム通知を使用してください"</string>
+    <string name="randremind_settings_1_secondary">"カスタム通知を無効にし、標準のシステムに戻すことはチェックを外します"</string>
+    <string name="randremind_settings_2_primary">"継続的な通知を使用します"</string>
+    <string name="randremind_settings_2_secondary">"通知はそれを離れてスワイプしてdismissibleできるようにするためのチェックを外します。継続的な通知はアンドロイドウェアでサポートされていません。"</string>
+    <string name="randremind_settings_3_primary">"明るい背景と暗いテキストの通知テーマを使用してください"</string>
+    <string name="randremind_settings_3_secondary">"暗い背景と光のテキストの暗い通知テーマを使用してチェックを外します"</string>
+    <string name="randremind_settings_4_primary">"週の最初の日"</string>
+    <string name="randremind_settings_4_secondary">" "</string>
+
+    <!--
+        Google Play Settings
+    -->
+    <string name="google_play_settings_0_primary">"バナー広告を非表示にします"</string>
+    <string name="google_play_settings_0_secondary">"バナー広告を非表示にする代わりにフルページ広告を表示するのチェックを外し"</string>
+
+    <!--
+        Uncategorized
+    -->
+    <string name="edit">"編集"</string>
+    <string name="in_order">"順番に"</string>
+    <string name="ordering">"注文"</string>
+    <string name="preview">"試写"</string>
+    <string name="share">"シェア"</string>
+    <string name="share_game">"共有ゲーム"</string>
+    <string name="download">"ダウンロード"</string>
+    <string name="view">"見ます"</string>
+    <string name="automatic">"自動の"</string>
+    <string name="manual">"手動の"</string>
+    <string name="local">"ローカル"</string>
+    <string name="online">"オンライン"</string>
+    <string name="offline">"オフライン"</string>
+    <string name="header">"ヘッダー"</string>
+    <string name="footer">"フッター"</string>
+    <string name="custom">"カスタム"</string>
+    <string name="title">"タイトル"</string>
+    <string name="notification">"お知らせ"</string>
+    <string name="select_notification">"[通知"</string>
+    <string name="color">"色"</string>
+    <string name="tone">"トーン"</string>
+    <string name="sound">"音"</string>
+    <string name="random">"ランダム"</string>
+    <string name="specific">"具体的な"</string>s
+    <string name="repeat">"繰り返し"</string>
+    <string name="alarm">"警報器"</string>
+    <string name="vibrate">"振動します"</string>
+    <string name="general">"一般"</string>
+    <string name="range">"域"</string>
+    <string name="priority">"優先順位"</string>
+    <string name="accent">"訛り"</string>
+    <string name="accent_color">"アクセントカラー"</string>
+    <string name="choose_color">"色を選択してください"</string>
+    <string name="get">"もらいます"</string>
+    <string name="type">"タイプ"</string>
+    <string name="missed">"不在"</string>
+
+</resources>
