@@ -92,4 +92,20 @@
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
+    <style name="NotificationDarkText" parent="android:TextAppearance.StatusBar.EventContent">
+        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+    </style>
+
+    <style name="NotificationDarkTitle" parent="android:TextAppearance.StatusBar.EventContent.Title">
+        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+    </style>
+
+    <style name="NotificationLightText" parent="android:TextAppearance.StatusBar.EventContent">
+        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+    </style>
+
+    <style name="NotificationLightTitle" parent="android:TextAppearance.StatusBar.EventContent.Title">
+        <item name="android:textColor">@color/primary_text_default_material_light</item>
+    </style>
+
 </resources>

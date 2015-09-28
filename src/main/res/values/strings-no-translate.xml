@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="colon" translatable="false">:</string>
+    <string name="dash" translatable="false">-</string>
+    <string name="comma" translatable="false">,</string>
+    <string name="am" translatable="false">AM</string>
+    <string name="pm" translatable="false">PM</string>
+    <string name="separator" translatable="false">/</string>
+    <string name="xp" translatable="false">xp</string>
+    <string name="percent_char" translatable="false">%</string>
+    <string name="n_a" translatable="false">N/A</string>
+    <string name="led" translatable="false">LED</string>
+
+    <string name="num_1" translatable="false">1</string>
+    <string name="num_2" translatable="false">2</string>
+    <string name="num_3" translatable="false">3</string>
+    <string name="num_4" translatable="false">4</string>
+    <string name="num_5" translatable="false">5</string>
+    <string name="num_6" translatable="false">6</string>
+    <string name="num_7" translatable="false">7</string>
+    <string name="num_8" translatable="false">8</string>
+    <string name="num_9" translatable="false">9</string>
+    <string name="num_10" translatable="false">10</string>
+    <string name="num_11" translatable="false">11</string>
+    <string name="num_12" translatable="false">12</string>
+
+    <string name="gamehelper_app_misconfigured" translatable="false">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
+
     <string name="help_about_studio" translatable="false">James Morris Studios</string>
     <string name="help_about_email" translatable="false">support@jamesmorrisstudios.us</string>
     <string name="help_about_site" translatable="false">www.jamesmorrisstudios.us</string>

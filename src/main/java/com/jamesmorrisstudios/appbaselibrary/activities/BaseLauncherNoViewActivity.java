@@ -29,7 +29,17 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
+import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;
+import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorEndListener;
+import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorStartListener;
+import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
+import com.jamesmorrisstudios.appbaselibrary.colorpicker.ColorPickerView;
+import com.jamesmorrisstudios.appbaselibrary.colorpicker.OnColorSelectedListener;
+import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClickListener;
+import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiChoiceRequest;
@@ -47,18 +57,8 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainRecycleListFragme
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
+import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
-import com.jamesmorrisstudios.utilitieslibrary.Bus;
-import com.jamesmorrisstudios.utilitieslibrary.Utils;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorEndListener;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartListener;
-import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.ColorPickerView;
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.OnColorSelectedListener;
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerDialogBuilder;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
@@ -539,8 +539,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     protected final void updateImmersiveMode(boolean hasFocus) {
         if (Build.VERSION.SDK_INT >= 11) {
             int newUiOptions = 0;
-            String pref = AppUtil.getContext().getString(R.string.settings_pref);
-            String key = AppUtil.getContext().getString(R.string.pref_immersive);
+            String pref = AppBase.getContext().getString(R.string.settings_pref);
+            String key = AppBase.getContext().getString(R.string.pref_immersive);
             if (Prefs.getBoolean(pref, key, false)) {
                 if (hasFocus) {
                     if (Build.VERSION.SDK_INT >= 16) {
@@ -724,6 +724,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         this.ringtoneRequest = new RingtoneRequest(currentTone, title, listener);
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                enableAutoLock();
                 requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_STORAGE);
             } else {
                 createRingtoneDialogSub();
@@ -747,17 +748,10 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
         try {
-            if(Utils.getOrientationLock(this) == Utils.Orientation.UNDEFINED) {
-                Utils.lockOrientationCurrent(this);
-                useAutoLock = true;
-            } else {
-                useAutoLock = false;
-            }
+            enableAutoLock();
             startActivityForResult(intent, NOTIFICATION_RESULT);
         } catch (Exception ex) {
-            if(useAutoLock) {
-                Utils.unlockOrientation(this);
-            }
+            disableAutoLock();
             Utils.toastShort(getString(R.string.failed_open_link));
         }
     }
@@ -771,8 +765,10 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case REQUEST_READ_STORAGE: {
+                disableAutoLock();
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Log.v("BaseActivity", "Permission Granted for external storage");
                     createRingtoneDialogSub();
@@ -780,11 +776,23 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     Log.v("BaseActivity", "Permission Denied for external storage");
                     createRingtoneDialogSub();
                 }
-                if(useAutoLock) {
-                    Utils.unlockOrientation(this);
-                }
                 break;
             }
+        }
+    }
+
+    protected final void enableAutoLock() {
+        if(Utils.getOrientationLock(this) == Utils.Orientation.UNDEFINED) {
+            Utils.lockOrientationCurrent(this);
+            useAutoLock = true;
+        } else {
+            useAutoLock = false;
+        }
+    }
+
+    protected final void disableAutoLock() {
+        if(useAutoLock) {
+            Utils.unlockOrientation(this);
         }
     }
 

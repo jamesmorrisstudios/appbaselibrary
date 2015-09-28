@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
+import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 
 /**
  * Created by James on 4/29/2015.

@@ -17,7 +17,7 @@
         android:maxLines="10"
         android:singleLine="false" />
 
-    <com.jamesmorrisstudios.utilitieslibrary.controls.TintedImageView
+    <com.jamesmorrisstudios.appbaselibrary.controls.TintedImageView
         android:id="@+id/delete1"
         android:layout_alignParentRight="true"
         android:scaleType="fitCenter"

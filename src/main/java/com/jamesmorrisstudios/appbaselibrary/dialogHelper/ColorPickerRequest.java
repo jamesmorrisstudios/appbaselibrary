@@ -4,7 +4,8 @@ import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.jamesmorrisstudios.utilitieslibrary.dialogs.colorpicker.builder.ColorPickerClickListener;
+import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClickListener;
+
 
 /**
  * Created by James on 6/29/2015.

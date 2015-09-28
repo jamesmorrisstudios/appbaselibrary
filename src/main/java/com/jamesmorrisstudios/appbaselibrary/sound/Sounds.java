@@ -11,8 +11,8 @@ import android.support.annotation.RawRes;
 import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.utilitieslibrary.app.AppUtil;
-import com.jamesmorrisstudios.utilitieslibrary.preferences.Prefs;
+import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
+import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 
 import java.util.HashMap;
 
@@ -81,14 +81,14 @@ public class Sounds {
     }
 
     private boolean getPrefSoundEffect() {
-        String pref = AppUtil.getContext().getString(R.string.settings_pref);
-        String keySound = AppUtil.getContext().getString(R.string.pref_sound_effect);
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String keySound = AppBase.getContext().getString(R.string.pref_sound_effect);
         return Prefs.getBoolean(pref, keySound, true);
     }
 
     private boolean getPrefMusic() {
-        String pref = AppUtil.getContext().getString(R.string.settings_pref);
-        String keyMusic = AppUtil.getContext().getString(R.string.pref_music);
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String keyMusic = AppBase.getContext().getString(R.string.pref_music);
         return Prefs.getBoolean(pref, keyMusic, true);
     }
 
@@ -149,13 +149,13 @@ public class Sounds {
             });
             soundIdMap = new HashMap<>();
             //Add the built in sound effects
-            TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.sound_effects);
+            TypedArray sounds = AppBase.getContext().getResources().obtainTypedArray(R.array.sound_effects);
             for (int i = 0; i < sounds.length(); i++) {
                 //Log.v("SOUNDS", "Have an ID");
                 int id = sounds.getResourceId(i, 0);
                 if (id > 0) {
                     //Log.v("SOUNDS", "Adding to sound pool");
-                    soundIdMap.put(id, soundPool.load(AppUtil.getContext(), id, 1));
+                    soundIdMap.put(id, soundPool.load(AppBase.getContext(), id, 1));
                 }
             }
             sounds.recycle();
@@ -247,7 +247,7 @@ public class Sounds {
     private void startMusic() {
         Log.v("Sounds", "Start Music");
         if (musicEnabled && music[0] == null) {
-            TypedArray sounds = AppUtil.getContext().getResources().obtainTypedArray(R.array.music);
+            TypedArray sounds = AppBase.getContext().getResources().obtainTypedArray(R.array.music);
             int musicPrimaryId = 0;
             int musicSecondaryId = 0;
             if (sounds.length() == 1) {
@@ -259,7 +259,7 @@ public class Sounds {
             sounds.recycle();
             if (musicPrimaryId != 0) {
                 Log.v("Sounds", "Create Primary Music");
-                music[0] = MediaPlayer.create(AppUtil.getContext(), musicPrimaryId);
+                music[0] = MediaPlayer.create(AppBase.getContext(), musicPrimaryId);
                 music[0].setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {
@@ -278,7 +278,7 @@ public class Sounds {
             }
             if (musicSecondaryId != 0) {
                 Log.v("Sounds", "Create Secondary Music");
-                music[1] = MediaPlayer.create(AppUtil.getContext(), musicSecondaryId);
+                music[1] = MediaPlayer.create(AppBase.getContext(), musicSecondaryId);
                 music[1].setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                     @Override
                     public void onPrepared(MediaPlayer mp) {

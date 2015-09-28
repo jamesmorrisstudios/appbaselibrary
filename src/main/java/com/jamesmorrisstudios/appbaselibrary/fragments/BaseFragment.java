@@ -19,10 +19,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.jamesmorrisstudios.appbaselibrary.FileWriter;
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.utilitieslibrary.Utils;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorControl;
-import com.jamesmorrisstudios.utilitieslibrary.animator.AnimatorStartEndListener;
+import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;
+import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorStartEndListener;
 
 /**
  * Base app fragment
@@ -276,8 +277,8 @@ public abstract class BaseFragment extends Fragment {
                     int height = Math.round(image.getHeight() * scaleFactor);
                     image = Bitmap.createScaledBitmap(image, width, height, true);
                 }
-                com.jamesmorrisstudios.utilitieslibrary.FileWriter.writeImage("ShareImage.png", image, true);
-                return Uri.fromFile(com.jamesmorrisstudios.utilitieslibrary.FileWriter.getFile("ShareImage.png", true));
+                FileWriter.writeImage("ShareImage.png", image, FileWriter.FileLocation.CACHE);
+                return Uri.fromFile(FileWriter.getFile("ShareImage.png", FileWriter.FileLocation.CACHE));
             }
 
             @Override
