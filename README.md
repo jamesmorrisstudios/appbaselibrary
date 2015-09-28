@@ -2,8 +2,6 @@
 Application Base Library
 
 # Usage
-This project requires https://github.com/morris-james/UtilitiesLibrary
-
 Using Android Studio build the project then use uploadArchives to upload to your local maven repository
 This will make it accessible to my other projects if you are using those.
 
