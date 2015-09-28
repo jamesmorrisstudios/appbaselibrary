@@ -19,53 +19,89 @@
     <!--
         Time
      -->
+    <!-- -->
     <string name="day_singular">Day</string>
+    <!-- -->
     <string name="day_plural">Days</string>
+    <!-- -->
     <string name="hour_singular">Hour</string>
+    <!-- -->
     <string name="hour_plural">Hours</string>
+    <!-- -->
     <string name="minute_singular">Minute</string>
+    <!-- -->
     <string name="minute_plural">Minutes</string>
+    <!-- -->
     <string name="second_singular">Second</string>
+    <!-- -->
     <string name="second_plural">Seconds</string>
 
     <!--
         Numbers
     -->
+    <!-- -->
     <string name="one">One</string>
+    <!-- -->
     <string name="two">Two</string>
+    <!-- -->
     <string name="three">Three</string>
+    <!-- -->
     <string name="four">Four</string>
+    <!-- -->
     <string name="five">Five</string>
+    <!-- -->
     <string name="six">Six</string>
+    <!-- -->
     <string name="seven">Seven</string>
+    <!-- -->
     <string name="eight">Eight</string>
+    v
     <string name="nine">Nine</string>
+    <!-- -->
     <string name="ten">Ten</string>
 
     <!--
         Number Designations
     -->
+    <!-- -->
     <string name="first">First</string>
+    <!-- -->
     <string name="second">Second</string>
+    <!-- -->
     <string name="third">Third</string>
+    <!-- -->
     <string name="fourth">Fourth</string>
+    <!-- -->
     <string name="fifth">Fifth</string>
+    <!-- -->
     <string name="sixth">Sixth</string>
+    <!-- -->
     <string name="seventh">Seventh</string>
+    <!-- -->
     <string name="eighth">Eighth</string>
+    <!-- -->
     <string name="ninth">Ninth</string>
+    <!-- -->
     <string name="tenth">Tenth</string>
 
     <!--
         Days of the week
     -->
+    <!-- -->
     <string name="days_of_week">Days Of Week</string>
+    <!-- -->
     <string name="day_sunday">Sunday</string>
+    <!-- -->
     <string name="day_monday">Monday</string>
+    <!-- -->
     <string name="day_tuesday">Tuesday</string>
+    <!-- -->
     <string name="day_wednesday">Wednesday</string>
+    <!-- -->
     <string name="day_thursday">Thursday</string>
+    <!-- -->
     <string name="day_friday">Friday</string>
+    <!-- -->
     <string name="day_saturday">Saturday</string>
 
     <!--
