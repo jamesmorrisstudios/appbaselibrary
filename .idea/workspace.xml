@@ -16,11 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e12e0e8c-0b8d-4228-ab73-6c5181c189e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/controls/autofittextview/AutofitLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/controls/autofittextview/AutofitLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/HelpFragment.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/HelpFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appbaselibrary.iml" afterPath="$PROJECT_DIR$/appbaselibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/licenses.xml" afterPath="$PROJECT_DIR$/src/main/res/values/licenses.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -87,7 +84,36 @@
     <favorites_list name="appbaselibrary" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="UtilsTime.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#21251#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1355#1356#0" expanded="false" />
+                <element signature="e#1425#1426#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44228572">
+              <caret line="558" column="5" selection-start-line="558" selection-start-column="5" selection-end-line="558" selection-end-column="5" />
+              <folding>
+                <element signature="e#20002#20003#0" expanded="true" />
+                <element signature="e#20053#20054#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1133,8 +1159,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/TimeItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/FileWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Logger.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/BaseLauncherNoViewActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseFragment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/preferences/Prefs.java" />
@@ -1143,6 +1167,8 @@
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/licenses.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java" />
       </list>
     </option>
   </component>
@@ -1185,6 +1211,27 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Gradle Scripts" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -1220,31 +1267,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="wrapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1500,18 +1522,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21201815" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1523,15 +1542,18 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1988273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26444444" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1988273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26444444" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21201815" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1603,20 +1625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.0517242">
           <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.5689654">
-          <caret line="128" column="6" selection-start-line="128" selection-start-column="6" selection-end-line="128" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.862069">
-          <caret line="542" column="32" selection-start-line="542" selection-start-column="32" selection-end-line="542" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1894,7 +1902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32692307">
           <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1907,7 +1914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.83774036">
           <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1915,7 +1921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.05314">
           <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1923,7 +1928,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1931,7 +1935,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7809984">
           <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1944,7 +1947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2">
           <caret line="99" column="41" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1952,7 +1954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3148148">
           <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -1963,7 +1964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33203885">
           <caret line="104" column="19" selection-start-line="104" selection-start-column="19" selection-end-line="104" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1971,7 +1971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.56762296">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1979,7 +1978,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26844585">
           <caret line="226" column="8" selection-start-line="226" selection-start-column="8" selection-end-line="226" selection-end-column="8" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="527" column="0" selection-start-line="527" selection-start-column="0" selection-end-line="527" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21251#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1355#1356#0" expanded="false" />
+            <element signature="e#1425#1426#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44228572">
+          <caret line="558" column="5" selection-start-line="558" selection-start-column="5" selection-end-line="558" selection-end-column="5" />
+          <folding>
+            <element signature="e#20002#20003#0" expanded="true" />
+            <element signature="e#20053#20054#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

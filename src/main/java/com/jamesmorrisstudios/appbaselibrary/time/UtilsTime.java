@@ -27,6 +27,7 @@ import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -523,6 +524,15 @@ public final class UtilsTime {
      */
     public static boolean timeBefore(@NonNull TimeItem newTime, @NonNull TimeItem oldTime) {
         return (newTime.hour * 60 + newTime.minute) - (oldTime.hour * 60 + oldTime.minute) < 0;
+    }
+
+    @NonNull
+    public static ArrayList<TimeItem> cloneArrayListTime(ArrayList<TimeItem> items) {
+        ArrayList<TimeItem> newItems = new ArrayList<>();
+        for(TimeItem item : items) {
+            newItems.add(item.copy());
+        }
+        return newItems;
     }
 
     /**

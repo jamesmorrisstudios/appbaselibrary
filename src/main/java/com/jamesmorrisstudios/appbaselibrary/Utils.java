@@ -45,6 +45,7 @@ import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URI;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -545,6 +546,16 @@ public final class Utils {
         share.putExtra(Intent.EXTRA_STREAM, uri);
         share.setType(shareType);
         AppBase.getContext().startActivity(Intent.createChooser(share, chooserTitle));
+    }
+
+    /**
+     * Generates a unique String
+     *
+     * @return Unique string
+     */
+    @NonNull
+    public static String generateUniqueString() {
+        return UUID.randomUUID().toString();
     }
 
     /**
