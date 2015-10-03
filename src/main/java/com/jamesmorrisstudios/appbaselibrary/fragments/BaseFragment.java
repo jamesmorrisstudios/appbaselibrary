@@ -19,7 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.jamesmorrisstudios.appbaselibrary.FileWriter;
+import com.jamesmorrisstudios.appbaselibrary.filewriting.FileWriter;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;

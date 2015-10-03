@@ -14,11 +14,12 @@
  * limitations under the License.
  */
 
-package com.jamesmorrisstudios.appbaselibrary;
+package com.jamesmorrisstudios.appbaselibrary.filewriting;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

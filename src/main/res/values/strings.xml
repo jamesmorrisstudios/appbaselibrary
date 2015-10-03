@@ -141,7 +141,7 @@
     <string name="pattern_6">Pattern 6</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">Import</string>
     <string name="export">Export</string>
@@ -153,10 +153,15 @@
     <string name="export_all">Export All</string>
     <string name="export_to">Export To</string>
     <string name="export_location">Export Location</string>
+
+    <string name="export_failed">Export Failed</string>
+
     <string name="file">File</string>
     <string name="local_storage">Local Storage</string>
 
-
+    <string name="backup_restore">Backup/Restore</string>
+    <string name="backup">Backup</string>
+    <string name="restore">Restore</string>
 
     <!--
         Protection level
