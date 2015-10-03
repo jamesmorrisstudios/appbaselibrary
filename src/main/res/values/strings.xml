@@ -151,6 +151,12 @@
     <string name="export_reminder">Export Reminder</string>
     <string name="import_all">Import All</string>
     <string name="export_all">Export All</string>
+    <string name="export_to">Export To</string>
+    <string name="export_location">Export Location</string>
+    <string name="file">File</string>
+    <string name="local_storage">Local Storage</string>
+
+
 
     <!--
         Protection level
@@ -219,6 +225,8 @@
     <string name="complete">Complete</string>
     <string name="completed">Completed</string>
     <string name="incomplete">Incomplete</string>
+    <string name="invalid_path">Invalid Path</string>
+    <string name="invalid_file">Invalid File</string>
 
     <!--
         Common Menu Pages

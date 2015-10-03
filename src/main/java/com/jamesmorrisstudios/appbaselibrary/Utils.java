@@ -536,16 +536,22 @@ public final class Utils {
 
     public static void shareText(@NonNull final String chooserTitle, @NonNull final String shareText, @NonNull final String shareType) {
         Intent share = new Intent(Intent.ACTION_SEND);
+        share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         share.setType(shareType);
         share.putExtra(Intent.EXTRA_TEXT, shareText);
-        AppBase.getContext().startActivity(Intent.createChooser(share, chooserTitle));
+        Intent chooser = Intent.createChooser(share, chooserTitle);
+        chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        AppBase.getContext().startActivity(chooser);
     }
 
-    public static void shareStream(@NonNull final String chooserTitle, @NonNull final URI uri, @NonNull final String shareType) {
+    public static void shareStream(@NonNull final String chooserTitle, @NonNull final Uri uri, @NonNull final String shareType) {
         Intent share = new Intent(Intent.ACTION_SEND);
+        share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         share.putExtra(Intent.EXTRA_STREAM, uri);
         share.setType(shareType);
-        AppBase.getContext().startActivity(Intent.createChooser(share, chooserTitle));
+        Intent chooser = Intent.createChooser(share, chooserTitle);
+        chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        AppBase.getContext().startActivity(chooser);
     }
 
     /**

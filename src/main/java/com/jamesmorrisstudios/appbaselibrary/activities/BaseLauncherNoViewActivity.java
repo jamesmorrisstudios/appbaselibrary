@@ -13,6 +13,7 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -42,6 +43,7 @@ import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClic
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.FileBrowserRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
@@ -59,6 +61,7 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
+import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
@@ -78,8 +81,12 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         BaseFragment.OnUtilListener,
         SettingsFragment.OnSettingsListener {
 
-    private static final int NOTIFICATION_RESULT = 5010;
-    private static final int REQUEST_READ_STORAGE = 6000;
+    //On Activity Result codes
+    private static final int RINGTONE_RESULT = 5010;
+    private static final int FILE_BROWSER_RESULT = 5011;
+    //Permission Request Codes
+    private static final int REQUEST_READ_STORAGE_RINGTONE = 6000;
+    private static final int REQUEST_WRITE_STORAGE_FILE_BROWSER = 6001;
 
     private FrameLayout container;
     private Toolbar toolbar;
@@ -87,8 +94,15 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
     private boolean useAutoLock = false;
 
+    //Saved requests that have to survive on activity result and/or permission request
     private RingtoneRequest ringtoneRequest = null;
+    private FileBrowserRequest fileBrowserRequest = null;
+
     private final Object busListener = new Object() {
+        @Subscribe
+        public void onFileBrowserRequest(final FileBrowserRequest request) {
+            BaseLauncherNoViewActivity.this.createFileBrowserDialog(request);
+        }
         @Subscribe
         public void onRingtoneRequest(final RingtoneRequest request) {
             BaseLauncherNoViewActivity.this.createRingtoneDialog(request.currentTone, request.title, request.listener);
@@ -160,7 +174,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      */
     public void onActivityResult(final int requestCode, final int resultCode, final Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-        if (requestCode == NOTIFICATION_RESULT) {
+
+        //Ringtone picker
+        if (requestCode == RINGTONE_RESULT) {
             if(resultCode == Activity.RESULT_OK && intent != null && intent.hasExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI)) {
                 String name = null;
                 Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
@@ -175,7 +191,19 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     ringtoneRequest = null;
                 }
             }
-            Utils.unlockOrientation(this);
+            disableAutoLock();
+        }
+
+        //File Browser
+        if(requestCode == FILE_BROWSER_RESULT) {
+            if(resultCode == Activity.RESULT_OK && intent != null) {
+                Uri uri = intent.getData();
+                if(fileBrowserRequest != null) {
+                    fileBrowserRequest.fileBrowserRequestListener.path(uri);
+                    fileBrowserRequest = null;
+                }
+            }
+            disableAutoLock();
         }
     }
 
@@ -622,7 +650,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     private void toggleToolbarOverlay(boolean enable) {
-        // FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
         if(enable) {
             //Padding to 0
             container.setPadding(container.getPaddingLeft(), 0, container.getPaddingTop(), container.getPaddingBottom());
@@ -632,6 +659,44 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             int mActionBarSize = (int) styledAttributes.getDimension(0, 0);
             styledAttributes.recycle();
             container.setPadding(container.getPaddingLeft(), mActionBarSize, container.getPaddingTop(), container.getPaddingBottom());
+        }
+    }
+
+    public void createFileBrowserDialog(@NonNull FileBrowserRequest request) {
+        fileBrowserRequest = request;
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+                enableAutoLock();
+                requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_STORAGE_FILE_BROWSER);
+            } else {
+                createFileBrowserDialogSub();
+            }
+        } else {
+            createFileBrowserDialogSub();
+        }
+    }
+
+    public void createFileBrowserDialogSub() {
+        if(fileBrowserRequest == null) {
+            return;
+        }
+        Intent i = new Intent(this, CustomFilePickerActivity.class);
+        i.putExtra(CustomFilePickerActivity.EXTRA_EXTENSION, fileBrowserRequest.extension);
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false); //Not supported on the return yet
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, fileBrowserRequest.allowCreateDir);
+        if (fileBrowserRequest.dirType == FileBrowserRequest.DirType.DIRECTORY) {
+            i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_DIR);
+        } else {
+            i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
+        }
+        i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
+        try {
+            enableAutoLock();
+            startActivityForResult(i, FILE_BROWSER_RESULT);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            disableAutoLock();
+            Utils.toastShort(getString(R.string.failed));
         }
     }
 
@@ -725,7 +790,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 enableAutoLock();
-                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_STORAGE);
+                requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, REQUEST_READ_STORAGE_RINGTONE);
             } else {
                 createRingtoneDialogSub();
             }
@@ -749,7 +814,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
         try {
             enableAutoLock();
-            startActivityForResult(intent, NOTIFICATION_RESULT);
+            startActivityForResult(intent, RINGTONE_RESULT);
         } catch (Exception ex) {
             disableAutoLock();
             Utils.toastShort(getString(R.string.failed_open_link));
@@ -767,7 +832,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
-            case REQUEST_READ_STORAGE: {
+            case REQUEST_READ_STORAGE_RINGTONE:
                 disableAutoLock();
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     Log.v("BaseActivity", "Permission Granted for external storage");
@@ -777,11 +842,22 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     createRingtoneDialogSub();
                 }
                 break;
-            }
+            case REQUEST_WRITE_STORAGE_FILE_BROWSER:
+                disableAutoLock();
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.v("BaseActivity", "Permission Granted for external storage");
+                    createFileBrowserDialogSub();
+                } else {
+                    Log.v("BaseActivity", "Permission Denied for external storage");
+                }
+                break;
         }
     }
 
     protected final void enableAutoLock() {
+        if(useAutoLock) {
+            return;
+        }
         if(Utils.getOrientationLock(this) == Utils.Orientation.UNDEFINED) {
             Utils.lockOrientationCurrent(this);
             useAutoLock = true;
@@ -793,6 +869,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     protected final void disableAutoLock() {
         if(useAutoLock) {
             Utils.unlockOrientation(this);
+            useAutoLock = false;
         }
     }
 

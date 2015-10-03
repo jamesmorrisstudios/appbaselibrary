@@ -53,9 +53,9 @@
     </string-array>
 
     <string-array name="help_license_library_code_item_8" translatable="false">
-        <item name="title">Library: Pascal Hartig</item>
-        <item name="link_site">https://github.com/passy/Android-DirectoryChoosers</item>
-        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+        <item name="title">Library: Space Cowboy</item>
+        <item name="link_site">https://github.com/spacecowboy/NoNonsense-FilePicker</item>
+        <item name="link_license">http://www.gnu.org/licenses/lgpl-3.0.en.html</item>
     </string-array>
 
     <array name="help_license_library">
