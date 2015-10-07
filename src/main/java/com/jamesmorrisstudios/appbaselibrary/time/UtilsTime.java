@@ -435,14 +435,14 @@ public final class UtilsTime {
     @NonNull
     public static String getShortDateTimeFormatted(@NonNull DateTimeItem dateTime) {
         Calendar calendar = getCalendar(dateTime);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.US);
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss", Locale.US);
         return sdf.format(calendar.getTime());
     }
 
     @NonNull
     public static String getShortDateFormatted(@NonNull DateItem date) {
         Calendar calendar = getCalendar(date);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy", Locale.US);
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy", Locale.US);
         return sdf.format(calendar.getTime());
     }
 

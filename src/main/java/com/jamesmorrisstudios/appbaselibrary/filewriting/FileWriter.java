@@ -21,14 +21,18 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -208,6 +212,67 @@ public final class FileWriter {
         FileInputStream inputStream;
         try {
             inputStream = new FileInputStream(file);
+            bytes = readBytes(inputStream);
+            inputStream.close();
+            return bytes;
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    @Nullable
+    public synchronized static byte[] readFile(@NonNull Uri uri, @NonNull FileLocation location) {
+        if(isContentUri(uri, location)) {
+            return readFileContent(uri);
+        }
+        File file = getFile(uri.getPath(), location);
+        if(file == null) {
+            return null;
+        }
+        if (!file.exists()) {
+            return null;
+        }
+        byte[] bytes;
+        FileInputStream inputStream;
+        try {
+            inputStream = new FileInputStream(file);
+            bytes = readBytes(inputStream);
+            inputStream.close();
+            return bytes;
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    private static boolean isContentUri(@NonNull Uri uri, @NonNull FileLocation location) {
+        Log.v("FileWriter", "Is Content? Uri Content: "+uri.getScheme());
+        if(location == FileLocation.PATH) {
+            if(uri.getScheme().contains("content")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static byte[] readFileContent(@NonNull Uri uri) {
+        Log.v("FileWriter", "Uri Content: "+uri);
+        ParcelFileDescriptor mInputPFD;
+        try {
+            mInputPFD = AppBase.getContext().getContentResolver().openFileDescriptor(uri, "r");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+        if(mInputPFD == null) {
+            return null;
+        }
+        Log.v("FileWriter", "Read File Content got to descriptor");
+        FileDescriptor fd = mInputPFD.getFileDescriptor();
+
+        FileInputStream inputStream;
+        byte[] bytes;
+        try {
+            inputStream = new FileInputStream(fd);
             bytes = readBytes(inputStream);
             inputStream.close();
             return bytes;

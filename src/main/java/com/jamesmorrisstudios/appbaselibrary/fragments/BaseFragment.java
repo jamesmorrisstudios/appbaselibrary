@@ -46,6 +46,15 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void restoreState(Bundle bundle);
 
     /**
+     * Returns true if there is an internal back within this fragment.
+     * If true the fragment should go back to its previous page and the fragment will not be removed from view
+     * @return
+     */
+    public boolean goBackInternal() {
+        return false;
+    }
+
+    /**
      * @param savedInstanceState Saved instance state
      */
     @Override

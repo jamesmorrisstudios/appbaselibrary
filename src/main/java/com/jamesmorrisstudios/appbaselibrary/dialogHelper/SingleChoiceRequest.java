@@ -10,12 +10,14 @@ import android.support.annotation.Nullable;
 public class SingleChoiceRequest {
     public final String title;
     public final String[] items;
+    public final boolean allowCancel;
     public final DialogInterface.OnClickListener clickListener;
     public final DialogInterface.OnClickListener onNegative;
 
-    public SingleChoiceRequest(@NonNull String title, @NonNull String[] items, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRequest(@NonNull String title, @NonNull String[] items, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.items = items;
+        this.allowCancel = allowCancel;
         this.clickListener = clickListener;
         this.onNegative = onNegative;
     }

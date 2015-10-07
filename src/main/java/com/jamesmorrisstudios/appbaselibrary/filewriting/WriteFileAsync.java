@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.filewriting;
 
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
@@ -26,10 +27,10 @@ public class WriteFileAsync extends AsyncTask<Void, Void, Boolean> {
 
     @Override
     protected void onPostExecute(Boolean result) {
-        listener.writeComplete(result);
+        listener.writeComplete(result,  FileWriter.getFileUri(path, location));
     }
 
     public interface FileWriteListener {
-        void writeComplete(boolean success);
+        void writeComplete(boolean success, Uri filePath);
     }
 }

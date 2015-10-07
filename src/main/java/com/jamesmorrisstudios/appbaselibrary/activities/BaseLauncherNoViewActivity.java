@@ -135,7 +135,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
         @Subscribe
         public void onSingleChoiceRequest(SingleChoiceRequest request) {
-            BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.items, request.clickListener, request.onNegative);
+            BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.items, request.allowCancel, request.clickListener, request.onNegative);
         }
 
         @Subscribe
@@ -328,8 +328,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      */
     @Override
     public boolean onSupportNavigateUp() {
-        backUpPressed();
-        getSupportFragmentManager().popBackStack();
+        if(backUpPressed()) {
+            getSupportFragmentManager().popBackStack();
+        }
         return true;
     }
 
@@ -339,20 +340,29 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      */
     @Override
     public void onBackPressed() {
-        backUpPressed();
-        super.onBackPressed();
+        if(backUpPressed()) {
+            super.onBackPressed();
+        }
     }
 
     /**
      * Called when the android back button or up button was pressed
      * Signal to fragments that need it that the use clicked back and is leaving them
      */
-    protected void backUpPressed() {
+    protected boolean backUpPressed() {
+        Log.v("BaseActivity", "Back Up Pressed");
         Fragment f = getSupportFragmentManager().findFragmentById(R.id.container);
         if (f instanceof BaseFragment) {
-            ((BaseFragment) f).onBack();
+            BaseFragment fragment = (BaseFragment) f;
+            if(!fragment.goBackInternal()) {
+                fragment.onBack();
+            } else {
+                return false;
+            }
         }
         onFragmentChangeStart();
+        Log.v("BaseActivity", "Back Up Pressed Returning True");
+        return true;
     }
 
     /**
@@ -723,8 +733,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
-    public void createSingleChoiceDialog(@NonNull String title, @NonNull String[] items, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+    public void createSingleChoiceDialog(@NonNull String title, @NonNull String[] items, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+                .setCancelable(allowCancel)
                 .setTitle(title)
                 .setItems(items, clickListener);
         if(onNegative != null) {

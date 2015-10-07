@@ -131,6 +131,14 @@
     <string name="lifetime">Lifetime</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">Pattern 1</string>
@@ -153,15 +161,19 @@
     <string name="export_all">Export All</string>
     <string name="export_to">Export To</string>
     <string name="export_location">Export Location</string>
-
     <string name="export_failed">Export Failed</string>
-
     <string name="file">File</string>
     <string name="local_storage">Local Storage</string>
-
+    <string name="backup_location">Backup Location</string>
     <string name="backup_restore">Backup/Restore</string>
     <string name="backup">Backup</string>
     <string name="restore">Restore</string>
+    <string name="backup_complete">Backup Complete</string>
+    <string name="restore_complete">Restore Complete</string>
+    <string name="backup_failed">Backup Failed</string>
+    <string name="restore_failed">Restore Failed</string>
+    <string name="include_log">Include Log</string>
+    <string name="select_atleast_one">Select at least one item</string>
 
     <!--
         Protection level
@@ -185,6 +197,13 @@
     <string name="large">Large</string>
     <string name="short_">Short</string>
     <string name="long_">Long</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">Select</string>
+    <string name="select_all">Select All</string>
+    <string name="select_none">Select None</string>
 
     <!--
        Difficulty/Game Options
