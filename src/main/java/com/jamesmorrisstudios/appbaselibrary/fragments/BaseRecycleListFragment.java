@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +20,7 @@ import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
+import com.jamesmorrisstudios.appbaselibrary.touchHelper.SimpleItemTouchHelperCallback;
 
 import java.util.ArrayList;
 
@@ -50,8 +53,13 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         noDataText = (TextView) view.findViewById(R.id.empty_view);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
-        StaggeredGridLayoutManager llm = new StaggeredGridLayoutManager(getNumberColumns(), StaggeredGridLayoutManager.VERTICAL);
-        mRecyclerView.setLayoutManager(llm);
+        if(supportsHeaders()) {
+            StaggeredGridLayoutManager llm = new StaggeredGridLayoutManager(getNumberColumns(), StaggeredGridLayoutManager.VERTICAL);
+            mRecyclerView.setLayoutManager(llm);
+        } else {
+            GridLayoutManager llm = new GridLayoutManager(getContext(), getNumberColumns());
+            mRecyclerView.setLayoutManager(llm);
+        }
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
         mSwipeRefreshLayout.setColorSchemeResources(R.color.accent);
         mSwipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(
@@ -175,6 +183,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         return 1;
     }
 
+    private ItemTouchHelper mItemTouchHelper;
+
     /**
      * View creation done
      *
@@ -199,6 +209,12 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 }
             }
         });
+
+        if(allowReording()) {
+            ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mAdapter);
+            mItemTouchHelper = new ItemTouchHelper(callback);
+            mItemTouchHelper.attachToRecyclerView(mRecyclerView);
+        }
     }
 
     protected abstract BaseRecycleAdapter getAdapter(@NonNull BaseRecycleAdapter.OnItemClickListener mListener);
@@ -212,6 +228,12 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     protected abstract void startMoreDataLoad();
 
     protected abstract void itemClick(@NonNull BaseRecycleContainer item);
+
+    protected abstract void itemMove(int fromPosition, int toPosition);
+
+    protected abstract boolean supportsHeaders();
+
+    protected abstract boolean allowReording();
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
@@ -305,6 +327,11 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     @Override
     public void itemClicked(int position) {
         //Unused
+    }
+
+    @Override
+    public void itemMoved(int fromPosition, int toPosition) {
+        itemMove(fromPosition, toPosition);
     }
 
     /**

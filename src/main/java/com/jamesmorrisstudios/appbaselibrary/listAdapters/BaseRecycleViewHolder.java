@@ -16,15 +16,19 @@
 
 package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.jamesmorrisstudios.appbaselibrary.touchHelper.ItemTouchHelperViewHolder;
+
 /**
  * Reminder view holder for use in RecyclerView
  */
-public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
+        implements View.OnClickListener, ItemTouchHelperViewHolder {
     //Click listener
     private cardClickListener mListener;
     //Type of view. header or normal
@@ -48,6 +52,16 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
                 initItem(view);
             }
         }
+    }
+
+    @Override
+    public void onItemSelected() {
+        //itemView.setBackgroundColor(Color.LTGRAY);
+    }
+
+    @Override
+    public void onItemClear() {
+       // itemView.setBackgroundColor(0);
     }
 
     protected abstract void initHeader(View view);

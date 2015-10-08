@@ -26,13 +26,15 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.touchHelper.ItemTouchHelperAdapter;
 
 import java.util.ArrayList;
 
 /**
  * Reminder adapter class to manage the recyclerView
  */
-public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> {
+public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder>
+        implements ItemTouchHelperAdapter {
     public static final String TAG = "BaseRecycleAdapter";
     private static final int VIEW_TYPE_HEADER = 0x03;
     private static final int VIEW_TYPE_DUMMY = 0x02;
@@ -49,6 +51,20 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     public BaseRecycleAdapter(@NonNull OnItemClickListener mListener) {
         this.mListener = mListener;
         mItems = new ArrayList<>();
+    }
+
+    @Override
+    public void onItemMove(int fromPosition, int toPosition) {
+        LineItem prev = mItems.remove(fromPosition);
+        mItems.add(toPosition, prev);
+        mListener.itemMoved(fromPosition, toPosition);
+        notifyItemMoved(fromPosition, toPosition);
+    }
+
+    @Override
+    public void onItemDismiss(int position) {
+        mItems.remove(position);
+        notifyItemRemoved(position);
     }
 
     /**
@@ -125,6 +141,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
                     notifyItemChanged(expandedPosition);
                 }
             }
+
         });
     }
 
@@ -183,6 +200,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     public interface OnItemClickListener {
         void itemClicked(BaseRecycleContainer item);
         void itemClicked(int position);
+        void itemMoved(int fromPosition, int toPosition);
     }
 
 }

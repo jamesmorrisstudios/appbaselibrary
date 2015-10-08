@@ -58,6 +58,12 @@
         <item name="link_license">http://www.gnu.org/licenses/lgpl-3.0.en.html</item>
     </string-array>
 
+    <string-array name="help_license_library_code_item_9" translatable="false">
+        <item name="title">Library: Paul Burke</item>
+        <item name="link_site">https://github.com/iPaulPro/Android-ItemTouchHelper-Demo</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
     <array name="help_license_library">
         <item>@array/help_license_library_code_item_0</item>
         <item>@array/help_license_library_code_item_1</item>
@@ -68,6 +74,7 @@
         <item>@array/help_license_library_code_item_6</item>
         <item>@array/help_license_library_code_item_7</item>
         <item>@array/help_license_library_code_item_8</item>
+        <item>@array/help_license_library_code_item_9</item>
     </array>
 
 </resources>
