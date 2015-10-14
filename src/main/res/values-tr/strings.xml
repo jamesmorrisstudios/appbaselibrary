@@ -129,6 +129,14 @@
     <string name="lifetime">"Ömür"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Sonraki"</string>
+    <string name="previous">"Geçmiş"</string>
+    <string name="back">"Sırt"</string>
+    <string name="forward">"Ileriye doğru"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Desen 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Desen 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"İthalat"</string>
     <string name="export">"Ihracat"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"İhracat Hatırlatma"</string>
     <string name="import_all">"İthalat Tüm"</string>
     <string name="export_all">"İhracat Tüm"</string>
+    <string name="export_to">"İhracat için"</string>
+    <string name="export_location">"İhracat Yeri"</string>
+    <string name="export_failed">"İhracat Başarısız"</string>
+    <string name="file">"Dosya"</string>
+    <string name="local_storage">"Yerel Depolama"</string>
+    <string name="backup_location">"Yedekleme Konumu"</string>
+    <string name="backup_restore">"Yedekleme geri"</string>
+    <string name="backup">"Yedek"</string>
+    <string name="restore">"Restore"</string>
+    <string name="backup_complete">"Yedekleme Tamamlandı"</string>
+    <string name="restore_complete">"Restore Complete"</string>
+    <string name="backup_failed">"Başarısız Yedekleme"</string>
+    <string name="restore_failed">"Restore Başarısız"</string>
+    <string name="include_log">"Oturum İçer"</string>
+    <string name="select_atleast_one">"En az bir öğeyi seçin"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Büyük"</string>
     <string name="short_">"Kısa"</string>
     <string name="long_">"Uzun"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Seçin"</string>
+    <string name="select_all">"Hepsini seç"</string>
+    <string name="select_none">"Hiçbir şey seçilmedi"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Komple"</string>
     <string name="completed">"Tamamlanan"</string>
     <string name="incomplete">"Tamamlanmamış"</string>
+    <string name="invalid_path">"Geçersiz Yol"</string>
+    <string name="invalid_file">"Geçersiz dosya"</string>
 
     <!--
         Common Menu Pages

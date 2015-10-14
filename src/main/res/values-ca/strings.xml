@@ -129,6 +129,14 @@
     <string name="lifetime">"Lifetime"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Pròxim"</string>
+    <string name="previous">"Previ"</string>
+    <string name="back">"Esquena"</string>
+    <string name="forward">"Endavant"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Patró 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Patró juny"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Importació"</string>
     <string name="export">"Exportació"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Recordatori de les Exportacions"</string>
     <string name="import_all">"Importa tot"</string>
     <string name="export_all">"Exporta tot"</string>
+    <string name="export_to">"Exporta a"</string>
+    <string name="export_location">"Ubicació d'exportació"</string>
+    <string name="export_failed">"Exportació fallar"</string>
+    <string name="file">"Arxiu"</string>
+    <string name="local_storage">"Emmagatzematge local"</string>
+    <string name="backup_location">"Còpia de seguretat Ubicació"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Còpia de seguretat"</string>
+    <string name="restore">"Restaurar"</string>
+    <string name="backup_complete">"Còpia de seguretat completa"</string>
+    <string name="restore_complete">"Restaurar completa"</string>
+    <string name="backup_failed">"Còpia de seguretat frustrada"</string>
+    <string name="restore_failed">"Restaurar Error"</string>
+    <string name="include_log">"Inclogui Sessió"</string>
+    <string name="select_atleast_one">"Seleccioneu com a mínim un article"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Gran"</string>
     <string name="short_">"Curt"</string>
     <string name="long_">"Molt temps"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Seleccionar"</string>
+    <string name="select_all">"Seleccionar Tot"</string>
+    <string name="select_none">"Seleccioneu Cap"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Completa"</string>
     <string name="completed">"Completat"</string>
     <string name="incomplete">"Incomplet"</string>
+    <string name="invalid_path">"Ruta no vàlida"</string>
+    <string name="invalid_file">"Arxiu no vàlid"</string>
 
     <!--
         Common Menu Pages

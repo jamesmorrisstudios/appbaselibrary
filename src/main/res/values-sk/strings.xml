@@ -129,6 +129,14 @@
     <string name="lifetime">"Život"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Budúci"</string>
+    <string name="previous">"Predchádzajúci"</string>
+    <string name="back">"Späť"</string>
+    <string name="forward">"Dopredu"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Vzor 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Vzor 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Dovoz"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Pripomenutie"</string>
     <string name="import_all">"Importovať všetko"</string>
     <string name="export_all">"Export Všetko"</string>
+    <string name="export_to">"Export do"</string>
+    <string name="export_location">"Export Umiestnenie"</string>
+    <string name="export_failed">"Export zlyhalo"</string>
+    <string name="file">"Súbor"</string>
+    <string name="local_storage">"Miestne úložisko"</string>
+    <string name="backup_location">"Zálohovanie Umiestnenie"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Zálohovanie"</string>
+    <string name="restore">"Obnoviť"</string>
+    <string name="backup_complete">"Zálohovanie Complete"</string>
+    <string name="restore_complete">"Obnovenie Complete"</string>
+    <string name="backup_failed">"Zálohovanie zlyhalo"</string>
+    <string name="restore_failed">"Obnovenie zlyhalo"</string>
+    <string name="include_log">"Zahrnúť Prihlásiť"</string>
+    <string name="select_atleast_one">"Vyberte aspoň jednu položku"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Rozsiahly"</string>
     <string name="short_">"Short"</string>
     <string name="long_">"Dlhé"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Vybrať"</string>
+    <string name="select_all">"Vybrať všetko"</string>
+    <string name="select_none">"Zvoľte None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Kompletné"</string>
     <string name="completed">"Dokončené"</string>
     <string name="incomplete">"Neúplné"</string>
+    <string name="invalid_path">"Neplatná cesta"</string>
+    <string name="invalid_file">"Neplatný súbor"</string>
 
     <!--
         Common Menu Pages

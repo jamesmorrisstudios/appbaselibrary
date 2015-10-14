@@ -129,6 +129,14 @@
     <string name="lifetime">"一生"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"次"</string>
+    <string name="previous">"以前の"</string>
+    <string name="back">"バック"</string>
+    <string name="forward">"フォワード"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"パターン1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"パターン6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"インポート"</string>
     <string name="export">"エクスポート"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"エクスポートリマインダー"</string>
     <string name="import_all">"すべてインポート"</string>
     <string name="export_all">"すべてエクスポート"</string>
+    <string name="export_to">"エクスポートするには"</string>
+    <string name="export_location">"エクスポート場所"</string>
+    <string name="export_failed">"エクスポートが失敗しました。"</string>
+    <string name="file">"ファイル"</string>
+    <string name="local_storage">"ローカル・ストレージ"</string>
+    <string name="backup_location">"バックアップ場所"</string>
+    <string name="backup_restore">"バックアップ/復元"</string>
+    <string name="backup">"バックアップ"</string>
+    <string name="restore">"復元"</string>
+    <string name="backup_complete">"バックアップの完了"</string>
+    <string name="restore_complete">"完全な復元"</string>
+    <string name="backup_failed">"失敗したバックアップ"</string>
+    <string name="restore_failed">"失敗した復元"</string>
+    <string name="include_log">"ログを含めます"</string>
+    <string name="select_atleast_one">"少なくとも1つの項目を選択"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"ラージ"</string>
     <string name="short_">"ショート"</string>
     <string name="long_">"ロング"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"選択"</string>
+    <string name="select_all">"全て選択"</string>
+    <string name="select_none">"何も選択しません"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"コンプリート"</string>
     <string name="completed">"完了"</string>
     <string name="incomplete">"不完全な"</string>
+    <string name="invalid_path">"無効なパス"</string>
+    <string name="invalid_file">"無効なファイル"</string>
 
     <!--
         Common Menu Pages
@@ -494,7 +526,7 @@
     <string name="randremind_settings_1_primary">"カスタム通知を使用してください"</string>
     <string name="randremind_settings_1_secondary">"カスタム通知を無効にし、標準のシステムに戻すことはチェックを外します"</string>
     <string name="randremind_settings_2_primary">"継続的な通知を使用します"</string>
-    <string name="randremind_settings_2_secondary">"通知はそれを離れてスワイプしてdismissibleできるようにするためのチェックを外します。継続的な通知はアンドロイドウェアでサポートされていません。"</string>
+    <string name="randremind_settings_2_secondary">"通知はそれを離れてスワイプしてdismissibleできるようにするためのチェックを外します。継続的な通知は、Android Wearにサポートされていません。"</string>
     <string name="randremind_settings_3_primary">"明るい背景と暗いテキストの通知テーマを使用してください"</string>
     <string name="randremind_settings_3_secondary">"暗い背景と光のテキストの暗い通知テーマを使用してチェックを外します"</string>
     <string name="randremind_settings_4_primary">"週の最初の日"</string>

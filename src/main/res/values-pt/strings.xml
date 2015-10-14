@@ -129,6 +129,14 @@
     <string name="lifetime">"Tempo de vida"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Next"</string>
+    <string name="previous">"Anterior"</string>
+    <string name="back">"Costas"</string>
+    <string name="forward">"Para a frente"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Padrão 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Padrão 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Importação"</string>
     <string name="export">"Exportação"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Exportação Reminder"</string>
     <string name="import_all">"Import Todos"</string>
     <string name="export_all">"Exportar tudo"</string>
+    <string name="export_to">"Para exportação"</string>
+    <string name="export_location">"Local de exportação"</string>
+    <string name="export_failed">"Falha na Exportação"</string>
+    <string name="file">"Arquivo"</string>
+    <string name="local_storage">"Armazenamento local"</string>
+    <string name="backup_location">"Local de Backup"</string>
+    <string name="backup_restore">"Restauração de backup"</string>
+    <string name="backup">"Cópia de segurança"</string>
+    <string name="restore">"Restaurar"</string>
+    <string name="backup_complete">"Completa de backup"</string>
+    <string name="restore_complete">"Restauração concluída"</string>
+    <string name="backup_failed">"Backup falhou"</string>
+    <string name="restore_failed">"Restauração Falha"</string>
+    <string name="include_log">"Incluir Log"</string>
+    <string name="select_atleast_one">"Selecione pelo menos um item"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Grande"</string>
     <string name="short_">"Baixo"</string>
     <string name="long_">"Grandes"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Selecionar"</string>
+    <string name="select_all">"Selecionar tudo"</string>
+    <string name="select_none">"Selecione nenhum"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Completo"</string>
     <string name="completed">"Concluído"</string>
     <string name="incomplete">"Incompleto"</string>
+    <string name="invalid_path">"Caminho inválido"</string>
+    <string name="invalid_file">"Arquivo inválido"</string>
 
     <!--
         Common Menu Pages

@@ -129,6 +129,14 @@
     <string name="lifetime">"Cả đời"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Kế tiếp"</string>
+    <string name="previous">"Trước"</string>
+    <string name="back">"Trở lại"</string>
+    <string name="forward">"Phía trước"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Mẫu 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Pattern 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Nhập khẩu"</string>
     <string name="export">"Xuất khẩu"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Xuất Reminder"</string>
     <string name="import_all">"Nhập Tất cả"</string>
     <string name="export_all">"Xuất Tất cả"</string>
+    <string name="export_to">"Để xuất khẩu"</string>
+    <string name="export_location">"Xuất Location"</string>
+    <string name="export_failed">"Xuất Không"</string>
+    <string name="file">"Hồ sơ"</string>
+    <string name="local_storage">"Local Storage"</string>
+    <string name="backup_location">"Backup Location"</string>
+    <string name="backup_restore">"Phục hồi dữ liệu đã lưu"</string>
+    <string name="backup">"Sao lưu"</string>
+    <string name="restore">"Khôi phục"</string>
+    <string name="backup_complete">"Sao lưu hoàn"</string>
+    <string name="restore_complete">"Restore Complete"</string>
+    <string name="backup_failed">"Sao lưu Không thành công"</string>
+    <string name="restore_failed">"Khôi phục không thành công"</string>
+    <string name="include_log">"Bao gồm Log"</string>
+    <string name="select_atleast_one">"Chọn ít nhất một mục"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Lớn"</string>
     <string name="short_">"Ngắn"</string>
     <string name="long_">"Dài"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Lựa chọn"</string>
+    <string name="select_all">"Chọn tất cả"</string>
+    <string name="select_none">"Chọn None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Hoàn thành"</string>
     <string name="completed">"Đã hoàn thành"</string>
     <string name="incomplete">"Không đầy đủ"</string>
+    <string name="invalid_path">"Đường dẫn không hợp lệ"</string>
+    <string name="invalid_file">"Tập tin không hợp lệ"</string>
 
     <!--
         Common Menu Pages

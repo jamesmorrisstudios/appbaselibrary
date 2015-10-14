@@ -108,7 +108,7 @@
     <string name="start_time">"Starttijd"</string>
     <string name="end_time">"Eindtijd"</string>
     <string name="timing_type">"Timing Type"</string>
-    <string name="edit_times">"Aantal keren bewerken"</string>
+    <string name="edit_times">"Bewerk Times"</string>
     <string name="time">"Tijd"</string>
     <string name="times">"Times"</string>
     <string name="timing">"Timing"</string>
@@ -129,6 +129,14 @@
     <string name="lifetime">"Levenslang"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Volgende"</string>
+    <string name="previous">"Vorig"</string>
+    <string name="back">"Terug"</string>
+    <string name="forward">"Vooruit"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Patroon 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Patroon 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Import"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Herinnering"</string>
     <string name="import_all">"Import Alle"</string>
     <string name="export_all">"Alles exporteren"</string>
+    <string name="export_to">"Exporteren naar"</string>
+    <string name="export_location">"Export Locatie"</string>
+    <string name="export_failed">"Export mislukt"</string>
+    <string name="file">"Bestand"</string>
+    <string name="local_storage">"Lokale opslag"</string>
+    <string name="backup_location">"Backup Locatie"</string>
+    <string name="backup_restore">"Back-up herstellen"</string>
+    <string name="backup">"Backup"</string>
+    <string name="restore">"Herstellen"</string>
+    <string name="backup_complete">"Backup Compleet"</string>
+    <string name="restore_complete">"Terugzetten voltooid"</string>
+    <string name="backup_failed">"Backup mislukt"</string>
+    <string name="restore_failed">"Herstellen mislukt"</string>
+    <string name="include_log">"Omvatten Inloggen"</string>
+    <string name="select_atleast_one">"Selecteer ten minste één punt"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Groot"</string>
     <string name="short_">"Kort"</string>
     <string name="long_">"Lang"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Select"</string>
+    <string name="select_all">"Alles selecteren"</string>
+    <string name="select_none">"Niets selecteren"</string>
 
     <!--
        Difficulty/Game Options
@@ -212,11 +242,13 @@
     <string name="failed_open_link">"Mislukt link te openen"</string>
     <string name="app_open_fail">"Niet app openen"</string>
     <string name="no_items_found">"Geen items gevonden"</string>
-    <string name="data_load_fail">"Lijst met herinneringen laden mislukt"</string>
+    <string name="data_load_fail">"Verzuimd om de lijst te laden"</string>
     <string name="invalid_time">"Ongeldige tijd"</string>
     <string name="complete">"Compleet"</string>
     <string name="completed">"Voltooid"</string>
     <string name="incomplete">"Onvolledig"</string>
+    <string name="invalid_path">"Ongeldige Path"</string>
+    <string name="invalid_file">"Ongeldig bestand"</string>
 
     <!--
         Common Menu Pages
@@ -282,7 +314,7 @@
     -->
     <string name="message">"Bericht"</string>
     <string name="messages">"Berichten"</string>
-    <string name="num_messages">"Aantal berichten"</string>
+    <string name="num_messages">"Aantal Berichten"</string>
     <string name="edit_messages">"Berichten bewerken"</string>
 
     <!--
@@ -443,10 +475,10 @@
     <!--
         Toast Messages
     -->
-    <string name="reminder_cancel">"Wijzigingen geannuleerd"</string>
+    <string name="reminder_cancel">"Veranderingen Afgedankte"</string>
     <string name="reminder_save">"Wijzigingen opgeslagen"</string>
-    <string name="reminder_delete">"Herinnering verwijderd"</string>
-    <string name="reminder_duplicate">"Herinnering gedupliceerd"</string>
+    <string name="reminder_delete">"Herinnering Verwijderde"</string>
+    <string name="reminder_duplicate">"Herinnering Gedupliceerde"</string>
     <string name="no_changes">"Geen veranderingen"</string>
 
 	<!--
@@ -477,26 +509,26 @@
         Randomly RemindMe Specific
     -->
     <string name="no_reminders_yet">"U heeft nog geen herinneringen."</string>
-    <string name="delete_reminder_prompt_title">"Verwijder herinnering"</string>
-    <string name="delete_reminder_prompt_content">"Bent u zeker dat u deze herinnering wil verwijderen?"</string>
-    <string name="cancel_reminder_prompt_title">"Annuleer wijzigingen"</string>
-    <string name="cancel_reminder_prompt_content">"Bent u zeker dat u uw wijzigingen wil annuleren?"</string>
-    <string name="duplicate_reminder_prompt_title">"Dupliceer herinnering"</string>
-    <string name="duplicate_reminder_prompt_content">"Bent u zeker dat u deze herinnering wil dupliceren?"</string>
-    <string name="notification_theme_title">"Selecteer de meldingsstijl die past bij uw telefoon"</string>
+    <string name="delete_reminder_prompt_title">"Wissen Herinnering"</string>
+    <string name="delete_reminder_prompt_content">"Bent u zeker dat u deze herinnering verwijderen?"</string>
+    <string name="cancel_reminder_prompt_title">"Veranderingen ongedaan maken"</string>
+    <string name="cancel_reminder_prompt_content">"Bent u zeker dat u uw wijzigingen weggooien?"</string>
+    <string name="duplicate_reminder_prompt_title">"Duplicate Herinnering"</string>
+    <string name="duplicate_reminder_prompt_content">"Bent u zeker dat u deze herinnering dupliceren?"</string>
+    <string name="notification_theme_title">"Selecteer de melding stijl die past bij uw telefoon"</string>
     <string name="alerts_per_day">"Herinneringen per dag"</string>
 
     <!--
         Randomly RemindMe Settings
     -->
-    <string name="randremind_settings_0_primary">"Melding opent samenvatting"</string>
-    <string name="randremind_settings_0_secondary">"Haal het vinkje weg om melding in stilte te bevestigen"</string>
-    <string name="randremind_settings_1_primary">"Gebruik aangepaste melding"</string>
-    <string name="randremind_settings_1_secondary">"Verwijder het vinkje om de aangepaste melding uit te schakelen en terug te keren naar de standaard instelling"</string>
-    <string name="randremind_settings_2_primary">"Gebruik lopende melding"</string>
-    <string name="randremind_settings_2_secondary">"Verwijder het vinkje om toe te laten dat de melding kan worden afgewezen door te vegen. Lopende meldingen worden niet ondersteund op Android Wear"</string>
-    <string name="randremind_settings_3_primary">"Gebruik meldingsthema met een lichte achtergrond en donkere tekst"</string>
-    <string name="randremind_settings_3_secondary">"Verwijder het vinkje om het donkere meldingsthema te gebruiken met een donkere achtergrond en lichte tekst"</string>
+    <string name="randremind_settings_0_primary">"Kennisgeving opent samenvatting"</string>
+    <string name="randremind_settings_0_secondary">"Haal het vinkje weg om melding te maken in stilte te erkennen"</string>
+    <string name="randremind_settings_1_primary">"Aangepaste melding"</string>
+    <string name="randremind_settings_1_secondary">"Verwijder het vinkje om de aangepaste melding uit te schakelen en terug te keren naar de standaard systeem"</string>
+    <string name="randremind_settings_2_primary">"Gebruik lopende kennisgeving"</string>
+    <string name="randremind_settings_2_secondary">"Verwijder het vinkje om de kennisgeving aan afgezet kunnen door met het weg zijn. Lopende meldingen worden niet ondersteund op Android Wear"</string>
+    <string name="randremind_settings_3_primary">"Gebruik melding thema van een lichte achtergrond en donkere tekst"</string>
+    <string name="randremind_settings_3_secondary">"Verwijder het vinkje om donkere kennisgeving thema te gebruiken van een donkere achtergrond en lichte tekst"</string>
     <string name="randremind_settings_4_primary">"Eerste dag van de week"</string>
     <string name="randremind_settings_4_secondary">" "</string>
 
@@ -527,7 +559,7 @@
     <string name="custom">"Custom"</string>
     <string name="title">"Titel"</string>
     <string name="notification">"Kennisgeving"</string>
-    <string name="select_notification">"Selecteer melding"</string>
+    <string name="select_notification">"Select Notification"</string>
     <string name="color">"Kleur"</string>
     <string name="tone">"Toon"</string>
     <string name="sound">"Klinken"</string>

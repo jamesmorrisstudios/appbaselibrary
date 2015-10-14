@@ -129,6 +129,14 @@
     <string name="lifetime">"Живот"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Следващия"</string>
+    <string name="previous">"Предишен"</string>
+    <string name="back">"Обратно"</string>
+    <string name="forward">"Напред"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Pattern 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Модела 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Внос"</string>
     <string name="export">"Износ"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Reminder"</string>
     <string name="import_all">"Import All"</string>
     <string name="export_all">"Export All"</string>
+    <string name="export_to">"Износ за"</string>
+    <string name="export_location">"Export местоположение"</string>
+    <string name="export_failed">"Export Неуспешно"</string>
+    <string name="file">"Пила"</string>
+    <string name="local_storage">"Local Storage"</string>
+    <string name="backup_location">"Backup местоположение"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Резервно копие"</string>
+    <string name="restore">"Възстановявам"</string>
+    <string name="backup_complete">"Backup Complete"</string>
+    <string name="restore_complete">"Restore Complete"</string>
+    <string name="backup_failed">"Backup неуспешно"</string>
+    <string name="restore_failed">"Възстановяване Неуспешно"</string>
+    <string name="include_log">"Включи се Вход"</string>
+    <string name="select_atleast_one">"Изберете най-малко една точка"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Голям"</string>
     <string name="short_">"Кратко"</string>
     <string name="long_">"Дълго"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Изберете"</string>
+    <string name="select_all">"Избери всички"</string>
+    <string name="select_none">"Изберете None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Пълен"</string>
     <string name="completed">"Завършен"</string>
     <string name="incomplete">"Непълен"</string>
+    <string name="invalid_path">"Невалиден Path"</string>
+    <string name="invalid_file">"Invalid File"</string>
 
     <!--
         Common Menu Pages

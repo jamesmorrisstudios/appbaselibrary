@@ -129,6 +129,14 @@
     <string name="lifetime">"आजीवन"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"अगला"</string>
+    <string name="previous">"पूर्व"</string>
+    <string name="back">"वापस"</string>
+    <string name="forward">"आगे"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"पैटर्न 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"पैटर्न 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"आयात"</string>
     <string name="export">"निर्यात"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"निर्यात रिमाइंडर"</string>
     <string name="import_all">"आयात सभी"</string>
     <string name="export_all">"सभी निर्यात"</string>
+    <string name="export_to">"को निर्यात"</string>
+    <string name="export_location">"निर्यात स्थान"</string>
+    <string name="export_failed">"निर्यात विफल"</string>
+    <string name="file">"फ़ाइल"</string>
+    <string name="local_storage">"स्थानीय भंडार"</string>
+    <string name="backup_location">"बैकअप स्थान"</string>
+    <string name="backup_restore">"बैकअप बहाल"</string>
+    <string name="backup">"बैकअप"</string>
+    <string name="restore">"पुनर्स्थापित"</string>
+    <string name="backup_complete">"बैकअप पूरा"</string>
+    <string name="restore_complete">"पूरा पुनर्स्थापित"</string>
+    <string name="backup_failed">"विफल बैकअप"</string>
+    <string name="restore_failed">"पुनर्स्थापित विफल"</string>
+    <string name="include_log">"लॉग शामिल"</string>
+    <string name="select_atleast_one">"कम से कम एक आइटम का चयन करें"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"बड़ा"</string>
     <string name="short_">"कम"</string>
     <string name="long_">"लंबे समय तक"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"चुनना"</string>
+    <string name="select_all">"सबका चयन करें"</string>
+    <string name="select_none">"किसी का चयन न करें"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"पूरा"</string>
     <string name="completed">"पूरे किए"</string>
     <string name="incomplete">"अधूरा"</string>
+    <string name="invalid_path">"अवैध्य मार्ग"</string>
+    <string name="invalid_file">"अमान्य लेख्यपत्र"</string>
 
     <!--
         Common Menu Pages

@@ -129,6 +129,14 @@
     <string name="lifetime">"Διάρκεια Ζωής"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Επόμενο"</string>
+    <string name="previous">"Προηγούμενο"</string>
+    <string name="back">"Πίσω"</string>
+    <string name="forward">"Προς τα εμπρός"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Pattern 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Pattern 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Εισαγωγή"</string>
     <string name="export">"Εξαγωγή"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Εξαγωγή Υπενθύμιση"</string>
     <string name="import_all">"Εισαγωγή όλων"</string>
     <string name="export_all">"Εξαγωγή Όλα"</string>
+    <string name="export_to">"Εξαγωγή σε"</string>
+    <string name="export_location">"Εξαγωγή Τοποθεσία"</string>
+    <string name="export_failed">"Η εξαγωγή απέτυχε"</string>
+    <string name="file">"Αρχείο"</string>
+    <string name="local_storage">"Τοπική αποθήκευση"</string>
+    <string name="backup_location">"Αντιγράφων ασφαλείας Τοποθεσία"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Αντιγράφων ασφαλείας"</string>
+    <string name="restore">"Επαναφορά"</string>
+    <string name="backup_complete">"Πλήρης δημιουργία αντιγράφων ασφαλείας"</string>
+    <string name="restore_complete">"Επαναφορά Ολοκλήρωση"</string>
+    <string name="backup_failed">"Απέτυχε η δημιουργία αντιγράφων ασφαλείας"</string>
+    <string name="restore_failed">"Επαναφορά Αποτυχία"</string>
+    <string name="include_log">"Συμπεριλάβετε Είσοδος"</string>
+    <string name="select_atleast_one">"Επιλέξτε τουλάχιστον ένα στοιχείο"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Μεγάλο"</string>
     <string name="short_">"Σύντομο"</string>
     <string name="long_">"Μακριά"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Επιλέξτε"</string>
+    <string name="select_all">"Επίλεξέ τα όλα"</string>
+    <string name="select_none">"Καμία επιλογή"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Ολοκλήρωση"</string>
     <string name="completed">"Ολοκληρώθηκε"</string>
     <string name="incomplete">"Ατελής"</string>
+    <string name="invalid_path">"Άκυρα Path"</string>
+    <string name="invalid_file">"Μη έγκυρο αρχείο"</string>
 
     <!--
         Common Menu Pages

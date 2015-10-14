@@ -129,6 +129,14 @@
     <string name="lifetime">"일생"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"다음"</string>
+    <string name="previous">"이전"</string>
+    <string name="back">"백"</string>
+    <string name="forward">"앞으로"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"패턴 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"패턴 (6)"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"수입"</string>
     <string name="export">"수출"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"수출 알림"</string>
     <string name="import_all">"모두 가져 오기"</string>
     <string name="export_all">"모두 내보내기"</string>
+    <string name="export_to">"수출로"</string>
+    <string name="export_location">"수출 위치"</string>
+    <string name="export_failed">"수출 실패"</string>
+    <string name="file">"파일"</string>
+    <string name="local_storage">"로컬 저장소"</string>
+    <string name="backup_location">"백업 위치"</string>
+    <string name="backup_restore">"백업 / 복원"</string>
+    <string name="backup">"백업"</string>
+    <string name="restore">"복원"</string>
+    <string name="backup_complete">"백업 완료"</string>
+    <string name="restore_complete">"전체 복원"</string>
+    <string name="backup_failed">"실패한 백업"</string>
+    <string name="restore_failed">"복원 실패"</string>
+    <string name="include_log">"로그인을 포함"</string>
+    <string name="select_atleast_one">"하나 이상의 항목을 선택"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"큰"</string>
     <string name="short_">"짧은"</string>
     <string name="long_">"긴"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"선택"</string>
+    <string name="select_all">"모두 선택"</string>
+    <string name="select_none">"선택 없음"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"완전한"</string>
     <string name="completed">"완료"</string>
     <string name="incomplete">"불완전한"</string>
+    <string name="invalid_path">"잘못된 경로"</string>
+    <string name="invalid_file">"잘못된 파일"</string>
 
     <!--
         Common Menu Pages

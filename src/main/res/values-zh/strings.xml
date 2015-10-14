@@ -129,6 +129,14 @@
     <string name="lifetime">"一生"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"下一个"</string>
+    <string name="previous">"上一页"</string>
+    <string name="back">"背部"</string>
+    <string name="forward">"前进"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"模式1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"模式6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"输入"</string>
     <string name="export">"出口"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"出口提醒"</string>
     <string name="import_all">"全部导入"</string>
     <string name="export_all">"全部导出"</string>
+    <string name="export_to">"导出到"</string>
+    <string name="export_location">"导出位置"</string>
+    <string name="export_failed">"导出失败"</string>
+    <string name="file">"档"</string>
+    <string name="local_storage">"本地存储"</string>
+    <string name="backup_location">"备份位置"</string>
+    <string name="backup_restore">"备份还原"</string>
+    <string name="backup">"备份"</string>
+    <string name="restore">"修复"</string>
+    <string name="backup_complete">"备份完成"</string>
+    <string name="restore_complete">"还原整个"</string>
+    <string name="backup_failed">"备份失败"</string>
+    <string name="restore_failed">"还原失败"</string>
+    <string name="include_log">"包括日志"</string>
+    <string name="select_atleast_one">"至少选择一个项目"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"大"</string>
     <string name="short_">"短"</string>
     <string name="long_">"长"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"选"</string>
+    <string name="select_all">"全选"</string>
+    <string name="select_none">"选择无"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"完成"</string>
     <string name="completed">"已完成"</string>
     <string name="incomplete">"残缺不全"</string>
+    <string name="invalid_path">"无效路径"</string>
+    <string name="invalid_file">"无效的文件"</string>
 
     <!--
         Common Menu Pages

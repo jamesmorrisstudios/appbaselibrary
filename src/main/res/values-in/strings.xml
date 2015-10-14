@@ -129,6 +129,14 @@
     <string name="lifetime">"Seumur hidup"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Berikutnya"</string>
+    <string name="previous">"Sebelumnya"</string>
+    <string name="back">"Kembali"</string>
+    <string name="forward">"Depan"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Pola 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Pola 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Impor"</string>
     <string name="export">"Ekspor"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Pengingat ekspor"</string>
     <string name="import_all">"Impor Semua"</string>
     <string name="export_all">"Ekspor Semua"</string>
+    <string name="export_to">"Untuk ekspor"</string>
+    <string name="export_location">"Ekspor Lokasi"</string>
+    <string name="export_failed">"Ekspor Gagal"</string>
+    <string name="file">"Berkas"</string>
+    <string name="local_storage">"Penyimpanan lokal"</string>
+    <string name="backup_location">"Backup Lokasi"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Backup"</string>
+    <string name="restore">"Mengembalikan"</string>
+    <string name="backup_complete">"Backup Lengkap"</string>
+    <string name="restore_complete">"Kembalikan Lengkap"</string>
+    <string name="backup_failed">"Backup Gagal"</string>
+    <string name="restore_failed">"Kembalikan Gagal"</string>
+    <string name="include_log">"Sertakan Log"</string>
+    <string name="select_atleast_one">"Pilih setidaknya satu item"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Besar"</string>
     <string name="short_">"Pendek"</string>
     <string name="long_">"Panjang"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Memilih"</string>
+    <string name="select_all">"Pilih Semua"</string>
+    <string name="select_none">"Pilih None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Lengkap"</string>
     <string name="completed">"Selesai"</string>
     <string name="incomplete">"Tidak lengkap"</string>
+    <string name="invalid_path">"Jalur tidak valid"</string>
+    <string name="invalid_file">"File yang tidak valid"</string>
 
     <!--
         Common Menu Pages

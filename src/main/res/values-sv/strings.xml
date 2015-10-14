@@ -129,6 +129,14 @@
     <string name="lifetime">"Livstid"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Nästa"</string>
+    <string name="previous">"Föregående"</string>
+    <string name="back">"Tillbaka"</string>
+    <string name="forward">"Framåt"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Mönster 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Mönster 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Import"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Påminnelse"</string>
     <string name="import_all">"Importera alla"</string>
     <string name="export_all">"Export Alla"</string>
+    <string name="export_to">"Exportera till"</string>
+    <string name="export_location">"Export Plats"</string>
+    <string name="export_failed">"Export misslyckades"</string>
+    <string name="file">"Fil"</string>
+    <string name="local_storage">"Lokal lagring"</string>
+    <string name="backup_location">"Backup Plats"</string>
+    <string name="backup_restore">"Säkerhetskopiering återställning"</string>
+    <string name="backup">"Backup"</string>
+    <string name="restore">"Restore"</string>
+    <string name="backup_complete">"Backup Komplett"</string>
+    <string name="restore_complete">"Restore Complete"</string>
+    <string name="backup_failed">"Backup misslyckades"</string>
+    <string name="restore_failed">"Restore Misslyckades"</string>
+    <string name="include_log">"Inkludera Log"</string>
+    <string name="select_atleast_one">"Välj åtminstone en punkt"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Stor"</string>
     <string name="short_">"Kort"</string>
     <string name="long_">"Lång"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Välj"</string>
+    <string name="select_all">"Välj alla"</string>
+    <string name="select_none">"Välj None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Komplett"</string>
     <string name="completed">"Avslutat"</string>
     <string name="incomplete">"Ofullständig"</string>
+    <string name="invalid_path">"Ogiltigt Path"</string>
+    <string name="invalid_file">"Felaktig fil"</string>
 
     <!--
         Common Menu Pages

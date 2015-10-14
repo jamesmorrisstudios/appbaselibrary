@@ -129,6 +129,14 @@
     <string name="lifetime">"Élettartam"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Következő"</string>
+    <string name="previous">"Előző"</string>
+    <string name="back">"Vissza"</string>
+    <string name="forward">"Előre"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Minta 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Minta 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Import"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Emlékeztető"</string>
     <string name="import_all">"Az összes importálása"</string>
     <string name="export_all">"Export Összes"</string>
+    <string name="export_to">"Export To"</string>
+    <string name="export_location">"Export Helyszín"</string>
+    <string name="export_failed">"Az exportálás sikertelen"</string>
+    <string name="file">"Fájl"</string>
+    <string name="local_storage">"Helyi tárolás"</string>
+    <string name="backup_location">"Backup hely"</string>
+    <string name="backup_restore">"Biztonsági mentés visszaállítása"</string>
+    <string name="backup">"biztonsági mentés"</string>
+    <string name="restore">"visszaállítás"</string>
+    <string name="backup_complete">"A mentés elkészült"</string>
+    <string name="restore_complete">"Restore Complete"</string>
+    <string name="backup_failed">"Biztonsági mentés nem sikerült"</string>
+    <string name="restore_failed">"Visszaállítás nem sikerült"</string>
+    <string name="include_log">"Log-"</string>
+    <string name="select_atleast_one">"Válasszon ki legalább egy elemet"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Nagy"</string>
     <string name="short_">"Rövid"</string>
     <string name="long_">"Hosszú"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Válassza ki"</string>
+    <string name="select_all">"Mindet kiválaszt"</string>
+    <string name="select_none">"Select None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"teljes"</string>
     <string name="completed">"Befejezett"</string>
     <string name="incomplete">"Befejezetlen"</string>
+    <string name="invalid_path">"Érvénytelen útvonal"</string>
+    <string name="invalid_file">"Érvénytelen fájl"</string>
 
     <!--
         Common Menu Pages

@@ -129,6 +129,14 @@
     <string name="lifetime">"Elinaika"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Seuraava"</string>
+    <string name="previous">"Edellinen"</string>
+    <string name="back">"Takaisin"</string>
+    <string name="forward">"Eteenpäin"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Kuvio 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Kuvio 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Tuoda maahan"</string>
     <string name="export">"Vienti"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Vie Muistutus"</string>
     <string name="import_all">"Tuo kaikki"</string>
     <string name="export_all">"Vie kaikki"</string>
+    <string name="export_to">"Vie"</string>
+    <string name="export_location">"Vie Sijainti"</string>
+    <string name="export_failed">"Vienti epäonnistui"</string>
+    <string name="file">"Tiedosto"</string>
+    <string name="local_storage">"Paikallinen tallennus"</string>
+    <string name="backup_location">"Varmuuskopio Sijainti"</string>
+    <string name="backup_restore">"Varmuuskopio"</string>
+    <string name="backup">"Varmuuskopio"</string>
+    <string name="restore">"Palauttaa"</string>
+    <string name="backup_complete">"Backup Complete"</string>
+    <string name="restore_complete">"Palautus on valmis"</string>
+    <string name="backup_failed">"Varmuuskopiointi epäonnistui"</string>
+    <string name="restore_failed">"Palauta epäonnistui"</string>
+    <string name="include_log">"Sisällytä Log"</string>
+    <string name="select_atleast_one">"Valitse ainakin yksi kohde"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Suuri"</string>
     <string name="short_">"Lyhyt"</string>
     <string name="long_">"Pitkä"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Valita"</string>
+    <string name="select_all">"Valitse kaikki"</string>
+    <string name="select_none">"Valitse Ei mitään"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Täydellinen"</string>
     <string name="completed">"Valmistunut"</string>
     <string name="incomplete">"Epätäydellinen"</string>
+    <string name="invalid_path">"Virheellinen polku"</string>
+    <string name="invalid_file">"Virheellinen tiedosto"</string>
 
     <!--
         Common Menu Pages

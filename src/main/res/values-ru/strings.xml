@@ -129,6 +129,14 @@
     <string name="lifetime">"Продолжительность жизни"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Следующий"</string>
+    <string name="previous">"Предыдущий"</string>
+    <string name="back">"Назад"</string>
+    <string name="forward">"Вперед"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Шаблон 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Шаблон 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Импортировать"</string>
     <string name="export">"Экспорт"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Экспорт Напоминание"</string>
     <string name="import_all">"Импортировать все"</string>
     <string name="export_all">"Экспорт всех"</string>
+    <string name="export_to">"Экспорт в"</string>
+    <string name="export_location">"Экспорт Местоположение"</string>
+    <string name="export_failed">"Ошибка экспорта"</string>
+    <string name="file">"файл"</string>
+    <string name="local_storage">"Локальное хранилище"</string>
+    <string name="backup_location">"Место резервирования"</string>
+    <string name="backup_restore">"Восстановление резервной копии"</string>
+    <string name="backup">"Резервное копирование"</string>
+    <string name="restore">"Восстановить"</string>
+    <string name="backup_complete">"Резервное копирование Полное"</string>
+    <string name="restore_complete">"Восстановить полный"</string>
+    <string name="backup_failed">"Ошибка резервного копирования"</string>
+    <string name="restore_failed">"Восстановить удалось"</string>
+    <string name="include_log">"Включите Вход"</string>
+    <string name="select_atleast_one">"Выберите по крайней мере один элемент"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Большой"</string>
     <string name="short_">"короткий"</string>
     <string name="long_">"Длинный"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Выбрать"</string>
+    <string name="select_all">"Выбрать все"</string>
+    <string name="select_none">"Выберите None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Полный"</string>
     <string name="completed">"Завершен"</string>
     <string name="incomplete">"Неполный"</string>
+    <string name="invalid_path">"Неверный путь"</string>
+    <string name="invalid_file">"Неверный файл"</string>
 
     <!--
         Common Menu Pages

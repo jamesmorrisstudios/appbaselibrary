@@ -129,6 +129,14 @@
     <string name="lifetime">"Življenska doba"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Naslednja"</string>
+    <string name="previous">"Prejšnja"</string>
+    <string name="back">"Nazaj"</string>
+    <string name="forward">"Naprej"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Vzorec 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Vzorec 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Uvoz"</string>
     <string name="export">"Izvoz"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Izvoz Opomnik"</string>
     <string name="import_all">"Uvoz Vse"</string>
     <string name="export_all">"Export Vse"</string>
+    <string name="export_to">"Izvozi v"</string>
+    <string name="export_location">"Izvoz Kraj"</string>
+    <string name="export_failed">"Izvoz ni uspelo"</string>
+    <string name="file">"Datoteka"</string>
+    <string name="local_storage">"Local Storage"</string>
+    <string name="backup_location">"Backup Kraj"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Backup"</string>
+    <string name="restore">"Obnovitev"</string>
+    <string name="backup_complete">"Backup Complete"</string>
+    <string name="restore_complete">"Obnovi Complete"</string>
+    <string name="backup_failed">"Backup ni uspela"</string>
+    <string name="restore_failed">"Obnovitev ni uspela"</string>
+    <string name="include_log">"Vključi Prijava"</string>
+    <string name="select_atleast_one">"Izberite vsaj en element"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Velika"</string>
     <string name="short_">"Kratek"</string>
     <string name="long_">"Long"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Izberite"</string>
+    <string name="select_all">"Izberi vse"</string>
+    <string name="select_none">"Izberite Noben"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Complete"</string>
     <string name="completed">"Dopolnil"</string>
     <string name="incomplete">"Nepopolna"</string>
+    <string name="invalid_path">"Neveljavna pot"</string>
+    <string name="invalid_file">"Neveljavna datoteka"</string>
 
     <!--
         Common Menu Pages

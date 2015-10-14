@@ -49,6 +49,7 @@ public class NotificationContent {
     private int ledColor = 0, id;
     private ArrayList<NotificationAction> actions = new ArrayList<>();
     private PendingIntent contentIntent, deleteIntent;
+    private int notifCounter;
 
     /**
      * Constructor of all the required notification details
@@ -62,7 +63,7 @@ public class NotificationContent {
      * @param accentColor
      * @param id
      */
-    public NotificationContent(@NonNull NotificationTheme theme, @NonNull NotificationType type, @NonNull String title, @NonNull String content, @Nullable Uri tone, @DrawableRes int iconRes, int accentColor, int id) {
+    public NotificationContent(@NonNull NotificationTheme theme, @NonNull NotificationType type, @NonNull String title, @NonNull String content, @Nullable Uri tone, @DrawableRes int iconRes, int accentColor, int id, int notifCounter) {
         this.theme = theme;
         this.type = type;
         this.title = title;
@@ -71,6 +72,7 @@ public class NotificationContent {
         this.iconRes = iconRes;
         this.accentColor = accentColor;
         this.id = id;
+        this.notifCounter = notifCounter;
     }
 
     public int getId() {
@@ -222,6 +224,10 @@ public class NotificationContent {
 
     public boolean hasDeleteIntent() {
         return deleteIntent != null;
+    }
+
+    public int getNotifCounter() {
+        return notifCounter;
     }
 
     public enum NotificationType {

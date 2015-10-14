@@ -129,6 +129,14 @@
     <string name="lifetime">"อายุการใช้งาน"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"ถัดไป"</string>
+    <string name="previous">"ก่อนหน้า"</string>
+    <string name="back">"ด้านหลัง"</string>
+    <string name="forward">"ไปข้างหน้า"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"แบบที่ 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"แบบที่ 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"นำเข้า"</string>
     <string name="export">"การส่งออก"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"เตือนส่งออก"</string>
     <string name="import_all">"นำเข้าทั้งหมด"</string>
     <string name="export_all">"การส่งออกทั้งหมด"</string>
+    <string name="export_to">"การส่งออก"</string>
+    <string name="export_location">"การส่งออกที่ตั้ง"</string>
+    <string name="export_failed">"ส่งออกไม่"</string>
+    <string name="file">"ไฟล์"</string>
+    <string name="local_storage">"เก็บข้อมูลท้องถิ่น"</string>
+    <string name="backup_location">"การสำรองข้อมูลที่อยู่"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"การสำรองข้อมูล"</string>
+    <string name="restore">"Restore"</string>
+    <string name="backup_complete">"การสำรองข้อมูลที่สมบูรณ์"</string>
+    <string name="restore_complete">"Restore สมบูรณ์"</string>
+    <string name="backup_failed">"การสำรองข้อมูลล้มเหลว"</string>
+    <string name="restore_failed">"ไม่สามารถเรียกคืน"</string>
+    <string name="include_log">"รวมถึงการเข้าสู่ระบบ"</string>
+    <string name="select_atleast_one">"เลือกอย่างน้อยหนึ่งรายการ"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"ใหญ่"</string>
     <string name="short_">"สั้น"</string>
     <string name="long_">"นาน"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"เลือก"</string>
+    <string name="select_all">"เลือกทั้งหมด"</string>
+    <string name="select_none">"เลือกไม่มี"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"ที่สมบูรณ์แบบ"</string>
     <string name="completed">"ที่เสร็จสมบูรณ์"</string>
     <string name="incomplete">"ไม่ครบถ้วน"</string>
+    <string name="invalid_path">"เส้นทางที่ไม่ถูกต้อง"</string>
+    <string name="invalid_file">"แฟ้มไม่ถูกต้อง"</string>
 
     <!--
         Common Menu Pages

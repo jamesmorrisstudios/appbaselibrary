@@ -21,6 +21,7 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
@@ -70,8 +71,12 @@ public final class Notifier {
 
         Notification notification;
 
+        //Bundle bundle = new Bundle();
+        //bundle.putInt(Integer.toString(notif.getNotifCounter()), notif.getNotifCounter());
+
         NotificationCompat.Builder mBuilder;
         mBuilder = new NotificationCompat.Builder(AppBase.getContext())
+                //.setExtras(bundle)
                 .setDefaults(defaults)
                 .setSmallIcon(notif.getIconRes())
                 .setContentTitle(notif.getTitle())
@@ -107,9 +112,17 @@ public final class Notifier {
             mBuilder.setAutoCancel(true);
             mBuilder.setOngoing(false);
         }
+        /*
+        NotificationCompat.WearableExtender wearableExtender = new NotificationCompat.WearableExtender();
         for (NotificationAction action : notif.getActions()) {
             mBuilder.addAction(action.getIconRes(), action.getText(), action.getPendingIntent());
+            wearableExtender.addAction(new NotificationCompat.Action(action.getIconRes(), action.getText(), action.getPendingIntent()));
         }
+        if(notif.getActions().size() > 0) {
+            mBuilder.extend(wearableExtender);
+        }
+        */
+
         if (notif.getType() == NotificationContent.NotificationType.CUSTOM) {
             notification = addCustomNotifcation(notif, mBuilder);
         } else if(notif.getType() == NotificationContent.NotificationType.CUSTOM_SNOOZE) {

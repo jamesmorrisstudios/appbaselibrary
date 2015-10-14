@@ -129,6 +129,14 @@
     <string name="lifetime">"Durée de vie"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Suivant"</string>
+    <string name="previous">"Antérieur"</string>
+    <string name="back">"Arrière"</string>
+    <string name="forward">"Vers l'avant"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Motif 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Motif 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Importer"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Exporter Rappel"</string>
     <string name="import_all">"Importer tout"</string>
     <string name="export_all">"Exporter tous"</string>
+    <string name="export_to">"Pour l'exportation"</string>
+    <string name="export_location">"Emplacement d'exportation"</string>
+    <string name="export_failed">"L'exportation a échoué"</string>
+    <string name="file">"Fichier"</string>
+    <string name="local_storage">"Stockage local"</string>
+    <string name="backup_location">"Emplacement de la sauvegarde"</string>
+    <string name="backup_restore">"Restauration de sauvegarde"</string>
+    <string name="backup">"Sauvegarde"</string>
+    <string name="restore">"Restaurer"</string>
+    <string name="backup_complete">"Sauvegarde complète"</string>
+    <string name="restore_complete">"Restauration terminée"</string>
+    <string name="backup_failed">"Échec de la sauvegarde"</string>
+    <string name="restore_failed">"Échec de la restauration"</string>
+    <string name="include_log">"Inclure Connexion"</string>
+    <string name="select_atleast_one">"Sélectionnez au moins un article"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Grand"</string>
     <string name="short_">"Court"</string>
     <string name="long_">"Long"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Sélectionner"</string>
+    <string name="select_all">"Sélectionner tout"</string>
+    <string name="select_none">"Ne rien sélectionner"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Complète"</string>
     <string name="completed">"Terminé"</string>
     <string name="incomplete">"Incomplète"</string>
+    <string name="invalid_path">"Chemin non valide"</string>
+    <string name="invalid_file">"Fichier non valide"</string>
 
     <!--
         Common Menu Pages

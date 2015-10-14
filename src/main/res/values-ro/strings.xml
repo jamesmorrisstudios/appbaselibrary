@@ -129,6 +129,14 @@
     <string name="lifetime">"Durata de viață"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Următorul"</string>
+    <string name="previous">"Precedent"</string>
+    <string name="back">"Spate"</string>
+    <string name="forward">"Înainte"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Model 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Model 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Import"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Reminder"</string>
     <string name="import_all">"Import Toate"</string>
     <string name="export_all">"Exporta toate"</string>
+    <string name="export_to">"Export în"</string>
+    <string name="export_location">"Export Locul de amplasare"</string>
+    <string name="export_failed">"Export a eșuat"</string>
+    <string name="file">"Fișier"</string>
+    <string name="local_storage">"Stocare locală"</string>
+    <string name="backup_location">"Backup Locație"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Backup"</string>
+    <string name="restore">"Restabili"</string>
+    <string name="backup_complete">"Complete Backup"</string>
+    <string name="restore_complete">"Restabili complet"</string>
+    <string name="backup_failed">"Nu a reușit Backup"</string>
+    <string name="restore_failed">"Restaurare a eșuat"</string>
+    <string name="include_log">"Includ Log"</string>
+    <string name="select_atleast_one">"Selectați cel puțin un articol"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Mare"</string>
     <string name="short_">"Scurt"</string>
     <string name="long_">"Lung"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Selecta"</string>
+    <string name="select_all">"Selectează tot"</string>
+    <string name="select_none">"Selectați Nici unul"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Complet"</string>
     <string name="completed">"Finalizat"</string>
     <string name="incomplete">"Incomplet"</string>
+    <string name="invalid_path">"Cale nevalidă"</string>
+    <string name="invalid_file">"Fișier invalid"</string>
 
     <!--
         Common Menu Pages

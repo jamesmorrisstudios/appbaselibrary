@@ -129,6 +129,14 @@
     <string name="lifetime">"Život"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Příští"</string>
+    <string name="previous">"Předchozí"</string>
+    <string name="back">"Zpět"</string>
+    <string name="forward">"Dopředu"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Vzor 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Vzor 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Dovoz"</string>
     <string name="export">"Export"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Export Připomenutí"</string>
     <string name="import_all">"Importovat vše"</string>
     <string name="export_all">"Export Vše"</string>
+    <string name="export_to">"Export do"</string>
+    <string name="export_location">"Export Umístění"</string>
+    <string name="export_failed">"Export se nezdařilo"</string>
+    <string name="file">"Soubor"</string>
+    <string name="local_storage">"Místní úložiště"</string>
+    <string name="backup_location">"Zálohování Umístění"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Zálohování"</string>
+    <string name="restore">"Obnovit"</string>
+    <string name="backup_complete">"Zálohování Complete"</string>
+    <string name="restore_complete">"Obnovení Complete"</string>
+    <string name="backup_failed">"Zálohování se nezdařilo"</string>
+    <string name="restore_failed">"Obnovení se nezdařilo"</string>
+    <string name="include_log">"Zahrnout Přihlásit"</string>
+    <string name="select_atleast_one">"Vyberte alespoň jednu položku"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Rozsáhlý"</string>
     <string name="short_">"Short"</string>
     <string name="long_">"Dlouhé"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Vybrat"</string>
+    <string name="select_all">"Vybrat vše"</string>
+    <string name="select_none">"Zvolte None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Kompletní"</string>
     <string name="completed">"Dokončeno"</string>
     <string name="incomplete">"Neúplné"</string>
+    <string name="invalid_path">"Neplatná cesta"</string>
+    <string name="invalid_file">"Neplatný soubor"</string>
 
     <!--
         Common Menu Pages

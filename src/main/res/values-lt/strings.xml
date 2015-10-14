@@ -129,6 +129,14 @@
     <string name="lifetime">"Gyvenimas"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Kitas"</string>
+    <string name="previous">"Ankstesnis"</string>
+    <string name="back">"Atgal"</string>
+    <string name="forward">"Persiųsti"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Raštas 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Raštas 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Importuoti"</string>
     <string name="export">"Eksportas"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Eksporto priminimas"</string>
     <string name="import_all">"Importas Visi"</string>
     <string name="export_all">"Eksporto Visi"</string>
+    <string name="export_to">"Eksportuoti į"</string>
+    <string name="export_location">"Eksporto Vieta"</string>
+    <string name="export_failed">"Nepavyko eksportuoti"</string>
+    <string name="file">"Failo"</string>
+    <string name="local_storage">"Vietinis saugojimas"</string>
+    <string name="backup_location">"Atsarginė Vieta"</string>
+    <string name="backup_restore">"Atsarginę kopiją / atkurti"</string>
+    <string name="backup">"Atsarginė"</string>
+    <string name="restore">"Atstatyti"</string>
+    <string name="backup_complete">"Atsarginė Užbaigti"</string>
+    <string name="restore_complete">"Atkurti Užbaigti"</string>
+    <string name="backup_failed">"Atsarginė Failed"</string>
+    <string name="restore_failed">"Atkurti Nepavyko"</string>
+    <string name="include_log">"Įtraukti Prisijungti"</string>
+    <string name="select_atleast_one">"Pasirinkite bent vieną elementą"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Didelis"</string>
     <string name="short_">"Trumpas"</string>
     <string name="long_">"Ilgai"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Pasirinkite"</string>
+    <string name="select_all">"Pasirinkti viską"</string>
+    <string name="select_none">"Pasirinkite Nėra"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Užbaigti"</string>
     <string name="completed">"Baigtas"</string>
     <string name="incomplete">"Nepilna"</string>
+    <string name="invalid_path">"Neteisingas kelias"</string>
+    <string name="invalid_file">"Netinkamas failo"</string>
 
     <!--
         Common Menu Pages

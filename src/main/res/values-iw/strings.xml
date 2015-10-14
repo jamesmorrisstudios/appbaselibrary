@@ -129,6 +129,14 @@
     <string name="lifetime">"לכל החיים"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"הבא"</string>
+    <string name="previous">"קודם"</string>
+    <string name="back">"חזור"</string>
+    <string name="forward">"קדימה"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"תבנית 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"תבנית 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"יבוא"</string>
     <string name="export">"יצוא"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"תזכורת יצוא"</string>
     <string name="import_all">"יבוא כל"</string>
     <string name="export_all">"יצוא כל"</string>
+    <string name="export_to">"יצוא ל"</string>
+    <string name="export_location">"מיקום יצוא"</string>
+    <string name="export_failed">"יצוא נכשל"</string>
+    <string name="file">"קובץ"</string>
+    <string name="local_storage">"אחסון מקומי"</string>
+    <string name="backup_location">"מיקום גיבוי"</string>
+    <string name="backup_restore">"גיבוי / שחזור"</string>
+    <string name="backup">"גיבוי"</string>
+    <string name="restore">"לשחזר"</string>
+    <string name="backup_complete">"שלם גיבוי"</string>
+    <string name="restore_complete">"שחזור מלא"</string>
+    <string name="backup_failed">"גיבוי נכשל"</string>
+    <string name="restore_failed">"השחזור נכשל"</string>
+    <string name="include_log">"כולל התחבר"</string>
+    <string name="select_atleast_one">"בחר לפחות פריט אחד"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"גדול"</string>
     <string name="short_">"קצר"</string>
     <string name="long_">"ארוך"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"בחר"</string>
+    <string name="select_all">"בחר הכל"</string>
+    <string name="select_none">"אין בחירה"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"מלא"</string>
     <string name="completed">"הושלם"</string>
     <string name="incomplete">"לוקה בחסר"</string>
+    <string name="invalid_path">"נתיב לא חוקי"</string>
+    <string name="invalid_file">"קובץ לא תקין"</string>
 
     <!--
         Common Menu Pages

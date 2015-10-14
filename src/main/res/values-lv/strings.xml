@@ -129,6 +129,14 @@
     <string name="lifetime">"Mūžs"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Nākamais"</string>
+    <string name="previous">"Iepriekšējais"</string>
+    <string name="back">"Atpakaļ"</string>
+    <string name="forward">"Uz priekšu"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Pattern 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Pattern 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Imports"</string>
     <string name="export">"Eksports"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Eksporta Atgādinājums"</string>
     <string name="import_all">"Importēt All"</string>
     <string name="export_all">"Export All"</string>
+    <string name="export_to">"Eksports uz"</string>
+    <string name="export_location">"Eksporta Location"</string>
+    <string name="export_failed">"Eksports Neizdevās"</string>
+    <string name="file">"Fails"</string>
+    <string name="local_storage">"Local Storage"</string>
+    <string name="backup_location">"Backup vieta"</string>
+    <string name="backup_restore">"Backup / Restore"</string>
+    <string name="backup">"Rezerves"</string>
+    <string name="restore">"Atjaunot"</string>
+    <string name="backup_complete">"Backup Complete"</string>
+    <string name="restore_complete">"Atjaunot Complete"</string>
+    <string name="backup_failed">"Backup neizdevās"</string>
+    <string name="restore_failed">"Atjaunot Neizdevās"</string>
+    <string name="include_log">"Iekļaut Ieiet"</string>
+    <string name="select_atleast_one">"Izvēlieties vismaz vienu preci"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Liels"</string>
     <string name="short_">"Īss"</string>
     <string name="long_">"Garš"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Atlasīt"</string>
+    <string name="select_all">"Izvēlēties visu"</string>
+    <string name="select_none">"Izvēlieties Neviens"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Pilnīgs"</string>
     <string name="completed">"Pabeigts"</string>
     <string name="incomplete">"Nepilnīgs"</string>
+    <string name="invalid_path">"Nederīga Path"</string>
+    <string name="invalid_file">"Nederīga File"</string>
 
     <!--
         Common Menu Pages

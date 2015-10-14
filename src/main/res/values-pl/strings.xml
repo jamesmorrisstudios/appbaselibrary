@@ -129,6 +129,14 @@
     <string name="lifetime">"Czas życia"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"Następny"</string>
+    <string name="previous">"Poprzedni"</string>
+    <string name="back">"Plecy"</string>
+    <string name="forward">"Naprzód"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"Wzór 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"Wzór 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"Import"</string>
     <string name="export">"Eksport"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"Przypomnienie Export"</string>
     <string name="import_all">"Importuj wszystkie"</string>
     <string name="export_all">"Eksport Wszystko"</string>
+    <string name="export_to">"Eksport do"</string>
+    <string name="export_location">"Eksport Lokalizacja"</string>
+    <string name="export_failed">"Nie udało się wyeksportować"</string>
+    <string name="file">"Plik"</string>
+    <string name="local_storage">"Lokalny magazyn"</string>
+    <string name="backup_location">"Kopia zapasowa Lokalizacja"</string>
+    <string name="backup_restore">"Przywracania kopii zapasowej"</string>
+    <string name="backup">"Kopię zapasową"</string>
+    <string name="restore">"Przywróć"</string>
+    <string name="backup_complete">"Pełna kopia zapasowa"</string>
+    <string name="restore_complete">"Przywracanie ukończone"</string>
+    <string name="backup_failed">"Kopii zapasowej nie powiodło się"</string>
+    <string name="restore_failed">"Przywracanie nie powiodło się"</string>
+    <string name="include_log">"Dołącz Zaloguj"</string>
+    <string name="select_atleast_one">"Wybierz co najmniej jeden element"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"Duży"</string>
     <string name="short_">"Krótki"</string>
     <string name="long_">"Długi"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"Wybierz"</string>
+    <string name="select_all">"Zaznacz wszystko"</string>
+    <string name="select_none">"Wybierz None"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"Kompletny"</string>
     <string name="completed">"Zakończony"</string>
     <string name="incomplete">"Niepełne"</string>
+    <string name="invalid_path">"Nieprawidłowa ścieżka"</string>
+    <string name="invalid_file">"Niepoprawny plik"</string>
 
     <!--
         Common Menu Pages

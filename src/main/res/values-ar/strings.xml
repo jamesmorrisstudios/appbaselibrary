@@ -129,6 +129,14 @@
     <string name="lifetime">"حياة"</string>
 
     <!--
+        Next/Prev
+    -->
+    <string name="next">"التالى"</string>
+    <string name="previous">"سابق"</string>
+    <string name="back">"إلى الوراء"</string>
+    <string name="forward">"إلى الأمام"</string>
+
+    <!--
         Patterns
     -->
     <string name="pattern_1">"النمط 1"</string>
@@ -139,7 +147,7 @@
     <string name="pattern_6">"نمط 6"</string>
 
     <!--
-        Import/Export
+        Import/Export//backup/restore
     -->
     <string name="import_">"استيراد"</string>
     <string name="export">"تصدير"</string>
@@ -149,6 +157,21 @@
     <string name="export_reminder">"تصدير تذكير"</string>
     <string name="import_all">"استيراد جميع"</string>
     <string name="export_all">"تصدير جميع"</string>
+    <string name="export_to">"تصدير ل"</string>
+    <string name="export_location">"تصدير الموقع"</string>
+    <string name="export_failed">"تصدير فشل"</string>
+    <string name="file">"ملف"</string>
+    <string name="local_storage">"التخزين المحلي"</string>
+    <string name="backup_location">"النسخ الاحتياطي الموقع"</string>
+    <string name="backup_restore">"النسخ الاحتياطي / استعادة"</string>
+    <string name="backup">"دعم"</string>
+    <string name="restore">"استعادة"</string>
+    <string name="backup_complete">"احتياطية كاملة"</string>
+    <string name="restore_complete">"استعادة كامل"</string>
+    <string name="backup_failed">"النسخ الاحتياطي فشل"</string>
+    <string name="restore_failed">"استعادة فشل"</string>
+    <string name="include_log">"تشمل دخول"</string>
+    <string name="select_atleast_one">"تحديد عنصر واحد على الأقل"</string>
 
     <!--
         Protection level
@@ -172,6 +195,13 @@
     <string name="large">"كبير"</string>
     <string name="short_">"قصير"</string>
     <string name="long_">"طويلا"</string>
+
+    <!--
+      Select all/none
+    -->
+    <string name="select">"حدد"</string>
+    <string name="select_all">"اختر الكل"</string>
+    <string name="select_none">"حدد بلا"</string>
 
     <!--
        Difficulty/Game Options
@@ -217,6 +247,8 @@
     <string name="complete">"كامل"</string>
     <string name="completed">"الانتهاء"</string>
     <string name="incomplete">"غير كامل"</string>
+    <string name="invalid_path">"مسار غير صالح"</string>
+    <string name="invalid_file">"ملف غير صالح"</string>
 
     <!--
         Common Menu Pages
