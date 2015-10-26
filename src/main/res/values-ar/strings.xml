@@ -249,6 +249,10 @@
     <string name="incomplete">"غير كامل"</string>
     <string name="invalid_path">"مسار غير صالح"</string>
     <string name="invalid_file">"ملف غير صالح"</string>
+    <string name="dismiss">"رفض"</string>
+    <string name="dismissed">"رفض"</string>
+    <string name="acknowledge">"الاعتراف"</string>
+    <string name="acknowledged">"اعترف"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"مساعدة واقتراحات"</string>
     <string name="like_this_app">"مثل هذا التطبيق؟"</string>
     <string name="rate_now">"صنفه الآن"</string>
+    <string name="rate_app">"سعر التطبيق"</string>
     <string name="more_apps">"تطبيقات أكثر"</string>
+    <string name="support_development">"دعم التنمية"</string>
     <string name="how_to_use">"كيف تستعمل"</string>
     <string name="how_to_play">"كيف العب"</string>
     <string name="read_how">"اقرأ كيف"</string>
     <string name="watch_how">"مشاهدة كيف"</string>
     <string name="licenses">"التراخيص"</string>
+    <string name="help_translate">"مساعدة ترجمة"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"رائد"</string>
+    <string name="minor">"تحت السن القانوني"</string>
+    <string name="aux">"مدخل aux"</string>
+    <string name="release_notes">"ملاحظات الإصدار"</string>
+    <string name="version">"الإصدار"</string>
+    <string name="production">"الإنتاج"</string>
+    <string name="beta">"بيتا"</string>
+    <string name="alpha">"ألفا"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"إزالة"</string>
     <string name="remove_item">"إزالة بند"</string>
     <string name="delete">"حذف"</string>
+    <string name="deleted">"حذف"</string>
     <string name="duplicate">"مكررة"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"قم بإلغاء التحديد لتعطيل المؤثرات الصوتية"</string>
     <string name="settings_base_item_2_primary">"تمكين الموسيقى"</string>
     <string name="settings_base_item_2_secondary">"قم بإلغاء التحديد لتعطيل الموسيقى"</string>
-
+    <string name="settings_base_item_3_primary">"لغة"</string>
+    <string name="settings_base_item_4_primary">"ويشير مشاهدة الافراج عن إطلاق أول بعد عملية تحديث رئيسية"</string>
+    <string name="settings_base_item_4_secondary">"قم بإلغاء تحديد أبدا إظهار الإفراج مذكرة منبثقة"</string>
+    <string name="settings_base_item_5_primary">"موضوع"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"استخدام موضوع الإخطار خلفية الخفيفة والنص الظلام"</string>
     <string name="randremind_settings_3_secondary">"قم بإلغاء التحديد لاستخدام موضوع الإخطار المظلم من خلفية داكنة والنص خفيفة"</string>
     <string name="randremind_settings_4_primary">"اليوم الأول من الأسبوع"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"إخفاء إعلانات بانر"</string>
     <string name="google_play_settings_0_secondary">"قم بإلغاء التحديد لإخفاء الإعلانات لافتة لكنها تظهر الإعلانات صفحة كاملة بدلا من ذلك"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"خفيفة"</string>
+    <string name="dark">"ظلام"</string>
+    <string name="night">"ليل"</string>
+    <string name="black">"أسود"</string>
+    <string name="white">"أبيض"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"الحصول على"</string>
     <string name="type">"اكتب"</string>
     <string name="missed">"افتقد"</string>
+    <string name="restart">"إعادة تشغيل"</string>
+    <string name="restarting">"إعادة تشغيل"</string>
+    <string name="restarting_app_please_wait">"إعادة تشغيل التطبيق، الرجاء الانتظار"</string>
 
 </resources>

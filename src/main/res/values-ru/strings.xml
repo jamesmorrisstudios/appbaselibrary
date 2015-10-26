@@ -249,6 +249,10 @@
     <string name="incomplete">"Неполный"</string>
     <string name="invalid_path">"Неверный путь"</string>
     <string name="invalid_file">"Неверный файл"</string>
+    <string name="dismiss">"Увольнять"</string>
+    <string name="dismissed">"Уволенный"</string>
+    <string name="acknowledge">"Признавать"</string>
+    <string name="acknowledged">"Признанный"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Помощь &amp; Обратная связь"</string>
     <string name="like_this_app">"Как это приложение?"</string>
     <string name="rate_now">"Оцените это"</string>
+    <string name="rate_app">"Оценить приложение"</string>
     <string name="more_apps">"Больше приложений"</string>
+    <string name="support_development">"Поддержка развития"</string>
     <string name="how_to_use">"Как использовать"</string>
     <string name="how_to_play">"Как играть"</string>
     <string name="read_how">"Узнайте, как"</string>
     <string name="watch_how">"Смотреть Как"</string>
     <string name="licenses">"Лицензии"</string>
+    <string name="help_translate">"Помогите перевести"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Главный"</string>
+    <string name="minor">"Незначительный"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Примечания к выпуску"</string>
+    <string name="version">"Версия"</string>
+    <string name="production">"Производство"</string>
+    <string name="beta">"Бета"</string>
+    <string name="alpha">"Альфа"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Удалены"</string>
     <string name="remove_item">"Убрать предмет"</string>
     <string name="delete">"Удалить"</string>
+    <string name="deleted">"Удаленный"</string>
     <string name="duplicate">"Дублировать"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Снимите этот флажок для отключения звуковых эффектов"</string>
     <string name="settings_base_item_2_primary">"Включить музыку"</string>
     <string name="settings_base_item_2_secondary">"Снимите этот флажок для отключения музыки"</string>
-
+    <string name="settings_base_item_3_primary">"Язык"</string>
+    <string name="settings_base_item_4_primary">"Показать релизе отмечается, при первом запуске после обновления основного"</string>
+    <string name="settings_base_item_4_secondary">"Снимите никогда не показывают Release Note всплывающее окно"</string>
+    <string name="settings_base_item_5_primary">"Тема"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Используйте уведомления тема светлом фоне и темный текст"</string>
     <string name="randremind_settings_3_secondary">"Снимите использовать темную тему Уведомление о темном фоне и светлым текстом"</string>
     <string name="randremind_settings_4_primary">"Первый день недели"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Скрыть Баннеры"</string>
     <string name="google_play_settings_0_secondary">"Снимите, чтобы скрыть баннеры, но показать полные страницы объявлений, а"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Легкий"</string>
+    <string name="dark">"Темно"</string>
+    <string name="night">"Ночь"</string>
+    <string name="black">"Черный"</string>
+    <string name="white">"Белый"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Получить"</string>
     <string name="type">"Тип"</string>
     <string name="missed">"Пропущенный"</string>
+    <string name="restart">"Перезапуск"</string>
+    <string name="restarting">"Перезапуск"</string>
+    <string name="restarting_app_please_wait">"Перезапуск приложения, пожалуйста, подождите"</string>
 
 </resources>

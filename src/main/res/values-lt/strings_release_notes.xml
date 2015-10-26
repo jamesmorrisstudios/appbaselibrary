@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Pridėta iššokantį dialogą dėl pirmojo app paleidimo po vaidybinis atnaujinimo parodyti, kas pasikeitė. Tai nebus rodomas nedidelių klaidų taisymas atnaujinimus."</item>
+        <item name="line1">"Pridėta galimybė priversti programą į anglų kalbą."</item>
+        <item name="line2">"Pridėta rodiklį į Pagalba ir Komentarai puslapyje pasakyti, ar dabartinis statyti yra beta arba gamybos."</item>
+        <item name="line3">"Ištrauktas kai bendruomenė app vertimų. Dėkojame tiems, kurie padėjo."</item>
+        <item name="line4">"Pridėta pranešimas atmetė į priminimo žurnalą."</item>
+        <item name="line5">"Ištaisyta klaida, kai pertvarkymas priminimus galėtų katastrofos programą."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"niekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"niekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"niekas"</item>
+    </string-array>
+
+</resources>

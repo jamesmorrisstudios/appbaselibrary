@@ -249,6 +249,10 @@
     <string name="incomplete">"Epätäydellinen"</string>
     <string name="invalid_path">"Virheellinen polku"</string>
     <string name="invalid_file">"Virheellinen tiedosto"</string>
+    <string name="dismiss">"Erottaa"</string>
+    <string name="dismissed">"Hylkääminen"</string>
+    <string name="acknowledge">"Tunnustaa"</string>
+    <string name="acknowledged">"Kuitattu"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Ohjeet ja palaute"</string>
     <string name="like_this_app">"Kuten tämän sovelluksen?"</string>
     <string name="rate_now">"Arvostele nyt"</string>
+    <string name="rate_app">"Arvostele App"</string>
     <string name="more_apps">"Lisää sovelluksia"</string>
+    <string name="support_development">"Tuki Kehitys"</string>
     <string name="how_to_use">"Kuinka käyttää"</string>
     <string name="how_to_play">"Kuinka pelata"</string>
     <string name="read_how">"Lue Kuinka"</string>
     <string name="watch_how">"Katso, kuinka"</string>
     <string name="licenses">"Lisenssit"</string>
+    <string name="help_translate">"Auttaa Käännä"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Merkittävä"</string>
+    <string name="minor">"Vähäinen"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Julkaisutiedot"</string>
+    <string name="version">"Versio"</string>
+    <string name="production">"Tuotanto"</string>
+    <string name="beta">"Beeta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Poistettu"</string>
     <string name="remove_item">"Poista kohta"</string>
     <string name="delete">"Poistaa"</string>
+    <string name="deleted">"Poistettu"</string>
     <string name="duplicate">"Kaksoiskappale"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Poista valinta poistaa äänitehosteet"</string>
     <string name="settings_base_item_2_primary">"Ota Musiikki"</string>
     <string name="settings_base_item_2_secondary">"Poista valinta poistaa musiikkia"</string>
-
+    <string name="settings_base_item_3_primary">"Kieli"</string>
+    <string name="settings_base_item_4_primary">"Näytä julkaisutiedote ensimmäinen laukaisu jälkeen suuri päivitys"</string>
+    <string name="settings_base_item_4_secondary">"Poista valinta koskaan näyttää julkaisu huomata ponnahdusikkuna"</string>
+    <string name="settings_base_item_5_primary">"Teema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Käytä ilmoitus teema vaalealla pohjalla ja tummaa tekstiä"</string>
     <string name="randremind_settings_3_secondary">"Poista käyttää tummia ilmoituksen teema tumma tausta ja vaalea teksti"</string>
     <string name="randremind_settings_4_primary">"Ensimmäinen viikonpäivä"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Piilota bannerimainokset"</string>
     <string name="google_play_settings_0_secondary">"Poista valinta piilottaa mainosbannereita mutta näyttää koko sivun mainoksia sijaan"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Valo"</string>
+    <string name="dark">"Tumma"</string>
+    <string name="night">"Yö"</string>
+    <string name="black">"Musta"</string>
+    <string name="white">"Valkoinen"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Saada"</string>
     <string name="type">"Tyyppi"</string>
     <string name="missed">"Missed"</string>
+    <string name="restart">"Aloittaa alusta"</string>
+    <string name="restarting">"Käynnistäminen uudelleen"</string>
+    <string name="restarting_app_please_wait">"Uudelleenkäynnistyksen App, odota"</string>
 
 </resources>

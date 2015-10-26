@@ -249,6 +249,10 @@
     <string name="incomplete">"Ufuldstændig"</string>
     <string name="invalid_path">"Ugyldig sti"</string>
     <string name="invalid_file">"Ugyldig fil"</string>
+    <string name="dismiss">"Afvis"</string>
+    <string name="dismissed">"Afskediget"</string>
+    <string name="acknowledge">"Anerkend"</string>
+    <string name="acknowledged">"Anerkendt"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Hjælp &amp; Feedback"</string>
     <string name="like_this_app">"Ligesom denne app?"</string>
     <string name="rate_now">"Bedøm det nu"</string>
+    <string name="rate_app">"Rate App"</string>
     <string name="more_apps">"Flere apps"</string>
+    <string name="support_development">"Support Udvikling"</string>
     <string name="how_to_use">"Sådan bruges"</string>
     <string name="how_to_play">"Sådan spiller"</string>
     <string name="read_how">"Læs hvordan"</string>
     <string name="watch_how">"Se hvordan"</string>
     <string name="licenses">"Licenser"</string>
+    <string name="help_translate">"Hjælp Oversæt"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Major"</string>
+    <string name="minor">"Mindre"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Udgivelses noter"</string>
+    <string name="version">"Version"</string>
+    <string name="production">"Produktion"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Fjernet"</string>
     <string name="remove_item">"Fjern element"</string>
     <string name="delete">"Slet"</string>
+    <string name="deleted">"Slettet"</string>
     <string name="duplicate">"Dupliker"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Fjern markeringen for at deaktivere lydeffekter"</string>
     <string name="settings_base_item_2_primary">"Aktiver Music"</string>
     <string name="settings_base_item_2_secondary">"Fjern markeringen for at deaktivere musik"</string>
-
+    <string name="settings_base_item_3_primary">"Sprog"</string>
+    <string name="settings_base_item_4_primary">"Vis release noter på den første lancering efter en større opdatering"</string>
+    <string name="settings_base_item_4_secondary">"Fjern markeringen for at aldrig vise frigivelse seddel popup"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Brug meddelelse temaet for en lys baggrund og mørk tekst"</string>
     <string name="randremind_settings_3_secondary">"Fjern markeringen for at bruge mørke meddelelse temaet for en mørk baggrund og lys tekst"</string>
     <string name="randremind_settings_4_primary">"Første dag i ugen"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Skjul bannerannoncer"</string>
     <string name="google_play_settings_0_secondary">"Fjern markeringen for at skjule bannerannoncer men viser fuld side annoncer i stedet"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Lys"</string>
+    <string name="dark">"Mørk"</string>
+    <string name="night">"Nat"</string>
+    <string name="black">"Sort"</string>
+    <string name="white">"Hvid"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Få"</string>
     <string name="type">"Type"</string>
     <string name="missed">"Mistede"</string>
+    <string name="restart">"Genstart"</string>
+    <string name="restarting">"Genstart"</string>
+    <string name="restarting_app_please_wait">"Genstart App, vent venligst"</string>
 
 </resources>

@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Ajout d'une boîte de dialogue contextuelle sur le premier lancement de l'application après une mise à jour de fonction pour montrer ce qui a changé. Il ne sera pas montrer les mises à jour de correctifs de bogues mineurs."</item>
+        <item name="line1">"Ajout de l'option pour forcer l'application en anglais."</item>
+        <item name="line2">"Ajout d'un indicateur à la page d'Aide et Commentaires de dire si la version actuelle est Beta ou de production."</item>
+        <item name="line3">"Tiré dans certaines traductions d'applications de la communauté. Merci pour ceux qui ont aidé."</item>
+        <item name="line4">"Ajouté notification rejeté dans le journal de rappel."</item>
+        <item name="line5">"Correction d'un bug où les rappels réordonnancement pourraient planter l'application."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+</resources>

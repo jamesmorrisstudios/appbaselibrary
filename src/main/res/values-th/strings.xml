@@ -249,6 +249,10 @@
     <string name="incomplete">"ไม่ครบถ้วน"</string>
     <string name="invalid_path">"เส้นทางที่ไม่ถูกต้อง"</string>
     <string name="invalid_file">"แฟ้มไม่ถูกต้อง"</string>
+    <string name="dismiss">"ยกฟ้อง"</string>
+    <string name="dismissed">"ไล่"</string>
+    <string name="acknowledge">"รับทราบ"</string>
+    <string name="acknowledged">"ที่ยอมรับ"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"ความช่วยเหลือและข้อเสนอแนะ"</string>
     <string name="like_this_app">"เช่นเดียวกับ app นี้?"</string>
     <string name="rate_now">"คะแนนตอนนี้"</string>
+    <string name="rate_app">"ให้คะแนนแอพ"</string>
     <string name="more_apps">"Apps เพิ่มเติม"</string>
+    <string name="support_development">"สนับสนุนการพัฒนา"</string>
     <string name="how_to_use">"วิธีใช้"</string>
     <string name="how_to_play">"วิธีการเล่น"</string>
     <string name="read_how">"อ่านวิธี"</string>
     <string name="watch_how">"ดูวิธี"</string>
     <string name="licenses">"ใบอนุญาต"</string>
+    <string name="help_translate">"ช่วยแปล"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"ที่สำคัญ"</string>
+    <string name="minor">"ผู้เยาว์"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"หมายเหตุรีลีส"</string>
+    <string name="version">"รุ่น"</string>
+    <string name="production">"การผลิต"</string>
+    <string name="beta">"เบต้า"</string>
+    <string name="alpha">"อัลฟา"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"ลบออก"</string>
     <string name="remove_item">"ลบรายการสินค้า"</string>
     <string name="delete">"การลบ"</string>
+    <string name="deleted">"ที่ถูกลบ"</string>
     <string name="duplicate">"ซ้ำ"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"ยกเลิกการเลือกปิดการใช้งานเอฟเฟค"</string>
     <string name="settings_base_item_2_primary">"เปิดใช้งานเพลง"</string>
     <string name="settings_base_item_2_secondary">"ยกเลิกการเลือกปิดการใช้งานเพลง"</string>
-
+    <string name="settings_base_item_3_primary">"ภาษา"</string>
+    <string name="settings_base_item_4_primary">"แสดงปล่อยข้อสังเกตเกี่ยวกับการเปิดตัวครั้งแรกหลังจากที่มีการปรับปรุงที่สำคัญ"</string>
+    <string name="settings_base_item_4_secondary">"ยกเลิกการเลือกที่จะไม่แสดงป๊อปอัพเอกสารเผยแพร่"</string>
+    <string name="settings_base_item_5_primary">"ธีม"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"ใช้รูปแบบการแจ้งเตือนของพื้นหลังสีอ่อนและข้อความที่มืด"</string>
     <string name="randremind_settings_3_secondary">"ยกเลิกการเลือกที่จะใช้รูปแบบการแจ้งเตือนมืดของพื้นหลังสีดำและข้อความแสง"</string>
     <string name="randremind_settings_4_primary">"วันแรกของสัปดาห์"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"ซ่อนแบนเนอร์โฆษณา"</string>
     <string name="google_play_settings_0_secondary">"ยกเลิกการเลือกที่จะซ่อนโฆษณาแบนเนอร์ แต่แสดงโฆษณาเต็มหน้าแทน"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"แสง"</string>
+    <string name="dark">"ที่มืด"</string>
+    <string name="night">"กลางคืน"</string>
+    <string name="black">"สีดำ"</string>
+    <string name="white">"สีขาว"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"รับ"</string>
     <string name="type">"ประเภท"</string>
     <string name="missed">"ที่ไม่ได้รับ"</string>
+    <string name="restart">"เริ่มต้นใหม่"</string>
+    <string name="restarting">"การเริ่มต้นใหม่"</string>
+    <string name="restarting_app_please_wait">"การเริ่มต้นใหม่ App โปรดรอสักครู่"</string>
 
 </resources>

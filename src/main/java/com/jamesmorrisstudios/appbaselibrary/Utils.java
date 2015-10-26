@@ -16,6 +16,9 @@
 
 package com.jamesmorrisstudios.appbaselibrary;
 
+import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -45,8 +48,10 @@ import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URI;
+import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 /**
  * Utility and Constant values
@@ -265,6 +270,43 @@ public final class Utils {
         return "";
     }
 
+    public static int getVersionMajor(@NonNull String fromVersionString) {
+        return getVersion(fromVersionString, 0);
+    }
+
+    public static int getVersionMinor(@NonNull String fromVersionString) {
+        return getVersion(fromVersionString, 1);
+    }
+
+    public static int getVersionAux(@NonNull String fromVersionString) {
+        return getVersion(fromVersionString, 2);
+    }
+
+    public static int getVersionMajor() {
+        return getVersion(getVersionName(), 0);
+    }
+
+    public static int getVersionMinor() {
+        return getVersion(getVersionName(), 1);
+    }
+
+    public static int getVersionAux() {
+        return getVersion(getVersionName(), 2);
+    }
+
+    private static int getVersion(String versionName, int versionIndex) {
+        String nameSplit[] = versionName.split(Pattern.quote("."));
+        //Log.v("Utils", "GetVersion "+versionName+" "+nameSplit.length);
+        if(versionName.equals("") || nameSplit.length != 3) {
+            return -1;
+        }
+        return stringToInt(nameSplit[versionIndex], -1);
+    }
+
+    public static String getVersionType() {
+        return AppBase.getContext().getString(R.string.version_type);
+    }
+
     /**
      * Displays a popup toast for a short time
      *
@@ -281,6 +323,33 @@ public final class Utils {
      */
     public static void toastLong(String text) {
         Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_LONG).show();
+    }
+
+    private static Locale backupLocale = null;
+
+    public static void restoreLocale() {
+        if(backupLocale != null) {
+            Log.v("Utils", "Restoring Locale");
+            setLocale(backupLocale);
+        } else {
+            Log.v("Utils", "No Backup cannot restore Locale");
+        }
+    }
+
+    public static void setLocale(String localeName) {
+        Log.v("Utils", "Set Locale "+localeName);
+        Locale locale = new Locale(localeName);
+        setLocale(locale);
+    }
+
+    public static void setLocale(Locale locale) {
+        if(backupLocale == null) {
+            backupLocale = Locale.getDefault();
+        }
+        Locale.setDefault(locale);
+        Configuration config2 = new Configuration();
+        config2.locale = locale;
+        AppBase.getContext().getResources().updateConfiguration(config2, AppBase.getContext().getResources().getDisplayMetrics());
     }
 
     /**
@@ -520,6 +589,19 @@ public final class Utils {
             }
         }
         return false;
+    }
+
+    public static void restartApp(Activity activity) {
+        //Intent i = AppBase.getContext().getPackageManager().getLaunchIntentForPackage(AppBase.getContext().getPackageName());
+        //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //AppBase.getContext().startActivity(i);
+
+        Intent i = AppBase.getContext().getPackageManager().getLaunchIntentForPackage(AppBase.getContext().getPackageName());
+        int mPendingIntentId = 123456;
+        PendingIntent mPendingIntent = PendingIntent.getActivity(AppBase.getContext(), mPendingIntentId, i, PendingIntent.FLAG_CANCEL_CURRENT);
+        AlarmManager mgr = (AlarmManager)AppBase.getContext().getSystemService(Context.ALARM_SERVICE);
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+        activity.finish();
     }
 
     public static void openLink(String link) {

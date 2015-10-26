@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"変更かを示すために機能の更新後の最初のアプリの起動時にポップアップダイアログを追加しました。これは、マイナーなバグ修正アップデートを表示されません。"</item>
+        <item name="line1">"英語にアプリを強制するオプションが追加されました。"</item>
+        <item name="line2">"現在のビルドはベータ版または生産であれば言ってヘルプとフィードバックページにインジケーターを追加しました。"</item>
+        <item name="line3">"いくつかのコミュニティアプリの翻訳に引っ張りました。助けた人のためにありがとうございました。"</item>
+        <item name="line4">"リマインダーログに却下通知を追加しました。"</item>
+        <item name="line5">"並べ替えリマインダーアプリをクラッシュバグを修正しました。"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"何も"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"何も"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"何も"</item>
+    </string-array>
+
+</resources>

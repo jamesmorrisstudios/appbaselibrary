@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Dodano popup dijalog na prvom aplikacije lansiranja nakon igrani ažuriranja pokazati što se promijenilo. To neće pojaviti za manje bug fix ažuriranja."</item>
+        <item name="line1">"Dodano mogućnost prisiliti aplikaciju na engleskom jeziku."</item>
+        <item name="line2">"Dodano indikator na stranicu Pomoć i povratne informacije za reći, ako je trenutni graditi je beta ili proizvodnju."</item>
+        <item name="line3">"Povukao se u nekim zajednica aplikacija prijevoda. Hvala vam za sve one koji su pomogli."</item>
+        <item name="line4">"Dodano obavijest odbacio u podsjetnik zapisnik."</item>
+        <item name="line5">"Fixed bug gdje redoslijeda podsjetnici može srušiti aplikaciju."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"ništa"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"ništa"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"ništa"</item>
+    </string-array>
+
+</resources>

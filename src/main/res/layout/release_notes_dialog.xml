@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/notes"
+        android:textColor="@color/textDarkSecondary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/textDarkMain"
+        android:id="@+id/btn_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/rate_app"
+        android:textSize="@dimen/item_small_size" />
+
+    <Button
+        style="@style/help_support_dev"
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/textDarkMain"
+        android:id="@+id/btn_support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/support_development"
+        android:textSize="@dimen/item_small_size" />
+
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:textColor="@color/textDarkMain"
+        android:id="@+id/btn_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/help_translate"
+        android:textSize="@dimen/item_small_size" />
+
+</LinearLayout>

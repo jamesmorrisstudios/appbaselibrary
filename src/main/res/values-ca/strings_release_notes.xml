@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Afegit un diàleg emergent en la primera aplicació de llançament després d'una actualització de funcions per mostrar el que ha canviat. No mostrarà les actualitzacions menors de correcció d'errors."</item>
+        <item name="line1">"Afegida l'opció de forçar l'aplicació en anglès."</item>
+        <item name="line2">"Afegit un indicador a la pàgina d'Ajuda i Comentaris per dir si la versió actual és Beta o Producció."</item>
+        <item name="line3">"Tirado en algunes traduccions d'aplicacions comunitat. Gràcies pels que van ajudar a vostè."</item>
+        <item name="line4">"Notificació Afegit acomiadat en el registre de recordatori."</item>
+        <item name="line5">"S'ha corregit un error pel qual els recordatoris reordenament podrien xocar l'aplicació."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Añadido un diálogo emergente en la primera aplicación de lanzamiento después de una actualización de funciones para mostrar lo que ha cambiado. No mostrará las actualizaciones menores de corrección de errores."</item>
+        <item name="line1">"Añadida la opción de forzar la aplicación en Inglés."</item>
+        <item name="line2">"Añadido un indicador a la página de Ayuda y Comentarios para decir si la versión actual es Beta o Producción."</item>
+        <item name="line3">"Tirado en algunas traducciones de aplicaciones comunidad. Gracias por los que ayudaron a usted."</item>
+        <item name="line4">"Notificación Añadido despedido en el registro de recordatorio."</item>
+        <item name="line5">"Se ha corregido un error por el que los recordatorios reordenamiento podrían chocar la aplicación."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+</resources>

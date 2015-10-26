@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Pievienots uznirstošo dialog pirmajā app uzsākšanu pēc funkciju atjauninājumu, lai parādītu to, kas mainījies. Tas neparādīsies nelieliem kļūmei atjauninājumus."</item>
+        <item name="line1">"Pievienots iespēju, lai piespiestu app angļu valodā."</item>
+        <item name="line2">"Pievienots indikatoru uz palīdzības un Atsauksmes lapu, lai pateikt, vai pašreizējā būvēt ir Beta vai Production."</item>
+        <item name="line3">"Velk dažos kopiena app tulkojumiem. Paldies tiem, kas palīdzēja."</item>
+        <item name="line4">"Pievienots paziņojums noraidīja uz atgādinājuma žurnālā."</item>
+        <item name="line5">"Fiksētie bug kur pārkārtošana atgādinājumus varētu crash lietotni."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+</resources>

@@ -46,12 +46,14 @@ import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.FileBrowserRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ReleaseNotesDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.RingtoneRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceIconRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRadioRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.ReleaseNotesDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
@@ -66,6 +68,7 @@ import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 /**
  * Base level activity implementation. This handles getting the toolbar up and running and includes a main fragment page
@@ -97,6 +100,10 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     //Saved requests that have to survive on activity result and/or permission request
     private RingtoneRequest ringtoneRequest = null;
     private FileBrowserRequest fileBrowserRequest = null;
+
+    public enum Theme {
+        DARK, LIGHT
+    }
 
     private final Object busListener = new Object() {
         @Subscribe
@@ -152,6 +159,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         public void onSingleChoiceIconRequest(SingleChoiceIconRequest request) {
             BaseLauncherNoViewActivity.this.createSingleChoiceIconDialog(request.title, request.items, request.onOptionPickedListener);
         }
+
+        @Subscribe
+        public void onReleastNotesDialogRequest(ReleaseNotesDialogRequest request) {
+            BaseLauncherNoViewActivity.this.onRequestReleaseNotesDialog();
+        }
     };
     private boolean clearingBackStack = false;
 
@@ -160,9 +172,35 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setTheme(R.style.AppTheme);
+        applyTheme();
+        setLocale();
         super.onCreate(savedInstanceState);
         updateImmersiveMode(true);
+    }
+
+    private void applyTheme() {
+        switch(getCurrentTheme()) {
+            case LIGHT:
+                setTheme(R.style.AppTheme);
+                break;
+            case DARK:
+                setTheme(R.style.AppThemeDark);
+                break;
+        }
+    }
+
+    private Theme getCurrentTheme() {
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String key = AppBase.getContext().getString(R.string.pref_theme);
+
+        switch(Prefs.getInt(pref, key, 0)) {
+            case 0: //Light
+                return Theme.LIGHT;
+            case 1: //Dark
+                return Theme.DARK;
+            default:
+                return Theme.LIGHT;
+        }
     }
 
     /**
@@ -231,6 +269,16 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         container = (FrameLayout) findViewById(R.id.container);
         spinner = (ProgressBar)findViewById(R.id.progressBar);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        switch(getCurrentTheme()) {
+            case LIGHT:
+                toolbar.setPopupTheme(R.style.toolbarPopupLight);
+                break;
+            case DARK:
+                toolbar.setPopupTheme(R.style.toolbarPopupDark);
+                break;
+        }
+
         toolbar.setTitle(getString(R.string.app_short_name));
         setSupportActionBar(toolbar);
         getSupportFragmentManager().addOnBackStackChangedListener(this);
@@ -256,6 +304,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     @Override
     public void onResume() {
         super.onResume();
+        showReleaseNotesIfNeeded();
     }
 
     /**
@@ -317,6 +366,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public final void clearBackStack() {
         clearingBackStack = true;
         getSupportFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        getSupportFragmentManager().executePendingTransactions();
         clearingBackStack = false;
     }
 
@@ -363,6 +413,19 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         onFragmentChangeStart();
         Log.v("BaseActivity", "Back Up Pressed Returning True");
         return true;
+    }
+
+    private void showReleaseNotesIfNeeded() {
+        if(Prefs.getBoolean(getString(R.string.settings_pref), getString(R.string.pref_allow_release_notes), true)) {
+            String lastOpenedVersion = Prefs.getString("com.jamesmorrisstudios.appbaselibrary.APPDATA", "LAST_OPEN_VERSION");
+            int lastMajor = Utils.getVersionMajor(lastOpenedVersion);
+            int lastMinor = Utils.getVersionMinor(lastOpenedVersion);
+
+            if (lastMajor != Utils.getVersionMajor() || lastMinor != Utils.getVersionMinor()) {
+                onRequestReleaseNotesDialog();
+            }
+        }
+        Prefs.putString("com.jamesmorrisstudios.appbaselibrary.APPDATA", "LAST_OPEN_VERSION", Utils.getVersionName());
     }
 
     /**
@@ -554,12 +617,28 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         Sounds.getInstance().reloadSettings();
     }
 
+    private void setLocale() {
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String key = AppBase.getContext().getString(R.string.pref_language);
+
+        switch(Prefs.getInt(pref, key, 0)) {
+            case 0: //Automatic so restore to original
+                Utils.restoreLocale();
+                break;
+            case 1: //English
+                Utils.setLocale(Locale.US);
+                break;
+        }
+    }
+
     @Override
     public final void restartActivity() {
-        Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(i);
-        finish();
+        //Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        //startActivity(i);
+        Utils.toastLong(getString(R.string.restarting_app_please_wait));
+        Utils.restartApp(this);
+        //finish();
     }
 
     /**
@@ -863,6 +942,21 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 }
                 break;
         }
+    }
+
+    public void onRequestReleaseNotesDialog() {
+        String content = "";
+        TypedArray array = getResources().obtainTypedArray(R.array.current_release_notes);
+        CharSequence[] data = array.getTextArray(array.getIndex(0));
+        array.recycle();
+        for(CharSequence item : data) {
+            content += item.toString() +"\n\n";
+        }
+        ReleaseNotesDialogBuilder.with(this)
+                .setTitle(getString(R.string.release_notes)+ ": "+Utils.getVersionName()+" "+Utils.getVersionType())
+                .setContent(content)
+                .build()
+                .show();
     }
 
     protected final void enableAutoLock() {

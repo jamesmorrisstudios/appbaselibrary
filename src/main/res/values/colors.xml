@@ -12,8 +12,6 @@
 
     <color name="tintColor">@color/iconDark</color>
 
-    <color name="background">@color/background_material_light</color>
-
     <!-- Accent -->
     <color name="accent">#00E676</color>
     <color name="accentLight">#69F0AE</color>
@@ -44,5 +42,11 @@
     <color name="textDarkDisabled">#42424242</color>
     <!-- Dividers -->
     <color name="textDarkDivider">#1E424242</color>
+
+
+    <!-- Copies of private color resources -->
+    <color name="copy_ripple_material_light">#1f000000</color>
+    <color name="copy_button_material_light">#ffd6d7d7</color>
+    <color name="copy_switch_thumb_normal_material_light">#fff1f1f1</color>
 
 </resources>

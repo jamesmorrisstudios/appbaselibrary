@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Προστέθηκε ένα παράθυρο pop-up για την πρώτη εκκίνηση της εφαρμογής μετά την ενημέρωση δυνατότητα να δείξει τι άλλαξε. Δεν θα δείξει για μικρές ενημερώσεις διορθώσετε το σφάλμα."</item>
+        <item name="line1">"Προστέθηκε η δυνατότητα να αναγκάσει την εφαρμογή στα αγγλικά."</item>
+        <item name="line2">"Προστεθεί ένας δείκτης στην σελίδα Βοήθεια και σχόλια για να πούμε εάν η τρέχουσα κατασκευής είναι βήτα ή παραγωγής."</item>
+        <item name="line3">"Τράβηξε σε ορισμένες μεταφράσεις κοινότητα app. Σας ευχαριστούμε για εκείνους που βοήθησαν."</item>
+        <item name="line4">"Προστέθηκε κοινοποίηση απορριφθεί στο ημερολόγιο υπενθύμιση."</item>
+        <item name="line5">"Διορθώθηκε ένα bug όπου αναδιάταξη υπενθυμίσεις θα μπορούσε να συντρίψει το app."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+</resources>

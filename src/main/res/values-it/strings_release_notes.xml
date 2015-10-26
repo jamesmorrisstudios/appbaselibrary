@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Aggiunta una finestra popup sul primo lancio applicazione dopo un aggiornamento funzione per mostrare ciò che è cambiato. Non mostrerà per aggiornamenti minori bug fix."</item>
+        <item name="line1">"Aggiunta la possibilità di forzare l'applicazione in inglese."</item>
+        <item name="line2">"Aggiunto un indicatore alla pagina della Guida e Suggerimenti per dire se la generazione attuale è Beta o di produzione."</item>
+        <item name="line3">"Tirato in alcune traduzioni della comunità app. Grazie per coloro che hanno contribuito."</item>
+        <item name="line4">"Aggiunta la notifica respinto al registro promemoria."</item>
+        <item name="line5">"Risolto un bug per cui i ricordi riordino potrebbe mandare in crash l'applicazione."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"niente"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"niente"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"niente"</item>
+    </string-array>
+
+</resources>

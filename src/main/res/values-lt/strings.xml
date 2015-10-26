@@ -249,6 +249,10 @@
     <string name="incomplete">"Nepilna"</string>
     <string name="invalid_path">"Neteisingas kelias"</string>
     <string name="invalid_file">"Netinkamas failo"</string>
+    <string name="dismiss">"Atsisakyti"</string>
+    <string name="dismissed">"Atmesti"</string>
+    <string name="acknowledge">"Pripažinkite"</string>
+    <string name="acknowledged">"Patvirtinta"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Pagalba &amp; Atsiliepimai"</string>
     <string name="like_this_app">"Kaip šią programą?"</string>
     <string name="rate_now">"Įvertinti dabar"</string>
+    <string name="rate_app">"Įvertink Pritaikymo"</string>
     <string name="more_apps">"Daugiau programėlių"</string>
+    <string name="support_development">"Remti"</string>
     <string name="how_to_use">"Kaip naudoti"</string>
     <string name="how_to_play">"Kaip žaisti"</string>
     <string name="read_how">"Skaityti Kaip"</string>
     <string name="watch_how">"Žiūrėti Kaip"</string>
     <string name="licenses">"Licencijos"</string>
+    <string name="help_translate">"Pagalba Versti"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Majoras"</string>
+    <string name="minor">"Mažosios"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Release Notes"</string>
+    <string name="version">"Variantas"</string>
+    <string name="production">"Gamybos"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alfa"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Pašalinta"</string>
     <string name="remove_item">"Pašalinti Elementą"</string>
     <string name="delete">"Ištrinti"</string>
+    <string name="deleted">"Ištrinta"</string>
     <string name="duplicate">"Duplicate"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Nuimkite išjungti garso efektus"</string>
     <string name="settings_base_item_2_primary">"Įjungti Muzika"</string>
     <string name="settings_base_item_2_secondary">"Nuimkite išjungti muziką"</string>
-
+    <string name="settings_base_item_3_primary">"Kalba"</string>
+    <string name="settings_base_item_4_primary">"Rodyti spaudai pažymi pirmą starto po didelių atnaujinti"</string>
+    <string name="settings_base_item_4_secondary">"Nuimkite niekada parodyti spaudai dėmesį iššokantį"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Naudokite pranešimo tema šviesiame fone ir tamsiai tekstą"</string>
     <string name="randremind_settings_3_secondary">"Atžymėti naudoti tamsų pranešimo tema tamsiame fone ir šviesos tekstą"</string>
     <string name="randremind_settings_4_primary">"Pirma savaitės diena"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Slėpti banerių"</string>
     <string name="google_play_settings_0_secondary">"Nuimkite paslėpti banerių, bet parodyti visą puslapį reklamos, o ne"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Šviesos"</string>
+    <string name="dark">"Tamsus"</string>
+    <string name="night">"Naktis"</string>
+    <string name="black">"Juodas"</string>
+    <string name="white">"Balta"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Gauk"</string>
     <string name="type">"Tipas"</string>
     <string name="missed">"Vėl"</string>
+    <string name="restart">"Perkrauti"</string>
+    <string name="restarting">"Atnaujinus"</string>
+    <string name="restarting_app_please_wait">"Atnaujinus App, prašome palaukti"</string>
 
 </resources>

@@ -23,8 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/switchItem"
         android:singleLine="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/textDarkMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="18sp" />
 
     <TextView
@@ -35,8 +34,7 @@
         android:layout_below="@+id/primary"
         android:layout_toLeftOf="@+id/switchItem"
         android:singleLine="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        android:textColor="@color/textDarkSecondary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="15sp" />
 
     <View
@@ -44,6 +42,6 @@
         android:layout_height="1dp"
         android:layout_below="@+id/secondary"
         android:layout_marginTop="4dp"
-        android:background="@color/dividerDark" />
+        android:background="?android:attr/listDivider" />
 
 </RelativeLayout>

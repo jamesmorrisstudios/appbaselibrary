@@ -71,19 +71,18 @@ public final class Notifier {
 
         Notification notification;
 
-        //Bundle bundle = new Bundle();
-        //bundle.putInt(Integer.toString(notif.getNotifCounter()), notif.getNotifCounter());
+        Bundle bundle = new Bundle();
+        bundle.putInt(Integer.toString(notif.getNotifCounter()), notif.getNotifCounter());
 
         NotificationCompat.Builder mBuilder;
         mBuilder = new NotificationCompat.Builder(AppBase.getContext())
-                //.setExtras(bundle)
+                .setExtras(bundle)
                 .setDefaults(defaults)
                 .setSmallIcon(notif.getIconRes())
                 .setContentTitle(notif.getTitle())
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
                 .setPriority(priority)
                 .setContentText(notif.getContent());
-
 
         if (notif.getVibrate() == NotificationContent.NotificationVibrate.DEFAULT) {
             //Leave as is
@@ -112,7 +111,7 @@ public final class Notifier {
             mBuilder.setAutoCancel(true);
             mBuilder.setOngoing(false);
         }
-        /*
+
         NotificationCompat.WearableExtender wearableExtender = new NotificationCompat.WearableExtender();
         for (NotificationAction action : notif.getActions()) {
             mBuilder.addAction(action.getIconRes(), action.getText(), action.getPendingIntent());
@@ -121,7 +120,6 @@ public final class Notifier {
         if(notif.getActions().size() > 0) {
             mBuilder.extend(wearableExtender);
         }
-        */
 
         if (notif.getType() == NotificationContent.NotificationType.CUSTOM) {
             notification = addCustomNotifcation(notif, mBuilder);

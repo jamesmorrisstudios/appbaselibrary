@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"添加的第一个应用程序启动一个弹出对话框，功能更新后，显示发生了什么变化。它不会显示出轻微的bug修复更新。"</item>
+        <item name="line1">"增加了选项强制应用程序成英文。"</item>
+        <item name="line2">"新增的指标，以帮助和反馈页说，如果当前的版本是Beta版或生产。"</item>
+        <item name="line3">"拉一些社区应用程序翻译。谢谢你对那些谁帮助。"</item>
+        <item name="line4">"新增通知驳回，提醒日志。"</item>
+        <item name="line5">"修正了重新排序提醒可能崩溃的应用程序中的错误。"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"没什么"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"没什么"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"没什么"</item>
+    </string-array>
+
+</resources>

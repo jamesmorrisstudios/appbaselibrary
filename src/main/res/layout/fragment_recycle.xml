@@ -24,7 +24,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/no_items_found"
-        android:textColor="@color/textDarkMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="20sp"
         android:visibility="gone" />
 

@@ -240,10 +240,10 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             if(dummyItem) {
                 data.add(new BaseRecycleDummyItem());
             }
-            mAdapter.setItems(data);
+            mAdapter.setItems(data, dummyItem);
             hideNoDataText();
         } else {
-            mAdapter.setItems(new ArrayList<BaseRecycleContainer>());
+            mAdapter.setItems(new ArrayList<BaseRecycleContainer>(), dummyItem);
             showNoDataText();
         }
         endRefresh();

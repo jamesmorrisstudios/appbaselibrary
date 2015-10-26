@@ -9,14 +9,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@color/textDarkMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="@dimen/header_size" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/textDarkDivider" />
+        android:background="?android:attr/listDivider" />
 
     <TextView
         android:id="@+id/license_site"
@@ -27,7 +26,6 @@
         android:autoLink="web|email"
         android:gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/textDarkMain"
         android:textColorLink="@color/textAccent"
         android:textSize="@dimen/item_small_size" />
 
@@ -40,7 +38,6 @@
         android:autoLink="web"
         android:gravity="center_horizontal"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/textDarkMain"
         android:textColorLink="@color/textAccent"
         android:textSize="@dimen/item_small_size" />
 

@@ -249,6 +249,10 @@
     <string name="incomplete">"Непотпуне"</string>
     <string name="invalid_path">"Неважећи Пут"</string>
     <string name="invalid_file">"Неважећи Величина"</string>
+    <string name="dismiss">"Одбаци"</string>
+    <string name="dismissed">"Слободни"</string>
+    <string name="acknowledge">"Потврда"</string>
+    <string name="acknowledged">"Потврдјено"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Хелп &amp; Феедбацк"</string>
     <string name="like_this_app">"Као овој апликацији?"</string>
     <string name="rate_now">"Рате Ит Нов"</string>
+    <string name="rate_app">"Оцени апликација"</string>
     <string name="more_apps">"Више апликација"</string>
+    <string name="support_development">"Развој Подршка"</string>
     <string name="how_to_use">"Како користити"</string>
     <string name="how_to_play">"Како играти"</string>
     <string name="read_how">"Прочитајте како"</string>
     <string name="watch_how">"Ватцх Како"</string>
     <string name="licenses">"Лиценце"</string>
+    <string name="help_translate">"Хелп Транслате"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Главни"</string>
+    <string name="minor">"Малолетник"</string>
+    <string name="aux">"Аук"</string>
+    <string name="release_notes">"Белешке о издању"</string>
+    <string name="version">"Верзија"</string>
+    <string name="production">"Производња"</string>
+    <string name="beta">"Тањуг"</string>
+    <string name="alpha">"Алфа"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Уклоњена"</string>
     <string name="remove_item">"Ремове Итем"</string>
     <string name="delete">"Делете"</string>
+    <string name="deleted">"Делетед"</string>
     <string name="duplicate">"Дупликат"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Искључи да бисте онемогућили звучне ефекте"</string>
     <string name="settings_base_item_2_primary">"Омогући Мусиц"</string>
     <string name="settings_base_item_2_secondary">"Искључи да бисте онемогућили музику"</string>
-
+    <string name="settings_base_item_3_primary">"Језик"</string>
+    <string name="settings_base_item_4_primary">"Покажи релеасе нотес на првом лансирању након велике упдате"</string>
+    <string name="settings_base_item_4_secondary">"Искључи да никада не покаже Релеасе Ноте попуп"</string>
+    <string name="settings_base_item_5_primary">"Тема"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Коришћење обавештења тему на светлом фоне и тамне текста"</string>
     <string name="randremind_settings_3_secondary">"Искључите да користите тамну обавештавања тему на тамној позадини и светлог текста"</string>
     <string name="randremind_settings_4_primary">"Први дан у недељи"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Хиде банери"</string>
     <string name="google_play_settings_0_secondary">"Искључи да се сакрије баннер огласе, али уместо тога приказује све страница Огласи"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Светло"</string>
+    <string name="dark">"Мрак"</string>
+    <string name="night">"Ноћни"</string>
+    <string name="black">"Crn"</string>
+    <string name="white">"Бела"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Добити"</string>
     <string name="type">"Врста"</string>
     <string name="missed">"Миссед"</string>
+    <string name="restart">"Поново покрени"</string>
+    <string name="restarting">"Поновно покретање"</string>
+    <string name="restarting_app_please_wait">"Поновно Апп, Плеасе Ваит"</string>
 
 </resources>

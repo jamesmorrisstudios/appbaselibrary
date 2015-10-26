@@ -249,6 +249,10 @@
     <string name="incomplete">"अधूरा"</string>
     <string name="invalid_path">"अवैध्य मार्ग"</string>
     <string name="invalid_file">"अमान्य लेख्यपत्र"</string>
+    <string name="dismiss">"बर्खास्त"</string>
+    <string name="dismissed">"ख़ारिज"</string>
+    <string name="acknowledge">"स्वीकार करो"</string>
+    <string name="acknowledged">"स्वीकार किया"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"सहायता और प्रतिक्रिया"</string>
     <string name="like_this_app">"इस अनुप्रयोग की तरह?"</string>
     <string name="rate_now">"अब दर लगाएँ"</string>
+    <string name="rate_app">"एप्प का मूल्यांकन"</string>
     <string name="more_apps">"और ऐप"</string>
+    <string name="support_development">"समर्थन विकास"</string>
     <string name="how_to_use">"का उपयोग कैसे करें"</string>
     <string name="how_to_play">"कैसे खेलें"</string>
     <string name="read_how">"कैसे पढ़ें"</string>
     <string name="watch_how">"कैसे घड़ी"</string>
     <string name="licenses">"लाइसेंस"</string>
+    <string name="help_translate">"अनुवाद करने में मदद"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"प्रमुख"</string>
+    <string name="minor">"नाबालिग"</string>
+    <string name="aux">"औक्स"</string>
+    <string name="release_notes">"रिलीज नोट्स"</string>
+    <string name="version">"संस्करण"</string>
+    <string name="production">"उत्पादन"</string>
+    <string name="beta">"बीटा"</string>
+    <string name="alpha">"अल्फा"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"हटाया"</string>
     <string name="remove_item">"इस आइटम को हटा दें"</string>
     <string name="delete">"हटाना"</string>
+    <string name="deleted">"हटाए गए"</string>
     <string name="duplicate">"नक़ल"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"ध्वनि प्रभाव को निष्क्रिय करने के अचयनित"</string>
     <string name="settings_base_item_2_primary">"संगीत सक्षम करें"</string>
     <string name="settings_base_item_2_secondary">"संगीत को निष्क्रिय करने के अचयनित"</string>
-
+    <string name="settings_base_item_3_primary">"भाषा"</string>
+    <string name="settings_base_item_4_primary">"दिखाएँ रिलीज एक प्रमुख अद्यतन के बाद पहली बार लॉन्च पर नोटों"</string>
+    <string name="settings_base_item_4_secondary">"रिलीज नोट पॉपअप दिखाने के लिए कभी नहीं अचयनित"</string>
+    <string name="settings_base_item_5_primary">"विषय"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"एक प्रकाश पृष्ठभूमि और अंधेरे पाठ की अधिसूचना विषय का उपयोग करें"</string>
     <string name="randremind_settings_3_secondary">"एक काले रंग की पृष्ठभूमि और प्रकाश पाठ के अंधेरे अधिसूचना विषय का उपयोग करने के लिए अनचेक"</string>
     <string name="randremind_settings_4_primary">"सप्ताह का पहला दिन"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"बैनर विज्ञापन छुपाएं"</string>
     <string name="google_play_settings_0_secondary">"बैनर विज्ञापन छिपाने लेकिन इसके बजाय पूरे पृष्ठ का विज्ञापन दिखाने के लिए अचयनित"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"प्रकाश"</string>
+    <string name="dark">"अंधेरा"</string>
+    <string name="night">"रात"</string>
+    <string name="black">"काली"</string>
+    <string name="white">"सफेद"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"मिलना"</string>
     <string name="type">"टाइप"</string>
     <string name="missed">"मिस्ड"</string>
+    <string name="restart">"पुनः आरंभ करें"</string>
+    <string name="restarting">"फिर आरंभ कर"</string>
+    <string name="restarting_app_please_wait">"App शुरु, कृपया प्रतीक्षा करें"</string>
 
 </resources>

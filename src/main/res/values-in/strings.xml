@@ -249,6 +249,10 @@
     <string name="incomplete">"Tidak lengkap"</string>
     <string name="invalid_path">"Jalur tidak valid"</string>
     <string name="invalid_file">"File yang tidak valid"</string>
+    <string name="dismiss">"Memberhentikan"</string>
+    <string name="dismissed">"Diberhentikan"</string>
+    <string name="acknowledge">"Mengakui"</string>
+    <string name="acknowledged">"Diakui"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Bantuan &amp; Saran"</string>
     <string name="like_this_app">"Seperti aplikasi ini?"</string>
     <string name="rate_now">"Beri Sekarang"</string>
+    <string name="rate_app">"Tingkat App"</string>
     <string name="more_apps">"Aplikasi tambahan lainnya"</string>
+    <string name="support_development">"Pengembangan dukungan"</string>
     <string name="how_to_use">"Bagaimana cara menggunakan"</string>
     <string name="how_to_play">"Cara bermain"</string>
     <string name="read_how">"Baca Bagaimana"</string>
     <string name="watch_how">"Perhatikan Bagaimana"</string>
     <string name="licenses">"Lisensi"</string>
+    <string name="help_translate">"Bantuan Terjemahkan"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Utama"</string>
+    <string name="minor">"Minor"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Catatan Rilis"</string>
+    <string name="version">"Versi"</string>
+    <string name="production">"Produksi"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alfa"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Dihapus"</string>
     <string name="remove_item">"Hapus Barang"</string>
     <string name="delete">"Hapus"</string>
+    <string name="deleted">"Dihapus"</string>
     <string name="duplicate">"Duplikat"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Hapus tanda centang untuk menonaktifkan efek suara"</string>
     <string name="settings_base_item_2_primary">"Aktifkan Musik"</string>
     <string name="settings_base_item_2_secondary">"Hapus tanda centang untuk menonaktifkan musik"</string>
-
+    <string name="settings_base_item_3_primary">"Bahasa"</string>
+    <string name="settings_base_item_4_primary">"Tampilkan rilis catatan pada peluncuran pertama setelah update besar"</string>
+    <string name="settings_base_item_4_secondary">"Hapus tanda centang untuk tidak pernah menunjukkan rilis catatan popup"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Menggunakan tema pemberitahuan dari latar belakang cahaya dan teks gelap"</string>
     <string name="randremind_settings_3_secondary">"Hapus centang untuk menggunakan pemberitahuan tema gelap dari latar belakang gelap dan teks cahaya"</string>
     <string name="randremind_settings_4_primary">"Hari pertama dalam seminggu"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Sembunyikan Iklan Banner"</string>
     <string name="google_play_settings_0_secondary">"Hapus tanda centang untuk menyembunyikan iklan banner tetapi menampilkan iklan halaman penuh bukannya"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Cahaya"</string>
+    <string name="dark">"Gelap"</string>
+    <string name="night">"Malam"</string>
+    <string name="black">"Hitam"</string>
+    <string name="white">"Putih"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Mendapatkan"</string>
     <string name="type">"Jenis"</string>
     <string name="missed">"Terjawab"</string>
+    <string name="restart">"Mengulang kembali"</string>
+    <string name="restarting">"Restart"</string>
+    <string name="restarting_app_please_wait">"Restart App, Harap Tunggu"</string>
 
 </resources>

@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Lade till en popup dialog på första app lanseringen efter en uppdateringsfunktion för att visa vad som ändrats. Det kommer inte att visas för mindre bugg fix uppdateringar."</item>
+        <item name="line1">"Lade till möjligheten att tvinga appen till engelska."</item>
+        <item name="line2">"Lade till en indikator i hjälpen och Feedback för att säga om den nuvarande build är Beta eller produktion."</item>
+        <item name="line3">"Drog i vissa samhället app översättningar. Tack för dem som hjälpte till."</item>
+        <item name="line4">"Inkom anmälan avvisas till påminnelsen loggen."</item>
+        <item name="line5">"Fixade en bugg där beställning påminnelser kunde krascha programmet."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"ingenting"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"ingenting"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"ingenting"</item>
+    </string-array>
+
+</resources>

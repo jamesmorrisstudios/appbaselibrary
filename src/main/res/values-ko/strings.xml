@@ -249,6 +249,10 @@
     <string name="incomplete">"불완전한"</string>
     <string name="invalid_path">"잘못된 경로"</string>
     <string name="invalid_file">"잘못된 파일"</string>
+    <string name="dismiss">"해제"</string>
+    <string name="dismissed">"해산"</string>
+    <string name="acknowledge">"인정"</string>
+    <string name="acknowledged">"인정"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"도움말 및 피드백"</string>
     <string name="like_this_app">"이 응용 프로그램처럼?"</string>
     <string name="rate_now">"지금 평가"</string>
+    <string name="rate_app">"속도 앱"</string>
     <string name="more_apps">"더 많은 애플 리케이션"</string>
+    <string name="support_development">"지원 개발"</string>
     <string name="how_to_use">"사용하는 방법"</string>
     <string name="how_to_play">"게임 방법"</string>
     <string name="read_how">"어떻게 읽기"</string>
     <string name="watch_how">"어떻게 시계"</string>
     <string name="licenses">"라이센스"</string>
+    <string name="help_translate">"번역에 참여하세요"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"주요한"</string>
+    <string name="minor">"미성년자"</string>
+    <string name="aux">"보조"</string>
+    <string name="release_notes">"릴리즈 노트"</string>
+    <string name="version">"버전"</string>
+    <string name="production">"생산"</string>
+    <string name="beta">"베타"</string>
+    <string name="alpha">"알파"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"제거"</string>
     <string name="remove_item">"항목 제거"</string>
     <string name="delete">"삭제"</string>
+    <string name="deleted">"삭제"</string>
     <string name="duplicate">"복제"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"음향 효과를 사용하지 않으려면 선택을 취소합니다"</string>
     <string name="settings_base_item_2_primary">"음악 사용"</string>
     <string name="settings_base_item_2_secondary">"음악을 사용하지 않으려면 선택을 취소합니다"</string>
-
+    <string name="settings_base_item_3_primary">"언어"</string>
+    <string name="settings_base_item_4_primary">"쇼 릴리스의 주요 업데이트 후 처음 실행에 노트"</string>
+    <string name="settings_base_item_4_secondary">"릴리스 노트 팝업을 표시하지 않으려면 선택을 취소합니다"</string>
+    <string name="settings_base_item_5_primary">"테마"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"밝은 배경과 어두운 텍스트의 통지 테마를 사용하여"</string>
     <string name="randremind_settings_3_secondary">"어두운 배경에 밝은 텍스트의 어두운 알림 테마를 사용하기 위해 선택 취소"</string>
     <string name="randremind_settings_4_primary">"일주일의 첫날"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"배너 광고 숨기기"</string>
     <string name="google_play_settings_0_secondary">"배너 광고를 숨기 대신 전체 페이지 광고를 게재하려면 선택 해제"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"빛"</string>
+    <string name="dark">"어두운"</string>
+    <string name="night">"밤"</string>
+    <string name="black">"검정"</string>
+    <string name="white">"화이트"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"가져 오기"</string>
     <string name="type">"유형"</string>
     <string name="missed">"부재"</string>
+    <string name="restart">"재시작"</string>
+    <string name="restarting">"다시 시작"</string>
+    <string name="restarting_app_please_wait">"응용 프로그램을 다시 시작하면, 잠시 기다려주십시오"</string>
 
 </resources>

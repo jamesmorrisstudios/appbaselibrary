@@ -6,7 +6,18 @@
 
     <string name="store_link" translatable="false">Change This</string>
     <string name="store_link_all" translatable="false">Change This</string>
+    <string name="store_link_donation" translatable="false">Change This</string>
     <string name="tutorial_link_read" translatable="false">Change This</string>
     <string name="tutorial_link_watch" translatable="false">Change This</string>
+
+    <string name="version_type" translatable="false">@string/alpha</string>
+
+    <array name="current_release_notes">
+        <item name="data">@array/BLANK_STRING_ARRAY</item>
+    </array>
+
+    <string-array name="BLANK_STRING_ARRAY">
+        <item name="data">nothing</item>
+    </string-array>
 
 </resources>

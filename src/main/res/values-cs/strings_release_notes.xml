@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Přidána vyskakovací dialog na první app startu po aktualizaci funkce ukázat, co se změnilo. To se nebude zobrazovat pro menší aktualizace bug fix."</item>
+        <item name="line1">"Přidána možnost vynutit aplikace do angličtiny."</item>
+        <item name="line2">"Přidána indikátor na stránku nápovědy a zpětné vazby říct, jestli je aktuální sestavení je Beta nebo Production."</item>
+        <item name="line3">"Vytáhl v některých komunita app překlady. Děkuji vám za ty, kteří pomáhali."</item>
+        <item name="line4">"Přidána oznámení propustil do protokolu připomenutí."</item>
+        <item name="line5">"Opravena chyba, kdy změna pořadí připomenutí mohlo dojít k pádu aplikace."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+</resources>

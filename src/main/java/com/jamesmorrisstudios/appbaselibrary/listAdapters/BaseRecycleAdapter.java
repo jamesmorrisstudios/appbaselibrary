@@ -26,6 +26,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.math.UtilsMath;
 import com.jamesmorrisstudios.appbaselibrary.touchHelper.ItemTouchHelperAdapter;
 
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     private final ArrayList<LineItem> mItems;
     private OnItemClickListener mListener;
     private int expandedPosition = -1;
+    private boolean hasDummyItem = false;
 
     /**
      * Constructor
@@ -55,6 +57,14 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
 
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
+        if(hasDummyItem) {
+            fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 2, fromPosition);
+            toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 2, toPosition);
+        } else {
+            fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, fromPosition);
+            toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, toPosition);
+        }
+
         LineItem prev = mItems.remove(fromPosition);
         mItems.add(toPosition, prev);
         mListener.itemMoved(fromPosition, toPosition);
@@ -73,7 +83,8 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      *
      * @param items List of items to set.
      */
-    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
+    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items, boolean hasDummyItem) {
+        this.hasDummyItem = hasDummyItem;
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));

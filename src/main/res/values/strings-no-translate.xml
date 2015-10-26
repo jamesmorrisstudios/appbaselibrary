@@ -34,8 +34,57 @@
     <string name="help_link_gPlus" translatable="false">https://plus.google.com/116342052026616674911</string>
     <string name="help_link_fb" translatable="false">https://www.facebook.com/j.morris.studios</string>
 
+    <string name="help_link_translate" translatable="false">https://osorly3.oneskyapp.com/collaboration/project/102553</string>
+
     <string name="todo" translatable="false">Coming Soon</string>
 
     <string name="help_how_to_header" translatable="false">@string/how_to_use</string>
+
+    <string name="BLANK" translatable="false"></string>
+
+    <!-- Language List -->
+    <string name="Arabic" translatable="false">Arabic</string>
+    <string name="Bulgarian" translatable="false">Bulgarian</string>
+    <string name="Catalan" translatable="false">Catalan</string>
+    <string name="Chinese" translatable="false">Chinese</string>
+    <string name="Croatian" translatable="false">Croatian</string>
+
+    <string name="Czech" translatable="false">Czech</string>
+    <string name="Danish" translatable="false">Danish</string>
+    <string name="Dutch" translatable="false">Dutch</string>
+    <string name="English" translatable="false">English</string>
+    <string name="Finnish" translatable="false">Finnish</string>
+
+    <string name="French" translatable="false">French</string>
+    <string name="German" translatable="false">German</string>
+    <string name="Greek" translatable="false">Greek</string>
+    <string name="Hebrew" translatable="false">Hebrew</string>
+    <string name="Hindi" translatable="false">Hindi</string>
+
+    <string name="Hungarian" translatable="false">Hungarian</string>
+    <string name="Indonesian" translatable="false">Indonesian</string>
+    <string name="Italian" translatable="false">Italian</string>
+    <string name="Japanese" translatable="false">Japanese</string>
+    <string name="Korean" translatable="false">Korean</string>
+
+    <string name="Latvian" translatable="false">Latvian</string>
+    <string name="Lithuanian" translatable="false">Lithuanian</string>
+    <string name="Norwegian" translatable="false">Norwegian</string>
+    <string name="Polish" translatable="false">Polish</string>
+    <string name="Portuguese" translatable="false">Portuguese</string>
+
+    <string name="Romanian" translatable="false">Romanian</string>
+    <string name="Russian" translatable="false">Russian</string>
+    <string name="Serbian" translatable="false">Serbian</string>
+    <string name="Slovak" translatable="false">Slovak</string>
+    <string name="Slovenian" translatable="false">Slovenian</string>
+
+    <string name="Spanish" translatable="false">Spanish</string>
+    <string name="Swedish" translatable="false">Swedish</string>
+    <string name="Thai" translatable="false">Thai</string>
+    <string name="Turkish" translatable="false">Turkish</string>
+    <string name="Ukrainian" translatable="false">Ukrainian</string>
+
+    <string name="Vietnamese" translatable="false">Vietnamese</string>
 
 </resources>

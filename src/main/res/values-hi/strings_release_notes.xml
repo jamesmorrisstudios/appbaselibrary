@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"क्या बदला दिखाने के लिए एक सुविधा अद्यतन करने के बाद पहली बार एप्लिकेशन लॉन्च पर एक पॉपअप संवाद जोड़ा गया। यह मामूली बग तय अपडेट के लिए नहीं दिखाया जाएगा।"</item>
+        <item name="line1">"अंग्रेजी में एप्लिकेशन के लिए मजबूर करने का विकल्प जोड़ा गया।"</item>
+        <item name="line2">"वर्तमान बिल्ड बीटा या उत्पादन होता है, तो मदद और प्रतिक्रिया पृष्ठ के लिए एक सूचक जोड़ी कहने के लिए।"</item>
+        <item name="line3">"कुछ समुदाय एप्लिकेशन अनुवाद में खींच लिया। मदद करने वालों के लिए धन्यवाद।"</item>
+        <item name="line4">"जोड़ा अधिसूचना अनुस्मारक लॉग करने के लिए खारिज कर दिया।"</item>
+        <item name="line5">"पुनर्व्यवस्था अनुस्मारक एप्लिकेशन दुर्घटना सकता है, जहां एक बग फिक्स्ड।"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"कुछ नहीं"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"कुछ नहीं"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"कुछ नहीं"</item>
+    </string-array>
+
+</resources>

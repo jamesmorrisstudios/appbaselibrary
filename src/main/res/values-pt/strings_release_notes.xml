@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Adicionado uma caixa de diálogo pop-up no primeiro lançamento app após uma atualização de recurso para mostrar o que mudou. Não vai mostrar para pequenas atualizações bug fix."</item>
+        <item name="line1">"Adicionado a opção para forçar o aplicativo para o Inglês."</item>
+        <item name="line2">"Adicionado um indicador para a página de Ajuda e Feedback para dizer se a compilação atual é Beta ou Produção."</item>
+        <item name="line3">"Puxado em algumas traduções app comunidade. Obrigado por aqueles que ajudaram."</item>
+        <item name="line4">"Notificação Adicionado demitido no log de lembrete."</item>
+        <item name="line5">"Corrigido um bug onde lembretes reordenação poderia deixar de funcionar o app."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nenhuma coisa"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nenhuma coisa"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nenhuma coisa"</item>
+    </string-array>
+
+</resources>

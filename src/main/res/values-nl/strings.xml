@@ -13,7 +13,6 @@
   ~ See the License for the specific language governing permissions and
   ~ limitations under the License.
   --><resources>
-
     <!--
         Time
      -->
@@ -53,7 +52,7 @@
     <string name="seven">"Zeven"</string>
     <!-- -->
     <string name="eight">"Acht"</string>
-    v
+    <!-- -->
     <string name="nine">"Negen"</string>
     <!-- -->
     <string name="ten">"Tien"</string>
@@ -108,7 +107,7 @@
     <string name="start_time">"Starttijd"</string>
     <string name="end_time">"Eindtijd"</string>
     <string name="timing_type">"Timing Type"</string>
-    <string name="edit_times">"Bewerk Times"</string>
+    <string name="edit_times">Aantal keren bewerken</string>
     <string name="time">"Tijd"</string>
     <string name="times">"Times"</string>
     <string name="timing">"Timing"</string>
@@ -241,14 +240,18 @@
     <string name="invalid">"Ongeldig"</string>
     <string name="failed_open_link">"Mislukt link te openen"</string>
     <string name="app_open_fail">"Niet app openen"</string>
-    <string name="no_items_found">"Geen items gevonden"</string>
-    <string name="data_load_fail">"Verzuimd om de lijst te laden"</string>
-    <string name="invalid_time">"Ongeldige tijd"</string>
+    <string name="no_items_found">U heeft nog geen herinneringen</string>
+    <string name="data_load_fail">Lijst met herinneringen laden mislukt</string>
+    <string name="invalid_time">Ongeldige tijd</string>
     <string name="complete">"Compleet"</string>
     <string name="completed">"Voltooid"</string>
     <string name="incomplete">"Onvolledig"</string>
     <string name="invalid_path">"Ongeldige Path"</string>
     <string name="invalid_file">"Ongeldig bestand"</string>
+    <string name="dismiss">"Ontslaan"</string>
+    <string name="dismissed">"Ontslagen"</string>
+    <string name="acknowledge">"Erkennen"</string>
+    <string name="acknowledged">"Erkend"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +262,27 @@
     <string name="help_and_feedback">"Hulp &amp; feedback"</string>
     <string name="like_this_app">"Als deze app?"</string>
     <string name="rate_now">"Beoordeel Nu"</string>
+    <string name="rate_app">"Beoordeel app"</string>
     <string name="more_apps">"Meer apps"</string>
+    <string name="support_development">"Ondersteuning Ontwikkeling"</string>
     <string name="how_to_use">"Hoe te gebruiken"</string>
     <string name="how_to_play">"Hoe te spelen"</string>
     <string name="read_how">"Lees"</string>
     <string name="watch_how">"Hoe kijken"</string>
     <string name="licenses">"Licenties"</string>
+    <string name="help_translate">"Help Vertaal"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Major"</string>
+    <string name="minor">"Mineur"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Release Notes"</string>
+    <string name="version">"Versie"</string>
+    <string name="production">"Productie"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -314,8 +332,8 @@
     -->
     <string name="message">"Bericht"</string>
     <string name="messages">"Berichten"</string>
-    <string name="num_messages">"Aantal Berichten"</string>
-    <string name="edit_messages">"Berichten bewerken"</string>
+    <string name="num_messages">Aantal berichten</string>
+    <string name="edit_messages">Berichten bewerken</string>
 
     <!--
         Add/Remove/Delete/Duplicate/etc
@@ -327,6 +345,7 @@
     <string name="removed">"Verwijderd"</string>
     <string name="remove_item">"Verwijder item"</string>
     <string name="delete">"Verwijderen"</string>
+    <string name="deleted">"Verwijderde"</string>
     <string name="duplicate">"Duplicaat"</string>
 
     <!--
@@ -475,10 +494,10 @@
     <!--
         Toast Messages
     -->
-    <string name="reminder_cancel">"Veranderingen Afgedankte"</string>
-    <string name="reminder_save">"Wijzigingen opgeslagen"</string>
-    <string name="reminder_delete">"Herinnering Verwijderde"</string>
-    <string name="reminder_duplicate">"Herinnering Gedupliceerde"</string>
+    <string name="reminder_cancel">Wijzigingen geannuleerd</string>
+    <string name="reminder_save">Wijzigingen opgeslagen</string>
+    <string name="reminder_delete">Herinnering verwijderd</string>
+    <string name="reminder_duplicate">Herinnering gedupliceerd</string>
     <string name="no_changes">"Geen veranderingen"</string>
 
 	<!--
@@ -490,7 +509,10 @@
     <string name="settings_base_item_1_secondary">"Haal het vinkje weg om geluidseffecten uit te schakelen"</string>
     <string name="settings_base_item_2_primary">"Enable Music"</string>
     <string name="settings_base_item_2_secondary">"Haal het vinkje weg om muziek te schakelen"</string>
-
+    <string name="settings_base_item_3_primary">"Taal"</string>
+    <string name="settings_base_item_4_primary">"Toon release notes op de eerste lancering na een grote update"</string>
+    <string name="settings_base_item_4_secondary">"Haal het vinkje weg om nooit de release note popup tonen"</string>
+    <string name="settings_base_item_5_primary">"Thema"</string>
     <!--
         Google Play specific
     -->
@@ -509,34 +531,43 @@
         Randomly RemindMe Specific
     -->
     <string name="no_reminders_yet">"U heeft nog geen herinneringen."</string>
-    <string name="delete_reminder_prompt_title">"Wissen Herinnering"</string>
-    <string name="delete_reminder_prompt_content">"Bent u zeker dat u deze herinnering verwijderen?"</string>
-    <string name="cancel_reminder_prompt_title">"Veranderingen ongedaan maken"</string>
-    <string name="cancel_reminder_prompt_content">"Bent u zeker dat u uw wijzigingen weggooien?"</string>
-    <string name="duplicate_reminder_prompt_title">"Duplicate Herinnering"</string>
-    <string name="duplicate_reminder_prompt_content">"Bent u zeker dat u deze herinnering dupliceren?"</string>
-    <string name="notification_theme_title">"Selecteer de melding stijl die past bij uw telefoon"</string>
-    <string name="alerts_per_day">"Herinneringen per dag"</string>
+    <string name="delete_reminder_prompt_title">Verwijder herinnering</string>
+    <string name="delete_reminder_prompt_content">Bent u zeker dat u deze herinnering wil verwijderen?</string>
+    <string name="cancel_reminder_prompt_title">Annuleer wijzigingen</string>
+    <string name="cancel_reminder_prompt_content">Bent u zeker dat u uw wijzigingen wil annuleren?</string>
+    <string name="duplicate_reminder_prompt_title">Dupliceer herinnering</string>
+    <string name="duplicate_reminder_prompt_content">Bent u zeker dat u deze herinnering wil dupliceren?</string>
+    <string name="notification_theme_title">Selecteer de meldingsstijl die past bij uw telefoon</string>
+    <string name="alerts_per_day">Herinneringen per dag</string>
 
     <!--
         Randomly RemindMe Settings
     -->
-    <string name="randremind_settings_0_primary">"Kennisgeving opent samenvatting"</string>
-    <string name="randremind_settings_0_secondary">"Haal het vinkje weg om melding te maken in stilte te erkennen"</string>
-    <string name="randremind_settings_1_primary">"Aangepaste melding"</string>
-    <string name="randremind_settings_1_secondary">"Verwijder het vinkje om de aangepaste melding uit te schakelen en terug te keren naar de standaard systeem"</string>
-    <string name="randremind_settings_2_primary">"Gebruik lopende kennisgeving"</string>
-    <string name="randremind_settings_2_secondary">"Verwijder het vinkje om de kennisgeving aan afgezet kunnen door met het weg zijn. Lopende meldingen worden niet ondersteund op Android Wear"</string>
-    <string name="randremind_settings_3_primary">"Gebruik melding thema van een lichte achtergrond en donkere tekst"</string>
-    <string name="randremind_settings_3_secondary">"Verwijder het vinkje om donkere kennisgeving thema te gebruiken van een donkere achtergrond en lichte tekst"</string>
-    <string name="randremind_settings_4_primary">"Eerste dag van de week"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
+    <string name="randremind_settings_0_primary">Melding opent samenvatting</string>
+    <string name="randremind_settings_0_secondary">Haal het vinkje weg om melding in stilte te bevestigen</string>
+    <string name="randremind_settings_1_primary">Gebruik aangepaste melding</string>
+    <string name="randremind_settings_1_secondary">Verwijder het vinkje om de aangepaste melding uit te schakelen en terug te keren naar de standaard instelling</string>
+    <string name="randremind_settings_2_primary">Gebruik lopende melding</string>
+    <string name="randremind_settings_2_secondary">Verwijder het vinkje om toe te laten dat de melding kan worden afgewezen door te vegen. Lopende meldingen worden niet ondersteund op Android Wear</string>
+    <string name="randremind_settings_3_primary">Gebruik meldingsthema met een lichte achtergrond en donkere tekst</string>
+    <string name="randremind_settings_3_secondary">Verwijder het vinkje om het donkere meldingsthema te gebruiken met een donkere achtergrond en lichte tekst</string>
+    <string name="randremind_settings_4_primary">Eerste dag van de week</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Verbergen banneradvertenties"</string>
     <string name="google_play_settings_0_secondary">"Haal het vinkje weg te verbergen banner advertenties, maar laten zien volledige pagina advertenties in plaats"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Licht"</string>
+    <string name="dark">"Donker"</string>
+    <string name="night">"Nacht"</string>
+    <string name="black">"Zwart"</string>
+    <string name="white">"Wit"</string>
 
     <!--
         Uncategorized
@@ -559,7 +590,7 @@
     <string name="custom">"Custom"</string>
     <string name="title">"Titel"</string>
     <string name="notification">"Kennisgeving"</string>
-    <string name="select_notification">"Select Notification"</string>
+    <string name="select_notification">Selecteer melding</string>
     <string name="color">"Kleur"</string>
     <string name="tone">"Toon"</string>
     <string name="sound">"Klinken"</string>
@@ -577,5 +608,8 @@
     <string name="get">"Krijgen"</string>
     <string name="type">"Type"</string>
     <string name="missed">"Gemiste"</string>
+    <string name="restart">"Herstart"</string>
+    <string name="restarting">"Herstarten"</string>
+    <string name="restarting_app_please_wait">"Herstarten App, Please Wait"</string>
 
 </resources>

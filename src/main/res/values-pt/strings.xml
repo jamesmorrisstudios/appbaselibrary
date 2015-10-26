@@ -249,6 +249,10 @@
     <string name="incomplete">"Incompleto"</string>
     <string name="invalid_path">"Caminho inválido"</string>
     <string name="invalid_file">"Arquivo inválido"</string>
+    <string name="dismiss">"Demitir"</string>
+    <string name="dismissed">"Demitido"</string>
+    <string name="acknowledge">"Reconhecer"</string>
+    <string name="acknowledged">"Reconhecido"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Ajuda &amp; Resposta"</string>
     <string name="like_this_app">"Gosta dessa app?"</string>
     <string name="rate_now">"Avalie-o agora"</string>
+    <string name="rate_app">"Taxa App"</string>
     <string name="more_apps">"Mais aplicativos"</string>
+    <string name="support_development">"Apoio ao Desenvolvimento"</string>
     <string name="how_to_use">"Como usar"</string>
     <string name="how_to_play">"Como jogar"</string>
     <string name="read_how">"Leia Como"</string>
     <string name="watch_how">"Veja como"</string>
     <string name="licenses">"Licenças"</string>
+    <string name="help_translate">"Ajude Traduzir"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Principal"</string>
+    <string name="minor">"Menor"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Notas de versão"</string>
+    <string name="version">"Versão"</string>
+    <string name="production">"Produção"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alfa"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Removido"</string>
     <string name="remove_item">"Remover item"</string>
     <string name="delete">"Excluir"</string>
+    <string name="deleted">"Excluídos"</string>
     <string name="duplicate">"Duplicar"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Desmarque para desativar efeitos de som"</string>
     <string name="settings_base_item_2_primary">"Ativar Música"</string>
     <string name="settings_base_item_2_secondary">"Desmarque para desativar música"</string>
-
+    <string name="settings_base_item_3_primary">"Idioma"</string>
+    <string name="settings_base_item_4_primary">"Mostrar notas de lançamento no primeiro lançamento depois de uma grande atualização"</string>
+    <string name="settings_base_item_4_secondary">"Desmarque a opção para nunca mostram o popup nota de lançamento"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Use tema notificação de um fundo texto claro e escuro"</string>
     <string name="randremind_settings_3_secondary">"Desmarque para usar tema notificação escuro de um fundo escuro e texto luz"</string>
     <string name="randremind_settings_4_primary">"Primeiro dia da semana"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Esconder Banners"</string>
     <string name="google_play_settings_0_secondary">"Desmarque a opção para esconder banners mas mostrar anúncios de página inteira em vez"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Claro"</string>
+    <string name="dark">"Escuro"</string>
+    <string name="night">"Noite"</string>
+    <string name="black">"Negro"</string>
+    <string name="white">"Branco"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Conseguir"</string>
     <string name="type">"Tipo"</string>
     <string name="missed">"Esquecidas"</string>
+    <string name="restart">"Reiniciar"</string>
+    <string name="restarting">"Reiniciando"</string>
+    <string name="restarting_app_please_wait">"Reiniciando App, Aguarde"</string>
 
 </resources>

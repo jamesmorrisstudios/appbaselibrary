@@ -18,150 +18,143 @@
         Time
      -->
     <!-- -->
-    <string name="day_singular">"Dan"</string>
+    <string name="day_singular">Dan</string>
     <!-- -->
-    <string name="day_plural">"Dana"</string>
+    <string name="day_plural">Dani</string>
     <!-- -->
-    <string name="hour_singular">"Sat"</string>
+    <string name="hour_singular">Sat</string>
     <!-- -->
-    <string name="hour_plural">"Radno vrijeme"</string>
+    <string name="hour_plural">Sati</string>
     <!-- -->
-    <string name="minute_singular">"Minuta"</string>
+    <string name="minute_singular">Minuta</string>
     <!-- -->
-    <string name="minute_plural">"Zapisnik"</string>
+    <string name="minute_plural">Minute</string>
     <!-- -->
-    <string name="second_singular">"Drugo"</string>
+    <string name="second_singular">Sekunda</string>
     <!-- -->
-    <string name="second_plural">"Sekunde"</string>
-
+    <string name="second_plural">Sekunde</string>
     <!--
-        Numbers
-    -->
+           Numbers
+       -->
     <!-- -->
-    <string name="one">"Jedan"</string>
+    <string name="one">Jedan</string>
     <!-- -->
-    <string name="two">"Dva"</string>
+    <string name="two">Dva</string>
     <!-- -->
-    <string name="three">"Troje"</string>
+    <string name="three">Tri</string>
     <!-- -->
-    <string name="four">"Četvero"</string>
+    <string name="four">Četiri</string>
     <!-- -->
-    <string name="five">"Pet"</string>
+    <string name="five">Pet</string>
     <!-- -->
-    <string name="six">"Šest"</string>
+    <string name="six">Šest</string>
     <!-- -->
-    <string name="seven">"Sedmorica"</string>
+    <string name="seven">Sedam</string>
     <!-- -->
-    <string name="eight">"Osam"</string>
-    v
-    <string name="nine">"Devet"</string>
-    <!-- -->
-    <string name="ten">"Desetak"</string>
+    <string name="eight">Osam</string>
 
+    <string name="nine">Devet</string>
+    <!-- -->
+    <string name="ten">Deset</string>
     <!--
         Number Designations
     -->
     <!-- -->
-    <string name="first">"Prvo"</string>
+    <string name="first">Prvi</string>
     <!-- -->
-    <string name="second">"Drugo"</string>
+    <string name="second">Drugi</string>
     <!-- -->
-    <string name="third">"Treća"</string>
+    <string name="third">Treći</string>
     <!-- -->
-    <string name="fourth">"Četvrti"</string>
+    <string name="fourth">Četvrti</string>
     <!-- -->
-    <string name="fifth">"Peti"</string>
+    <string name="fifth">Peti</string>
     <!-- -->
-    <string name="sixth">"Šesta"</string>
+    <string name="sixth">Šesti</string>
     <!-- -->
-    <string name="seventh">"Sedmo"</string>
+    <string name="seventh">Sedmi</string>
     <!-- -->
-    <string name="eighth">"Osmi"</string>
+    <string name="eighth">Osmi</string>
     <!-- -->
-    <string name="ninth">"Deveta"</string>
+    <string name="ninth">Deveti</string>
     <!-- -->
-    <string name="tenth">"Deseti"</string>
-
+    <string name="tenth">Deseti</string>
     <!--
         Days of the week
     -->
     <!-- -->
-    <string name="days_of_week">"Dani u tjednu"</string>
+    <string name="days_of_week">Dani u tjednu</string>
     <!-- -->
-    <string name="day_sunday">"Nedjelja"</string>
+    <string name="day_sunday">Nedjelja</string>
     <!-- -->
-    <string name="day_monday">"Ponedjeljak"</string>
+    <string name="day_monday">Ponedjeljak</string>
     <!-- -->
-    <string name="day_tuesday">"Utorak"</string>
+    <string name="day_tuesday">Utorak</string>
     <!-- -->
-    <string name="day_wednesday">"Srijeda"</string>
+    <string name="day_wednesday">Srijeda</string>
     <!-- -->
-    <string name="day_thursday">"Četvrtak"</string>
+    <string name="day_thursday">Četvrtak</string>
     <!-- -->
-    <string name="day_friday">"Petak"</string>
+    <string name="day_friday">Petak</string>
     <!-- -->
-    <string name="day_saturday">"Subota"</string>
-
+    <string name="day_saturday">Subota</string>
     <!--
         Timing
     -->
-    <string name="start_time">"Vrijeme početka"</string>
-    <string name="end_time">"Vrijeme završetka"</string>
-    <string name="timing_type">"Vrsta Vrijeme"</string>
-    <string name="edit_times">"Uredi Times"</string>
-    <string name="time">"Put"</string>
-    <string name="times">"Puta"</string>
-    <string name="timing">"Vrijeme"</string>
-    <string name="today">"Danas"</string>
-    <string name="tomorrow">"Sutradan"</string>
-    <string name="yesterday">"Jučer"</string>
-    <string name="daily">"Dnevno"</string>
-    <string name="weekly">"Tjedno"</string>
-    <string name="week">"Tjedan"</string>
-    <string name="weeks">"Tjedan"</string>
-    <string name="all_time">"Cijelo vrijeme"</string>
-    <string name="next_week">"Sljedeći tjedan"</string>
-    <string name="last_week">"Prošli tjedan"</string>
-    <string name="once_month">"Jednom mjesečno"</string>
-    <string name="twice_month">"Dva puta mjesečno"</string>
-    <string name="every_week">"Svaki tjedan"</string>
-    <string name="every_other_week">"Svaki drugi tjedan"</string>
-    <string name="lifetime">"Doživotno"</string>
-
+    <string name="start_time">Vrijeme početka</string>
+    <string name="end_time">Vrijeme završetka</string>
+    <string name="timing_type">Vrsta vremena</string>
+    <string name="edit_times">Uređivanje vremena</string>
+    <string name="time">Vrijeme</string>
+    <string name="times">Vremena</string>
+    <string name="timing">Podešavanje vremena</string>
+    <string name="today">Danas</string>
+    <string name="tomorrow">Sutra</string>
+    <string name="yesterday">Juče</string>
+    <string name="daily">Dnevno</string>
+    <string name="weekly">Tjedno</string>
+    <string name="week">Tjedan</string>
+    <string name="weeks">Tjedni</string>
+    <string name="all_time">Cijelo vrijeme</string>
+    <string name="next_week">Slijedeći tjedan</string>
+    <string name="last_week">Prošli tjedan</string>
+    <string name="once_month">Jednom mjesečno</string>
+    <string name="twice_month">Dva puta mjesečno</string>
+    <string name="every_week">Svaki tjedan</string>
+    <string name="every_other_week">Svaki drugi tjedan</string>
+    <string name="lifetime">Doživotno</string>
     <!--
         Next/Prev
     -->
-    <string name="next">"Sljedeća"</string>
-    <string name="previous">"Prethodna"</string>
-    <string name="back">"Nazad"</string>
-    <string name="forward">"Naprijed"</string>
-
+    <string name="next">Slijedeći</string>
+    <string name="previous">Prethodni</string>
+    <string name="back">Nazad</string>
+    <string name="forward">Naprijed</string>
     <!--
         Patterns
     -->
-    <string name="pattern_1">"Uzorak 1"</string>
-    <string name="pattern_2">"Uzorak 2"</string>
-    <string name="pattern_3">"Uzorak 3"</string>
-    <string name="pattern_4">"Uzorak 4"</string>
-    <string name="pattern_5">"Uzorak 5"</string>
-    <string name="pattern_6">"Uzorak 6"</string>
-
+    <string name="pattern_1">Uzorak 1</string>
+    <string name="pattern_2">Uzorak 2</string>
+    <string name="pattern_3">Uzorak 3</string>
+    <string name="pattern_4">Uzorak 4</string>
+    <string name="pattern_5">Uzorak 5</string>
+    <string name="pattern_6">Uzorak 6</string>
     <!--
         Import/Export//backup/restore
     -->
-    <string name="import_">"Uvoz"</string>
-    <string name="export">"Izvozni"</string>
-    <string name="import_log">"Uvoz Prijava"</string>
-    <string name="export_log">"Izvoz Prijava"</string>
-    <string name="import_reminder">"Uvoz Podsjetnik"</string>
-    <string name="export_reminder">"Izvoz Podsjetnik"</string>
-    <string name="import_all">"Uvoz Sve"</string>
-    <string name="export_all">"Izvoz Sve"</string>
-    <string name="export_to">"Izvoz u"</string>
-    <string name="export_location">"Izvoz Mjesto"</string>
-    <string name="export_failed">"Izvoz nije uspio"</string>
-    <string name="file">"File"</string>
-    <string name="local_storage">"Lokalna pohrana"</string>
+    <string name="import_">Uvoz</string>
+    <string name="export">Izvoz</string>
+    <string name="import_log">Uvoz podataka</string>
+    <string name="export_log">Izvoz podataka</string>
+    <string name="import_reminder">Uvoz podsjetnika</string>
+    <string name="export_reminder">Izvoz podsjetnika</string>
+    <string name="import_all">Uvezi sve</string>
+    <string name="export_all">Izvezi sve</string>
+    <string name="export_to">Izvezi u</string>
+    <string name="export_location">Lokacija izvoza</string>
+    <string name="export_failed">Izvoz nije uspio</string>
+    <string name="file">Fajl</string>
+    <string name="local_storage">Lokalna pohrana</string>
     <string name="backup_location">"Backup Mjesto"</string>
     <string name="backup_restore">"Backup / Restore"</string>
     <string name="backup">"Rezerva"</string>
@@ -249,6 +242,10 @@
     <string name="incomplete">"Nepotpuna"</string>
     <string name="invalid_path">"Pogrešna Put"</string>
     <string name="invalid_file">"Pogrešna datoteke"</string>
+    <string name="dismiss">"Odbaciti"</string>
+    <string name="dismissed">"Otpušteni"</string>
+    <string name="acknowledge">"Priznajte"</string>
+    <string name="acknowledged">"Priznao"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +256,27 @@
     <string name="help_and_feedback">"Pomoć i ocjena"</string>
     <string name="like_this_app">"Kao što je ovaj app?"</string>
     <string name="rate_now">"Ocijenite It Now"</string>
+    <string name="rate_app">"Ocijenite App"</string>
     <string name="more_apps">"Više aplikacija"</string>
+    <string name="support_development">"Razvoj Podrška"</string>
     <string name="how_to_use">"Kako koristiti"</string>
     <string name="how_to_play">"Kako igrati"</string>
     <string name="read_how">"Pročitajte kako"</string>
     <string name="watch_how">"Pogledajte kako"</string>
     <string name="licenses">"Licence"</string>
+    <string name="help_translate">"Pomoć Prevoditelj"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Major"</string>
+    <string name="minor">"Maloljetnik"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Napomene o izdanju"</string>
+    <string name="version">"Verzija"</string>
+    <string name="production">"Proizvodnja"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alfa"</string>
 
     <!--
         Visibility
@@ -327,6 +339,7 @@
     <string name="removed">"Uklonjeno"</string>
     <string name="remove_item">"Ukloni stavku"</string>
     <string name="delete">"Izbrišite"</string>
+    <string name="deleted">"Izbrisani"</string>
     <string name="duplicate">"Dvostruki"</string>
 
     <!--
@@ -490,7 +503,10 @@
     <string name="settings_base_item_1_secondary">"Poništite onemogućiti zvučni efekti"</string>
     <string name="settings_base_item_2_primary">"Omogućite Glazba"</string>
     <string name="settings_base_item_2_secondary">"Poništite onemogućiti glazbu"</string>
-
+    <string name="settings_base_item_3_primary">"Govor"</string>
+    <string name="settings_base_item_4_primary">"Pokaži puštanje bilješke na prvom pokretanju nakon velike ažuriranja"</string>
+    <string name="settings_base_item_4_secondary">"Poništite nikada pokazati napomenama popup"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +546,22 @@
     <string name="randremind_settings_3_primary">"Koristite temu Obavijest o svijetloj pozadini i tamno teksta"</string>
     <string name="randremind_settings_3_secondary">"Poništite koristiti tamnu temu Obavijest o tamnoj podlozi i svjetlo tekst"</string>
     <string name="randremind_settings_4_primary">"Prvi dan u tjednu"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Sakrij banner oglase"</string>
     <string name="google_play_settings_0_secondary">"Poništite sakriti banner oglase, ali pokazuju puni oglase stranicu, umjesto"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Svjetlo"</string>
+    <string name="dark">"Tamna"</string>
+    <string name="night">"Noć"</string>
+    <string name="black">"Crna"</string>
+    <string name="white">"Bijela"</string>
 
     <!--
         Uncategorized
@@ -577,5 +602,8 @@
     <string name="get">"Nabavite"</string>
     <string name="type">"Vrsta"</string>
     <string name="missed">"Propušteni"</string>
+    <string name="restart">"Restart"</string>
+    <string name="restarting">"Ponovno pokretanje"</string>
+    <string name="restarting_app_please_wait">"Ponovno pokretanje App, molimo pričekajte"</string>
 
 </resources>

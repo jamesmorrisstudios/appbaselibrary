@@ -36,8 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/help_how_to_header"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/header_size" />
 
         <View
@@ -47,7 +46,7 @@
 
         <Button
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseRead"
             style="@style/help_read_how"
             android:layout_width="wrap_content"
@@ -61,7 +60,7 @@
 
         <Button
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseWatch"
             style="@style/help_watch_how"
             android:layout_width="wrap_content"
@@ -79,8 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/about"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/header_size" />
 
         <View
@@ -95,8 +93,7 @@
             android:layout_margin="2dp"
             android:gravity="center_horizontal"
             android:text="@string/help_about_studio"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <TextView
@@ -108,7 +105,6 @@
             android:gravity="center_horizontal"
             android:text="@string/help_about_email"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textDarkMain"
             android:textColorLink="@color/textAccent"
             android:textSize="@dimen/item_size" />
 
@@ -121,7 +117,6 @@
             android:gravity="center_horizontal"
             android:text="@string/help_about_site"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textDarkMain"
             android:textColorLink="@color/textAccent"
             android:textSize="@dimen/item_size" />
 
@@ -173,12 +168,12 @@
                 android:layout_marginRight="4dp"
                 android:layout_marginTop="4dp"
                 android:text="@string/like_this_app"
-                android:textColor="@color/textDarkMain"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textSize="@dimen/item_size" />
 
             <Button
                 android:background="?android:attr/selectableItemBackground"
-                android:textColor="@color/textDarkMain"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:id="@+id/btn_rateNow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -190,8 +185,35 @@
         </LinearLayout>
 
         <Button
+            style="@style/help_support_dev"
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/support_development"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/help_translate"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_moreBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -204,7 +226,20 @@
 
         <Button
             android:background="?android:attr/selectableItemBackground"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_release_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/release_notes"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/helpLicense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -222,8 +257,7 @@
             android:layout_gravity="bottom|left"
             android:layout_marginLeft="24dp"
             android:gravity="bottom|left"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/textDarkMain"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             android:textSize="@dimen/item_small_size" />
 
     </LinearLayout>

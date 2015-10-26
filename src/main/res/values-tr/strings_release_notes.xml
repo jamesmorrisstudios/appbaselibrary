@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Nelerin değiştiğini göstermek için bir özellik güncellemeden sonraki ilk uygulaması başlatılması üzerine bir pop-up iletişim eklendi. Bu küçük hata düzeltme güncellemeleri için gösterilmez."</item>
+        <item name="line1">"İngilizce'ye app zorlamak seçeneği eklendi."</item>
+        <item name="line2">"Geçerli yapı Beta veya üretim ise Yardım ve Öneriler sayfasına bir gösterge eklendi demek."</item>
+        <item name="line3">"Bazı topluluk uygulaması çevirilerde çekti. Yardım isteyenler için teşekkür ederiz."</item>
+        <item name="line4">"Eklenen bildirim hatırlatma günlüğüne reddetti."</item>
+        <item name="line5">"Reordering hatırlatmalar app çökmesine olabilecek bir hata düzeltildi."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+</resources>

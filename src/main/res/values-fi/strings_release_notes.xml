@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Lisätty popup dialogi ensimmäisenä sovelluksen käynnistää jälkeen ominaisuus päivityksen näyttää, mitä muuttunut. Se ei näy pieniä bug fix päivityksiä."</item>
+        <item name="line1">"Lisätty mahdollisuus pakottaa sovelluksen osaksi Englanti."</item>
+        <item name="line2">"Lisätty indikaattori Ohje ja Palaute sivu sanoa, jos nykyinen Build on Beta tai tuotantoon."</item>
+        <item name="line3">"Veti joidenkin yhteisön app käännöksiä. Kiitos niille, jotka auttoivat."</item>
+        <item name="line4">"Lisätty ilmoitus hylkäsi muistutukseen loki."</item>
+        <item name="line5">"Kiinteä vika, jos uusjako muistutuksia saattaa kaatua app."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"ei mitään"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"ei mitään"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"ei mitään"</item>
+    </string-array>
+
+</resources>

@@ -9,4 +9,8 @@
         <item name="android:visibility">visible</item>
     </style>
 
+    <style name="help_support_dev">
+        <item name="android:visibility">gone</item>
+    </style>
+
 </resources>

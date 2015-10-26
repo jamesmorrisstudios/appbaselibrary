@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"وأضاف الحوار المنبثقة عن إطلاق أول التطبيق بعد التحديث ميزة لإظهار ما تغير. وسوف يتم عرضه للثانوية التحديثات إصلاح الخلل."</item>
+        <item name="line1">"إضافة خيار لفرض التطبيق إلى اللغة الإنكليزية."</item>
+        <item name="line2">"وأضاف مؤشرا إلى صفحة التعليمات وملاحظات القول ما اذا كان البناء الحالي هو بيتا أو الإنتاج."</item>
+        <item name="line3">"سحبت في بعض الترجمات التطبيق المجتمع. شكرا لأولئك الذين ساعدوا."</item>
+        <item name="line4">"رفض الإخطار تضاف إلى سجل تذكير."</item>
+        <item name="line5">"إصلاح الخلل فيها تذكير إعادة ترتيب يمكن أن تعطل التطبيق."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+</resources>

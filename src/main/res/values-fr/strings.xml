@@ -249,6 +249,10 @@
     <string name="incomplete">"Incomplète"</string>
     <string name="invalid_path">"Chemin non valide"</string>
     <string name="invalid_file">"Fichier non valide"</string>
+    <string name="dismiss">"Rejeter"</string>
+    <string name="dismissed">"Rejeté"</string>
+    <string name="acknowledge">"Reconnaître"</string>
+    <string name="acknowledged">"Reconnu"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Aide &amp; Commentaires"</string>
     <string name="like_this_app">"Vous aimez cette application?"</string>
     <string name="rate_now">"Notez-le maintenant"</string>
+    <string name="rate_app">"Application de taux"</string>
     <string name="more_apps">"Plus d'applications"</string>
+    <string name="support_development">"Soutenir le développement"</string>
     <string name="how_to_use">"Comment utiliser"</string>
     <string name="how_to_play">"Comment jouer"</string>
     <string name="read_how">"Lire Comment"</string>
     <string name="watch_how">"Comment regarder"</string>
     <string name="licenses">"Licences"</string>
+    <string name="help_translate">"Aider à traduire"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Majeur"</string>
+    <string name="minor">"Mineure"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Notes de version"</string>
+    <string name="version">"Version"</string>
+    <string name="production">"La production"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Suppression"</string>
     <string name="remove_item">"Supprimer un objet"</string>
     <string name="delete">"Effacer"</string>
+    <string name="deleted">"Supprimé"</string>
     <string name="duplicate">"Dupliquer"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Décochez pour désactiver les effets sonores"</string>
     <string name="settings_base_item_2_primary">"Activer Musique"</string>
     <string name="settings_base_item_2_secondary">"Décochez pour désactiver la musique"</string>
-
+    <string name="settings_base_item_3_primary">"Langue"</string>
+    <string name="settings_base_item_4_primary">"Voir notes de version sur le premier lancement après une mise à jour majeure"</string>
+    <string name="settings_base_item_4_secondary">"Décochez cette case pour ne jamais montrer la release note contextuelle"</string>
+    <string name="settings_base_item_5_primary">"Thème"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Utilisez le thème de la notification d'un fond clair et texte foncé"</string>
     <string name="randremind_settings_3_secondary">"Décochez à utiliser le thème de notification sombre d'un fond sombre et un texte clair"</string>
     <string name="randremind_settings_4_primary">"Premier jour de la semaine"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Masquer les bannières publicitaires"</string>
     <string name="google_play_settings_0_secondary">"Décochez la case pour cacher les bannières publicitaires, mais montrer des annonces pleine page à la place"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Lumière"</string>
+    <string name="dark">"Foncé"</string>
+    <string name="night">"Nuit"</string>
+    <string name="black">"Noir"</string>
+    <string name="white">"blanc"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Obtenir"</string>
     <string name="type">"Type"</string>
     <string name="missed">"Raté"</string>
+    <string name="restart">"Redémarrage"</string>
+    <string name="restarting">"Redémarrage"</string>
+    <string name="restarting_app_please_wait">"Redémarrage App, S'il vous plaît Attendez"</string>
 
 </resources>

@@ -249,6 +249,10 @@
     <string name="incomplete">"לוקה בחסר"</string>
     <string name="invalid_path">"נתיב לא חוקי"</string>
     <string name="invalid_file">"קובץ לא תקין"</string>
+    <string name="dismiss">"לפטר"</string>
+    <string name="dismissed">"פוטר"</string>
+    <string name="acknowledge">"להכיר"</string>
+    <string name="acknowledged">"הודה"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"עזרה ומשוב"</string>
     <string name="like_this_app">"אוהב את היישום הזה?"</string>
     <string name="rate_now">"דרג את זה עכשיו"</string>
+    <string name="rate_app">"דרג את האפליקציה"</string>
     <string name="more_apps">"עוד אפליקציות"</string>
+    <string name="support_development">"פיתוח תמיכה"</string>
     <string name="how_to_use">"איך להישתמש"</string>
     <string name="how_to_play">"איך לשחק"</string>
     <string name="read_how">"קראו כיצד"</string>
     <string name="watch_how">"צפה כיצד"</string>
     <string name="licenses">"רישיונות"</string>
+    <string name="help_translate">"עזרה תרגם"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"גדול"</string>
+    <string name="minor">"קטין"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"מכתבי שחרור"</string>
+    <string name="version">"גרסה"</string>
+    <string name="production">"הפקה"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"אלפא"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"הוסר"</string>
     <string name="remove_item">"הסר פריט"</string>
     <string name="delete">"מחק"</string>
+    <string name="deleted">"נמחק"</string>
     <string name="duplicate">"לשכפל"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"בטל להשבית אפקטים קוליים"</string>
     <string name="settings_base_item_2_primary">"אפשר מוסיקה"</string>
     <string name="settings_base_item_2_secondary">"בטל להשבית מוסיקה"</string>
-
+    <string name="settings_base_item_3_primary">"שפה"</string>
+    <string name="settings_base_item_4_primary">"שחרור הצג מציין בהשקה הראשונה לאחר עדכון משמעותי"</string>
+    <string name="settings_base_item_4_secondary">"בטל ללא להראות קופץ פתק השחרור"</string>
+    <string name="settings_base_item_5_primary">"נושא"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"השתמש בערכת נושא של הודעת רקע בהיר וטקסט כהה"</string>
     <string name="randremind_settings_3_secondary">"בטל להשתמש נושא הודעה כהה של רקע כהה וטקסט בהיר"</string>
     <string name="randremind_settings_4_primary">"היום הראשון של השבוע"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"הסתר מודעות באנר"</string>
     <string name="google_play_settings_0_secondary">"בטל להסתיר מודעות באנר, אבל להציג את מודעות של עמוד שלמות במקום"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"אור"</string>
+    <string name="dark">"אפל"</string>
+    <string name="night">"לילה"</string>
+    <string name="black">"שחור"</string>
+    <string name="white">"לבן"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"קבל"</string>
     <string name="type">"סוג"</string>
     <string name="missed">"שלא נענו"</string>
+    <string name="restart">"איתחול"</string>
+    <string name="restarting">"הפעלה מחדש"</string>
+    <string name="restarting_app_please_wait">"הפעלה מחדש של יישומים, אנא המתן"</string>
 
 </resources>

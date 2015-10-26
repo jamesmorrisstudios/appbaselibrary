@@ -249,6 +249,10 @@
     <string name="incomplete">"Неповний"</string>
     <string name="invalid_path">"Невірний шлях"</string>
     <string name="invalid_file">"Невірний файл"</string>
+    <string name="dismiss">"Звільняти"</string>
+    <string name="dismissed">"Звільнений"</string>
+    <string name="acknowledge">"Визнавати"</string>
+    <string name="acknowledged">"Визнаний"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Допомога &amp; Зворотній зв'язок"</string>
     <string name="like_this_app">"Як це додаток?"</string>
     <string name="rate_now">"Оцініть це"</string>
+    <string name="rate_app">"Оцінити додаток"</string>
     <string name="more_apps">"Більше додатків"</string>
+    <string name="support_development">"Підтримка розвитку"</string>
     <string name="how_to_use">"Як використовувати"</string>
     <string name="how_to_play">"Як грати"</string>
     <string name="read_how">"Дізнайтеся, як"</string>
     <string name="watch_how">"Дивитися Як"</string>
     <string name="licenses">"Ліцензії"</string>
+    <string name="help_translate">"Допоможіть перекласти"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Крупний"</string>
+    <string name="minor">"Неповнолітній"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Примітки до випуску"</string>
+    <string name="version">"Версія"</string>
+    <string name="production">"Виробництво"</string>
+    <string name="beta">"Бета"</string>
+    <string name="alpha">"Альфа"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Вилучені"</string>
     <string name="remove_item">"Видалити елемент"</string>
     <string name="delete">"Видаляти"</string>
+    <string name="deleted">"Віддалений"</string>
     <string name="duplicate">"Дублювати"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Зніміть цей прапорець для відключення звукових ефектів"</string>
     <string name="settings_base_item_2_primary">"Включити музику"</string>
     <string name="settings_base_item_2_secondary">"Зніміть цей прапорець для відключення музики"</string>
-
+    <string name="settings_base_item_3_primary">"Мова"</string>
+    <string name="settings_base_item_4_primary">"Показати релізі наголошується, при першому запуску після оновлення основного"</string>
+    <string name="settings_base_item_4_secondary">"Зніміть ніколи не показують Release Note спливаюче вікно"</string>
+    <string name="settings_base_item_5_primary">"Тема"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Використовуйте повідомлення тема світлому фоні і темний текст"</string>
     <string name="randremind_settings_3_secondary">"Зніміть використовувати темну тему Повідомлення про темному фоні і світлим текстом"</string>
     <string name="randremind_settings_4_primary">"Перший день тижня"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Приховати Банери"</string>
     <string name="google_play_settings_0_secondary">"Зніміть, щоб приховати банери, але показати повні сторінки оголошень, а"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Світло"</string>
+    <string name="dark">"Темно"</string>
+    <string name="night">"Ніч"</string>
+    <string name="black">"Чорний"</string>
+    <string name="white">"Білий"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Отримати"</string>
     <string name="type">"Тип"</string>
     <string name="missed">"Пропущений"</string>
+    <string name="restart">"Перезапуск"</string>
+    <string name="restarting">"Перезапуск"</string>
+    <string name="restarting_app_please_wait">"Перезапуск програми, будь ласка, зачекайте"</string>
 
 </resources>

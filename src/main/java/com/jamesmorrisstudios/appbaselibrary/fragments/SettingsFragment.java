@@ -115,32 +115,30 @@ public class SettingsFragment extends BaseFragment {
                     int idType = item.getResourceId(0, 0);
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);
-                    int idSecondary = item.getResourceId(3, 0);
+                    int idSecondary = item.getResourceId(3, 0); //Unused but there for the count
                     int idRestart = item.getResourceId(4, 0);
                     int idList = item.getResourceId(5, 0);
                     int defaultVal = getResources().getInteger(idType);
                     boolean restartVal = getResources().getBoolean(idRestart);
                     String key = getResources().getString(idKey);
                     String primary = getResources().getString(idPrimary);
-                    String secondary = getResources().getString(idSecondary);
                     String[] list = getResources().getStringArray(idList);
-                    addListSettingsItem(settingsContainer, primary, secondary, key, defaultVal, list, restartVal);
+                    addListSettingsItem(settingsContainer, primary, key, defaultVal, list, restartVal);
                 }
                 item.recycle();
             }
         }
     }
 
-    protected void addListSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, int defaultValue, String[] list,  final boolean restartActivity) {
+    protected void addListSettingsItem(@NonNull LinearLayout container, @NonNull String primary, final @NonNull String key, int defaultValue, String[] list,  final boolean restartActivity) {
         View item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_list, null);
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
-        TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
         AppCompatSpinner listItem = (AppCompatSpinner) item.findViewById(R.id.listItem);
 
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(item.getContext(), R.layout.support_simple_spinner_dropdown_item, list);
         spinnerArrayAdapter.setDropDownViewResource(R.layout.simple_drop_down_item);
         listItem.setAdapter(spinnerArrayAdapter);
-        listItem.setSelection(Prefs.getInt(getString(R.string.settings_pref), key, defaultValue));
+        listItem.setSelection(Prefs.getInt(getString(R.string.settings_pref), key, defaultValue), false);
 
         listItem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -159,7 +157,6 @@ public class SettingsFragment extends BaseFragment {
             }
         });
         primaryItem.setText(primary);
-        secondaryItem.setText(secondary);
         container.addView(item);
     }
 

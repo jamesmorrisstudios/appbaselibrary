@@ -249,6 +249,10 @@
     <string name="incomplete">"Befejezetlen"</string>
     <string name="invalid_path">"Érvénytelen útvonal"</string>
     <string name="invalid_file">"Érvénytelen fájl"</string>
+    <string name="dismiss">"Utasítsa"</string>
+    <string name="dismissed">"Elutasította"</string>
+    <string name="acknowledge">"Igazolhatom"</string>
+    <string name="acknowledged">"Elismert"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Súgó &amp; visszajelzés"</string>
     <string name="like_this_app">"Tetszik ez app?"</string>
     <string name="rate_now">"Értékelje most"</string>
+    <string name="rate_app">"Szavazz App"</string>
     <string name="more_apps">"További alkalmazások"</string>
+    <string name="support_development">"Támogatás Fejlesztési"</string>
     <string name="how_to_use">"Hogyan kell használni"</string>
     <string name="how_to_play">"Hogyan kell játszani"</string>
     <string name="read_how">"Olvasd el, hogyan"</string>
     <string name="watch_how">"Nézze meg, hogyan"</string>
     <string name="licenses">"Engedélyek"</string>
+    <string name="help_translate">"Segíts Fordítás"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Jelentősebb"</string>
+    <string name="minor">"Kiskorú"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Kiadási megjegyzések"</string>
+    <string name="version">"Verzió"</string>
+    <string name="production">"Termelés"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Az eltávolított"</string>
     <string name="remove_item">"Elem eltávolítása"</string>
     <string name="delete">"Törlés"</string>
+    <string name="deleted">"Törölt"</string>
     <string name="duplicate">"Másolat"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Szüntesse meg kikapcsolni hanghatások"</string>
     <string name="settings_base_item_2_primary">"Engedélyezze Zene"</string>
     <string name="settings_base_item_2_secondary">"Szüntesse meg kikapcsolni a zenét"</string>
-
+    <string name="settings_base_item_3_primary">"Nyelv"</string>
+    <string name="settings_base_item_4_primary">"Mutass kiadási megjegyzések az első dob után egy nagyobb frissítés"</string>
+    <string name="settings_base_item_4_secondary">"Meg kell szüntetni a soha nem mutatják a release note felugró"</string>
+    <string name="settings_base_item_5_primary">"Téma"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Használja értesítést témája a világos háttér és sötét szöveget"</string>
     <string name="randremind_settings_3_secondary">"Meg kell szüntetni a sötétebb értesítést témája egy sötét háttér és a világos szöveg"</string>
     <string name="randremind_settings_4_primary">"Első nap a héten"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Hide Banner hirdetések"</string>
     <string name="google_play_settings_0_secondary">"Szüntesse meg elrejteni banner hirdetések, de azt mutatják, egész oldalas hirdetések helyett"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Fény"</string>
+    <string name="dark">"Sötét"</string>
+    <string name="night">"Éjszaka"</string>
+    <string name="black">"Fekete"</string>
+    <string name="white">"Fehér"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Get"</string>
     <string name="type">"típus"</string>
     <string name="missed">"Kihagyott"</string>
+    <string name="restart">"Újraindítás"</string>
+    <string name="restarting">"Újraindítás"</string>
+    <string name="restarting_app_please_wait">"Újraindítás App, kérem várjon"</string>
 
 </resources>

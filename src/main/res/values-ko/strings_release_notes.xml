@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"변경된 것을 보여주기 위해 기능 업데이트 후 처음 앱 출시에 팝업 대화 상자를 추가했습니다. 그것은 사소한 버그 수정 업데이트가 표시되지 않습니다."</item>
+        <item name="line1">"영어로 응용 프로그램을 강제 할 수있는 옵션을 추가했습니다."</item>
+        <item name="line2">"현재 빌드는 베타 또는 생산 인 경우 도움말 및 피드백 페이지에 표시를 추가 말할 수 있습니다."</item>
+        <item name="line3">"일부 커뮤니티 앱 번역에 당겼다. 도움이 사람들을 주셔서 감사합니다."</item>
+        <item name="line4">"추가 통지는 알림 로그에 일축했다."</item>
+        <item name="line5">"재정렬 미리 알림 응용 프로그램을 중단 할 수있는 버그가 수정되었습니다."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"아무것도"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"아무것도"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"아무것도"</item>
+    </string-array>
+
+</resources>

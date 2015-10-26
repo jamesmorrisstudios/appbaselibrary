@@ -249,6 +249,10 @@
     <string name="incomplete">"Nepilnīgs"</string>
     <string name="invalid_path">"Nederīga Path"</string>
     <string name="invalid_file">"Nederīga File"</string>
+    <string name="dismiss">"Atlaist"</string>
+    <string name="dismissed">"Noraidīja"</string>
+    <string name="acknowledge">"Atzīst,"</string>
+    <string name="acknowledged">"Atzina"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Palīdzība un Atsauksmes"</string>
     <string name="like_this_app">"Tāpat kā šī app?"</string>
     <string name="rate_now">"Novērtēt to tagad"</string>
+    <string name="rate_app">"Novērtēt App"</string>
     <string name="more_apps">"Vairāk Apps"</string>
+    <string name="support_development">"Atbalsts Development"</string>
     <string name="how_to_use">"Kā izmantot"</string>
     <string name="how_to_play">"Kā spēlēt"</string>
     <string name="read_how">"Lasīt Kā"</string>
     <string name="watch_how">"Skatīties Kā"</string>
     <string name="licenses">"Licences"</string>
+    <string name="help_translate">"Palīdzēt Tulkot"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Lielākais"</string>
+    <string name="minor">"Nepilngadīgais"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Laidienu"</string>
+    <string name="version">"Versija"</string>
+    <string name="production">"Ražošana"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alfa"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Noņemts"</string>
     <string name="remove_item">"Noņemt Postenis"</string>
     <string name="delete">"Izdzēst"</string>
+    <string name="deleted">"Svītrots"</string>
     <string name="duplicate">"Dublēt"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Noņemiet atslēgt skaņas efektus"</string>
     <string name="settings_base_item_2_primary">"Ieslēgt Mūzika"</string>
     <string name="settings_base_item_2_secondary">"Noņemiet atslēgt mūziku"</string>
-
+    <string name="settings_base_item_3_primary">"Valoda"</string>
+    <string name="settings_base_item_4_primary">"Rādīt laidienu pirmajā uzsākšanu pēc lielas atjauninājumu"</string>
+    <string name="settings_base_item_4_secondary">"Noņemiet nekad parādītu atbrīvošanas piezīmi uznirstošo"</string>
+    <string name="settings_base_item_5_primary">"Tēma"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Izmantojiet paziņošanas tēma gaiša fona un tumši tekstu"</string>
     <string name="randremind_settings_3_secondary">"Noņemiet atzīmi izmantot tumšo paziņošanas tēmu tumša fona un gaismas tekstu"</string>
     <string name="randremind_settings_4_primary">"Pirmā nedēļas diena"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Slēpt Banner Ads"</string>
     <string name="google_play_settings_0_secondary">"Noņemiet lai slēptu reklāmas bannerus, bet gan parādīt pilnu lapu reklāmas"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Gaisma"</string>
+    <string name="dark">"Tumšs"</string>
+    <string name="night">"Nakts"</string>
+    <string name="black">"Melns"</string>
+    <string name="white">"Balts"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Nokļūt"</string>
     <string name="type">"Type"</string>
     <string name="missed">"Neatbildētie"</string>
+    <string name="restart">"Restartēt"</string>
+    <string name="restarting">"Atsākšana"</string>
+    <string name="restarting_app_please_wait">"Atsākšana App, lūdzu uzgaidiet"</string>
 
 </resources>

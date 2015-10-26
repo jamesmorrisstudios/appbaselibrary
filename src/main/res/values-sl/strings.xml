@@ -249,6 +249,10 @@
     <string name="incomplete">"Nepopolna"</string>
     <string name="invalid_path">"Neveljavna pot"</string>
     <string name="invalid_file">"Neveljavna datoteka"</string>
+    <string name="dismiss">"Opusti"</string>
+    <string name="dismissed">"Dismissed"</string>
+    <string name="acknowledge">"Priznajte"</string>
+    <string name="acknowledged">"Priznal"</string>
 
     <!--
         Common Menu Pages
@@ -259,12 +263,27 @@
     <string name="help_and_feedback">"Pomoč &amp; Povratne informacije"</string>
     <string name="like_this_app">"Kot je ta app?"</string>
     <string name="rate_now">"Oceni Zdaj"</string>
+    <string name="rate_app">"Oceni App"</string>
     <string name="more_apps">"Več Apps"</string>
+    <string name="support_development">"Podpora za razvoj"</string>
     <string name="how_to_use">"Kako uporabiti"</string>
     <string name="how_to_play">"Kako igrati"</string>
     <string name="read_how">"Preberite si, kako"</string>
     <string name="watch_how">"Pazi, kako"</string>
     <string name="licenses">"Licence"</string>
+    <string name="help_translate">"Pomoč pri prevajanju"</string>
+
+    <!--
+       Release Notes/Version
+    -->
+    <string name="major">"Major"</string>
+    <string name="minor">"Minor"</string>
+    <string name="aux">"Aux"</string>
+    <string name="release_notes">"Opombe k izdaji"</string>
+    <string name="version">"Različica"</string>
+    <string name="production">"Proizvodnja"</string>
+    <string name="beta">"Beta"</string>
+    <string name="alpha">"Alpha"</string>
 
     <!--
         Visibility
@@ -327,6 +346,7 @@
     <string name="removed">"Odstrani"</string>
     <string name="remove_item">"Odstrani artikel"</string>
     <string name="delete">"Izbriši"</string>
+    <string name="deleted">"Izbrisan"</string>
     <string name="duplicate">"Podvajati"</string>
 
     <!--
@@ -490,7 +510,10 @@
     <string name="settings_base_item_1_secondary">"Počistite onemogočite zvočne učinke"</string>
     <string name="settings_base_item_2_primary">"Omogoči Glasba"</string>
     <string name="settings_base_item_2_secondary">"Počistite onemogočiti glasbe"</string>
-
+    <string name="settings_base_item_3_primary">"Language"</string>
+    <string name="settings_base_item_4_primary">"Prikaži javnost opozarja na prvem zagonu po obsežnejši posodobitvi"</string>
+    <string name="settings_base_item_4_secondary">"Počistite nikoli pokazati note javnost popup"</string>
+    <string name="settings_base_item_5_primary">"Tema"</string>
     <!--
         Google Play specific
     -->
@@ -530,13 +553,22 @@
     <string name="randremind_settings_3_primary">"Uporabite temo obveščanja o svetlem ozadju in temno besedila"</string>
     <string name="randremind_settings_3_secondary">"Počistite uporabiti temo temno priglasitev temno ozadje in svetlo besedilo"</string>
     <string name="randremind_settings_4_primary">"Prvi dan v tednu"</string>
-    <string name="randremind_settings_4_secondary">" "</string>
 
     <!--
         Google Play Settings
     -->
     <string name="google_play_settings_0_primary">"Skrij oglasne pasice"</string>
     <string name="google_play_settings_0_secondary">"Počistite skriti oglasne pasice, temveč pokazati polni strani oglasov"</string>
+
+
+    <!--
+        Theme/colors
+    -->
+    <string name="light">"Svetloba"</string>
+    <string name="dark">"Dark"</string>
+    <string name="night">"Night"</string>
+    <string name="black">"Črna"</string>
+    <string name="white">"Bela"</string>
 
     <!--
         Uncategorized
@@ -577,5 +609,8 @@
     <string name="get">"Pridobite"</string>
     <string name="type">"Tip"</string>
     <string name="missed">"Neodgovorjeni"</string>
+    <string name="restart">"Ponovni zagon"</string>
+    <string name="restarting">"Ponovni zagon"</string>
+    <string name="restarting_app_please_wait">"Ponovni zagon App, Prosimo, počakajte"</string>
 
 </resources>

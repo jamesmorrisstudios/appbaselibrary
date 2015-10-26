@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Hozzáadott egy felugró ablakban az első alkalmazás elindítása után a funkció frissítés megmutatni, mi változott. Nem fog megjelenni a kisebb hibajavításokat frissítéseket."</item>
+        <item name="line1">"Hozzáadott a lehetőséget, hogy a hatályos app angolra."</item>
+        <item name="line2">"Hozzáadott indikátor a Súgó és Visszajelzés oldalt mondani, ha a jelenlegi build Beta vagy a termelés."</item>
+        <item name="line3">"Zsíros valamilyen közösségi alkalmazást fordítások. Köszönjük azoknak, akik segítettek."</item>
+        <item name="line4">"Hozzáadott értesítést elutasította, hogy az emlékeztető napló."</item>
+        <item name="line5">"Javítva egy hiba, ha átrendezési emlékeztetőket is összeomolhat az app."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+</resources>

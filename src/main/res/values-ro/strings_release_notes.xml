@@ -1,0 +1,28 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"A adăugat un dialog pop-up de pe prima lansare app, după o actualizare caracteristică pentru a arăta ceea ce sa schimbat. Acesta nu va arăta pentru actualizări minore bug fix."</item>
+        <item name="line1">"Adăugat opțiunea de a forța aplicația în limba engleză."</item>
+        <item name="line2">"Adăugat un indicator la pagina Ajutor și Feedback de spus dacă a construi actual este Beta sau de productie."</item>
+        <item name="line3">"Tras în unele traduceri app comunitate. Vă mulțumim pentru cei care au ajutat."</item>
+        <item name="line4">"Notificare a adăugat respins în jurnalul de memento."</item>
+        <item name="line5">"Fixed un bug în cazul în care memento-uri reordonare ar putea prăbuși aplicația."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+</resources>

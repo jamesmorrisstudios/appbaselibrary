@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">Added a popup dialog on the first app launch after a feature update to show what changed. It will not show for minor bug fix updates.</item>
+        <item name="line1">Added the option to force the app into English.</item>
+        <item name="line2">Added an indicator to the Help and Feedback page to say if the current build is Beta or Production.</item>
+        <item name="line3">Pulled in some community app translations. Thank you for those who helped.</item>
+        <item name="line4">Added notification dismissed to the reminder log.</item>
+        <item name="line5">Fixed a bug where reordering reminders could crash the app.</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">nothing</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">nothing</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">nothing</item>
+    </string-array>
+
+</resources>
