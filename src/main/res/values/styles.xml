@@ -2,20 +2,16 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
         <!-- Set primary coloring in the app -->
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
         <item name="colorButtonNormal">@color/primary</item>
         <item name="colorControlNormal">@color/primaryDark</item>
-        <!--<item name="android:background">@color/background</item>-->
-        <!--
-        <item name="colorControlNormal">@color/accent</item>
-        <item name="colorControlActivated">@color/accent</item>
-        <item name="colorControlHighlight">@color/accent</item>
-        <item name="colorSwitchThumbNormal">@color/accent</item>
-        -->
 
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_mtrl</item>
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
@@ -35,22 +31,20 @@
 
         <item name="cardViewStyle">@style/CardView.Light</item>
 
+        <item name="alertDialogStyleSet">@style/alertDialog</item>
+
     </style>
 
-    <style name="AppThemeDark" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppThemeDark" parent="Theme.AppCompat">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
         <!-- Set primary coloring in the app -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorPrimary">@color/darkPrimary</item>
+        <item name="colorPrimaryDark">@color/darkPrimaryDark</item>
         <item name="colorAccent">@color/accent</item>
-        <item name="colorButtonNormal">@color/primary</item>
-        <item name="colorControlNormal">@color/primaryDark</item>
-        <!--<item name="android:background">@color/background</item>-->
-        <!--
-        <item name="colorControlNormal">@color/accent</item>
-        <item name="colorControlActivated">@color/accent</item>
-        <item name="colorControlHighlight">@color/accent</item>
-        <item name="colorSwitchThumbNormal">@color/accent</item>
-        -->
+        <item name="colorButtonNormal">@color/darkPrimary</item>
+        <item name="colorControlNormal">@color/darkPrimaryDark</item>
 
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_mtrl</item>
         <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_mtrl</item>
@@ -69,11 +63,16 @@
 
         <item name="toolbarStyleSet">@style/toolbarDark</item>
 
-        <item name="cardViewStyle">@style/CardView.Dark</item>
+        <item name="cardViewStyle">@style/cardStyleDark</item>
+
+        <item name="alertDialogStyleSet">@style/alertDialogDark</item>
 
     </style>
 
-    <style name="toolbarLight" parent="ThemeOverlay.AppCompat.Light">
+    <!-- Toolbars -->
+    <style name="toolbarLight" parent="ThemeOverlay.AppCompat">
+        <item name="colorControlNormal">@android:color/white</item>
+
         <!-- Title text -->
         <item name="android:textColorPrimary">@android:color/white</item>
 
@@ -82,7 +81,7 @@
         <!-- Menu text-->
         <item name="actionMenuTextColor">@android:color/white</item>
         <!-- Overflow -->
-        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColorSecondary">@android:color/black</item>
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
         <!-- background of the  -->
@@ -110,7 +109,7 @@
         <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
 
         <!-- background -->
-        <!-- <item name="android:background">@color/color_primary</item> -->
+        <!--<item name="android:background">@color/accent</item>-->
     </style>
 
     <style name="toolbarPopupLight" parent="ThemeOverlay.AppCompat.Light">
@@ -118,6 +117,17 @@
     </style>
 
     <style name="toolbarPopupDark" parent="ThemeOverlay.AppCompat">
+
+    </style>
+
+
+    <!-- Card View -->
+    <style name="cardStyleLight" parent="CardView">
+
+    </style>
+
+    <style name="cardStyleDark" parent="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardDark</item>
 
     </style>
 
@@ -141,6 +151,25 @@
         <item name="colorAccent">@color/accent</item>
     </style>
 
+    <style name="FilePickerThemeDark" parent="NNF_BaseTheme">
+        <!-- Set these to match your theme -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+
+        <!-- Need to set this also to style create folder dialog -->
+        <item name="alertDialogTheme">@style/FilePickerAlertDialogThemeDark</item>
+
+        <!-- If you want to set a specific toolbar theme, do it here -->
+        <item name="nnf_toolbarTheme">@style/toolbarDark</item>
+    </style>
+
+    <style name="FilePickerAlertDialogThemeDark" parent="@style/alertDialogDark">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
+    </style>
+
     <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
@@ -151,6 +180,7 @@
         <item name="color">@android:color/black</item>
     </style>
 
+    <!-- Alert Dialogs -->
     <style name="alertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <!-- Used for the buttons -->
         <item name="colorAccent">@color/accent</item>
@@ -158,9 +188,17 @@
         <item name="android:textColorPrimary">@color/textDarkMain</item>
         <!-- Used for the title and text -->
         <item name="android:textColorSecondary">@color/textDarkSecondary</item>
-        <!-- Used for the background -->
-        <item name="android:background">@color/primaryLight</item>
     </style>
+
+    <style name="alertDialogDark" parent="Theme.AppCompat.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/accent</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorPrimary">@color/textLightMain</item>
+        <!-- Used for the title and text -->
+        <item name="android:textColorSecondary">@color/textLightSecondary</item>
+    </style>
+
 
     <style name="alertDialogTransparent" parent="alertDialog">
         <item name="android:windowIsTranslucent">true</item>

@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -25,6 +26,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
@@ -32,6 +34,7 @@ import android.widget.ProgressBar;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorEndListener;
@@ -101,9 +104,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     private RingtoneRequest ringtoneRequest = null;
     private FileBrowserRequest fileBrowserRequest = null;
 
-    public enum Theme {
-        DARK, LIGHT
-    }
+
 
     private final Object busListener = new Object() {
         @Subscribe
@@ -179,7 +180,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     private void applyTheme() {
-        switch(getCurrentTheme()) {
+        switch(ThemeManager.getAppTheme()) {
             case LIGHT:
                 setTheme(R.style.AppTheme);
                 break;
@@ -189,19 +190,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
     }
 
-    private Theme getCurrentTheme() {
-        String pref = AppBase.getContext().getString(R.string.settings_pref);
-        String key = AppBase.getContext().getString(R.string.pref_theme);
-
-        switch(Prefs.getInt(pref, key, 0)) {
-            case 0: //Light
-                return Theme.LIGHT;
-            case 1: //Dark
-                return Theme.DARK;
-            default:
-                return Theme.LIGHT;
-        }
-    }
 
     /**
      * Activity callback result for popup actions.
@@ -270,7 +258,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         spinner = (ProgressBar)findViewById(R.id.progressBar);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
-        switch(getCurrentTheme()) {
+        switch(ThemeManager.getAppTheme()) {
             case LIGHT:
                 toolbar.setPopupTheme(R.style.toolbarPopupLight);
                 break;
@@ -779,6 +767,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
         }
         i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
+
+        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+            i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerTheme);
+        } else {
+            i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDark);
+        }
+
         try {
             enableAutoLock();
             startActivityForResult(i, FILE_BROWSER_RESULT);
@@ -800,11 +795,16 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour) {
         TimePickerDialog time = new TimePickerDialog();
         time.initialize(listener, hour, minute, is24Hour);
-        time.show(getSupportFragmentManager(), "TimePickerDialog");
+        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.DARK) {
+            time.setThemeDark(true);
+        }
+        time.vibrate(false);
+        time.dismissOnPause(true);
+        time.show(getFragmentManager(), "TimePickerDialog");
     }
 
     public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @NonNull DialogInterface.OnClickListener onNegative) {
-        new AlertDialog.Builder(this, R.style.alertDialog)
+        new AlertDialog.Builder(this, getAlertDialogStyle())
                 .setTitle(title)
                 .setMessage(content)
                 .setPositiveButton(R.string.okay, onPositive)
@@ -813,7 +813,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createSingleChoiceDialog(@NonNull String title, @NonNull String[] items, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
                 .setCancelable(allowCancel)
                 .setTitle(title)
                 .setItems(items, clickListener);
@@ -824,7 +824,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createSingleChoiceRadioDialog(@NonNull String title, @NonNull String[] items, int defaultValue, @NonNull DialogInterface.OnClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
                 .setTitle(title)
                 .setPositiveButton(R.string.okay, onPositive)
                 .setSingleChoiceItems(items, defaultValue, clickListener);
@@ -835,7 +835,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createMultiChoiceDialog(@NonNull String title, @NonNull String[] items, boolean[] checkedItems, @NonNull DialogInterface.OnMultiChoiceClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.alertDialog)
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
                 .setTitle(title)
                 .setPositiveButton(R.string.okay, onPositive)
                 .setMultiChoiceItems(items, checkedItems, clickListener);
@@ -846,7 +846,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createSingleChoiceIconDialog(@NonNull String title, @NonNull @DrawableRes int[] items, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
-        SingleChoiceIconDialogBuilder.with(this)
+        SingleChoiceIconDialogBuilder.with(this, getAlertDialogStyle())
                 .setTitle(title)
                 .setItems(items)
                 .setOnOptionPicked(onOptionPickedListener)
@@ -855,7 +855,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
-        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this)
+        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this, getAlertDialogStyle())
                 .setTitle(getResources().getString(R.string.choose_color))
                 .initialColor(initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
@@ -976,6 +976,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             Utils.unlockOrientation(this);
             useAutoLock = false;
         }
+    }
+
+    protected int getAlertDialogStyle() {
+        TypedValue typedValue = new TypedValue();
+        Resources.Theme theme = getTheme();
+        theme.resolveAttribute(R.attr.alertDialogStyleSet, typedValue, true);
+        return typedValue.resourceId;
     }
 
     public enum AppBaseEvent {

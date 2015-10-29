@@ -16,7 +16,9 @@ import android.view.ViewTreeObserver;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.activities.BaseLauncherNoViewActivity;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
@@ -61,6 +63,13 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             mRecyclerView.setLayoutManager(llm);
         }
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
+
+        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+            mSwipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.primaryLight);
+        } else {
+            mSwipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.darkPrimaryLight);
+        }
+
         mSwipeRefreshLayout.setColorSchemeResources(R.color.accent);
         mSwipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {

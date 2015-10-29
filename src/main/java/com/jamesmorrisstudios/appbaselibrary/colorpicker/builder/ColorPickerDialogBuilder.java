@@ -33,8 +33,8 @@ public class ColorPickerDialogBuilder {
     private int defaultMargin = 0;
     private Integer[] initialColor = new Integer[]{null, null, null, null, null};
 
-    private ColorPickerDialogBuilder(Context context) {
-        builder = new AlertDialog.Builder(context, R.style.ColorPickerDialog);
+    private ColorPickerDialogBuilder(Context context, int style) {
+        builder = new AlertDialog.Builder(context, style);
         pickerContainer = new LinearLayout(context);
         pickerContainer.setOrientation(LinearLayout.VERTICAL);
         pickerContainer.setGravity(Gravity.CENTER_HORIZONTAL);
@@ -48,8 +48,8 @@ public class ColorPickerDialogBuilder {
         builder.setView(pickerContainer);
     }
 
-    public static ColorPickerDialogBuilder with(Context context) {
-        return new ColorPickerDialogBuilder(context);
+    public static ColorPickerDialogBuilder with(Context context, int style) {
+        return new ColorPickerDialogBuilder(context, style);
     }
 
     private static int getDimensionAsPx(Context context, int rid) {

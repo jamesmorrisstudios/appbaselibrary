@@ -34,7 +34,7 @@ public class ReleaseNotesDialogBuilder {
     private String content;
 
     private ReleaseNotesDialogBuilder(@NonNull Context context) {
-        builder = new AlertDialog.Builder(context, R.style.alertDialog);
+        builder = new AlertDialog.Builder(context);
         mainView = new ScrollView(context);
         builder.setView(mainView);
     }

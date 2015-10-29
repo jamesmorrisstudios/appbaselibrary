@@ -3,6 +3,7 @@ package com.jamesmorrisstudios.appbaselibrary.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.fragments.CustomFilePickerFragment;
@@ -16,13 +17,26 @@ import java.io.File;
  */
 public class CustomFilePickerActivity extends FilePickerActivity {
     public static final String EXTRA_EXTENSION = "nononsense.intent" + ".EXTENSION";
+    public static final String EXTRA_THEME = "nononsense.intent" + ".THEME";
 
     protected String extension = null;
+    protected int theme = -1;
 
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         if (intent != null) {
-            extension = intent.getStringExtra(EXTRA_EXTENSION);
+            Log.v("FilePicker", "Intent");
+            //if(intent.hasExtra("EXTRA_EXTENSION")) {
+                extension = intent.getStringExtra(EXTRA_EXTENSION);
+            //}
+            //if(intent.hasExtra("EXTRA_THEME")) {
+                Log.v("FilePicker", "get Theme");
+                theme = intent.getIntExtra(EXTRA_THEME, -1);
+            //}
+        }
+        if(theme != -1) {
+            Log.v("FilePicker", "Set Theme");
+            setTheme(theme);
         }
         super.onCreate(savedInstanceState);
     }

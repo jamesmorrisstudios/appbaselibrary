@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Blue 500 -->
+
+
+    <color name="darkPrimary">#212121</color>
+    <color name="darkPrimaryDisabled">#212121</color>
+    <color name="darkPrimaryLight">#303030</color>
+    <color name="darkPrimaryDark">#000000</color>
+
+    <color name="cardDark">#424242</color>
+
     <color name="primary">#2196F3</color>
-
     <color name="primaryDisabled">#2196F3</color>
-
     <color name="primaryLight">#FEFEFE</color>
-    <!-- Blue 700 -->
     <color name="primaryDark">#1976D2</color>
+
+    <color name="cardLight">#FEFEFE</color>
 
     <color name="tintColor">@color/iconDark</color>
 
@@ -20,7 +27,7 @@
 
     <!-- Red A200 at 80% opacity  -->
     <color name="textAccent">#CC00E676</color>
-    <color name="iconLight">@color/textLightMain</color>
+    <color name="iconLight">#B6FFFFFF</color>
     <color name="iconDark">@color/textDarkSecondary</color>
     <color name="dividerLight">#B6B6B6</color>
     <color name="dividerDark">@color/textDarkDivider</color>

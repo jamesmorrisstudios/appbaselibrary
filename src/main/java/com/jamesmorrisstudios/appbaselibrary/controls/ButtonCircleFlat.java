@@ -17,6 +17,7 @@
 package com.jamesmorrisstudios.appbaselibrary.controls;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
@@ -27,7 +28,9 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
 public class ButtonCircleFlat extends InternalButtonCircleBase {
     TextView textButton;
@@ -55,6 +58,19 @@ public class ButtonCircleFlat extends InternalButtonCircleBase {
 
     public void setActive(boolean active) {
         this.active = active;
+        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+            if (active) {
+                getTextView().setTextColor(AppBase.getContext().getResources().getColor(R.color.textLightMain));
+            } else {
+                getTextView().setTextColor(AppBase.getContext().getResources().getColor(R.color.textDarkMain));
+            }
+        } else {
+            if (active) {
+                getTextView().setTextColor(AppBase.getContext().getResources().getColor(R.color.textDarkMain));
+            } else {
+                getTextView().setTextColor(AppBase.getContext().getResources().getColor(R.color.textLightMain));
+            }
+        }
         this.invalidate();
     }
 
@@ -83,15 +99,10 @@ public class ButtonCircleFlat extends InternalButtonCircleBase {
         textButton.setLayoutParams(params);
         addView(textButton);
 
-        int bacgroundColor = attrs.getAttributeResourceValue(ANDROIDXML, "background", -1);
-        if (bacgroundColor != -1) {
-            setBackgroundColor(getResources().getColor(bacgroundColor));
+        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+            setBackgroundColor(getResources().getColor(R.color.iconDark));
         } else {
-            // Color by hexadecimal
-            // Color by hexadecimal
-            background = attrs.getAttributeIntValue(ANDROIDXML, "background", -1);
-            if (background != -1)
-                setBackgroundColor(background);
+            setBackgroundColor(getResources().getColor(R.color.iconLight));
         }
     }
 
