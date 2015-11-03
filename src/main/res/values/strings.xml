@@ -117,10 +117,6 @@
     <string name="today">Today</string>
     <string name="tomorrow">Tomorrow</string>
     <string name="yesterday">Yesterday</string>
-    <string name="daily">Daily</string>
-    <string name="weekly">Weekly</string>
-    <string name="week">Week</string>
-    <string name="weeks">Weeks</string>
     <string name="all_time">All Time</string>
     <string name="next_week">Next Week</string>
     <string name="last_week">Last Week</string>
@@ -129,6 +125,18 @@
     <string name="every_week">Every Week</string>
     <string name="every_other_week">Every Other Week</string>
     <string name="lifetime">Lifetime</string>
+    <string name="day">Day</string>
+    <string name="days">Days</string>
+    <string name="daily">Daily</string>
+    <string name="week">Week</string>
+    <string name="weeks">Weeks</string>
+    <string name="weekly">Weekly</string>
+    <string name="month">Month</string>
+    <string name="months">Months</string>
+    <string name="monthly">Monthly</string>
+    <string name="year">Year</string>
+    <string name="years">Years</string>
+    <string name="Yearly">Yearly</string>
 
     <!--
         Next/Prev
@@ -137,6 +145,22 @@
     <string name="previous">Previous</string>
     <string name="back">Back</string>
     <string name="forward">Forward</string>
+
+    <!--
+        Months
+    -->
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
 
     <!--
         Patterns

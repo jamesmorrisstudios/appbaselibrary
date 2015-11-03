@@ -57,7 +57,7 @@ public class CircleProgressDeterminate extends View {
     protected void onDraw(@NonNull Canvas canvas) {
         super.onDraw(canvas);
         float indent = getWidth() * 0.02f;
-        float indentInner = getWidth() * 0.06f;
+        float indentInner = getWidth() * 0.04f;
         if (rect == null || rectInner == null) {
             rect = new RectF(indent, indent, getWidth() - indent, getHeight() - indent);
             rectInner = new RectF(indentInner, indentInner, getWidth() - indentInner, getHeight() - indentInner);
@@ -68,8 +68,8 @@ public class CircleProgressDeterminate extends View {
         paint.setStyle(Paint.Style.STROKE);
         canvas.drawArc(rect, 0, 360, false, paint);
         //Draw the progress portion
-        paint.setColor(getResources().getColor(R.color.accent));
-        paint.setStrokeWidth(getWidth() * 0.06f);
+        paint.setColor(getResources().getColor(R.color.primary));
+        paint.setStrokeWidth(getWidth() * 0.04f);
         canvas.drawArc(rectInner, -90, 1.0f * progress / max * 360, false, paint);
     }
 

@@ -360,7 +360,7 @@ public final class UtilsTime {
         DayOfWeek[] week = getWeekArray();
         String[] weekString = new String[7];
         for (int i = 0; i < week.length; i++) {
-            weekString[i] = week[i].name;
+            weekString[i] = week[i].getName();
         }
         return weekString;
     }
@@ -465,7 +465,7 @@ public final class UtilsTime {
 
     public static boolean isLastWeekOfMonth(DateItem dateItem) {
         Calendar calendar = getCalendar(dateItem);
-        Log.v("UtilsTime","Last Week of month "+getLastWeekOfMonth(dateItem).name);
+        Log.v("UtilsTime","Last Week of month "+getLastWeekOfMonth(dateItem).getName());
         return WeekOfMonth.getWeekOfMonth(calendar.get(Calendar.WEEK_OF_MONTH)) == getLastWeekOfMonth(dateItem);
     }
 
@@ -539,20 +539,14 @@ public final class UtilsTime {
      * Day of the week. Use .name for the String name
      */
     public enum DayOfWeek {
-        SUNDAY(AppBase.getContext().getResources().getString(R.string.day_sunday)),
-        MONDAY(AppBase.getContext().getResources().getString(R.string.day_monday)),
-        TUESDAY(AppBase.getContext().getResources().getString(R.string.day_tuesday)),
-        WEDNESDAY(AppBase.getContext().getResources().getString(R.string.day_wednesday)),
-        THURSDAY(AppBase.getContext().getResources().getString(R.string.day_thursday)),
-        FRIDAY(AppBase.getContext().getResources().getString(R.string.day_friday)),
-        SATURDAY(AppBase.getContext().getResources().getString(R.string.day_saturday)),
-        AUTOMATIC("AUTOMATIC");
-
-        public final String name;
-
-        DayOfWeek(String name) {
-            this.name = name;
-        }
+        SUNDAY,
+        MONDAY,
+        TUESDAY,
+        WEDNESDAY,
+        THURSDAY,
+        FRIDAY,
+        SATURDAY,
+        AUTOMATIC;
 
         public int getIndex() {
             int index = (ordinal() - getFirstDayOfWeek().ordinal()) % 7;
@@ -561,20 +555,41 @@ public final class UtilsTime {
             }
             return index;
         }
+
+        public String getName() {
+            switch(this) {
+                case SUNDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_sunday);
+                case MONDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_monday);
+                case TUESDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_tuesday);
+                case WEDNESDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_wednesday);
+                case THURSDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_thursday);
+                case FRIDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_friday);
+                case SATURDAY:
+                    return AppBase.getContext().getResources().getString(R.string.day_saturday);
+                case AUTOMATIC:
+                    return AppBase.getContext().getResources().getString(R.string.automatic);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.automatic);
+            }
+        }
     }
 
     public enum WeekOfMonth {
-        FIRST(1, AppBase.getContext().getResources().getString(R.string.first)),
-        SECOND(2, AppBase.getContext().getResources().getString(R.string.second)),
-        THIRD(3, AppBase.getContext().getResources().getString(R.string.third)),
-        FOURTH(4, AppBase.getContext().getResources().getString(R.string.fourth)),
-        FIFTH(5, AppBase.getContext().getResources().getString(R.string.fifth));
+        FIRST(1),
+        SECOND(2),
+        THIRD(3),
+        FOURTH(4),
+        FIFTH(5);
 
-        public final String name;
         public final int number;
 
-        WeekOfMonth(int number, String name) {
-            this.name = name;
+        WeekOfMonth(int number) {
             this.number = number;
         }
 
@@ -593,6 +608,24 @@ public final class UtilsTime {
             }
             return WeekOfMonth.FIRST;
         }
+
+        public String getName() {
+            switch(this) {
+                case FIRST:
+                    return AppBase.getContext().getResources().getString(R.string.first);
+                case SECOND:
+                    return AppBase.getContext().getResources().getString(R.string.second);
+                case THIRD:
+                    return AppBase.getContext().getResources().getString(R.string.third);
+                case FOURTH:
+                    return AppBase.getContext().getResources().getString(R.string.fourth);
+                case FIFTH:
+                    return AppBase.getContext().getResources().getString(R.string.fifth);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.first);
+            }
+        }
+
     }
 
 }

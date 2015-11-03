@@ -800,6 +800,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
         time.vibrate(false);
         time.dismissOnPause(true);
+        time.setAccentColor(getResources().getColor(R.color.primary));
         time.show(getFragmentManager(), "TimePickerDialog");
     }
 

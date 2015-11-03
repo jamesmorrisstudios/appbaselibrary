@@ -31,6 +31,8 @@
     <color name="iconDark">@color/textDarkSecondary</color>
     <color name="dividerLight">#B6B6B6</color>
     <color name="dividerDark">@color/textDarkDivider</color>
+    <color name="textPrimary">#DC2196F3</color>
+
 
     <!-- Light Main text and icons-->
     <color name="textLightMain">#FFFFFF</color>

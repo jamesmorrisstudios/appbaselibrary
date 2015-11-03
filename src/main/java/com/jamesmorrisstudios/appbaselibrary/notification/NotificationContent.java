@@ -239,35 +239,67 @@ public class NotificationContent {
     }
 
     public enum NotificationPriority {
-        DEFAULT(AppBase.getContext().getResources().getString(R.string.default_)),
-        LOW(AppBase.getContext().getResources().getString(R.string.low)),
-        HIGH(AppBase.getContext().getResources().getString(R.string.high)),
-        MAX(AppBase.getContext().getResources().getString(R.string.max));
+        DEFAULT,
+        LOW,
+        HIGH,
+        MAX;
 
-        public final String name;
-
-        NotificationPriority(String name) {
-            this.name = name;
+        public String getName() {
+            switch(this) {
+                case DEFAULT:
+                    return AppBase.getContext().getResources().getString(R.string.default_);
+                case LOW:
+                    return AppBase.getContext().getResources().getString(R.string.low);
+                case HIGH:
+                    return AppBase.getContext().getResources().getString(R.string.high);
+                case MAX:
+                    return AppBase.getContext().getResources().getString(R.string.max);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.default_);
+            }
         }
     }
 
     public enum NotificationVibrate {
-        DISABLED(AppBase.getContext().getResources().getString(R.string.disabled)),
-        DEFAULT(AppBase.getContext().getResources().getString(R.string.default_)),
-        SHORT(AppBase.getContext().getResources().getString(R.string.short_)),
-        MEDIUM(AppBase.getContext().getResources().getString(R.string.medium)),
-        LONG(AppBase.getContext().getResources().getString(R.string.long_)),
-        PATTERN_1(AppBase.getContext().getResources().getString(R.string.pattern_1)),
-        PATTERN_2(AppBase.getContext().getResources().getString(R.string.pattern_2)),
-        PATTERN_3(AppBase.getContext().getResources().getString(R.string.pattern_3)),
-        PATTERN_4(AppBase.getContext().getResources().getString(R.string.pattern_4)),
-        PATTERN_5(AppBase.getContext().getResources().getString(R.string.pattern_5)),
-        PATTERN_6(AppBase.getContext().getResources().getString(R.string.pattern_6));
+        DISABLED,
+        DEFAULT,
+        SHORT,
+        MEDIUM,
+        LONG,
+        PATTERN_1,
+        PATTERN_2,
+        PATTERN_3,
+        PATTERN_4,
+        PATTERN_5,
+        PATTERN_6;
 
-        public final String name;
-
-        NotificationVibrate(String name) {
-            this.name = name;
+        public String getName() {
+            switch(this) {
+                case DISABLED:
+                    return AppBase.getContext().getResources().getString(R.string.disabled);
+                case DEFAULT:
+                    return AppBase.getContext().getResources().getString(R.string.default_);
+                case SHORT:
+                    return AppBase.getContext().getResources().getString(R.string.short_);
+                case MEDIUM:
+                    return AppBase.getContext().getResources().getString(R.string.medium);
+                case LONG:
+                    return AppBase.getContext().getResources().getString(R.string.long_);
+                case PATTERN_1:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_1);
+                case PATTERN_2:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_2);
+                case PATTERN_3:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_3);
+                case PATTERN_4:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_4);
+                case PATTERN_5:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_5);
+                case PATTERN_6:
+                    return AppBase.getContext().getResources().getString(R.string.pattern_6);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.default_);
+            }
         }
     }
 

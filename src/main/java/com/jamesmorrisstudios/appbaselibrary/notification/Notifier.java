@@ -51,7 +51,7 @@ public final class Notifier {
     public static void buildNotification(NotificationContent notif) {
 
         TimeItem timeNow = UtilsTime.getTimeNow();
-        Log.v("Notification shown", notif.getTitle() + " " + timeNow.getHourInTimeFormatString() + ":" + timeNow.getMinuteString() + " Vibrate: " + notif.getVibrate().name);
+        Log.v("Notification shown", notif.getTitle() + " " + timeNow.getHourInTimeFormatString() + ":" + timeNow.getMinuteString() + " Vibrate: " + notif.getVibrate().getName());
 
         int defaults = 0;
 
