@@ -12,7 +12,7 @@ public class TimePickerRequest {
     public final int hour, minute;
     public final boolean is24Hour;
 
-    public TimePickerRequest(@NonNull TimePickerDialog.OnTimeSetListener onTimeSetListener, int hour, int minute, boolean is24Hour) {
+    public TimePickerRequest(int hour, int minute, boolean is24Hour, @NonNull TimePickerDialog.OnTimeSetListener onTimeSetListener) {
         this.onTimeSetListener = onTimeSetListener;
         this.hour = hour;
         this.minute = minute;

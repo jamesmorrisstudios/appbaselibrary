@@ -98,19 +98,28 @@ public class SettingsFragment extends BaseFragment {
 
     protected final void addSettingsOptions(View view) {
         LinearLayout settingsContainer = getSettingsContainer(view);
-        TypedArray settingsPlay = getResources().obtainTypedArray(R.array.settings_google_play_array);
-        addSettings(settingsContainer, settingsPlay);
-        settingsPlay.recycle();
-        TypedArray settingsBase = getResources().obtainTypedArray(R.array.settings_base_array);
-        addSettings(settingsContainer, settingsBase);
-        settingsBase.recycle();
-        TypedArray settings = getResources().obtainTypedArray(R.array.settings_array);
-        addSettings(settingsContainer, settings);
-        settings.recycle();
+        TypedArray settingsTop = getResources().obtainTypedArray(R.array.settings_array);
+        for (int i = 0; i < settingsTop.length(); i++) {
+            int id = settingsTop.getResourceId(i, 0);
+            if (id > 0) {
+                TypedArray categoryItem = getResources().obtainTypedArray(id);
+                if(categoryItem.length() >= 2) {
+                    int idTitle = categoryItem.getResourceId(0, 0);
+                    String title = getResources().getString(idTitle);
+                    LinearLayout category = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.settings_category_container, null);
+                    TextView titleView = (TextView) category.findViewById(R.id.title);
+                    titleView.setText(title);
+                    settingsContainer.addView(category);
+                    addSettings(category, categoryItem);
+                }
+                categoryItem.recycle();
+            }
+        }
+        settingsTop.recycle();
     }
 
     protected void addSettings(LinearLayout settingsContainer, TypedArray settingsArr) {
-        for (int i = 0; i < settingsArr.length(); i++) {
+        for (int i = 1; i < settingsArr.length(); i++) {
             int id = settingsArr.getResourceId(i, 0);
             if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);

@@ -33,14 +33,14 @@ public class ReleaseNotesDialogBuilder {
 
     private String content;
 
-    private ReleaseNotesDialogBuilder(@NonNull Context context) {
-        builder = new AlertDialog.Builder(context);
+    private ReleaseNotesDialogBuilder(@NonNull Context context, int style) {
+        builder = new AlertDialog.Builder(context, style);
         mainView = new ScrollView(context);
         builder.setView(mainView);
     }
 
-    public static ReleaseNotesDialogBuilder with(@NonNull Context context) {
-        return new ReleaseNotesDialogBuilder(context);
+    public static ReleaseNotesDialogBuilder with(@NonNull Context context, int style) {
+        return new ReleaseNotesDialogBuilder(context, style);
     }
 
     public ReleaseNotesDialogBuilder setTitle(@NonNull String title) {

@@ -34,6 +34,7 @@ import android.widget.ProgressBar;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.RingtoneItem;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;
@@ -45,6 +46,9 @@ import com.jamesmorrisstudios.appbaselibrary.colorpicker.OnColorSelectedListener
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClickListener;
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ColorPickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.DualSpinnerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiDatePickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleDatePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.FileBrowserRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.MultiChoiceRequest;
@@ -55,6 +59,8 @@ import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceIconReques
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRadioRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.SingleChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogHelper.TimePickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.DatePickerMultiDialogBuilder;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.DualSpinnerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.ReleaseNotesDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
@@ -66,11 +72,14 @@ import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
 import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
+import com.jamesmorrisstudios.appbaselibrary.time.DateItem;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.squareup.otto.Subscribe;
+import com.squareup.timessquare.CalendarPickerView;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -127,8 +136,23 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
 
         @Subscribe
-        public void onTimePickerDialogRequest(TimePickerRequest request) {
-            createTimePickerDialog(request.onTimeSetListener, request.hour, request.minute, request.is24Hour);
+         public void onTimePickerDialogRequest(TimePickerRequest request) {
+            createTimePickerDialog(request.hour, request.minute, request.is24Hour, request.onTimeSetListener);
+        }
+
+        @Subscribe
+        public void onSingleDatePickerDialogRequest(SingleDatePickerRequest request) {
+            createSingleDatePickerDialog(request.startDate, request.endDate, request.selectedDate, request.singleListener);
+        }
+
+        @Subscribe
+        public void onMultiDatePickerDialogRequest(MultiDatePickerRequest request) {
+            createMultiDatePickerDialog(request.startDate, request.endDate, request.selectedDates, request.multiListener);
+        }
+
+        @Subscribe
+        public void onDualSpinnerDialogRequest(DualSpinnerRequest request) {
+            createDualSpinnerDialog(request.title, request.first, request.firstSelected, request.second, request.secondSelected, request.listener);
         }
 
         @Subscribe
@@ -175,8 +199,8 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     protected void onCreate(Bundle savedInstanceState) {
         applyTheme();
         setLocale();
-        super.onCreate(savedInstanceState);
         updateImmersiveMode(true);
+        super.onCreate(savedInstanceState);
     }
 
     private void applyTheme() {
@@ -217,6 +241,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     ringtoneRequest = null;
                 }
             }
+            ringtoneRequest = null;
             disableAutoLock();
         }
 
@@ -404,14 +429,12 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     private void showReleaseNotesIfNeeded() {
-        if(Prefs.getBoolean(getString(R.string.settings_pref), getString(R.string.pref_allow_release_notes), true)) {
-            String lastOpenedVersion = Prefs.getString("com.jamesmorrisstudios.appbaselibrary.APPDATA", "LAST_OPEN_VERSION");
-            int lastMajor = Utils.getVersionMajor(lastOpenedVersion);
-            int lastMinor = Utils.getVersionMinor(lastOpenedVersion);
+        String lastOpenedVersion = Prefs.getString("com.jamesmorrisstudios.appbaselibrary.APPDATA", "LAST_OPEN_VERSION");
+        int lastMajor = Utils.getVersionMajor(lastOpenedVersion);
+        int lastMinor = Utils.getVersionMinor(lastOpenedVersion);
 
-            if (lastMajor != Utils.getVersionMajor() || lastMinor != Utils.getVersionMinor()) {
-                onRequestReleaseNotesDialog();
-            }
+        if (lastMajor != Utils.getVersionMajor() || lastMinor != Utils.getVersionMinor()) {
+            onRequestReleaseNotesDialog();
         }
         Prefs.putString("com.jamesmorrisstudios.appbaselibrary.APPDATA", "LAST_OPEN_VERSION", Utils.getVersionName());
     }
@@ -642,31 +665,29 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
      * @param hasFocus
      */
     protected final void updateImmersiveMode(boolean hasFocus) {
-        if (Build.VERSION.SDK_INT >= 11) {
-            int newUiOptions = 0;
-            String pref = AppBase.getContext().getString(R.string.settings_pref);
-            String key = AppBase.getContext().getString(R.string.pref_immersive);
-            if (Prefs.getBoolean(pref, key, false)) {
-                if (hasFocus) {
-                    if (Build.VERSION.SDK_INT >= 16) {
-                        newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                                | View.SYSTEM_UI_FLAG_FULLSCREEN
-                                | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-                    }
-                    if (Build.VERSION.SDK_INT >= 19) {
-                        newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-                    }
-                    getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+        int newUiOptions = 0;
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String key = AppBase.getContext().getString(R.string.pref_immersive);
+        if (Prefs.getBoolean(pref, key, false)) {
+            if (hasFocus) {
+                if (Build.VERSION.SDK_INT >= 16) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
                 }
-            } else {
-                if (hasFocus) {
-                    if (Build.VERSION.SDK_INT >= 16) {
-                        newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-                    }
-                    getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+                if (Build.VERSION.SDK_INT >= 19) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
                 }
+                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+            }
+        } else {
+            if (hasFocus) {
+                if (Build.VERSION.SDK_INT >= 16) {
+                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+                }
+                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
             }
         }
     }
@@ -787,12 +808,12 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     /**
      * Create a time picker dialog
      *
-     * @param listener Return listener
      * @param hour     Start hour
      * @param minute   Start minute
      * @param is24Hour True if 24 hour mode
+     * @param listener Return listener
      */
-    public void createTimePickerDialog(@NonNull TimePickerDialog.OnTimeSetListener listener, int hour, int minute, boolean is24Hour) {
+    public void createTimePickerDialog(int hour, int minute, boolean is24Hour, @NonNull TimePickerDialog.OnTimeSetListener listener) {
         TimePickerDialog time = new TimePickerDialog();
         time.initialize(listener, hour, minute, is24Hour);
         if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.DARK) {
@@ -802,6 +823,23 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         time.dismissOnPause(true);
         time.setAccentColor(getResources().getColor(R.color.primary));
         time.show(getFragmentManager(), "TimePickerDialog");
+    }
+
+
+    public void createSingleDatePickerDialog(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull DateItem selectedDate, @NonNull DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener) {
+        DatePickerMultiDialogBuilder.with(this, getAlertDialogStyle())
+                .setDateRange(startDate, endDate)
+                .setSelectedDate(selectedDate, singleListener)
+                .build()
+                .show();
+    }
+
+    public void createMultiDatePickerDialog(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull ArrayList<DateItem> selectedDates, @NonNull DatePickerMultiDialogBuilder.MultiDatePickerListener multiListener) {
+        DatePickerMultiDialogBuilder.with(this, getAlertDialogStyle())
+                .setDateRange(startDate, endDate)
+                .setSelectedDates(selectedDates, multiListener)
+                .build()
+                .show();
     }
 
     public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @NonNull DialogInterface.OnClickListener onNegative) {
@@ -855,6 +893,16 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
+    public void createDualSpinnerDialog(@NonNull String title, @NonNull List<String> first, int firstSelected, @NonNull List<String> second, int secondSelected, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
+        DualSpinnerDialogBuilder.with(this, getAlertDialogStyle())
+                .setTitle(title)
+                .setFirst(first, firstSelected)
+                .setSecond(second, secondSelected)
+                .setListener(listener)
+                .build()
+                .show();
+    }
+
     public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
         ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this, getAlertDialogStyle())
                 .setTitle(getResources().getString(R.string.choose_color))
@@ -898,17 +946,82 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         if(ringtoneRequest.currentTone != null) {
             defaultUri = ringtoneRequest.currentTone;
         }
-        Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, ringtoneRequest.title);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, false);
-        intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
-        try {
-            enableAutoLock();
-            startActivityForResult(intent, RINGTONE_RESULT);
-        } catch (Exception ex) {
-            disableAutoLock();
-            Utils.toastShort(getString(R.string.failed_open_link));
+
+        String pref = AppBase.getContext().getString(R.string.settings_pref);
+        String key = AppBase.getContext().getString(R.string.pref_custom_ringtone);
+        if (!Prefs.getBoolean(pref, key, true)) {
+            Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, ringtoneRequest.title);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, true);
+            intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
+            try {
+                enableAutoLock();
+                startActivityForResult(intent, RINGTONE_RESULT);
+            } catch (Exception ex) {
+                disableAutoLock();
+                Utils.toastShort(getString(R.string.failed_open_link));
+            }
+        } else {
+            final ArrayList<RingtoneItem> ringtones = Utils.getRingtones(Utils.RingtoneType.NOTIFICATION);
+            ringtones.add(0, new RingtoneItem(Utils.RingtoneType.NOTIFICATION, getString(R.string.none)));
+            Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+            ringtones.add(0, new RingtoneItem(Utils.RingtoneType.NOTIFICATION, getString(R.string.default_), uri));
+            //Set the selected item
+            int selectedItem = 1;
+            for(int i=0; i<ringtones.size(); i++) {
+                if(ringtones.get(i).uri == null) {
+                    continue;
+                }
+                if(ringtones.get(i).uri.equals(defaultUri)) {
+                    ringtones.get(i).selected = true;
+                    selectedItem = i;
+                }
+            }
+
+            String title = getString(R.string.select_notification);
+            String[] items = new String[ringtones.size()];
+            for(int i=0; i<items.length; i++) {
+                items[i] = ringtones.get(i).name;
+            }
+            Bus.postObject(new SingleChoiceRadioRequest(title, items, selectedItem, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //Selection changed
+                    Utils.ringtoneCancel();
+                    if(ringtones.get(which).uri != null) {
+                        Utils.ringtonePlay(ringtones.get(which).uri);
+                    }
+                    for(int i=0; i<ringtones.size(); i++) {
+                        if(i==which) {
+                            ringtones.get(i).selected = true;
+                        } else {
+                            ringtones.get(i).selected = false;
+                        }
+                    }
+                }
+            }, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //Confirmed
+                    Utils.ringtoneCancel();
+                    for(int i=0; i<ringtones.size(); i++) {
+                        if(ringtones.get(i).selected) {
+                            if (ringtoneRequest != null) {
+                                ringtoneRequest.listener.ringtoneResponse(ringtones.get(i).uri, ringtones.get(i).name);
+                                ringtoneRequest = null;
+                            }
+                        }
+                    }
+                }
+            }, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //Canceled
+                    Utils.ringtoneCancel();
+                    ringtoneRequest = null;
+                }
+            }));
         }
     }
 
@@ -930,7 +1043,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                     createRingtoneDialogSub();
                 } else {
                     Log.v("BaseActivity", "Permission Denied for external storage");
-                    createRingtoneDialogSub();
+                    //createRingtoneDialogSub();
                 }
                 break;
             case REQUEST_WRITE_STORAGE_FILE_BROWSER:
@@ -953,7 +1066,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         for(CharSequence item : data) {
             content += item.toString() +"\n\n";
         }
-        ReleaseNotesDialogBuilder.with(this)
+        ReleaseNotesDialogBuilder.with(this, getAlertDialogStyle())
                 .setTitle(getString(R.string.release_notes)+ ": "+Utils.getVersionName()+" "+Utils.getVersionType())
                 .setContent(content)
                 .build()

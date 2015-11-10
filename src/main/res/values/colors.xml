@@ -8,11 +8,12 @@
     <color name="darkPrimaryLight">#303030</color>
     <color name="darkPrimaryDark">#000000</color>
 
-    <color name="cardDark">#424242</color>
+    <color name="cardDark">#424242</color> <!-- This is used for dialog backgrounds as well -->
+    <color name="backgroundDark">#303030</color>
 
     <color name="primary">#2196F3</color>
     <color name="primaryDisabled">#2196F3</color>
-    <color name="primaryLight">#FEFEFE</color>
+    <color name="primaryLight">#BBDEFB</color>
     <color name="primaryDark">#1976D2</color>
 
     <color name="cardLight">#FEFEFE</color>
@@ -57,5 +58,35 @@
     <color name="copy_ripple_material_light">#1f000000</color>
     <color name="copy_button_material_light">#ffd6d7d7</color>
     <color name="copy_switch_thumb_normal_material_light">#fff1f1f1</color>
+
+
+    <!-- Calendar light theme -->
+    <color name="calendar_active_month_bg">#fff5f7f9</color>
+    <color name="calendar_bg">#ffffffff</color>
+    <color name="calendar_divider">#ffbababa</color>
+    <color name="calendar_inactive_month_bg">#ffd7d9db</color>
+    <color name="calendar_selected_day_bg">@color/accent</color>
+    <color name="calendar_highlighted_day_bg">@color/primaryLight</color>
+    <color name="calendar_selected_range_bg">@color/accentLight</color>
+    <color name="calendar_text_inactive">#40778088</color>
+    <color name="calendar_text_active">#ff778088</color>
+    <color name="calendar_text_selected">#ffffffff</color>
+    <color name="calendar_text_unselectable">#7f778088</color>
+
+    <!-- Calendar dark theme -->
+    <color name="dark_calendar_active_month_bg">@color/backgroundDark</color>
+    <color name="dark_calendar_bg">#ffffffff</color>
+    <color name="dark_calendar_divider">#ffbababa</color>
+    <color name="dark_calendar_inactive_month_bg">#212121</color>
+    <color name="dark_calendar_selected_day_bg">@color/accent</color>
+    <color name="dark_calendar_highlighted_day_bg">@color/primaryLight</color>
+    <color name="dark_calendar_selected_range_bg">@color/accentLight</color>
+    <color name="dark_calendar_text_inactive">@color/textLightSecondary</color>
+    <color name="dark_calendar_text_active">@color/textLightMain</color>
+    <color name="dark_calendar_text_selected">@color/textLightMain</color>
+    <color name="dark_calendar_text_unselectable">@color/textLightSecondary</color>
+
+
+
 
 </resources>

@@ -46,6 +46,14 @@ public final class DateTimeItem {
     }
 
     /**
+     * @return A copy of this object
+     */
+    @NonNull
+    public final DateTimeItem copy() {
+        return new DateTimeItem(this);
+    }
+
+    /**
      * @param item Date Time Item
      * @return String packaged version for use in saving
      */

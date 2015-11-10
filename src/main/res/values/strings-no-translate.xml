@@ -11,6 +11,7 @@
     <string name="n_a" translatable="false">N/A</string>
     <string name="led" translatable="false">LED</string>
 
+    <string name="num_0" translatable="false">0</string>
     <string name="num_1" translatable="false">1</string>
     <string name="num_2" translatable="false">2</string>
     <string name="num_3" translatable="false">3</string>

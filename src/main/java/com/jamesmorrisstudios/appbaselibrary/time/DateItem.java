@@ -22,6 +22,9 @@ import android.support.annotation.Nullable;
 import com.google.gson.annotations.SerializedName;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 
+import java.util.Calendar;
+import java.util.Date;
+
 /**
  * Date item
  * <p/>
@@ -50,6 +53,14 @@ public final class DateItem {
         this.year = dateItem.year;
         this.month = dateItem.month;
         this.dayOfMonth = dateItem.dayOfMonth;
+    }
+
+    /**
+     * @return A copy of this object
+     */
+    @NonNull
+    public final DateItem copy() {
+        return new DateItem(this.year, this.month, this.dayOfMonth);
     }
 
     /**

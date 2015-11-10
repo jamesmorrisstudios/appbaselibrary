@@ -32,7 +32,7 @@ import java.util.ArrayList;
 public abstract class BaseRecycleListFragment extends BaseFragment implements BaseRecycleAdapter.OnItemClickListener {
     private boolean isRefreshing = false, dummyItem = false;
     private SwipeRefreshLayout mSwipeRefreshLayout;
-    private BaseRecycleAdapter mAdapter = null;
+    protected BaseRecycleAdapter mAdapter = null;
     private TextView noDataText;
     private RecyclerView mRecyclerView;
 

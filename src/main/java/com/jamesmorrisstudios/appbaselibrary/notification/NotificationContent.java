@@ -155,39 +155,7 @@ public class NotificationContent {
     }
 
     public long[] getVibratePattern() {
-        switch (vibrate) {
-            case DISABLED:
-                Log.v("Notification", "Disabled");
-                return new long[]{0};
-            case SHORT:
-                Log.v("Notification", "Short");
-                return new long[]{50, 200, 100, 200};
-            case MEDIUM:
-                Log.v("Notification", "Medium");
-                return new long[]{50, 500, 350, 500};
-            case LONG:
-                Log.v("Notification", "Long");
-                return new long[]{50, 1200, 800, 1200};
-            case PATTERN_1:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0, 250, 200, 250, 150, 150, 75, 150, 75, 150};
-            case PATTERN_2:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0,150,50,75,50,75,50,150,50,75,50,75,50,300};
-            case PATTERN_3:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0,200,50,175,50,150,50,125,50,100,50,75,50,50,50,75,50,100,50,125,50,150,50,157,50,200};
-            case PATTERN_4:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0,50,100,50,100,50,100,400,100,300,100,350,50,200,100,100,50,600};
-            case PATTERN_5:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0,500,110,500,110,450,110,200,110,170,40,450,110,200,110,170,40,500};
-            case PATTERN_6:
-                Log.v("Notification", "Pattern 1");
-                return new long[] {0,100,200,100,100,100,100,100,200,100,500,100,225,100};
-        }
-        return new long[]{1000, 1000};
+        return vibrate.getPattern();
     }
 
     public NotificationPriority getNotificationPriority() {
@@ -300,6 +268,32 @@ public class NotificationContent {
                 default:
                     return AppBase.getContext().getResources().getString(R.string.default_);
             }
+        }
+
+        public long[] getPattern() {
+            switch (this) {
+                case DISABLED:
+                    return new long[]{0};
+                case SHORT:
+                    return new long[]{50, 200, 100, 200};
+                case MEDIUM:
+                    return new long[]{50, 500, 350, 500};
+                case LONG:
+                    return new long[]{50, 1200, 800, 1200};
+                case PATTERN_1:
+                    return new long[]{0, 250, 200, 250, 150, 150, 75, 150, 75, 150};
+                case PATTERN_2:
+                    return new long[]{0, 150, 50, 75, 50, 75, 50, 150, 50, 75, 50, 75, 50, 300};
+                case PATTERN_3:
+                    return new long[]{0, 200, 50, 175, 50, 150, 50, 125, 50, 100, 50, 75, 50, 50, 50, 75, 50, 100, 50, 125, 50, 150, 50, 157, 50, 200};
+                case PATTERN_4:
+                    return new long[]{0, 50, 100, 50, 100, 50, 100, 400, 100, 300, 100, 350, 50, 200, 100, 100, 50, 600};
+                case PATTERN_5:
+                    return new long[]{0, 500, 110, 500, 110, 450, 110, 200, 110, 170, 40, 450, 110, 200, 110, 170, 40, 500};
+                case PATTERN_6:
+                    return new long[]{0, 100, 200, 100, 100, 100, 100, 100, 200, 100, 500, 100, 225, 100};
+            }
+            return new long[]{1000, 1000};
         }
     }
 

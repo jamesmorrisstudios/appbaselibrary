@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="settings_pref" translatable="false">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
 
-    <!-- Override to define your help tutorial -->
+
     <array name="settings_array" translatable="false">
-
+        <item>@array/settings_category_general</item>
+        <item>@array/settings_category_display</item>
+        <item>@array/settings_category_sound</item>
+        <item>@array/settings_category_locale</item>
+        <item>@array/settings_category_theme</item>
     </array>
 
-    <array name="settings_google_play_array" translatable="false">
-
-    </array>
-
-    <!-- Override to define your help tutorial -->
-    <array name="settings_base_array" translatable="false">
+    <array name="settings_category_display" translatable="false">
+        <item>@string/settings_category_display</item>
         <item>@array/settings_base_item_0</item>
+    </array>
+
+    <array name="settings_category_sound" translatable="false">
+        <item>@string/settings_category_sound</item>
         <item>@array/settings_base_item_1</item>
         <item>@array/settings_base_item_2</item>
+    </array>
+
+    <array name="settings_category_general" translatable="false">
+        <item>@string/settings_category_general</item>
+        <item>@array/settings_base_item_6</item>
+    </array>
+
+    <array name="settings_category_locale" translatable="false">
+        <item>@string/settings_category_locale</item>
         <item>@array/settings_base_item_3</item>
+    </array>
+
+    <array name="settings_category_theme" translatable="false">
+        <item>@string/settings_category_theme</item>
+        <item>@array/settings_base_item_5</item>
     </array>
 
     <!-- Immersive Mode Enable -->
@@ -25,7 +42,7 @@
         <item name="defaultValue">@bool/settings_base_item_0_default_value</item>
         <item name="key">@string/settings_base_item_0_key</item>
         <item name="primary">@string/settings_base_item_0_primary</item>
-        <item name="secondary">@string/settings_base_item_0_secondary</item>
+        <item name="secondary">@string/BLANK</item>
         <item name="restart">@bool/settings_base_item_0_restart</item>
     </array>
 
@@ -82,20 +99,6 @@
         <item name="english">@string/English</item>
     </string-array>
 
-    <!-- Allow Release Notes -->
-    <array name="settings_base_item_4">
-        <item name="defaultValue">@bool/settings_base_item_4_default_value</item>
-        <item name="key">@string/settings_base_item_4_key</item>
-        <item name="primary">@string/settings_base_item_4_primary</item>
-        <item name="secondary">@string/settings_base_item_4_secondary</item>
-        <item name="restart">@bool/settings_base_item_4_restart</item>
-    </array>
-
-    <bool name="settings_base_item_4_restart">false</bool>
-    <bool name="settings_base_item_4_default_value">true</bool>
-    <string name="settings_base_item_4_key" translatable="false">@string/pref_allow_release_notes</string>
-    <string name="pref_allow_release_notes" translatable="false">ALLOW_RELEASE_NOTES</string>
-
     <!-- Theme Select -->
     <array name="settings_base_item_5">
         <item name="defaultValue">@integer/settings_base_item_5_default_value</item>
@@ -115,5 +118,19 @@
         <item name="light">@string/light</item>
         <item name="dark">@string/dark</item>
     </string-array>
+
+    <!-- Use custom ringtone picker -->
+    <array name="settings_base_item_6">
+        <item name="defaultValue">@bool/settings_base_item_6_default_value</item>
+        <item name="key">@string/settings_base_item_6_key</item>
+        <item name="primary">@string/settings_base_item_6_primary</item>
+        <item name="secondary">@string/settings_base_item_6_secondary</item>
+        <item name="restart">@bool/settings_base_item_6_restart</item>
+    </array>
+
+    <bool name="settings_base_item_6_restart">false</bool>
+    <bool name="settings_base_item_6_default_value">true</bool>
+    <string name="settings_base_item_6_key" translatable="false">@string/pref_custom_ringtone</string>
+    <string name="pref_custom_ringtone" translatable="false">PREF_CUSTOM_RINGTONE</string>
 
 </resources>

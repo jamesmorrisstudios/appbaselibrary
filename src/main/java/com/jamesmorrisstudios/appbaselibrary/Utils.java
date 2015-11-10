@@ -26,8 +26,12 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.database.Cursor;
+import android.media.Ringtone;
+import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Vibrator;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
@@ -47,6 +51,7 @@ import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
@@ -59,6 +64,9 @@ import java.util.regex.Pattern;
  */
 public final class Utils {
     public static final String stringType = "UTF-8";
+
+    private static Vibrator vibrator = (Vibrator) AppBase.getContext().getSystemService(Context.VIBRATOR_SERVICE);
+    private static Ringtone ringtone = null;
 
     /**
      * Gets the screensize as an intVector
@@ -635,6 +643,37 @@ public final class Utils {
         AppBase.getContext().startActivity(chooser);
     }
 
+    public static boolean[] getFilledBoolArray(boolean fillValue, int size) {
+        boolean[] array = new boolean[size];
+        for(int i=0; i<array.length; i++) {
+            array[i] = fillValue;
+        }
+        return array;
+    }
+
+    public static void vibrate(long[] pattern) {
+        vibrator.vibrate(pattern, -1);
+    }
+
+    public static void vibrateCancel() {
+        vibrator.cancel();
+    }
+
+    public static void ringtonePlay(Uri tone) {
+        try {
+            ringtone = RingtoneManager.getRingtone(AppBase.getContext(), tone);
+            ringtone.play();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void ringtoneCancel() {
+        if(ringtone != null) {
+            ringtone.stop();
+        }
+    }
+
     /**
      * Generates a unique String
      *
@@ -643,6 +682,28 @@ public final class Utils {
     @NonNull
     public static String generateUniqueString() {
         return UUID.randomUUID().toString();
+    }
+
+    public static ArrayList<RingtoneItem> getRingtones(RingtoneType type) {
+        ArrayList<RingtoneItem> ringtoneItems = new ArrayList<>();
+        RingtoneManager manager = new RingtoneManager(AppBase.getContext());
+        if(type == RingtoneType.NOTIFICATION) {
+            manager.setType(RingtoneManager.TYPE_NOTIFICATION);
+        } else if(type == RingtoneType.RINGTONE) {
+            manager.setType(RingtoneManager.TYPE_RINGTONE);
+        }
+        Cursor cursor = manager.getCursor();
+        while (cursor.moveToNext()) {
+            String title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
+            //String uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
+            Uri ringtoneURI = manager.getRingtoneUri(cursor.getPosition());
+            ringtoneItems.add(new RingtoneItem(type, title, ringtoneURI));
+        }
+        return ringtoneItems;
+    }
+
+    public enum RingtoneType {
+        NOTIFICATION, RINGTONE
     }
 
     /**

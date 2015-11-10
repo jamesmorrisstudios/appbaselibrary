@@ -85,10 +85,20 @@
     <string name="tenth">Tenth</string>
 
     <!--
-        Days of the week
+        Days of the week/month/year
     -->
     <!-- -->
     <string name="days_of_week">Days Of Week</string>
+    <!-- -->
+    <string name="days_of_month">Days Of Month</string>
+    <!-- -->
+    <string name="days_of_year">Days Of Year</string>
+    <!-- -->
+    <string name="weeks_of_month">Weeks of Month</string>
+    <!-- -->
+    <string name="weeks_of_year">Weeks of Year</string>
+    <!-- -->
+    <string name="months_of_year">Months of Year</string>
     <!-- -->
     <string name="day_sunday">Sunday</string>
     <!-- -->
@@ -107,8 +117,11 @@
     <!--
         Timing
     -->
+    <string name="start_date">Start Date</string>
     <string name="start_time">Start Time</string>
+    <string name="end_date">End Date</string>
     <string name="end_time">End Time</string>
+    <string name="end_type">End Type</string>
     <string name="timing_type">Timing Type</string>
     <string name="edit_times">Edit Times</string>
     <string name="time">Time</string>
@@ -145,22 +158,6 @@
     <string name="previous">Previous</string>
     <string name="back">Back</string>
     <string name="forward">Forward</string>
-
-    <!--
-        Months
-    -->
-    <string name="january">January</string>
-    <string name="february">February</string>
-    <string name="march">March</string>
-    <string name="april">April</string>
-    <string name="may">May</string>
-    <string name="june">June</string>
-    <string name="july">July</string>
-    <string name="august">August</string>
-    <string name="september">September</string>
-    <string name="october">October</string>
-    <string name="november">November</string>
-    <string name="december">December</string>
 
     <!--
         Patterns
@@ -205,6 +202,7 @@
     <string name="public_">Public</string>
     <string name="private_">Private</string>
     <string name="default_">Default</string>
+    <string name="defaults">Defaults</string>
 
     <!--
        Min/Max/size//length
@@ -332,6 +330,7 @@
     <!--
         All or None
     -->
+    <string name="some">Some</string>
     <string name="none">None</string>
     <string name="all">All</string>
     <string name="last">Last</string>
@@ -417,6 +416,7 @@
     <string name="try_again">Try Again</string>
     <string name="touch_continue">Touch to Continue</string>
     <string name="touch_resume">Touch to Resume</string>
+    <string name="touch_edit">Touch to edit</string>
     <string name="pause">Pause</string>
     <string name="pause_game">Pause Game</string>
     <string name="resume">Resume</string>
@@ -526,12 +526,21 @@
     <string name="reminder_delete">Reminder Deleted</string>
     <string name="reminder_duplicate">Reminder Duplicated</string>
     <string name="no_changes">No Changes</string>
+    <!--
+        Settings categories
+    -->
+    <string name="settings_category_display">Display</string>
+    <string name="settings_category_sound">Sound</string>
+    <string name="settings_category_general">General</string>
+    <string name="settings_category_locale">Locale</string>
+    <string name="settings_category_theme">Theme</string>
+    <string name="settings_category_notification">Notification</string>
+    <string name="settings_category_defaults">Defaults</string>
 
 	<!--
 	    Base App Settings
 	-->
-    <string name="settings_base_item_0_primary">Enable Immersive Mode</string>
-    <string name="settings_base_item_0_secondary">Uncheck to show the navigation and status bars</string>
+    <string name="settings_base_item_0_primary">Immersive Mode</string>
     <string name="settings_base_item_1_primary">Enable Sound Effects</string>
     <string name="settings_base_item_1_secondary">Uncheck to disable sound effects</string>
     <string name="settings_base_item_2_primary">Enable Music</string>
@@ -539,7 +548,9 @@
     <string name="settings_base_item_3_primary">Language</string>
     <string name="settings_base_item_4_primary">Show release notes on the first launch after a major update</string>
     <string name="settings_base_item_4_secondary">Uncheck to never show the release note popup</string>
-    <string name="settings_base_item_5_primary">Theme</string>
+    <string name="settings_base_item_5_primary">App Theme</string>
+    <string name="settings_base_item_6_primary">Use custom ringtone picker</string>
+    <string name="settings_base_item_6_secondary">Uncheck to show the system ringtone picker</string>
     <!--
         Google Play specific
     -->
@@ -570,15 +581,18 @@
     <!--
         Randomly RemindMe Settings
     -->
-    <string name="randremind_settings_0_primary">Notification opens summary</string>
-    <string name="randremind_settings_0_secondary">Uncheck to make notification silently acknowledge</string>
+    <string name="randremind_settings_0_primary">Notification click action</string>
     <string name="randremind_settings_1_primary">Use custom notification</string>
-    <string name="randremind_settings_1_secondary">Uncheck to disable the custom notification and revert to the standard system</string>
+    <string name="randremind_settings_1_secondary">Uncheck to disable the custom notification and revert to the standard system.</string>
     <string name="randremind_settings_2_primary">Use ongoing notification</string>
-    <string name="randremind_settings_2_secondary">Uncheck to allow the notification to be dismissible by swiping it away. Ongoing notifications are not supported on Android Wear</string>
-    <string name="randremind_settings_3_primary">Use notification theme of a light background and dark text</string>
-    <string name="randremind_settings_3_secondary">Uncheck to use dark notification theme of a dark background and light text</string>
+    <string name="randremind_settings_2_secondary">Uncheck to allow the notification to be dismissible by swiping it away. Ongoing notifications are not supported on Android Wear.</string>
+    <string name="randremind_settings_3_primary">Notification Theme</string>
     <string name="randremind_settings_4_primary">First day of the week</string>
+    <string name="randremind_settings_5_primary">Always show advanced options</string>
+    <string name="randremind_settings_5_secondary">Uncheck to allow toggling advanced options per reminder.</string>
+    <string name="randremind_settings_6_primary">Notification swipe action</string>
+    <string name="randremind_settings_7_primary">Notification click opens app</string>
+    <string name="randremind_settings_8_primary">Notification swipe opens app</string>
 
     <!--
         Google Play Settings
@@ -595,7 +609,8 @@
     <string name="night">Night</string>
     <string name="black">Black</string>
     <string name="white">White</string>
-
+    <string name="light_text">Light Text</string>
+    <string name="dark_text">Dark Text</string>
     <!--
         Uncategorized
     -->
@@ -621,8 +636,6 @@
     <string name="color">Color</string>
     <string name="tone">Tone</string>
     <string name="sound">Sound</string>
-    <string name="random">Random</string>
-    <string name="specific">Specific</string>s
     <string name="repeat">Repeat</string>
     <string name="alarm">Alarm</string>
     <string name="vibrate">Vibrate</string>
@@ -638,5 +651,29 @@
     <string name="restart">Restart</string>
     <string name="restarting">Restarting</string>
     <string name="restarting_app_please_wait">Restarting App, Please Wait</string>
+    <string name="forever">Forever</string>
+    <string name="nothing">Nothing</string>
 
+    <string name="filter_type">Filter Type</string>
+    <string name="number_of_reminders">Number of reminders</string>
+    <string name="time_period">Time period</string>
+
+    <string name="random">Random</string>
+    <string name="randomly">Randomly</string>
+    <string name="less_random">Less Random</string>
+    <string name="even">Even</string>
+    <string name="evenly">Evenly</string>
+    <string name="specific">Specific</string>
+    <string name="interval">Interval</string>
+    <string name="specific_times">Specific Times</string>
+    <string name="repeat_every">Repeat Every</string>
+
+    <string name="criteria">Criteria</string>
+    <string name="trigger">Trigger</string>
+    <string name="triggers">Triggers</string>
+    <string name="trigger_type">Trigger Type</string>
+    <string name="advanced_options">Advanced Options</string>
+
+    <string name="navigation_bar">Navigation Bar</string>
+    <string name="status_bar">Status Bar</string>
 </resources>

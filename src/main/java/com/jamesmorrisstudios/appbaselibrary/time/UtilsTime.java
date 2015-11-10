@@ -29,6 +29,8 @@ import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -179,6 +181,42 @@ public final class UtilsTime {
 
     public static long getTimeMillis(DateTimeItem dateTime) {
         return getCalendar(dateTime).getTimeInMillis();
+    }
+
+    public static Date calendarToDate(Calendar calendar) {
+        return calendar.getTime();
+    }
+
+    public static Calendar dateToCalendar(Date date) {
+        Calendar calendar = getCalendar();
+        calendar.setTime(date);
+        return calendar;
+    }
+
+    public static Date dateItemToDate(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendarToDate(calendar);
+    }
+
+    public static DateItem dateToDateItem(Date date) {
+        Calendar calendar = dateToCalendar(date);
+        return getDate(calendar);
+    }
+
+    public static ArrayList<DateItem> dateArrToDateItemArr(List<Date> dateArr) {
+        ArrayList<DateItem> dateItemArr = new ArrayList<>();
+        for(Date date : dateArr) {
+            dateItemArr.add(dateToDateItem(date));
+        }
+        return dateItemArr;
+    }
+
+    public static ArrayList<Date> dateItemArrToDateArr(List<DateItem> dateItemArr) {
+        ArrayList<Date> dateArr = new ArrayList<>();
+        for(DateItem dateItem : dateItemArr) {
+            dateArr.add(dateItemToDate(dateItem));
+        }
+        return dateArr;
     }
 
     /**
@@ -535,8 +573,94 @@ public final class UtilsTime {
         return newItems;
     }
 
+    @NonNull
+    public static ArrayList<DateItem> cloneArrayListDate(ArrayList<DateItem> dates) {
+        ArrayList<DateItem> newItems = new ArrayList<>();
+        for(DateItem item : dates) {
+            newItems.add(item.copy());
+        }
+        return newItems;
+    }
+
+    public enum MonthsOfYear {
+        JANUARY,
+        FEBRUARY,
+        MARCH,
+        APRIL,
+        MAY,
+        JUNE,
+        JULY,
+        AUGUST,
+        SEPTEMBER,
+        OCTOBER,
+        NOVEMBER,
+        DECEMBER;
+
+        public String getName() {
+            switch(this) {
+                case JANUARY:
+                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case FEBRUARY:
+                    return getCalendar(new DateItem(2000, 2, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case MARCH:
+                    return getCalendar(new DateItem(2000, 3, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case APRIL:
+                    return getCalendar(new DateItem(2000, 4, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case MAY:
+                    return getCalendar(new DateItem(2000, 5, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case JUNE:
+                    return getCalendar(new DateItem(2000, 6, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case JULY:
+                    return getCalendar(new DateItem(2000, 7, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case AUGUST:
+                    return getCalendar(new DateItem(2000, 8, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case SEPTEMBER:
+                    return getCalendar(new DateItem(2000, 9, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case OCTOBER:
+                    return getCalendar(new DateItem(2000, 10, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case NOVEMBER:
+                    return getCalendar(new DateItem(2000, 11, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                case DECEMBER:
+                    return getCalendar(new DateItem(2000, 12, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                default:
+                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+            }
+        }
+
+        public String getNameShort() {
+            switch(this) {
+                case JANUARY:
+                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case FEBRUARY:
+                    return getCalendar(new DateItem(2000, 2, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case MARCH:
+                    return getCalendar(new DateItem(2000, 3, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case APRIL:
+                    return getCalendar(new DateItem(2000, 4, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case MAY:
+                    return getCalendar(new DateItem(2000, 5, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case JUNE:
+                    return getCalendar(new DateItem(2000, 6, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case JULY:
+                    return getCalendar(new DateItem(2000, 7, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case AUGUST:
+                    return getCalendar(new DateItem(2000, 8, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case SEPTEMBER:
+                    return getCalendar(new DateItem(2000, 9, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case OCTOBER:
+                    return getCalendar(new DateItem(2000, 10, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case NOVEMBER:
+                    return getCalendar(new DateItem(2000, 11, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                case DECEMBER:
+                    return getCalendar(new DateItem(2000, 12, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                default:
+                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+            }
+        }
+    }
+
     /**
-     * Day of the week. Use .name for the String name
+     * Day of the week.
      */
     public enum DayOfWeek {
         SUNDAY,
@@ -559,19 +683,42 @@ public final class UtilsTime {
         public String getName() {
             switch(this) {
                 case SUNDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_sunday);
+                    return getCalendar(new DateItem(2015, 1, 1)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case MONDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_monday);
+                    return getCalendar(new DateItem(2015, 1, 2)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case TUESDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_tuesday);
+                    return getCalendar(new DateItem(2015, 1, 3)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case WEDNESDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_wednesday);
+                    return getCalendar(new DateItem(2015, 1, 4)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case THURSDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_thursday);
+                    return getCalendar(new DateItem(2015, 1, 5)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case FRIDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_friday);
+                    return getCalendar(new DateItem(2015, 1, 6)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
                 case SATURDAY:
-                    return AppBase.getContext().getResources().getString(R.string.day_saturday);
+                    return getCalendar(new DateItem(2015, 1, 7)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault());
+                case AUTOMATIC:
+                    return AppBase.getContext().getResources().getString(R.string.automatic);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.automatic);
+            }
+        }
+
+        public String getNameShort() {
+            switch(this) {
+                case SUNDAY:
+                    return getCalendar(new DateItem(2015, 1, 1)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case MONDAY:
+                    return getCalendar(new DateItem(2015, 1, 2)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case TUESDAY:
+                    return getCalendar(new DateItem(2015, 1, 3)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case WEDNESDAY:
+                    return getCalendar(new DateItem(2015, 1, 4)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case THURSDAY:
+                    return getCalendar(new DateItem(2015, 1, 5)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case FRIDAY:
+                    return getCalendar(new DateItem(2015, 1, 6)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
+                case SATURDAY:
+                    return getCalendar(new DateItem(2015, 1, 7)).getDisplayName(Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault());
                 case AUTOMATIC:
                     return AppBase.getContext().getResources().getString(R.string.automatic);
                 default:

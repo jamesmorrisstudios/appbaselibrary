@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.squareup.timessquare.CalendarPickerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calendar_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardDark"
+    app:tsquare_dayBackground="@drawable/calendar_bg_selector_dark"
+    app:tsquare_dayTextColor="@color/calendar_text_selector_dark"
+    app:tsquare_dividerColor="@color/dark_calendar_divider"
+    app:tsquare_titleTextColor="@color/textLightMain"
+    app:tsquare_headerTextColor="@color/textLightMain"
+    />

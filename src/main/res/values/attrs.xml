@@ -3,5 +3,4 @@
     <attr name="toolbarStyleSet" format="reference"/>
     <attr name="cardViewStyle" format="reference"/>
     <attr name="alertDialogStyleSet" format="reference"/>
-
 </resources>
