@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
@@ -31,7 +31,7 @@ public class HelpFragment extends BaseFragment {
     }
 
     public enum HelpEvent {
-        READ_TUTORIAL, WATCH_TUTORIAL, GOTO_TWITTER, GOTO_FB, GOTO_GPLUS, GOTO_RATE, GOTO_MORE, GOTO_SUPPORT, GOTO_TRANSLATE, GOTO_RELEASE_NOTES
+        READ_TUTORIAL, WATCH_TUTORIAL, GOTO_RATE, GOTO_MORE, GOTO_SUPPORT, GOTO_TRANSLATE, GOTO_RELEASE_NOTES
     }
 
     /**
@@ -49,12 +49,12 @@ public class HelpFragment extends BaseFragment {
         Button watchHow = (Button) view.findViewById(R.id.howToUseWatch);
         Button license = (Button) view.findViewById(R.id.helpLicense);
         TextView version = (TextView) view.findViewById(R.id.versionName);
-        ImageButton btnTwitter = (ImageButton) view.findViewById(R.id.btn_twitter);
-        ImageButton btnFB = (ImageButton) view.findViewById(R.id.btn_fb);
-        ImageButton btnGPlus = (ImageButton) view.findViewById(R.id.btn_gplus);
+        TextView versionType = (TextView) view.findViewById(R.id.versionType);
+        ImageView logo = (ImageView) view.findViewById(R.id.studio_logo);
         Button rateNow = (Button) view.findViewById(R.id.btn_rateNow);
         Button moreBy = (Button) view.findViewById(R.id.btn_moreBy);
-        Button support = (Button) view.findViewById(R.id.btn_support);
+        Button beta = (Button) view.findViewById(R.id.btn_beta);
+        Button support = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button translate = (Button) view.findViewById(R.id.btn_translate);
         Button releaseNotes = (Button) view.findViewById(R.id.btn_release_notes);
         readHow.setOnClickListener(new View.OnClickListener() {
@@ -77,28 +77,12 @@ public class HelpFragment extends BaseFragment {
                 subPageListener.onLicenseClicked();
             }
         });
+        if(Utils.isPro()) {
+            versionType.setText(R.string.pro);
+        } else {
+            versionType.setText(R.string.free);
+        }
         version.setText(Utils.getVersionName() + " " + Utils.getVersionType());
-        btnTwitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_TWITTER);
-                Utils.openLink(getResources().getString(R.string.help_link_twitter));
-            }
-        });
-        btnFB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_FB);
-                Utils.openLink(getResources().getString(R.string.help_link_fb));
-            }
-        });
-        btnGPlus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_GPLUS);
-                Utils.openLink(getResources().getString(R.string.help_link_gPlus));
-            }
-        });
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +101,7 @@ public class HelpFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_SUPPORT);
-                Utils.openLink(getResources().getString(R.string.store_link_donation));
+                Utils.openLink(getResources().getString(R.string.store_link_pro));
             }
         });
         translate.setOnClickListener(new View.OnClickListener() {
@@ -127,11 +111,23 @@ public class HelpFragment extends BaseFragment {
                 Utils.openLink(getResources().getString(R.string.help_link_translate));
             }
         });
+        beta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.openLink(getResources().getString(R.string.store_link_beta));
+            }
+        });
         releaseNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpEvent.GOTO_RELEASE_NOTES);
                 Bus.postObject(new ReleaseNotesDialogRequest());
+            }
+        });
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.openLink(getResources().getString(R.string.help_about_site));
             }
         });
         return view;

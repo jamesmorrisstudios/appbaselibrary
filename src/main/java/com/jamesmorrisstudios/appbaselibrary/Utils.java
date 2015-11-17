@@ -20,12 +20,14 @@ import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.database.Cursor;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -45,7 +47,9 @@ import android.view.ViewTreeObserver;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.jamesmorrisstudios.appbaselibrary.activities.RestartActivity;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
+import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.math.vectors.IntVector2;
 import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 
@@ -319,8 +323,12 @@ public final class Utils {
      *
      * @param text Text to display
      */
-    public static void toastShort(String text) {
-        Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_SHORT).show();
+    public static void toastShort(@NonNull String text) {
+        try {
+            Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_SHORT).show();
+        } catch (Exception ex) {
+
+        }
     }
 
     /**
@@ -328,8 +336,12 @@ public final class Utils {
      *
      * @param text Text to display
      */
-    public static void toastLong(String text) {
-        Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_LONG).show();
+    public static void toastLong(@NonNull String text) {
+        try {
+            Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+
+        }
     }
 
     private static Locale backupLocale = null;
@@ -598,21 +610,32 @@ public final class Utils {
         return false;
     }
 
-    public static void restartApp(Activity activity) {
-        //Intent i = AppBase.getContext().getPackageManager().getLaunchIntentForPackage(AppBase.getContext().getPackageName());
-        //i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        //AppBase.getContext().startActivity(i);
+    public static String getPackage() {
+        return AppBase.getContext().getPackageName();
+    }
 
-        Intent i = AppBase.getContext().getPackageManager().getLaunchIntentForPackage(AppBase.getContext().getPackageName());
-        int mPendingIntentId = 123456;
-        PendingIntent mPendingIntent = PendingIntent.getActivity(AppBase.getContext(), mPendingIntentId, i, PendingIntent.FLAG_CANCEL_CURRENT);
-        AlarmManager mgr = (AlarmManager)AppBase.getContext().getSystemService(Context.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+    public static void restartApp(Activity activity) {
+        restartApp(activity, null, -1);
+    }
+
+    public static void restartApp(Activity activity, String page, int scrollY) {
+        Intent i = new Intent(activity, RestartActivity.class);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if(page != null) {
+            i.putExtra("PAGE", page);
+        }
+        if(scrollY != -1) {
+            i.putExtra("SCROLL_Y", scrollY);
+        }
+        AppBase.getContext().startActivity(i);
         activity.finish();
     }
 
     public static void openLink(String link) {
         try {
+            if(link.startsWith("www")) {
+                link = "http://"+link;
+            }
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             AppBase.getContext().startActivity(intent);
@@ -700,6 +723,29 @@ public final class Utils {
             ringtoneItems.add(new RingtoneItem(type, title, ringtoneURI));
         }
         return ringtoneItems;
+    }
+
+    public static boolean isPro() {
+        return AppBase.getContext().getString(R.string.pro_package_name).equals(Utils.getPackage());
+    }
+
+    public static void showProPopup() {
+        String title = AppBase.getContext().getString(R.string.upgrade);
+        String content = AppBase.getContext().getString(R.string.feature_requires_pro);
+        String positiveText = AppBase.getContext().getString(R.string.upgrade_now);
+
+        Bus.postObject(new PromptDialogRequest(title, content, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Link to
+                Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
+            }
+        }, positiveText, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Cancel
+            }
+        }, null));
     }
 
     public enum RingtoneType {

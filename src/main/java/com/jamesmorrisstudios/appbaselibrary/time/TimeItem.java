@@ -27,7 +27,7 @@ import com.jamesmorrisstudios.appbaselibrary.Utils;
  * <p/>
  * Created by James on 4/28/2015.
  */
-public final class TimeItem {
+public final class TimeItem implements Comparable<TimeItem> {
     @SerializedName("hour")
     public int hour;
     @SerializedName("minute")
@@ -132,4 +132,25 @@ public final class TimeItem {
         }
     }
 
+    //-1 is this is before another
+    //1 is this is after another
+    //0 if the same
+    @Override
+    public int compareTo(@NonNull TimeItem another) {
+        if(this.hour < another.hour) {
+            return -1;
+        }
+        if(this.hour > another.hour) {
+            return 1;
+        }
+        //Hour equal at this point
+        if(this.minute < another.minute) {
+            return -1;
+        }
+        if(this.minute > another.minute) {
+            return 1;
+        }
+        //Hour, and minute equal at this point
+        return 0;
+    }
 }

@@ -30,7 +30,7 @@ import java.util.Date;
  * <p/>
  * Created by James on 4/28/2015.
  */
-public final class DateItem {
+public final class DateItem implements Comparable<DateItem> {
     @SerializedName("year")
     public int year;
     @SerializedName("month")
@@ -39,9 +39,9 @@ public final class DateItem {
     public int dayOfMonth;
 
     /**
-     * @param year       The year
-     * @param month      The month
-     * @param dayOfMonth The day of the month
+     * @param year       The year whatever it actually is ex. 2015
+     * @param month      The month 0-11
+     * @param dayOfMonth The day of the month 1-31
      */
     public DateItem(int year, int month, int dayOfMonth) {
         this.year = year;
@@ -99,4 +99,32 @@ public final class DateItem {
         }
     }
 
+    //-1 is this is before another
+    //1 is this is after another
+    //0 if the same
+    @Override
+    public int compareTo(@NonNull DateItem another) {
+        if(this.year < another.year) {
+            return -1;
+        }
+        if(this.year > another.year) {
+            return 1;
+        }
+        //Year equal at this point
+        if(this.month < another.month) {
+            return -1;
+        }
+        if(this.month > another.month) {
+            return 1;
+        }
+        //Year and month equal at this point
+        if(this.dayOfMonth < another.dayOfMonth) {
+            return -1;
+        }
+        if(this.dayOfMonth > another.dayOfMonth) {
+            return 1;
+        }
+        //Year, month, and day equal at this point
+        return 0;
+    }
 }

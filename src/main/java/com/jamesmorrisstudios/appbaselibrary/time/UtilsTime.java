@@ -490,24 +490,68 @@ public final class UtilsTime {
         return getDateTime(calendar);
     }
 
-
-
-    public static WeekOfMonth getWeekOfMonth() {
-        return getWeekOfMonth(getDateNow());
-    }
-
-    public static WeekOfMonth getWeekOfMonth(DateItem dateItem) {
+    public static DateItem addDayOfYear(DateItem dateItem, int amount) {
         Calendar calendar = getCalendar(dateItem);
-        return WeekOfMonth.getWeekOfMonth(calendar.get(Calendar.WEEK_OF_MONTH));
+        calendar.add(Calendar.DAY_OF_YEAR, amount);
+        return getDate(calendar);
     }
 
-    public static boolean isLastWeekOfMonth(DateItem dateItem) {
+    public static DateItem addWeekOfYear(DateItem dateItem, int amount) {
         Calendar calendar = getCalendar(dateItem);
-        Log.v("UtilsTime","Last Week of month "+getLastWeekOfMonth(dateItem).getName());
-        return WeekOfMonth.getWeekOfMonth(calendar.get(Calendar.WEEK_OF_MONTH)) == getLastWeekOfMonth(dateItem);
+        calendar.add(Calendar.WEEK_OF_YEAR, amount);
+        return getDate(calendar);
     }
 
-    public static WeekOfMonth getLastWeekOfMonth(DateItem dateItem) {
+    public static DateItem addMonthOfYear(DateItem dateItem, int amount) {
+        Calendar calendar = getCalendar(dateItem);
+        calendar.add(Calendar.MONTH, amount);
+        return getDate(calendar);
+    }
+
+    public static DateItem addYear(DateItem dateItem, int amount) {
+        Calendar calendar = getCalendar(dateItem);
+        calendar.add(Calendar.YEAR, amount);
+        return getDate(calendar);
+    }
+
+    public static int getDayOfWeekInMonth() {
+        return getDayOfWeekInMonth(getDateNow());
+    }
+
+    public static int getDayOfWeekInMonth(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+    }
+
+    public static boolean isLastDayOfFullWeekInMonth(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        //Get the last day of the month containing dateItem
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        calendar.add(Calendar.MONTH, 1);
+        calendar.add(Calendar.DAY_OF_YEAR, -1);
+        DateItem lastDayOfMonth = getDate(calendar);
+        //Subtract a week
+        calendar.add(Calendar.WEEK_OF_YEAR, -1);
+        DateItem weekBeforeLastDay = getDate(calendar);
+        //Check if dateItem is within that range ( dateItem ]
+        if(dateItem.compareTo(lastDayOfMonth) > 0) {
+            return false;
+        }
+        if(dateItem.compareTo(weekBeforeLastDay) <= 0) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isLastDayOfWeekInMonth(DateItem dateItem) {
+        return getDayOfWeekInMonth(dateItem) == getLastDayOfWeekInMonth(dateItem);
+    }
+
+    public static int getLastDayOfWeekInMonth(DateItem dateItem) {
         Calendar calendar = getCalendar(dateItem);
         calendar.set(Calendar.DAY_OF_MONTH, 1);
         calendar.set(Calendar.HOUR_OF_DAY, 0);
@@ -517,9 +561,84 @@ public final class UtilsTime {
         calendar.add(Calendar.MONTH, 1);
         do {
             calendar.add(Calendar.DAY_OF_YEAR, -1);
-        } while(WeekOfMonth.getWeekOfMonth(calendar.get(Calendar.WEEK_OF_MONTH)) == WeekOfMonth.FIRST);
-        Log.v("UtilsTime", "Day of Month "+calendar.get(Calendar.DAY_OF_MONTH));
-        return WeekOfMonth.getWeekOfMonth(calendar.get(Calendar.WEEK_OF_MONTH));
+        } while(calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH) == 1);
+        return calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
+    }
+
+
+
+
+
+    public static int getDayOfWeek() {
+        return getDayOfWeek(getDateNow());
+    }
+
+    public static int getDayOfWeek(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.DAY_OF_WEEK);
+    }
+
+    public static int getDayOfMonth() {
+        return getDayOfMonth(getDateNow());
+    }
+
+    public static int getDayOfMonth(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.DAY_OF_MONTH);
+    }
+
+    public static int getDayOfYear() {
+        return getDayOfYear(getDateNow());
+    }
+
+    public static int getDayOfYear(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.DAY_OF_YEAR);
+    }
+
+    public static int getWeekOfMonth() {
+        return getWeekOfMonth(getDateNow());
+    }
+
+    public static int getWeekOfMonth(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.WEEK_OF_MONTH);
+    }
+
+    public static int getWeekOfYear() {
+        return getWeekOfYear(getDateNow());
+    }
+
+    public static int getWeekOfYear(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.WEEK_OF_YEAR);
+    }
+
+    public static int getMonthOfYear() {
+        return getMonthOfYear(getDateNow());
+    }
+
+    public static int getMonthOfYear(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        return calendar.get(Calendar.MONTH);
+    }
+
+    public static boolean isLastWeekOfMonth(DateItem dateItem) {
+        return getWeekOfMonth(dateItem) == getLastWeekOfMonth(dateItem);
+    }
+
+    public static int getLastWeekOfMonth(DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        calendar.add(Calendar.MONTH, 1);
+        do {
+            calendar.add(Calendar.DAY_OF_YEAR, -1);
+        } while(calendar.get(Calendar.WEEK_OF_MONTH) == 1);
+        return calendar.get(Calendar.WEEK_OF_MONTH);
     }
 
     /**
@@ -726,7 +845,7 @@ public final class UtilsTime {
             }
         }
     }
-
+/*
     public enum WeekOfMonth {
         FIRST(1),
         SECOND(2),
@@ -774,5 +893,6 @@ public final class UtilsTime {
         }
 
     }
+    */
 
 }

@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.activities.BaseLauncherNoViewActivity;
 import com.jamesmorrisstudios.appbaselibrary.filewriting.FileWriter;
 import com.jamesmorrisstudios.appbaselibrary.R;
@@ -111,23 +112,7 @@ public abstract class BaseFragment extends Fragment {
             }
         }
         if (relativeLayout != null) {
-            int[][] states = new int[][]{
-                    new int[]{android.R.attr.state_enabled}, // enabled
-                    new int[]{-android.R.attr.state_enabled}, // disabled
-                    new int[]{-android.R.attr.state_checked}, // unchecked
-                    new int[]{android.R.attr.state_pressed}  // pressed
-            };
-
-            int[] colors = new int[]{
-                    getResources().getColor(R.color.primary),
-                    getResources().getColor(R.color.primaryDisabled),
-                    getResources().getColor(R.color.primary),
-                    getResources().getColor(R.color.primaryLight)
-            };
-            ColorStateList myList = new ColorStateList(states, colors);
             fab = (FloatingActionButton) getActivity().getLayoutInflater().inflate(R.layout.fab, null);
-            Log.v("BaseFragment", "Got Here " + (fab != null));
-            fab.setBackgroundTintList(myList);
             RelativeLayout.LayoutParams p = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             p.setMargins(0, 0, Utils.getDipInt(24), Utils.getDipInt(16));
             p.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
@@ -314,6 +299,8 @@ public abstract class BaseFragment extends Fragment {
      *
      */
     public interface OnUtilListener {
+
+        void restartActivity(String page, int ScrollY);
 
         /**
          * Go back from this fragment

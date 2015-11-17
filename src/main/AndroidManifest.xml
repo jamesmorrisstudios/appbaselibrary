@@ -12,6 +12,11 @@
             android:theme="@style/FilePickerTheme">
         </activity>
 
+        <activity
+            android:name="com.jamesmorrisstudios.appbaselibrary.activities.RestartActivity"
+            android:label="@string/app_name">
+        </activity>
+
 
     </application>
 

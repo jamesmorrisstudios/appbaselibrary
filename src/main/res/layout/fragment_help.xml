@@ -14,11 +14,11 @@
   ~ limitations under the License.
   -->
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     tools:context=".MainActivityFragment">
 
     <LinearLayout
@@ -30,172 +30,103 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin">
 
-        <!-- How To Use  -->
+        <!-- Tutorial  -->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/help_how_to_header"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="@dimen/header_size" />
-
-        <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/textLightDivider" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/tutorial"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/colorAccentText"
+            android:textSize="18sp" />
 
         <Button
             android:background="?android:attr/selectableItemBackground"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseRead"
-            style="@style/help_read_how"
+            style="@style/help_read"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="@string/read_how"
+            android:text="@string/read"
             android:textSize="@dimen/item_size" />
 
         <Button
             android:background="?android:attr/selectableItemBackground"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseWatch"
-            style="@style/help_watch_how"
+            style="@style/help_watch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="@string/watch_how"
+            android:text="@string/watch"
             android:textSize="@dimen/item_size" />
-
-        <!-- About  -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/about"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="@dimen/header_size" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/textLightDivider" />
+            android:background="?android:attr/listDivider" />
 
+        <!-- Links  -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="2dp"
-            android:gravity="center_horizontal"
-            android:text="@string/help_about_studio"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/links"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="@dimen/item_size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="2dp"
-            android:autoLink="web|email"
-            android:gravity="center_horizontal"
-            android:text="@string/help_about_email"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColorLink="@color/textAccent"
-            android:textSize="@dimen/item_size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="2dp"
-            android:autoLink="web"
-            android:gravity="center_horizontal"
-            android:text="@string/help_about_site"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColorLink="@color/textAccent"
-            android:textSize="@dimen/item_size" />
-
-        <!-- Social Media badges -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/btn_twitter"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/btn_twitter"
-                android:scaleType="fitCenter" />
-
-            <ImageButton
-                android:id="@+id/btn_gplus"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/btn_gplus"
-                android:scaleType="fitCenter" />
-
-            <ImageButton
-                android:id="@+id/btn_fb"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/btn_fb"
-                android:scaleType="fitCenter" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginRight="4dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/like_this_app"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:textSize="@dimen/item_size" />
-
-            <Button
-                android:background="?android:attr/selectableItemBackground"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:id="@+id/btn_rateNow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/rate_now"
-                android:textSize="@dimen/item_size" />
-
-        </LinearLayout>
+            android:textColor="?attr/colorAccentText"
+            android:textSize="18sp" />
 
         <Button
-            style="@style/help_support_dev"
             android:background="?android:attr/selectableItemBackground"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:id="@+id/btn_support"
+            android:id="@+id/btn_rateNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
             android:gravity="center"
-            android:text="@string/support_development"
+            android:text="@string/rate_app"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            style="@style/upgrade_to_pro"
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_pro_upgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/upgrade_to_pro"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_beta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/get_the_beta"
             android:textSize="@dimen/item_size" />
 
         <Button
@@ -214,19 +145,6 @@
         <Button
             android:background="?android:attr/selectableItemBackground"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:id="@+id/btn_moreBy"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="4dp"
-            android:layout_marginTop="4dp"
-            android:gravity="center"
-            android:text="@string/more_apps"
-            android:textSize="@dimen/item_size" />
-
-        <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_release_notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -236,6 +154,24 @@
             android:gravity="center"
             android:text="@string/release_notes"
             android:textSize="@dimen/item_size" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- Licenses -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/licenses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/colorAccentText"
+            android:textSize="18sp" />
 
         <Button
             android:background="?android:attr/selectableItemBackground"
@@ -250,15 +186,110 @@
             android:text="@string/licenses"
             android:textSize="@dimen/item_size" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- About  -->
         <TextView
-            android:id="@+id/versionName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/about"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="?attr/colorAccentText"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/help_about_studio"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/item_size" />
+
+        <ImageView
+            android:id="@+id/studio_logo"
+            android:background="@drawable/studio_logo"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="0dp"
+            android:layout_width="88dp"
+            android:layout_height="88dp" />
+
+        <Button
+            android:background="?android:attr/selectableItemBackground"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:id="@+id/btn_moreBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|left"
-            android:layout_marginLeft="24dp"
-            android:gravity="bottom|left"
-            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textSize="@dimen/item_small_size" />
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="@string/more_apps"
+            android:textSize="@dimen/item_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:autoLink="web"
+            android:gravity="center_horizontal"
+            android:text="@string/help_about_site"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColorLink="?attr/android:textColorPrimary"
+            android:textSize="@dimen/item_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dp"
+            android:autoLink="web|email"
+            android:gravity="center_horizontal"
+            android:text="@string/help_about_email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColorLink="?attr/android:textColorPrimary"
+            android:textSize="@dimen/item_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/versionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/item_small_size" />
+
+            <TextView
+                android:id="@+id/versionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="@dimen/item_small_size" />
+
+        </RelativeLayout>
+
+
 
     </LinearLayout>
 

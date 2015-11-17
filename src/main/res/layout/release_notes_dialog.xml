@@ -8,13 +8,14 @@
 
     <TextView
         android:id="@+id/notes"
-        android:textColor="@color/textDarkSecondary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/item_size" />
 
     <Button
         android:background="?android:attr/selectableItemBackground"
-        android:textColor="@color/textDarkMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:id="@+id/btn_rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,20 +25,20 @@
         android:textSize="@dimen/item_small_size" />
 
     <Button
-        style="@style/help_support_dev"
+        style="@style/upgrade_to_pro"
         android:background="?android:attr/selectableItemBackground"
-        android:textColor="@color/textDarkMain"
-        android:id="@+id/btn_support"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:id="@+id/btn_pro_upgrade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
-        android:text="@string/support_development"
+        android:text="@string/upgrade_to_pro"
         android:textSize="@dimen/item_small_size" />
 
     <Button
         android:background="?android:attr/selectableItemBackground"
-        android:textColor="@color/textDarkMain"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:id="@+id/btn_translate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

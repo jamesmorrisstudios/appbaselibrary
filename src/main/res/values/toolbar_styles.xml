@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="toolbarLight">
+        <item name="toolbarStyleSet">@style/baseToolbarLight</item>
+    </style>
+
+    <style name="toolbarDark">
+        <item name="toolbarStyleSet">@style/baseToolbarDark</item>
+    </style>
+
+    <style name="toolbarLightDarkText">
+        <item name="toolbarStyleSet">@style/baseToolbarLightDarkText</item>
+    </style>
+
+    <style name="toolbarDarkDarkText">
+        <item name="toolbarStyleSet">@style/baseToolbarDarkDarkText</item>
+    </style>
+
+</resources>

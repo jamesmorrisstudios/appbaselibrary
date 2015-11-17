@@ -31,15 +31,9 @@
     <string name="help_about_email" translatable="false">support@jamesmorrisstudios.us</string>
     <string name="help_about_site" translatable="false">www.jamesmorrisstudios.us</string>
 
-    <string name="help_link_twitter" translatable="false">https://twitter.com/J_M_Studios</string>
-    <string name="help_link_gPlus" translatable="false">https://plus.google.com/116342052026616674911</string>
-    <string name="help_link_fb" translatable="false">https://www.facebook.com/j.morris.studios</string>
-
     <string name="help_link_translate" translatable="false">https://osorly3.oneskyapp.com/collaboration/project/102553</string>
 
     <string name="todo" translatable="false">Coming Soon</string>
-
-    <string name="help_how_to_header" translatable="false">@string/how_to_use</string>
 
     <string name="BLANK" translatable="false"></string>
 

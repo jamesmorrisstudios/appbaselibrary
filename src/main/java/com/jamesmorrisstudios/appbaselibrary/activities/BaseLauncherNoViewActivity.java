@@ -28,11 +28,16 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ListAdapter;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
+import com.jamesmorrisstudios.appbaselibrary.IconItem;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.RingtoneItem;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
@@ -75,10 +80,10 @@ import com.jamesmorrisstudios.appbaselibrary.sound.Sounds;
 import com.jamesmorrisstudios.appbaselibrary.time.DateItem;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.squareup.otto.Subscribe;
-import com.squareup.timessquare.CalendarPickerView;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -88,7 +93,7 @@ import java.util.Locale;
  * <p/>
  * Created by James on 4/29/2015.
  */
-public abstract class BaseLauncherNoViewActivity extends AppCompatActivity implements
+public abstract class BaseLauncherNoViewActivity extends BaseThemedActivity implements
         FragmentManager.OnBackStackChangedListener,
         BaseMainFragment.OnMenuItemClickedListener,
         BaseMainRecycleListFragment.OnMenuItemClickedListener,
@@ -132,7 +137,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
         @Subscribe
         public void onPromptDialogRequest(PromptDialogRequest request) {
-            createPromptDialog(request.title, request.content, request.onPositive, request.onNegative);
+            createPromptDialog(request.title, request.content, request.onPositive, request.positiveText, request.onNegative, request.negativeText);
         }
 
         @Subscribe
@@ -152,7 +157,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
         @Subscribe
         public void onDualSpinnerDialogRequest(DualSpinnerRequest request) {
-            createDualSpinnerDialog(request.title, request.first, request.firstSelected, request.second, request.secondSelected, request.listener);
+            createDualSpinnerDialog(request.title, request.first, request.firstSelected, request.firstRestrictions, request.second, request.secondSelected, request.secondRestrictions, request.listener);
         }
 
         @Subscribe
@@ -167,7 +172,11 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
         @Subscribe
         public void onSingleChoiceRequest(SingleChoiceRequest request) {
-            BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.items, request.allowCancel, request.clickListener, request.onNegative);
+            if(request.iconItems != null) {
+                BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.iconItems, request.allowCancel, request.clickListener, request.onNegative);
+            } else if(request.items != null) {
+                BaseLauncherNoViewActivity.this.createSingleChoiceDialog(request.title, request.items, request.allowCancel, request.clickListener, request.onNegative);
+            }
         }
 
         @Subscribe
@@ -192,28 +201,37 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     };
     private boolean clearingBackStack = false;
 
-    /**
-     * @param savedInstanceState
-     */
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        applyTheme();
-        setLocale();
-        updateImmersiveMode(true);
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
     }
 
-    private void applyTheme() {
-        switch(ThemeManager.getAppTheme()) {
-            case LIGHT:
-                setTheme(R.style.AppTheme);
-                break;
-            case DARK:
-                setTheme(R.style.AppThemeDark);
-                break;
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);//must store the new intent unless getIntent() will return the old one
+        processIntentsBase();
+    }
+
+    private void processIntentsBase() {
+        Intent intent = getIntent();
+        if (intent == null) {
+            return;
         }
+        if(intent.hasExtra("PAGE")) {
+            String page = intent.getStringExtra("PAGE");
+            int scrollY = intent.getIntExtra("SCROLL_Y", -1);
+            if("SETTINGS".equals(page)) {
+                loadSettingsFragment(scrollY);
+            }
+            intent.removeExtra("PAGE");
+            intent.removeExtra("SCROLL_Y");
+        }
+        processIntents();
     }
 
+    protected abstract void processIntents();
 
     /**
      * Activity callback result for popup actions.
@@ -282,16 +300,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         container = (FrameLayout) findViewById(R.id.container);
         spinner = (ProgressBar)findViewById(R.id.progressBar);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-
-        switch(ThemeManager.getAppTheme()) {
-            case LIGHT:
-                toolbar.setPopupTheme(R.style.toolbarPopupLight);
-                break;
-            case DARK:
-                toolbar.setPopupTheme(R.style.toolbarPopupDark);
-                break;
-        }
-
+        toolbar.setPopupTheme(ThemeManager.getToolbarPopupStyle());
         toolbar.setTitle(getString(R.string.app_short_name));
         setSupportActionBar(toolbar);
         getSupportFragmentManager().addOnBackStackChangedListener(this);
@@ -299,6 +308,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         if (!hasBackStack()) {
             loadMainFragment();
         }
+        processIntentsBase();
     }
 
     /**
@@ -508,8 +518,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     /**
      * Loads the help fragment into the main view
      */
-    protected void loadSettingsFragment() {
+    protected void loadSettingsFragment(int scrollY) {
         SettingsFragment fragment = getSettingsFragment();
+        fragment.setStartScrollY(scrollY);
         loadFragment(fragment, SettingsFragment.TAG, true);
         getSupportFragmentManager().executePendingTransactions();
     }
@@ -603,7 +614,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
 
     @Override
     public void onSettingsClicked() {
-        loadSettingsFragment();
+        loadSettingsFragment(-1);
     }
 
     @Override
@@ -628,28 +639,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         Sounds.getInstance().reloadSettings();
     }
 
-    private void setLocale() {
-        String pref = AppBase.getContext().getString(R.string.settings_pref);
-        String key = AppBase.getContext().getString(R.string.pref_language);
-
-        switch(Prefs.getInt(pref, key, 0)) {
-            case 0: //Automatic so restore to original
-                Utils.restoreLocale();
-                break;
-            case 1: //English
-                Utils.setLocale(Locale.US);
-                break;
-        }
-    }
-
     @Override
-    public final void restartActivity() {
-        //Intent i = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
-        //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        //startActivity(i);
-        Utils.toastLong(getString(R.string.restarting_app_please_wait));
-        Utils.restartApp(this);
-        //finish();
+    public final void restartActivity(String page, int scrollY) {
+        Utils.restartApp(this, page, scrollY);
     }
 
     /**
@@ -659,37 +651,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         updateImmersiveMode(hasFocus);
-    }
-
-    /**
-     * @param hasFocus
-     */
-    protected final void updateImmersiveMode(boolean hasFocus) {
-        int newUiOptions = 0;
-        String pref = AppBase.getContext().getString(R.string.settings_pref);
-        String key = AppBase.getContext().getString(R.string.pref_immersive);
-        if (Prefs.getBoolean(pref, key, false)) {
-            if (hasFocus) {
-                if (Build.VERSION.SDK_INT >= 16) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-                }
-                if (Build.VERSION.SDK_INT >= 19) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-                }
-                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
-            }
-        } else {
-            if (hasFocus) {
-                if (Build.VERSION.SDK_INT >= 16) {
-                    newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-                }
-                getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
-            }
-        }
     }
 
     public void onAppBaseEvent(AppBaseEvent event) {
@@ -795,6 +756,9 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDark);
         }
 
+        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_PRIMARY, ThemeManager.getPrimaryColorStyle());
+        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_ACCENT, ThemeManager.getAccentColorStyle());
+
         try {
             enableAutoLock();
             startActivityForResult(i, FILE_BROWSER_RESULT);
@@ -821,13 +785,13 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         }
         time.vibrate(false);
         time.dismissOnPause(true);
-        time.setAccentColor(getResources().getColor(R.color.primary));
+        time.setAccentColor(ThemeManager.getAccentColor());
         time.show(getFragmentManager(), "TimePickerDialog");
     }
 
 
     public void createSingleDatePickerDialog(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull DateItem selectedDate, @NonNull DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener) {
-        DatePickerMultiDialogBuilder.with(this, getAlertDialogStyle())
+        DatePickerMultiDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setDateRange(startDate, endDate)
                 .setSelectedDate(selectedDate, singleListener)
                 .build()
@@ -835,24 +799,32 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createMultiDatePickerDialog(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull ArrayList<DateItem> selectedDates, @NonNull DatePickerMultiDialogBuilder.MultiDatePickerListener multiListener) {
-        DatePickerMultiDialogBuilder.with(this, getAlertDialogStyle())
+        DatePickerMultiDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setDateRange(startDate, endDate)
                 .setSelectedDates(selectedDates, multiListener)
                 .build()
                 .show();
     }
 
-    public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @NonNull DialogInterface.OnClickListener onNegative) {
-        new AlertDialog.Builder(this, getAlertDialogStyle())
+    public void createPromptDialog(@NonNull String title, @NonNull String content, @NonNull DialogInterface.OnClickListener onPositive, @Nullable String positiveText, @NonNull DialogInterface.OnClickListener onNegative, @Nullable String negativeText) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(title)
-                .setMessage(content)
-                .setPositiveButton(R.string.okay, onPositive)
-                .setNegativeButton(R.string.cancel, onNegative)
-                .show();
+                .setMessage(content);
+                if(positiveText != null) {
+                    builder.setPositiveButton(positiveText, onPositive);
+                } else {
+                    builder.setPositiveButton(R.string.okay, onPositive);
+                }
+                if(negativeText != null) {
+                    builder.setNegativeButton(negativeText, onNegative);
+                } else {
+                    builder.setNegativeButton(R.string.cancel, onNegative);
+                }
+                builder.show();
     }
 
     public void createSingleChoiceDialog(@NonNull String title, @NonNull String[] items, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, ThemeManager.getAlertDialogStyle())
                 .setCancelable(allowCancel)
                 .setTitle(title)
                 .setItems(items, clickListener);
@@ -862,8 +834,35 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         builder.show();
     }
 
+    public void createSingleChoiceDialog(@NonNull String title, final @NonNull IconItem[] iconItems, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+        ListAdapter adapter = new ArrayAdapter<IconItem>(this, R.layout.dialog_item_material, android.R.id.text1, iconItems){
+            public View getView(int position, View convertView, ViewGroup parent) {
+                //Use super class to create the View
+                View v = super.getView(position, convertView, parent);
+                TextView tv = (TextView)v.findViewById(android.R.id.text1);
+
+                //Put the image on the TextView
+                tv.setCompoundDrawablesWithIntrinsicBounds(iconItems[position].icon, 0, 0, 0);
+
+                //Add margin between image and text (support various screen densities)
+                int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
+                tv.setCompoundDrawablePadding(dp5);
+
+                return v;
+            }
+        };
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, ThemeManager.getAlertDialogStyle())
+                .setCancelable(allowCancel)
+                .setTitle(title)
+                .setAdapter(adapter, clickListener);
+        if(onNegative != null) {
+            builder.setNegativeButton(R.string.cancel, onNegative);
+        }
+        builder.show();
+    }
+
     public void createSingleChoiceRadioDialog(@NonNull String title, @NonNull String[] items, int defaultValue, @NonNull DialogInterface.OnClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(title)
                 .setPositiveButton(R.string.okay, onPositive)
                 .setSingleChoiceItems(items, defaultValue, clickListener);
@@ -874,7 +873,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createMultiChoiceDialog(@NonNull String title, @NonNull String[] items, boolean[] checkedItems, @NonNull DialogInterface.OnMultiChoiceClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this, getAlertDialogStyle())
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(title)
                 .setPositiveButton(R.string.okay, onPositive)
                 .setMultiChoiceItems(items, checkedItems, clickListener);
@@ -885,7 +884,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
     }
 
     public void createSingleChoiceIconDialog(@NonNull String title, @NonNull @DrawableRes int[] items, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
-        SingleChoiceIconDialogBuilder.with(this, getAlertDialogStyle())
+        SingleChoiceIconDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(title)
                 .setItems(items)
                 .setOnOptionPicked(onOptionPickedListener)
@@ -893,18 +892,18 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
                 .show();
     }
 
-    public void createDualSpinnerDialog(@NonNull String title, @NonNull List<String> first, int firstSelected, @NonNull List<String> second, int secondSelected, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
-        DualSpinnerDialogBuilder.with(this, getAlertDialogStyle())
+    public void createDualSpinnerDialog(@NonNull String title, @NonNull List<String> first, int firstSelected, @Nullable int[] firstRestrictions, @NonNull List<String> second, int secondSelected, @Nullable int[] secondRestrictions, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
+        DualSpinnerDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(title)
-                .setFirst(first, firstSelected)
-                .setSecond(second, secondSelected)
+                .setFirst(first, firstSelected, firstRestrictions)
+                .setSecond(second, secondSelected, secondRestrictions)
                 .setListener(listener)
                 .build()
                 .show();
     }
 
     public void createColorPickerDialog(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
-        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this, getAlertDialogStyle())
+        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(getResources().getString(R.string.choose_color))
                 .initialColor(initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
@@ -1066,7 +1065,7 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
         for(CharSequence item : data) {
             content += item.toString() +"\n\n";
         }
-        ReleaseNotesDialogBuilder.with(this, getAlertDialogStyle())
+        ReleaseNotesDialogBuilder.with(this, ThemeManager.getAlertDialogStyle())
                 .setTitle(getString(R.string.release_notes)+ ": "+Utils.getVersionName()+" "+Utils.getVersionType())
                 .setContent(content)
                 .build()
@@ -1090,13 +1089,6 @@ public abstract class BaseLauncherNoViewActivity extends AppCompatActivity imple
             Utils.unlockOrientation(this);
             useAutoLock = false;
         }
-    }
-
-    protected int getAlertDialogStyle() {
-        TypedValue typedValue = new TypedValue();
-        Resources.Theme theme = getTheme();
-        theme.resolveAttribute(R.attr.alertDialogStyleSet, typedValue, true);
-        return typedValue.resourceId;
     }
 
     public enum AppBaseEvent {

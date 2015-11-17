@@ -1,8 +1,13 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 
+import com.jamesmorrisstudios.appbaselibrary.R;
+import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
 import com.nononsenseapps.filepicker.FilePickerFragment;
 
 import java.io.File;
@@ -27,6 +32,19 @@ public class CustomFilePickerFragment extends FilePickerFragment {
             return getPath(getArguments().getString(KEY_START_PATH));
         } else {
             return new File("/");
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem menuItem) {
+        if (R.id.nnf_action_createdir == menuItem.getItemId()) {
+            Activity activity = getActivity();
+            if (activity instanceof AppCompatActivity) {
+                CustomNewFolderFragment.showDialog(((AppCompatActivity) activity).getSupportFragmentManager(), CustomFilePickerFragment.this);
+            }
+            return true;
+        } else {
+            return false;
         }
     }
 

@@ -5,10 +5,12 @@
     <string name="app_package" translatable="false">Change This</string>
 
     <string name="store_link" translatable="false">Change This</string>
+    <string name="store_link_beta" translatable="false">Change This</string>
     <string name="store_link_all" translatable="false">Change This</string>
-    <string name="store_link_donation" translatable="false">Change This</string>
+    <string name="store_link_pro" translatable="false">Change This</string>
     <string name="tutorial_link_read" translatable="false">Change This</string>
     <string name="tutorial_link_watch" translatable="false">Change This</string>
+    <string name="pro_package_name" translatable="false">Change This</string>
 
     <string name="version_type" translatable="false">@string/alpha</string>
 

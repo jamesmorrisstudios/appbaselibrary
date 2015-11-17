@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="8dp"
+    android:padding="16dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -15,7 +15,7 @@
         android:gravity="left"
         android:singleLine="true"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="@color/textPrimary"
+        android:textColor="?attr/colorAccentText"
         android:textSize="18sp" />
 
 </LinearLayout>

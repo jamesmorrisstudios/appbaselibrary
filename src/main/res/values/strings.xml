@@ -285,15 +285,12 @@
     <string name="about">About</string>
     <string name="settings">Settings</string>
     <string name="help_and_feedback">Help &amp; Feedback</string>
-    <string name="like_this_app">Like this app?</string>
-    <string name="rate_now">Rate It Now</string>
     <string name="rate_app">Rate App</string>
     <string name="more_apps">More Apps</string>
-    <string name="support_development">Support Development</string>
-    <string name="how_to_use">How To Use</string>
-    <string name="how_to_play">How To Play</string>
-    <string name="read_how">Read How</string>
-    <string name="watch_how">Watch How</string>
+    <string name="tutorial">Tutorial</string>
+    <string name="read">Read</string>
+    <string name="watch">Watch</string>
+    <string name="links">Links</string>
     <string name="licenses">Licenses</string>
     <string name="help_translate">Help Translate</string>
 
@@ -540,17 +537,16 @@
 	<!--
 	    Base App Settings
 	-->
-    <string name="settings_base_item_0_primary">Immersive Mode</string>
-    <string name="settings_base_item_1_primary">Enable Sound Effects</string>
-    <string name="settings_base_item_1_secondary">Uncheck to disable sound effects</string>
-    <string name="settings_base_item_2_primary">Enable Music</string>
-    <string name="settings_base_item_2_secondary">Uncheck to disable music</string>
-    <string name="settings_base_item_3_primary">Language</string>
-    <string name="settings_base_item_4_primary">Show release notes on the first launch after a major update</string>
-    <string name="settings_base_item_4_secondary">Uncheck to never show the release note popup</string>
-    <string name="settings_base_item_5_primary">App Theme</string>
-    <string name="settings_base_item_6_primary">Use custom ringtone picker</string>
-    <string name="settings_base_item_6_secondary">Uncheck to show the system ringtone picker</string>
+    <string name="setting_immersive_enable_primary">Immersive Mode</string>
+    <string name="setting_sound_enable_primary">Sound Effects</string>
+    <string name="setting_music_enable_primary">Music</string>
+    <string name="setting_language_picker_primary">Language</string>
+    <string name="setting_ringtone_picker_enable_primary">Custom Ringtone Picker</string>
+    <string name="setting_theme_picker_primary">App Theme</string>
+    <string name="setting_accent_color_primary">Accent Color</string>
+    <string name="setting_primary_color_primary">Primary Color</string>
+    <string name="setting_toolbar_text_color_primary">Toolbar Text Color</string>
+
     <!--
         Google Play specific
     -->
@@ -581,18 +577,17 @@
     <!--
         Randomly RemindMe Settings
     -->
-    <string name="randremind_settings_0_primary">Notification click action</string>
-    <string name="randremind_settings_1_primary">Use custom notification</string>
-    <string name="randremind_settings_1_secondary">Uncheck to disable the custom notification and revert to the standard system.</string>
-    <string name="randremind_settings_2_primary">Use ongoing notification</string>
-    <string name="randremind_settings_2_secondary">Uncheck to allow the notification to be dismissible by swiping it away. Ongoing notifications are not supported on Android Wear.</string>
-    <string name="randremind_settings_3_primary">Notification Theme</string>
-    <string name="randremind_settings_4_primary">First day of the week</string>
-    <string name="randremind_settings_5_primary">Always show advanced options</string>
-    <string name="randremind_settings_5_secondary">Uncheck to allow toggling advanced options per reminder.</string>
-    <string name="randremind_settings_6_primary">Notification swipe action</string>
-    <string name="randremind_settings_7_primary">Notification click opens app</string>
-    <string name="randremind_settings_8_primary">Notification swipe opens app</string>
+    <string name="setting_notification_click_action_primary">Click action</string>
+    <string name="setting_notification_custom_primary">Custom Notification</string>
+    <string name="setting_notification_ongoing_primary">Ongoing Notification</string>
+    <string name="setting_notification_ongoing_secondary">Ongoing notifications are not supported on SmartWatches</string>
+    <string name="setting_notification_theme_primary">Custom Notification Text Color</string>
+    <string name="setting_first_day_of_week_primary">First Day of the Week</string>
+    <string name="setting_force_advanced_primary">Always Show Advanced Options</string>
+    <string name="setting_force_advanced_secondary">Disable to show advanced options on a per reminder basis</string>
+    <string name="setting_notification_swipe_away_action_primary">Swipe Action</string>
+    <string name="setting_notification_click_open_primary">Click Opens App</string>
+    <string name="setting_notification_swipe_away_open_primary">Swipe Opens App</string>
 
     <!--
         Google Play Settings
@@ -602,7 +597,7 @@
 
 
     <!--
-        Theme/colors
+        Theme
     -->
     <string name="light">Light</string>
     <string name="dark">Dark</string>
@@ -611,6 +606,30 @@
     <string name="white">White</string>
     <string name="light_text">Light Text</string>
     <string name="dark_text">Dark Text</string>
+    <!--
+        Color List
+    -->
+    <string name="red">Red</string>
+    <string name="pink">Pink</string>
+    <string name="purple">Purple</string>
+    <string name="deep_purple">Deep Purple</string>
+    <string name="indigo">Indigo</string>
+    <string name="blue">Blue</string>
+    <string name="light_blue">Light Blue</string>
+    <string name="cyan">Cyan</string>
+    <string name="teal">Teal</string>
+    <string name="green">Green</string>
+    <string name="light_green">Light Green</string>
+    <string name="lime">Lime</string>
+    <string name="yellow">Yellow</string>
+    <string name="amber">Amber</string>
+    <string name="orange">Orange</string>
+    <string name="deep_orange">Deep Orange</string>
+    <string name="brown">Brown</string>
+    <string name="grey">Grey</string>
+    <string name="blue_grey">Blue Grey</string>
+    <string name="dark_grey">Dark Grey</string>
+
     <!--
         Uncategorized
     -->
@@ -674,6 +693,12 @@
     <string name="trigger_type">Trigger Type</string>
     <string name="advanced_options">Advanced Options</string>
 
-    <string name="navigation_bar">Navigation Bar</string>
-    <string name="status_bar">Status Bar</string>
+    <string name="get_the_beta">Get the Beta</string>
+
+    <string name="pro">Pro</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="feature_requires_pro">This feature requires the pro version</string>
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <string name="upgrade_now">Upgrade Now</string>
+
 </resources>

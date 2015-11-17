@@ -13,124 +13,237 @@
 
     <array name="settings_category_display" translatable="false">
         <item>@string/settings_category_display</item>
-        <item>@array/settings_base_item_0</item>
+        <item>@array/setting_immersive_enable</item>
     </array>
 
     <array name="settings_category_sound" translatable="false">
         <item>@string/settings_category_sound</item>
-        <item>@array/settings_base_item_1</item>
-        <item>@array/settings_base_item_2</item>
+        <item>@array/setting_sound_enable</item>
+        <item>@array/setting_music_enable</item>
     </array>
 
     <array name="settings_category_general" translatable="false">
         <item>@string/settings_category_general</item>
-        <item>@array/settings_base_item_6</item>
+        <item>@array/setting_ringtone_picker_enable</item>
     </array>
 
     <array name="settings_category_locale" translatable="false">
         <item>@string/settings_category_locale</item>
-        <item>@array/settings_base_item_3</item>
+        <item>@array/setting_language_picker</item>
     </array>
 
     <array name="settings_category_theme" translatable="false">
         <item>@string/settings_category_theme</item>
-        <item>@array/settings_base_item_5</item>
+        <item>@array/setting_theme_picker</item>
+        <item>@array/setting_toolbar_text_color</item>
+        <item>@array/setting_primary_color</item>
+        <item>@array/setting_accent_color</item>
     </array>
 
     <!-- Immersive Mode Enable -->
-    <array name="settings_base_item_0" translatable="false">
-        <item name="defaultValue">@bool/settings_base_item_0_default_value</item>
-        <item name="key">@string/settings_base_item_0_key</item>
-        <item name="primary">@string/settings_base_item_0_primary</item>
+    <array name="setting_immersive_enable" translatable="false">
+        <item name="defaultValue">@bool/setting_immersive_enable_default_value</item>
+        <item name="key">@string/setting_immersive_enable_key</item>
+        <item name="primary">@string/setting_immersive_enable_primary</item>
         <item name="secondary">@string/BLANK</item>
-        <item name="restart">@bool/settings_base_item_0_restart</item>
+        <item name="restart">@bool/setting_immersive_enable_restart</item>
+        <item name="pro">@bool/setting_immersive_enable_pro</item>
     </array>
 
-    <bool name="settings_base_item_0_restart">false</bool>
-    <bool name="settings_base_item_0_default_value">false</bool>
-    <string name="settings_base_item_0_key" translatable="false">@string/pref_immersive</string>
+    <bool name="setting_immersive_enable_pro">true</bool>
+    <bool name="setting_immersive_enable_restart">false</bool>
+    <bool name="setting_immersive_enable_default_value">false</bool>
+    <string name="setting_immersive_enable_key" translatable="false">@string/pref_immersive</string>
     <string name="pref_immersive" translatable="false">PREF_IMMERSIVE</string>
 
     <!-- Sound Effects -->
-    <array name="settings_base_item_1">
-        <item name="defaultValue">@bool/settings_base_item_1_default_value</item>
-        <item name="key">@string/settings_base_item_1_key</item>
-        <item name="primary">@string/settings_base_item_1_primary</item>
-        <item name="secondary">@string/settings_base_item_1_secondary</item>
-        <item name="restart">@bool/settings_base_item_1_restart</item>
+    <array name="setting_sound_enable">
+        <item name="defaultValue">@bool/setting_sound_enable_default_value</item>
+        <item name="key">@string/setting_sound_enable_key</item>
+        <item name="primary">@string/setting_sound_enable_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_sound_enable_restart</item>
+        <item name="pro">@bool/setting_sound_enable_pro</item>
     </array>
 
-    <bool name="settings_base_item_1_restart">false</bool>
-    <bool name="settings_base_item_1_default_value">true</bool>
-    <string name="settings_base_item_1_key" translatable="false">@string/pref_sound_effect</string>
+    <bool name="setting_sound_enable_pro">false</bool>
+    <bool name="setting_sound_enable_restart">false</bool>
+    <bool name="setting_sound_enable_default_value">true</bool>
+    <string name="setting_sound_enable_key" translatable="false">@string/pref_sound_effect</string>
     <string name="pref_sound_effect" translatable="false">PREF_SOUND_EFFECT</string>
 
     <!-- Music -->
-    <array name="settings_base_item_2">
-        <item name="defaultValue">@bool/settings_base_item_2_default_value</item>
-        <item name="key">@string/settings_base_item_2_key</item>
-        <item name="primary">@string/settings_base_item_2_primary</item>
-        <item name="secondary">@string/settings_base_item_2_secondary</item>
-        <item name="restart">@bool/settings_base_item_2_restart</item>
+    <array name="setting_music_enable">
+        <item name="defaultValue">@bool/setting_music_enable_default_value</item>
+        <item name="key">@string/setting_music_enable_key</item>
+        <item name="primary">@string/setting_music_enable_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_music_enable_restart</item>
+        <item name="pro">@bool/setting_music_enable_pro</item>
     </array>
 
-    <bool name="settings_base_item_2_restart">false</bool>
-    <bool name="settings_base_item_2_default_value">true</bool>
-    <string name="settings_base_item_2_key" translatable="false">@string/pref_music</string>
+    <bool name="setting_music_enable_pro">false</bool>
+    <bool name="setting_music_enable_restart">false</bool>
+    <bool name="setting_music_enable_default_value">true</bool>
+    <string name="setting_music_enable_key" translatable="false">@string/pref_music</string>
     <string name="pref_music" translatable="false">PREF_MUSIC</string>
 
     <!-- Language picker -->
-    <array name="settings_base_item_3">
-        <item name="defaultValue">@integer/settings_base_item_3_default_value</item>
-        <item name="key">@string/settings_base_item_3_key</item>
-        <item name="primary">@string/settings_base_item_3_primary</item>
+    <array name="setting_language_picker">
+        <item name="defaultValue">@integer/setting_language_picker_default_value</item>
+        <item name="key">@string/setting_language_picker_key</item>
+        <item name="primary">@string/setting_language_picker_primary</item>
         <item name="secondary">@string/BLANK</item>
-        <item name="restart">@bool/settings_base_item_3_restart</item>
-        <item name="list">@array/settings_base_item_3_list</item>
+        <item name="restart">@bool/setting_language_picker_restart</item>
+        <item name="pro">@bool/setting_language_picker_pro</item>
+        <item name="list">@array/setting_language_picker_list</item>
     </array>
 
-    <bool name="settings_base_item_3_restart">true</bool>
-    <integer name="settings_base_item_3_default_value">0</integer>
-    <string name="settings_base_item_3_key" translatable="false">@string/pref_language</string>
+    <bool name="setting_language_picker_pro">false</bool>
+    <bool name="setting_language_picker_restart">true</bool>
+    <integer name="setting_language_picker_default_value">0</integer>
+    <string name="setting_language_picker_key" translatable="false">@string/pref_language</string>
     <string name="pref_language" translatable="false">LANGUAGE_SET</string>
 
-    <string-array name="settings_base_item_3_list">
+    <string-array name="setting_language_picker_list">
         <item name="automatic">@string/automatic</item>
         <item name="english">@string/English</item>
     </string-array>
 
-    <!-- Theme Select -->
-    <array name="settings_base_item_5">
-        <item name="defaultValue">@integer/settings_base_item_5_default_value</item>
-        <item name="key">@string/settings_base_item_5_key</item>
-        <item name="primary">@string/settings_base_item_5_primary</item>
+    <!-- Use custom ringtone picker -->
+    <array name="setting_ringtone_picker_enable">
+        <item name="defaultValue">@bool/setting_ringtone_picker_enable_default_value</item>
+        <item name="key">@string/setting_ringtone_picker_enable_key</item>
+        <item name="primary">@string/setting_ringtone_picker_enable_primary</item>
         <item name="secondary">@string/BLANK</item>
-        <item name="restart">@bool/settings_base_item_5_restart</item>
-        <item name="list">@array/settings_base_item_5_list</item>
+        <item name="restart">@bool/setting_ringtone_picker_enable_restart</item>
+        <item name="pro">@bool/setting_ringtone_picker_enable_pro</item>
     </array>
 
-    <bool name="settings_base_item_5_restart">true</bool>
-    <integer name="settings_base_item_5_default_value">0</integer>
-    <string name="settings_base_item_5_key" translatable="false">@string/pref_theme</string>
+    <bool name="setting_ringtone_picker_enable_pro">false</bool>
+    <bool name="setting_ringtone_picker_enable_restart">false</bool>
+    <bool name="setting_ringtone_picker_enable_default_value">true</bool>
+    <string name="setting_ringtone_picker_enable_key" translatable="false">@string/pref_custom_ringtone</string>
+    <string name="pref_custom_ringtone" translatable="false">PREF_CUSTOM_RINGTONE</string>
+
+    <!-- Theme Select -->
+    <array name="setting_theme_picker">
+        <item name="defaultValue">@integer/setting_theme_picker_default_value</item>
+        <item name="key">@string/setting_theme_picker_key</item>
+        <item name="primary">@string/setting_theme_picker_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_theme_picker_restart</item>
+        <item name="pro">@bool/setting_theme_picker_pro</item>
+        <item name="list">@array/setting_theme_picker_list</item>
+    </array>
+
+    <bool name="setting_theme_picker_pro">true</bool>
+    <bool name="setting_theme_picker_restart">true</bool>
+    <integer name="setting_theme_picker_default_value">0</integer>
+    <string name="setting_theme_picker_key" translatable="false">@string/pref_theme</string>
     <string name="pref_theme" translatable="false">THEME_SET</string>
 
-    <string-array name="settings_base_item_5_list">
+    <string-array name="setting_theme_picker_list">
         <item name="light">@string/light</item>
         <item name="dark">@string/dark</item>
     </string-array>
 
-    <!-- Use custom ringtone picker -->
-    <array name="settings_base_item_6">
-        <item name="defaultValue">@bool/settings_base_item_6_default_value</item>
-        <item name="key">@string/settings_base_item_6_key</item>
-        <item name="primary">@string/settings_base_item_6_primary</item>
-        <item name="secondary">@string/settings_base_item_6_secondary</item>
-        <item name="restart">@bool/settings_base_item_6_restart</item>
+    <!-- Toolbar text color -->
+    <array name="setting_toolbar_text_color">
+        <item name="defaultValue">@integer/setting_toolbar_text_color_default_value</item>
+        <item name="key">@string/setting_toolbar_text_color_key</item>
+        <item name="primary">@string/setting_toolbar_text_color_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_toolbar_text_color_restart</item>
+        <item name="pro">@bool/setting_toolbar_text_color_pro</item>
+        <item name="list">@array/setting_toolbar_text_color_list</item>
     </array>
 
-    <bool name="settings_base_item_6_restart">false</bool>
-    <bool name="settings_base_item_6_default_value">true</bool>
-    <string name="settings_base_item_6_key" translatable="false">@string/pref_custom_ringtone</string>
-    <string name="pref_custom_ringtone" translatable="false">PREF_CUSTOM_RINGTONE</string>
+    <bool name="setting_toolbar_text_color_pro">true</bool>
+    <bool name="setting_toolbar_text_color_restart">true</bool>
+    <integer name="setting_toolbar_text_color_default_value">0</integer>
+    <string name="setting_toolbar_text_color_key" translatable="false">@string/pref_toolbar_text_color</string>
+    <string name="pref_toolbar_text_color" translatable="false">TOOLBAR_TEXT_COLOR</string>
+
+    <string-array name="setting_toolbar_text_color_list">
+        <item name="light">@string/light_text</item>
+        <item name="dark">@string/dark_text</item>
+    </string-array>
+
+    <!-- Accent Color picker -->
+    <array name="setting_accent_color">
+        <item name="defaultValue">@integer/setting_accent_color_default_value</item>
+        <item name="key">@string/setting_accent_color_key</item>
+        <item name="primary">@string/setting_accent_color_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_accent_color_restart</item>
+        <item name="pro">@bool/setting_accent_color_pro</item>
+        <item name="list">@array/setting_accent_color_list</item>
+    </array>
+
+    <bool name="setting_accent_color_pro">true</bool>
+    <bool name="setting_accent_color_restart">true</bool>
+    <integer name="setting_accent_color_default_value">9</integer>
+    <string name="setting_accent_color_key" translatable="false">@string/pref_accent_color</string>
+    <string name="pref_accent_color" translatable="false">PREF_ACCENT_COLOR</string>
+
+    <string-array name="setting_accent_color_list">
+        <item name="0">@string/red</item>
+        <item name="1">@string/pink</item>
+        <item name="2">@string/purple</item>
+        <item name="3">@string/deep_purple</item>
+        <item name="4">@string/indigo</item>
+        <item name="5">@string/blue</item>
+        <item name="6">@string/light_blue</item>
+        <item name="7">@string/cyan</item>
+        <item name="8">@string/teal</item>
+        <item name="9">@string/green</item>
+        <item name="10">@string/light_green</item>
+        <item name="11">@string/lime</item>
+        <item name="12">@string/yellow</item>
+        <item name="13">@string/amber</item>
+        <item name="14">@string/orange</item>
+        <item name="15">@string/deep_orange</item>
+    </string-array>
+
+    <!-- Primary Color picker -->
+    <array name="setting_primary_color">
+        <item name="defaultValue">@integer/setting_primary_color_default_value</item>
+        <item name="key">@string/setting_primary_color_key</item>
+        <item name="primary">@string/setting_primary_color_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_primary_color_restart</item>
+        <item name="pro">@bool/setting_primary_color_pro</item>
+        <item name="list">@array/setting_primary_color_list</item>
+    </array>
+
+    <bool name="setting_primary_color_pro">true</bool>
+    <bool name="setting_primary_color_restart">true</bool>
+    <integer name="setting_primary_color_default_value">5</integer>
+    <string name="setting_primary_color_key" translatable="false">@string/pref_primary_color</string>
+    <string name="pref_primary_color" translatable="false">PREF_PRIMARY_COLOR</string>
+
+    <string-array name="setting_primary_color_list">
+        <item name="0">@string/red</item>
+        <item name="1">@string/pink</item>
+        <item name="2">@string/purple</item>
+        <item name="3">@string/deep_purple</item>
+        <item name="4">@string/indigo</item>
+        <item name="5">@string/blue</item>
+        <item name="6">@string/light_blue</item>
+        <item name="7">@string/cyan</item>
+        <item name="8">@string/teal</item>
+        <item name="9">@string/green</item>
+        <item name="10">@string/light_green</item>
+        <item name="11">@string/lime</item>
+        <item name="12">@string/yellow</item>
+        <item name="13">@string/amber</item>
+        <item name="14">@string/orange</item>
+        <item name="15">@string/deep_orange</item>
+        <item name="16">@string/brown</item>
+        <item name="17">@string/grey</item>
+        <item name="18">@string/blue_grey</item>
+        <item name="19">@string/dark_grey</item>
+    </string-array>
 
 </resources>

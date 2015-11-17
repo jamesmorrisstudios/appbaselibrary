@@ -17,6 +17,7 @@ package com.jamesmorrisstudios.appbaselibrary.controls;
  */
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
@@ -25,6 +26,8 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
+import com.jamesmorrisstudios.appbaselibrary.Utils;
 
 
 /**
@@ -64,11 +67,11 @@ public class CircleProgressDeterminate extends View {
         }
         //Draw the border circle
         paint.setStrokeWidth(getWidth() * 0.02f);
-        paint.setColor(getResources().getColor(R.color.iconDark));
+        paint.setColor(ThemeManager.getIconColor());
         paint.setStyle(Paint.Style.STROKE);
         canvas.drawArc(rect, 0, 360, false, paint);
         //Draw the progress portion
-        paint.setColor(getResources().getColor(R.color.primary));
+        paint.setColor(ThemeManager.getAccentColor());
         paint.setStrokeWidth(getWidth() * 0.04f);
         canvas.drawArc(rectInner, -90, 1.0f * progress / max * 360, false, paint);
     }

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Alert Dialogs -->
+    <style name="alertDialogLightRed" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_red</item>
+    </style>
+
+    <style name="alertDialogLightPink" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_pink</item>
+    </style>
+
+    <style name="alertDialogLightPurple" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_purple</item>
+    </style>
+
+    <style name="alertDialogLightDeepPurple" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_deep_purple</item>
+    </style>
+
+    <style name="alertDialogLightIndigo" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_indigo</item>
+    </style>
+
+    <style name="alertDialogLightBlue" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_blue</item>
+    </style>
+
+    <style name="alertDialogLightLightBlue" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_light_blue</item>
+    </style>
+
+    <style name="alertDialogLightCyan" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_cyan</item>
+    </style>
+
+    <style name="alertDialogLightTeal" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_teal</item>
+    </style>
+
+    <style name="alertDialogLightGreen" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_green</item>
+    </style>
+
+    <style name="alertDialogLightLightGreen" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_light_green</item>
+    </style>
+
+    <style name="alertDialogLightLime" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_lime</item>
+    </style>
+
+    <style name="alertDialogLightYellow" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_yellow</item>
+    </style>
+
+    <style name="alertDialogLightAmber" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_amber</item>
+    </style>
+
+    <style name="alertDialogLightOrange" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_orange</item>
+    </style>
+
+    <style name="alertDialogLightDeepOrange" parent="@style/baseAlertDialogLight">
+        <item name="colorAccent">@color/a_deep_orange</item>
+    </style>
+
+    <!-- Dark Alert Dialogs -->
+    <style name="alertDialogDarkRed" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_red</item>
+    </style>
+
+    <style name="alertDialogDarkPink" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_pink</item>
+    </style>
+
+    <style name="alertDialogDarkPurple" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_purple</item>
+    </style>
+
+    <style name="alertDialogDarkDeepPurple" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_deep_purple</item>
+    </style>
+
+    <style name="alertDialogDarkIndigo" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_indigo</item>
+    </style>
+
+    <style name="alertDialogDarkBlue" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_blue</item>
+    </style>
+
+    <style name="alertDialogDarkLightBlue" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_light_blue</item>
+    </style>
+
+    <style name="alertDialogDarkCyan" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_cyan</item>
+    </style>
+
+    <style name="alertDialogDarkTeal" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_teal</item>
+    </style>
+
+    <style name="alertDialogDarkGreen" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_green</item>
+    </style>
+
+    <style name="alertDialogDarkLightGreen" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_light_green</item>
+    </style>
+
+    <style name="alertDialogDarkLime" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_lime</item>
+    </style>
+
+    <style name="alertDialogDarkYellow" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_yellow</item>
+    </style>
+
+    <style name="alertDialogDarkAmber" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_amber</item>
+    </style>
+
+    <style name="alertDialogDarkOrange" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_orange</item>
+    </style>
+
+    <style name="alertDialogDarkDeepOrange" parent="@style/baseAlertDialogDark">
+        <item name="colorAccent">@color/a_deep_orange</item>
+    </style>
+
+</resources>

@@ -18,25 +18,29 @@ import java.io.File;
 public class CustomFilePickerActivity extends FilePickerActivity {
     public static final String EXTRA_EXTENSION = "nononsense.intent" + ".EXTENSION";
     public static final String EXTRA_THEME = "nononsense.intent" + ".THEME";
+    public static final String EXTRA_THEME_PRIMARY = "nononsense.intent" + ".THEME_PRIMARY";
+    public static final String EXTRA_THEME_ACCENT = "nononsense.intent" + ".THEME_ACCENT";
 
     protected String extension = null;
-    protected int theme = -1;
+    protected int theme = -1, themePrimary = -1, themeAccent = -1;
 
     protected void onCreate(Bundle savedInstanceState) {
         Intent intent = getIntent();
         if (intent != null) {
             Log.v("FilePicker", "Intent");
-            //if(intent.hasExtra("EXTRA_EXTENSION")) {
-                extension = intent.getStringExtra(EXTRA_EXTENSION);
-            //}
-            //if(intent.hasExtra("EXTRA_THEME")) {
-                Log.v("FilePicker", "get Theme");
-                theme = intent.getIntExtra(EXTRA_THEME, -1);
-            //}
+            extension = intent.getStringExtra(EXTRA_EXTENSION);
+            theme = intent.getIntExtra(EXTRA_THEME, -1);
+            themePrimary = intent.getIntExtra(EXTRA_THEME_PRIMARY, -1);
+            themeAccent = intent.getIntExtra(EXTRA_THEME_ACCENT, -1);
         }
         if(theme != -1) {
-            Log.v("FilePicker", "Set Theme");
             setTheme(theme);
+        }
+        if(themePrimary != -1) {
+            setTheme(themePrimary);
+        }
+        if(themeAccent != -1) {
+            setTheme(themeAccent);
         }
         super.onCreate(savedInstanceState);
     }

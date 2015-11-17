@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -63,14 +64,8 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
             mRecyclerView.setLayoutManager(llm);
         }
         mSwipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefreshLayout);
-
-        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
-            mSwipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.primaryLight);
-        } else {
-            mSwipeRefreshLayout.setProgressBackgroundColorSchemeResource(R.color.darkPrimaryLight);
-        }
-
-        mSwipeRefreshLayout.setColorSchemeResources(R.color.accent);
+        mSwipeRefreshLayout.setProgressBackgroundColorSchemeColor(ThemeManager.getBackgroundColor());
+        mSwipeRefreshLayout.setColorSchemeColors(ThemeManager.decodeAttrColor(R.attr.colorAccent));
         mSwipeRefreshLayout.getViewTreeObserver().addOnGlobalLayoutListener(
                 new ViewTreeObserver.OnGlobalLayoutListener() {
                     @Override

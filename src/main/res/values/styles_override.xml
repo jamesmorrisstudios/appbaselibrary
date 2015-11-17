@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="help_read_how">
+    <style name="help_read">
         <item name="android:visibility">visible</item>
     </style>
 
-    <style name="help_watch_how">
+    <style name="help_watch">
         <item name="android:visibility">visible</item>
     </style>
 
-    <style name="help_support_dev">
+    <style name="upgrade_to_pro">
         <item name="android:visibility">gone</item>
     </style>
 

@@ -20,13 +20,16 @@ import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
+
 /**
  * Top level application class. If you override application in your app that uses this library you must extend this class!
  * <p/>
  * Created by James on 7/7/2014.
  */
 public class AppBase extends Application {
-    private static Context context;
+    private static AppBase instance;
 
     /**
      * Gets the Application level Context.
@@ -36,7 +39,17 @@ public class AppBase extends Application {
      */
     @NonNull
     public static Context getContext() {
-        return context;
+        return instance.getApplicationContext();
+    }
+
+    /**
+     * Gets the Application instance
+     * NEVER hold a reference to this.
+     * @return Application instance
+     */
+    @NonNull
+    public static AppBase getInstance() {
+        return instance;
     }
 
     /**
@@ -46,7 +59,18 @@ public class AppBase extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        context = getApplicationContext();
+        instance = this;
+        applyTheme();
+    }
+
+    /**
+     * Set current theme to the application
+     */
+    public final void applyTheme() {
+        setTheme(ThemeManager.getAppStyle());
+        setTheme(ThemeManager.getToolbarStyle());
+        setTheme(ThemeManager.getAccentColorStyle());
+        setTheme(ThemeManager.getPrimaryColorStyle());
     }
 
 }

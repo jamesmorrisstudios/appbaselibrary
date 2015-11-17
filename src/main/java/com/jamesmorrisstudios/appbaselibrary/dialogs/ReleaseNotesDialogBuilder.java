@@ -2,18 +2,12 @@ package com.jamesmorrisstudios.appbaselibrary.dialogs;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -74,7 +68,7 @@ public class ReleaseNotesDialogBuilder {
         notes.setText(content);
 
         Button btnRate = (Button) view.findViewById(R.id.btn_rate);
-        Button btnSupport = (Button) view.findViewById(R.id.btn_support);
+        Button btnSupport = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button btnTranslate = (Button) view.findViewById(R.id.btn_translate);
 
         btnRate.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +82,7 @@ public class ReleaseNotesDialogBuilder {
             @Override
             public void onClick(View v) {
                 Bus.postEnum(HelpFragment.HelpEvent.GOTO_SUPPORT);
-                Utils.openLink(AppBase.getContext().getString(R.string.store_link_donation));
+                Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
             }
         });
         btnTranslate.setOnClickListener(new View.OnClickListener() {

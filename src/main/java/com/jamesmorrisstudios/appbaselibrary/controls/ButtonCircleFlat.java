@@ -98,12 +98,7 @@ public class ButtonCircleFlat extends InternalButtonCircleBase {
         //params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
         textButton.setLayoutParams(params);
         addView(textButton);
-
-        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
-            setBackgroundColor(getResources().getColor(R.color.iconDark));
-        } else {
-            setBackgroundColor(getResources().getColor(R.color.iconLight));
-        }
+        setBackgroundColor(ThemeManager.getIconColor());
     }
 
     @Override

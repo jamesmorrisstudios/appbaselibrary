@@ -1,39 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Primary colors main is 500, light is 100, dark is 700 -->
+    <color name="p_red">#F44336</color>
+    <color name="p_red_light">#FFCDD2</color>
+    <color name="p_red_dark">#D32F2F</color>
 
+    <color name="p_pink">#E91E63</color>
+    <color name="p_pink_light">#F8BBD0</color>
+    <color name="p_pink_dark">#C2185B</color>
 
-    <color name="darkPrimary">#212121</color>
-    <color name="darkPrimaryDisabled">#212121</color>
-    <color name="darkPrimaryLight">#303030</color>
-    <color name="darkPrimaryDark">#000000</color>
+    <color name="p_purple">#9C27B0</color>
+    <color name="p_purple_light">#E1BEE7</color>
+    <color name="p_purple_dark">#7B1FA2</color>
 
-    <color name="cardDark">#424242</color> <!-- This is used for dialog backgrounds as well -->
-    <color name="backgroundDark">#303030</color>
+    <color name="p_deep_purple">#673AB7</color>
+    <color name="p_deep_purple_light">#D1C4E9</color>
+    <color name="p_deep_purple_dark">#512DA8</color>
 
-    <color name="primary">#2196F3</color>
-    <color name="primaryDisabled">#2196F3</color>
-    <color name="primaryLight">#BBDEFB</color>
-    <color name="primaryDark">#1976D2</color>
+    <color name="p_indigo">#3F51B5</color>
+    <color name="p_indigo_light">#C5CAE9</color>
+    <color name="p_indigo_dark">#303F9F</color>
 
-    <color name="cardLight">#FEFEFE</color>
+    <color name="p_blue">#2196F3</color>
+    <color name="p_blue_light">#BBDEFB</color>
+    <color name="p_blue_dark">#1976D2</color>
 
-    <color name="tintColor">@color/iconDark</color>
+    <color name="p_light_blue">#03A9F4</color>
+    <color name="p_light_blue_light">#B3E5FC</color>
+    <color name="p_light_blue_dark">#0288D1</color>
 
-    <!-- Accent -->
-    <color name="accent">#00E676</color>
-    <color name="accentLight">#69F0AE</color>
-    <color name="accentDark">#00C853</color>
-    <color name="accentDisabled">#00C853</color>
+    <color name="p_cyan">#00BCD4</color>
+    <color name="p_cyan_light">#B2EBF2</color>
+    <color name="p_cyan_dark">#0097A7</color>
 
-    <!-- Red A200 at 80% opacity  -->
-    <color name="textAccent">#CC00E676</color>
-    <color name="iconLight">#B6FFFFFF</color>
-    <color name="iconDark">@color/textDarkSecondary</color>
-    <color name="dividerLight">#B6B6B6</color>
-    <color name="dividerDark">@color/textDarkDivider</color>
-    <color name="textPrimary">#DC2196F3</color>
+    <color name="p_teal">#009688</color>
+    <color name="p_teal_light">#B2DFDB</color>
+    <color name="p_teal_dark">#00796B</color>
 
+    <color name="p_green">#4CAF50</color>
+    <color name="p_green_light">#C8E6C9</color>
+    <color name="p_green_dark">#388E3C</color>
+
+    <color name="p_light_green">#8BC34A</color>
+    <color name="p_light_green_light">#DCEDC8</color>
+    <color name="p_light_green_dark">#689F38</color>
+
+    <color name="p_lime">#CDDC39</color>
+    <color name="p_lime_light">#F0F4C3</color>
+    <color name="p_lime_dark">#AFB42B</color>
+
+    <color name="p_yellow">#FFEB3B</color>
+    <color name="p_yellow_light">#FFF9C4</color>
+    <color name="p_yellow_dark">#FBC02D</color>
+
+    <color name="p_amber">#FFC107</color>
+    <color name="p_amber_light">#FFECB3</color>
+    <color name="p_amber_dark">#FFA000</color>
+
+    <color name="p_orange">#FF9800</color>
+    <color name="p_orange_light">#FFE0B2</color>
+    <color name="p_orange_dark">#F57C00</color>
+
+    <color name="p_deep_orange">#FF5722</color>
+    <color name="p_deep_orange_light">#FFCCBC</color>
+    <color name="p_deep_orange_dark">#E64A19</color>
+
+    <color name="p_brown">#795548</color>
+    <color name="p_brown_light">#D7CCC8</color>
+    <color name="p_brown_dark">#5D4037</color>
+
+    <color name="p_grey">#9E9E9E</color>
+    <color name="p_grey_light">#F5F5F5</color>
+    <color name="p_grey_dark">#616161</color>
+
+    <color name="p_blue_grey">#607D8B</color>
+    <color name="p_blue_grey_light">#CFD8DC</color>
+    <color name="p_blue_grey_dark">#455A64</color>
+
+    <color name="p_dark_grey">#212121</color>
+    <color name="p_dark_grey_light">#303030</color>
+    <color name="p_dark_grey_dark">#000000</color>
+
+    <!-- Accent colors 16 options -->
+    <color name="a_red">#FF1744</color>
+    <color name="a_red_light">#FF5252</color>
+    <color name="a_red_text">#CCFF1744</color>
+
+    <color name="a_pink">#F50057</color>
+    <color name="a_pink_light">#FF4081</color>
+    <color name="a_pink_text">#CCF50057</color>
+
+    <color name="a_purple">#D500F9</color>
+    <color name="a_purple_light">#E040FB</color>
+    <color name="a_purple_text">#CCD500F9</color>
+
+    <color name="a_deep_purple">#651FFF</color>
+    <color name="a_deep_purple_light">#7C4DFF</color>
+    <color name="a_deep_purple_text">#CC651FFF</color>
+
+    <color name="a_indigo">#3D5AFE</color>
+    <color name="a_indigo_light">#536DFE</color>
+    <color name="a_indigo_text">#CC3D5AFE</color>
+
+    <color name="a_blue">#2979FF</color>
+    <color name="a_blue_light">#448AFF</color>
+    <color name="a_blue_text">#CC2979FF</color>
+
+    <color name="a_light_blue">#00B0FF</color>
+    <color name="a_light_blue_light">#40C4FF</color>
+    <color name="a_light_blue_text">#CC00B0FF</color>
+
+    <color name="a_cyan">#00E5FF</color>
+    <color name="a_cyan_light">#18FFFF</color>
+    <color name="a_cyan_text">#CC00E5FF</color>
+
+    <color name="a_teal">#1DE9B6</color>
+    <color name="a_teal_light">#64FFDA</color>
+    <color name="a_teal_text">#CC1DE9B6</color>
+
+    <color name="a_green">#00E676</color>
+    <color name="a_green_light">#69F0AE</color>
+    <color name="a_green_text">#CC00E676</color>
+
+    <color name="a_light_green">#76FF03</color>
+    <color name="a_light_green_light">#B2FF59</color>
+    <color name="a_light_green_text">#CC76FF03</color>
+
+    <color name="a_lime">#C6FF00</color>
+    <color name="a_lime_light">#EEFF41</color>
+    <color name="a_lime_text">#CCC6FF00</color>
+
+    <color name="a_yellow">#FFEA00</color>
+    <color name="a_yellow_light">#FFFF00</color>
+    <color name="a_yellow_text">#CCFFEA00</color>
+
+    <color name="a_amber">#FFC400</color>
+    <color name="a_amber_light">#FFD740</color>
+    <color name="a_amber_text">#CCFFC400</color>
+
+    <color name="a_orange">#FF9100</color>
+    <color name="a_orange_light">#FFAB40</color>
+    <color name="a_orange_text">#CCFF9100</color>
+
+    <color name="a_deep_orange">#FF3D00</color>
+    <color name="a_deep_orange_light">#FF6E40</color>
+    <color name="a_deep_orange_text">#CCFF3D00</color>
 
     <!-- Light Main text and icons-->
     <color name="textLightMain">#FFFFFF</color>
@@ -44,30 +156,37 @@
     <!-- Dividers -->
     <color name="textLightDivider">#1EFFFFFF</color>
 
-    <!-- Dark Main text-->
-    <color name="textDarkMain">#DD424242</color>
+    <!-- Dark Main text  424242 -->
+    <color name="textDarkMain">#DD000000</color>
     <!-- secondary text and icons-->
-    <color name="textDarkSecondary">#8A424242</color>
+    <color name="textDarkSecondary">#8A000000</color>
     <!-- Disabled or hint text-->
-    <color name="textDarkDisabled">#42424242</color>
+    <color name="textDarkDisabled">#42000000</color>
     <!-- Dividers -->
-    <color name="textDarkDivider">#1E424242</color>
+    <color name="textDarkDivider">#1E000000</color>
 
+    <!-- Card backgrounds -->
+    <color name="cardBackgroundDark">#424242</color>
+    <color name="cardBackgroundLight">#FEFEFE</color>
 
-    <!-- Copies of private color resources -->
-    <color name="copy_ripple_material_light">#1f000000</color>
-    <color name="copy_button_material_light">#ffd6d7d7</color>
-    <color name="copy_switch_thumb_normal_material_light">#fff1f1f1</color>
+    <!-- Backgrounds -->
+    <color name="backgroundLight">#FAFAFA</color>
+    <color name="backgroundDark">#303030</color>
 
+    <!-- Tint -->
+    <color name="tintColorLight">@color/iconDark</color>
+    <color name="tintColorDark">@color/iconLight</color>
+
+    <!-- Icons -->
+    <color name="iconLight">#B6FFFFFF</color>
+    <color name="iconDark">@color/textDarkSecondary</color>
 
     <!-- Calendar light theme -->
-    <color name="calendar_active_month_bg">#fff5f7f9</color>
+    <color name="calendar_active_month_bg">@color/backgroundLight</color>
     <color name="calendar_bg">#ffffffff</color>
     <color name="calendar_divider">#ffbababa</color>
     <color name="calendar_inactive_month_bg">#ffd7d9db</color>
-    <color name="calendar_selected_day_bg">@color/accent</color>
-    <color name="calendar_highlighted_day_bg">@color/primaryLight</color>
-    <color name="calendar_selected_range_bg">@color/accentLight</color>
+    <color name="calendar_highlighted_day_bg">#BBDEFB</color>
     <color name="calendar_text_inactive">#40778088</color>
     <color name="calendar_text_active">#ff778088</color>
     <color name="calendar_text_selected">#ffffffff</color>
@@ -78,15 +197,10 @@
     <color name="dark_calendar_bg">#ffffffff</color>
     <color name="dark_calendar_divider">#ffbababa</color>
     <color name="dark_calendar_inactive_month_bg">#212121</color>
-    <color name="dark_calendar_selected_day_bg">@color/accent</color>
-    <color name="dark_calendar_highlighted_day_bg">@color/primaryLight</color>
-    <color name="dark_calendar_selected_range_bg">@color/accentLight</color>
+    <color name="dark_calendar_highlighted_day_bg">#BBDEFB</color>
     <color name="dark_calendar_text_inactive">@color/textLightSecondary</color>
     <color name="dark_calendar_text_active">@color/textLightMain</color>
     <color name="dark_calendar_text_selected">@color/textLightMain</color>
     <color name="dark_calendar_text_unselectable">@color/textLightSecondary</color>
-
-
-
 
 </resources>

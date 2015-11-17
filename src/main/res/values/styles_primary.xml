@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <style name="primary_red">
+        <item name="colorPrimary">@color/p_red</item>
+        <item name="colorPrimaryLight">@color/p_red_light</item>
+        <item name="colorPrimaryDark">@color/p_red_dark</item>
+    </style>
+
+    <style name="primary_pink">
+        <item name="colorPrimary">@color/p_pink</item>
+        <item name="colorPrimaryLight">@color/p_pink_light</item>
+        <item name="colorPrimaryDark">@color/p_pink_dark</item>
+    </style>
+
+    <style name="primary_purple">
+        <item name="colorPrimary">@color/p_purple</item>
+        <item name="colorPrimaryLight">@color/p_purple_light</item>
+        <item name="colorPrimaryDark">@color/p_purple_dark</item>
+    </style>
+
+    <style name="primary_deep_purple">
+        <item name="colorPrimary">@color/p_deep_purple</item>
+        <item name="colorPrimaryLight">@color/p_deep_purple_light</item>
+        <item name="colorPrimaryDark">@color/p_deep_purple_dark</item>
+    </style>
+
+    <style name="primary_indigo">
+        <item name="colorPrimary">@color/p_indigo</item>
+        <item name="colorPrimaryLight">@color/p_indigo_light</item>
+        <item name="colorPrimaryDark">@color/p_indigo_dark</item>
+    </style>
+
+    <style name="primary_blue">
+        <item name="colorPrimary">@color/p_blue</item>
+        <item name="colorPrimaryLight">@color/p_blue_light</item>
+        <item name="colorPrimaryDark">@color/p_blue_dark</item>
+    </style>
+
+    <style name="primary_light_blue">
+        <item name="colorPrimary">@color/p_light_blue</item>
+        <item name="colorPrimaryLight">@color/p_light_blue_light</item>
+        <item name="colorPrimaryDark">@color/p_light_blue_dark</item>
+    </style>
+
+    <style name="primary_cyan">
+        <item name="colorPrimary">@color/p_cyan</item>
+        <item name="colorPrimaryLight">@color/p_cyan_light</item>
+        <item name="colorPrimaryDark">@color/p_cyan_dark</item>
+    </style>
+
+    <style name="primary_teal">
+        <item name="colorPrimary">@color/p_teal</item>
+        <item name="colorPrimaryLight">@color/p_teal_light</item>
+        <item name="colorPrimaryDark">@color/p_teal_dark</item>
+    </style>
+
+    <style name="primary_green">
+        <item name="colorPrimary">@color/p_green</item>
+        <item name="colorPrimaryLight">@color/p_green_light</item>
+        <item name="colorPrimaryDark">@color/p_green_dark</item>
+    </style>
+
+    <style name="primary_light_green">
+        <item name="colorPrimary">@color/p_light_green</item>
+        <item name="colorPrimaryLight">@color/p_light_green_light</item>
+        <item name="colorPrimaryDark">@color/p_light_green_dark</item>
+    </style>
+
+    <style name="primary_lime">
+        <item name="colorPrimary">@color/p_lime</item>
+        <item name="colorPrimaryLight">@color/p_lime_light</item>
+        <item name="colorPrimaryDark">@color/p_lime_dark</item>
+    </style>
+
+    <style name="primary_yellow">
+        <item name="colorPrimary">@color/p_yellow</item>
+        <item name="colorPrimaryLight">@color/p_yellow_light</item>
+        <item name="colorPrimaryDark">@color/p_yellow_dark</item>
+    </style>
+
+    <style name="primary_amber">
+        <item name="colorPrimary">@color/p_amber</item>
+        <item name="colorPrimaryLight">@color/p_amber_light</item>
+        <item name="colorPrimaryDark">@color/p_amber_dark</item>
+    </style>
+
+    <style name="primary_orange">
+        <item name="colorPrimary">@color/p_orange</item>
+        <item name="colorPrimaryLight">@color/p_orange_light</item>
+        <item name="colorPrimaryDark">@color/p_orange_dark</item>
+    </style>
+
+    <style name="primary_deep_orange">
+        <item name="colorPrimary">@color/p_deep_orange</item>
+        <item name="colorPrimaryLight">@color/p_deep_orange_light</item>
+        <item name="colorPrimaryDark">@color/p_deep_orange_dark</item>
+    </style>
+
+    <style name="primary_brown">
+        <item name="colorPrimary">@color/p_brown</item>
+        <item name="colorPrimaryLight">@color/p_brown_light</item>
+        <item name="colorPrimaryDark">@color/p_brown_dark</item>
+    </style>
+
+    <style name="primary_grey">
+        <item name="colorPrimary">@color/p_grey</item>
+        <item name="colorPrimaryLight">@color/p_grey_light</item>
+        <item name="colorPrimaryDark">@color/p_grey_dark</item>
+    </style>
+
+    <style name="primary_blue_grey">
+        <item name="colorPrimary">@color/p_blue_grey</item>
+        <item name="colorPrimaryLight">@color/p_blue_grey_light</item>
+        <item name="colorPrimaryDark">@color/p_blue_grey_dark</item>
+    </style>
+
+    <style name="primary_dark_grey">
+        <item name="colorPrimary">@color/p_dark_grey</item>
+        <item name="colorPrimaryLight">@color/p_dark_grey_light</item>
+        <item name="colorPrimaryDark">@color/p_dark_grey_dark</item>
+    </style>
+
+</resources>

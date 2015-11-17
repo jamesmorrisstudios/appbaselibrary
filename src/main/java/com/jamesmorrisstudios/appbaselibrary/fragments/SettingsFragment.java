@@ -15,11 +15,14 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 
@@ -31,6 +34,8 @@ public class SettingsFragment extends BaseFragment {
 
     private OnSettingsListener settingListener;
     private transient boolean allowListener = false;
+    private ScrollView scrollView;
+    private int startScrollY = -1;
 
     /**
      * Required empty public constructor
@@ -54,6 +59,10 @@ public class SettingsFragment extends BaseFragment {
         }
     }
 
+    public final void setStartScrollY(int startScrollY) {
+        this.startScrollY = startScrollY;
+    }
+
     /**
      * Detach from activity
      */
@@ -73,11 +82,26 @@ public class SettingsFragment extends BaseFragment {
      */
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_settings, container, false);
+        scrollView = (ScrollView) inflater.inflate(R.layout.fragment_settings, container, false);
         Log.v("SettingsFragment", "On Create View");
         allowListener = false;
-        addSettingsOptions(view);
-        return view;
+        addSettingsOptions(scrollView);
+
+        return scrollView;
+    }
+
+    public void onViewCreated(@NonNull View v, Bundle savedInstanceState) {
+        super.onViewCreated(v, savedInstanceState);
+        scrollView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                if(startScrollY != -1) {
+                    Log.v("SettingsFragment", "ScrollY: "+startScrollY);
+                    scrollView.setScrollY(startScrollY);
+                    startScrollY = -1;
+                }
+            }
+        });
     }
 
     @Override
@@ -123,45 +147,58 @@ public class SettingsFragment extends BaseFragment {
             int id = settingsArr.getResourceId(i, 0);
             if (id > 0) {
                 TypedArray item = getResources().obtainTypedArray(id);
-                if (item.length() == 5) {
+                if (item.length() == 6) {
                     //Boolean item
                     int idType = item.getResourceId(0, 0);
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);
                     int idSecondary = item.getResourceId(3, 0);
                     int idRestart = item.getResourceId(4, 0);
+                    int idPro = item.getResourceId(5, 0);
                     boolean defaultVal = getResources().getBoolean(idType);
                     boolean restartVal = getResources().getBoolean(idRestart);
+                    boolean proVal = getResources().getBoolean(idPro);
                     String key = getResources().getString(idKey);
                     String primary = getResources().getString(idPrimary);
                     String secondary = getResources().getString(idSecondary);
-                    addBooleanSettingsItem(settingsContainer, primary, secondary, key, defaultVal, restartVal);
-                } else if (item.length() == 6) {
+                    addBooleanSettingsItem(settingsContainer, primary, secondary, key, defaultVal, restartVal, proVal);
+                } else if (item.length() == 7) {
                     //List item
                     int idType = item.getResourceId(0, 0);
                     int idKey = item.getResourceId(1, 0);
                     int idPrimary = item.getResourceId(2, 0);
                     int idSecondary = item.getResourceId(3, 0); //Unused but there for the count
                     int idRestart = item.getResourceId(4, 0);
-                    int idList = item.getResourceId(5, 0);
+                    int idPro = item.getResourceId(5, 0);
+                    int idList = item.getResourceId(6, 0);
                     int defaultVal = getResources().getInteger(idType);
                     boolean restartVal = getResources().getBoolean(idRestart);
+                    boolean proVal = getResources().getBoolean(idPro);
                     String key = getResources().getString(idKey);
                     String primary = getResources().getString(idPrimary);
                     String[] list = getResources().getStringArray(idList);
-                    addListSettingsItem(settingsContainer, primary, key, defaultVal, list, restartVal);
+                    addListSettingsItem(settingsContainer, primary, key, defaultVal, list, restartVal, proVal);
                 }
                 item.recycle();
             }
         }
     }
 
-    protected void addListSettingsItem(@NonNull LinearLayout container, @NonNull String primary, final @NonNull String key, int defaultValue, String[] list, final boolean restartActivity) {
+    protected void addListSettingsItem(@NonNull LinearLayout container, @NonNull String primary, final @NonNull String key, final int defaultValue, String[] list, final boolean restartActivity, final boolean pro) {
         View item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_list, null);
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
-        AppCompatSpinner listItem = (AppCompatSpinner) item.findViewById(R.id.listItem);
+        if(pro && !Utils.isPro()) {
+            if (ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pro_icon, 0, 0, 0);
+            } else {
+                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pro_icon_dark, 0, 0, 0);
+            }
+            int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
+            primaryItem.setCompoundDrawablePadding(dp5);
+        }
+        final AppCompatSpinner listItem = (AppCompatSpinner) item.findViewById(R.id.listItem);
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(item.getContext(), R.layout.support_simple_spinner_dropdown_item, list);
-        spinnerArrayAdapter.setDropDownViewResource(R.layout.simple_drop_down_item);
+        spinnerArrayAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         listItem.setAdapter(spinnerArrayAdapter);
         listItem.setSelection(Prefs.getInt(getString(R.string.settings_pref), key, defaultValue), false);
         listItem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -170,14 +207,19 @@ public class SettingsFragment extends BaseFragment {
                 if(!allowListener) {
                     return;
                 }
-                Prefs.putInt(getString(R.string.settings_pref), key, position);
-                settingListener.onSettingsChanged();
-                Log.v("SettingsFragment", "Key: " + key + " SetTo: " + position);
-                if (restartActivity) {
-                    settingListener.restartActivity();
+                if (pro && !Utils.isPro()) {
+                    Utils.showProPopup();
+                    allowListener = false;
+                    listItem.setSelection(Prefs.getInt(getString(R.string.settings_pref), key, defaultValue), false);
+                } else {
+                    Prefs.putInt(getString(R.string.settings_pref), key, position);
+                    settingListener.onSettingsChanged();
+                    Log.v("SettingsFragment", "Key: " + key + " SetTo: " + position);
+                    if (restartActivity) {
+                        utilListener.restartActivity("SETTINGS", scrollView.getScrollY());
+                    }
                 }
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
@@ -186,7 +228,9 @@ public class SettingsFragment extends BaseFragment {
         listItem.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                allowListener = true;
+                if(event.getAction() == MotionEvent.ACTION_DOWN) {
+                    allowListener = true;
+                }
                 return false;
             }
         });
@@ -194,35 +238,57 @@ public class SettingsFragment extends BaseFragment {
         container.addView(item);
     }
 
-    protected void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, boolean defaultValue, final boolean restartActivity) {
-        View item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_boolean, null);
+    protected void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, final boolean defaultValue, final boolean restartActivity, final boolean pro) {
+        View item;
+        if(!secondary.isEmpty()) {
+            item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_boolean, null);
+            TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
+            secondaryItem.setText(secondary);
+        } else {
+            item = getActivity().getLayoutInflater().inflate(R.layout.settings_item_boolean_single, null);
+        }
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
-        TextView secondaryItem = (TextView) item.findViewById(R.id.secondary);
-        SwitchCompat switchItem = (SwitchCompat) item.findViewById(R.id.switchItem);
+        if(pro && !Utils.isPro()) {
+            if (ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pro_icon, 0, 0, 0);
+            } else {
+                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.pro_icon_dark, 0, 0, 0);
+            }
+            int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
+            primaryItem.setCompoundDrawablePadding(dp5);
+        }
+        final CheckBox switchItem = (CheckBox) item.findViewById(R.id.switchItem);
         switchItem.setChecked(Prefs.getBoolean(getString(R.string.settings_pref), key, defaultValue));
         switchItem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if(!allowListener) {
+                if (!allowListener) {
                     return;
                 }
-                Prefs.putBoolean(getString(R.string.settings_pref), key, isChecked);
-                settingListener.onSettingsChanged();
-                Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
-                if (restartActivity ) {
-                    settingListener.restartActivity();
+                if (pro && !Utils.isPro()) {
+                    Utils.showProPopup();
+                    allowListener = false;
+                    switchItem.setChecked(Prefs.getBoolean(getString(R.string.settings_pref), key, defaultValue));
+                } else {
+                    Prefs.putBoolean(getString(R.string.settings_pref), key, isChecked);
+                    settingListener.onSettingsChanged();
+                    Log.v("SettingsFragment", "Key: " + key + " SetTo: " + isChecked);
+                    if (restartActivity) {
+                        utilListener.restartActivity("SETTINGS", scrollView.getScrollY());
+                    }
                 }
             }
         });
         switchItem.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                allowListener = true;
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    allowListener = true;
+                }
                 return false;
             }
         });
         primaryItem.setText(primary);
-        secondaryItem.setText(secondary);
         container.addView(item);
     }
 
@@ -252,8 +318,6 @@ public class SettingsFragment extends BaseFragment {
     }
 
     public interface OnSettingsListener {
-
-        void restartActivity();
 
         /**
          * Called on settings change event

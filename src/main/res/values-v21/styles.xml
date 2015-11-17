@@ -17,18 +17,19 @@
 <resources>
 
     <style name="NotificationDarkText" parent="android:TextAppearance.Material.Notification">
-        <item name="android:textColor">@color/secondary_text_default_material_dark</item>
+        <item name="android:textColor">@color/textLightSecondary</item>
     </style>
 
     <style name="NotificationDarkTitle" parent="android:TextAppearance.Material.Notification.Title">
-        <item name="android:textColor">@color/primary_text_default_material_dark</item>
+        <item name="android:textColor">@color/textLightMain</item>
     </style>
 
     <style name="NotificationLightText" parent="android:TextAppearance.Material.Notification">
-        <item name="android:textColor">@color/secondary_text_default_material_light</item>
+        <item name="android:textColor">@color/textDarkSecondary</item>
     </style>
 
     <style name="NotificationLightTitle" parent="android:TextAppearance.Material.Notification.Title">
-        <item name="android:textColor">@color/primary_text_default_material_light</item>
+        <item name="android:textColor">@color/textDarkMain</item>
     </style>
+
 </resources>

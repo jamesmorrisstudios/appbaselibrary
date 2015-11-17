@@ -11,11 +11,7 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 
 public abstract class InternalButtonCircleSubBase extends RelativeLayout {
     final static String MATERIALDESIGNXML = "http://schemas.android.com/apk/res-auto";
-    final static String ANDROIDXML = "http://schemas.android.com/apk/res/android";
-    final int disabledBackgroundColor = getResources().getColor(R.color.md_disabled);
-    final int backgroundColor = getResources().getColor(R.color.md_normal);
-    final int pressedColor = getResources().getColor(R.color.md_pressed);
-    final int textColor = getResources().getColor(R.color.md_text);
+    final int backgroundColor = -1;
     // Indicate if user touched this view the last time
     public boolean isLastTouch = false;
     int beforeBackground;
@@ -28,10 +24,7 @@ public abstract class InternalButtonCircleSubBase extends RelativeLayout {
     @Override
     public void setEnabled(boolean enabled) {
         super.setEnabled(enabled);
-        if (enabled)
-            setBackgroundColor(backgroundColor);
-        else
-            setBackgroundColor(disabledBackgroundColor);
+        setBackgroundColor(backgroundColor);
         invalidate();
     }
 

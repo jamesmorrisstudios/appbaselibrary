@@ -5,7 +5,7 @@
     android:id="@+id/calendar_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardDark"
+    android:background="@color/cardBackgroundDark"
     app:tsquare_dayBackground="@drawable/calendar_bg_selector_dark"
     app:tsquare_dayTextColor="@color/calendar_text_selector_dark"
     app:tsquare_dividerColor="@color/dark_calendar_divider"
