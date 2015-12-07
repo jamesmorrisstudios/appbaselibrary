@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">AppBaseLibrary</string>
-    <string name="app_short_name" translatable="false">Change This</string>
-    <string name="app_package" translatable="false">Change This</string>
+    <string name="app_name" translatable="false">Change This</string>
+    <string name="app_name_short" translatable="false">Change This</string>
+    <string name="app_name_long" translatable="false">Change This</string>
 
     <string name="store_link" translatable="false">Change This</string>
     <string name="store_link_beta" translatable="false">Change This</string>

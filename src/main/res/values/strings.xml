@@ -256,6 +256,7 @@
     <!--
        Success/Fail/Error/Valid
     -->
+    <string name="loading">Loading</string>
     <string name="error">Error</string>
     <string name="fail">Fail</string>
     <string name="failed">Failed</string>
@@ -270,6 +271,8 @@
     <string name="invalid_time">Invalid time</string>
     <string name="complete">Complete</string>
     <string name="completed">Completed</string>
+    <string name="completed_early">Completed Early</string>
+    <string name="skipped">Skipped</string>
     <string name="incomplete">Incomplete</string>
     <string name="invalid_path">Invalid Path</string>
     <string name="invalid_file">Invalid File</string>
@@ -339,6 +342,7 @@
         Icons and Logos
     -->
     <string name="icon">Icon</string>
+    <string name="custom_icon">Custom Icon</string>
     <string name="choose_icon">Choose Icon</string>
     <string name="logo">Logo</string>
 
@@ -391,6 +395,16 @@
     <string name="me">Me</string>
     <string name="us">Us</string>
     <string name="them">Them</string>
+
+    <!--
+        On / Off
+    -->
+    <string name="short_on">Short on</string>
+    <string name="medium_on">Medium on</string>
+    <string name="long_on">Long on</string>
+    <string name="short_off">Short off</string>
+    <string name="medium_off">Medium off</string>
+    <string name="long_off">Long off</string>
 
     <!--
         Game Menu
@@ -533,6 +547,9 @@
     <string name="settings_category_theme">Theme</string>
     <string name="settings_category_notification">Notification</string>
     <string name="settings_category_defaults">Defaults</string>
+    <string name="settings_category_random">Randomness</string>
+    <string name="settings_category_widget">Widget</string>
+
 
 	<!--
 	    Base App Settings
@@ -564,11 +581,16 @@
     <!--
         Randomly RemindMe Specific
     -->
-    <string name="no_reminders_yet">You have no reminders yet.</string>
+    <string name="no_reminder">No Reminders</string>
+    <string name="no_reminders_yet">You have no reminders yet</string>
     <string name="delete_reminder_prompt_title">Delete Reminder</string>
     <string name="delete_reminder_prompt_content">Are you sure you want to delete this reminder?</string>
+    <string name="delete_custom_icon_prompt_title">Delete Icon</string>
+    <string name="delete_custom_icon_prompt_content">Are you sure you want to delete this icon?</string>
     <string name="cancel_reminder_prompt_title">Discard Changes</string>
     <string name="cancel_reminder_prompt_content">Are you sure you want to discard your changes?</string>
+    <string name="delete_vibrate_pattern_prompt_title">Delete Vibrate Pattern</string>
+    <string name="delete_vibrate_pattern_prompt_content">Are you sure you want to delete this vibrate pattern?</string>
     <string name="duplicate_reminder_prompt_title">Duplicate Reminder</string>
     <string name="duplicate_reminder_prompt_content">Are you sure you want to duplicate this reminder?</string>
     <string name="notification_theme_title">Please select the notification style that matches your phone</string>
@@ -581,13 +603,21 @@
     <string name="setting_notification_custom_primary">Custom Notification</string>
     <string name="setting_notification_ongoing_primary">Ongoing Notification</string>
     <string name="setting_notification_ongoing_secondary">Ongoing notifications are not supported on SmartWatches</string>
-    <string name="setting_notification_theme_primary">Custom Notification Text Color</string>
+    <string name="setting_notification_theme_primary">Custom Notification Background</string>
+    <string name="setting_notification_theme_text_primary">Custom Notification Text</string>
     <string name="setting_first_day_of_week_primary">First Day of the Week</string>
     <string name="setting_force_advanced_primary">Always Show Advanced Options</string>
     <string name="setting_force_advanced_secondary">Disable to show advanced options on a per reminder basis</string>
     <string name="setting_notification_swipe_away_action_primary">Swipe Action</string>
     <string name="setting_notification_click_open_primary">Click Opens App</string>
     <string name="setting_notification_swipe_away_open_primary">Swipe Opens App</string>
+    <string name="setting_random_amount_primary">Random</string>
+    <string name="setting_less_random_amount_primary">Less Random</string>
+    <string name="setting_even_amount_primary">Even</string>
+
+    <string name="setting_widget_theme_primary">Theme</string>
+    <string name="setting_widget_text_color_primary">Text Color</string>
+
 
     <!--
         Google Play Settings
@@ -600,7 +630,10 @@
         Theme
     -->
     <string name="light">Light</string>
+    <string name="light_transparent">Light Transparent</string>
     <string name="dark">Dark</string>
+    <string name="dark_transparent">Dark Transparent</string>
+    <string name="transparent">Transparent</string>
     <string name="night">Night</string>
     <string name="black">Black</string>
     <string name="white">White</string>
@@ -650,6 +683,9 @@
     <string name="footer">Footer</string>
     <string name="custom">Custom</string>
     <string name="title">Title</string>
+    <string name="name">Name</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
     <string name="notification">Notification</string>
     <string name="select_notification">Select Notification</string>
     <string name="color">Color</string>
@@ -694,6 +730,24 @@
     <string name="advanced_options">Advanced Options</string>
 
     <string name="get_the_beta">Get the Beta</string>
+
+    <string name="led_pattern">LED Pattern</string>
+    <string name="search">Search</string>
+
+    <string name="customizer">Customizer</string>
+    <string name="customize">Customize</string>
+
+    <string name="vibrate_pattern">Vibrate Pattern</string>
+    <string name="vibrate_patterns">Vibrate Patterns</string>
+    <string name="icons">Icons</string>
+    <string name="import_icon">Import Icon</string>
+    <string name="create">Create</string>
+    <string name="create_vibrate_pattern">Create Vibrate Pattern</string>
+
+    <string name="system">System</string>
+    <string name="notifications">Notifications</string>
+    <string name="active">Active</string>
+    <string name="current">Current</string>
 
     <string name="pro">Pro</string>
     <string name="upgrade">Upgrade</string>

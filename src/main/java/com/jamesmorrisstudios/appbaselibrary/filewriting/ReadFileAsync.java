@@ -3,6 +3,7 @@ package com.jamesmorrisstudios.appbaselibrary.filewriting;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 /**
  * Created by James on 10/3/2015.
@@ -29,10 +30,13 @@ public class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
 
     @Override
     protected byte[] doInBackground(Void... params) {
-        if(path == null) {
+        if(uri != null) {
             return FileWriter.readFile(uri, location);
         }
-        return FileWriter.readFile(path, location);
+        if(path != null) {
+            return FileWriter.readFile(path, location);
+        }
+        return null;
     }
 
     @Override
@@ -41,6 +45,6 @@ public class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
     }
 
     public interface FileReadListener {
-        void readComplete(byte[] data);
+        void readComplete(@Nullable byte[] data);
     }
 }

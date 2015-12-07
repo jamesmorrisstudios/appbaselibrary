@@ -7,7 +7,6 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 
 
@@ -42,12 +41,15 @@ public class TintedImageView extends ImageView {
     @Override
     public void setImageDrawable(Drawable drawable) {
         if (drawable != null) {
-            drawable = DrawableCompat.wrap(drawable);
+            Drawable clone = drawable.mutate();
+            clone = DrawableCompat.wrap(clone);
             // We can now set a tint
-            DrawableCompat.setTint(drawable, ThemeManager.getTintColor());
-            DrawableCompat.setTintMode(drawable, PorterDuff.Mode.SRC_OVER);
+            DrawableCompat.setTint(clone, ThemeManager.getTintColor());
+            DrawableCompat.setTintMode(clone, PorterDuff.Mode.SRC_OVER);
+            super.setImageDrawable(clone);
+        } else {
+            super.setImageDrawable(drawable);
         }
-        super.setImageDrawable(drawable);
     }
 
 }

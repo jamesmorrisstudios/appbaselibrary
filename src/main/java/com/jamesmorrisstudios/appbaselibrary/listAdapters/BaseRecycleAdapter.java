@@ -25,7 +25,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.math.UtilsMath;
 import com.jamesmorrisstudios.appbaselibrary.touchHelper.ItemTouchHelperAdapter;
 
@@ -38,7 +37,6 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         implements ItemTouchHelperAdapter {
     public static final String TAG = "BaseRecycleAdapter";
     private static final int VIEW_TYPE_HEADER = 0x03;
-    private static final int VIEW_TYPE_DUMMY = 0x02;
     private static final int VIEW_TYPE_CONTENT = 0x00;
     private final ArrayList<LineItem> mItems;
     private OnItemClickListener mListener;
@@ -57,13 +55,8 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
 
     @Override
     public void onItemMove(int fromPosition, int toPosition) {
-        if(hasDummyItem) {
-            fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 2, fromPosition);
-            toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 2, toPosition);
-        } else {
-            fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, fromPosition);
-            toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, toPosition);
-        }
+        fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, fromPosition);
+        toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, toPosition);
 
         LineItem prev = mItems.remove(fromPosition);
         mItems.add(toPosition, prev);
@@ -83,8 +76,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      *
      * @param items List of items to set.
      */
-    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items, boolean hasDummyItem) {
-        this.hasDummyItem = hasDummyItem;
+    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
@@ -96,7 +88,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         notifyDataSetChanged();
     }
 
-    public final void addItems(@NonNull ArrayList<BaseRecycleContainer> items, boolean hasHeader) {
+    public final void addItems(@NonNull ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
@@ -115,20 +107,16 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      */
     @Override
     public BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        boolean isDummyItem = false;
         boolean isHeader = false;
         View view;
         if(viewType == VIEW_TYPE_CONTENT) {
             view = LayoutInflater.from(parent.getContext()).inflate(getItemResId(), parent, false);
-        } else if(viewType == VIEW_TYPE_HEADER) {
+        } else {
             view = LayoutInflater.from(parent.getContext()).inflate(getHeaderResId(), parent, false);
             isHeader = true;
-        } else {
-            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycle_dummy_item, parent, false);
-            isDummyItem = true;
         }
 
-        return getViewHolder(view, isHeader, isDummyItem, new BaseRecycleViewHolder.cardClickListener() {
+        return getViewHolder(view, isHeader, new BaseRecycleViewHolder.cardClickListener() {
             @Override
             public void cardClicked(int position) {
                 mListener.itemClicked(position);
@@ -156,7 +144,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         });
     }
 
-    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
+    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
 
     @LayoutRes
     protected abstract int getItemResId();
@@ -197,9 +185,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
 
     @Override
     public int getItemViewType(int position) {
-        if(mItems.get(position).data.isDummyItem) {
-            return VIEW_TYPE_DUMMY;
-        } else if(mItems.get(position).data.isHeader) {
+        if(mItems.get(position).data.isHeader) {
             return VIEW_TYPE_HEADER;
         }
         return VIEW_TYPE_CONTENT;

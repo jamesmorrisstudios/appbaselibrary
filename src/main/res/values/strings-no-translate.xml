@@ -25,6 +25,16 @@
     <string name="num_11" translatable="false">11</string>
     <string name="num_12" translatable="false">12</string>
 
+    <string name="num_20" translatable="false">20</string>
+    <string name="num_30" translatable="false">30</string>
+    <string name="num_40" translatable="false">40</string>
+    <string name="num_50" translatable="false">50</string>
+    <string name="num_60" translatable="false">60</string>
+    <string name="num_70" translatable="false">70</string>
+    <string name="num_80" translatable="false">80</string>
+    <string name="num_90" translatable="false">90</string>
+    <string name="num_100" translatable="false">100</string>
+
     <string name="gamehelper_app_misconfigured" translatable="false">The application is incorrectly configured. Check that the package name and signing certificate match the client ID created in Developer Console. Also, if the application is not yet published, check that the account you are trying to sign in with is listed as a tester account. See logs for more information.</string>
 
     <string name="help_about_studio" translatable="false">James Morris Studios</string>

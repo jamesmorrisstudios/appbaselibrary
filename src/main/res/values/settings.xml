@@ -244,6 +244,7 @@
         <item name="17">@string/grey</item>
         <item name="18">@string/blue_grey</item>
         <item name="19">@string/dark_grey</item>
+        <item name="20">@string/white</item>
     </string-array>
 
 </resources>

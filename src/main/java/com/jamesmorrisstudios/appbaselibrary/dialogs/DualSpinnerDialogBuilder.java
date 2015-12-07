@@ -16,7 +16,6 @@ import android.widget.LinearLayout;
 import com.jamesmorrisstudios.appbaselibrary.R;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -27,7 +26,7 @@ public class DualSpinnerDialogBuilder {
     private AppCompatSpinner firstSpinner, secondSpinner;
     private List<String> first, second;
     private int firstSelected, secondSelected;
-    private int[] firstRestrictions, secondRestrictions;
+    private int[][] firstRestrictingSecond, secondRestrictingFirst;
     private DualSpinnerListener listener = null;
 
     private DualSpinnerDialogBuilder(@NonNull Context context, int style) {
@@ -48,17 +47,17 @@ public class DualSpinnerDialogBuilder {
         return this;
     }
 
-    public DualSpinnerDialogBuilder setFirst(@NonNull List<String> first, int firstSelected, @Nullable int[] firstRestrictions) {
+    public DualSpinnerDialogBuilder setFirst(@NonNull List<String> first, int firstSelected, @Nullable int[][] firstRestrictions) {
         this.first = first;
         this.firstSelected = firstSelected;
-        this.firstRestrictions = firstRestrictions;
+        this.firstRestrictingSecond = firstRestrictions;
         return this;
     }
 
-    public DualSpinnerDialogBuilder setSecond(@NonNull List<String> second, int secondSelected, @Nullable int[] secondRestrictions) {
+    public DualSpinnerDialogBuilder setSecond(@NonNull List<String> second, int secondSelected, @Nullable int[][] secondRestrictions) {
         this.second = second;
         this.secondSelected = secondSelected;
-        this.secondRestrictions = secondRestrictions;
+        this.secondRestrictingFirst = secondRestrictions;
         return this;
     }
 
@@ -68,7 +67,7 @@ public class DualSpinnerDialogBuilder {
     }
 
     public AlertDialog build() {
-        setData(firstSelected, secondSelected);
+        setData(firstSelected, firstSelected, secondSelected, secondSelected);
 
         builder.setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
             @Override
@@ -89,32 +88,41 @@ public class DualSpinnerDialogBuilder {
         return builder.create();
     }
 
-    private void setData(int firstSelected1, int secondSelected1) {
+    private void setData(int firstSelected1, int firstSelected1Prev, int secondSelected1, int secondSelected1Prev) {
         firstSpinner.setOnItemSelectedListener(null);
         secondSpinner.setOnItemSelectedListener(null);
 
         List<String> firstList, secondList;
 
-        if(secondRestrictions != null) {
+        if(firstRestrictingSecond != null) {
+            secondList = new ArrayList<>();
+            for(int i = firstRestrictingSecond[firstSelected1][0]; i< firstRestrictingSecond[firstSelected1][1]; i++) {
+                secondList.add(second.get(i));
+            }
+            int prevStartIndex = firstRestrictingSecond[firstSelected1Prev][0];
+            int currStartIndex = firstRestrictingSecond[firstSelected1][0];
+            if(prevStartIndex != currStartIndex) {
+                secondSelected1 = secondSelected1 + (prevStartIndex - currStartIndex);
+            }
+        } else {
+            secondList = second;
+        }
+
+        if(secondRestrictingFirst != null) {
             firstList = new ArrayList<>();
-            for(int i=0; i<secondRestrictions[secondSelected1]; i++) {
+            for(int i = secondRestrictingFirst[secondSelected1][0]; i<secondRestrictingFirst[secondSelected1][1]; i++) {
                 firstList.add(first.get(i));
+            }
+            int prevStartIndex = secondRestrictingFirst[secondSelected1Prev][0];
+            int currStartIndex = secondRestrictingFirst[secondSelected1][0];
+            if(prevStartIndex != currStartIndex) {
+                firstSelected1 = firstSelected1 + (prevStartIndex - currStartIndex);
             }
         } else {
             firstList = first;
         }
 
         final int firstSelected2 = Math.min(firstSelected1, firstList.size()-1);
-
-        if(firstRestrictions != null) {
-            secondList = new ArrayList<>();
-            for(int i=0; i<firstRestrictions[secondSelected1]; i++) {
-                secondList.add(second.get(i));
-            }
-        } else {
-            secondList = second;
-        }
-
         final int secondSelected2 = Math.min(secondSelected1, secondList.size()-1);
 
         ArrayAdapter<String> firstAdapter = new ArrayAdapter<>(builder.getContext(), R.layout.support_simple_spinner_dropdown_item, firstList);
@@ -133,7 +141,7 @@ public class DualSpinnerDialogBuilder {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.v("DualSpinner", "Item Selected");
                 if (position != firstSelected2) {
-                    setData(position, secondSpinner.getSelectedItemPosition());
+                    setData(position, firstSelected2, secondSpinner.getSelectedItemPosition(), secondSpinner.getSelectedItemPosition());
                 }
             }
 
@@ -147,7 +155,7 @@ public class DualSpinnerDialogBuilder {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(position != secondSelected2) {
-                    setData(firstSpinner.getSelectedItemPosition(), position);
+                    setData(firstSpinner.getSelectedItemPosition(), firstSpinner.getSelectedItemPosition(), position, secondSelected2);
                 }
             }
 

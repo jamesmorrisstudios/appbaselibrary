@@ -1,6 +1,5 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -19,10 +18,8 @@ import android.widget.TextView;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
-import com.jamesmorrisstudios.appbaselibrary.activities.BaseLauncherNoViewActivity;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleAdapter;
 import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleContainer;
-import com.jamesmorrisstudios.appbaselibrary.listAdapters.BaseRecycleDummyItem;
 import com.jamesmorrisstudios.appbaselibrary.touchHelper.SimpleItemTouchHelperCallback;
 
 import java.util.ArrayList;
@@ -31,7 +28,7 @@ import java.util.ArrayList;
  * Created by James on 4/29/2015.
  */
 public abstract class BaseRecycleListFragment extends BaseFragment implements BaseRecycleAdapter.OnItemClickListener {
-    private boolean isRefreshing = false, dummyItem = false;
+    private boolean isRefreshing = false;
     private SwipeRefreshLayout mSwipeRefreshLayout;
     protected BaseRecycleAdapter mAdapter = null;
     private TextView noDataText;
@@ -241,24 +238,18 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     protected final void applyData(ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
-            if(dummyItem) {
-                data.add(new BaseRecycleDummyItem());
-            }
-            mAdapter.setItems(data, dummyItem);
+            mAdapter.setItems(data);
             hideNoDataText();
         } else {
-            mAdapter.setItems(new ArrayList<BaseRecycleContainer>(), dummyItem);
+            mAdapter.setItems(new ArrayList<BaseRecycleContainer>());
             showNoDataText();
         }
         endRefresh();
     }
 
-    protected final void appendData(ArrayList<BaseRecycleContainer> data, boolean hasHeader) {
+    protected final void appendData(ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && data != null && !data.isEmpty()) {
-            if(dummyItem) {
-                data.add(new BaseRecycleDummyItem());
-            }
-            mAdapter.addItems(data, hasHeader);
+            mAdapter.addItems(data);
             hideNoDataText();
         }
         endRefresh();
@@ -271,7 +262,11 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     }
 
     protected final void setDummyItem(boolean dummyItem) {
-        this.dummyItem = dummyItem;
+        if(dummyItem) {
+            mRecyclerView.setPadding(0, 0, 0, Utils.getDipInt(92));
+        } else {
+            mRecyclerView.setPadding(0, 0, 0, 0);
+        }
     }
 
     /**

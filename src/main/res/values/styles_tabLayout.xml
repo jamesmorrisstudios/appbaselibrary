@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="tabLayoutLight">
+        <item name="tabLayoutStyleSet">@style/baseTabLayoutLight</item>
+    </style>
+
+    <style name="tabLayoutDark">
+        <item name="tabLayoutStyleSet">@style/baseTabLayoutDark</item>
+    </style>
+
+    <style name="tabLayoutLightDarkText">
+        <item name="tabLayoutStyleSet">@style/baseTabLayoutLightDarkText</item>
+    </style>
+
+    <style name="tabLayoutDarkDarkText">
+        <item name="tabLayoutStyleSet">@style/baseTabLayoutDarkDarkText</item>
+    </style>
+
+</resources>

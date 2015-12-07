@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
 import com.nononsenseapps.filepicker.FilePickerFragment;
 
 import java.io.File;
@@ -17,10 +17,17 @@ import java.io.File;
  */
 public class CustomFilePickerFragment extends FilePickerFragment {
     // File extension to filter on
-    private String extension = null;
+    private String[] extensions = null;
 
-    public final void setExtension(@Nullable String extension) {
-        this.extension = extension;
+    public final void setExtension(@Nullable String[] extensions) {
+        this.extensions = extensions;
+        if(extensions == null) {
+            Log.v("FilePickerFragment", "Extensions are null");
+        } else {
+            for(int i=0; i<extensions.length; i++) {
+                Log.v("FilePickerFragment", "Extension: "+i+" : "+extensions[i]);
+            }
+        }
     }
 
     /**
@@ -84,7 +91,15 @@ public class CustomFilePickerFragment extends FilePickerFragment {
     @Override
     protected boolean isItemVisible(final File file) {
         if (!isDir(file) && (mode == MODE_FILE || mode == MODE_FILE_AND_DIR)) {
-            return extension == null || extension.equalsIgnoreCase(getExtension(file));
+            if(extensions == null) {
+                return true;
+            }
+            for (String extension : extensions) {
+                if (extension.equalsIgnoreCase(getExtension(file))) {
+                    return true;
+                }
+            }
+            return false;
         }
         return isDir(file);
     }

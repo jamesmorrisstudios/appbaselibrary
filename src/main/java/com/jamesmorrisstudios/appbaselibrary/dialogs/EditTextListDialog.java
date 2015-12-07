@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 
@@ -30,9 +31,11 @@ import java.util.List;
 public class EditTextListDialog extends DialogFragment {
 
     private ListView list;
+    private TextView title;
     private Button btnCancel, btnOk, btnAdd;
     private ArrayList<String> messages = null;
     private ListAdapter adapter = null;
+    private String titleText;
     private EditMessageListener onPositive;
     private View.OnClickListener onNegative;
 
@@ -51,7 +54,10 @@ public class EditTextListDialog extends DialogFragment {
         list = (ListView) view.findViewById(R.id.list);
         btnCancel = (Button) view.findViewById(R.id.btn_cancel);
         btnOk = (Button) view.findViewById(R.id.btn_ok);
-        btnAdd = (Button) view.findViewById(R.id.btn_add);
+        btnAdd = (Button) view.findViewById(R.id.btn_neutral);
+        title = (TextView) view.findViewById(R.id.title);
+
+        title.setText(titleText);
 
         if(messages != null) {
             adapter = new ListAdapter(getActivity(), R.layout.edit_text_list_line_item, wrapString(messages));
@@ -108,7 +114,8 @@ public class EditTextListDialog extends DialogFragment {
         return view;
     }
 
-    public void setData(@NonNull ArrayList<String> messages, @NonNull EditMessageListener onPositive, @Nullable View.OnClickListener onNegative) {
+    public void setData(@NonNull String titleText, @NonNull ArrayList<String> messages, @NonNull EditMessageListener onPositive, @Nullable View.OnClickListener onNegative) {
+        this.titleText = titleText;
         this.messages = new ArrayList<>(messages);
         this.onPositive = onPositive;
         this.onNegative = onNegative;

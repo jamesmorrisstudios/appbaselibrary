@@ -39,6 +39,18 @@ public final class UtilsMath {
     }
 
     /**
+     * Forces the given value to be within the bounds provided for ints
+     *
+     * @param min Minimum allowed value
+     * @param max Maximum allowed value
+     * @param val Value to bound
+     * @return The input value bound within min and max
+     */
+    public static long inBoundsLong(long min, long max, long val) {
+        return Math.min(Math.max(min, val), max);
+    }
+
+    /**
      * Forces the given value to be within the bounds provided for floats
      *
      * @param min Minimum allowed value

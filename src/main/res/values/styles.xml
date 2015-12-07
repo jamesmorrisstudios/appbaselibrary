@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="AppThemeNoBackground" parent="Theme.AppCompat.Light">
+        <!-- Disable the action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Remove the background -->
+        <item name="android:windowBackground">@null</item>
+    </style>
+
+    <style name="AppThemeSplash" parent="Theme.AppCompat.Light">
+        <!-- Disable the action bar -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Set the background to the splash screen -->
+        <item name="android:windowBackground">@layout/splash_screen</item>
+    </style>
+
     <!-- application theme. -->
     <style name="AppThemeLight" parent="Theme.AppCompat.Light">
         <!-- Disable the action bar -->
@@ -8,6 +24,10 @@
         <item name="windowNoTitle">true</item>
         <!-- Card Views -->
         <item name="cardViewStyle">@style/CardView.Light</item>
+        <!-- Background color -->
+        <item name="colorBackground">@color/backgroundLight</item>
+        <!-- Icon Tint -->
+        <item name="colorIconTint">@color/tintColorLight</item>
         <!-- Text colors -->
         <item name="android:textColorPrimary">@color/textDarkMain</item>
         <item name="android:textColorSecondary">@color/textDarkSecondary</item>
@@ -24,6 +44,10 @@
         <item name="windowNoTitle">true</item>
         <!-- Card Views -->
         <item name="cardViewStyle">@style/cardStyleDark</item>
+        <!-- Background color -->
+        <item name="colorBackground">@color/backgroundDark</item>
+        <!-- Icon Tint -->
+        <item name="colorIconTint">@color/tintColorDark</item>
         <!-- Text colors -->
         <item name="android:textColorPrimary">@color/textLightMain</item>
         <item name="android:textColorSecondary">@color/textLightSecondary</item>
@@ -31,6 +55,25 @@
         <item name="android:textColorPrimaryInverse">@color/textDarkMain</item>
         <item name="android:textColorSecondaryInverse">@color/textDarkSecondary</item>
         <item name="android:textColorTertiaryInverse">@color/textDarkDisabled</item>
+    </style>
+
+    <!-- Dialog -->
+    <style name="dialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Card Views -->
+        <item name="cardViewStyle">@style/CardView.Light</item>
+        <!-- Background color -->
+        <item name="colorBackground">@color/backgroundLight</item>
+        <!-- Text colors -->
+        <item name="android:textColorPrimary">@color/textDarkMain</item>
+        <item name="android:textColorSecondary">@color/textDarkSecondary</item>
+        <item name="android:textColorTertiary">@color/textDarkDisabled</item>
+        <item name="android:textColorPrimaryInverse">@color/textLightMain</item>
+        <item name="android:textColorSecondaryInverse">@color/textLightSecondary</item>
+        <item name="android:textColorTertiaryInverse">@color/textLightDisabled</item>
+    </style>
+
+    <style name="dialogThemeDark" parent="Theme.AppCompat.Dialog">
+
     </style>
 
     <!-- Toolbar -->
@@ -117,6 +160,26 @@
     <!-- Dark Toolbar Popup -->
     <style name="toolbarPopupDarkDarkText" parent="ThemeOverlay.AppCompat">
         <item name="android:textColorPrimary">@color/textLightMain</item>
+    </style>
+
+    <!-- TabLayout Popup -->
+    <style name="baseTabLayoutLight" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <!-- Dark TabLayout Popup -->
+    <style name="baseTabLayoutDark" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </style>
+
+    <!-- TabLayout Popup -->
+    <style name="baseTabLayoutLightDarkText" parent="ThemeOverlay.AppCompat.ActionBar">
+
+    </style>
+
+    <!-- Dark TabLayout Popup -->
+    <style name="baseTabLayoutDarkDarkText" parent="ThemeOverlay.AppCompat.Light">
+
     </style>
 
     <!-- Card View -->

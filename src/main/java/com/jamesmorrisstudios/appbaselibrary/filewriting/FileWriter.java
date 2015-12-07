@@ -19,12 +19,10 @@ package com.jamesmorrisstudios.appbaselibrary.filewriting;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Environment;
 import android.os.ParcelFileDescriptor;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
@@ -36,7 +34,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.URI;
 
 /**
  * File writer class that can take images or strings and read/write them to app hidden directories
@@ -76,22 +73,6 @@ public final class FileWriter {
     }
 
     /**
-     * Gets the URI of the file. Useful mostly for external files
-     *
-     * @param fileName The name of the file
-     * @param location If internal or external storage
-     * @return The URI pointing to the file
-     */
-    @Nullable
-    public static URI getFileURI(@NonNull String fileName, @NonNull FileLocation location) {
-        File file = getFile(fileName, location);
-        if(file == null) {
-            return null;
-        }
-        return file.toURI();
-    }
-
-    /**
      * Gets the Uri of the file. Useful mostly for external files
      *
      * @param fileName The name of the file
@@ -107,7 +88,6 @@ public final class FileWriter {
         return Uri.fromFile(file);
     }
 
-
     /**
      * Writes a bitmap as a png encoded file
      *
@@ -116,28 +96,28 @@ public final class FileWriter {
      * @param location If internal or external storage
      * @return True if successful
      */
-    public synchronized static boolean writeImage(@NonNull String fileName, @NonNull Bitmap bitmap, @NonNull FileLocation location) {
+    public synchronized static Uri writeImage(@NonNull String fileName, @NonNull Bitmap bitmap, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
         if(file == null) {
-            return false;
+            return null;
         }
         try {
             if (!file.exists()) {
                 if (!file.createNewFile()) {
-                    return false;
+                    return null;
                 }
             }
             FileOutputStream outputStream = new FileOutputStream(file);
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
             outputStream.close();
         } catch (IOException e) {
-            return false;
+            return null;
         }
-        return true;
+        return getFileUri(fileName, location);
     }
 
     /**
-     * Reads a png encoded bitmap from a file
+     * Reads a png or jpg encoded bitmap from a file
      *
      * @param fileName The name of the file
      * @param location If internal or external storage
@@ -145,7 +125,31 @@ public final class FileWriter {
      */
     @Nullable
     public synchronized static Bitmap readImage(@NonNull String fileName, @NonNull FileLocation location) {
-        File file = getFile(fileName, location);
+        return readImageSub(getFile(fileName, location));
+    }
+
+    /**
+     * Reads a png or jpg encoded bitmap from a file
+     *
+     * @param uri The name of the file
+     * @param location If internal or external storage
+     * @return The bitmap that was read
+     */
+    @Nullable
+    public synchronized static Bitmap readImage(@NonNull Uri uri, @NonNull FileLocation location) {
+        if(isContentUri(uri, location)) {
+            return readImageContent(uri);
+        }
+        return readImageSub(getFile(uri.getPath(), location));
+    }
+
+    /**
+     * Reads a png or jpg encoded bitmap from a file
+     *
+     * @return The bitmap that was read
+     */
+    @Nullable
+    private synchronized static Bitmap readImageSub(@Nullable File file) {
         if(file == null) {
             return null;
         }
@@ -171,25 +175,25 @@ public final class FileWriter {
      * @param location If internal or external storage
      * @return True if successful
      */
-    public synchronized static boolean writeFile(@NonNull String fileName, @NonNull byte[] bytes, @NonNull FileLocation location) {
+    public synchronized static Uri writeFile(@NonNull String fileName, @NonNull byte[] bytes, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
         if(file == null) {
-            return false;
+            return null;
         }
         FileOutputStream outputStream;
         try {
             if (!file.exists()) {
                 if (!file.createNewFile()) {
-                    return false;
+                    return null;
                 }
             }
             outputStream = new FileOutputStream(file);
             outputStream.write(bytes);
             outputStream.close();
         } catch (IOException e) {
-            return false;
+            return null;
         }
-        return true;
+        return getFileUri(fileName, location);
     }
 
     /**
@@ -201,23 +205,7 @@ public final class FileWriter {
      */
     @Nullable
     public synchronized static byte[] readFile(@NonNull String fileName, @NonNull FileLocation location) {
-        File file = getFile(fileName, location);
-        if(file == null) {
-            return null;
-        }
-        if (!file.exists()) {
-            return null;
-        }
-        byte[] bytes;
-        FileInputStream inputStream;
-        try {
-            inputStream = new FileInputStream(file);
-            bytes = readBytes(inputStream);
-            inputStream.close();
-            return bytes;
-        } catch (IOException e) {
-            return null;
-        }
+        return readFileSub(getFile(fileName, location));
     }
 
     @Nullable
@@ -225,7 +213,10 @@ public final class FileWriter {
         if(isContentUri(uri, location)) {
             return readFileContent(uri);
         }
-        File file = getFile(uri.getPath(), location);
+        return readFileSub(getFile(uri.getPath(), location));
+    }
+
+    private synchronized static byte[] readFileSub(@Nullable File file) {
         if(file == null) {
             return null;
         }
@@ -245,7 +236,6 @@ public final class FileWriter {
     }
 
     private static boolean isContentUri(@NonNull Uri uri, @NonNull FileLocation location) {
-        Log.v("FileWriter", "Is Content? Uri Content: "+uri.getScheme());
         if(location == FileLocation.PATH) {
             if(uri.getScheme().contains("content")) {
                 return true;
@@ -255,7 +245,6 @@ public final class FileWriter {
     }
 
     private static byte[] readFileContent(@NonNull Uri uri) {
-        Log.v("FileWriter", "Uri Content: "+uri);
         ParcelFileDescriptor mInputPFD;
         try {
             mInputPFD = AppBase.getContext().getContentResolver().openFileDescriptor(uri, "r");
@@ -266,9 +255,7 @@ public final class FileWriter {
         if(mInputPFD == null) {
             return null;
         }
-        Log.v("FileWriter", "Read File Content got to descriptor");
         FileDescriptor fd = mInputPFD.getFileDescriptor();
-
         FileInputStream inputStream;
         byte[] bytes;
         try {
@@ -281,6 +268,29 @@ public final class FileWriter {
         }
     }
 
+    private static Bitmap readImageContent(@NonNull Uri uri) {
+        ParcelFileDescriptor mInputPFD;
+        try {
+            mInputPFD = AppBase.getContext().getContentResolver().openFileDescriptor(uri, "r");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
+        if(mInputPFD == null) {
+            return null;
+        }
+        FileDescriptor fd = mInputPFD.getFileDescriptor();
+        Bitmap bitmap;
+        try {
+            InputStream inputStream = new FileInputStream(fd);
+            bitmap = BitmapFactory.decodeStream(inputStream);
+            inputStream.close();
+        } catch (Exception e) {
+            return null;
+        }
+        return bitmap;
+    }
+
     /**
      * Deletes the given file
      *
@@ -290,10 +300,7 @@ public final class FileWriter {
      */
     public synchronized static boolean deleteFile(@NonNull String fileName, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
-        if(file == null) {
-            return false;
-        }
-        return file.delete();
+        return file != null && file.delete();
     }
 
     /**

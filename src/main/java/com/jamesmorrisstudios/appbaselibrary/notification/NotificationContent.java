@@ -17,11 +17,11 @@
 package com.jamesmorrisstudios.appbaselibrary.notification;
 
 import android.app.PendingIntent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
@@ -41,7 +41,9 @@ public class NotificationContent {
     private int iconRes;
     private NotificationType type;
     private NotificationTheme theme;
+    private NotificationThemeText themeText;
     private NotificationVibrate vibrate = NotificationVibrate.SHORT;
+    private long[] vibrateCustom = null;
     private boolean useLed = false;
     private NotificationPriority priority = NotificationPriority.DEFAULT;
     private boolean onGoing = false;
@@ -50,6 +52,8 @@ public class NotificationContent {
     private ArrayList<NotificationAction> actions = new ArrayList<>();
     private PendingIntent contentIntent, deleteIntent;
     private int notifCounter;
+    private Bitmap iconOverride = null;
+    private NotificationLights lights = NotificationLights.MEDIUM_ON_MEDIUM_OFF;
 
     /**
      * Constructor of all the required notification details
@@ -63,8 +67,9 @@ public class NotificationContent {
      * @param accentColor
      * @param id
      */
-    public NotificationContent(@NonNull NotificationTheme theme, @NonNull NotificationType type, @NonNull String title, @NonNull String content, @Nullable Uri tone, @DrawableRes int iconRes, int accentColor, int id, int notifCounter) {
+    public NotificationContent(@NonNull NotificationTheme theme, @NonNull NotificationThemeText themeText, @NonNull NotificationType type, @NonNull String title, @NonNull String content, @Nullable Uri tone, @DrawableRes int iconRes, int accentColor, int id, int notifCounter) {
         this.theme = theme;
+        this.themeText = themeText;
         this.type = type;
         this.title = title;
         this.content = content;
@@ -73,6 +78,26 @@ public class NotificationContent {
         this.accentColor = accentColor;
         this.id = id;
         this.notifCounter = notifCounter;
+    }
+
+    public NotificationThemeText getThemeText() {
+        return themeText;
+    }
+
+    public NotificationLights getLights() {
+        return lights;
+    }
+
+    public void setLights(@NonNull NotificationLights lights) {
+        this.lights = lights;
+    }
+
+    public Bitmap getIconOverride() {
+        return iconOverride;
+    }
+
+    public void setIconOverride(Bitmap iconOverride) {
+        this.iconOverride = iconOverride;
     }
 
     public int getId() {
@@ -154,6 +179,14 @@ public class NotificationContent {
         this.vibrate = vibrate;
     }
 
+    public long[] getVibrateCustom() {
+        return vibrateCustom;
+    }
+
+    public void setVibrateCustom(long[] vibrateCustom) {
+        this.vibrateCustom = vibrateCustom;
+    }
+
     public long[] getVibratePattern() {
         return vibrate.getPattern();
     }
@@ -203,7 +236,11 @@ public class NotificationContent {
     }
 
     public enum NotificationTheme {
-        DARK, LIGHT
+        DARK, LIGHT, SYSTEM
+    }
+
+    public enum NotificationThemeText {
+        DARK_TEXT, LIGHT_TEXT
     }
 
     public enum NotificationPriority {
@@ -294,6 +331,68 @@ public class NotificationContent {
                     return new long[]{0, 100, 200, 100, 100, 100, 100, 100, 200, 100, 500, 100, 225, 100};
             }
             return new long[]{1000, 1000};
+        }
+    }
+
+    public enum NotificationLights {
+        SHORT_ON_SHORT_OFF,
+        SHORT_ON_MEDIUM_OFF,
+        SHORT_ON_LONG_OFF,
+        MEDIUM_ON_SHORT_OFF,
+        MEDIUM_ON_MEDIUM_OFF,
+        MEDIUM_ON_LONG_OFF,
+        LONG_ON_SHORT_OFF,
+        LONG_ON_MEDIUM_OFF,
+        LONG_ON_LONG_OFF;
+
+        public String getName() {
+            switch(this) {
+                case SHORT_ON_SHORT_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.short_on) + " : " + AppBase.getContext().getResources().getString(R.string.short_off);
+                case SHORT_ON_MEDIUM_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.short_on) + " : " + AppBase.getContext().getResources().getString(R.string.medium_off);
+                case SHORT_ON_LONG_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.short_on) + " : " + AppBase.getContext().getResources().getString(R.string.long_off);
+                case MEDIUM_ON_SHORT_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.medium_on) + " : " + AppBase.getContext().getResources().getString(R.string.short_off);
+                case MEDIUM_ON_MEDIUM_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.medium_on) + " : " + AppBase.getContext().getResources().getString(R.string.medium_off);
+                case MEDIUM_ON_LONG_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.medium_on) + " : " + AppBase.getContext().getResources().getString(R.string.long_off);
+                case LONG_ON_SHORT_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.long_on) + " : " + AppBase.getContext().getResources().getString(R.string.short_off);
+                case LONG_ON_MEDIUM_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.long_on) + " : " + AppBase.getContext().getResources().getString(R.string.medium_off);
+                case LONG_ON_LONG_OFF:
+                    return AppBase.getContext().getResources().getString(R.string.long_on) + " : " + AppBase.getContext().getResources().getString(R.string.long_off);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.short_on) + " : " + AppBase.getContext().getResources().getString(R.string.short_off);
+            }
+        }
+
+        public int[] getPattern() {
+            switch(this) {
+                case SHORT_ON_SHORT_OFF:
+                    return new int[]{500, 500};
+                case SHORT_ON_MEDIUM_OFF:
+                    return new int[]{500, 1500};
+                case SHORT_ON_LONG_OFF:
+                    return new int[]{500, 2500};
+                case MEDIUM_ON_SHORT_OFF:
+                    return new int[]{1500, 500};
+                case MEDIUM_ON_MEDIUM_OFF:
+                    return new int[]{1500, 1500};
+                case MEDIUM_ON_LONG_OFF:
+                    return new int[]{1500, 2500};
+                case LONG_ON_SHORT_OFF:
+                    return new int[]{2500, 500};
+                case LONG_ON_MEDIUM_OFF:
+                    return new int[]{2500, 1500};
+                case LONG_ON_LONG_OFF:
+                    return new int[]{2500, 2500};
+                default:
+                    return new int[]{1500, 1500};
+            }
         }
     }
 

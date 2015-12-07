@@ -1,58 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/item_size" />
+
     <ListView
         android:id="@+id/list"
+        android:layout_below="@+id/title"
+        android:layout_above="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/buttons"
+        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_add"
-        android:layout_alignParentTop="true" />
-
-    <Button
-        android:background="?android:attr/selectableItemBackground"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:id="@+id/btn_add"
-        android:layout_above="@+id/btn_cancel"
-        android:layout_width="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center_vertical|left"
-        android:gravity="center"
-        android:text="@string/add_item"
-        android:textSize="@dimen/item_small_size" />
-
-    <Button
-        android:background="?android:attr/selectableItemBackground"
-        android:textColor="?attr/colorAccentText"
-        android:id="@+id/btn_cancel"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/bottom_space"
-        android:layout_gravity="center"
-        android:layout_toLeftOf="@+id/btn_ok"
-        android:gravity="center"
-        android:text="@string/cancel"
-        android:textSize="@dimen/item_small_size" />
-
-    <Button
-        android:background="?android:attr/selectableItemBackground"
-        android:textColor="?attr/colorAccentText"
-        android:id="@+id/btn_ok"
-        android:layout_width="75dp"
-        android:layout_height="40dp"
-        android:layout_above="@+id/bottom_space"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/okay"
-        android:textSize="@dimen/item_small_size" />
-
-    <android.widget.Space
-        android:id="@+id/bottom_space"
-        android:layout_width="match_parent"
-        android:layout_height="8dp"
-        android:layout_alignParentBottom="true" />
+        layout="@layout/dialog_buttons" />
 
 </RelativeLayout>

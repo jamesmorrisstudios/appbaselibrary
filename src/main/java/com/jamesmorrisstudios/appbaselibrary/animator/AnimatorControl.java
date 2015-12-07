@@ -20,8 +20,19 @@ import android.animation.Animator;
 import android.animation.ObjectAnimator;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.view.animation.FastOutLinearInInterpolator;
+import android.support.v4.view.animation.FastOutSlowInInterpolator;
+import android.support.v4.view.animation.LinearOutSlowInInterpolator;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AnticipateInterpolator;
+import android.view.animation.AnticipateOvershootInterpolator;
+import android.view.animation.BounceInterpolator;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
+import android.view.animation.OvershootInterpolator;
 
 /**
  * Static animator handler. This class creates many of the common ObjectAnimator use cases.
@@ -29,6 +40,81 @@ import android.view.animation.LinearInterpolator;
  * Created by James on 12/7/2014.
  */
 public final class AnimatorControl {
+
+    public enum InterpolatorType {
+        /**
+         * An interpolator where the rate of change starts and ends slowly but accelerates through the middle.
+         */
+        ACCELERLATE_DECELERATE,
+        /**
+         * An interpolator where the rate of change starts out slowly and and then accelerates.
+         */
+        ACCELERATE,
+        /**
+         * An interpolator where the change starts backward then flings forward.
+         */
+        ANTICIPATE,
+        /**
+         * An interpolator where the change starts backward then flings forward and overshoots the target value and finally goes back to the final value.
+         */
+        ANTICIPATE_OVERSHOOT,
+        /**
+         * An interpolator where the change bounces at the end.
+         */
+        BOUNCE,
+        /**
+         * An interpolator where the rate of change starts out quickly and and then decelerates.
+         */
+        DECELERATE,
+        /**
+         * An interpolator which accelerates fast and keeps accelerating until the end.
+         */
+        FAST_OUT_LINEAR_IN,
+        /**
+         * An interpolator which accelerates fast but decelerates slowly.
+         */
+        FAST_OUT_SLOW_IN,
+        /**
+         * An interpolator where the rate of change is constant
+         */
+        LINEAR,
+        /**
+         * An interpolator which starts with a peak non-zero velocity and decelerates slowly.
+         */
+        LINEAR_OUT_SLOW_IN,
+        /**
+         * An interpolator where the change flings forward and overshoots the last value then comes back.
+         */
+        OVERSHOOT
+    }
+
+    private static Interpolator getInterpolator(InterpolatorType interpolatorType) {
+        switch(interpolatorType) {
+            case ACCELERLATE_DECELERATE:
+                return new AccelerateDecelerateInterpolator();
+            case ACCELERATE:
+                return new AccelerateInterpolator();
+            case ANTICIPATE:
+                return new AnticipateInterpolator();
+            case ANTICIPATE_OVERSHOOT:
+                return new AnticipateOvershootInterpolator();
+            case BOUNCE:
+                return new BounceInterpolator();
+            case DECELERATE:
+                return new DecelerateInterpolator();
+            case FAST_OUT_LINEAR_IN:
+                return new FastOutLinearInInterpolator();
+            case FAST_OUT_SLOW_IN:
+                return new FastOutSlowInInterpolator();
+            case LINEAR:
+                return new LinearInterpolator();
+            case LINEAR_OUT_SLOW_IN:
+                return new LinearOutSlowInInterpolator();
+            case OVERSHOOT:
+                return new OvershootInterpolator();
+        }
+        return new LinearInterpolator();
+    }
 
     /**
      * Internal generic object animator builder
@@ -42,9 +128,9 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    private static ObjectAnimator buildAnimatorLinear(@NonNull String field, @NonNull View view, float start, float end, long duration, long startDelay) {
+    private static ObjectAnimator buildAnimator(@NonNull String field, @NonNull View view, float start, float end, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, field, start, end);
-        anim.setInterpolator(new LinearInterpolator());
+        anim.setInterpolator(getInterpolator(interpolatorType));
         if (duration != 0) {
             anim.setDuration(duration);
         }
@@ -63,8 +149,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator translateX(@NonNull View view, float startX, float endX, long duration, long startDelay) {
-        return buildAnimatorLinear("translationX", view, startX, endX, duration, startDelay);
+    public static ObjectAnimator translateX(@NonNull View view, float startX, float endX, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("translationX", view, startX, endX, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -75,8 +161,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void translateXAutoStart(@NonNull View view, float startX, float endX, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = translateX(view, startX, endX, duration, startDelay);
+    public static void translateXAutoStart(@NonNull View view, float startX, float endX, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = translateX(view, startX, endX, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }
@@ -92,8 +178,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator translateY(@NonNull View view, float startY, float endY, long duration, long startDelay) {
-        return buildAnimatorLinear("translationY", view, startY, endY, duration, startDelay);
+    public static ObjectAnimator translateY(@NonNull View view, float startY, float endY, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("translationY", view, startY, endY, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -104,8 +190,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void translateYAutoStart(@NonNull View view, float startY, float endY, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = translateY(view, startY, endY, duration, startDelay);
+    public static void translateYAutoStart(@NonNull View view, float startY, float endY, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = translateY(view, startY, endY, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }
@@ -121,8 +207,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator rotation(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay) {
-        return buildAnimatorLinear("rotation", view, startAngle, endAngle, duration, startDelay);
+    public static ObjectAnimator rotation(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("rotation", view, startAngle, endAngle, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -133,8 +219,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void rotationAutoStart(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = rotation(view, startAngle, endAngle, duration, startDelay);
+    public static void rotationAutoStart(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = rotation(view, startAngle, endAngle, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }
@@ -150,8 +236,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator scaleX(@NonNull View view, float startScale, float endScale, long duration, long startDelay) {
-        return buildAnimatorLinear("scaleX", view, startScale, endScale, duration, startDelay);
+    public static ObjectAnimator scaleX(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("scaleX", view, startScale, endScale, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -162,8 +248,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void scaleXAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = scaleX(view, startScale, endScale, duration, startDelay);
+    public static void scaleXAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = scaleX(view, startScale, endScale, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }
@@ -179,8 +265,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator scaleY(@NonNull View view, float startScale, float endScale, long duration, long startDelay) {
-        return buildAnimatorLinear("scaleY", view, startScale, endScale, duration, startDelay);
+    public static ObjectAnimator scaleY(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("scaleY", view, startScale, endScale, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -191,8 +277,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void scaleYAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = scaleY(view, startScale, endScale, duration, startDelay);
+    public static void scaleYAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = scaleY(view, startScale, endScale, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }
@@ -208,8 +294,8 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator alpha(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay) {
-        return buildAnimatorLinear("alpha", view, startAlpha, endAlpha, duration, startDelay);
+    public static ObjectAnimator alpha(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+        return buildAnimator("alpha", view, startAlpha, endAlpha, duration, startDelay, interpolatorType);
     }
 
     /**
@@ -220,8 +306,8 @@ public final class AnimatorControl {
      * @param startDelay       The delay before starting the animation in milliseconds
      * @param animatorListener The listener for animation callbacks
      */
-    public static void alphaAutoStart(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay, @Nullable Animator.AnimatorListener animatorListener) {
-        ObjectAnimator anim = buildAnimatorLinear("alpha", view, startAlpha, endAlpha, duration, startDelay);
+    public static void alphaAutoStart(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+        ObjectAnimator anim = buildAnimator("alpha", view, startAlpha, endAlpha, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
         }

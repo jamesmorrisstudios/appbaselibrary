@@ -21,6 +21,7 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.math.UtilsMath;
 
 /**
  * Time item for scheduling. This assumes 24 hour time. Adjust to AM, PM as needed
@@ -33,6 +34,11 @@ public final class TimeItem implements Comparable<TimeItem> {
     @SerializedName("minute")
     public int minute;
 
+    public TimeItem() {
+        this.hour = 0;
+        this.minute = 0;
+    }
+
     /**
      * @param hour   Starting hour
      * @param minute Starting minute
@@ -40,11 +46,32 @@ public final class TimeItem implements Comparable<TimeItem> {
     public TimeItem(int hour, int minute) {
         this.hour = hour;
         this.minute = minute;
+        validateItem();
     }
 
     public TimeItem(TimeItem timeItem) {
         this.hour = timeItem.hour;
         this.minute = timeItem.minute;
+    }
+
+    public TimeItem(long timeMillis) {
+        setTimeFromMillis(timeMillis);
+    }
+
+    public long getTimeMillis() {
+        return UtilsTime.getTimeMillis(this);
+    }
+
+    public void setTimeFromMillis(long timeMillis) {
+        TimeItem timeItem = UtilsTime.getTime(timeMillis);
+        this.hour = timeItem.hour;
+        this.minute = timeItem.minute;
+        validateItem();
+    }
+
+    public final void validateItem() {
+        this.hour = UtilsMath.inBoundsInt(0, 23, this.hour);
+        this.minute = UtilsMath.inBoundsInt(0, 59, this.minute);
     }
 
     /**
@@ -153,4 +180,5 @@ public final class TimeItem implements Comparable<TimeItem> {
         //Hour, and minute equal at this point
         return 0;
     }
+
 }

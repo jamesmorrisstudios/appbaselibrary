@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 
-import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.fragments.CustomFilePickerFragment;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
 import com.nononsenseapps.filepicker.FilePickerActivity;
@@ -58,7 +57,10 @@ public class CustomFilePickerActivity extends FilePickerActivity {
             final String startPath, final int mode, final boolean allowMultiple,
             final boolean allowCreateDir) {
         currentFragment = new CustomFilePickerFragment();
-        currentFragment.setExtension(extension);
+        if(extension != null) {
+            String[] extensions = extension.split(",");
+            currentFragment.setExtension(extensions);
+        }
         // startPath is allowed to be null. In that case, default folder should be SD-card and not "/"
         currentFragment.setArgs(startPath != null ? startPath : Environment.getExternalStorageDirectory().getPath(),
                 mode, allowMultiple, allowCreateDir);

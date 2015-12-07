@@ -25,11 +25,16 @@ import com.google.gson.annotations.SerializedName;
  * <p/>
  * Created by James on 4/28/2015.
  */
-public final class DateTimeItem {
+public final class DateTimeItem implements Comparable<DateTimeItem> {
     @SerializedName("dateItem")
-    public final DateItem dateItem;
+    public DateItem dateItem;
     @SerializedName("timeItem")
-    public final TimeItem timeItem;
+    public TimeItem timeItem;
+
+    public DateTimeItem() {
+        this.dateItem = new DateItem();
+        this.timeItem = new TimeItem();
+    }
 
     /**
      * @param dateItem Date Item
@@ -43,6 +48,34 @@ public final class DateTimeItem {
     public DateTimeItem(@NonNull DateTimeItem dateTimeItem) {
         this.dateItem = new DateItem(dateTimeItem.dateItem);
         this.timeItem = new TimeItem(dateTimeItem.timeItem);
+    }
+
+    public DateTimeItem(long timeMillis) {
+        setDateTimeFromMillis(timeMillis);
+    }
+
+    public long getTimeMillis() {
+        return UtilsTime.getTimeMillis(this);
+    }
+
+    public void setDateTimeFromMillis(long timeMillis) {
+        DateTimeItem dateTime = UtilsTime.getDateTime(timeMillis);
+        this.dateItem = dateTime.dateItem;
+        this.timeItem = dateTime.timeItem;
+        validateItem();
+    }
+
+    public final void validateItem() {
+        if(dateItem == null) {
+            dateItem = new DateItem();
+        } else {
+            dateItem.validateItem();
+        }
+        if(timeItem == null) {
+            timeItem = new TimeItem();
+        } else {
+            timeItem.validateItem();
+        }
     }
 
     /**
@@ -73,6 +106,19 @@ public final class DateTimeItem {
             return new DateTimeItem(new DateItem(0, 0, 0), new TimeItem(0, 0));
         }
         return new DateTimeItem(DateItem.decodeFromString(vals[0]), TimeItem.decodeFromString(vals[1]));
+    }
+
+    //-1 is this is before another
+    //1 is this is after another
+    //0 if the same
+    @Override
+    public int compareTo(@NonNull DateTimeItem another) {
+        int compDate = this.dateItem.compareTo(another.dateItem);
+        int compTime = this.timeItem.compareTo(another.timeItem);
+        if(compDate != 0) {
+            return compDate;
+        }
+        return compTime;
     }
 
 }

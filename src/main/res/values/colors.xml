@@ -82,6 +82,10 @@
     <color name="p_dark_grey_light">#303030</color>
     <color name="p_dark_grey_dark">#000000</color>
 
+    <color name="p_white">#F5F5F5</color>
+    <color name="p_white_light">#FAFAFA</color>
+    <color name="p_white_dark">#E0E0E0</color>
+
     <!-- Accent colors 16 options -->
     <color name="a_red">#FF1744</color>
     <color name="a_red_light">#FF5252</color>
@@ -166,12 +170,20 @@
     <color name="textDarkDivider">#1E000000</color>
 
     <!-- Card backgrounds -->
-    <color name="cardBackgroundDark">#424242</color>
     <color name="cardBackgroundLight">#FEFEFE</color>
+    <color name="cardBackgroundGrey">#E0E0E0</color>
+    <color name="cardBackgroundDark">#424242</color>
+    <color name="cardBackgroundLightTransparent">#50FEFEFE</color>
+    <color name="cardBackgroundGreyTransparent">#50E0E0E0</color>
+    <color name="cardBackgroundDarkTransparent">#80424242</color>
 
     <!-- Backgrounds -->
     <color name="backgroundLight">#FAFAFA</color>
+    <color name="backgroundGrey">#F5F5F5</color>
     <color name="backgroundDark">#303030</color>
+    <color name="backgroundLightTransparent">#50FAFAFA</color>
+    <color name="backgroundGreyTransparent">#50F5F5F5</color>
+    <color name="backgroundDarkTransparent">#80303030</color>
 
     <!-- Tint -->
     <color name="tintColorLight">@color/iconDark</color>

@@ -17,12 +17,13 @@
 package com.jamesmorrisstudios.appbaselibrary.time;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.StringRes;
 import android.text.format.DateFormat;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
 
@@ -32,6 +33,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Time related utility functions
@@ -147,6 +149,46 @@ public final class UtilsTime {
         return calendar;
     }
 
+    public static Calendar getCalendar(long timeMillis) {
+        Calendar calendar = getCalendar();
+        calendar.setTimeInMillis(timeMillis);
+        return calendar;
+    }
+
+    public static long getTimeMillis(Calendar calendar) {
+        return calendar.getTimeInMillis();
+    }
+
+    public static long getTimeMillis(DateItem date) {
+        return getCalendar(date).getTimeInMillis();
+    }
+
+    public static long getTimeMillis(TimeItem timeItem) {
+        return getCalendar(timeItem).getTimeInMillis();
+    }
+
+    public static long getTimeMillis(DateTimeItem dateTime) {
+        return getCalendar(dateTime).getTimeInMillis();
+    }
+
+    public static DateTimeItem getDateTime(long timeMillis) {
+        Calendar calendar = getCalendar();
+        calendar.setTimeInMillis(timeMillis);
+        return getDateTime(calendar);
+    }
+
+    public static DateItem getDate(long timeMillis) {
+        Calendar calendar = getCalendar();
+        calendar.setTimeInMillis(timeMillis);
+        return getDate(calendar);
+    }
+
+    public static TimeItem getTime(long timeMillis) {
+        Calendar calendar = getCalendar();
+        calendar.setTimeInMillis(timeMillis);
+        return getTime(calendar);
+    }
+
     public static Calendar getCalendar(DateTimeItem dateTime) {
         Calendar calendar = getCalendar();
         calendar.set(Calendar.YEAR, dateTime.dateItem.year);
@@ -170,17 +212,6 @@ public final class UtilsTime {
         calendar.set(Calendar.HOUR_OF_DAY, time.hour);
         calendar.set(Calendar.MINUTE, time.minute);
         return calendar;
-    }
-
-    public static long getTimeMillis(DateItem date) {
-        Calendar calendar = getCalendar(date);
-        calendar.set(Calendar.HOUR_OF_DAY, 0);
-        calendar.set(Calendar.MINUTE, 0);
-        return calendar.getTimeInMillis();
-    }
-
-    public static long getTimeMillis(DateTimeItem dateTime) {
-        return getCalendar(dateTime).getTimeInMillis();
     }
 
     public static Date calendarToDate(Calendar calendar) {
@@ -416,6 +447,18 @@ public final class UtilsTime {
         return weekLetter;
     }
 
+    @NonNull
+    public static String getTimeFormatted(@NonNull DateTimeItem dateTime) {
+        Calendar calendar = getCalendar(dateTime);
+        return DateFormat.getTimeFormat(AppBase.getContext()).format(calendar.getTime());
+    }
+
+    @NonNull
+    public static String getTimeFormatted(@NonNull TimeItem timeItem) {
+        Calendar calendar = getCalendar(timeItem);
+        return DateFormat.getTimeFormat(AppBase.getContext()).format(calendar.getTime());
+    }
+
     /**
      * Returns the current date formatted to the users locale
      *
@@ -424,10 +467,7 @@ public final class UtilsTime {
      */
     @NonNull
     public static String getLongDateFormatted(@NonNull DateItem date) {
-        Calendar calendar = getCalendar();
-        calendar.set(Calendar.YEAR, date.year);
-        calendar.set(Calendar.MONTH, date.month);
-        calendar.set(Calendar.DAY_OF_MONTH, date.dayOfMonth);
+        Calendar calendar = getCalendar(date);
         return DateFormat.getLongDateFormat(AppBase.getContext()).format(calendar.getTime());
     }
 
@@ -440,7 +480,19 @@ public final class UtilsTime {
     @NonNull
     public static String getLongDateTimeFormatted(@NonNull DateTimeItem dateTime) {
         Calendar calendar = getCalendar(dateTime);
-        return DateFormat.getLongDateFormat(AppBase.getContext()).format(calendar.getTime());
+        return DateFormat.getLongDateFormat(AppBase.getContext()).format(calendar.getTime()) + " " + DateFormat.getTimeFormat(AppBase.getContext()).format(calendar.getTime());
+    }
+
+    @NonNull
+    public static String getMediumDateFormatted(@NonNull DateItem date) {
+        Calendar calendar = getCalendar(date);
+        return DateFormat.getMediumDateFormat(AppBase.getContext()).format(calendar.getTime());
+    }
+
+    @NonNull
+    public static String getMediumDateTimeFormatted(@NonNull DateTimeItem dateTime) {
+        Calendar calendar = getCalendar(dateTime);
+        return DateFormat.getMediumDateFormat(AppBase.getContext()).format(calendar.getTime()) + " " + DateFormat.getTimeFormat(AppBase.getContext()).format(calendar.getTime());
     }
 
     /**
@@ -451,10 +503,7 @@ public final class UtilsTime {
      */
     @NonNull
     public static String getDateFormatted(@NonNull DateItem date) {
-        Calendar calendar = getCalendar();
-        calendar.set(Calendar.YEAR, date.year);
-        calendar.set(Calendar.MONTH, date.month);
-        calendar.set(Calendar.DAY_OF_MONTH, date.dayOfMonth);
+        Calendar calendar = getCalendar(date);
         return DateFormat.getDateFormat(AppBase.getContext()).format(calendar.getTime());
     }
 
@@ -467,26 +516,128 @@ public final class UtilsTime {
     @NonNull
     public static String getDateTimeFormatted(@NonNull DateTimeItem dateTime) {
         Calendar calendar = getCalendar(dateTime);
-        return DateFormat.getDateFormat(AppBase.getContext()).format(calendar.getTime());
+        return DateFormat.getDateFormat(AppBase.getContext()).format(calendar.getTime()) + " " + DateFormat.getTimeFormat(AppBase.getContext()).format(calendar.getTime());
     }
 
     @NonNull
-    public static String getShortDateTimeFormatted(@NonNull DateTimeItem dateTime) {
-        Calendar calendar = getCalendar(dateTime);
-        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss", Locale.US);
-        return sdf.format(calendar.getTime());
-    }
-
-    @NonNull
-    public static String getShortDateFormatted(@NonNull DateItem date) {
+    public static String getUniversalDateFormatted(@NonNull DateItem date) {
         Calendar calendar = getCalendar(date);
         SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy", Locale.US);
         return sdf.format(calendar.getTime());
     }
 
+    @NonNull
+    public static String getUniversalDateTimeFormatted(@NonNull DateTimeItem dateTime) {
+        Calendar calendar = getCalendar(dateTime);
+        SimpleDateFormat sdf = new SimpleDateFormat("MM-dd-yyyy HH:mm:ss", Locale.US);
+        return sdf.format(calendar.getTime());
+    }
+
+    /**
+     * Convert a millisecond duration to a string format
+     *
+     * @param millis A duration to convert to a string form
+     * @return A string of the form "X Days Y Hours Z Minutes A Seconds".
+     */
+    @NonNull
+    public static String getFormattedDuration(long millis) {
+        if (millis < 0) {
+            throw new IllegalArgumentException("Duration must be greater than zero!");
+        }
+
+        long days = TimeUnit.MILLISECONDS.toDays(millis);
+        millis -= TimeUnit.DAYS.toMillis(days);
+        long hours = TimeUnit.MILLISECONDS.toHours(millis);
+        millis -= TimeUnit.HOURS.toMillis(hours);
+        long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
+        millis -= TimeUnit.MINUTES.toMillis(minutes);
+        long seconds = TimeUnit.MILLISECONDS.toSeconds(millis);
+
+        StringBuilder sb = new StringBuilder(64);
+        if (days > 0) {
+            sb.append(days);
+            sb.append(days == 1 ? getStringSpaced(R.string.day_singular) : getStringSpaced(R.string.day_plural));
+        }
+        if (hours > 0) {
+            sb.append(hours);
+            sb.append(hours == 1 ? getStringSpaced(R.string.hour_singular) : getStringSpaced(R.string.hour_plural));
+        }
+        if (minutes > 0) {
+            sb.append(minutes);
+            sb.append(minutes == 1 ? getStringSpaced(R.string.minute_singular) : getStringSpaced(R.string.minute_plural));
+        }
+        if (seconds > 0) {
+            sb.append(seconds);
+            sb.append(seconds == 1 ? getStringSpaced(R.string.second_singular) : getStringSpaced(R.string.second_plural));
+        }
+        return (sb.toString());
+    }
+
+    @NonNull
+    public static String getFormattedDurationCompact(long millis) {
+        return String.format("%02d:%02d:%02d",
+                TimeUnit.MILLISECONDS.toMinutes(millis),
+                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)),
+                millis - TimeUnit.SECONDS.toMillis(TimeUnit.MILLISECONDS.toSeconds(millis))
+        );
+
+        /*
+    TimeUnit.MILLISECONDS.toHours(millis),
+                TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
+                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
+     */
+    }
+
+    /**
+     * Internal helper for the formatted duration function
+     *
+     * @param stringId String id
+     * @return The string with spaces around it
+     */
+    @NonNull
+    private static String getStringSpaced(@StringRes int stringId) {
+        return " " + AppBase.getContext().getResources().getString(stringId) + " ";
+    }
+
     public static DateTimeItem getDateTimePlusMinutes(@NonNull DateTimeItem dateTime, int minutes) {
         Calendar calendar = getCalendar(dateTime);
         calendar.add(Calendar.MINUTE, minutes);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addMinute(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.MINUTE, amount);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addHour(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.HOUR_OF_DAY, amount);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addDayOfYear(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.DAY_OF_YEAR, amount);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addWeekOfYear(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.WEEK_OF_YEAR, amount);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addMonthOfYear(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.MONTH, amount);
+        return getDateTime(calendar);
+    }
+
+    public static DateTimeItem addYear(DateTimeItem dateTimeItem, int amount) {
+        Calendar calendar = getCalendar(dateTimeItem);
+        calendar.add(Calendar.YEAR, amount);
         return getDateTime(calendar);
     }
 
@@ -541,10 +692,7 @@ public final class UtilsTime {
         if(dateItem.compareTo(lastDayOfMonth) > 0) {
             return false;
         }
-        if(dateItem.compareTo(weekBeforeLastDay) <= 0) {
-            return false;
-        }
-        return true;
+        return dateItem.compareTo(weekBeforeLastDay) > 0;
     }
 
     public static boolean isLastDayOfWeekInMonth(DateItem dateItem) {
@@ -564,10 +712,6 @@ public final class UtilsTime {
         } while(calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH) == 1);
         return calendar.get(Calendar.DAY_OF_WEEK_IN_MONTH);
     }
-
-
-
-
 
     public static int getDayOfWeek() {
         return getDayOfWeek(getDateNow());
@@ -701,6 +845,147 @@ public final class UtilsTime {
         return newItems;
     }
 
+    /**
+     * Number of items should not exceed range/5
+     * @param range range in minutes
+     * @param wiggle 0 - 1.0
+     * @param numberItems number of items to generate
+     * @return
+     */
+    @NonNull
+    public static int[] getRandomTimes(int range, float wiggle, int numberItems) {
+        int itemSplit = Math.round((range * 1.0f) / numberItems);
+        int[] values = new int[numberItems];
+        for (int i = 0; i < values.length; i++) {
+            values[i] = Math.round((i * 1.0f) / (numberItems) * range) + itemSplit / 2 + Math.round((itemSplit * wiggle) * (Utils.rand.nextFloat() - 0.5f));
+            if (i > 0) {
+                values[i] = Math.min(Math.max(values[i], values[i - 1] + 2), range);
+            }
+        }
+        return values;
+    }
+
+    @NonNull
+    public static TimeItem getTimeInDay(int time, @NonNull TimeItem startTime, @NonNull TimeItem endTime) {
+        int compare = startTime.compareTo(endTime);
+        if(compare == 0) {
+            return new TimeItem(0, 0);
+        }
+        //range is 0 to 1439 (23:59)
+        int startMinutes = UtilsTime.timeToMinutes(startTime);
+        int endMinutes = timeToMinutes(endTime);
+
+        if(compare > 0) {
+            //Start time is after end time. We run centered around midnight. non standard
+            if(time <= endMinutes) {
+                return minutesToTimeItem(time);
+            } else {
+                return minutesToTimeItem(time + startMinutes - endMinutes);
+            }
+        } else if(compare < 0) {
+            //Start time is before end time. This is normal difference work here
+            return minutesToTimeItem(time + startMinutes);
+        }
+        return new TimeItem(0, 0);
+    }
+
+    @NonNull
+    public static DateTimeItem getOldestDateTime(@NonNull DateTimeItem firstDateTime, @NonNull DateTimeItem secondDateTime) {
+        int compare = firstDateTime.compareTo(secondDateTime);
+        if(compare <= 0) {
+            return firstDateTime;
+        }
+        return secondDateTime;
+    }
+
+    @NonNull
+    public static DateTimeItem getNewestDateTime(@NonNull DateTimeItem firstDateTime, @NonNull DateTimeItem secondDateTime) {
+        int compare = firstDateTime.compareTo(secondDateTime);
+        if(compare >= 0) {
+            return firstDateTime;
+        }
+        return secondDateTime;
+    }
+
+    @NonNull
+    public static DateItem getOldestDate(@NonNull DateItem firstDate, @NonNull DateItem secondDate) {
+        int compare = firstDate.compareTo(secondDate);
+        if(compare <= 0) {
+            return firstDate;
+        }
+        return secondDate;
+    }
+
+    @NonNull
+    public static DateItem getNewestDate(@NonNull DateItem firstDate, @NonNull DateItem secondDate) {
+        int compare = firstDate.compareTo(secondDate);
+        if(compare >= 0) {
+            return firstDate;
+        }
+        return secondDate;
+    }
+
+    @NonNull
+    public static TimeItem getOldestTime(@NonNull TimeItem firstTime, @NonNull TimeItem secondTime) {
+        int compare = firstTime.compareTo(secondTime);
+        if(compare <= 0) {
+            return firstTime;
+        }
+        return secondTime;
+    }
+
+    @NonNull
+    public static TimeItem getNewestTIme(@NonNull TimeItem firstTime, @NonNull TimeItem secondTime) {
+        int compare = firstTime.compareTo(secondTime);
+        if(compare <= 0) {
+            return firstTime;
+        }
+        return secondTime;
+    }
+
+    public static int getMinutesPerDay(@NonNull TimeItem startTime, @NonNull TimeItem endTime) {
+        int compare = startTime.compareTo(endTime);
+        if(compare == 0) {
+            return 0;
+        }
+        //range is 0 to 1439 (23:59)
+        int startMinutes = timeToMinutes(startTime);
+        int endMinutes = timeToMinutes(endTime);
+
+        if(compare > 0) {
+            //Start time is after end time. We run centered around midnight. non standard
+            return endMinutes + 1440 - startMinutes;
+        } else if(compare < 0) {
+            //Start time is before end time. This is normal difference work here
+            return endMinutes - startMinutes;
+        }
+        return 0;
+    }
+
+    /**
+     * Converts a time reminder to minutes value
+     *
+     * @param time Time reminder
+     * @return Value in minutes
+     */
+    public static int timeToMinutes(@NonNull TimeItem time) {
+        return time.hour * 60 + time.minute;
+    }
+
+    /**
+     * Converts minutes to time reminder
+     *
+     * @param totalMinutes Minutes
+     * @return Time reminder
+     */
+    public static TimeItem minutesToTimeItem(int totalMinutes) {
+        int hour = totalMinutes / 60;
+        int minutes = totalMinutes % 60;
+        return new TimeItem(hour, minutes);
+    }
+
+
+
     public enum MonthsOfYear {
         JANUARY,
         FEBRUARY,
@@ -718,62 +1003,62 @@ public final class UtilsTime {
         public String getName() {
             switch(this) {
                 case JANUARY:
-                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 0, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case FEBRUARY:
-                    return getCalendar(new DateItem(2000, 2, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 1, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case MARCH:
-                    return getCalendar(new DateItem(2000, 3, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 2, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case APRIL:
-                    return getCalendar(new DateItem(2000, 4, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 3, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case MAY:
-                    return getCalendar(new DateItem(2000, 5, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 4, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case JUNE:
-                    return getCalendar(new DateItem(2000, 6, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 5, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case JULY:
-                    return getCalendar(new DateItem(2000, 7, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 6, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case AUGUST:
-                    return getCalendar(new DateItem(2000, 8, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 7, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case SEPTEMBER:
-                    return getCalendar(new DateItem(2000, 9, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 8, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case OCTOBER:
-                    return getCalendar(new DateItem(2000, 10, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 9, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case NOVEMBER:
-                    return getCalendar(new DateItem(2000, 11, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 10, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 case DECEMBER:
-                    return getCalendar(new DateItem(2000, 12, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 11, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
                 default:
-                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 0, 1)).getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
             }
         }
 
         public String getNameShort() {
             switch(this) {
                 case JANUARY:
-                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 0, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case FEBRUARY:
-                    return getCalendar(new DateItem(2000, 2, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 1, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case MARCH:
-                    return getCalendar(new DateItem(2000, 3, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 2, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case APRIL:
-                    return getCalendar(new DateItem(2000, 4, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 3, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case MAY:
-                    return getCalendar(new DateItem(2000, 5, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 4, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case JUNE:
-                    return getCalendar(new DateItem(2000, 6, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 5, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case JULY:
-                    return getCalendar(new DateItem(2000, 7, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 6, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case AUGUST:
-                    return getCalendar(new DateItem(2000, 8, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 7, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case SEPTEMBER:
-                    return getCalendar(new DateItem(2000, 9, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 8, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case OCTOBER:
-                    return getCalendar(new DateItem(2000, 10, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 9, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case NOVEMBER:
-                    return getCalendar(new DateItem(2000, 11, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 10, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 case DECEMBER:
-                    return getCalendar(new DateItem(2000, 12, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 11, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
                 default:
-                    return getCalendar(new DateItem(2000, 1, 0)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
+                    return getCalendar(new DateItem(2000, 0, 1)).getDisplayName(Calendar.MONTH, Calendar.SHORT, Locale.getDefault());
             }
         }
     }
@@ -845,54 +1130,5 @@ public final class UtilsTime {
             }
         }
     }
-/*
-    public enum WeekOfMonth {
-        FIRST(1),
-        SECOND(2),
-        THIRD(3),
-        FOURTH(4),
-        FIFTH(5);
-
-        public final int number;
-
-        WeekOfMonth(int number) {
-            this.number = number;
-        }
-
-        public static WeekOfMonth getWeekOfMonth(int number) {
-            switch(number) {
-                case 1:
-                    return WeekOfMonth.FIRST;
-                case 2:
-                    return WeekOfMonth.SECOND;
-                case 3:
-                    return WeekOfMonth.THIRD;
-                case 4:
-                    return WeekOfMonth.FOURTH;
-                case 5:
-                    return WeekOfMonth.FIFTH;
-            }
-            return WeekOfMonth.FIRST;
-        }
-
-        public String getName() {
-            switch(this) {
-                case FIRST:
-                    return AppBase.getContext().getResources().getString(R.string.first);
-                case SECOND:
-                    return AppBase.getContext().getResources().getString(R.string.second);
-                case THIRD:
-                    return AppBase.getContext().getResources().getString(R.string.third);
-                case FOURTH:
-                    return AppBase.getContext().getResources().getString(R.string.fourth);
-                case FIFTH:
-                    return AppBase.getContext().getResources().getString(R.string.fifth);
-                default:
-                    return AppBase.getContext().getResources().getString(R.string.first);
-            }
-        }
-
-    }
-    */
 
 }

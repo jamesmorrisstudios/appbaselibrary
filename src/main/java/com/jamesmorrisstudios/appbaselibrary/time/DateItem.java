@@ -21,9 +21,7 @@ import android.support.annotation.Nullable;
 
 import com.google.gson.annotations.SerializedName;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
-
-import java.util.Calendar;
-import java.util.Date;
+import com.jamesmorrisstudios.appbaselibrary.math.UtilsMath;
 
 /**
  * Date item
@@ -38,6 +36,12 @@ public final class DateItem implements Comparable<DateItem> {
     @SerializedName("dayOfMonth")
     public int dayOfMonth;
 
+    public DateItem() {
+        this.year = 1970;
+        this.month = 0;
+        this.dayOfMonth = 1;
+    }
+
     /**
      * @param year       The year whatever it actually is ex. 2015
      * @param month      The month 0-11
@@ -47,12 +51,35 @@ public final class DateItem implements Comparable<DateItem> {
         this.year = year;
         this.month = month;
         this.dayOfMonth = dayOfMonth;
+        validateItem();
     }
 
     public DateItem(DateItem dateItem) {
         this.year = dateItem.year;
         this.month = dateItem.month;
         this.dayOfMonth = dateItem.dayOfMonth;
+    }
+
+    public DateItem(long timeMillis) {
+        setDateFromMillis(timeMillis);
+    }
+
+    public long getTimeMillis() {
+        return UtilsTime.getTimeMillis(this);
+    }
+
+    public void setDateFromMillis(long timeMillis) {
+        DateItem dateTime = UtilsTime.getDate(timeMillis);
+        this.year = dateTime.year;
+        this.month = dateTime.month;
+        this.dayOfMonth = dateTime.dayOfMonth;
+        validateItem();
+    }
+
+    public final void validateItem() {
+        this.year = UtilsMath.inBoundsInt(1970, 3000, this.year);
+        this.month = UtilsMath.inBoundsInt(0, 11, this.month);
+        this.dayOfMonth = UtilsMath.inBoundsInt(1, 31, this.dayOfMonth);
     }
 
     /**
@@ -127,4 +154,5 @@ public final class DateItem implements Comparable<DateItem> {
         //Year, month, and day equal at this point
         return 0;
     }
+
 }

@@ -3,14 +3,11 @@ package com.jamesmorrisstudios.appbaselibrary.fragments;
 import android.animation.Animator;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -21,13 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
-import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
-import com.jamesmorrisstudios.appbaselibrary.activities.BaseLauncherNoViewActivity;
-import com.jamesmorrisstudios.appbaselibrary.filewriting.FileWriter;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorControl;
 import com.jamesmorrisstudios.appbaselibrary.animator.AnimatorStartEndListener;
+import com.jamesmorrisstudios.appbaselibrary.filewriting.FileWriter;
 
 /**
  * Base app fragment
@@ -204,7 +199,7 @@ public abstract class BaseFragment extends Fragment {
         if (animRunning || fab.getY() == fabShownPos) {
             return;
         }
-        AnimatorControl.translateYAutoStart(fab, (fabHidePos - fabShownPos), 0, 250, 0, new AnimatorStartEndListener() {
+        AnimatorControl.translateYAutoStart(fab, (fabHidePos - fabShownPos), 0, 250, 0, AnimatorControl.InterpolatorType.LINEAR, new AnimatorStartEndListener() {
             @Override
             public void onAnimationStart(Animator animation) {
                 animRunning = true;
@@ -228,7 +223,7 @@ public abstract class BaseFragment extends Fragment {
         if (animRunning || fab.getY() == fabHidePos) {
             return;
         }
-        AnimatorControl.translateYAutoStart(fab, 0, (fabHidePos - fabShownPos), 250, 0, new AnimatorStartEndListener() {
+        AnimatorControl.translateYAutoStart(fab, 0, (fabHidePos - fabShownPos), 250, 0, AnimatorControl.InterpolatorType.LINEAR, new AnimatorStartEndListener() {
             @Override
             public void onAnimationStart(Animator animation) {
                 animRunning = true;
@@ -301,6 +296,11 @@ public abstract class BaseFragment extends Fragment {
     public interface OnUtilListener {
 
         void restartActivity(String page, int ScrollY);
+
+        /**
+         * Go back from this fragment
+         */
+        void goBackToMainFragment();
 
         /**
          * Go back from this fragment

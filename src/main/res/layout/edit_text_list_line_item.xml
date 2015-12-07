@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:imeOptions="actionNone"
-        android:inputType="text|textAutoComplete|textAutoCorrect|textMultiLine"
+        android:inputType="text|textAutoCorrect|textMultiLine|textCapSentences"
         android:maxLines="10"
         android:singleLine="false" />
 
@@ -21,8 +21,8 @@
         android:id="@+id/delete1"
         android:layout_alignParentRight="true"
         android:scaleType="fitCenter"
-        android:tint="@color/textDarkSecondary"
-        android:src="@drawable/ic_clear_white_24dp"
+        android:tint="?attr/colorIconTint"
+        android:src="@drawable/ic_delete_white_24dp"
         android:background="@null"
         android:layout_marginLeft="4dp"
         android:layout_centerVertical="true"

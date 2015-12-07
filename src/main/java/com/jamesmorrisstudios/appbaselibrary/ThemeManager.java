@@ -27,7 +27,7 @@ public class ThemeManager {
     public enum PrimaryColorTheme {
         RED, PINK, PURPLE, DEEP_PURPLE, INDIGO, BLUE, LIGHT_BLUE, CYAN,
         TEAL, GREEN, LIGHT_GREEN, LIME, YELLOW, AMBER, ORANGE, DEEP_ORANGE,
-        BROWN, GREY, BLUE_GREY, DARK_GREY
+        BROWN, GREY, BLUE_GREY, DARK_GREY, WHITE
     }
 
     public static AppTheme getAppTheme() {
@@ -145,6 +145,8 @@ public class ThemeManager {
                 return PrimaryColorTheme.BLUE_GREY;
             case 19:
                 return PrimaryColorTheme.DARK_GREY;
+            case 20:
+                return PrimaryColorTheme.WHITE;
             default:
                 return PrimaryColorTheme.RED;
         }
@@ -196,6 +198,26 @@ public class ThemeManager {
                         return R.style.toolbarPopupDark;
                     case DARK_TEXT:
                         return R.style.toolbarPopupDarkDarkText;
+                }
+        }
+        return -1;
+    }
+
+    public static int getTabLayoutStyle() {
+        switch(getAppTheme()) {
+            case LIGHT:
+                switch(getToolbarTheme()) {
+                    case LIGHT_TEXT:
+                        return R.style.tabLayoutLight;
+                    case DARK_TEXT:
+                        return R.style.tabLayoutLightDarkText;
+                }
+            case DARK:
+                switch(getToolbarTheme()) {
+                    case LIGHT_TEXT:
+                        return R.style.tabLayoutDark;
+                    case DARK_TEXT:
+                        return R.style.tabLayoutDarkDarkText;
                 }
         }
         return -1;
@@ -282,6 +304,8 @@ public class ThemeManager {
                 return R.style.primary_blue_grey;
             case DARK_GREY:
                 return R.style.primary_dark_grey;
+            case WHITE:
+                return R.style.primary_white;
             default:
                 return R.style.primary_red;
         }

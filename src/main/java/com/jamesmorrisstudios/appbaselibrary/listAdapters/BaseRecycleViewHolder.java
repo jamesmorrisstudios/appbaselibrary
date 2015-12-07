@@ -31,7 +31,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
     //Click listener
     private cardClickListener mListener;
     //Type of view. header or normal
-    private boolean isHeader, isDummyItem;
+    private boolean isHeader;
 
     /**
      * Constructor
@@ -39,17 +39,14 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
      * @param view      Parent view
      * @param mListener Click listener. Null if none desired
      */
-    public BaseRecycleViewHolder(@NonNull View view, boolean isHeader, boolean isDummyItem, @Nullable cardClickListener mListener) {
+    public BaseRecycleViewHolder(@NonNull View view, boolean isHeader, @Nullable cardClickListener mListener) {
         super(view);
         this.isHeader = isHeader;
-        this.isDummyItem = isDummyItem;
         this.mListener = mListener;
-        if(!isDummyItem) {
-            if (isHeader) {
-                initHeader(view);
-            } else {
-                initItem(view);
-            }
+        if (isHeader) {
+            initHeader(view);
+        } else {
+            initItem(view);
         }
     }
 
@@ -81,12 +78,10 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
      * @param data Data to bind
      */
     public void bindItem(@NonNull final BaseRecycleContainer data, boolean expanded) {
-        if(!isDummyItem) {
-            if (isHeader) {
-                bindHeader(data.getHeader(), expanded);
-            } else {
-                bindItem(data.getItem(), expanded);
-            }
+        if (isHeader) {
+            bindHeader(data.getHeader(), expanded);
+        } else {
+            bindItem(data.getItem(), expanded);
         }
     }
 

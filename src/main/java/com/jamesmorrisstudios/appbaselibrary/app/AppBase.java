@@ -20,7 +20,6 @@ import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
 
 /**
@@ -30,6 +29,7 @@ import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
  */
 public class AppBase extends Application {
     private static AppBase instance;
+    private boolean coldLaunch = true;
 
     /**
      * Gets the Application level Context.
@@ -69,8 +69,17 @@ public class AppBase extends Application {
     public final void applyTheme() {
         setTheme(ThemeManager.getAppStyle());
         setTheme(ThemeManager.getToolbarStyle());
+        setTheme(ThemeManager.getTabLayoutStyle());
         setTheme(ThemeManager.getAccentColorStyle());
         setTheme(ThemeManager.getPrimaryColorStyle());
+    }
+
+    public final boolean isColdLaunch() {
+        return coldLaunch;
+    }
+
+    public final void setHasLaunched() {
+        this.coldLaunch = false;
     }
 
 }

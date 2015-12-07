@@ -6,8 +6,6 @@ import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 
-import com.jamesmorrisstudios.appbaselibrary.R;
-
 
 public abstract class InternalButtonCircleSubBase extends RelativeLayout {
     final static String MATERIALDESIGNXML = "http://schemas.android.com/apk/res-auto";

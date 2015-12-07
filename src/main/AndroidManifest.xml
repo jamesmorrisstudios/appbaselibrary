@@ -14,9 +14,11 @@
 
         <activity
             android:name="com.jamesmorrisstudios.appbaselibrary.activities.RestartActivity"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:theme="@style/AppThemeNoBackground"
             android:label="@string/app_name">
         </activity>
-
 
     </application>
 

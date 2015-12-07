@@ -17,8 +17,6 @@
 package com.jamesmorrisstudios.appbaselibrary;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,17 +25,16 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Vibrator;
 import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.text.format.DateUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
@@ -49,16 +46,15 @@ import android.widget.Toast;
 
 import com.jamesmorrisstudios.appbaselibrary.activities.RestartActivity;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
-import com.jamesmorrisstudios.appbaselibrary.dialogHelper.PromptDialogRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.PromptDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.math.vectors.IntVector2;
-import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Random;
 import java.util.UUID;
-import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
 
 /**
@@ -69,6 +65,7 @@ import java.util.regex.Pattern;
 public final class Utils {
     public static final String stringType = "UTF-8";
 
+    public final static Random rand = new Random();
     private static Vibrator vibrator = (Vibrator) AppBase.getContext().getSystemService(Context.VIBRATOR_SERVICE);
     private static Ringtone ringtone = null;
 
@@ -387,51 +384,6 @@ public final class Utils {
     }
 
     /**
-     * Get the formatted date time for the current locale
-     *
-     * @param timeStamp Timestamp value
-     * @return The formatted date time
-     */
-    @SuppressWarnings("deprecation")
-    public static String getFormattedDateTime(long timeStamp) {
-        int flags = DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_TIME
-                | DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_ABBREV_WEEKDAY
-                | DateUtils.FORMAT_ABBREV_MONTH;
-        if(UtilsTime.is24HourTime()) {
-            flags |= DateUtils.FORMAT_24HOUR;
-        }
-        return DateUtils.formatDateTime(AppBase.getContext(), timeStamp, flags);
-    }
-
-    /**
-     * Get the formatted date for the current locale
-     *
-     * @param timeStamp Timestamp value
-     * @return The formatted date
-     */
-    @SuppressWarnings("deprecation")
-    public static String getFormattedDate(long timeStamp) {
-        int flags = DateUtils.FORMAT_SHOW_DATE
-                | DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_ABBREV_WEEKDAY
-                | DateUtils.FORMAT_ABBREV_MONTH;
-        if(UtilsTime.is24HourTime()) {
-            flags |= DateUtils.FORMAT_24HOUR;
-        }
-        return DateUtils.formatDateTime(AppBase.getContext(), timeStamp, flags);
-    }
-
-    /**
-     * Get the formatted time for the current locale
-     *
-     * @param timeStamp Timestamp value
-     * @return The formatted time
-     */
-    public static String getFormattedTime(long timeStamp) {
-        int flags = DateUtils.FORMAT_SHOW_TIME;
-        return DateUtils.formatDateTime(AppBase.getContext(), timeStamp, flags);
-    }
-
-    /**
      * Parses a string that contains only an int value into an int.
      *
      * @param value        String value containing only an int
@@ -474,72 +426,6 @@ public final class Utils {
         } catch (Exception ex) {
             return defaultValue;
         }
-    }
-
-    /**
-     * Convert a millisecond duration to a string format
-     *
-     * @param millis A duration to convert to a string form
-     * @return A string of the form "X Days Y Hours Z Minutes A Seconds".
-     */
-    @NonNull
-    public static String getFormattedDuration(long millis) {
-        if (millis < 0) {
-            throw new IllegalArgumentException("Duration must be greater than zero!");
-        }
-
-        long days = TimeUnit.MILLISECONDS.toDays(millis);
-        millis -= TimeUnit.DAYS.toMillis(days);
-        long hours = TimeUnit.MILLISECONDS.toHours(millis);
-        millis -= TimeUnit.HOURS.toMillis(hours);
-        long minutes = TimeUnit.MILLISECONDS.toMinutes(millis);
-        millis -= TimeUnit.MINUTES.toMillis(minutes);
-        long seconds = TimeUnit.MILLISECONDS.toSeconds(millis);
-
-        StringBuilder sb = new StringBuilder(64);
-        if (days > 0) {
-            sb.append(days);
-            sb.append(days == 1 ? getStringSpaced(R.string.day_singular) : getStringSpaced(R.string.day_plural));
-        }
-        if (hours > 0) {
-            sb.append(hours);
-            sb.append(hours == 1 ? getStringSpaced(R.string.hour_singular) : getStringSpaced(R.string.hour_plural));
-        }
-        if (minutes > 0) {
-            sb.append(minutes);
-            sb.append(minutes == 1 ? getStringSpaced(R.string.minute_singular) : getStringSpaced(R.string.minute_plural));
-        }
-        if (seconds > 0) {
-            sb.append(seconds);
-            sb.append(seconds == 1 ? getStringSpaced(R.string.second_singular) : getStringSpaced(R.string.second_plural));
-        }
-        return (sb.toString());
-    }
-
-    @NonNull
-    public static String getFormattedDurationCompact(long millis) {
-        return String.format("%02d:%02d:%02d",
-                TimeUnit.MILLISECONDS.toMinutes(millis),
-                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)),
-                millis - TimeUnit.SECONDS.toMillis(TimeUnit.MILLISECONDS.toSeconds(millis))
-        );
-    }
-
-    /*
-    TimeUnit.MILLISECONDS.toHours(millis),
-                TimeUnit.MILLISECONDS.toMinutes(millis) - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)),
-                TimeUnit.MILLISECONDS.toSeconds(millis) - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis)));
-     */
-
-    /**
-     * Internal helper for the formatted duration function
-     *
-     * @param stringId String id
-     * @return The string with spaces around it
-     */
-    @NonNull
-    private static String getStringSpaced(@StringRes int stringId) {
-        return " " + AppBase.getContext().getResources().getString(stringId) + " ";
     }
 
     /**
@@ -697,6 +583,11 @@ public final class Utils {
         }
     }
 
+    @NonNull
+    public static UUID generateUniqueUUID() {
+        return UUID.randomUUID();
+    }
+
     /**
      * Generates a unique String
      *
@@ -705,6 +596,20 @@ public final class Utils {
     @NonNull
     public static String generateUniqueString() {
         return UUID.randomUUID().toString();
+    }
+
+    public static long generateUniqueLong() {
+        return UUID.randomUUID().getLeastSignificantBits();
+    }
+
+    public static int generateUniqueInt() {
+        return (int) UUID.randomUUID().getLeastSignificantBits();
+    }
+
+    public static int generateUniqueIntLower16() {
+        return Math.abs(BitManager.intToShort(generateUniqueInt()));
+        //int value = BitManager.setByteInInt((byte)2, (byte)8, (byte)0, generateUniqueInt());
+        //return BitManager.setByteInInt((byte)3, (byte)8, (byte)0, value);
     }
 
     public static ArrayList<RingtoneItem> getRingtones(RingtoneType type) {

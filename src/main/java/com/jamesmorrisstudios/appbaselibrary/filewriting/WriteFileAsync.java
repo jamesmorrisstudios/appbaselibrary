@@ -3,11 +3,12 @@ package com.jamesmorrisstudios.appbaselibrary.filewriting;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 /**
  * Created by James on 10/3/2015.
  */
-public class WriteFileAsync extends AsyncTask<Void, Void, Boolean> {
+public class WriteFileAsync extends AsyncTask<Void, Void, Uri> {
     private final FileWriteListener listener;
     private final String path;
     private final FileWriter.FileLocation location;
@@ -21,16 +22,16 @@ public class WriteFileAsync extends AsyncTask<Void, Void, Boolean> {
     }
 
     @Override
-    protected Boolean doInBackground(Void... params) {
+    protected Uri doInBackground(Void... params) {
         return FileWriter.writeFile(path, data, location);
     }
 
     @Override
-    protected void onPostExecute(Boolean result) {
-        listener.writeComplete(result,  FileWriter.getFileUri(path, location));
+    protected void onPostExecute(Uri result) {
+        listener.writeComplete(FileWriter.getFileUri(path, location));
     }
 
     public interface FileWriteListener {
-        void writeComplete(boolean success, Uri filePath);
+        void writeComplete(@Nullable Uri filePath);
     }
 }

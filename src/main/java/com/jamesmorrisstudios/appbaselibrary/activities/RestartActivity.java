@@ -2,13 +2,14 @@ package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
 /**
  * Created by James on 11/14/2015.
  */
-public class RestartActivity extends BaseThemedActivity {
+public class RestartActivity extends AppCompatActivity {
 
     private String page = null;
     private int scrollY = -1;
@@ -18,9 +19,6 @@ public class RestartActivity extends BaseThemedActivity {
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        applyTheme();
-        setLocale();
-        updateImmersiveMode(true);
         super.onCreate(savedInstanceState);
         processIntents();
     }
@@ -45,6 +43,7 @@ public class RestartActivity extends BaseThemedActivity {
                 if (scrollY != -1) {
                     i.putExtra("SCROLL_Y", scrollY);
                 }
+                i.putExtra("RESTART", true);
                 i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 AppBase.getContext().startActivity(i);
                 finish();

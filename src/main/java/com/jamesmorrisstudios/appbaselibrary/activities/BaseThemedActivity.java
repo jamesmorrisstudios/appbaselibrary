@@ -33,6 +33,7 @@ public abstract class BaseThemedActivity extends AppCompatActivity {
         AppBase.getInstance().applyTheme();
         setTheme(ThemeManager.getAppStyle());
         setTheme(ThemeManager.getToolbarStyle());
+        setTheme(ThemeManager.getTabLayoutStyle());
         setTheme(ThemeManager.getAccentColorStyle());
         setTheme(ThemeManager.getPrimaryColorStyle());
     }

@@ -37,11 +37,16 @@ public class Serializer {
      * @return The byte array of the save. Null on error
      */
     @Nullable
-    public static <T> byte[] serializeClass(@NonNull Object obj) {
+    public static byte[] serializeClass(@NonNull Object obj, boolean useCompression) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         try {
-            return gson.toJsonTree(obj).toString().getBytes(Charset.forName(Utils.stringType));
+            byte[] data = gson.toJsonTree(obj).toString().getBytes(Charset.forName(Utils.stringType));
+            if(useCompression) {
+                return UtilsCompression.compress(data);
+            } else {
+                return data;
+            }
         } catch (Exception e) {
             return null;
         }
@@ -56,7 +61,21 @@ public class Serializer {
      * @return The deserialized class. Null on error
      */
     @Nullable
-    public static <T> T deserializeClass(@NonNull byte[] bytes, @NonNull Class<T> clazz) {
+    public static <T> T deserializeClass(@NonNull byte[] bytes, @NonNull Class<T> clazz, boolean useCompression) {
+        if(useCompression) {
+            byte[] data = UtilsCompression.decompress(bytes);
+            if(data != null) {
+                T clazzReturn = deserializeClassInternal(data, clazz);
+                if (clazzReturn != null) {
+                    return clazzReturn;
+                }
+            }
+        }
+        return deserializeClassInternal(bytes, clazz);
+    }
+
+    @Nullable
+    private static <T> T deserializeClassInternal(@NonNull byte[] bytes, @NonNull Class<T> clazz) {
         String st;
         try {
             st = new String(bytes, Utils.stringType);

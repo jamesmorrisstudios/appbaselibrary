@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
-import com.jamesmorrisstudios.appbaselibrary.dialogHelper.ReleaseNotesDialogRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ReleaseNotesDialogRequest;
 
 /**
  * Created by James on 4/29/2015.

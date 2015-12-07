@@ -17,7 +17,6 @@ package com.jamesmorrisstudios.appbaselibrary.controls;
  */
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
@@ -25,9 +24,7 @@ import android.support.annotation.NonNull;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
-import com.jamesmorrisstudios.appbaselibrary.Utils;
 
 
 /**

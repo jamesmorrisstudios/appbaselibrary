@@ -121,4 +121,10 @@
         <item name="colorPrimaryDark">@color/p_dark_grey_dark</item>
     </style>
 
+    <style name="primary_white">
+        <item name="colorPrimary">@color/p_white</item>
+        <item name="colorPrimaryLight">@color/p_white_light</item>
+        <item name="colorPrimaryDark">@color/p_white_dark</item>
+    </style>
+
 </resources>
