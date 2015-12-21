@@ -34,44 +34,54 @@ public final class TimeItem implements Comparable<TimeItem> {
     @SerializedName("minute")
     public int minute;
 
+    /**
+     * Constructor
+     */
     public TimeItem() {
         this.hour = 0;
         this.minute = 0;
     }
 
     /**
+     * Constructor
+     *
      * @param hour   Starting hour
      * @param minute Starting minute
      */
-    public TimeItem(int hour, int minute) {
+    public TimeItem(final int hour, final int minute) {
         this.hour = hour;
         this.minute = minute;
         validateItem();
     }
 
-    public TimeItem(TimeItem timeItem) {
-        this.hour = timeItem.hour;
-        this.minute = timeItem.minute;
-    }
-
-    public TimeItem(long timeMillis) {
-        setTimeFromMillis(timeMillis);
-    }
-
-    public long getTimeMillis() {
-        return UtilsTime.getTimeMillis(this);
-    }
-
-    public void setTimeFromMillis(long timeMillis) {
-        TimeItem timeItem = UtilsTime.getTime(timeMillis);
-        this.hour = timeItem.hour;
-        this.minute = timeItem.minute;
+    /**
+     * Constructor
+     *
+     * @param totalMinutes Minutes from midnight
+     */
+    public TimeItem(final int totalMinutes) {
+        this.hour = totalMinutes / 60;
+        this.minute = totalMinutes % 60;
         validateItem();
     }
 
-    public final void validateItem() {
-        this.hour = UtilsMath.inBoundsInt(0, 23, this.hour);
-        this.minute = UtilsMath.inBoundsInt(0, 59, this.minute);
+    /**
+     * Constructor deep copy
+     *
+     * @param timeItem timeItem to copy
+     */
+    public TimeItem(@NonNull final TimeItem timeItem) {
+        this.hour = timeItem.hour;
+        this.minute = timeItem.minute;
+    }
+
+    /**
+     * Constructor
+     *
+     * @param timeMillis Unix time in milliseconds
+     */
+    public TimeItem(final long timeMillis) {
+        setTimeFromMillis(timeMillis);
     }
 
     /**
@@ -79,7 +89,7 @@ public final class TimeItem implements Comparable<TimeItem> {
      * @return String packaged version for use in saving
      */
     @NonNull
-    public static String encodeToString(@NonNull TimeItem item) {
+    public static String encodeToString(@NonNull final TimeItem item) {
         return item.hour + ":" + item.minute;
     }
 
@@ -88,7 +98,7 @@ public final class TimeItem implements Comparable<TimeItem> {
      * @return Time Item
      */
     @NonNull
-    public static TimeItem decodeFromString(@NonNull String item) {
+    public static TimeItem decodeFromString(@NonNull final String item) {
         String[] vals = item.split(":");
         if (vals.length != 2) {
             return new TimeItem(0, 0);
@@ -97,11 +107,36 @@ public final class TimeItem implements Comparable<TimeItem> {
     }
 
     /**
+     * @return Unix time in milliseconds
+     */
+    public final long getTimeMillis() {
+        return UtilsTime.getTimeMillis(this);
+    }
+
+    /**
+     * @param timeMillis Unix time in milliseconds
+     */
+    public final void setTimeFromMillis(final long timeMillis) {
+        TimeItem timeItem = UtilsTime.getTime(timeMillis);
+        this.hour = timeItem.hour;
+        this.minute = timeItem.minute;
+        validateItem();
+    }
+
+    /**
+     * Validates that the time is valid
+     */
+    public final void validateItem() {
+        this.hour = UtilsMath.inBoundsInt(0, 23, this.hour);
+        this.minute = UtilsMath.inBoundsInt(0, 59, this.minute);
+    }
+
+    /**
      * @return A copy of this object
      */
     @NonNull
     public final TimeItem copy() {
-        return new TimeItem(this.hour, this.minute);
+        return new TimeItem(this);
     }
 
     /**
@@ -141,6 +176,9 @@ public final class TimeItem implements Comparable<TimeItem> {
         return String.format("%02d", minute);
     }
 
+    /**
+     * @return Number of minutes after midnight (hour == 0 and minute == 0)
+     */
     public final int toMinutes() {
         return this.hour * 60 + this.minute;
     }
@@ -150,7 +188,7 @@ public final class TimeItem implements Comparable<TimeItem> {
      * @return True if equal, false otherwise
      */
     @Override
-    public final boolean equals(@Nullable Object obj) {
+    public final boolean equals(@Nullable final Object obj) {
         if (obj != null && obj instanceof TimeItem) {
             TimeItem item = (TimeItem) obj;
             return this.hour == item.hour && this.minute == item.minute;
@@ -159,22 +197,23 @@ public final class TimeItem implements Comparable<TimeItem> {
         }
     }
 
-    //-1 is this is before another
-    //1 is this is after another
-    //0 if the same
+    /**
+     * @param another compare to TimeItem
+     * @return -1 if before TimeItem, 0 if equal, 1 if after TimeItem
+     */
     @Override
-    public int compareTo(@NonNull TimeItem another) {
-        if(this.hour < another.hour) {
+    public final int compareTo(@NonNull final TimeItem another) {
+        if (this.hour < another.hour) {
             return -1;
         }
-        if(this.hour > another.hour) {
+        if (this.hour > another.hour) {
             return 1;
         }
         //Hour equal at this point
-        if(this.minute < another.minute) {
+        if (this.minute < another.minute) {
             return -1;
         }
-        if(this.minute > another.minute) {
+        if (this.minute > another.minute) {
             return 1;
         }
         //Hour, and minute equal at this point

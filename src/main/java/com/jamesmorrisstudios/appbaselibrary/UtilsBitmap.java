@@ -40,13 +40,32 @@ public final class UtilsBitmap {
     /**
      * Resizes a bitmap to a square with the given side length in pixels
      * If the source is not square the center portion will be kept
-     * @param bitmap
-     * @param sidelength
-     * @return
+     *
+     * @param bitmap      Source image
+     * @param sideLength  Max side length of resized image
+     * @param forceSquare True to take the center square of the image. False to preserve aspect ratio
+     * @return Resized image
      */
     @NonNull
-    public static Bitmap resizeBitmap(@NonNull Bitmap bitmap, int sidelength) {
-        return ThumbnailUtils.extractThumbnail(bitmap, sidelength, sidelength, ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
+    public static Bitmap resizeBitmap(@NonNull final Bitmap bitmap, final int sideLength, final boolean forceSquare) {
+        if (forceSquare) {
+            //Return the square center of the image as sized.
+            return ThumbnailUtils.extractThumbnail(bitmap, sideLength, sideLength, ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
+        } else if (bitmap.getWidth() < sideLength && bitmap.getHeight() < sideLength) {
+            //The image is smaller then our side length so just return it
+            return bitmap;
+        } else {
+            //Need to find the scale ratio and scale the image based on that
+            if (bitmap.getWidth() > bitmap.getHeight()) {
+                float ratio = 1.0f * sideLength / bitmap.getWidth();
+                int height = Math.round(bitmap.getHeight() * ratio);
+                return ThumbnailUtils.extractThumbnail(bitmap, sideLength, height, ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
+            } else {
+                float ratio = 1.0f * sideLength / bitmap.getHeight();
+                int width = Math.round(bitmap.getWidth() * ratio);
+                return ThumbnailUtils.extractThumbnail(bitmap, width, sideLength, ThumbnailUtils.OPTIONS_RECYCLE_INPUT);
+            }
+        }
     }
 
     /**
@@ -58,16 +77,14 @@ public final class UtilsBitmap {
      * @return A round bitmap
      */
     @NonNull
-    public static Bitmap getRoundedRectBitmap(@NonNull Bitmap bitmap) {
+    public static Bitmap getRoundedRectBitmap(@NonNull final Bitmap bitmap) {
         Bitmap result;
         try {
             result = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(result);
-
             int color = 0xff424242;
             Paint paint = new Paint();
             Rect rect = new Rect(0, 0, bitmap.getWidth(), bitmap.getHeight());
-
             paint.setAntiAlias(true);
             canvas.drawARGB(0, 0, 0, 0);
             paint.setColor(color);
@@ -75,7 +92,6 @@ public final class UtilsBitmap {
             paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
             canvas.drawBitmap(bitmap, rect, rect, paint);
             return result;
-
         } catch (NullPointerException | OutOfMemoryError e) {
             //Not a critical error so do nothing
         }
@@ -90,7 +106,8 @@ public final class UtilsBitmap {
      * @param under Bitmap to place on bottom
      * @return Composite bitmap
      */
-    public static Bitmap composite(@NonNull Bitmap over, @NonNull Bitmap under) {
+    @NonNull
+    public static Bitmap composite(@NonNull final Bitmap over, @NonNull final Bitmap under) {
         Bitmap bmOverlay = Bitmap.createBitmap(under.getWidth(), under.getHeight(), under.getConfig());
         Canvas canvas = new Canvas(bmOverlay);
         canvas.drawBitmap(under, new Matrix(), null);
@@ -106,27 +123,23 @@ public final class UtilsBitmap {
      * @return Resulting bitmap
      */
     @NonNull
-    public static Bitmap shrinkInto(@NonNull Bitmap srcImage, float shrinkPercent) {
+    public static Bitmap shrinkInto(@NonNull final Bitmap srcImage, final float shrinkPercent) {
         //Shrink the bitmap so it fits in the original sized bitmap properly
         int overSize = Math.round(srcImage.getWidth() * shrinkPercent);
         int width = srcImage.getWidth() + overSize;
         int height = srcImage.getWidth() + overSize;
-
         Bitmap endImage = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(endImage);
         Rect src = new Rect(
                 0, 0,
                 srcImage.getWidth(), srcImage.getHeight()
         );
-
         Rect dest = new Rect(
                 overSize, overSize,
                 endImage.getWidth() - overSize, endImage.getHeight() - overSize
         );
-
         Paint paint = new Paint();
         paint.setAntiAlias(true);
-
         canvas.drawBitmap(srcImage, src, dest, paint);
         return endImage;
     }
@@ -138,7 +151,7 @@ public final class UtilsBitmap {
      * @return byte array
      */
     @NonNull
-    public static byte[] bitmapToByteArr(@NonNull Bitmap src) {
+    public static byte[] bitmapToByteArr(@NonNull final Bitmap src) {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         src.compress(Bitmap.CompressFormat.PNG, 100, stream);
         return stream.toByteArray();
@@ -152,7 +165,7 @@ public final class UtilsBitmap {
      * @return bitmap
      */
     @NonNull
-    public static Bitmap byteArrToBitmap(@NonNull byte[] src) {
+    public static Bitmap byteArrToBitmap(@NonNull final byte[] src) {
         ByteArrayInputStream stream = new ByteArrayInputStream(src);
         return BitmapFactory.decodeStream(stream);
     }

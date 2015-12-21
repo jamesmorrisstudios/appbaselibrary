@@ -21,20 +21,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * TODO this class is incomplete
+ * <p/>
  * Created by James on 7/22/2015.
  */
-public class SingleChoiceRadioIconDialogBuilder {
+public final class SingleChoiceRadioIconDialogBuilder {
     private AlertDialog.Builder builder;
     private ListView list;
-    @DrawableRes private int[] itemsIds;
+    @DrawableRes
+    private int[] itemsIds;
     private Uri[] itemsUri;
     private AlertDialog dialog;
+    private int backgroundColor = -1;
 
-    //TODO this is incomplete
     private SingleChoiceRadioIconDialogBuilder(@NonNull Context context, int style) {
         builder = new AlertDialog.Builder(context, style);
-        LayoutInflater vi= LayoutInflater.from(context);
-        RelativeLayout topView = (RelativeLayout) vi.inflate(R.layout.dialog_list, null);
+        LayoutInflater vi = LayoutInflater.from(context);
+        RelativeLayout topView = (RelativeLayout) vi.inflate(R.layout.dialog_helper_list, null);
         list = (ListView) topView.findViewById(R.id.list);
         list.setEmptyView(list.findViewById(android.R.id.empty));
         builder.setView(topView);
@@ -74,9 +77,18 @@ public class SingleChoiceRadioIconDialogBuilder {
         return this;
     }
 
+    /**
+     * @param backgroundColor background color. -1 to disable
+     * @return Dialog Builder
+     */
+    public final SingleChoiceRadioIconDialogBuilder setBackgroundColor(int backgroundColor) {
+        this.backgroundColor = backgroundColor;
+        return this;
+    }
+
     public AlertDialog build() {
         ArrayList<ItemWrapper> items = wrapItems();
-        ListAdapter adapter = new ListAdapter(builder.getContext(), R.layout.icon_picker_dialog_row_item, items);
+        ListAdapter adapter = new ListAdapter(builder.getContext(), R.layout.dialog_icon_picker_list_item, items);
         list.setAdapter(adapter);
         dialog = builder.create();
         return dialog;
@@ -84,12 +96,12 @@ public class SingleChoiceRadioIconDialogBuilder {
 
     private ArrayList<ItemWrapper> wrapItems() {
         ArrayList<ItemWrapper> items = new ArrayList<>();
-        if(itemsUri != null) {
-            for(Uri uri : itemsUri) {
+        if (itemsUri != null) {
+            for (Uri uri : itemsUri) {
                 items.add(new ItemWrapper(uri));
             }
-        } else if(itemsIds != null) {
-            for(int item : itemsIds) {
+        } else if (itemsIds != null) {
+            for (int item : itemsIds) {
                 items.add(new ItemWrapper(item));
             }
         }
@@ -97,7 +109,8 @@ public class SingleChoiceRadioIconDialogBuilder {
     }
 
     class ItemWrapper {
-        @DrawableRes public final int itemId;
+        @DrawableRes
+        public final int itemId;
         public final Uri itemUri;
 
         public ItemWrapper(int itemId) {
@@ -121,7 +134,7 @@ public class SingleChoiceRadioIconDialogBuilder {
 
         public ArrayList<ItemWrapper> getItems() {
             ArrayList<ItemWrapper> list = new ArrayList<>();
-            for(int i=0; i<getCount(); i++) {
+            for (int i = 0; i < getCount(); i++) {
                 list.add(getItem(i));
             }
             return list;
@@ -141,7 +154,7 @@ public class SingleChoiceRadioIconDialogBuilder {
             }
             image = (ImageView) view.findViewById(R.id.image);
 
-            if(item.itemUri != null) {
+            if (item.itemUri != null) {
                 Picasso.with(getContext()).load(item.itemUri).into(image);
             } else {
                 image.setImageResource(item.itemId);

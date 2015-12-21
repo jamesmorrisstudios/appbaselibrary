@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright 2012 Square, Inc. -->
-
-<selector xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-  <item android:state_selected="true" android:color="@color/dark_calendar_text_selected"/>
-  <item android:state_pressed="true" android:color="@color/dark_calendar_text_selected"/>
-  <item app:tsquare_state_current_month="false" android:color="@color/dark_calendar_text_inactive"/>
-  <item app:tsquare_state_today="true" android:color="@color/dark_calendar_active_month_bg"/>
-  <item app:tsquare_state_selectable="false" android:color="@color/dark_calendar_text_unselectable" />
-  <item android:color="@color/dark_calendar_text_active"/>
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2012 Square, Inc. --><!--
+Override for the calendar view for dark theme
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:color="@color/dark_calendar_text_selected" android:state_selected="true" />
+    <item android:color="@color/dark_calendar_text_selected" android:state_pressed="true" />
+    <item android:color="@color/dark_calendar_text_inactive" app:tsquare_state_current_month="false" />
+    <item android:color="@color/dark_calendar_active_month_bg" app:tsquare_state_today="true" />
+    <item android:color="@color/dark_calendar_text_unselectable" app:tsquare_state_selectable="false" />
+    <item android:color="@color/dark_calendar_text_active" />
 </selector>

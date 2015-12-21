@@ -19,14 +19,34 @@ package com.jamesmorrisstudios.appbaselibrary;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
-
 /**
  * Logger class
  * <p/>
  * Created by James on 4/28/2015.
  */
-public class Logger {
+public final class Logger {
+    private static boolean[] categories = new boolean[LoggerCategory.values().length];
+
+    /**
+     * Set the enable state for a specific category
+     *
+     * @param category Category
+     * @param enable   Enable state
+     */
+    public static void setCategory(@NonNull final LoggerCategory category, final boolean enable) {
+        categories[category.ordinal()] = enable;
+    }
+
+    /**
+     * Set the enable state for all categories at the same time
+     *
+     * @param enable Enable state
+     */
+    public static void setAllCategories(final boolean enable) {
+        for (int i = 0; i < categories.length; i++) {
+            categories[i] = enable;
+        }
+    }
 
     /**
      * Helper function to check if that logging category is active
@@ -34,19 +54,8 @@ public class Logger {
      * @param category Category
      * @return True if the given category should be logged
      */
-    private static boolean isCategoryEnabled(@NonNull LoggerCategory category) {
-        switch (category) {
-            case UTILITIES:
-                return AppBase.getContext().getResources().getBoolean(R.bool.debug_utilities);
-            case USER_INTERFACE:
-                return AppBase.getContext().getResources().getBoolean(R.bool.debug_user_interface);
-            case MAIN:
-                return AppBase.getContext().getResources().getBoolean(R.bool.debug_main);
-            case REMOTE:
-                return AppBase.getContext().getResources().getBoolean(R.bool.debug_remote);
-            default:
-                return false;
-        }
+    private static boolean isCategoryEnabled(@NonNull final LoggerCategory category) {
+        return categories[category.ordinal()];
     }
 
     /**
@@ -56,7 +65,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void wtf(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void wtf(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.wtf(tag, message);
         }
@@ -70,7 +79,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void v(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void v(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.v(tag, message);
         }
@@ -84,7 +93,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void d(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void d(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.d(tag, message);
         }
@@ -98,7 +107,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void i(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void i(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.i(tag, message);
         }
@@ -112,7 +121,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void w(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void w(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.w(tag, message);
         }
@@ -126,7 +135,7 @@ public class Logger {
      * @param tag      Class tag
      * @param message  Message to print
      */
-    public static void e(@NonNull LoggerCategory category, @NonNull String tag, @NonNull String message) {
+    public static void e(@NonNull final LoggerCategory category, @NonNull final String tag, @NonNull final String message) {
         if (isCategoryEnabled(category)) {
             Log.e(tag, message);
         }
@@ -136,7 +145,26 @@ public class Logger {
      * Logging categories
      */
     public enum LoggerCategory {
-        UTILITIES, USER_INTERFACE, MAIN, REMOTE
+
+        /**
+         * App Base Library
+         */
+        BASE,
+
+        /**
+         * Google Play Services Library
+         */
+        GPS,
+
+        /**
+         * Primary App
+         */
+        APP,
+
+        /**
+         * Other Library
+         */
+        OTHER
     }
 
 }

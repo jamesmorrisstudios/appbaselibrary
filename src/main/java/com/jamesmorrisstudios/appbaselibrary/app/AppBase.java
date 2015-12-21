@@ -20,7 +20,7 @@ import android.app.Application;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
-import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
+import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 
 /**
  * Top level application class. If you override application in your app that uses this library you must extend this class!
@@ -45,6 +45,7 @@ public class AppBase extends Application {
     /**
      * Gets the Application instance
      * NEVER hold a reference to this.
+     *
      * @return Application instance
      */
     @NonNull
@@ -64,20 +65,22 @@ public class AppBase extends Application {
     }
 
     /**
-     * Set current theme to the application
+     * Apply app theme
      */
     public final void applyTheme() {
-        setTheme(ThemeManager.getAppStyle());
-        setTheme(ThemeManager.getToolbarStyle());
-        setTheme(ThemeManager.getTabLayoutStyle());
-        setTheme(ThemeManager.getAccentColorStyle());
-        setTheme(ThemeManager.getPrimaryColorStyle());
+        UtilsTheme.applyTheme(this);
     }
 
+    /**
+     * @return True if we just launched
+     */
     public final boolean isColdLaunch() {
         return coldLaunch;
     }
 
+    /**
+     * Call this as soon as the launch activity has finish initialization
+     */
     public final void setHasLaunched() {
         this.coldLaunch = false;
     }

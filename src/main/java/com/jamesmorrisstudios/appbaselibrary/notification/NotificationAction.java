@@ -25,30 +25,46 @@ import android.support.annotation.NonNull;
  * <p/>
  * Created by James on 4/30/2015.
  */
-public class NotificationAction {
+public final class NotificationAction {
     @DrawableRes
     private int iconRes;
     private String text;
     private PendingIntent pendingIntent;
 
+    /**
+     * Constructor
+     *
+     * @param iconRes       Icon resource id
+     * @param text          Action text
+     * @param pendingIntent Action pending intent
+     */
     public NotificationAction(@DrawableRes int iconRes, @NonNull String text, @NonNull PendingIntent pendingIntent) {
         this.iconRes = iconRes;
         this.text = text;
         this.pendingIntent = pendingIntent;
     }
 
+    /**
+     * @return Icon resource Id
+     */
     @DrawableRes
-    public int getIconRes() {
+    public final int getIconRes() {
         return iconRes;
     }
 
+    /**
+     * @return Action text
+     */
     @NonNull
-    public String getText() {
+    public final String getText() {
         return text;
     }
 
+    /**
+     * @return Action pending intent
+     */
     @NonNull
-    public PendingIntent getPendingIntent() {
+    public final PendingIntent getPendingIntent() {
         return pendingIntent;
     }
 

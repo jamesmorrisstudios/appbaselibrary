@@ -1,6 +1,5 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,24 +13,22 @@ import android.widget.TextView;
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
+import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ReleaseNotesDialogRequest;
 
 /**
+ * Help screen fragment
+ * <p/>
  * Created by James on 4/29/2015.
  */
-public class HelpFragment extends BaseFragment {
+public final class HelpFragment extends BaseFragment {
     public static final String TAG = "HelpFragment";
-
-    private OnHelpSubPageListener subPageListener;
 
     /**
      * Required empty constructor
      */
     public HelpFragment() {
-    }
-
-    public enum HelpEvent {
-        READ_TUTORIAL, WATCH_TUTORIAL, GOTO_RATE, GOTO_MORE, GOTO_SUPPORT, GOTO_TRANSLATE, GOTO_RELEASE_NOTES
     }
 
     /**
@@ -42,8 +39,9 @@ public class HelpFragment extends BaseFragment {
      * @param savedInstanceState Saved instance state
      * @return This fragments top view
      */
+    @NonNull
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_help, container, false);
         Button readHow = (Button) view.findViewById(R.id.howToUseRead);
         Button watchHow = (Button) view.findViewById(R.id.howToUseWatch);
@@ -60,54 +58,54 @@ public class HelpFragment extends BaseFragment {
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.READ_TUTORIAL);
+                HelpEvent.READ_TUTORIAL.post();
                 Utils.openLink(getResources().getString(R.string.tutorial_link_read));
             }
         });
         watchHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.WATCH_TUTORIAL);
+                HelpEvent.WATCH_TUTORIAL.post();
                 Utils.openLink(getResources().getString(R.string.tutorial_link_watch));
             }
         });
         license.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                subPageListener.onLicenseClicked();
+                BaseActivity.AppBaseEvent.LICENSE_CLICKED.post();
             }
         });
-        if(Utils.isPro()) {
+        if (UtilsVersion.isPro()) {
             versionType.setText(R.string.pro);
         } else {
             versionType.setText(R.string.free);
         }
-        version.setText(Utils.getVersionName() + " " + Utils.getVersionType());
+        version.setText(UtilsVersion.getVersionName() + " " + UtilsVersion.getVersionType());
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_RATE);
+                HelpEvent.GOTO_RATE.post();
                 Utils.openLink(getResources().getString(R.string.store_link));
             }
         });
         moreBy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_MORE);
+                HelpEvent.GOTO_MORE.post();
                 Utils.openLink(getResources().getString(R.string.store_link_all));
             }
         });
         support.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_SUPPORT);
+                HelpEvent.GOTO_SUPPORT.post();
                 Utils.openLink(getResources().getString(R.string.store_link_pro));
             }
         });
         translate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_TRANSLATE);
+                HelpEvent.GOTO_TRANSLATE.post();
                 Utils.openLink(getResources().getString(R.string.help_link_translate));
             }
         });
@@ -120,8 +118,8 @@ public class HelpFragment extends BaseFragment {
         releaseNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Bus.postEnum(HelpEvent.GOTO_RELEASE_NOTES);
-                Bus.postObject(new ReleaseNotesDialogRequest());
+                HelpEvent.GOTO_RELEASE_NOTES.post();
+                new ReleaseNotesDialogRequest().show();
             }
         });
         logo.setOnClickListener(new View.OnClickListener() {
@@ -134,66 +132,84 @@ public class HelpFragment extends BaseFragment {
     }
 
     /**
-     * Attach to the activity
+     * Override this to set custom text for the toolbar
      *
-     * @param activity Activity to attach
+     * @return Toolbar title text.
      */
-    @Override
-    public void onAttach(@NonNull Activity activity) {
-        super.onAttach(activity);
-        try {
-            subPageListener = (OnHelpSubPageListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnHelpSubPageListener");
-        }
+    @NonNull
+    protected String getToolbarTitle() {
+        return getString(R.string.help_and_feedback);
     }
 
     /**
-     * Detach from activity
+     * Unused
      */
     @Override
-    public void onDetach() {
-        super.onDetach();
-        subPageListener = null;
+    protected final void afterViewCreated() {
+        hideFab();
     }
 
+    /**
+     * @return true
+     */
     @Override
-    protected void afterViewCreated() {
-
-    }
-
-    @Override
-    public void onBack() {
-
-    }
-
-    @Override
-    public boolean showToolbarTitle() {
+    public final boolean showToolbarTitle() {
         return true;
     }
 
+    /**
+     * Register bus listener if used
+     */
     @Override
-    protected void saveState(Bundle bundle) {
-
-    }
-
-    @Override
-    protected void restoreState(Bundle bundle) {
+    protected void registerBus() {
 
     }
 
     /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
+     * Unregister bus listener if used
      */
-    public interface OnHelpSubPageListener {
+    @Override
+    protected void unregisterBus() {
+
+    }
+
+    /**
+     * Unused
+     *
+     * @param bundle bundle
+     */
+    @Override
+    protected final void saveState(@NonNull Bundle bundle) {
+
+    }
+
+    /**
+     * Unused
+     *
+     * @param bundle bundle
+     */
+    @Override
+    protected final void restoreState(@NonNull Bundle bundle) {
+
+    }
+
+    /**
+     * Help action events
+     */
+    public enum HelpEvent {
+        READ_TUTORIAL,
+        WATCH_TUTORIAL,
+        GOTO_RATE,
+        GOTO_MORE,
+        GOTO_SUPPORT,
+        GOTO_TRANSLATE,
+        GOTO_RELEASE_NOTES;
 
         /**
-         * License fragment button clicked
+         * Send the event
          */
-        void onLicenseClicked();
+        public final void post() {
+            Bus.postEnum(this);
+        }
     }
 }

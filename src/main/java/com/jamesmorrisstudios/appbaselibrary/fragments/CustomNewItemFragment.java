@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,39 +13,44 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
+import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.nononsenseapps.filepicker.NewItemFragment;
 
 /**
+ * Customized new item fragment for the file browser to ensure dialogs are styled properly
+ * <p/>
  * Created by James on 11/12/2015.
  */
-public abstract class CustomNewItemFragment extends NewItemFragment  {
-
+public abstract class CustomNewItemFragment extends NewItemFragment {
     private OnNewFolderListener listener = null;
 
+    /**
+     * @param listener Listener
+     */
     public void setListener(final OnNewFolderListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * @param savedInstanceState saved instance state
+     * @return Dialog
+     */
     @NonNull
     @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle());
+    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle());
         builder.setView(R.layout.nnf_dialog_folder_name)
                 .setTitle(R.string.nnf_new_folder)
                 .setNegativeButton(android.R.string.cancel,
                         null)
                 .setPositiveButton(android.R.string.ok,
                         null);
-
         final AlertDialog dialog = builder.create();
-
         dialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
             public void onShow(DialogInterface dialog1) {
                 final AlertDialog dialog = (AlertDialog) dialog1;
                 final EditText editText = (EditText) dialog.findViewById(R.id.edit_text);
-
                 Button cancel = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
                 cancel.setOnClickListener(new View.OnClickListener() {
 
@@ -53,7 +59,6 @@ public abstract class CustomNewItemFragment extends NewItemFragment  {
                         dialog.cancel();
                     }
                 });
-
                 final Button ok = dialog.getButton(AlertDialog.BUTTON_POSITIVE);
                 // Start disabled
                 ok.setEnabled(false);
@@ -70,7 +75,6 @@ public abstract class CustomNewItemFragment extends NewItemFragment  {
                         }
                     }
                 });
-
                 editText.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(final CharSequence s, final int start,
@@ -89,8 +93,6 @@ public abstract class CustomNewItemFragment extends NewItemFragment  {
                 });
             }
         });
-
-
         return dialog;
     }
 

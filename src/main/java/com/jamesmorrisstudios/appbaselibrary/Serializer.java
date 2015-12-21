@@ -29,7 +29,7 @@ import java.nio.charset.Charset;
  * <p/>
  * Created by James on 4/28/2015.
  */
-public class Serializer {
+public final class Serializer {
 
     /**
      * Serializes a generic class.
@@ -37,12 +37,12 @@ public class Serializer {
      * @return The byte array of the save. Null on error
      */
     @Nullable
-    public static byte[] serializeClass(@NonNull Object obj, boolean useCompression) {
+    public static byte[] serializeClass(@NonNull final Object obj, final boolean useCompression) {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.create();
         try {
             byte[] data = gson.toJsonTree(obj).toString().getBytes(Charset.forName(Utils.stringType));
-            if(useCompression) {
+            if (useCompression) {
                 return UtilsCompression.compress(data);
             } else {
                 return data;
@@ -54,6 +54,7 @@ public class Serializer {
 
     /**
      * Deserialize a class from a byte array
+     * If using compression it will auto fallback to no compression if loading fails.
      *
      * @param bytes Byte array
      * @param clazz Class type
@@ -61,10 +62,10 @@ public class Serializer {
      * @return The deserialized class. Null on error
      */
     @Nullable
-    public static <T> T deserializeClass(@NonNull byte[] bytes, @NonNull Class<T> clazz, boolean useCompression) {
-        if(useCompression) {
+    public static <T> T deserializeClass(@NonNull final byte[] bytes, @NonNull final Class<T> clazz, final boolean useCompression) {
+        if (useCompression) {
             byte[] data = UtilsCompression.decompress(bytes);
-            if(data != null) {
+            if (data != null) {
                 T clazzReturn = deserializeClassInternal(data, clazz);
                 if (clazzReturn != null) {
                     return clazzReturn;
@@ -74,8 +75,14 @@ public class Serializer {
         return deserializeClassInternal(bytes, clazz);
     }
 
+    /**
+     * @param bytes Byte array
+     * @param clazz Class type
+     * @param <T>   Generic...
+     * @return The deserialized class. Null on error
+     */
     @Nullable
-    private static <T> T deserializeClassInternal(@NonNull byte[] bytes, @NonNull Class<T> clazz) {
+    private static <T> T deserializeClassInternal(@NonNull final byte[] bytes, @NonNull final Class<T> clazz) {
         String st;
         try {
             st = new String(bytes, Utils.stringType);

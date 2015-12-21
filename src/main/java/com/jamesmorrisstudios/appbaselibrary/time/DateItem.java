@@ -36,6 +36,9 @@ public final class DateItem implements Comparable<DateItem> {
     @SerializedName("dayOfMonth")
     public int dayOfMonth;
 
+    /**
+     * Constructor
+     */
     public DateItem() {
         this.year = 1970;
         this.month = 0;
@@ -47,28 +50,66 @@ public final class DateItem implements Comparable<DateItem> {
      * @param month      The month 0-11
      * @param dayOfMonth The day of the month 1-31
      */
-    public DateItem(int year, int month, int dayOfMonth) {
+    public DateItem(final int year, final int month, final int dayOfMonth) {
         this.year = year;
         this.month = month;
         this.dayOfMonth = dayOfMonth;
         validateItem();
     }
 
-    public DateItem(DateItem dateItem) {
+    /**
+     * Constructor deep copy of existing date item
+     *
+     * @param dateItem Date Item
+     */
+    public DateItem(@NonNull final DateItem dateItem) {
         this.year = dateItem.year;
         this.month = dateItem.month;
         this.dayOfMonth = dateItem.dayOfMonth;
     }
 
-    public DateItem(long timeMillis) {
+    /**
+     * Constructor from unixtime
+     *
+     * @param timeMillis Unixtime in milliseconds
+     */
+    public DateItem(final long timeMillis) {
         setDateFromMillis(timeMillis);
     }
 
-    public long getTimeMillis() {
+    /**
+     * @param item The date item
+     * @return String packaged version for use in saving
+     */
+    @NonNull
+    public static String encodeToString(@NonNull final DateItem item) {
+        return item.year + ":" + item.month + ":" + item.dayOfMonth;
+    }
+
+    /**
+     * @param item String previously encoded with encode to string
+     * @return The Date item
+     */
+    @NonNull
+    public static DateItem decodeFromString(@NonNull final String item) {
+        String[] vals = item.split(":");
+        if (vals.length != 3) {
+            return new DateItem(0, 0, 0);
+        }
+        return new DateItem(Utils.stringToInt(vals[0], 0), Utils.stringToInt(vals[1], 0), Utils.stringToInt(vals[2], 0));
+    }
+
+    /**
+     * @return Unixtime in milliseconds
+     */
+    public final long getTimeMillis() {
         return UtilsTime.getTimeMillis(this);
     }
 
-    public void setDateFromMillis(long timeMillis) {
+    /**
+     * @param timeMillis Unixtime in milliseconds
+     */
+    public final void setDateFromMillis(final long timeMillis) {
         DateItem dateTime = UtilsTime.getDate(timeMillis);
         this.year = dateTime.year;
         this.month = dateTime.month;
@@ -76,6 +117,9 @@ public final class DateItem implements Comparable<DateItem> {
         validateItem();
     }
 
+    /**
+     * Validate that the date range is valid. Note that this still may not represent a valid date.
+     */
     public final void validateItem() {
         this.year = UtilsMath.inBoundsInt(1970, 3000, this.year);
         this.month = UtilsMath.inBoundsInt(0, 11, this.month);
@@ -91,33 +135,11 @@ public final class DateItem implements Comparable<DateItem> {
     }
 
     /**
-     * @param item The date item
-     * @return String packaged version for use in saving
-     */
-    @NonNull
-    public static String encodeToString(@NonNull DateItem item) {
-        return item.year + ":" + item.month + ":" + item.dayOfMonth;
-    }
-
-    /**
-     * @param item String previously encoded with encode to string
-     * @return The Date item
-     */
-    @NonNull
-    public static DateItem decodeFromString(@NonNull String item) {
-        String[] vals = item.split(":");
-        if (vals.length != 3) {
-            return new DateItem(0, 0, 0);
-        }
-        return new DateItem(Utils.stringToInt(vals[0], 0), Utils.stringToInt(vals[1], 0), Utils.stringToInt(vals[2], 0));
-    }
-
-    /**
      * @param obj Object to compare with
      * @return True if equal, false otherwise
      */
     @Override
-    public final boolean equals(@Nullable Object obj) {
+    public final boolean equals(@Nullable final Object obj) {
         if (obj != null && obj instanceof DateItem) {
             DateItem item = (DateItem) obj;
             return this.year == item.year && this.month == item.month && this.dayOfMonth == item.dayOfMonth;
@@ -126,29 +148,30 @@ public final class DateItem implements Comparable<DateItem> {
         }
     }
 
-    //-1 is this is before another
-    //1 is this is after another
-    //0 if the same
+    /**
+     * @param another compare to dateItem
+     * @return -1 if before dateItem, 0 if equal, 1 if after dateItem
+     */
     @Override
-    public int compareTo(@NonNull DateItem another) {
-        if(this.year < another.year) {
+    public final int compareTo(@NonNull final DateItem another) {
+        if (this.year < another.year) {
             return -1;
         }
-        if(this.year > another.year) {
+        if (this.year > another.year) {
             return 1;
         }
         //Year equal at this point
-        if(this.month < another.month) {
+        if (this.month < another.month) {
             return -1;
         }
-        if(this.month > another.month) {
+        if (this.month > another.month) {
             return 1;
         }
         //Year and month equal at this point
-        if(this.dayOfMonth < another.dayOfMonth) {
+        if (this.dayOfMonth < another.dayOfMonth) {
             return -1;
         }
-        if(this.dayOfMonth > another.dayOfMonth) {
+        if (this.dayOfMonth > another.dayOfMonth) {
             return 1;
         }
         //Year, month, and day equal at this point

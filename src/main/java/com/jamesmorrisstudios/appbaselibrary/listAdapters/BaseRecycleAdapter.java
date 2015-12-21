@@ -33,68 +33,72 @@ import java.util.ArrayList;
 /**
  * Reminder adapter class to manage the recyclerView
  */
-public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder>
-        implements ItemTouchHelperAdapter {
-    public static final String TAG = "BaseRecycleAdapter";
+public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycleViewHolder> implements ItemTouchHelperAdapter {
     private static final int VIEW_TYPE_HEADER = 0x03;
     private static final int VIEW_TYPE_CONTENT = 0x00;
-    private final ArrayList<LineItem> mItems;
-    private OnItemClickListener mListener;
+    private final ArrayList<LineItem> allItems = new ArrayList<>();
+    private final ArrayList<LineItem> visibleItems = new ArrayList<>();
+    private OnRecycleAdapterEventsListener mListener;
     private int expandedPosition = -1;
-    private boolean hasDummyItem = false;
 
     /**
      * Constructor
      *
      * @param mListener Item Click listener
      */
-    public BaseRecycleAdapter(@NonNull OnItemClickListener mListener) {
+    public BaseRecycleAdapter(@NonNull OnRecycleAdapterEventsListener mListener) {
         this.mListener = mListener;
-        mItems = new ArrayList<>();
     }
 
+    /**
+     * item move can only happen when visibleItems == allItems
+     *
+     * @param fromPosition The start position of the moved item.
+     * @param toPosition   Then end position of the moved item.
+     */
     @Override
-    public void onItemMove(int fromPosition, int toPosition) {
-        fromPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, fromPosition);
-        toPosition = UtilsMath.inBoundsInt(0, mItems.size() - 1, toPosition);
-
-        LineItem prev = mItems.remove(fromPosition);
-        mItems.add(toPosition, prev);
+    public final void onItemMove(int fromPosition, int toPosition) {
+        fromPosition = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, fromPosition);
+        toPosition = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, toPosition);
+        LineItem prev = visibleItems.remove(fromPosition);
+        LineItem prev2 = allItems.remove(fromPosition);
+        visibleItems.add(toPosition, prev);
+        allItems.add(toPosition, prev2);
         mListener.itemMoved(fromPosition, toPosition);
         notifyItemMoved(fromPosition, toPosition);
     }
 
+    /**
+     * item dismiss can only happen when visibleItems == allItems
+     *
+     * @param position The position of the item dismissed.
+     */
     @Override
-    public void onItemDismiss(int position) {
-        mItems.remove(position);
+    public final void onItemDismiss(int position) {
+        visibleItems.remove(position);
+        allItems.remove(position);
         notifyItemRemoved(position);
     }
 
     /**
-     * Sets the items to this list
-     * This will override anything previously set
-     *
-     * @param items List of items to set.
+     * @return True if the adapter currently allows moving of items
      */
-    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
-        ArrayList<LineItem> mItemsTemp = new ArrayList<>();
-        for (int i = 0; i < items.size(); i++) {
-            mItemsTemp.add(new LineItem(items.get(i)));
-        }
-        while (!mItems.isEmpty()) {
-            mItems.remove(0);
-        }
-        mItems.addAll(mItemsTemp);
-        notifyDataSetChanged();
+    @Override
+    public final boolean allowMove() {
+        return mListener.getFilterText() == null || mListener.getFilterText().isEmpty();
     }
 
+    /**
+     * @param items Append items to the current list
+     */
     public final void addItems(@NonNull ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
         }
-        int indexStart = mItems.size();
-        mItems.addAll(mItemsTemp);
+        int indexStart = allItems.size();
+        allItems.addAll(mItemsTemp);
+        updateVisibleItems();
         notifyItemRangeInserted(indexStart, mItemsTemp.size());
     }
 
@@ -106,10 +110,10 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @return The container view holder
      */
     @Override
-    public BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public final BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         boolean isHeader = false;
         View view;
-        if(viewType == VIEW_TYPE_CONTENT) {
+        if (viewType == VIEW_TYPE_CONTENT) {
             view = LayoutInflater.from(parent.getContext()).inflate(getItemResId(), parent, false);
         } else {
             view = LayoutInflater.from(parent.getContext()).inflate(getHeaderResId(), parent, false);
@@ -117,14 +121,21 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         }
 
         return getViewHolder(view, isHeader, new BaseRecycleViewHolder.cardClickListener() {
+
+            /**
+             * @param position Clicked card position
+             */
             @Override
             public void cardClicked(int position) {
                 mListener.itemClicked(position);
-                if(position >= 0 && position < mItems.size()) {
-                    mListener.itemClicked(mItems.get(position).data);
+                if (position >= 0 && position < visibleItems.size()) {
+                    mListener.itemClicked(visibleItems.get(position).data);
                 }
             }
 
+            /**
+             * @param position Card that should toggle expanded view
+             */
             @Override
             public void toggleExpanded(int position) {
                 if (expandedPosition == position) { //This item was expanded
@@ -144,16 +155,78 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         });
     }
 
-    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, @Nullable BaseRecycleViewHolder.cardClickListener mListener);
+    /**
+     * Retrieve the custom view holder
+     *
+     * @param view      View
+     * @param isHeader  if a header view
+     * @param mListener Item listener
+     * @return Class extending BaseRecycleViewHolder
+     */
+    @NonNull
+    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, @NonNull BaseRecycleViewHolder.cardClickListener mListener);
 
+    /**
+     * Call to update the adapters filtering text
+     */
+    public final void updateFilterText() {
+        updateVisibleItems();
+        notifyDataSetChanged();
+    }
+
+    /**
+     * @return The item layout id
+     */
     @LayoutRes
     protected abstract int getItemResId();
 
+    /**
+     * @return The header layout id
+     */
     @LayoutRes
     protected abstract int getHeaderResId();
 
+    /**
+     * @return List of all items
+     */
+    @NonNull
     public final ArrayList<LineItem> getItems() {
-        return mItems;
+        return allItems;
+    }
+
+    /**
+     * Sets the items to this list
+     * This will override anything previously set
+     *
+     * @param items List of items to set.
+     */
+    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
+        ArrayList<LineItem> mItemsTemp = new ArrayList<>();
+        for (int i = 0; i < items.size(); i++) {
+            mItemsTemp.add(new LineItem(items.get(i)));
+        }
+        while (!allItems.isEmpty()) {
+            allItems.remove(0);
+        }
+        allItems.addAll(mItemsTemp);
+        updateVisibleItems();
+        notifyDataSetChanged();
+    }
+
+    /**
+     * Updates what items are currently visible based on the users filter text
+     */
+    private void updateVisibleItems() {
+        visibleItems.clear();
+        if (mListener.getFilterText() == null || mListener.getFilterText().isEmpty()) {
+            visibleItems.addAll(allItems);
+        } else {
+            for (LineItem item : allItems) {
+                if (item.data.getFilterText().toLowerCase().contains(mListener.getFilterText().toLowerCase())) {
+                    visibleItems.add(item);
+                }
+            }
+        }
     }
 
     /**
@@ -163,13 +236,13 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @param position Position
      */
     @Override
-    public void onBindViewHolder(@NonNull BaseRecycleViewHolder holder, int position) {
-        final LineItem item = mItems.get(position);
+    public final void onBindViewHolder(@NonNull BaseRecycleViewHolder holder, int position) {
+        final LineItem item = visibleItems.get(position);
         holder.bindItem(item.data, position == expandedPosition);
 
-        if(item.data.isHeader) {
-            StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams)holder.itemView.getLayoutParams();
-            if(params != null) {
+        if (item.data.isHeader) {
+            StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
+            if (params != null) {
                 params.setFullSpan(true);
             }
         }
@@ -179,13 +252,17 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @return Number of items in view holder
      */
     @Override
-    public int getItemCount() {
-        return mItems.size();
+    public final int getItemCount() {
+        return visibleItems.size();
     }
 
+    /**
+     * @param position Position of item
+     * @return View type (header or item)
+     */
     @Override
-    public int getItemViewType(int position) {
-        if(mItems.get(position).data.isHeader) {
+    public final int getItemViewType(int position) {
+        if (visibleItems.get(position).data.isHeader) {
             return VIEW_TYPE_HEADER;
         }
         return VIEW_TYPE_CONTENT;
@@ -194,9 +271,33 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     /**
      * Reminder click interface
      */
-    public interface OnItemClickListener {
-        void itemClicked(BaseRecycleContainer item);
+    public interface OnRecycleAdapterEventsListener {
+
+        /**
+         * @return Filter Text. Null for none
+         */
+        @Nullable
+        String getFilterText();
+
+        /**
+         * @param item Clicked item
+         */
+        void itemClicked(@NonNull BaseRecycleContainer item);
+
+        /**
+         * @param position Clicked item position
+         */
         void itemClicked(int position);
+
+        /**
+         * Item was moved in list. Update the source data
+         * <p/>
+         * Remove item fromPosition
+         * Add item toPosition
+         *
+         * @param fromPosition From position
+         * @param toPosition   To position
+         */
         void itemMoved(int fromPosition, int toPosition);
     }
 

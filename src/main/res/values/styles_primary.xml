@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <style name="primary_red">
         <item name="colorPrimary">@color/p_red</item>
         <item name="colorPrimaryLight">@color/p_red_light</item>

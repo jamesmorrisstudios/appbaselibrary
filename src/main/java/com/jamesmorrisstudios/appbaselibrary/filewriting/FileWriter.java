@@ -43,17 +43,20 @@ import java.io.InputStream;
  */
 public final class FileWriter {
 
-    public enum FileLocation {
-        INTERNAL, CACHE, SDCARD, PATH
-    }
-
+    /**
+     * Creates a directory or directory tree
+     *
+     * @param directory Directory path
+     * @param location  File location
+     * @return False if failed to create. True if created or already exists.
+     */
     public synchronized static boolean mkDirs(@NonNull String directory, @NonNull FileLocation location) {
         File dir = getFile(directory, location);
-        if(dir == null) {
+        if (dir == null) {
             return false;
         }
         if (!dir.exists()) {
-            if(!dir.mkdirs()) {
+            if (!dir.mkdirs()) {
                 return false;
             }
         }
@@ -82,7 +85,7 @@ public final class FileWriter {
     @Nullable
     public static Uri getFileUri(@NonNull String fileName, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
-        if(file == null) {
+        if (file == null) {
             return null;
         }
         return Uri.fromFile(file);
@@ -98,7 +101,7 @@ public final class FileWriter {
      */
     public synchronized static Uri writeImage(@NonNull String fileName, @NonNull Bitmap bitmap, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
-        if(file == null) {
+        if (file == null) {
             return null;
         }
         try {
@@ -131,13 +134,13 @@ public final class FileWriter {
     /**
      * Reads a png or jpg encoded bitmap from a file
      *
-     * @param uri The name of the file
+     * @param uri      The name of the file
      * @param location If internal or external storage
      * @return The bitmap that was read
      */
     @Nullable
     public synchronized static Bitmap readImage(@NonNull Uri uri, @NonNull FileLocation location) {
-        if(isContentUri(uri, location)) {
+        if (isContentUri(uri, location)) {
             return readImageContent(uri);
         }
         return readImageSub(getFile(uri.getPath(), location));
@@ -150,7 +153,7 @@ public final class FileWriter {
      */
     @Nullable
     private synchronized static Bitmap readImageSub(@Nullable File file) {
-        if(file == null) {
+        if (file == null) {
             return null;
         }
         Bitmap bitmap;
@@ -177,7 +180,7 @@ public final class FileWriter {
      */
     public synchronized static Uri writeFile(@NonNull String fileName, @NonNull byte[] bytes, @NonNull FileLocation location) {
         File file = getFile(fileName, location);
-        if(file == null) {
+        if (file == null) {
             return null;
         }
         FileOutputStream outputStream;
@@ -208,16 +211,29 @@ public final class FileWriter {
         return readFileSub(getFile(fileName, location));
     }
 
+    /**
+     * Reads a file and returns the byte array of its contents
+     *
+     * @param uri      The Uri path to the file
+     * @param location The storage location
+     * @return Byte array of the file contents
+     */
     @Nullable
     public synchronized static byte[] readFile(@NonNull Uri uri, @NonNull FileLocation location) {
-        if(isContentUri(uri, location)) {
+        if (isContentUri(uri, location)) {
             return readFileContent(uri);
         }
         return readFileSub(getFile(uri.getPath(), location));
     }
 
+    /**
+     * Reads a file and returns the byte array of its contents
+     *
+     * @param file File object to read
+     * @return Byte array of the file contents
+     */
     private synchronized static byte[] readFileSub(@Nullable File file) {
-        if(file == null) {
+        if (file == null) {
             return null;
         }
         if (!file.exists()) {
@@ -235,15 +251,28 @@ public final class FileWriter {
         }
     }
 
+    /**
+     * True if this file is from a content provider
+     *
+     * @param uri      Uri path to the file
+     * @param location The storage location
+     * @return True if this file is from a content provider
+     */
     private static boolean isContentUri(@NonNull Uri uri, @NonNull FileLocation location) {
-        if(location == FileLocation.PATH) {
-            if(uri.getScheme().contains("content")) {
+        if (location == FileLocation.PATH) {
+            if (uri.getScheme().contains("content")) {
                 return true;
             }
         }
         return false;
     }
 
+    /**
+     * Read a file from a content provider
+     *
+     * @param uri Uri path to the file
+     * @return Byte array of the file contents
+     */
     private static byte[] readFileContent(@NonNull Uri uri) {
         ParcelFileDescriptor mInputPFD;
         try {
@@ -252,7 +281,7 @@ public final class FileWriter {
             e.printStackTrace();
             return null;
         }
-        if(mInputPFD == null) {
+        if (mInputPFD == null) {
             return null;
         }
         FileDescriptor fd = mInputPFD.getFileDescriptor();
@@ -268,6 +297,12 @@ public final class FileWriter {
         }
     }
 
+    /**
+     * Read an image from a content provider
+     *
+     * @param uri Uri path to the file
+     * @return Bitmap that was read. Null if failed.
+     */
     private static Bitmap readImageContent(@NonNull Uri uri) {
         ParcelFileDescriptor mInputPFD;
         try {
@@ -276,7 +311,7 @@ public final class FileWriter {
             e.printStackTrace();
             return null;
         }
-        if(mInputPFD == null) {
+        if (mInputPFD == null) {
             return null;
         }
         FileDescriptor fd = mInputPFD.getFileDescriptor();
@@ -312,7 +347,7 @@ public final class FileWriter {
      */
     @Nullable
     public static File getFile(@NonNull String fileName, @NonNull FileLocation location) {
-        switch(location) {
+        switch (location) {
             case INTERNAL:
                 return new File(AppBase.getContext().getFilesDir(), fileName);
             case CACHE:
@@ -320,7 +355,7 @@ public final class FileWriter {
             case PATH:
                 return new File(fileName);
             case SDCARD:
-                if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                     return new File(Environment.getExternalStorageDirectory(), fileName);
                 } else {
                     return null;
@@ -341,19 +376,43 @@ public final class FileWriter {
     private static byte[] readBytes(@NonNull InputStream inputStream) throws IOException {
         // this dynamically extends to take the bytes you read
         ByteArrayOutputStream byteBuffer = new ByteArrayOutputStream();
-
         // this is storage overwritten on each iteration with bytes
         int bufferSize = 1024;
         byte[] buffer = new byte[bufferSize];
-
         // we need to know how may bytes were read to write them to the byteBuffer
         int len;
         while ((len = inputStream.read(buffer)) != -1) {
             byteBuffer.write(buffer, 0, len);
         }
-
         // and then we can return your byte array.
         return byteBuffer.toByteArray();
+    }
+
+    /**
+     * File save location
+     */
+    public enum FileLocation {
+
+        /**
+         * Internal protected storage.
+         */
+        INTERNAL,
+
+        /**
+         * Cache location
+         */
+        CACHE,
+
+        /**
+         * External storage. Must acquire permission before calling this.
+         * May not always be available.
+         */
+        SDCARD,
+
+        /**
+         * Fully qualified path
+         */
+        PATH
     }
 
 }

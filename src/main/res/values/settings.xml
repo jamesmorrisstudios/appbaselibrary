@@ -2,7 +2,6 @@
 <resources>
     <string name="settings_pref" translatable="false">com.jamesmorrisstudios.appbaselibrary.SETTINGS</string>
 
-
     <array name="settings_array" translatable="false">
         <item>@array/settings_category_general</item>
         <item>@array/settings_category_display</item>
@@ -30,6 +29,7 @@
     <array name="settings_category_locale" translatable="false">
         <item>@string/settings_category_locale</item>
         <item>@array/setting_language_picker</item>
+        <item>@array/setting_first_day_of_week</item>
     </array>
 
     <array name="settings_category_theme" translatable="false">
@@ -245,6 +245,34 @@
         <item name="18">@string/blue_grey</item>
         <item name="19">@string/dark_grey</item>
         <item name="20">@string/white</item>
+    </string-array>
+
+    <!-- Set the first day of the week -->
+    <array name="setting_first_day_of_week">
+        <item name="defaultValue">@integer/setting_first_day_of_week_default_value</item>
+        <item name="key">@string/setting_first_day_of_week_key</item>
+        <item name="primary">@string/setting_first_day_of_week_primary</item>
+        <item name="secondary">@string/BLANK</item>
+        <item name="restart">@bool/setting_first_day_of_week_restart</item>
+        <item name="pro">@bool/setting_first_day_of_week_pro</item>
+        <item name="list">@array/setting_first_day_of_week_list</item>
+    </array>
+
+    <bool name="setting_first_day_of_week_pro">false</bool>
+    <bool name="setting_first_day_of_week_restart">false</bool>
+    <integer name="setting_first_day_of_week_default_value">0</integer>
+    <string name="setting_first_day_of_week_key" translatable="false">@string/pref_notification_first_day</string>
+    <string name="pref_notification_first_day" translatable="false">NOTIFICATION_FIRST_DAY</string>
+
+    <string-array name="setting_first_day_of_week_list">
+        <item name="automatic">@string/automatic</item>
+        <item name="sunday">@string/day_sunday</item>
+        <item name="monday">@string/day_monday</item>
+        <item name="tuesday">@string/day_tuesday</item>
+        <item name="wednesday">@string/day_wednesday</item>
+        <item name="thursday">@string/day_thursday</item>
+        <item name="friday">@string/day_friday</item>
+        <item name="saturday">@string/day_saturday</item>
     </string-array>
 
 </resources>

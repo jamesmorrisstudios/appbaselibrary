@@ -17,7 +17,7 @@
         <item name="android:windowBackground">@layout/splash_screen</item>
     </style>
 
-    <!-- application theme. -->
+    <!-- application themeBackground. -->
     <style name="AppThemeLight" parent="Theme.AppCompat.Light">
         <!-- Disable the action bar -->
         <item name="windowActionBar">false</item>
@@ -37,7 +37,7 @@
         <item name="android:textColorTertiaryInverse">@color/textLightDisabled</item>
     </style>
 
-    <!-- Dark application theme -->
+    <!-- Dark application themeBackground -->
     <style name="AppThemeDark" parent="Theme.AppCompat">
         <!-- Disable the action bar -->
         <item name="windowActionBar">false</item>
@@ -203,6 +203,27 @@
         <!-- Toolbar -->
         <item name="nnf_toolbarTheme">@style/toolbarDark</item>
     </style>
+
+    <style name="NNF_BaseTheme" parent="Theme.AppCompat.Dialog">
+        <!-- You can override this in your sub theme -->
+        <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="nnf_separator_color">@color/nnf_dark_separator_color</item>
+
+        <!-- These are important. Handled by toolbar. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NNF_BaseTheme.Light" parent="Theme.AppCompat.Light.Dialog">
+        <!-- You can override this in your sub theme -->
+        <item name="nnf_toolbarTheme">@style/ThemeOverlay.AppCompat.ActionBar</item>
+        <item name="nnf_separator_color">@color/nnf_light_separator_color</item>
+
+        <!-- These are important. Handled by toolbar. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 
     <!-- Drawer Style -->
     <style name="WhiteDrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">

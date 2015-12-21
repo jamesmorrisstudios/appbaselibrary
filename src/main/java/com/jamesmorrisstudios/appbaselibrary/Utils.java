@@ -18,44 +18,25 @@ package com.jamesmorrisstudios.appbaselibrary;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.database.Cursor;
-import android.graphics.Color;
-import android.media.Ringtone;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
-import android.os.Vibrator;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.DisplayMetrics;
 import android.util.Log;
-import android.util.TypedValue;
-import android.view.Display;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.jamesmorrisstudios.appbaselibrary.activities.RestartActivity;
+import com.jamesmorrisstudios.appbaselibrary.activities.AppLauncherActivity;
+import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
-import com.jamesmorrisstudios.appbaselibrary.dialogRequests.PromptDialogRequest;
-import com.jamesmorrisstudios.appbaselibrary.math.vectors.IntVector2;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Locale;
 import java.util.Random;
 import java.util.UUID;
-import java.util.regex.Pattern;
 
 /**
  * Utility and Constant values
@@ -64,267 +45,20 @@ import java.util.regex.Pattern;
  */
 public final class Utils {
     public static final String stringType = "UTF-8";
-
     public final static Random rand = new Random();
-    private static Vibrator vibrator = (Vibrator) AppBase.getContext().getSystemService(Context.VIBRATOR_SERVICE);
-    private static Ringtone ringtone = null;
-
-    /**
-     * Gets the screensize as an intVector
-     * This should work with all devices android 4.0+
-     *
-     * @return The screensize
-     */
-    @NonNull
-    public static IntVector2 getDisplaySize() {
-        int width = 0, height = 0;
-        final DisplayMetrics metrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) AppBase.getContext().getSystemService(Context.WINDOW_SERVICE);
-        Display display = windowManager.getDefaultDisplay();
-        Method mGetRawH, mGetRawW;
-
-        try {
-            // For JellyBean 4.2 (API 17) and onward
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                display.getRealMetrics(metrics);
-
-                width = metrics.widthPixels;
-                height = metrics.heightPixels;
-            } else {
-                mGetRawH = Display.class.getMethod("getRawHeight");
-                mGetRawW = Display.class.getMethod("getRawWidth");
-
-                try {
-                    width = (Integer) mGetRawW.invoke(display);
-                    height = (Integer) mGetRawH.invoke(display);
-                } catch (IllegalArgumentException | IllegalAccessException | InvocationTargetException e) {
-                    e.printStackTrace();
-                }
-            }
-        } catch (NoSuchMethodException e3) {
-            e3.printStackTrace();
-        }
-        return new IntVector2(width, height);
-    }
-
-    /**
-     * Gets the screensize as if the device is in portrait view.
-     * If in portrait this and getDisplaySize will return the same thing.
-     *
-     * @return The screensize formatted as if in portrait
-     */
-    @NonNull
-    public static IntVector2 getDisplaySizeAsPortrait() {
-        IntVector2 size = getDisplaySize();
-        if (size.y >= size.x) {
-            return size;
-        } else {
-            int x = size.x;
-            size.x = size.y;
-            size.y = x;
-            return size;
-        }
-    }
-
-    /**
-     * Converts a dip value into a pixel value
-     * Usually you want to use getDipInt unless you are performing additional calculations with the result.
-     *
-     * @param dp Dip value
-     * @return Pixel value
-     */
-    public static float getDip(int dp) {
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, AppBase.getContext().getResources().getDisplayMetrics());
-    }
-
-    /**
-     * Converts a dip value into a pixel value rounded to the nearest int
-     * This is typically the desired choice as pixels are only in ints
-     *
-     * @param dip Dip value
-     * @return Pixel value
-     */
-    public static int getDipInt(int dip) {
-        return Math.round(getDip(dip));
-    }
-
-    /**
-     * Gets the current device orientation.
-     * There are some reports that this may return the wrong result on some devices
-     * but I have not found any yet. I may update this will a fallback screensize check
-     *
-     * @return The device orientation
-     */
-    public static Orientation getOrientation() {
-        switch (AppBase.getContext().getResources().getConfiguration().orientation) {
-            case Configuration.ORIENTATION_UNDEFINED:
-                return Orientation.UNDEFINED;
-            case Configuration.ORIENTATION_PORTRAIT:
-                return Orientation.PORTRAIT;
-            case Configuration.ORIENTATION_LANDSCAPE:
-                return Orientation.LANDSCAPE;
-            default:
-                return Orientation.UNDEFINED;
-        }
-    }
-
-    /**
-     * Gets the screen size bucket category
-     *
-     * @return The screensize
-     */
-    @NonNull
-    public static ScreenSize getScreenSize() {
-        int screenLayout = AppBase.getContext().getResources().getConfiguration().screenLayout;
-        screenLayout &= Configuration.SCREENLAYOUT_SIZE_MASK;
-        switch (screenLayout) {
-            case Configuration.SCREENLAYOUT_SIZE_SMALL:
-                return ScreenSize.SMALL;
-            case Configuration.SCREENLAYOUT_SIZE_NORMAL:
-                return ScreenSize.NORMAL;
-            case Configuration.SCREENLAYOUT_SIZE_LARGE:
-                return ScreenSize.LARGE;
-            case Configuration.SCREENLAYOUT_SIZE_XLARGE:
-                return ScreenSize.XLARGE;
-            default:
-                return ScreenSize.UNDEFINED;
-        }
-
-    }
-
-    /**
-     * Gets the height of the status bar if visible.
-     * Must pass in if immersive is enabled as that effects the height.
-     *
-     * @param immersiveEnabled If immersive mode is enabled
-     * @return The height of the status bar in pixels.
-     */
-    public static int getStatusHeight(boolean immersiveEnabled) {
-        if (immersiveEnabled) {
-            return 0;
-        } else {
-            Resources resources = AppBase.getContext().getResources();
-            int result = 0;
-            int resourceId = resources.getIdentifier("status_bar_height", "dimen", "android");
-            if (resourceId > 0) {
-                result = resources.getDimensionPixelSize(resourceId);
-            }
-            return result;
-        }
-    }
-
-    public static int getActionBarHeight() {
-        TypedValue tv = new TypedValue();
-        if (AppBase.getContext().getTheme().resolveAttribute(android.R.attr.actionBarSize, tv, true)) {
-            return TypedValue.complexToDimensionPixelSize(tv.data, AppBase.getContext().getResources().getDisplayMetrics());
-        }
-        return 0;
-    }
-
-    /**
-     * Gets the height of the navigation bar
-     *
-     * @param immersiveEnabled If immersive mode is enabled
-     * @return The height of the navigation bar in pixels.
-     */
-    public static int getNavigationHeight(boolean immersiveEnabled) {
-        if (immersiveEnabled) {
-            return 0;
-        } else {
-            Resources resources = AppBase.getContext().getResources();
-            int id = resources.getIdentifier(
-                    getOrientation() == Orientation.PORTRAIT ? "navigation_bar_height" : "navigation_bar_height_landscape",
-                    "dimen", "android");
-            if (id > 0) {
-                return resources.getDimensionPixelSize(id);
-            }
-            return 0;
-        }
-    }
-
-    /**
-     * Gets the location of the navigation bar.
-     * Note that not all devices have an onscreen navigation bar.
-     * This will report side for those without so always check the height of the bar before assuming its there.
-     *
-     * @return The location of the navigation bar
-     */
-    @NonNull
-    public static NavigationBarLocation getNavigationBarLocation() {
-        DisplayMetrics displaymetrics = new DisplayMetrics();
-        WindowManager windowManager = (WindowManager) AppBase.getContext().getSystemService(Context.WINDOW_SERVICE);
-        windowManager.getDefaultDisplay().getMetrics(displaymetrics);
-        int viewHeight = displaymetrics.heightPixels;
-        if (getDisplaySize().y != viewHeight) {
-            return NavigationBarLocation.BOTTOM;
-        } else {
-            return NavigationBarLocation.SIDE;
-        }
-    }
-
-    /**
-     * Gets the formatted version string of the app in the format 1.2.3
-     *
-     * @return The formatted version string
-     */
-    public static String getVersionName() {
-        PackageInfo pInfo;
-        try {
-            pInfo = AppBase.getContext().getPackageManager().getPackageInfo(AppBase.getContext().getPackageName(), 0);
-            return pInfo.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
-        return "";
-    }
-
-    public static int getVersionMajor(@NonNull String fromVersionString) {
-        return getVersion(fromVersionString, 0);
-    }
-
-    public static int getVersionMinor(@NonNull String fromVersionString) {
-        return getVersion(fromVersionString, 1);
-    }
-
-    public static int getVersionAux(@NonNull String fromVersionString) {
-        return getVersion(fromVersionString, 2);
-    }
-
-    public static int getVersionMajor() {
-        return getVersion(getVersionName(), 0);
-    }
-
-    public static int getVersionMinor() {
-        return getVersion(getVersionName(), 1);
-    }
-
-    public static int getVersionAux() {
-        return getVersion(getVersionName(), 2);
-    }
-
-    private static int getVersion(String versionName, int versionIndex) {
-        String nameSplit[] = versionName.split(Pattern.quote("."));
-        //Log.v("Utils", "GetVersion "+versionName+" "+nameSplit.length);
-        if(versionName.equals("") || nameSplit.length != 3) {
-            return -1;
-        }
-        return stringToInt(nameSplit[versionIndex], -1);
-    }
-
-    public static String getVersionType() {
-        return AppBase.getContext().getString(R.string.version_type);
-    }
 
     /**
      * Displays a popup toast for a short time
      *
      * @param text Text to display
+     * @return true if display, False if error
      */
-    public static void toastShort(@NonNull String text) {
+    public static boolean toastShort(@NonNull final String text) {
         try {
             Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_SHORT).show();
+            return true;
         } catch (Exception ex) {
-
+            return false;
         }
     }
 
@@ -332,40 +66,15 @@ public final class Utils {
      * Displays a popup toast for a long time
      *
      * @param text Text to display
+     * @return true if display, False if error
      */
-    public static void toastLong(@NonNull String text) {
+    public static boolean toastLong(@NonNull final String text) {
         try {
             Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_LONG).show();
+            return true;
         } catch (Exception ex) {
-
+            return false;
         }
-    }
-
-    private static Locale backupLocale = null;
-
-    public static void restoreLocale() {
-        if(backupLocale != null) {
-            Log.v("Utils", "Restoring Locale");
-            setLocale(backupLocale);
-        } else {
-            Log.v("Utils", "No Backup cannot restore Locale");
-        }
-    }
-
-    public static void setLocale(String localeName) {
-        Log.v("Utils", "Set Locale "+localeName);
-        Locale locale = new Locale(localeName);
-        setLocale(locale);
-    }
-
-    public static void setLocale(Locale locale) {
-        if(backupLocale == null) {
-            backupLocale = Locale.getDefault();
-        }
-        Locale.setDefault(locale);
-        Configuration config2 = new Configuration();
-        config2.locale = locale;
-        AppBase.getContext().getResources().updateConfiguration(config2, AppBase.getContext().getResources().getDisplayMetrics());
     }
 
     /**
@@ -375,7 +84,7 @@ public final class Utils {
      * @param victim The global layout listener to remove
      */
     @SuppressWarnings("deprecation")
-    public static void removeGlobalLayoutListener(@NonNull View src, @NonNull ViewTreeObserver.OnGlobalLayoutListener victim) {
+    public static void removeGlobalLayoutListener(@NonNull final View src, @NonNull final ViewTreeObserver.OnGlobalLayoutListener victim) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             src.getViewTreeObserver().removeOnGlobalLayoutListener(victim);
         } else {
@@ -390,7 +99,7 @@ public final class Utils {
      * @param defaultValue Value that returns on parsing error
      * @return Parsed value
      */
-    public static int stringToInt(String value, int defaultValue) {
+    public static int stringToInt(@NonNull final String value, final int defaultValue) {
         try {
             return Integer.parseInt(value);
         } catch (Exception ex) {
@@ -405,7 +114,7 @@ public final class Utils {
      * @param defaultValue Value that returns on parsing error
      * @return Parsed value
      */
-    public static float stringToFloat(String value, float defaultValue) {
+    public static float stringToFloat(@NonNull final String value, final float defaultValue) {
         try {
             return Float.parseFloat(value);
         } catch (Exception ex) {
@@ -420,60 +129,11 @@ public final class Utils {
      * @param defaultValue Value that returns on parsing error
      * @return Parsed value
      */
-    public static byte stringToByte(String value, byte defaultValue) {
+    public static byte stringToByte(@NonNull final String value, final byte defaultValue) {
         try {
             return Byte.parseByte(value);
         } catch (Exception ex) {
             return defaultValue;
-        }
-    }
-
-    /**
-     * Locks the device window in the current mode.
-     * If current mode is unspecificed this does nothing.
-     */
-    public static void lockOrientationCurrent(@NonNull AppCompatActivity activity) {
-        if (getOrientation() == Orientation.PORTRAIT) {
-            lockOrientationPortrait(activity);
-        } else if (getOrientation() == Orientation.LANDSCAPE) {
-            lockOrientationLandscape(activity);
-        }
-    }
-
-    /**
-     * Locks the device window in landscape mode.
-     */
-    public static void lockOrientationLandscape(@NonNull AppCompatActivity activity) {
-        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-    }
-
-    /**
-     * Locks the device window in portrait mode.
-     */
-    public static void lockOrientationPortrait(@NonNull AppCompatActivity activity) {
-        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-    }
-
-    /**
-     * Allows user to freely use portrait or landscape mode.
-     */
-    public static void unlockOrientation(@NonNull AppCompatActivity activity) {
-        activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
-    }
-
-    /**
-     * Gets the current orientation lock status. Undefined if allowed to rotate freely
-     */
-    public static Orientation getOrientationLock(@NonNull AppCompatActivity activity) {
-        switch(activity.getRequestedOrientation()) {
-            case ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED:
-                return Orientation.UNDEFINED;
-            case ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE:
-                return Orientation.LANDSCAPE;
-            case ActivityInfo.SCREEN_ORIENTATION_PORTRAIT:
-                return Orientation.PORTRAIT;
-            default:
-                return Orientation.UNDEFINED;
         }
     }
 
@@ -484,7 +144,7 @@ public final class Utils {
      * @param array Array to check from
      * @return True if the item is in the array
      */
-    public static boolean isInArray(@NonNull String value, @NonNull String[] array) {
+    public static boolean isInArray(@NonNull final String value, @NonNull final String[] array) {
         for (String item : array) {
             if (item == null) {
                 continue;
@@ -496,42 +156,77 @@ public final class Utils {
         return false;
     }
 
+    /**
+     * @return Gets the package name
+     */
+    @NonNull
     public static String getPackage() {
         return AppBase.getContext().getPackageName();
     }
 
-    public static void restartApp(Activity activity) {
-        restartApp(activity, null, -1);
+    /**
+     * Hides the keyboard if visible
+     */
+    public static void hideKeyboard(@NonNull final AppCompatActivity activity) {
+        // Check if no view has focus:
+        View view = activity.getCurrentFocus();
+        if (view != null) {
+            InputMethodManager inputManager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 
-    public static void restartApp(Activity activity, String page, int scrollY) {
-        Intent i = new Intent(activity, RestartActivity.class);
+    /**
+     * Restarts the app and loads to the given page and scroll position
+     *
+     * @param activity Activity context
+     * @param page     String page tag
+     * @param scrollY  Scroll position. -1 for top
+     */
+    public static void restartApp(@NonNull final Activity activity, @Nullable final String page, final int scrollY, @Nullable final Bundle bundle) {
+        Intent i = new Intent(activity, AppLauncherActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if(page != null) {
+        if (page != null) {
             i.putExtra("PAGE", page);
         }
-        if(scrollY != -1) {
+        if (scrollY != -1) {
             i.putExtra("SCROLL_Y", scrollY);
+        }
+        if (bundle != null) {
+            i.putExtra("EXTRAS", bundle);
         }
         AppBase.getContext().startActivity(i);
         activity.finish();
     }
 
-    public static void openLink(String link) {
+    /**
+     * Open the given link
+     *
+     * @param link Link to open
+     */
+    public static void openLink(@NonNull final String link) {
         try {
-            if(link.startsWith("www")) {
-                link = "http://"+link;
+            String link2 = link;
+            if (link2.startsWith("www")) {
+                link2 = "http://" + link2;
             }
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link2));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             AppBase.getContext().startActivity(intent);
         } catch (Exception ex) {
             ex.printStackTrace();
             Log.v("Utils", ex.getMessage());
-            Utils.toastShort(AppBase.getContext().getResources().getString(R.string.failed_open_link));
+            new SnackbarRequest(AppBase.getContext().getResources().getString(R.string.failed_open_link), SnackbarRequest.SnackBarDuration.SHORT).execute();
         }
     }
 
+    /**
+     * Open Android share chooser for text
+     *
+     * @param chooserTitle Title
+     * @param shareText    Text to share
+     * @param shareType    Type of share
+     */
     public static void shareText(@NonNull final String chooserTitle, @NonNull final String shareText, @NonNull final String shareType) {
         Intent share = new Intent(Intent.ACTION_SEND);
         share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -542,6 +237,13 @@ public final class Utils {
         AppBase.getContext().startActivity(chooser);
     }
 
+    /**
+     * Open Android share chooser for data stream such as an image or file
+     *
+     * @param chooserTitle Title
+     * @param uri          Uri of stream
+     * @param shareType    Type of share
+     */
     public static void shareStream(@NonNull final String chooserTitle, @NonNull final Uri uri, @NonNull final String shareType) {
         Intent share = new Intent(Intent.ACTION_SEND);
         share.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -552,37 +254,23 @@ public final class Utils {
         AppBase.getContext().startActivity(chooser);
     }
 
-    public static boolean[] getFilledBoolArray(boolean fillValue, int size) {
+    /**
+     * @param fillValue True or false fill value
+     * @param size      Size of boolean array
+     * @return Boolean array filled with given data
+     */
+    @NonNull
+    public static boolean[] getFilledBoolArray(final boolean fillValue, final int size) {
         boolean[] array = new boolean[size];
-        for(int i=0; i<array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = fillValue;
         }
         return array;
     }
 
-    public static void vibrate(long[] pattern) {
-        vibrator.vibrate(pattern, -1);
-    }
-
-    public static void vibrateCancel() {
-        vibrator.cancel();
-    }
-
-    public static void ringtonePlay(Uri tone) {
-        try {
-            ringtone = RingtoneManager.getRingtone(AppBase.getContext(), tone);
-            ringtone.play();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void ringtoneCancel() {
-        if(ringtone != null) {
-            ringtone.stop();
-        }
-    }
-
+    /**
+     * @return Unique UUID
+     */
     @NonNull
     public static UUID generateUniqueUUID() {
         return UUID.randomUUID();
@@ -598,84 +286,25 @@ public final class Utils {
         return UUID.randomUUID().toString();
     }
 
+    /**
+     * @return Unique Long
+     */
     public static long generateUniqueLong() {
         return UUID.randomUUID().getLeastSignificantBits();
     }
 
+    /**
+     * @return Unique Int
+     */
     public static int generateUniqueInt() {
         return (int) UUID.randomUUID().getLeastSignificantBits();
     }
 
+    /**
+     * @return Unique Int only using lower 16 bits
+     */
     public static int generateUniqueIntLower16() {
-        return Math.abs(BitManager.intToShort(generateUniqueInt()));
-        //int value = BitManager.setByteInInt((byte)2, (byte)8, (byte)0, generateUniqueInt());
-        //return BitManager.setByteInInt((byte)3, (byte)8, (byte)0, value);
-    }
-
-    public static ArrayList<RingtoneItem> getRingtones(RingtoneType type) {
-        ArrayList<RingtoneItem> ringtoneItems = new ArrayList<>();
-        RingtoneManager manager = new RingtoneManager(AppBase.getContext());
-        if(type == RingtoneType.NOTIFICATION) {
-            manager.setType(RingtoneManager.TYPE_NOTIFICATION);
-        } else if(type == RingtoneType.RINGTONE) {
-            manager.setType(RingtoneManager.TYPE_RINGTONE);
-        }
-        Cursor cursor = manager.getCursor();
-        while (cursor.moveToNext()) {
-            String title = cursor.getString(RingtoneManager.TITLE_COLUMN_INDEX);
-            //String uri = cursor.getString(RingtoneManager.URI_COLUMN_INDEX);
-            Uri ringtoneURI = manager.getRingtoneUri(cursor.getPosition());
-            ringtoneItems.add(new RingtoneItem(type, title, ringtoneURI));
-        }
-        return ringtoneItems;
-    }
-
-    public static boolean isPro() {
-        return AppBase.getContext().getString(R.string.pro_package_name).equals(Utils.getPackage());
-    }
-
-    public static void showProPopup() {
-        String title = AppBase.getContext().getString(R.string.upgrade);
-        String content = AppBase.getContext().getString(R.string.feature_requires_pro);
-        String positiveText = AppBase.getContext().getString(R.string.upgrade_now);
-
-        Bus.postObject(new PromptDialogRequest(title, content, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //Link to
-                Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
-            }
-        }, positiveText, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                //Cancel
-            }
-        }, null));
-    }
-
-    public enum RingtoneType {
-        NOTIFICATION, RINGTONE
-    }
-
-    /**
-     * Device orientations
-     */
-    public enum Orientation {
-        UNDEFINED, PORTRAIT, LANDSCAPE
-    }
-
-    /**
-     * Android defined screen size categories
-     */
-    public enum ScreenSize {
-        SMALL, NORMAL, LARGE, XLARGE, UNDEFINED
-    }
-
-    /**
-     * Location of the navigation bar.
-     */
-    public enum NavigationBarLocation {
-        BOTTOM, SIDE
+        return Math.abs(UtilsBits.intToShort(generateUniqueInt()));
     }
 
 }

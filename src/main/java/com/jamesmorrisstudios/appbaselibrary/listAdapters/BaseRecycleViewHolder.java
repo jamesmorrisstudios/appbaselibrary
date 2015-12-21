@@ -26,11 +26,8 @@ import com.jamesmorrisstudios.appbaselibrary.touchHelper.ItemTouchHelperViewHold
 /**
  * Reminder view holder for use in RecyclerView
  */
-public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
-        implements View.OnClickListener, ItemTouchHelperViewHolder {
-    //Click listener
+public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, ItemTouchHelperViewHolder {
     private cardClickListener mListener;
-    //Type of view. header or normal
     private boolean isHeader;
 
     /**
@@ -50,24 +47,55 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
         }
     }
 
+    /**
+     * TODO possibly add some kinda of item highlight when dragging to rearrange
+     */
     @Override
-    public void onItemSelected() {
-        //itemView.setBackgroundColor(Color.LTGRAY);
+    public final void onItemSelected() {
+
     }
 
+    /**
+     * TODO possibly add some kinda of item highlight when dragging to rearrange
+     */
     @Override
-    public void onItemClear() {
-       // itemView.setBackgroundColor(0);
+    public final void onItemClear() {
+
     }
 
-    protected abstract void initHeader(View view);
+    /**
+     * Init the header view
+     *
+     * @param view Header view
+     */
+    protected abstract void initHeader(@NonNull View view);
 
-    protected abstract void initItem(View view);
+    /**
+     * Init the item view
+     *
+     * @param view Item view
+     */
+    protected abstract void initItem(@NonNull View view);
 
-    protected abstract void bindHeader(BaseRecycleItem headerItem, boolean expanded);
+    /**
+     * Bind the header to the data source
+     *
+     * @param headerItem Header data source
+     * @param expanded   True if expanded view
+     */
+    protected abstract void bindHeader(@NonNull BaseRecycleItem headerItem, boolean expanded);
 
-    protected abstract void bindItem(BaseRecycleItem item, boolean expanded);
+    /**
+     * Bind the item to the data source
+     *
+     * @param item     Item data source
+     * @param expanded True if expanded view
+     */
+    protected abstract void bindItem(@NonNull BaseRecycleItem item, boolean expanded);
 
+    /**
+     * Toggle expanded vs compact view
+     */
     public final void toggleExpanded() {
         mListener.toggleExpanded(getLayoutPosition());
     }
@@ -77,7 +105,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
      *
      * @param data Data to bind
      */
-    public void bindItem(@NonNull final BaseRecycleContainer data, boolean expanded) {
+    public final void bindItem(@NonNull final BaseRecycleContainer data, boolean expanded) {
         if (isHeader) {
             bindHeader(data.getHeader(), expanded);
         } else {
@@ -86,10 +114,10 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
     }
 
     /**
-     * @param v The view that was clicked
+     * @param view The view that was clicked
      */
     @Override
-    public void onClick(@NonNull View v) {
+    public final void onClick(@NonNull View view) {
         if (mListener != null) {
             mListener.cardClicked(getLayoutPosition());
         }
@@ -99,8 +127,15 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder
      * Card click listener interface
      */
     public interface cardClickListener {
+
+        /**
+         * @param position Clicked card position
+         */
         void cardClicked(int position);
 
+        /**
+         * @param position Card that should toggle expanded view
+         */
         void toggleExpanded(int position);
     }
 

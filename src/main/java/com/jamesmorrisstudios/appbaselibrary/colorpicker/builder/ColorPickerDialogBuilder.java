@@ -178,18 +178,18 @@ public class ColorPickerDialogBuilder {
             alphaSlider.setColor(getStartColor(initialColor));
         }
         if (isPreviewEnabled) {
-            colorPreview = (LinearLayout) View.inflate(context, R.layout.color_picker_color_preview, null);
+            colorPreview = (LinearLayout) View.inflate(context, R.layout.dialog_color_picker_color_preview, null);
             colorPreview.setVisibility(View.GONE);
             pickerContainer.addView(colorPreview);
 
             if (initialColor.length == 0) {
-                ImageView colorImage = (ImageView) View.inflate(context, R.layout.color_picker_color_selector, null);
+                ImageView colorImage = (ImageView) View.inflate(context, R.layout.dialog_color_picker_color_selector, null);
                 colorImage.setImageDrawable(new ColorDrawable(Color.WHITE));
             } else {
                 for (int i = 0; i < initialColor.length && i < this.pickerCount; i++) {
                     if (initialColor[i] == null)
                         break;
-                    LinearLayout colorLayout = (LinearLayout) View.inflate(context, R.layout.color_picker_color_selector, null);
+                    LinearLayout colorLayout = (LinearLayout) View.inflate(context, R.layout.dialog_color_picker_color_selector, null);
                     ImageView colorImage = (ImageView) colorLayout.findViewById(R.id.image_preview);
                     colorImage.setImageDrawable(new ColorDrawable(initialColor[i]));
                     colorPreview.addView(colorLayout);

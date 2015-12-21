@@ -18,7 +18,6 @@ package com.jamesmorrisstudios.appbaselibrary;
 
 
 import android.support.annotation.NonNull;
-import android.util.Log;
 
 /**
  * Handler that wraps all calls for the Event Bus system
@@ -27,6 +26,7 @@ import android.util.Log;
  */
 public final class Bus {
     public static final String TAG = "Bus";
+
     /**
      * The actual otto bus system. Nothing beyond this class has direct access to it
      */
@@ -37,11 +37,11 @@ public final class Bus {
      *
      * @param object Object to register
      */
-    public static void register(@NonNull Object object) {
+    public static void register(@NonNull final Object object) {
         try {
             BUS.register(object);
         } catch (Exception ex) {
-            Log.e(TAG, "ERROR: Register Error: " + ex.getMessage());
+            Logger.e(Logger.LoggerCategory.BASE, TAG, "ERROR: Register Error: " + ex.getMessage());
         }
     }
 
@@ -50,33 +50,33 @@ public final class Bus {
      *
      * @param object Object to unregister
      */
-    public static void unregister(@NonNull Object object) {
+    public static void unregister(@NonNull final Object object) {
         try {
             BUS.unregister(object);
         } catch (Exception ex) {
-            Log.e(TAG, "ERROR: UnRegister Error: " + ex.getMessage());
+            Logger.e(Logger.LoggerCategory.BASE, TAG, "ERROR: UnRegister Error: " + ex.getMessage());
         }
     }
 
     /**
      * Posts an enum
      *
-     * @param event Enum to post
+     * @param event Enum to execute
      */
-    public static void postEnum(@NonNull Enum event) {
+    public static void postEnum(@NonNull final Enum event) {
         postObject(event);
     }
 
     /**
      * Posts a generic object
      *
-     * @param event Object to post
+     * @param event Object to execute
      */
-    public static void postObject(@NonNull Object event) {
+    public static void postObject(@NonNull final Object event) {
         try {
             BUS.post(event);
         } catch (Exception ex) {
-            Log.e(TAG, "ERROR: Post Error: " + ex.getMessage());
+            Logger.e(Logger.LoggerCategory.BASE, TAG, "ERROR: Post Error: " + ex.getMessage());
         }
     }
 

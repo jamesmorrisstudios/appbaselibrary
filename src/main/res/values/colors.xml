@@ -193,7 +193,7 @@
     <color name="iconLight">#B6FFFFFF</color>
     <color name="iconDark">@color/textDarkSecondary</color>
 
-    <!-- Calendar light theme -->
+    <!-- Calendar light themeBackground -->
     <color name="calendar_active_month_bg">@color/backgroundLight</color>
     <color name="calendar_bg">#ffffffff</color>
     <color name="calendar_divider">#ffbababa</color>
@@ -204,7 +204,7 @@
     <color name="calendar_text_selected">#ffffffff</color>
     <color name="calendar_text_unselectable">#7f778088</color>
 
-    <!-- Calendar dark theme -->
+    <!-- Calendar dark themeBackground -->
     <color name="dark_calendar_active_month_bg">@color/backgroundDark</color>
     <color name="dark_calendar_bg">#ffffffff</color>
     <color name="dark_calendar_divider">#ffbababa</color>

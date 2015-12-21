@@ -4,33 +4,27 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 
 /**
+ * License fragment
+ * <p/>
  * Created by James on 4/29/2015.
  */
-public class LicenseFragment extends BaseFragment {
+public final class LicenseFragment extends BaseFragment {
     public static final String TAG = "LicenseFragment";
 
     /**
      * Required empty public constructor
      */
     public LicenseFragment() {
-    }
-
-    /**
-     * @param savedInstanceState Saved instance state
-     */
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
     }
 
     /**
@@ -42,8 +36,8 @@ public class LicenseFragment extends BaseFragment {
      * @return The top view for this fragment
      */
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        ScrollView view = (ScrollView) inflater.inflate(R.layout.fragment_license, container, false);
+    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        NestedScrollView view = (NestedScrollView) inflater.inflate(R.layout.fragment_license, container, false);
         LinearLayout contView = (LinearLayout) view.findViewById(R.id.license_container);
         TypedArray licensesLibrary = getResources().obtainTypedArray(R.array.help_license_library);
         TypedArray codeApp = getResources().obtainTypedArray(R.array.help_license);
@@ -99,7 +93,7 @@ public class LicenseFragment extends BaseFragment {
      * @param link_license Link to license file
      */
     private void addLicenseItem(@NonNull LinearLayout container, @NonNull String title, @NonNull String link_site, @NonNull String link_license) {
-        LinearLayout licenseItem = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.license_item, null);
+        LinearLayout licenseItem = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.fragment_license_item, null);
         TextView textTitle = (TextView) licenseItem.findViewById(R.id.license_title);
         textTitle.setText(title);
         TextView textSite = (TextView) licenseItem.findViewById(R.id.license_site);
@@ -109,29 +103,66 @@ public class LicenseFragment extends BaseFragment {
         container.addView(licenseItem);
     }
 
-    @Override
-    public void onBack() {
-
+    /**
+     * Override this to set custom text for the toolbar
+     *
+     * @return Toolbar title text.
+     */
+    @NonNull
+    protected String getToolbarTitle() {
+        return getString(R.string.licenses);
     }
 
+    /**
+     * @return true
+     */
     @Override
-    public boolean showToolbarTitle() {
+    public final boolean showToolbarTitle() {
         return true;
     }
 
+    /**
+     * Unused
+     *
+     * @param bundle bundle
+     */
     @Override
-    protected void saveState(Bundle bundle) {
+    protected final void saveState(@NonNull Bundle bundle) {
 
     }
 
+    /**
+     * Unused
+     *
+     * @param bundle bundle
+     */
     @Override
-    protected void restoreState(Bundle bundle) {
+    protected final void restoreState(@NonNull Bundle bundle) {
 
     }
 
+    /**
+     * Register bus listener if used
+     */
     @Override
-    protected void afterViewCreated() {
+    protected void registerBus() {
 
+    }
+
+    /**
+     * Unregister bus listener if used
+     */
+    @Override
+    protected void unregisterBus() {
+
+    }
+
+    /**
+     * Unused
+     */
+    @Override
+    protected final void afterViewCreated() {
+        hideFab();
     }
 
 }

@@ -29,7 +29,7 @@ import java.util.ArrayList;
  * @attr ref R.styleable.AutofitTextView_minTextSize
  * @attr ref R.styleable.AutofitTextView_precision
  */
-public class AutofitHelper {
+public final class AutofitHelper {
 
     private static final String TAG = "AutoFitTextHelper";
     private static final boolean SPEW = false;

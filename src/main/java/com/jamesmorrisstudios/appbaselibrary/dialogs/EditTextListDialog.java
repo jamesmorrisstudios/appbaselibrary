@@ -7,12 +7,9 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,58 +23,51 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Edit text list dialog
+ * <p/>
  * Created by James on 7/9/2015.
  */
-public class EditTextListDialog extends DialogFragment {
-
+public final class EditTextListDialog extends DialogFragment {
     private ListView list;
-    private TextView title;
-    private Button btnCancel, btnOk, btnAdd;
     private ArrayList<String> messages = null;
-    private ListAdapter adapter = null;
+    private EditTextListAdapter adapter = null;
     private String titleText;
-    private EditMessageListener onPositive;
+    private EditTextListListener onPositive;
     private View.OnClickListener onNegative;
 
+    /**
+     * Empty constructor required for DialogFragment
+     */
     public EditTextListDialog() {
-        // Empty constructor required for DialogFragment
     }
 
-    public void onPause() {
+    /**
+     * Dismiss dialog on pause
+     */
+    public final void onPause() {
         dismiss();
         super.onPause();
     }
 
+    /**
+     * @param inflater           Inflater
+     * @param container          Container view
+     * @param savedInstanceState Saved instance state
+     * @return Dialog view
+     */
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.edit_text_list_dialog, container);
+    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.dialog_edit_text_list, container);
         list = (ListView) view.findViewById(R.id.list);
-        btnCancel = (Button) view.findViewById(R.id.btn_cancel);
-        btnOk = (Button) view.findViewById(R.id.btn_ok);
-        btnAdd = (Button) view.findViewById(R.id.btn_neutral);
-        title = (TextView) view.findViewById(R.id.title);
-
+        Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
+        Button btnOk = (Button) view.findViewById(R.id.btn_ok);
+        Button btnAdd = (Button) view.findViewById(R.id.btn_neutral);
+        TextView title = (TextView) view.findViewById(R.id.title);
         title.setText(titleText);
-
-        if(messages != null) {
-            adapter = new ListAdapter(getActivity(), R.layout.edit_text_list_line_item, wrapString(messages));
-
+        if (messages != null) {
+            adapter = new EditTextListAdapter(getActivity(), R.layout.dialog_edit_text_list_item, wrapString(messages));
             // Assign adapter to ListView
             list.setAdapter(adapter);
-
-            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                    Log.v("EditMessageDialog", "Item Clicked: " + position);
-                }
-            });
-            list.setOnKeyListener(new View.OnKeyListener() {
-                @Override
-                public boolean onKey(View v, int keyCode, KeyEvent event) {
-                    Log.v("EditMessageDialog", "Key Press");
-                    return false;
-                }
-            });
         }
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +84,7 @@ public class EditTextListDialog extends DialogFragment {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(onPositive != null && adapter != null) {
+                if (onPositive != null && adapter != null) {
                     onPositive.onPositive(adapter.getItems());
                 }
                 list.post(new Runnable() {
@@ -114,26 +104,47 @@ public class EditTextListDialog extends DialogFragment {
         return view;
     }
 
-    public void setData(@NonNull String titleText, @NonNull ArrayList<String> messages, @NonNull EditMessageListener onPositive, @Nullable View.OnClickListener onNegative) {
+    /**
+     * @param titleText  Dialog title
+     * @param messages   List of text items
+     * @param onPositive onPositive
+     * @param onNegative onNegative
+     */
+    public final void setData(@NonNull String titleText, @NonNull ArrayList<String> messages, @NonNull EditTextListListener onPositive, @Nullable View.OnClickListener onNegative) {
         this.titleText = titleText;
         this.messages = new ArrayList<>(messages);
         this.onPositive = onPositive;
         this.onNegative = onNegative;
     }
 
-    public interface EditMessageListener {
-        void onPositive(ArrayList<String> messages);
-    }
-
-    private List<StringWrapper> wrapString(List<String> list) {
+    /**
+     * @param list List of strings
+     * @return Wrapped string items
+     */
+    @NonNull
+    private List<StringWrapper> wrapString(@NonNull List<String> list) {
         List<StringWrapper> wrapList = new ArrayList<>();
-        for(String text : list) {
+        for (String text : list) {
             wrapList.add(new StringWrapper(text));
         }
         return wrapList;
     }
 
-    class StringWrapper {
+    /**
+     * Edit text list listener
+     */
+    public interface EditTextListListener {
+
+        /**
+         * @param messages list of Strings
+         */
+        void onPositive(@NonNull ArrayList<String> messages);
+    }
+
+    /**
+     * String wrapper object
+     */
+    private class StringWrapper {
         public String text;
         public TextWatcher textWatcher = new TextWatcher() {
             @Override
@@ -151,51 +162,69 @@ public class EditTextListDialog extends DialogFragment {
                 text = s.toString();
             }
         };
+
+        /**
+         * Constructor
+         *
+         * @param text String
+         */
         public StringWrapper(String text) {
             this.text = text;
         }
     }
 
-    class ListAdapter extends ArrayAdapter<StringWrapper> {
+    /**
+     * List adapter
+     */
+    private class EditTextListAdapter extends ArrayAdapter<StringWrapper> {
 
-        public ListAdapter(Context context, int resource, List<StringWrapper> items) {
+        /**
+         * @param context  Context
+         * @param resource Row layout id
+         * @param items    List of items
+         */
+        public EditTextListAdapter(@NonNull Context context, int resource, @NonNull List<StringWrapper> items) {
             super(context, resource, items);
-            Log.v("EditTextListDialog", "Item Count: "+getCount());
         }
 
+        /**
+         * @return List of String items
+         */
+        @NonNull
         public ArrayList<String> getItems() {
             ArrayList<String> wrapList = new ArrayList<>();
-            for(int i=0; i<getCount(); i++) {
+            for (int i = 0; i < getCount(); i++) {
                 wrapList.add(getItem(i).text);
             }
             return wrapList;
         }
 
-
-
+        /**
+         * @param position    Position of view
+         * @param convertView Recycled view
+         * @param parent      Parent view
+         * @return Dialog view
+         */
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             final StringWrapper item = getItem(position);
-
             EditText editText;
             ImageView delete;
             View view = convertView;
-
             if (view == null) {
                 LayoutInflater vi;
                 vi = LayoutInflater.from(getContext());
-                view = vi.inflate(R.layout.edit_text_list_line_item, null);
+                view = vi.inflate(R.layout.dialog_edit_text_list_item, null);
                 editText = (EditText) view.findViewById(R.id.text1);
                 delete = (ImageView) view.findViewById(R.id.delete1);
             } else {
                 editText = (EditText) view.findViewById(R.id.text1);
                 delete = (ImageView) view.findViewById(R.id.delete1);
-                for(int i=0; i<getCount(); i++) {
+                for (int i = 0; i < getCount(); i++) {
                     editText.removeTextChangedListener(getItem(i).textWatcher);
                     delete.setOnClickListener(null);
                 }
             }
-
             if (item != null) {
                 editText.setText(item.text);
                 editText.addTextChangedListener(item.textWatcher);
@@ -208,7 +237,6 @@ public class EditTextListDialog extends DialogFragment {
             }
             return view;
         }
-
     }
 
 }

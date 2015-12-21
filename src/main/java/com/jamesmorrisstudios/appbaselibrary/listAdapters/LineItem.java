@@ -3,9 +3,11 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 import android.support.annotation.NonNull;
 
 /**
+ * Recycle view line item
+ * <p/>
  * Created by James on 8/13/2015.
  */
-public class LineItem {
+public final class LineItem {
     public BaseRecycleContainer data;
 
     /**

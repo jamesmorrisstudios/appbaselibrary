@@ -13,9 +13,9 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scrollbars="vertical"
+            android:clipToPadding="false"
             android:scrollbarStyle="outsideOverlay"
-            android:clipToPadding="false"/>
+            android:scrollbars="vertical" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 

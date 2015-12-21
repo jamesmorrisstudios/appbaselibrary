@@ -16,6 +16,7 @@
 
 package com.jamesmorrisstudios.appbaselibrary.notification;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.app.Notification;
 import android.graphics.Bitmap;
@@ -23,6 +24,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Icon;
 import android.os.Build;
+import android.support.annotation.NonNull;
+import android.support.annotation.RequiresPermission;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.util.Log;
@@ -30,7 +33,7 @@ import android.view.View;
 import android.widget.RemoteViews;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.UtilsDisplay;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.time.TimeItem;
 import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
@@ -38,7 +41,6 @@ import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 /**
  * Notification handler class.
  * This generates and displays notifications given a list of reminder items
- * If using this class add this permission to your manifest <uses-permission android:name="android.permission.VIBRATE" />
  * <p/>
  * Created by James on 4/28/2015.
  */
@@ -49,6 +51,7 @@ public final class Notifier {
      *
      * @param id Id of the notification
      */
+    @RequiresPermission(Manifest.permission.VIBRATE)
     public static void dismissNotification(int id) {
         // Gets an instance of the NotificationManager service
         NotificationManagerCompat mNotifyMgr = NotificationManagerCompat.from(AppBase.getContext());
@@ -59,11 +62,12 @@ public final class Notifier {
     /**
      * Builds and displays a notification with the given parameters
      *
-     * @param notif Notification data
+     * @param notif NotificationContent
      */
-    public static void buildNotification(NotificationContent notif) {
+    @RequiresPermission(Manifest.permission.VIBRATE)
+    public static void buildNotification(@NonNull NotificationContent notif) {
         TimeItem timeNow = UtilsTime.getTimeNow();
-        Log.v("Notification shown", notif.getTitle() + " " + timeNow.getHourInTimeFormatString() + ":" + timeNow.getMinuteString() + " Vibrate: " + notif.getVibrate().getName());
+        Log.v("Notification shown", notif.title + " " + timeNow.getHourInTimeFormatString() + ":" + timeNow.getMinuteString());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             buildNotificationSub(notif);
         } else {
@@ -71,55 +75,41 @@ public final class Notifier {
         }
     }
 
+    /**
+     * Build the notification if using Android 6+
+     *
+     * @param notif Notification content
+     */
     @TargetApi(Build.VERSION_CODES.M)
-    private static void buildNotificationSub(NotificationContent notif) {
+    private static void buildNotificationSub(@NonNull NotificationContent notif) {
         Notification notification;
 
         Notification.Builder mBuilder;
         mBuilder = new Notification.Builder(AppBase.getContext())
-                .setDefaults(getDefaults(notif))
-                //.setSmallIcon(notif.getIconRes())
-                .setContentTitle(notif.getTitle())
+                .setContentTitle(notif.title)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .setPriority(getPriority(notif))
-                .setContentText(notif.getContent());
+                .setPriority(notif.getNotificationPriority())
+                .setContentText(notif.content);
 
         if (notif.getIconOverride() != null) {
             mBuilder.setSmallIcon(Icon.createWithBitmap(notif.getIconOverride()));
         } else {
-            mBuilder.setSmallIcon(notif.getIconRes());
+            mBuilder.setSmallIcon(notif.iconRes);
         }
-        if (notif.getVibrateCustom() == null) {
-            if (notif.getVibrate() == NotificationContent.NotificationVibrate.DEFAULT) {
-                //Leave as is
-            } else {
-                mBuilder.setVibrate(notif.getVibratePattern());
-            }
+        if (notif.isVibrateDefault() && !notif.isVibrateCustom()) {
+            mBuilder.setDefaults(Notification.DEFAULT_VIBRATE);
         } else {
-            mBuilder.setVibrate(notif.getVibrateCustom());
+            mBuilder.setVibrate(notif.getVibratePattern());
         }
-        if (notif.hasTone()) {
-            mBuilder.setSound(notif.getTone());
+        mBuilder.setSound(notif.getTone());
+        if (notif.getLed()) {
+            mBuilder.setLights(notif.getLedColor(), notif.getLedPattern()[0], notif.getLedPattern()[1]);
         }
-        if (notif.getUseLed()) {
-            mBuilder.setLights(notif.getLedColor(), notif.getLights().getPattern()[0], notif.getLights().getPattern()[1]);
-        }
-        if (notif.hasContentIntent()) {
-            mBuilder.setContentIntent(notif.getContentIntent());
-        }
-        if (notif.hasDeleteIntent()) {
-            mBuilder.setDeleteIntent(notif.getDeleteIntent());
-        }
-        if (notif.hasAccentColor()) {
-            mBuilder.setColor(notif.getAccentColor());
-        }
-        if (notif.getOnGoing()) {
-            mBuilder.setAutoCancel(false);
-            mBuilder.setOngoing(true);
-        } else {
-            mBuilder.setAutoCancel(true);
-            mBuilder.setOngoing(false);
-        }
+        mBuilder.setContentIntent(notif.contentIntent);
+        mBuilder.setDeleteIntent(notif.deleteIntent);
+        mBuilder.setColor(notif.getAccentColor());
+        mBuilder.setAutoCancel(!notif.getOnGoing());
+        mBuilder.setOngoing(notif.getOnGoing());
 
         Notification.WearableExtender wearableExtender = new Notification.WearableExtender();
         for (NotificationAction action : notif.getActions()) {
@@ -130,108 +120,115 @@ public final class Notifier {
             mBuilder.extend(wearableExtender);
         }
 
-        if (notif.getType() == NotificationContent.NotificationType.CUSTOM) {
+        if (notif.type == NotificationContent.NotificationType.CUSTOM) {
             notification = addCustomNotification(notif, mBuilder);
-        } else if(notif.getType() == NotificationContent.NotificationType.CUSTOM_SNOOZE) {
+        } else if (notif.type == NotificationContent.NotificationType.CUSTOM_SNOOZE) {
             notification = addCustomSnoozeNotification(notif, mBuilder);
         } else {
-            mBuilder.setStyle(new Notification.BigTextStyle().bigText(notif.getContent()));
+            mBuilder.setStyle(new Notification.BigTextStyle().bigText(notif.content));
             notification = mBuilder.build();
         }
 
         // Gets an instance of the NotificationManager service
         NotificationManagerCompat mNotifyMgr = NotificationManagerCompat.from(AppBase.getContext());
         // Builds the notification and issues it.
-        Log.v("NOTIFIER", "Notify: " + notif.getId());
-        mNotifyMgr.notify(notif.getId(), notification);
+        mNotifyMgr.notify(notif.notificationId, notification);
     }
 
+    /**
+     * Add the custom notification for api >= 23
+     *
+     * @param notif    NotificationContent
+     * @param mBuilder Builder
+     * @return
+     */
     @TargetApi(Build.VERSION_CODES.M)
-    private static Notification addCustomNotification(NotificationContent notif, Notification.Builder mBuilder) {
+    @NonNull
+    private static Notification addCustomNotification(@NonNull NotificationContent notif, @NonNull Notification.Builder mBuilder) {
         mBuilder.setContent(getContentView(notif, false));
         Notification notification = mBuilder.build();
         notification.bigContentView = getContentBigView(notif, false);
         return notification;
     }
 
+    /**
+     * Add the snooze notification for api >= 23
+     *
+     * @param notif    NotificationContent
+     * @param mBuilder Builder
+     * @return
+     */
     @TargetApi(Build.VERSION_CODES.M)
-    private static Notification addCustomSnoozeNotification(NotificationContent notif, Notification.Builder mBuilder) {
+    @NonNull
+    private static Notification addCustomSnoozeNotification(@NonNull NotificationContent notif, @NonNull Notification.Builder mBuilder) {
         mBuilder.setContent(getContentView(notif, true));
         Notification notification = mBuilder.build();
         notification.bigContentView = getContentBigView(notif, true);
         return notification;
     }
 
-    private static void buildNotificationSubCompat(NotificationContent notif) {
+    /**
+     * @param notif NotificationContent
+     */
+    private static void buildNotificationSubCompat(@NonNull NotificationContent notif) {
         Notification notification;
 
         NotificationCompat.Builder mBuilder;
         mBuilder = new NotificationCompat.Builder(AppBase.getContext())
-                .setDefaults(getDefaultsCompat(notif))
-                .setSmallIcon(notif.getIconRes())
-                .setContentTitle(notif.getTitle())
+                .setSmallIcon(notif.iconRes)
+                .setContentTitle(notif.title)
                 .setCategory(NotificationCompat.CATEGORY_ALARM)
-                .setPriority(getPriorityCompat(notif))
-                .setContentText(notif.getContent());
+                .setPriority(notif.getNotificationPriority())
+                .setContentText(notif.content);
 
-        if(notif.getVibrateCustom() == null) {
-            if (notif.getVibrate() == NotificationContent.NotificationVibrate.DEFAULT) {
-                //Leave as is
-            } else {
-                mBuilder.setVibrate(notif.getVibratePattern());
-            }
+        if (notif.isVibrateDefault() && !notif.isVibrateCustom()) {
+            mBuilder.setDefaults(Notification.DEFAULT_VIBRATE);
         } else {
-            mBuilder.setVibrate(notif.getVibrateCustom());
+            mBuilder.setVibrate(notif.getVibratePattern());
         }
-        if (notif.hasTone()) {
-            mBuilder.setSound(notif.getTone());
+        mBuilder.setSound(notif.getTone());
+        if (notif.getLed()) {
+            mBuilder.setLights(notif.getLedColor(), notif.getLedPattern()[0], notif.getLedPattern()[1]);
         }
-        if (notif.getUseLed()) {
-            mBuilder.setLights(notif.getLedColor(), 1000, 1500);
-        }
-        if (notif.hasContentIntent()) {
-            mBuilder.setContentIntent(notif.getContentIntent());
-        }
-        if (notif.hasDeleteIntent()) {
-            mBuilder.setDeleteIntent(notif.getDeleteIntent());
-        }
-        if (notif.hasAccentColor()) {
-            mBuilder.setColor(notif.getAccentColor());
-        }
-        if (notif.getOnGoing()) {
-            mBuilder.setAutoCancel(false);
-            mBuilder.setOngoing(true);
-        } else {
-            mBuilder.setAutoCancel(true);
-            mBuilder.setOngoing(false);
-        }
+        mBuilder.setContentIntent(notif.contentIntent);
+        mBuilder.setDeleteIntent(notif.deleteIntent);
+        mBuilder.setColor(notif.getAccentColor());
+        mBuilder.setAutoCancel(!notif.getOnGoing());
+        mBuilder.setOngoing(notif.getOnGoing());
 
         NotificationCompat.WearableExtender wearableExtender = new NotificationCompat.WearableExtender();
         for (NotificationAction action : notif.getActions()) {
             mBuilder.addAction(action.getIconRes(), action.getText(), action.getPendingIntent());
             wearableExtender.addAction(new NotificationCompat.Action(action.getIconRes(), action.getText(), action.getPendingIntent()));
         }
-        if(notif.getActions().size() > 0) {
+        if (notif.getActions().size() > 0) {
             mBuilder.extend(wearableExtender);
         }
 
-        if (notif.getType() == NotificationContent.NotificationType.CUSTOM) {
+        if (notif.type == NotificationContent.NotificationType.CUSTOM) {
             notification = addCustomNotificationCompat(notif, mBuilder);
-        } else if(notif.getType() == NotificationContent.NotificationType.CUSTOM_SNOOZE) {
+        } else if (notif.type == NotificationContent.NotificationType.CUSTOM_SNOOZE) {
             notification = addCustomSnoozeNotificationCompat(notif, mBuilder);
         } else {
-            mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(notif.getContent()));
+            mBuilder.setStyle(new NotificationCompat.BigTextStyle().bigText(notif.content));
             notification = mBuilder.build();
         }
 
         // Gets an instance of the NotificationManager service
         NotificationManagerCompat mNotifyMgr = NotificationManagerCompat.from(AppBase.getContext());
         // Builds the notification and issues it.
-        Log.v("NOTIFIER", "Notify: " + notif.getId());
-        mNotifyMgr.notify(notif.getId(), notification);
+        mNotifyMgr.notify(notif.notificationId, notification);
     }
 
-    private static Notification addCustomNotificationCompat(NotificationContent notif, NotificationCompat.Builder mBuilder) {
+    /**
+     * Add the custom notification for api < 23
+     *
+     * @param notif    NotificationContent
+     * @param mBuilder Builder
+     * @return
+     */
+    @NonNull
+    private static Notification addCustomNotificationCompat(@NonNull NotificationContent notif, @NonNull NotificationCompat.Builder mBuilder) {
         mBuilder.setContent(getContentView(notif, false));
         Notification notification = mBuilder.build();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -240,7 +237,15 @@ public final class Notifier {
         return notification;
     }
 
-    private static Notification addCustomSnoozeNotificationCompat(NotificationContent notif, NotificationCompat.Builder mBuilder) {
+    /**
+     * Add the snooze notification for api < 23
+     *
+     * @param notif    NotificationContent
+     * @param mBuilder Builder
+     * @return
+     */
+    @NonNull
+    private static Notification addCustomSnoozeNotificationCompat(@NonNull NotificationContent notif, @NonNull NotificationCompat.Builder mBuilder) {
         mBuilder.setContent(getContentView(notif, true));
         Notification notification = mBuilder.build();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -249,33 +254,41 @@ public final class Notifier {
         return notification;
     }
 
-    private static RemoteViews getContentView(NotificationContent notif, boolean snooze) {
+    /**
+     * Get the content view of the custom notification
+     *
+     * @param notif  NotificationContent
+     * @param snooze True to show snooze button
+     * @return Remove Content View
+     */
+    @NonNull
+    private static RemoteViews getContentView(@NonNull NotificationContent notif, boolean snooze) {
         RemoteViews contentView;
-        if (notif.getThemeText() == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+        if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
             contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_dark);
         } else {
             contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_light);
         }
 
-        if(notif.getTheme() == NotificationContent.NotificationTheme.DARK) {
+        if (notif.themeBackground == NotificationContent.NotificationThemeBackground.DARK) {
             contentView.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundDark);
-        } else if(notif.getTheme() == NotificationContent.NotificationTheme.LIGHT) {
+        } else if (notif.themeBackground == NotificationContent.NotificationThemeBackground.LIGHT) {
             contentView.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundLight);
         }
 
-        if(notif.getIconOverride() != null) {
+        if (notif.getIconOverride() != null) {
             contentView.setImageViewBitmap(R.id.image, notif.getIconOverride());
         } else {
-            contentView.setImageViewResource(R.id.image, notif.getIconRes());
+            contentView.setImageViewResource(R.id.image, notif.iconRes);
         }
-        Bitmap circle = getCircle(notif.getAccentColor(), Utils.getDipInt(40));
+        Bitmap circle = getCircle(notif.getAccentColor(), UtilsDisplay.getDipInt(40));
         contentView.setImageViewBitmap(R.id.imageBackground, circle);
-        contentView.setTextViewText(R.id.title, notif.getTitle());
-        contentView.setTextViewText(R.id.text, notif.getContent());
+        contentView.setTextViewText(R.id.title, notif.title);
+        contentView.setTextViewText(R.id.text, notif.content);
 
-        if(snooze) {
+        if (snooze) {
             contentView.setViewVisibility(R.id.imageSnooze, View.VISIBLE);
-            if(notif.getActions().size() == 3) {
+            if (notif.getActions().size() == 3) {
                 NotificationAction act1 = notif.getActions().get(0);
                 contentView.setImageViewResource(R.id.imageCancel, act1.getIconRes());
                 contentView.setOnClickPendingIntent(R.id.imageCancel, act1.getPendingIntent());
@@ -303,30 +316,38 @@ public final class Notifier {
         return contentView;
     }
 
-    private static RemoteViews getContentBigView(NotificationContent notif, boolean snooze) {
+    /**
+     * Get the big content view of the custom notification
+     *
+     * @param notif  NotificationContent
+     * @param snooze True to show snooze button
+     * @return Remove Content View
+     */
+    @NonNull
+    private static RemoteViews getContentBigView(@NonNull NotificationContent notif, boolean snooze) {
         RemoteViews contentViewBig;
-        if (notif.getThemeText() == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+        if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
             contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_dark);
         } else {
             contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_light);
         }
 
-        if(notif.getTheme() == NotificationContent.NotificationTheme.DARK) {
+        if (notif.themeBackground == NotificationContent.NotificationThemeBackground.DARK) {
             contentViewBig.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundDark);
-        } else if(notif.getTheme() == NotificationContent.NotificationTheme.LIGHT) {
+        } else if (notif.themeBackground == NotificationContent.NotificationThemeBackground.LIGHT) {
             contentViewBig.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundLight);
         }
 
-        Bitmap circleBig = getCircle(notif.getAccentColor(), Utils.getDipInt(40));
+        Bitmap circleBig = getCircle(notif.getAccentColor(), UtilsDisplay.getDipInt(40));
         contentViewBig.setImageViewBitmap(R.id.imageBackground, circleBig);
-        if(notif.getIconOverride() != null) {
+        if (notif.getIconOverride() != null) {
             contentViewBig.setImageViewBitmap(R.id.image, notif.getIconOverride());
         } else {
-            contentViewBig.setImageViewResource(R.id.image, notif.getIconRes());
+            contentViewBig.setImageViewResource(R.id.image, notif.iconRes);
         }
-        contentViewBig.setTextViewText(R.id.title, notif.getTitle());
-        contentViewBig.setTextViewText(R.id.text, notif.getContent());
-        if(snooze) {
+        contentViewBig.setTextViewText(R.id.title, notif.title);
+        contentViewBig.setTextViewText(R.id.text, notif.content);
+        if (snooze) {
             contentViewBig.setViewVisibility(R.id.imageSnooze, View.VISIBLE);
             if (notif.getActions().size() == 3) {
                 NotificationAction act1 = notif.getActions().get(0);
@@ -356,52 +377,6 @@ public final class Notifier {
         return contentViewBig;
     }
 
-    @TargetApi(Build.VERSION_CODES.M)
-    private static int getDefaults(NotificationContent notif) {
-        int defaults = 0;
-        if (notif.getVibrate() == NotificationContent.NotificationVibrate.DEFAULT && notif.getVibrateCustom() == null) {
-            defaults |= Notification.DEFAULT_VIBRATE;
-        }
-        return defaults;
-    }
-
-    @TargetApi(Build.VERSION_CODES.M)
-    private static int getPriority(NotificationContent notif) {
-        if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.DEFAULT) {
-            return Notification.PRIORITY_DEFAULT;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.LOW) {
-            return Notification.PRIORITY_LOW;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.HIGH) {
-            return Notification.PRIORITY_HIGH;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.MAX) {
-            return Notification.PRIORITY_MAX;
-        } else {
-            return Notification.PRIORITY_DEFAULT;
-        }
-    }
-
-    private static int getDefaultsCompat(NotificationContent notif) {
-        int defaults = 0;
-        if (notif.getVibrate() == NotificationContent.NotificationVibrate.DEFAULT && notif.getVibrateCustom() == null) {
-            defaults |= NotificationCompat.DEFAULT_VIBRATE;
-        }
-        return defaults;
-    }
-
-    private static int getPriorityCompat(NotificationContent notif) {
-        if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.DEFAULT) {
-            return NotificationCompat.PRIORITY_DEFAULT;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.LOW) {
-            return NotificationCompat.PRIORITY_LOW;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.HIGH) {
-            return NotificationCompat.PRIORITY_HIGH;
-        } else if (notif.getNotificationPriority() == NotificationContent.NotificationPriority.MAX) {
-            return NotificationCompat.PRIORITY_MAX;
-        } else {
-            return NotificationCompat.PRIORITY_DEFAULT;
-        }
-    }
-
     /**
      * Build a circle drawable of the given color
      *
@@ -409,6 +384,7 @@ public final class Notifier {
      * @param edgeLength Edge length of the square containing the circle
      * @return Bitmap circle
      */
+    @NonNull
     private static Bitmap getCircle(int color, int edgeLength) {
         Bitmap circle = Bitmap.createBitmap(edgeLength, edgeLength, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(circle);

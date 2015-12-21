@@ -8,16 +8,26 @@ import android.support.annotation.NonNull;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
 
 /**
+ * Request to build a single choice icon dialog.
+ * Call execute to display the dialog
+ * <p/>
  * Created by James on 7/22/2015.
  */
-public class SingleChoiceIconRequest {
+public final class SingleChoiceIconRequest extends AbstractDialogRequest {
     public final String title;
-    @DrawableRes public final int[] itemsIds;
+    @DrawableRes
+    public final int[] itemsIds;
     public final Uri[] itemsUri;
     public final SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener;
     public String textNeutral = null;
     public DialogInterface.OnClickListener onNeutral = null;
+    public int backgroundColor = -1;
 
+    /**
+     * @param title                  Title
+     * @param itemsIds               Id list of icons
+     * @param onOptionPickedListener selection listener
+     */
     public SingleChoiceIconRequest(@NonNull String title, @DrawableRes @NonNull int[] itemsIds, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
         this.title = title;
         this.itemsIds = itemsIds;
@@ -25,6 +35,11 @@ public class SingleChoiceIconRequest {
         this.onOptionPickedListener = onOptionPickedListener;
     }
 
+    /**
+     * @param title                  Title
+     * @param itemsUri               Uri list of icons
+     * @param onOptionPickedListener selection listener
+     */
     public SingleChoiceIconRequest(@NonNull String title, @DrawableRes @NonNull Uri[] itemsUri, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
         this.title = title;
         this.itemsIds = null;
@@ -32,8 +47,21 @@ public class SingleChoiceIconRequest {
         this.onOptionPickedListener = onOptionPickedListener;
     }
 
-    public void AddNeutralAction(@NonNull String text, @NonNull DialogInterface.OnClickListener listener) {
+    /**
+     * Add a neutral item
+     *
+     * @param text     Text of button
+     * @param listener onNeutral listener
+     */
+    public final void addNeutralAction(@NonNull String text, @NonNull DialogInterface.OnClickListener listener) {
         this.textNeutral = text;
         this.onNeutral = listener;
+    }
+
+    /**
+     * @param backgroundColor Set a background color for each icon
+     */
+    public final void setBackgroundColor(int backgroundColor) {
+        this.backgroundColor = backgroundColor;
     }
 }

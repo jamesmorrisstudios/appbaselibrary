@@ -36,6 +36,10 @@
     <!-- -->
     <string name="second_plural">Seconds</string>
 
+    <string name="millisecond_singular">Millisecond</string>
+    <string name="millisecond_plural">Milliseconds</string>
+    <string name="millisecond_abrev">ms</string>
+
     <!--
         Numbers
     -->
@@ -178,6 +182,7 @@
     <string name="export_log">Export Log</string>
     <string name="import_reminder">Import Reminder</string>
     <string name="export_reminder">Export Reminder</string>
+    <string name="import_export">Import/Export</string>
     <string name="import_all">Import All</string>
     <string name="export_all">Export All</string>
     <string name="export_to">Export To</string>
@@ -546,14 +551,16 @@
     <string name="settings_category_locale">Locale</string>
     <string name="settings_category_theme">Theme</string>
     <string name="settings_category_notification">Notification</string>
+    <string name="settings_category_notification_custom">Custom Notification</string>
+    <string name="settings_category_notification_override">Override Notification</string>
     <string name="settings_category_defaults">Defaults</string>
     <string name="settings_category_random">Randomness</string>
     <string name="settings_category_widget">Widget</string>
 
 
-	<!--
-	    Base App Settings
-	-->
+    <!--
+        Base App Settings
+    -->
     <string name="setting_immersive_enable_primary">Immersive Mode</string>
     <string name="setting_sound_enable_primary">Sound Effects</string>
     <string name="setting_music_enable_primary">Music</string>
@@ -614,9 +621,12 @@
     <string name="setting_random_amount_primary">Random</string>
     <string name="setting_less_random_amount_primary">Less Random</string>
     <string name="setting_even_amount_primary">Even</string>
-
     <string name="setting_widget_theme_primary">Theme</string>
     <string name="setting_widget_text_color_primary">Text Color</string>
+    <string name="setting_override_vibrate_primary">Override notification vibrate</string>
+    <string name="setting_override_ringtone_primary">Override notification tone playback</string>
+    <string name="setting_override_ringtone_secondary">This must be enabled to override the audio stream</string>
+    <string name="setting_override_ringtone_stream_primary">Override notification audio stream</string>
 
 
     <!--
@@ -748,11 +758,25 @@
     <string name="notifications">Notifications</string>
     <string name="active">Active</string>
     <string name="current">Current</string>
+    <string name="location">Location</string>
+    <string name="locations">Locations</string>
 
+    <string name="home">Home</string>
+    <string name="upcoming">Upcoming</string>
+
+    <string name="edit_reminder">Edit Reminder</string>
+    <string name="summary">Summary</string>
+    <string name="note">Note</string>
+    <string name="image">Image</string>
+
+    <string name="music">Music</string>
+    <string name="ring">Ring</string>
     <string name="pro">Pro</string>
     <string name="upgrade">Upgrade</string>
     <string name="feature_requires_pro">This feature requires the pro version</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="upgrade_now">Upgrade Now</string>
+
+    <string name="map">Map</string>
 
 </resources>

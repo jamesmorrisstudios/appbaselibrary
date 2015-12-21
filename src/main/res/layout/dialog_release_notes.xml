@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/item_size" />
+
+    <Button
+        android:id="@+id/btn_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/rate_app"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/item_small_size" />
+
+    <Button
+        android:id="@+id/btn_pro_upgrade"
+        style="@style/upgrade_to_pro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/upgrade_to_pro"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/item_small_size" />
+
+    <Button
+        android:id="@+id/btn_translate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="?android:attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/help_translate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="@dimen/item_small_size" />
+
+</LinearLayout>

@@ -6,15 +6,23 @@ import android.support.annotation.Nullable;
 
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClickListener;
 
-
 /**
+ * Request to build a color picker dialog.
+ * Call execute to display the dialog
+ * <p/>
  * Created by James on 6/29/2015.
  */
-public class ColorPickerRequest {
+public final class ColorPickerRequest extends AbstractDialogRequest {
     public final int initialColor;
     public final ColorPickerClickListener onColorPickerClickListener;
     public final DialogInterface.OnClickListener onNegative, onDisable;
 
+    /**
+     * @param initialColor               Starting color
+     * @param onColorPickerClickListener Color picker listener
+     * @param onNegative                 On cancel listener (may be null)
+     * @param onDisable                  On disable listener (may be null)
+     */
     public ColorPickerRequest(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
         this.initialColor = initialColor;
         this.onColorPickerClickListener = onColorPickerClickListener;

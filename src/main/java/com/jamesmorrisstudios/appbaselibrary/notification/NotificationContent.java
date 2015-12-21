@@ -16,14 +16,18 @@
 
 package com.jamesmorrisstudios.appbaselibrary.notification;
 
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.NotificationCompat;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
 import java.util.ArrayList;
@@ -35,222 +39,264 @@ import java.util.ArrayList;
  * Created by James on 4/30/2015.
  */
 public class NotificationContent {
-    private String title, content;
-    private Uri tone;
+    //Required Data
+    public final NotificationThemeBackground themeBackground;
+    public final NotificationThemeText themeText;
+    public final NotificationType type;
+    public final String title, content;
     @DrawableRes
-    private int iconRes;
-    private NotificationType type;
-    private NotificationTheme theme;
-    private NotificationThemeText themeText;
-    private NotificationVibrate vibrate = NotificationVibrate.SHORT;
-    private long[] vibrateCustom = null;
-    private boolean useLed = false;
-    private NotificationPriority priority = NotificationPriority.DEFAULT;
-    private boolean onGoing = false;
-    private int accentColor = 0;
-    private int ledColor = 0, id;
+    public final int iconRes;
+    public final int notificationId;
+    public final PendingIntent contentIntent, deleteIntent;
+
+    //Actions Optional but common
     private ArrayList<NotificationAction> actions = new ArrayList<>();
-    private PendingIntent contentIntent, deleteIntent;
-    private int notifCounter;
+
+    //Optional Data
+    private Uri tone = null;
+    private NotificationVibrate vibrate = NotificationVibrate.DEFAULT;
+    private boolean useLed = true;
+    private int ledColor = UtilsTheme.getAccentColor();
+
+    //Uncommon optional
+    private int accentColor = UtilsTheme.getAccentColor();
+    private NotificationPriority priority = NotificationPriority.DEFAULT;
+    private NotificationLedPattern ledPattern = NotificationLedPattern.MEDIUM_ON_MEDIUM_OFF;
+    private long[] vibrateCustom = null;
+    private boolean onGoing = false;
     private Bitmap iconOverride = null;
-    private NotificationLights lights = NotificationLights.MEDIUM_ON_MEDIUM_OFF;
 
     /**
-     * Constructor of all the required notification details
+     * Builder that includes all required components of the notification
      *
-     * @param theme
-     * @param type
-     * @param title
-     * @param content
-     * @param tone
-     * @param iconRes
-     * @param accentColor
-     * @param id
+     * @param themeBackground Background theme
+     * @param themeText       Text theme
+     * @param type            Notification Type
+     * @param title           Notification Title
+     * @param content         Notification Content
+     * @param iconRes         Notification Icon resource ID (set override with its own function)
+     * @param contentIntent   Click intent
+     * @param deleteIntent    Delete intent
+     * @param notificationId  Notification Id
      */
-    public NotificationContent(@NonNull NotificationTheme theme, @NonNull NotificationThemeText themeText, @NonNull NotificationType type, @NonNull String title, @NonNull String content, @Nullable Uri tone, @DrawableRes int iconRes, int accentColor, int id, int notifCounter) {
-        this.theme = theme;
+    public NotificationContent(@NonNull NotificationThemeBackground themeBackground, @NonNull NotificationThemeText themeText,
+                               @NonNull NotificationType type, @NonNull String title, @NonNull String content, @DrawableRes int iconRes,
+                               @NonNull PendingIntent contentIntent, @NonNull PendingIntent deleteIntent, int notificationId) {
+        this.themeBackground = themeBackground;
         this.themeText = themeText;
         this.type = type;
         this.title = title;
         this.content = content;
-        this.tone = tone;
         this.iconRes = iconRes;
-        this.accentColor = accentColor;
-        this.id = id;
-        this.notifCounter = notifCounter;
-    }
-
-    public NotificationThemeText getThemeText() {
-        return themeText;
-    }
-
-    public NotificationLights getLights() {
-        return lights;
-    }
-
-    public void setLights(@NonNull NotificationLights lights) {
-        this.lights = lights;
-    }
-
-    public Bitmap getIconOverride() {
-        return iconOverride;
-    }
-
-    public void setIconOverride(Bitmap iconOverride) {
-        this.iconOverride = iconOverride;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    @NonNull
-    public final NotificationType getType() {
-        return type;
-    }
-
-    @NonNull
-    public final NotificationTheme getTheme() {
-        return theme;
-    }
-
-    public void enableLed(int ledColor) {
-        this.useLed = true;
-        this.ledColor = ledColor;
-    }
-
-    public void addContentIntent(PendingIntent contentIntent) {
+        this.notificationId = notificationId;
         this.contentIntent = contentIntent;
-    }
-
-    public final boolean getOnGoing() {
-        return onGoing;
-    }
-
-    public final void setOnGoing(boolean onGoing) {
-        this.onGoing = onGoing;
-    }
-
-    public boolean hasAccentColor() {
-        return accentColor != 0;
-    }
-
-    public int getAccentColor() {
-        return accentColor;
-    }
-
-    public void addDeleteIntent(PendingIntent deleteIntent) {
         this.deleteIntent = deleteIntent;
     }
 
+    /**
+     * @param action Notification Action
+     */
     public void addAction(@NonNull NotificationAction action) {
         actions.add(action);
     }
 
+    /**
+     * @return Get action list. May be empty
+     */
     @NonNull
-    public String getTitle() {
-        return title;
+    public ArrayList<NotificationAction> getActions() {
+        return actions;
     }
 
-    @NonNull
-    public String getContent() {
-        return content;
-    }
-
+    /**
+     * @return Get tone/ May be null
+     */
     @Nullable
     public Uri getTone() {
         return tone;
     }
 
-    @DrawableRes
-    int getIconRes() {
-        return iconRes;
+    /**
+     * @param tone Set tone. Null for none
+     */
+    public final void setTone(@Nullable Uri tone) {
+        this.tone = tone;
     }
 
-    public boolean hasTone() {
-        return tone != null;
-    }
-
-    public NotificationVibrate getVibrate() {
-        return vibrate;
-    }
-
-    public void setVibrate(NotificationVibrate vibrate) {
+    /**
+     * @param vibrate Set vibrate pattern
+     */
+    public void setVibrate(@NonNull NotificationVibrate vibrate) {
         this.vibrate = vibrate;
     }
 
-    public long[] getVibrateCustom() {
-        return vibrateCustom;
-    }
-
-    public void setVibrateCustom(long[] vibrateCustom) {
-        this.vibrateCustom = vibrateCustom;
-    }
-
+    /**
+     * If default vibrate then don't use this
+     *
+     * @return Get vibrate pattern.
+     */
+    @NonNull
     public long[] getVibratePattern() {
+        if (vibrateCustom != null) {
+            return vibrateCustom;
+        }
         return vibrate.getPattern();
     }
 
-    public NotificationPriority getNotificationPriority() {
-        return priority;
+    /**
+     * @return True if you should use the default vibrate pattern
+     */
+    public boolean isVibrateDefault() {
+        return vibrate == NotificationVibrate.DEFAULT;
     }
 
-    public void setNotificationPriority(NotificationPriority priority) {
-        this.priority = priority;
+    /**
+     * @return Is vibrate custom enabled
+     */
+    public boolean isVibrateCustom() {
+        return vibrateCustom != null;
     }
 
-    public boolean getUseLed() {
+    /**
+     * @param vibrateCustom Custom vibrate pattern
+     */
+    public void setVibrateCustom(@Nullable long[] vibrateCustom) {
+        this.vibrateCustom = vibrateCustom;
+    }
+
+    /**
+     * Set LED mode
+     *
+     * @param enable Enable state
+     * @param color  LED color
+     */
+    public final void setLed(boolean enable, int color) {
+        this.useLed = enable;
+        this.ledColor = color;
+    }
+
+    /**
+     * @return True if LED is enabled
+     */
+    public final boolean getLed() {
         return useLed;
     }
 
-    public int getLedColor() {
+    /**
+     * @return LED color. Defaults to app accent color
+     */
+    public final int getLedColor() {
         return ledColor;
     }
 
-    public ArrayList<NotificationAction> getActions() {
-        return actions;
+    /**
+     * @return Get LED blink pattern
+     */
+    @NonNull
+    public int[] getLedPattern() {
+        return ledPattern.getPattern();
     }
 
-    public PendingIntent getContentIntent() {
-        return contentIntent;
+    /**
+     * @param ledPattern Set LED blink pattern
+     */
+    public final void setLedPattern(@NonNull NotificationLedPattern ledPattern) {
+        this.ledPattern = ledPattern;
     }
 
-    public PendingIntent getDeleteIntent() {
-        return deleteIntent;
+    /**
+     * @return Accent color. Defaults to app accent color if not set
+     */
+    public int getAccentColor() {
+        return accentColor;
     }
 
-    public boolean hasContentIntent() {
-        return contentIntent != null;
+    /**
+     * @param accentColor Accent color
+     */
+    public void setAccentColor(int accentColor) {
+        this.accentColor = accentColor;
     }
 
-    public boolean hasDeleteIntent() {
-        return deleteIntent != null;
+    /**
+     * @return Notification priority. Defaults to Default if not set
+     */
+    public int getNotificationPriority() {
+        return priority.getPriority();
     }
 
-    public int getNotifCounter() {
-        return notifCounter;
+    /**
+     * @param priority Notifcation priority.
+     */
+    public void setNotificationPriority(@NonNull NotificationPriority priority) {
+        this.priority = priority;
     }
 
+    /**
+     * @return Get the icon override.
+     */
+    @Nullable
+    public Bitmap getIconOverride() {
+        return iconOverride;
+    }
+
+    /**
+     * @param iconOverride Set the icon override. Only works fully on Android 6.0+
+     */
+    public void setIconOverride(@Nullable Bitmap iconOverride) {
+        this.iconOverride = iconOverride;
+    }
+
+    /**
+     * @return True if ongoing notification (cannot swipe away)
+     */
+    public final boolean getOnGoing() {
+        return onGoing;
+    }
+
+    /**
+     * @param onGoing True if ongoing notification (cannot swipe away)
+     */
+    public final void setOnGoing(boolean onGoing) {
+        this.onGoing = onGoing;
+    }
+
+    /**
+     * Notification types
+     */
     public enum NotificationType {
         NORMAL, CUSTOM, CUSTOM_SNOOZE
     }
 
-    public enum NotificationTheme {
+    /**
+     * Notification background Theme
+     */
+    public enum NotificationThemeBackground {
         DARK, LIGHT, SYSTEM
     }
 
+    /**
+     * Notification text themeBackground
+     */
     public enum NotificationThemeText {
         DARK_TEXT, LIGHT_TEXT
     }
 
+    /**
+     * Notification Priority
+     */
     public enum NotificationPriority {
         DEFAULT,
         LOW,
         HIGH,
         MAX;
 
+        /**
+         * @return Priority Name
+         */
+        @NonNull
         public String getName() {
-            switch(this) {
+            switch (this) {
                 case DEFAULT:
                     return AppBase.getContext().getResources().getString(R.string.default_);
                 case LOW:
@@ -263,8 +309,44 @@ public class NotificationContent {
                     return AppBase.getContext().getResources().getString(R.string.default_);
             }
         }
+
+        /**
+         * @return The priority int
+         */
+        public int getPriority() {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                switch (this) {
+                    case DEFAULT:
+                        return Notification.PRIORITY_DEFAULT;
+                    case LOW:
+                        return Notification.PRIORITY_LOW;
+                    case HIGH:
+                        return Notification.PRIORITY_HIGH;
+                    case MAX:
+                        return Notification.PRIORITY_MAX;
+                    default:
+                        return Notification.PRIORITY_DEFAULT;
+                }
+            } else {
+                switch (this) {
+                    case DEFAULT:
+                        return NotificationCompat.PRIORITY_DEFAULT;
+                    case LOW:
+                        return NotificationCompat.PRIORITY_LOW;
+                    case HIGH:
+                        return NotificationCompat.PRIORITY_HIGH;
+                    case MAX:
+                        return NotificationCompat.PRIORITY_MAX;
+                    default:
+                        return NotificationCompat.PRIORITY_DEFAULT;
+                }
+            }
+        }
     }
 
+    /**
+     * Notifcation Vibrate Patterns
+     */
     public enum NotificationVibrate {
         DISABLED,
         DEFAULT,
@@ -278,8 +360,12 @@ public class NotificationContent {
         PATTERN_5,
         PATTERN_6;
 
+        /**
+         * @return Pattern Name
+         */
+        @NonNull
         public String getName() {
-            switch(this) {
+            switch (this) {
                 case DISABLED:
                     return AppBase.getContext().getResources().getString(R.string.disabled);
                 case DEFAULT:
@@ -307,6 +393,10 @@ public class NotificationContent {
             }
         }
 
+        /**
+         * @return Vibrate Pattern
+         */
+        @NonNull
         public long[] getPattern() {
             switch (this) {
                 case DISABLED:
@@ -334,7 +424,10 @@ public class NotificationContent {
         }
     }
 
-    public enum NotificationLights {
+    /**
+     * Notification LED pattern
+     */
+    public enum NotificationLedPattern {
         SHORT_ON_SHORT_OFF,
         SHORT_ON_MEDIUM_OFF,
         SHORT_ON_LONG_OFF,
@@ -345,8 +438,12 @@ public class NotificationContent {
         LONG_ON_MEDIUM_OFF,
         LONG_ON_LONG_OFF;
 
+        /**
+         * @return Pattern Name
+         */
+        @NonNull
         public String getName() {
-            switch(this) {
+            switch (this) {
                 case SHORT_ON_SHORT_OFF:
                     return AppBase.getContext().getResources().getString(R.string.short_on) + " : " + AppBase.getContext().getResources().getString(R.string.short_off);
                 case SHORT_ON_MEDIUM_OFF:
@@ -370,8 +467,12 @@ public class NotificationContent {
             }
         }
 
+        /**
+         * @return Pattern
+         */
+        @NonNull
         public int[] getPattern() {
-            switch(this) {
+            switch (this) {
                 case SHORT_ON_SHORT_OFF:
                     return new int[]{500, 500};
                 case SHORT_ON_MEDIUM_OFF:

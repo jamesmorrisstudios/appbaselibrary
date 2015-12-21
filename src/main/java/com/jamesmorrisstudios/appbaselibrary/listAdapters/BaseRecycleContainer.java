@@ -16,8 +16,11 @@
 
 package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 
+import android.support.annotation.NonNull;
+
 /**
  * Container for items that abstracts it for use in the recyclerView
+ * Houses either a header or an item
  * <p/>
  * Created by James on 3/31/2015.
  */
@@ -25,14 +28,32 @@ public abstract class BaseRecycleContainer {
     public final boolean isHeader;
 
     /**
-     *
+     * Constructor defining if header or not
      */
     public BaseRecycleContainer(boolean isHeader) {
         this.isHeader = isHeader;
     }
 
+    /**
+     * Cannot return null
+     *
+     * @return The header object
+     */
+    @NonNull
     public abstract BaseRecycleItem getHeader();
 
+    /**
+     * Cannot return null
+     *
+     * @return The row item object
+     */
+    @NonNull
     public abstract BaseRecycleItem getItem();
+
+    /**
+     * @return Filter Text
+     */
+    @NonNull
+    public abstract String getFilterText();
 
 }

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="tabLayoutStyleSet" format="reference"/>
-    <attr name="toolbarStyleSet" format="reference"/>
-    <attr name="cardViewStyle" format="reference"/>
-    <attr name="colorPrimaryLight" format="reference|color"/>
-    <attr name="colorAccentLight" format="reference|color"/>
-    <attr name="colorAccentText" format="reference|color"/>
-    <attr name="colorBackground" format="reference|color"/>
-    <attr name="colorIconTint" format="reference|color"/>
+    <attr name="tabLayoutStyleSet" format="reference" />
+    <attr name="toolbarStyleSet" format="reference" />
+    <attr name="cardViewStyle" format="reference" />
+
+    <attr name="colorPrimaryLight" format="color" />
+    <attr name="colorAccentLight" format="color" />
+    <attr name="colorAccentText" format="color" />
+    <attr name="colorBackground" format="color" />
+    <attr name="colorIconTint" format="color" />
 </resources>

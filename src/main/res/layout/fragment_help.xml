@@ -14,8 +14,7 @@
   ~ limitations under the License.
   -->
 
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -44,8 +43,6 @@
             android:textSize="18sp" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseRead"
             style="@style/help_read"
             android:layout_width="wrap_content"
@@ -53,13 +50,13 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/read"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/howToUseWatch"
             style="@style/help_watch"
             android:layout_width="wrap_content"
@@ -67,8 +64,10 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/watch"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <View
@@ -90,69 +89,69 @@
             android:textSize="18sp" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_rateNow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/rate_app"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <Button
-            style="@style/upgrade_to_pro"
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_pro_upgrade"
+            style="@style/upgrade_to_pro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/upgrade_to_pro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_beta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/get_the_beta"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_translate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/help_translate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_release_notes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/release_notes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <View
@@ -174,16 +173,16 @@
             android:textSize="18sp" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/helpLicense"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="4dp"
             android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/licenses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <View
@@ -216,34 +215,34 @@
 
         <ImageView
             android:id="@+id/studio_logo"
-            android:background="@drawable/studio_logo"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginBottom="0dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="0dp"
-            android:layout_width="88dp"
-            android:layout_height="88dp" />
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_studio_logo" />
 
         <Button
-            android:background="?android:attr/selectableItemBackground"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:id="@+id/btn_moreBy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:background="?android:attr/selectableItemBackground"
             android:gravity="center"
             android:text="@string/more_apps"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginTop="0dp"
             android:autoLink="web"
             android:gravity="center_horizontal"
             android:text="@string/help_about_site"
@@ -272,8 +271,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="@dimen/item_small_size" />
 
@@ -282,15 +281,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textSize="@dimen/item_small_size" />
 
         </RelativeLayout>
 
 
-
     </LinearLayout>
 
-</ScrollView>
+</android.support.v4.widget.NestedScrollView>

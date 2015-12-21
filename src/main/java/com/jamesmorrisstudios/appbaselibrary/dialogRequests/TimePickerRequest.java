@@ -2,22 +2,26 @@ package com.jamesmorrisstudios.appbaselibrary.dialogRequests;
 
 import android.support.annotation.NonNull;
 
+import com.jamesmorrisstudios.appbaselibrary.time.TimeItem;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
-
 /**
+ * Request to build a time picker dialog.
+ * Call execute to display the dialog
+ * <p/>
  * Created by James on 6/29/2015.
  */
-public class TimePickerRequest {
+public final class TimePickerRequest extends AbstractDialogRequest {
     public final TimePickerDialog.OnTimeSetListener onTimeSetListener;
-    public final int hour, minute;
-    public final boolean is24Hour;
+    public final TimeItem timeItem;
 
-    public TimePickerRequest(int hour, int minute, boolean is24Hour, @NonNull TimePickerDialog.OnTimeSetListener onTimeSetListener) {
+    /**
+     * @param timeItem          Initial time
+     * @param onTimeSetListener Callback listener
+     */
+    public TimePickerRequest(@NonNull TimeItem timeItem, @NonNull TimePickerDialog.OnTimeSetListener onTimeSetListener) {
         this.onTimeSetListener = onTimeSetListener;
-        this.hour = hour;
-        this.minute = minute;
-        this.is24Hour = is24Hour;
+        this.timeItem = timeItem;
     }
 
 }

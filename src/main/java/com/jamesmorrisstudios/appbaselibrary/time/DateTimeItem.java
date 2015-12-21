@@ -31,47 +31,93 @@ public final class DateTimeItem implements Comparable<DateTimeItem> {
     @SerializedName("timeItem")
     public TimeItem timeItem;
 
+    /**
+     * Constructor
+     */
     public DateTimeItem() {
         this.dateItem = new DateItem();
         this.timeItem = new TimeItem();
     }
 
     /**
+     * Constructor
+     *
      * @param dateItem Date Item
      * @param timeItem Time Item
      */
-    public DateTimeItem(@NonNull DateItem dateItem, @NonNull TimeItem timeItem) {
+    public DateTimeItem(@NonNull final DateItem dateItem, @NonNull final TimeItem timeItem) {
         this.dateItem = dateItem;
         this.timeItem = timeItem;
     }
 
-    public DateTimeItem(@NonNull DateTimeItem dateTimeItem) {
+    /**
+     * Constructor that makes a deep copy of the item
+     *
+     * @param dateTimeItem dateTimeItem to copy
+     */
+    public DateTimeItem(@NonNull final DateTimeItem dateTimeItem) {
         this.dateItem = new DateItem(dateTimeItem.dateItem);
         this.timeItem = new TimeItem(dateTimeItem.timeItem);
     }
 
-    public DateTimeItem(long timeMillis) {
+    /**
+     * Constructor
+     *
+     * @param timeMillis Unix time in milliseconds
+     */
+    public DateTimeItem(final long timeMillis) {
         setDateTimeFromMillis(timeMillis);
     }
 
-    public long getTimeMillis() {
+    /**
+     * @param item Date Time Item
+     * @return String packaged version for use in saving
+     */
+    @NonNull
+    public static String encodeToString(@NonNull final DateTimeItem item) {
+        return DateItem.encodeToString(item.dateItem) + "," + TimeItem.encodeToString(item.timeItem);
+    }
+
+    /**
+     * @param item String packaged version previously encoded with encode to string
+     * @return Date Time Item
+     */
+    @NonNull
+    public static DateTimeItem decodeFromString(@NonNull final String item) {
+        String[] vals = item.split(",");
+        if (vals.length != 2) {
+            return new DateTimeItem(new DateItem(0, 0, 0), new TimeItem(0, 0));
+        }
+        return new DateTimeItem(DateItem.decodeFromString(vals[0]), TimeItem.decodeFromString(vals[1]));
+    }
+
+    /**
+     * @return Unix time in milliseconds
+     */
+    public final long getTimeMillis() {
         return UtilsTime.getTimeMillis(this);
     }
 
-    public void setDateTimeFromMillis(long timeMillis) {
+    /**
+     * @param timeMillis Unix time in milliseconds
+     */
+    public final void setDateTimeFromMillis(final long timeMillis) {
         DateTimeItem dateTime = UtilsTime.getDateTime(timeMillis);
         this.dateItem = dateTime.dateItem;
         this.timeItem = dateTime.timeItem;
         validateItem();
     }
 
+    /**
+     * Validate that the date and time are within parameters
+     */
     public final void validateItem() {
-        if(dateItem == null) {
+        if (dateItem == null) {
             dateItem = new DateItem();
         } else {
             dateItem.validateItem();
         }
-        if(timeItem == null) {
+        if (timeItem == null) {
             timeItem = new TimeItem();
         } else {
             timeItem.validateItem();
@@ -87,35 +133,14 @@ public final class DateTimeItem implements Comparable<DateTimeItem> {
     }
 
     /**
-     * @param item Date Time Item
-     * @return String packaged version for use in saving
+     * @param another compare to dateTimeItem
+     * @return -1 if before dateTimeItem, 0 if equal, 1 if after dateTimeItem
      */
-    @NonNull
-    public static String encodeToString(@NonNull DateTimeItem item) {
-        return DateItem.encodeToString(item.dateItem) + "," + TimeItem.encodeToString(item.timeItem);
-    }
-
-    /**
-     * @param item String packaged version previously encoded with encode to string
-     * @return Date Time Item
-     */
-    @NonNull
-    public static DateTimeItem decodeFromString(@NonNull String item) {
-        String[] vals = item.split(",");
-        if (vals.length != 2) {
-            return new DateTimeItem(new DateItem(0, 0, 0), new TimeItem(0, 0));
-        }
-        return new DateTimeItem(DateItem.decodeFromString(vals[0]), TimeItem.decodeFromString(vals[1]));
-    }
-
-    //-1 is this is before another
-    //1 is this is after another
-    //0 if the same
     @Override
-    public int compareTo(@NonNull DateTimeItem another) {
+    public final int compareTo(@NonNull final DateTimeItem another) {
         int compDate = this.dateItem.compareTo(another.dateItem);
         int compTime = this.timeItem.compareTo(another.timeItem);
-        if(compDate != 0) {
+        if (compDate != 0) {
             return compDate;
         }
         return compTime;

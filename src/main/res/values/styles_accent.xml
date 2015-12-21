@@ -33,8 +33,10 @@
         <item name="colorAccentLight">@color/a_deep_purple_light</item>
         <item name="colorAccentText">@color/a_deep_purple_text</item>
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_deep_purple</item>
-        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_deep_purple</item>
-        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_deep_purple</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_deep_purple
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_deep_purple
+        </item>
     </style>
 
     <style name="accent_indigo">
@@ -60,8 +62,10 @@
         <item name="colorAccentLight">@color/a_light_blue_light</item>
         <item name="colorAccentText">@color/a_light_blue_text</item>
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_light_blue</item>
-        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_light_blue</item>
-        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_light_blue</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_light_blue
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_light_blue
+        </item>
     </style>
 
     <style name="accent_cyan">
@@ -96,8 +100,10 @@
         <item name="colorAccentLight">@color/a_light_green_light</item>
         <item name="colorAccentText">@color/a_light_green_text</item>
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_light_green</item>
-        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_light_green</item>
-        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_light_green</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_light_green
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_light_green
+        </item>
     </style>
 
     <style name="accent_lime">
@@ -141,8 +147,10 @@
         <item name="colorAccentLight">@color/a_deep_orange_light</item>
         <item name="colorAccentText">@color/a_deep_orange_text</item>
         <item name="android:textSelectHandle">@drawable/text_select_handle_middle_deep_orange</item>
-        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_deep_orange</item>
-        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_deep_orange</item>
+        <item name="android:textSelectHandleLeft">@drawable/text_select_handle_left_deep_orange
+        </item>
+        <item name="android:textSelectHandleRight">@drawable/text_select_handle_right_deep_orange
+        </item>
     </style>
 
 </resources>

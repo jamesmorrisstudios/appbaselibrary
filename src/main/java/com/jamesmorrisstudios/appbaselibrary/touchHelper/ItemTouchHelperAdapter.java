@@ -19,7 +19,7 @@ public interface ItemTouchHelperAdapter {
      * @see RecyclerView#getAdapterPositionFor(RecyclerView.ViewHolder)
      * @see RecyclerView.ViewHolder#getAdapterPosition()
      */
-    void onItemMove(int fromPosition, int toPosition);
+    void onItemMove(final int fromPosition, final int toPosition);
 
 
     /**
@@ -29,5 +29,10 @@ public interface ItemTouchHelperAdapter {
      * @see RecyclerView#getAdapterPositionFor(RecyclerView.ViewHolder)
      * @see RecyclerView.ViewHolder#getAdapterPosition()
      */
-    void onItemDismiss(int position);
+    void onItemDismiss(final int position);
+
+    /**
+     * @return True if moving is currently allowed
+     */
+    boolean allowMove();
 }

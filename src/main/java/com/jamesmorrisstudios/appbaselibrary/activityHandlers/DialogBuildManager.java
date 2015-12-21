@@ -16,14 +16,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
-import com.jamesmorrisstudios.appbaselibrary.AppBaseUtils;
-import com.jamesmorrisstudios.appbaselibrary.AutoLockOrientation;
-import com.jamesmorrisstudios.appbaselibrary.Bus;
-import com.jamesmorrisstudios.appbaselibrary.IconItem;
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.RingtoneItem;
-import com.jamesmorrisstudios.appbaselibrary.ThemeManager;
-import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.UtilsAppBase;
+import com.jamesmorrisstudios.appbaselibrary.UtilsDisplay;
+import com.jamesmorrisstudios.appbaselibrary.UtilsRingtone;
+import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
+import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.activities.CustomFilePickerActivity;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.ColorPickerView;
@@ -32,6 +30,7 @@ import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDial
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.DualSpinnerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTextListRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTimesListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.FileBrowserRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.MultiChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.MultiDatePickerRequest;
@@ -44,12 +43,18 @@ import com.jamesmorrisstudios.appbaselibrary.dialogRequests.SingleChoiceRadioReq
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.SingleChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.SingleDatePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.TimePickerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.VibratePatternRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DatePickerMultiDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DualSpinnerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTimesListDialog;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.ReleaseNotesDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceRadioIconDialogBuilder;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.VibratePatternDialog;
+import com.jamesmorrisstudios.appbaselibrary.items.IconItem;
+import com.jamesmorrisstudios.appbaselibrary.items.RingtoneItem;
+import com.jamesmorrisstudios.appbaselibrary.sound.SoundInstant;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.squareup.otto.Subscribe;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
@@ -57,15 +62,23 @@ import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 import java.util.ArrayList;
 
 /**
+ * Custom dialog build calls
+ * <p/>
  * Created by James on 12/7/2015.
  */
-public class DialogBuildManager extends BaseBuildManager {
+public final class DialogBuildManager extends BaseBuildManager {
 
+    /**
+     * Not Called Directly
+     * Creates a file browser dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onFileBrowserRequest(@NonNull final FileBrowserRequest request) {
+    public final void onFileBrowserRequest(@NonNull final FileBrowserRequest request) {
         Intent i = new Intent(AppBase.getContext(), CustomFilePickerActivity.class);
         i.putExtra(CustomFilePickerActivity.EXTRA_EXTENSION, request.extension);
-        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false); //Not supported on the return yet
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
         i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, request.allowCreateDir);
         if (request.dirType == FileBrowserRequest.DirType.DIRECTORY) {
             i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_DIR);
@@ -73,48 +86,50 @@ public class DialogBuildManager extends BaseBuildManager {
             i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_FILE);
         }
         i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
-
-        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.LIGHT) {
+        if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
             i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerTheme);
         } else {
             i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDark);
         }
-
-        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_PRIMARY, ThemeManager.getPrimaryColorStyle());
-        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_ACCENT, ThemeManager.getAccentColorStyle());
-
-        Bus.postObject(new StartActivityForResultRequest(i, new StartActivityForResultRequest.OnStartActivityForResultListener() {
+        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_PRIMARY, UtilsTheme.getPrimaryColorStyle());
+        i.putExtra(CustomFilePickerActivity.EXTRA_THEME_ACCENT, UtilsTheme.getAccentColorStyle());
+        new StartActivityForResultRequest(i, new StartActivityForResultRequest.OnStartActivityForResultListener() {
             @Override
             public void resultOk(Intent intent) {
-                request.fileBrowserRequestListener.path(intent.getData());
+                request.onFileBrowserRequestListener.itemSelected(intent.getData());
             }
 
             @Override
             public void resultFailed() {
-
+                request.onFileBrowserRequestListener.canceled();
             }
-        }));
+        }).execute();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a ringtone dialog.
+     * Depending upon the user setting "AppBaseUtils.useCustomRingtonePicker()" this may be the built in or system dialog.
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onRingtoneRequest(@NonNull final RingtoneRequest request) {
-        Bus.postObject(new PermissionRequest(PermissionRequest.AppPermission.READ_EXTERNAL_STORAGE, new PermissionRequest.OnRequestPermissionListener() {
+    public final void onRingtoneRequest(@NonNull final RingtoneRequest request) {
+        new PermissionRequest(PermissionRequest.AppPermission.READ_EXTERNAL_STORAGE, new PermissionRequest.OnPermissionRequestListener() {
             @Override
             public void permissionGranted() {
                 Uri defaultUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
                 if (request.currentTone != null) {
                     defaultUri = request.currentTone;
                 }
-
-                if (!AppBaseUtils.useCustomRingtonePicker()) {
+                if (!UtilsAppBase.useCustomRingtonePicker()) {
                     //We are using the system ringtone picker
                     Intent intent = new Intent(RingtoneManager.ACTION_RINGTONE_PICKER);
                     intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TYPE, RingtoneManager.TYPE_NOTIFICATION);
                     intent.putExtra(RingtoneManager.EXTRA_RINGTONE_TITLE, request.title);
                     intent.putExtra(RingtoneManager.EXTRA_RINGTONE_SHOW_DEFAULT, true);
                     intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
-
-                    Bus.postObject(new StartActivityForResultRequest(intent, new StartActivityForResultRequest.OnStartActivityForResultListener() {
+                    new StartActivityForResultRequest(intent, new StartActivityForResultRequest.OnStartActivityForResultListener() {
                         @Override
                         public void resultOk(Intent intent) {
                             String name = null;
@@ -132,13 +147,13 @@ public class DialogBuildManager extends BaseBuildManager {
                         public void resultFailed() {
 
                         }
-                    }));
+                    }).execute();
                 } else {
                     //We are using the custom ringtone picker
-                    final ArrayList<RingtoneItem> ringtones = Utils.getRingtones(Utils.RingtoneType.NOTIFICATION);
-                    ringtones.add(0, new RingtoneItem(Utils.RingtoneType.NOTIFICATION, getActivity().getString(R.string.none)));
+                    final ArrayList<RingtoneItem> ringtones = UtilsRingtone.getRingtones(UtilsRingtone.RingtoneType.NOTIFICATION);
+                    ringtones.add(0, new RingtoneItem(UtilsRingtone.RingtoneType.NOTIFICATION, getActivity().getString(R.string.none)));
                     Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-                    ringtones.add(0, new RingtoneItem(Utils.RingtoneType.NOTIFICATION, getActivity().getString(R.string.default_), uri));
+                    ringtones.add(0, new RingtoneItem(UtilsRingtone.RingtoneType.NOTIFICATION, getActivity().getString(R.string.default_), uri));
                     //Set the selected item
                     int selectedItem = 1;
                     for (int i = 0; i < ringtones.size(); i++) {
@@ -150,19 +165,19 @@ public class DialogBuildManager extends BaseBuildManager {
                             selectedItem = i;
                         }
                     }
-
                     String dialogTitle = getActivity().getString(R.string.select_notification);
                     String[] items = new String[ringtones.size()];
                     for (int i = 0; i < items.length; i++) {
                         items[i] = ringtones.get(i).name;
                     }
-                    Bus.postObject(new SingleChoiceRadioRequest(dialogTitle, items, selectedItem, new DialogInterface.OnClickListener() {
+                    new SingleChoiceRadioRequest(dialogTitle, items, selectedItem, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //Selection changed
-                            Utils.ringtoneCancel();
+                            UtilsRingtone.ringtoneCancel();
                             if (ringtones.get(which).uri != null) {
-                                Utils.ringtonePlay(ringtones.get(which).uri);
+                                //UtilsRingtone.ringtonePlay(ringtones.get(which).uri);
+                                SoundInstant.getInstance().loadAndPlayNotification(ringtones.get(which).uri);
                             }
                             for (int i = 0; i < ringtones.size(); i++) {
                                 ringtones.get(i).selected = i == which;
@@ -172,7 +187,8 @@ public class DialogBuildManager extends BaseBuildManager {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //Confirmed
-                            Utils.ringtoneCancel();
+                            SoundInstant.getInstance().stopPlayback();
+                            //UtilsRingtone.ringtoneCancel();
                             for (int i = 0; i < ringtones.size(); i++) {
                                 if (ringtones.get(i).selected) {
                                     request.listener.ringtoneResponse(ringtones.get(i).uri, ringtones.get(i).name);
@@ -183,9 +199,10 @@ public class DialogBuildManager extends BaseBuildManager {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //Canceled
-                            Utils.ringtoneCancel();
+                            SoundInstant.getInstance().stopPlayback();
+                            //UtilsRingtone.ringtoneCancel();
                         }
-                    }));
+                    }).show();
                 }
             }
 
@@ -193,12 +210,18 @@ public class DialogBuildManager extends BaseBuildManager {
             public void permissionDenied() {
 
             }
-        }));
+        }).execute();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a color picker dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onColorPickerRequest(@NonNull ColorPickerRequest request) {
-        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onColorPickerRequest(@NonNull ColorPickerRequest request) {
+        ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(getActivity().getResources().getString(R.string.choose_color))
                 .initialColor(request.initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
@@ -212,23 +235,29 @@ public class DialogBuildManager extends BaseBuildManager {
                 })
                 .setPositiveButton(getActivity().getResources().getString(R.string.okay), request.onColorPickerClickListener)
                 .setNegativeButton(getActivity().getResources().getString(R.string.cancel), request.onNegative);
-        if(request.onDisable != null) {
+        if (request.onDisable != null) {
             builder.setNeutralButton(getActivity().getResources().getString(R.string.disable), request.onDisable);
         }
         builder.build().show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a simple prompt dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onPromptDialogRequest(@NonNull PromptDialogRequest request) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onPromptDialogRequest(@NonNull PromptDialogRequest request) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setMessage(request.content);
-        if(request.positiveText != null) {
+        if (request.positiveText != null) {
             builder.setPositiveButton(request.positiveText, request.onPositive);
         } else {
             builder.setPositiveButton(R.string.okay, request.onPositive);
         }
-        if(request.negativeText != null) {
+        if (request.negativeText != null) {
             builder.setNegativeButton(request.negativeText, request.onNegative);
         } else {
             builder.setNegativeButton(R.string.cancel, request.onNegative);
@@ -236,164 +265,257 @@ public class DialogBuildManager extends BaseBuildManager {
         builder.show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a time picker dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onTimePickerDialogRequest(@NonNull TimePickerRequest request) {
+    public final void onTimePickerDialogRequest(@NonNull TimePickerRequest request) {
         TimePickerDialog time = new TimePickerDialog();
-        time.initialize(request.onTimeSetListener, request.hour, request.minute, 0, request.is24Hour);
-        if(ThemeManager.getAppTheme() == ThemeManager.AppTheme.DARK) {
+        time.initialize(request.onTimeSetListener, request.timeItem.hour, request.timeItem.minute, 0, request.timeItem.is24Hour());
+        if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.DARK) {
             time.setThemeDark(true);
         }
         time.enableSeconds(false);
         time.vibrate(false);
         time.dismissOnPause(true);
-        time.setAccentColor(ThemeManager.getAccentColor());
+        time.setAccentColor(UtilsTheme.getAccentColor());
         time.show(getActivity().getFragmentManager(), "TimePickerDialog");
     }
 
+    /**
+     * Not Called Directly
+     * Creates a single date picker dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onSingleDatePickerDialogRequest(@NonNull SingleDatePickerRequest request) {
-        DatePickerMultiDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
-                .setDateRange(request.startDate,request. endDate)
+    public final void onSingleDatePickerDialogRequest(@NonNull SingleDatePickerRequest request) {
+        DatePickerMultiDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
+                .setDateRange(request.startDate, request.endDate)
                 .setSelectedDate(request.selectedDate, request.singleListener)
                 .build()
                 .show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a multi date picker dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onMultiDatePickerDialogRequest(@NonNull MultiDatePickerRequest request) {
-        DatePickerMultiDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onMultiDatePickerDialogRequest(@NonNull MultiDatePickerRequest request) {
+        DatePickerMultiDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setDateRange(request.startDate, request.endDate)
                 .setSelectedDates(request.selectedDates, request.multiListener)
                 .build()
                 .show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a dual spinner dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onDualSpinnerDialogRequest(@NonNull DualSpinnerRequest request) {
-        DualSpinnerDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onDualSpinnerDialogRequest(@NonNull DualSpinnerRequest request) {
+        DualSpinnerDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
-                .setFirst(request.first, request.firstSelected, request.firstRestrictions)
-                .setSecond(request.second, request.secondSelected, request.secondRestrictions)
+                .setFirst(request.first, request.firstSelected, request.firstRestrictingSecond)
+                .setSecond(request.second, request.secondSelected, request.secondRestrictingFirst)
                 .setListener(request.listener)
                 .build()
                 .show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a edit text list dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onEditTextListRequest(@NonNull EditTextListRequest request) {
+    public final void onEditTextListRequest(@NonNull EditTextListRequest request) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         EditTextListDialog editTextListDialog = new EditTextListDialog();
         editTextListDialog.setData(request.title, request.messages, request.onPositive, request.onNegative);
-        editTextListDialog.show(fm, "EditTextListDIalog");
+        editTextListDialog.show(fm, "EditTextListDialog");
     }
 
+    /**
+     * Not Called Directly
+     * Creates an edit times list dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onSingleChoiceRequest(@NonNull final SingleChoiceRequest request) {
-        if(request.iconItems != null) {
-            ListAdapter adapter = new ArrayAdapter<IconItem>(getActivity(), R.layout.dialog_item_material, android.R.id.text1, request.iconItems){
+    public final void onEditTimesListRequest(@NonNull EditTimesListRequest request) {
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        EditTimesListDialog editTimesListDialog = new EditTimesListDialog();
+        editTimesListDialog.setData(request.title, request.times, request.onPositive, request.onNegative);
+        editTimesListDialog.show(fm, "EditTimesDialog");
+    }
+
+    /**
+     * Not Called Directly
+     * Creates a single choice request.
+     * Selecting an item instantly picks it (no confirm button).
+     * Can execute text only or text plus a left aligned icon.
+     *
+     * @param request Dialog request
+     */
+    @Subscribe
+    public final void onSingleChoiceRequest(@NonNull final SingleChoiceRequest request) {
+        if (request.iconItems != null) {
+            ListAdapter adapter = new ArrayAdapter<IconItem>(getActivity(), R.layout.dialog_helper_item_material, android.R.id.text1, request.iconItems) {
                 public View getView(int position, View convertView, ViewGroup parent) {
-                    //Use super class to create the View
                     View v = super.getView(position, convertView, parent);
-                    TextView tv = (TextView)v.findViewById(android.R.id.text1);
-
-                    //Put the image on the TextView
+                    TextView tv = (TextView) v.findViewById(android.R.id.text1);
                     tv.setCompoundDrawablesWithIntrinsicBounds(request.iconItems[position].icon, 0, 0, 0);
-
-                    //Add margin between image and text (support various screen densities)
-                    int dp5 = (int) (5 * getActivity().getResources().getDisplayMetrics().density + 0.5f);
-                    tv.setCompoundDrawablePadding(dp5);
-
+                    tv.setCompoundDrawablePadding(UtilsDisplay.getDipInt(5));
                     return v;
                 }
             };
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle())
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                     .setCancelable(request.allowCancel)
                     .setTitle(request.title)
                     .setAdapter(adapter, request.clickListener);
-            if(request.onNegative != null) {
+            if (request.onNegative != null) {
                 builder.setNegativeButton(R.string.cancel, request.onNegative);
             }
             builder.show();
-        } else if(request.items != null) {
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle())
+        } else if (request.items != null) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                     .setCancelable(request.allowCancel)
                     .setTitle(request.title)
                     .setItems(request.items, request.clickListener);
-            if(request.onNegative != null) {
+            if (request.onNegative != null) {
                 builder.setNegativeButton(R.string.cancel, request.onNegative);
             }
             builder.show();
         }
     }
 
+    /**
+     * Not Called Directly
+     * Creates a single choice dialog.
+     * Options require selection and then confirmation. A callback provides interim selection status for preview usage.
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onSingleChoiceRadioRequest(@NonNull SingleChoiceRadioRequest request) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onSingleChoiceRadioRequest(@NonNull SingleChoiceRadioRequest request) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setPositiveButton(R.string.okay, request.onPositive)
                 .setSingleChoiceItems(request.items, request.defaultValue, request.clickListener);
-        if(request.onNegative != null) {
+        if (request.onNegative != null) {
             builder.setNegativeButton(R.string.cancel, request.onNegative);
         }
         builder.show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a multi choice dialog with checkboxes.
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onMultiChoiceRadioRequest(@NonNull MultiChoiceRequest request) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onMultiChoiceRadioRequest(@NonNull MultiChoiceRequest request) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setPositiveButton(R.string.okay, request.onPositive)
                 .setMultiChoiceItems(request.items, request.checkedItems, request.clickListener);
-        if(request.onNegative != null) {
+        if (request.onNegative != null) {
             builder.setNegativeButton(R.string.cancel, request.onNegative);
         }
         builder.show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a single choice icon only dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onSingleChoiceIconRequest(@NonNull SingleChoiceIconRequest request) {
-        SingleChoiceIconDialogBuilder builder = SingleChoiceIconDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onSingleChoiceIconRequest(@NonNull SingleChoiceIconRequest request) {
+        SingleChoiceIconDialogBuilder builder = SingleChoiceIconDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
+                .setBackgroundColor(request.backgroundColor)
                 .setOnOptionPicked(request.onOptionPickedListener);
-        if(request.itemsIds != null) {
+        if (request.itemsIds != null) {
             builder.setItemsIds(request.itemsIds);
         }
-        if(request.itemsUri != null) {
+        if (request.itemsUri != null) {
             builder.setItemsUri(request.itemsUri);
         }
-        if(request.textNeutral != null && request.onNeutral != null) {
+        if (request.textNeutral != null && request.onNeutral != null) {
             builder.onNeutral(request.textNeutral, request.onNeutral);
         }
         builder.build().show();
     }
 
+    /**
+     * TODO incomplete
+     * Not Called Directly
+     * Creates a single choice radio button dialog.
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onSingleChoiceRadioIconRequest(@NonNull SingleChoiceRadioIconRequest request) {
-        SingleChoiceRadioIconDialogBuilder builder = SingleChoiceRadioIconDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
+    public final void onSingleChoiceRadioIconRequest(@NonNull SingleChoiceRadioIconRequest request) {
+        SingleChoiceRadioIconDialogBuilder builder = SingleChoiceRadioIconDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
+                .setBackgroundColor(request.backgroundColor)
                 .setTitle(request.title);
-        if(request.itemsIds != null) {
+        if (request.itemsIds != null) {
             builder.setItemsIds(request.itemsIds);
         }
-        if(request.itemsUri != null) {
+        if (request.itemsUri != null) {
             builder.setItemsUri(request.itemsUri);
         }
         builder.build().show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates a release notes dialog
+     *
+     * @param request Dialog request
+     */
     @Subscribe
-    public void onReleastNotesDialogRequest(@NonNull ReleaseNotesDialogRequest request) {
+    public final void onReleastNotesDialogRequest(@NonNull ReleaseNotesDialogRequest request) {
         String content = "";
         TypedArray array = getActivity().getResources().obtainTypedArray(R.array.current_release_notes);
         CharSequence[] data = array.getTextArray(array.getIndex(0));
         array.recycle();
-        for(CharSequence item : data) {
-            content += item.toString() +"\n\n";
+        for (CharSequence item : data) {
+            content += item.toString() + "\n\n";
         }
-        ReleaseNotesDialogBuilder.with(getActivity(), ThemeManager.getAlertDialogStyle())
-                .setTitle(getActivity().getString(R.string.release_notes) + ": " + Utils.getVersionName()+" "+Utils.getVersionType())
+        ReleaseNotesDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
+                .setTitle(getActivity().getString(R.string.release_notes) + ": " + UtilsVersion.getVersionName() + " " + UtilsVersion.getVersionType())
                 .setContent(content)
                 .build()
                 .show();
+    }
+
+    /**
+     * Not Called Directly
+     * Creates a vibrate pattern dialog
+     *
+     * @param request Dialog Request
+     */
+    @Subscribe
+    public final void onVibratePatternRequest(@NonNull VibratePatternRequest request) {
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        VibratePatternDialog dialog = new VibratePatternDialog();
+        dialog.setData(request.title, request.pattern, request.listener);
+        dialog.show(fm, "VibratePatternDialog");
     }
 
 }

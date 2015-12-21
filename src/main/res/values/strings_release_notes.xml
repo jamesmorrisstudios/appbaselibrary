@@ -5,14 +5,14 @@
     <string-array name="randremind_release_notes">
         <item name="line0">First 2.0.0 early Beta release. Lots of new features and tweaks. Expect bugs.</item>
         <item name="line1">Rebranding "Donation" to "Pro". All previously free features remain free.</item>
-        <item name="line2">Overhauled the app theme.</item>
+        <item name="line2">Overhauled the app themeBackground.</item>
         <item name="line3">Overhauled the settings menu.</item>
         <item name="line4">Overhauled the help and feedback page.</item>
         <item name="line4">Added an app widget to show upcoming reminders.</item>
         <item name="line5">Lots of new reminder settings.</item>
-        <item name="line5">Added a new built in ringtone picker so it follows the app theme. Disable in settings to use an external ringtone picker.</item>
+        <item name="line5">Added a new built in ringtone picker so it follows the app themeBackground. Disable in settings to use an external ringtone picker.</item>
         <item name="line5">Pro Only features.</item>
-        <item name="line5">Customize the app theme with the main Light or Dark theme and change the primary and accent colors (16+ available options).</item>
+        <item name="line5">Customize the app themeBackground with the main Light or Dark themeBackground and change the primary and accent colors (16+ available options).</item>
         <item name="line5">Immersive Mode.</item>
         <item name="line4">Builder to create custom vibrate patterns.</item>
         <item name="line4">Import utility for custom notification icons (android 6.0+ only).</item>

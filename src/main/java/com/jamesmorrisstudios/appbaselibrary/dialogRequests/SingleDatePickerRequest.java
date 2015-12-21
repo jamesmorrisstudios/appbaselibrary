@@ -6,12 +6,21 @@ import com.jamesmorrisstudios.appbaselibrary.dialogs.DatePickerMultiDialogBuilde
 import com.jamesmorrisstudios.appbaselibrary.time.DateItem;
 
 /**
+ * Request to build a single date picker dialog.
+ * Call execute to display the dialog
+ * <p/>
  * Created by James on 11/3/2015.
  */
-public class SingleDatePickerRequest {
+public final class SingleDatePickerRequest extends AbstractDialogRequest {
     public final DateItem startDate, endDate, selectedDate;
     public final DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener;
 
+    /**
+     * @param startDate      earliest allowed date
+     * @param endDate        latest allowed date
+     * @param selectedDate   Currently selected date
+     * @param singleListener selection listener
+     */
     public SingleDatePickerRequest(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull DateItem selectedDate, @NonNull DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener) {
         this.startDate = startDate;
         this.endDate = endDate;
