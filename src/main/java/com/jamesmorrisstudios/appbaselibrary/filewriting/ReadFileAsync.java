@@ -23,7 +23,7 @@ public final class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
      * @param location Storage location
      * @param listener Callback listener
      */
-    public ReadFileAsync(@NonNull String path, @NonNull FileWriter.FileLocation location, @NonNull FileReadListener listener) {
+    public ReadFileAsync(@NonNull final String path, @NonNull final FileWriter.FileLocation location, @NonNull final FileReadListener listener) {
         this.path = path;
         this.uri = null;
         this.location = location;
@@ -37,7 +37,7 @@ public final class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
      * @param location Storage location
      * @param listener Callback listener
      */
-    public ReadFileAsync(@NonNull Uri uri, @NonNull FileWriter.FileLocation location, @NonNull FileReadListener listener) {
+    public ReadFileAsync(@NonNull final Uri uri, @NonNull final FileWriter.FileLocation location, @NonNull final FileReadListener listener) {
         this.path = null;
         this.uri = uri;
         this.location = location;
@@ -52,7 +52,7 @@ public final class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
      */
     @Nullable
     @Override
-    protected final byte[] doInBackground(Void... params) {
+    protected final byte[] doInBackground(final Void... params) {
         if (uri != null) {
             return FileWriter.readFile(uri, location);
         }
@@ -80,6 +80,6 @@ public final class ReadFileAsync extends AsyncTask<Void, Void, byte[]> {
         /**
          * @param data Byte array that was read.
          */
-        void readComplete(@Nullable byte[] data);
+        void readComplete(@Nullable final byte[] data);
     }
 }

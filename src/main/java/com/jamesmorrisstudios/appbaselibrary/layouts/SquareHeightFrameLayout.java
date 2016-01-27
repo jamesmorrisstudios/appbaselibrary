@@ -31,7 +31,7 @@ public final class SquareHeightFrameLayout extends FrameLayout {
     /**
      * @param context Local context
      */
-    public SquareHeightFrameLayout(@NonNull Context context) {
+    public SquareHeightFrameLayout(@NonNull final Context context) {
         super(context);
     }
 
@@ -39,7 +39,7 @@ public final class SquareHeightFrameLayout extends FrameLayout {
      * @param context Local context
      * @param attrs   Attribute set
      */
-    public SquareHeightFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public SquareHeightFrameLayout(@NonNull final Context context, @Nullable final AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -48,7 +48,7 @@ public final class SquareHeightFrameLayout extends FrameLayout {
      * @param attrs    Attribute set
      * @param defStyle Style def
      */
-    public SquareHeightFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public SquareHeightFrameLayout(@NonNull final Context context, @Nullable final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -57,7 +57,7 @@ public final class SquareHeightFrameLayout extends FrameLayout {
      * @param heightMeasureSpec The height spec of the view
      */
     @Override
-    public final void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    public final void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
         super.onMeasure(heightMeasureSpec, heightMeasureSpec);
     }
 

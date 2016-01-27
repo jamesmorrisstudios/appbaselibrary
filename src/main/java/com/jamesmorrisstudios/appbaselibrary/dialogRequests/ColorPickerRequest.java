@@ -23,7 +23,7 @@ public final class ColorPickerRequest extends AbstractDialogRequest {
      * @param onNegative                 On cancel listener (may be null)
      * @param onDisable                  On disable listener (may be null)
      */
-    public ColorPickerRequest(int initialColor, @NonNull ColorPickerClickListener onColorPickerClickListener, @NonNull DialogInterface.OnClickListener onNegative, @Nullable DialogInterface.OnClickListener onDisable) {
+    public ColorPickerRequest(final int initialColor, @NonNull final ColorPickerClickListener onColorPickerClickListener, @NonNull final DialogInterface.OnClickListener onNegative, @Nullable final DialogInterface.OnClickListener onDisable) {
         this.initialColor = initialColor;
         this.onColorPickerClickListener = onColorPickerClickListener;
         this.onNegative = onNegative;

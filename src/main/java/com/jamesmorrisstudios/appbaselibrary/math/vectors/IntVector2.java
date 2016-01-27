@@ -19,13 +19,20 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Vector class with 2 integer dimensions
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class IntVector2 {
-    public int x, y;
+public final class IntVector2 implements Serializable {
+    @SerializedName("x")
+    public int x;
+    @SerializedName("y")
+    public int y;
 
     /**
      * Creates a new int vector
@@ -33,7 +40,7 @@ public class IntVector2 {
      * @param x X value
      * @param y Y value
      */
-    public IntVector2(int x, int y) {
+    public IntVector2(final int x, final int y) {
         this.x = x;
         this.y = y;
     }
@@ -59,21 +66,12 @@ public class IntVector2 {
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof IntVector2) {
             IntVector2 v = (IntVector2) o;
             return x == v.x && y == v.y;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     */
-    public void set(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 
 }

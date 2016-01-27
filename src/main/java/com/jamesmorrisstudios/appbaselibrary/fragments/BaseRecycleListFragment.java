@@ -1,14 +1,17 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.CallSuper;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.LayoutInflater;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
@@ -38,9 +41,49 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     private String filterText = null;
 
     /**
-     * Required empty public constructor
+     * @return True if we have a search view for the recycleList
      */
-    public BaseRecycleListFragment() {
+    protected abstract boolean includeSearch();
+
+    /**
+     * Override if manually using the search text. Recycle list is automatically updated
+     */
+    protected void searchTextChanged(@Nullable final String text) {
+
+    }
+
+    /**
+     * Override if manually using the search text. Recycle list is automatically updated
+     */
+    protected void searchTextSubmitted(@Nullable final String text) {
+
+    }
+
+    /**
+     * Override to run custom post creation work on the options menu
+     * @param menu Menu
+     */
+    @CallSuper
+    protected void postCreateOptionsMenu(@NonNull final Menu menu) {
+        super.postCreateOptionsMenu(menu);
+        if (includeSearch() && usesOptionsMenu()) {
+            SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+            searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+                @Override
+                public boolean onQueryTextSubmit(@NonNull final String query) {
+                    setFilterText(query);
+                    searchTextSubmitted(query);
+                    return false;
+                }
+
+                @Override
+                public boolean onQueryTextChange(@NonNull final String newText) {
+                    setFilterText(newText);
+                    searchTextChanged(newText);
+                    return false;
+                }
+            });
+        }
     }
 
     /**
@@ -50,8 +93,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @return This fragments top view
      */
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_recycle, container, false);
         noDataText = (TextView) view.findViewById(R.id.empty_view);
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
@@ -78,7 +120,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 });
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+            public void onScrolled(@NonNull final RecyclerView recyclerView, final int dx, final int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 if (!recyclerView.canScrollVertically(1)) {
                     onScrolledToEnd();
@@ -209,7 +251,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param savedInstanceState Saved instance state
      */
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public final void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ViewHolder mViews = new ViewHolder(view);
         mAdapter = getAdapter(this);
@@ -218,7 +260,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+            public void onScrolled(@NonNull final RecyclerView recyclerView, final int dx, final int dy) {
                 super.onScrolled(recyclerView, dx, dy);
                 if (dy > 0) {
                     hideFabAuto();
@@ -227,7 +269,6 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
                 }
             }
         });
-
         if (allowReording()) {
             ItemTouchHelper.Callback callback = new SimpleItemTouchHelperCallback(mAdapter);
             ItemTouchHelper mItemTouchHelper = new ItemTouchHelper(callback);
@@ -240,7 +281,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @return List Adapter
      */
     @NonNull
-    protected abstract BaseRecycleAdapter getAdapter(@NonNull BaseRecycleAdapter.OnRecycleAdapterEventsListener mListener);
+    protected abstract BaseRecycleAdapter getAdapter(@NonNull final BaseRecycleAdapter.OnRecycleAdapterEventsListener mListener);
 
     /**
      * @return List Adapter
@@ -255,7 +296,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param forcedRefresh true to force
      */
-    protected abstract void startDataLoad(boolean forcedRefresh);
+    protected abstract void startDataLoad(final boolean forcedRefresh);
 
     /**
      * Load more data if available
@@ -265,7 +306,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     /**
      * @param item Item that was clicked on
      */
-    protected abstract void itemClick(@NonNull BaseRecycleContainer item);
+    protected abstract void itemClick(@NonNull final BaseRecycleContainer item);
 
     /**
      * Item was moved. Adjust your data as needed
@@ -273,7 +314,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param fromPosition Item from position
      * @param toPosition   Item to position
      */
-    protected abstract void itemMove(int fromPosition, int toPosition);
+    protected abstract void itemMove(final int fromPosition, final int toPosition);
 
     /**
      * Enable header support
@@ -294,7 +335,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param data Data to set
      */
-    protected final void applyData(@NonNull ArrayList<BaseRecycleContainer> data) {
+    protected final void applyData(@NonNull final ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && !data.isEmpty()) {
             mAdapter.setItems(data);
             hideNoDataText();
@@ -310,7 +351,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param data Data to append
      */
-    protected final void appendData(@NonNull ArrayList<BaseRecycleContainer> data) {
+    protected final void appendData(@NonNull final ArrayList<BaseRecycleContainer> data) {
         if (mAdapter != null && !data.isEmpty()) {
             mAdapter.addItems(data);
             hideNoDataText();
@@ -323,7 +364,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param forceReload True to force even if data is already loaded
      */
-    protected final void startRefresh(boolean forceReload) {
+    protected final void startRefresh(final boolean forceReload) {
         mSwipeRefreshLayout.setRefreshing(true);
         isRefreshing = true;
         startDataLoad(forceReload);
@@ -334,7 +375,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param dummyItem True for dummy space. False for none
      */
-    protected final void setDummyItem(boolean dummyItem) {
+    protected final void setDummyItem(final boolean dummyItem) {
         if (dummyItem) {
             mRecyclerView.setPadding(0, 0, 0, UtilsDisplay.getDipInt(92));
         } else {
@@ -360,7 +401,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param enable Enable or disable pull to refresh
      */
-    protected final void setEnablePullToRefresh(boolean enable) {
+    protected final void setEnablePullToRefresh(final boolean enable) {
         mSwipeRefreshLayout.setEnabled(enable);
         if (enable) {
             mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
@@ -379,7 +420,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      *
      * @param text Text
      */
-    protected final void setNoDataText(@NonNull String text) {
+    protected final void setNoDataText(@NonNull final String text) {
         noDataText.setText(text);
     }
 
@@ -401,6 +442,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @return The current filter text
      */
     @Override
+    @NonNull
     public String getFilterText() {
         return filterText;
     }
@@ -408,7 +450,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     /**
      * @param filterText Filter Text. Null or empty for no filter
      */
-    public final void setFilterText(@Nullable String filterText) {
+    public final void setFilterText(@Nullable final String filterText) {
         this.filterText = filterText;
         this.mAdapter.updateFilterText();
     }
@@ -417,7 +459,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param item Clicked container item
      */
     @Override
-    public final void itemClicked(@NonNull BaseRecycleContainer item) {
+    public final void itemClicked(@NonNull final BaseRecycleContainer item) {
         itemClick(item);
     }
 
@@ -427,7 +469,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param position Clicked item position
      */
     @Override
-    public final void itemClicked(int position) {
+    public final void itemClicked(final int position) {
         //Unused
     }
 
@@ -436,7 +478,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param toPosition   To position
      */
     @Override
-    public final void itemMoved(int fromPosition, int toPosition) {
+    public final void itemMoved(final int fromPosition, final int toPosition) {
         itemMove(fromPosition, toPosition);
     }
 
@@ -451,7 +493,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
          *
          * @param view View to set
          */
-        public ViewHolder(@NonNull View view) {
+        public ViewHolder(@NonNull final View view) {
             mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
         }
 
@@ -460,7 +502,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
          *
          * @param adapter Adapter
          */
-        public void setAdapter(@NonNull RecyclerView.Adapter<?> adapter) {
+        public void setAdapter(@NonNull final RecyclerView.Adapter<?> adapter) {
             mRecyclerView.setAdapter(adapter);
         }
     }

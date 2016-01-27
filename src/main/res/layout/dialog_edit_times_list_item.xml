@@ -16,7 +16,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="@dimen/item_size" />
 
-    <com.jamesmorrisstudios.appbaselibrary.controls.tint.TintedImageView
+    <ImageView
         android:id="@+id/delete1"
         android:layout_width="32dp"
         android:layout_height="32dp"

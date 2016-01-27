@@ -34,7 +34,7 @@ public abstract class AnimatorStartListener implements Animator.AnimatorListener
      * @param animation Animation
      */
     @Override
-    public void onAnimationEnd(@NonNull Animator animation) {
+    public void onAnimationEnd(@NonNull final Animator animation) {
 
     }
 
@@ -45,7 +45,7 @@ public abstract class AnimatorStartListener implements Animator.AnimatorListener
      * @param animation Animation
      */
     @Override
-    public void onAnimationCancel(@NonNull Animator animation) {
+    public void onAnimationCancel(@NonNull final Animator animation) {
 
     }
 
@@ -56,7 +56,7 @@ public abstract class AnimatorStartListener implements Animator.AnimatorListener
      * @param animation Animation
      */
     @Override
-    public void onAnimationRepeat(@NonNull Animator animation) {
+    public void onAnimationRepeat(@NonNull final Animator animation) {
 
     }
 }

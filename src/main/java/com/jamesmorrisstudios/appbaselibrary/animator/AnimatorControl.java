@@ -54,7 +54,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator animateCustomField(@NonNull String field, @NonNull View view, float start, float end, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator animateCustomField(@NonNull final String field, @NonNull final View view, final float start, final float end, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         ObjectAnimator anim = ObjectAnimator.ofFloat(view, field, start, end);
         anim.setInterpolator(interpolatorType.getInterpolator());
         if (duration != 0) {
@@ -78,7 +78,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener Animation listener.
      */
-    public static void animateCustomFieldAutoStart(@NonNull String field, @NonNull View view, float start, float end, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void animateCustomFieldAutoStart(@NonNull final String field, @NonNull final View view, final float start, final float end, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         ObjectAnimator anim = animateCustomField(field, view, start, end, duration, startDelay, interpolatorType);
         if (animatorListener != null) {
             anim.addListener(animatorListener);
@@ -96,7 +96,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator translateX(@NonNull View view, float startX, float endX, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator translateX(@NonNull final View view, final float startX, final float endX, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("translationX", view, startX, endX, duration, startDelay, interpolatorType);
     }
 
@@ -109,7 +109,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void translateXAutoStart(@NonNull View view, float startX, float endX, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void translateXAutoStart(@NonNull final View view, final float startX, final float endX, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("translationX", view, startX, endX, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -123,7 +123,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator translateY(@NonNull View view, float startY, float endY, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator translateY(@NonNull final View view, final float startY, final float endY, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("translationY", view, startY, endY, duration, startDelay, interpolatorType);
     }
 
@@ -136,7 +136,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void translateYAutoStart(@NonNull View view, float startY, float endY, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void translateYAutoStart(@NonNull final View view, final float startY, final float endY, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("translationY", view, startY, endY, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -150,7 +150,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator rotation(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator rotation(@NonNull final View view, final float startAngle, final float endAngle, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("rotation", view, startAngle, endAngle, duration, startDelay, interpolatorType);
     }
 
@@ -163,7 +163,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void rotationAutoStart(@NonNull View view, float startAngle, float endAngle, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void rotationAutoStart(@NonNull final View view, final float startAngle, final float endAngle, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("rotation", view, startAngle, endAngle, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -177,7 +177,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator scaleX(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator scaleX(@NonNull final View view, final float startScale, final float endScale, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("scaleX", view, startScale, endScale, duration, startDelay, interpolatorType);
     }
 
@@ -190,7 +190,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void scaleXAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void scaleXAutoStart(@NonNull final View view, final float startScale, final float endScale, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("scaleX", view, startScale, endScale, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -204,7 +204,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator scaleY(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator scaleY(@NonNull final View view, final float startScale, final float endScale, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("scaleY", view, startScale, endScale, duration, startDelay, interpolatorType);
     }
 
@@ -217,7 +217,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void scaleYAutoStart(@NonNull View view, float startScale, float endScale, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void scaleYAutoStart(@NonNull final View view, final float startScale, final float endScale, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("scaleY", view, startScale, endScale, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -231,7 +231,7 @@ public final class AnimatorControl {
      * @return The ObjectAnimator. You must still start it.
      */
     @NonNull
-    public static ObjectAnimator alpha(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay, @NonNull InterpolatorType interpolatorType) {
+    public static ObjectAnimator alpha(@NonNull final View view, final float startAlpha, final float endAlpha, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType) {
         return animateCustomField("alpha", view, startAlpha, endAlpha, duration, startDelay, interpolatorType);
     }
 
@@ -244,7 +244,7 @@ public final class AnimatorControl {
      * @param interpolatorType The type of interpolator to use
      * @param animatorListener The listener for animation callbacks
      */
-    public static void alphaAutoStart(@NonNull View view, float startAlpha, float endAlpha, long duration, long startDelay, @NonNull InterpolatorType interpolatorType, @Nullable Animator.AnimatorListener animatorListener) {
+    public static void alphaAutoStart(@NonNull final View view, final float startAlpha, final float endAlpha, final long duration, final long startDelay, @NonNull final InterpolatorType interpolatorType, @Nullable final Animator.AnimatorListener animatorListener) {
         animateCustomFieldAutoStart("alpha", view, startAlpha, endAlpha, duration, startDelay, interpolatorType, animatorListener);
     }
 
@@ -300,6 +300,7 @@ public final class AnimatorControl {
         /**
          * @return Interpolator class
          */
+        @NonNull
         public final Interpolator getInterpolator() {
             switch (this) {
                 case ACCELERLATE_DECELERATE:

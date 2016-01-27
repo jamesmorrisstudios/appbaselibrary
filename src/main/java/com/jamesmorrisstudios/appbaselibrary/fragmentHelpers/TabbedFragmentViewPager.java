@@ -22,7 +22,7 @@ public final class TabbedFragmentViewPager extends PagerAdapter {
      * @param context Context
      * @param tabs    Tab Array
      */
-    public TabbedFragmentViewPager(@NonNull Context context, @NonNull TabbedFragmentBaseTab[] tabs) {
+    public TabbedFragmentViewPager(@NonNull final Context context, @NonNull final TabbedFragmentBaseTab[] tabs) {
         mContext = context;
         this.tabs = tabs;
     }
@@ -36,7 +36,7 @@ public final class TabbedFragmentViewPager extends PagerAdapter {
      */
     @NonNull
     @Override
-    public ViewGroup instantiateItem(@NonNull ViewGroup collection, int position) {
+    public ViewGroup instantiateItem(@NonNull final ViewGroup collection, final int position) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ViewGroup layout = (ViewGroup) inflater.inflate(tabs[position].getViewLayoutId(), null);
         collection.addView(layout);
@@ -52,7 +52,7 @@ public final class TabbedFragmentViewPager extends PagerAdapter {
      * @param view       Tab view
      */
     @Override
-    public void destroyItem(@NonNull ViewGroup collection, int position, @NonNull Object view) {
+    public void destroyItem(@NonNull final ViewGroup collection, final int position, @NonNull final Object view) {
         tabs[position].viewInactive();
         collection.removeView((View) view);
     }
@@ -71,7 +71,7 @@ public final class TabbedFragmentViewPager extends PagerAdapter {
      * @return True if equal
      */
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull final View view, @NonNull final Object object) {
         return view == object;
     }
 
@@ -81,7 +81,7 @@ public final class TabbedFragmentViewPager extends PagerAdapter {
      */
     @NonNull
     @Override
-    public CharSequence getPageTitle(int position) {
+    public CharSequence getPageTitle(final int position) {
         return mContext.getString(tabs[position].getTitleResId());
     }
 

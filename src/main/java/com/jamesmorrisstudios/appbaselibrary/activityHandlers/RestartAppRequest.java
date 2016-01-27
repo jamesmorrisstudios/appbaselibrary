@@ -20,7 +20,7 @@ public final class RestartAppRequest extends AbstractActivityRequest {
      * @param scrollY ScrollY position
      * @param bundle  Bundle
      */
-    public RestartAppRequest(@Nullable String pageTag, int scrollY, @Nullable Bundle bundle) {
+    public RestartAppRequest(@Nullable final String pageTag, final int scrollY, @Nullable final Bundle bundle) {
         this.pageTag = pageTag;
         this.scrollY = scrollY;
         this.bundle = bundle;

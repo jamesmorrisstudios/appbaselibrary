@@ -26,7 +26,7 @@ public final class EditTextListRequest extends AbstractDialogRequest {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public EditTextListRequest(@NonNull String title, @NonNull ArrayList<String> messages, @NonNull EditTextListDialog.EditTextListListener onPositive, @Nullable View.OnClickListener onNegative) {
+    public EditTextListRequest(@NonNull final String title, @NonNull final ArrayList<String> messages, @NonNull final EditTextListDialog.EditTextListListener onPositive, @Nullable final View.OnClickListener onNegative) {
         this.title = title;
         this.messages = messages;
         this.onPositive = onPositive;

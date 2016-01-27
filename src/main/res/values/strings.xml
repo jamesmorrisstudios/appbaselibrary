@@ -187,12 +187,19 @@
     <string name="export_all">Export All</string>
     <string name="export_to">Export To</string>
     <string name="export_location">Export Location</string>
+    <string name="import_failed">Import Failed</string>
     <string name="export_failed">Export Failed</string>
+    <string name="export_complete">Export Complete</string>
+    <string name="import_complete">Import Complete</string>
+    <string name="exporting_please_wait">Exporting, Please Wait</string>
+    <string name="importing_please_wait">Importing, Please Wait</string>
+    <string name="data_loaded">Data Loaded</string>
     <string name="file">File</string>
     <string name="local_storage">Local Storage</string>
     <string name="backup_location">Backup Location</string>
     <string name="backup_restore">Backup/Restore</string>
     <string name="backup">Backup</string>
+    <string name="backup_log">Backup_Log</string>
     <string name="restore">Restore</string>
     <string name="backup_complete">Backup Complete</string>
     <string name="restore_complete">Restore Complete</string>
@@ -337,6 +344,7 @@
     -->
     <string name="some">Some</string>
     <string name="none">None</string>
+    <string name="set">Set</string>
     <string name="all">All</string>
     <string name="last">Last</string>
     <string name="every">Every</string>
@@ -588,6 +596,8 @@
     <!--
         Randomly RemindMe Specific
     -->
+    <string name="reminders">Reminders</string>
+    <string name="custom_icons">Custom Icons</string>
     <string name="no_reminder">No Reminders</string>
     <string name="no_reminders_yet">You have no reminders yet</string>
     <string name="delete_reminder_prompt_title">Delete Reminder</string>
@@ -598,8 +608,12 @@
     <string name="cancel_reminder_prompt_content">Are you sure you want to discard your changes?</string>
     <string name="delete_vibrate_pattern_prompt_title">Delete Vibrate Pattern</string>
     <string name="delete_vibrate_pattern_prompt_content">Are you sure you want to delete this vibrate pattern?</string>
+    <string name="delete_location_prompt_title">Delete Location</string>
+    <string name="delete_location_prompt_content">Are you sure you want to delete this location?</string>
     <string name="duplicate_reminder_prompt_title">Duplicate Reminder</string>
     <string name="duplicate_reminder_prompt_content">Are you sure you want to duplicate this reminder?</string>
+    <string name="include_log_prompt_title">@string/include_log</string>
+    <string name="include_log_prompt_content">Do you want to include the reminder log?</string>
     <string name="notification_theme_title">Please select the notification style that matches your phone</string>
     <string name="alerts_per_day">Reminders Per Day</string>
 
@@ -627,7 +641,7 @@
     <string name="setting_override_ringtone_primary">Override notification tone playback</string>
     <string name="setting_override_ringtone_secondary">This must be enabled to override the audio stream</string>
     <string name="setting_override_ringtone_stream_primary">Override notification audio stream</string>
-
+    <string name="setting_override_speech_stream_primary">Override speech stream</string>
 
     <!--
         Google Play Settings
@@ -769,14 +783,46 @@
     <string name="note">Note</string>
     <string name="image">Image</string>
 
+
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="radius">Radius</string>
+    <string name="enter">Enter</string>
+    <string name="exit">Exit</string>
+    <string name="linger_time">Linger Time</string>
+
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="filename">Filename</string>
     <string name="music">Music</string>
     <string name="ring">Ring</string>
     <string name="pro">Pro</string>
+    <string name="pro_feature">Pro Feature</string>
     <string name="upgrade">Upgrade</string>
     <string name="feature_requires_pro">This feature requires the pro version</string>
+    <string name="feature_requires_pro_limited">This feature is limited in the free version. Upgrade to pro or remove an existing item.</string>
     <string name="upgrade_to_pro">Upgrade to Pro</string>
     <string name="upgrade_now">Upgrade Now</string>
 
     <string name="map">Map</string>
+
+    <string name="speak_time">Speak Time</string>
+    <string name="speak_title">Speak Title</string>
+    <string name="speak_message">Speak Message</string>
+
+    <string name="meter">Meter</string>
+    <string name="meters">Meters</string>
+
+    <string name="import_messages">Import Messages</string>
+    <string name="clipboard">Clipboard</string>
+
+    <string name="message_separator">Message Separator ||||</string>
+
+    <string name="allow_if_any">Allow if any</string>
+    <string name="allow_if_all">Allow if all</string>
+    <string name="disallow_if_any">Disallow if any</string>
+    <string name="disallow_if_all">Disallow if all</string>
+    <string name="trigger_if_any">Trigger if any</string>
+    <string name="trigger_if_all">Trigger if all</string>
 
 </resources>

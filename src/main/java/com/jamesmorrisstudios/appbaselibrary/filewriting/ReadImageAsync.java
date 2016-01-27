@@ -24,7 +24,7 @@ public final class ReadImageAsync extends AsyncTask<Void, Void, Bitmap> {
      * @param location Storage location
      * @param listener Callback listener
      */
-    public ReadImageAsync(@NonNull String path, @NonNull FileWriter.FileLocation location, @NonNull ImageReadListener listener) {
+    public ReadImageAsync(@NonNull final String path, @NonNull final FileWriter.FileLocation location, @NonNull final ImageReadListener listener) {
         this.path = path;
         this.uri = null;
         this.location = location;
@@ -38,7 +38,7 @@ public final class ReadImageAsync extends AsyncTask<Void, Void, Bitmap> {
      * @param location Storage location
      * @param listener Callback listener
      */
-    public ReadImageAsync(@NonNull Uri uri, @NonNull FileWriter.FileLocation location, @NonNull ImageReadListener listener) {
+    public ReadImageAsync(@NonNull final Uri uri, @NonNull final FileWriter.FileLocation location, @NonNull final ImageReadListener listener) {
         this.path = null;
         this.uri = uri;
         this.location = location;
@@ -53,7 +53,7 @@ public final class ReadImageAsync extends AsyncTask<Void, Void, Bitmap> {
      */
     @Nullable
     @Override
-    protected final Bitmap doInBackground(Void... params) {
+    protected final Bitmap doInBackground(final Void... params) {
         if (uri != null) {
             return FileWriter.readImage(uri, location);
         }
@@ -81,6 +81,6 @@ public final class ReadImageAsync extends AsyncTask<Void, Void, Bitmap> {
         /**
          * @param image Image that was read
          */
-        void readComplete(@Nullable Bitmap image);
+        void readComplete(@Nullable final Bitmap image);
     }
 }

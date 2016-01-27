@@ -3,11 +3,18 @@ package com.jamesmorrisstudios.appbaselibrary.sound;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
+import android.speech.tts.TextToSpeech;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
+import com.jamesmorrisstudios.appbaselibrary.UtilsLocale;
+import com.jamesmorrisstudios.appbaselibrary.UtilsLocation;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
+import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Supports loading and playing one specific audio stream at a time.
@@ -18,6 +25,7 @@ import java.io.IOException;
 public final class SoundInstant {
     private static SoundInstant instance = null;
     private MediaPlayer music;
+    private TextToSpeech tts;
 
     /**
      * Private constructor
@@ -118,6 +126,76 @@ public final class SoundInstant {
         } catch (Exception ex) {
             //Do nothing as the media player is stupid.
         }
+    }
+
+    /**
+     * Speaks text in notification stream
+     *
+     * @param text Text to speak
+     */
+    public final void speakTextNotification(@NonNull final String text) {
+        speakText(text, AudioManager.STREAM_NOTIFICATION);
+    }
+
+    /**
+     * Speaks text in alarm stream
+     *
+     * @param text Text to speak
+     */
+    public final void speakTextAlarm(@NonNull final String text) {
+        speakText(text, AudioManager.STREAM_ALARM);
+    }
+
+    /**
+     * Speaks text in ring stream
+     *
+     * @param text Text to speak
+     */
+    public final void speakTextRing(@NonNull final String text) {
+        speakText(text, AudioManager.STREAM_RING);
+    }
+
+    /**
+     * Speaks text in music stream
+     *
+     * @param text Text to speak
+     */
+    public final void speakTextMusic(@NonNull final String text) {
+        speakText(text, AudioManager.STREAM_MUSIC);
+    }
+
+    /**
+     * Speaks text in given stream. If the current language is not support it falls back to english.
+     * If english is not supported or the TTS engine is not setup it says nothing.
+     *
+     * @param text Text to speak
+     */
+    public final void speakText(@NonNull final String text, final int streamType) {
+        tts = new TextToSpeech(AppBase.getContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status == TextToSpeech.SUCCESS) {
+                    int result=tts.setLanguage(UtilsLocale.getLocale());
+                    if(result==TextToSpeech.LANG_MISSING_DATA || result==TextToSpeech.LANG_NOT_SUPPORTED){
+                        Log.e("SoundInstant", "This Language is not supported");
+                        result=tts.setLanguage(Locale.US);
+                    }
+                    if(result==TextToSpeech.LANG_MISSING_DATA || result==TextToSpeech.LANG_NOT_SUPPORTED){
+                        Log.e("SoundInstant", "English not supported");
+                        return;
+                    }
+                    HashMap<String, String> myHashAlarm = new HashMap<>();
+                    myHashAlarm.put(TextToSpeech.Engine.KEY_PARAM_STREAM, String.valueOf(streamType));
+                    tts.setOnUtteranceCompletedListener(new TextToSpeech.OnUtteranceCompletedListener() {
+                        @Override
+                        public void onUtteranceCompleted(String utteranceId) {
+                            tts.shutdown();
+                        }
+                    });
+                    tts.speak(text, TextToSpeech.QUEUE_ADD, myHashAlarm);
+                }
+            }
+        });
     }
 
 }

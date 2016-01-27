@@ -26,7 +26,7 @@ public final class MultiChoiceRequest extends AbstractDialogRequest {
      * @param onPositive    onPositive
      * @param onNegative    onNegative
      */
-    public MultiChoiceRequest(@NonNull String title, @NonNull String[] items, boolean[] checkedItems, @NonNull DialogInterface.OnMultiChoiceClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+    public MultiChoiceRequest(@NonNull final String title, @NonNull final String[] items, final boolean[] checkedItems, @NonNull final DialogInterface.OnMultiChoiceClickListener clickListener, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.items = items;
         this.checkedItems = checkedItems;

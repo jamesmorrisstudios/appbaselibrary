@@ -18,7 +18,7 @@ public abstract class BaseBuildManager {
      *
      * @param listener Activity implementing the build manager listener.
      */
-    public final void attach(@NonNull BaseBuildManagerListener listener) {
+    public final void attach(@NonNull final BaseBuildManagerListener listener) {
         this.listener = listener;
         Bus.register(this);
     }
@@ -42,10 +42,14 @@ public abstract class BaseBuildManager {
     }
 
     /**
-     * NEVER store the result from this function.
      * Listener to retrieve the attached activity.
      */
     public interface BaseBuildManagerListener {
+
+        /**
+         * NEVER store the result from this function.
+         * @return The base Activity
+         */
         @NonNull
         BaseActivity getActivity();
     }

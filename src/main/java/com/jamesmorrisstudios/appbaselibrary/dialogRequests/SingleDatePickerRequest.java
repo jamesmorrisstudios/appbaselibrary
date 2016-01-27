@@ -21,7 +21,7 @@ public final class SingleDatePickerRequest extends AbstractDialogRequest {
      * @param selectedDate   Currently selected date
      * @param singleListener selection listener
      */
-    public SingleDatePickerRequest(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull DateItem selectedDate, @NonNull DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener) {
+    public SingleDatePickerRequest(@NonNull final DateItem startDate, @NonNull final DateItem endDate, @NonNull final DateItem selectedDate, @NonNull final DatePickerMultiDialogBuilder.SingleDatePickerListener singleListener) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.selectedDate = selectedDate;

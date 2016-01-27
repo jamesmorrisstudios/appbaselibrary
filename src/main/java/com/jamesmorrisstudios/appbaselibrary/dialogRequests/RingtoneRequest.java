@@ -20,7 +20,7 @@ public final class RingtoneRequest extends AbstractDialogRequest {
      * @param title       Title of dialog
      * @param listener    Listener
      */
-    public RingtoneRequest(@Nullable Uri currentTone, @NonNull String title, @NonNull RingtoneRequestListener listener) {
+    public RingtoneRequest(@Nullable final Uri currentTone, @NonNull final String title, @NonNull final RingtoneRequestListener listener) {
         this.currentTone = currentTone;
         this.title = title;
         this.listener = listener;
@@ -35,7 +35,7 @@ public final class RingtoneRequest extends AbstractDialogRequest {
          * @param currentTone Uri of selected tone. Null if none
          * @param name        name of selected tone. Null if none.
          */
-        void ringtoneResponse(@Nullable Uri currentTone, @Nullable String name);
+        void ringtoneResponse(@Nullable final Uri currentTone, @Nullable final String name);
     }
 
 }

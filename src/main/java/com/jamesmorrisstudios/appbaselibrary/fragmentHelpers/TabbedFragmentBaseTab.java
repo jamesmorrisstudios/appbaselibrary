@@ -2,10 +2,13 @@ package com.jamesmorrisstudios.appbaselibrary.fragmentHelpers;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.CallSuper;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.MenuRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
+import android.view.MenuItem;
 import android.view.ViewGroup;
 
 /**
@@ -53,7 +56,7 @@ public abstract class TabbedFragmentBaseTab {
      * @param view    View
      * @param context Context
      */
-    public abstract void viewActive(@NonNull ViewGroup view, Context context);
+    public abstract void viewActive(@NonNull final ViewGroup view, @NonNull final Context context);
 
     /**
      * View is now inactive. Will be invisible before this.
@@ -81,13 +84,27 @@ public abstract class TabbedFragmentBaseTab {
      *
      * @param bundle Bundle
      */
-    public abstract void saveState(@NonNull Bundle bundle);
+    public abstract void saveState(@NonNull final Bundle bundle);
 
     /**
      * Restore tab state
      *
      * @param bundle Bundle
      */
-    public abstract void restoreState(@NonNull Bundle bundle);
+    public abstract void restoreState(@NonNull final Bundle bundle);
+
+    public boolean menuEnable() {
+        return false;
+    }
+
+    @MenuRes
+    public int menuRes() {
+        return 0;
+    }
+
+    @CallSuper
+    public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
+        return false;
+    }
 
 }

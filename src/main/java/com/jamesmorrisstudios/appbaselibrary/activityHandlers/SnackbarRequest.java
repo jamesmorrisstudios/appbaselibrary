@@ -20,7 +20,7 @@ public final class SnackbarRequest extends AbstractActivityRequest {
      * @param text     Text
      * @param duration Duration
      */
-    public SnackbarRequest(@NonNull String text, @NonNull SnackBarDuration duration) {
+    public SnackbarRequest(@NonNull final String text, @NonNull final SnackBarDuration duration) {
         this.text = text;
         this.duration = duration;
         this.actionText = null;
@@ -35,7 +35,7 @@ public final class SnackbarRequest extends AbstractActivityRequest {
      * @param actionText     Action text
      * @param actionListener Action listener
      */
-    public SnackbarRequest(@NonNull String text, @NonNull SnackBarDuration duration, @NonNull String actionText, @NonNull View.OnClickListener actionListener) {
+    public SnackbarRequest(@NonNull final String text, @NonNull final SnackBarDuration duration, @NonNull final String actionText, @NonNull final View.OnClickListener actionListener) {
         this.text = text;
         this.duration = duration;
         this.actionText = actionText;

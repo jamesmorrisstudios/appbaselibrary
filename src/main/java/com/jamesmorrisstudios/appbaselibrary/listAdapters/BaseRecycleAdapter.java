@@ -46,7 +46,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      *
      * @param mListener Item Click listener
      */
-    public BaseRecycleAdapter(@NonNull OnRecycleAdapterEventsListener mListener) {
+    public BaseRecycleAdapter(@NonNull final OnRecycleAdapterEventsListener mListener) {
         this.mListener = mListener;
     }
 
@@ -57,15 +57,15 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @param toPosition   Then end position of the moved item.
      */
     @Override
-    public final void onItemMove(int fromPosition, int toPosition) {
-        fromPosition = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, fromPosition);
-        toPosition = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, toPosition);
-        LineItem prev = visibleItems.remove(fromPosition);
-        LineItem prev2 = allItems.remove(fromPosition);
-        visibleItems.add(toPosition, prev);
-        allItems.add(toPosition, prev2);
-        mListener.itemMoved(fromPosition, toPosition);
-        notifyItemMoved(fromPosition, toPosition);
+    public final void onItemMove(final int fromPosition, final int toPosition) {
+        final int fromPos = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, fromPosition);
+        final int toPos = UtilsMath.inBoundsInt(0, visibleItems.size() - 1, toPosition);
+        LineItem prev = visibleItems.remove(fromPos);
+        LineItem prev2 = allItems.remove(fromPos);
+        visibleItems.add(toPos, prev);
+        allItems.add(toPos, prev2);
+        mListener.itemMoved(fromPos, toPos);
+        notifyItemMoved(fromPos, toPos);
     }
 
     /**
@@ -74,7 +74,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @param position The position of the item dismissed.
      */
     @Override
-    public final void onItemDismiss(int position) {
+    public final void onItemDismiss(final int position) {
         visibleItems.remove(position);
         allItems.remove(position);
         notifyItemRemoved(position);
@@ -91,7 +91,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
     /**
      * @param items Append items to the current list
      */
-    public final void addItems(@NonNull ArrayList<BaseRecycleContainer> items) {
+    public final void addItems(@NonNull final ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
@@ -110,7 +110,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @return The container view holder
      */
     @Override
-    public final BaseRecycleViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public final BaseRecycleViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
         boolean isHeader = false;
         View view;
         if (viewType == VIEW_TYPE_CONTENT) {
@@ -119,9 +119,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
             view = LayoutInflater.from(parent.getContext()).inflate(getHeaderResId(), parent, false);
             isHeader = true;
         }
-
         return getViewHolder(view, isHeader, new BaseRecycleViewHolder.cardClickListener() {
-
             /**
              * @param position Clicked card position
              */
@@ -132,7 +130,6 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
                     mListener.itemClicked(visibleItems.get(position).data);
                 }
             }
-
             /**
              * @param position Card that should toggle expanded view
              */
@@ -151,7 +148,6 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
                     notifyItemChanged(expandedPosition);
                 }
             }
-
         });
     }
 
@@ -164,7 +160,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @return Class extending BaseRecycleViewHolder
      */
     @NonNull
-    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull View view, boolean isHeader, @NonNull BaseRecycleViewHolder.cardClickListener mListener);
+    protected abstract BaseRecycleViewHolder getViewHolder(@NonNull final View view, final boolean isHeader, @NonNull final BaseRecycleViewHolder.cardClickListener mListener);
 
     /**
      * Call to update the adapters filtering text
@@ -200,7 +196,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      *
      * @param items List of items to set.
      */
-    public final void setItems(@NonNull ArrayList<BaseRecycleContainer> items) {
+    public final void setItems(@NonNull final ArrayList<BaseRecycleContainer> items) {
         ArrayList<LineItem> mItemsTemp = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             mItemsTemp.add(new LineItem(items.get(i)));
@@ -236,10 +232,9 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @param position Position
      */
     @Override
-    public final void onBindViewHolder(@NonNull BaseRecycleViewHolder holder, int position) {
+    public final void onBindViewHolder(@NonNull final BaseRecycleViewHolder holder, final int position) {
         final LineItem item = visibleItems.get(position);
         holder.bindItem(item.data, position == expandedPosition);
-
         if (item.data.isHeader) {
             StaggeredGridLayoutManager.LayoutParams params = (StaggeredGridLayoutManager.LayoutParams) holder.itemView.getLayoutParams();
             if (params != null) {
@@ -261,7 +256,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      * @return View type (header or item)
      */
     @Override
-    public final int getItemViewType(int position) {
+    public final int getItemViewType(final int position) {
         if (visibleItems.get(position).data.isHeader) {
             return VIEW_TYPE_HEADER;
         }
@@ -282,12 +277,12 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         /**
          * @param item Clicked item
          */
-        void itemClicked(@NonNull BaseRecycleContainer item);
+        void itemClicked(@NonNull final BaseRecycleContainer item);
 
         /**
          * @param position Clicked item position
          */
-        void itemClicked(int position);
+        void itemClicked(final int position);
 
         /**
          * Item was moved in list. Update the source data
@@ -298,7 +293,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
          * @param fromPosition From position
          * @param toPosition   To position
          */
-        void itemMoved(int fromPosition, int toPosition);
+        void itemMoved(final int fromPosition, final int toPosition);
     }
 
 }

@@ -16,6 +16,10 @@
 
 package com.jamesmorrisstudios.appbaselibrary.math;
 
+import android.support.annotation.NonNull;
+
+import com.jamesmorrisstudios.appbaselibrary.math.vectors.Vector2;
+
 import java.text.NumberFormat;
 import java.util.Locale;
 
@@ -34,7 +38,7 @@ public final class UtilsMath {
      * @param val Value to bound
      * @return The input value bound within min and max
      */
-    public static int inBoundsInt(int min, int max, int val) {
+    public static int inBoundsInt(final int min, final int max, final int val) {
         return Math.min(Math.max(min, val), max);
     }
 
@@ -46,7 +50,7 @@ public final class UtilsMath {
      * @param val Value to bound
      * @return The input value bound within min and max
      */
-    public static long inBoundsLong(long min, long max, long val) {
+    public static long inBoundsLong(final long min, final long max, final long val) {
         return Math.min(Math.max(min, val), max);
     }
 
@@ -58,7 +62,7 @@ public final class UtilsMath {
      * @param val Value to bound
      * @return The input value bound within min and max
      */
-    public static float inBounds(float min, float max, float val) {
+    public static float inBounds(final float min, final float max, final float val) {
         return Math.min(Math.max(min, val), max);
     }
 
@@ -71,7 +75,7 @@ public final class UtilsMath {
      * @param interpolator Interpolater value that should range between 0 and 1
      * @return The range shifted output value
      */
-    public static float interpolate(float start, float end, float interpolator) {
+    public static float interpolate(final float start, final float end, final float interpolator) {
         return (start * (1 - interpolator) + end * interpolator);
     }
 
@@ -81,7 +85,8 @@ public final class UtilsMath {
      * @param number Number to format
      * @return String formatted based on the users locale
      */
-    public static String formatDisplayNumber(long number) {
+    @NonNull
+    public static String formatDisplayNumber(final long number) {
         return NumberFormat.getNumberInstance(Locale.getDefault()).format(number);
     }
 
@@ -91,8 +96,49 @@ public final class UtilsMath {
      * @param number Number to format
      * @return String formatted based on the users locale
      */
-    public static String formatDisplayNumber(int number) {
+    @NonNull
+    public static String formatDisplayNumber(final int number) {
         return NumberFormat.getNumberInstance(Locale.getDefault()).format(number);
+    }
+
+    /**
+     * @param a First vector
+     * @param b Second vector
+     * @return The dot product of a dot b
+     */
+    public static float dotProduct(@NonNull final Vector2 a, @NonNull final Vector2 b) {
+        return a.x * b.x + a.y * b.y;
+    }
+
+    /**
+     * @param a The input vector
+     * @return The vector after being normalized (magnitude 1)
+     */
+    @NonNull
+    public static Vector2 normalize(@NonNull final Vector2 a) {
+        float mag = magnitude(a);
+        if (mag != 0) {
+            return new Vector2(a.x / mag, a.y / mag);
+        }
+        return a;
+    }
+
+    /**
+     * @param a The input vector
+     * @return The magnitude of the vector
+     */
+    public static float magnitude(@NonNull final Vector2 a) {
+        return (float) Math.sqrt(Math.pow(a.x, 2) + Math.pow(a.y, 2));
+    }
+
+    /**
+     * @param a Input vector a
+     * @param b Input vector b
+     * @return True if the vectors are basically equal
+     */
+    public static boolean closeTo(@NonNull final Vector2 a, @NonNull final Vector2 b) {
+        float margin = 4.0f;
+        return Math.abs(a.x - b.x) < margin && Math.abs(a.y - b.y) < margin;
     }
 
 }

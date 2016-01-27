@@ -31,7 +31,7 @@ public final class SingleChoiceRadioIconRequest extends AbstractDialogRequest {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public SingleChoiceRadioIconRequest(@NonNull String title, @DrawableRes @NonNull int[] itemsIds, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRadioIconRequest(@NonNull final String title, @DrawableRes @NonNull final int[] itemsIds, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.itemsIds = itemsIds;
         this.itemsUri = null;
@@ -45,7 +45,7 @@ public final class SingleChoiceRadioIconRequest extends AbstractDialogRequest {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public SingleChoiceRadioIconRequest(@NonNull String title, @DrawableRes @NonNull Uri[] itemsUri, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRadioIconRequest(@NonNull final String title, @DrawableRes @NonNull final Uri[] itemsUri, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.itemsIds = null;
         this.itemsUri = itemsUri;
@@ -56,14 +56,14 @@ public final class SingleChoiceRadioIconRequest extends AbstractDialogRequest {
     /**
      * @param textPositive positive action text
      */
-    public final void setPositiveText(@NonNull String textPositive) {
+    public final void setPositiveText(@NonNull final String textPositive) {
         this.textPositive = textPositive;
     }
 
     /**
      * @param textNegative negative action text
      */
-    public final void setNegativeText(@NonNull String textNegative) {
+    public final void setNegativeText(@NonNull final String textNegative) {
         this.textNegative = textNegative;
     }
 
@@ -73,7 +73,7 @@ public final class SingleChoiceRadioIconRequest extends AbstractDialogRequest {
      * @param textNeutral neutral button text
      * @param onNeutral   onNeutral
      */
-    public final void addNeutralAction(@NonNull String textNeutral, @NonNull DialogInterface.OnClickListener onNeutral) {
+    public final void addNeutralAction(@NonNull final String textNeutral, @NonNull final DialogInterface.OnClickListener onNeutral) {
         this.textNeutral = textNeutral;
         this.onNeutral = onNeutral;
     }
@@ -81,7 +81,7 @@ public final class SingleChoiceRadioIconRequest extends AbstractDialogRequest {
     /**
      * @param backgroundColor Set a background color for each icon
      */
-    public final void setBackgroundColor(int backgroundColor) {
+    public final void setBackgroundColor(final int backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
 }

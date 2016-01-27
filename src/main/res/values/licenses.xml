@@ -4,63 +4,80 @@
         <!-- This has to be overridden in the application for app specific credits -->
     </array>
 
+    <!-- This base library -->
     <string-array name="help_license_library_code_item_0" translatable="false">
         <item name="title">App Base: James Morris Studios</item>
         <item name="link_site">https://github.com/morris-james/appbaselibrary</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Color picker dialog base. Has been modified -->
     <string-array name="help_license_library_code_item_1" translatable="false">
         <item name="title">Library: QuadFlask</item>
         <item name="link_site">https://github.com/QuadFlask/colorpicker</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Event Bus -->
     <string-array name="help_license_library_code_item_2" translatable="false">
-        <item name="title">Library: navasmdc</item>
-        <item name="link_site">https://github.com/navasmdc/MaterialDesignLibrary</item>
+        <item name="title">Library: Square</item>
+        <item name="link_site">https://github.com/square/otto</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Serializer library -->
     <string-array name="help_license_library_code_item_3" translatable="false">
-        <item name="title">Library: Aidan Follestad</item>
-        <item name="link_site">https://github.com/afollestad/material-dialogs</item>
-        <item name="link_license">http://opensource.org/licenses/MIT</item>
+        <item name="title">Library: Google</item>
+        <item name="link_site">https://github.com/google/gson</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Date picker dialog -->
     <string-array name="help_license_library_code_item_4" translatable="false">
-        <item name="title">Library: Jake Wharton</item>
-        <item name="link_site">https://github.com/JakeWharton/butterknife</item>
+        <item name="title">Library: Square</item>
+        <item name="link_site">https://github.com/square/android-times-square</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Image loading library -->
     <string-array name="help_license_library_code_item_5" translatable="false">
-        <item name="title">Library: Kai Zhu</item>
-        <item name="link_site">https://github.com/rengwuxian/MaterialEditText</item>
+        <item name="title">Library: Square</item>
+        <item name="link_site">https://github.com/square/picasso</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Date time picker dialogs -->
     <string-array name="help_license_library_code_item_6" translatable="false">
         <item name="title">Library: wdullaer</item>
         <item name="link_site">https://github.com/wdullaer/MaterialDateTimePicker</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
+    <!-- Majority of used icons. -->
     <string-array name="help_license_library_code_item_7" translatable="false">
         <item name="title">Icons: Google</item>
         <item name="link_site">https://github.com/google/material-design-icons</item>
         <item name="link_license">http://creativecommons.org/licenses/by/4.0</item>
     </string-array>
 
+    <!-- File browser addon -->
     <string-array name="help_license_library_code_item_8" translatable="false">
         <item name="title">Library: Space Cowboy</item>
         <item name="link_site">https://github.com/spacecowboy/NoNonsense-FilePicker</item>
-        <item name="link_license">http://www.gnu.org/licenses/lgpl-3.0.en.html</item>
+        <item name="link_license">https://www.mozilla.org/en-US/MPL/2.0/</item>
     </string-array>
 
+    <!-- Used for the recyclerView drag and drop and swipe actions -->
     <string-array name="help_license_library_code_item_9" translatable="false">
         <item name="title">Library: Paul Burke</item>
         <item name="link_site">https://github.com/iPaulPro/Android-ItemTouchHelper-Demo</item>
+        <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
+    </string-array>
+
+    <!-- Image view zoom support -->
+    <string-array name="help_license_library_code_item_10" translatable="false">
+        <item name="title">Library: Chris Banes</item>
+        <item name="link_site">https://github.com/chrisbanes/PhotoView</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
@@ -75,6 +92,7 @@
         <item>@array/help_license_library_code_item_7</item>
         <item>@array/help_license_library_code_item_8</item>
         <item>@array/help_license_library_code_item_9</item>
+        <item>@array/help_license_library_code_item_10</item>
     </array>
 
 </resources>

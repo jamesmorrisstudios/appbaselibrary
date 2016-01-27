@@ -15,7 +15,7 @@
         <activity
             android:name="com.jamesmorrisstudios.appbaselibrary.activities.CustomFilePickerActivity"
             android:label="@string/app_name"
-            android:theme="@style/FilePickerTheme">
+            android:theme="@style/FilePickerThemeToolLight">
         </activity>
 
         <!--

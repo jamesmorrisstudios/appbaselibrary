@@ -31,7 +31,7 @@ import java.util.List;
  * <p/>
  * Created by James on 7/9/2015.
  */
-public final class EditTimesListDialog extends DialogFragment {
+public final class EditTimesListDialog extends BaseDialogFragment {
     private ListView list;
     private ArrayList<TimeItem> times = null;
     private String titleText;
@@ -40,27 +40,14 @@ public final class EditTimesListDialog extends DialogFragment {
     private View.OnClickListener onNegative;
 
     /**
-     * Empty constructor required for DialogFragment
-     */
-    public EditTimesListDialog() {
-    }
-
-    /**
-     * Dismiss on pause
-     */
-    public final void onPause() {
-        dismiss();
-        super.onPause();
-    }
-
-    /**
      * @param inflater           Inflater
      * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return Top view
      */
     @Override
-    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dialog_edit_times_list, container);
         list = (ListView) view.findViewById(R.id.list);
         Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
@@ -113,85 +100,11 @@ public final class EditTimesListDialog extends DialogFragment {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public final void setData(@NonNull String titleText, @NonNull ArrayList<TimeItem> times, @NonNull EditTimesListListener onPositive, @Nullable View.OnClickListener onNegative) {
+    public final void setData(@NonNull final String titleText, @NonNull final ArrayList<TimeItem> times, @NonNull final EditTimesListListener onPositive, @Nullable final View.OnClickListener onNegative) {
         this.titleText = titleText;
         this.times = new ArrayList<>(times);
         this.onPositive = onPositive;
         this.onNegative = onNegative;
-    }
-
-    /**
-     * List adapter
-     */
-    class ListAdapter extends ArrayAdapter<TimeItem> {
-        private int resourceId;
-
-        /**
-         * @param context  Context
-         * @param resource Row resource id
-         * @param items    List of items
-         */
-        public ListAdapter(@NonNull Context context, int resource, @NonNull List<TimeItem> items) {
-            super(context, resource, items);
-            this.resourceId = resource;
-        }
-
-        /**
-         * @return List of items
-         */
-        public ArrayList<TimeItem> getItems() {
-            ArrayList<TimeItem> list = new ArrayList<>();
-            for (int i = 0; i < getCount(); i++) {
-                list.add(getItem(i));
-            }
-            return list;
-        }
-
-        /**
-         * @param position    Position
-         * @param convertView Recycle view
-         * @param parent      parent view
-         * @return row view
-         */
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            final TimeItem item = getItem(position);
-            TextView time;
-            ImageView delete;
-            View view = convertView;
-            if (view == null) {
-                LayoutInflater vi;
-                vi = LayoutInflater.from(getContext());
-                view = vi.inflate(resourceId, null);
-            }
-            time = (TextView) view.findViewById(R.id.time);
-            delete = (ImageView) view.findViewById(com.jamesmorrisstudios.appbaselibrary.R.id.delete1);
-            if (item != null) {
-                view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Bus.postObject(new TimePickerRequest(item, new TimePickerDialog.OnTimeSetListener() {
-                            @Override
-                            public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
-                                item.hour = hourOfDay;
-                                item.minute = minute;
-                                notifyDataSetChanged();
-                            }
-                        }));
-                    }
-                });
-                delete.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        remove(item);
-                    }
-                });
-            }
-            if (item != null) {
-                time.setText(UtilsTime.getTimeFormatted(item));
-            }
-            return view;
-        }
     }
 
     /**
@@ -205,7 +118,7 @@ public final class EditTimesListDialog extends DialogFragment {
          * @param resource Row resource id
          * @param items    List of items
          */
-        public EditTimesListAdapter(@NonNull Context context, int resource, @NonNull List<TimeItem> items) {
+        public EditTimesListAdapter(@NonNull final Context context, final int resource, @NonNull final List<TimeItem> items) {
             super(context, resource, items);
             this.resourceId = resource;
         }
@@ -213,6 +126,7 @@ public final class EditTimesListDialog extends DialogFragment {
         /**
          * @return List of items
          */
+        @NonNull
         public ArrayList<TimeItem> getItems() {
             ArrayList<TimeItem> list = new ArrayList<>();
             for (int i = 0; i < getCount(); i++) {
@@ -228,7 +142,8 @@ public final class EditTimesListDialog extends DialogFragment {
          * @return row view
          */
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        @NonNull
+        public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
             final TimeItem item = getItem(position);
             TextView time;
             ImageView delete;
@@ -244,9 +159,9 @@ public final class EditTimesListDialog extends DialogFragment {
                 view.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Bus.postObject(new TimePickerRequest(item, new TimePickerDialog.OnTimeSetListener() {
+                        Bus.postObject(new TimePickerRequest(item, new TimePickerRequest.OnTimePickerListener() {
                             @Override
-                            public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute, int second) {
+                            public void onTimeSet(final int hourOfDay, final int minute) {
                                 item.hour = hourOfDay;
                                 item.minute = minute;
                                 notifyDataSetChanged();
@@ -266,7 +181,9 @@ public final class EditTimesListDialog extends DialogFragment {
             }
             return view;
         }
-    }    /**
+    }
+
+    /**
      * Edit times listener
      */
     public interface EditTimesListListener {
@@ -274,7 +191,7 @@ public final class EditTimesListDialog extends DialogFragment {
         /**
          * @param times List of times
          */
-        void onPositive(@NonNull ArrayList<TimeItem> times);
+        void onPositive(@NonNull final ArrayList<TimeItem> times);
     }
 
 }

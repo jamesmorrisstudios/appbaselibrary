@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- File Picker -->
+    <style name="FilePickerThemeToolLight" parent="NNF_BaseTheme.Light">
+        <!-- Toolbar -->
+        <item name="nnf_toolbarTheme">@style/baseToolbarLight</item>
+    </style>
+
+    <style name="FilePickerThemeToolDark" parent="NNF_BaseTheme.Light">
+        <!-- Toolbar -->
+        <item name="nnf_toolbarTheme">@style/baseToolbarLightDarkText</item>
+    </style>
+
+    <!-- Dark File Picker -->
+    <style name="FilePickerThemeDarkToolLight" parent="NNF_BaseTheme">
+        <!-- Toolbar -->
+        <item name="nnf_toolbarTheme">@style/baseToolbarDark</item>
+    </style>
+
+    <style name="FilePickerThemeDarkToolDark" parent="NNF_BaseTheme">
+        <!-- Toolbar -->
+        <item name="nnf_toolbarTheme">@style/baseToolbarDarkDarkText</item>
+    </style>
+
+    <style name="NNF_BaseTheme" parent="Theme.AppCompat.Dialog">
+        <!-- You can override this in your sub theme -->
+
+        <item name="nnf_separator_color">@color/nnf_dark_separator_color</item>
+
+        <!-- These are important. Handled by toolbar. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NNF_BaseTheme.Light" parent="Theme.AppCompat.Light.Dialog">
+        <!-- You can override this in your sub theme -->
+
+        <item name="nnf_separator_color">@color/nnf_light_separator_color</item>
+
+        <!-- These are important. Handled by toolbar. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+</resources>

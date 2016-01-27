@@ -27,7 +27,7 @@ public final class SingleChoiceRequest extends AbstractDialogRequest {
      * @param clickListener selection listener
      * @param onNegative    onNegative
      */
-    public SingleChoiceRequest(@NonNull String title, @NonNull String[] items, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRequest(@NonNull final String title, @NonNull final String[] items, final boolean allowCancel, @NonNull final DialogInterface.OnClickListener clickListener, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.items = items;
         this.iconItems = null;
@@ -43,7 +43,7 @@ public final class SingleChoiceRequest extends AbstractDialogRequest {
      * @param clickListener selection listener
      * @param onNegative    onNegative
      */
-    public SingleChoiceRequest(@NonNull String title, @NonNull IconItem[] iconItems, boolean allowCancel, @NonNull DialogInterface.OnClickListener clickListener, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRequest(@NonNull final String title, @NonNull final IconItem[] iconItems, final boolean allowCancel, @NonNull final DialogInterface.OnClickListener clickListener, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.items = null;
         this.iconItems = iconItems;

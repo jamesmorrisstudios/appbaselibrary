@@ -22,7 +22,7 @@ public final class RingtoneItem {
      * @param type Ringtone Type
      * @param name Ringtone Name
      */
-    public RingtoneItem(@NonNull UtilsRingtone.RingtoneType type, @NonNull String name) {
+    public RingtoneItem(@NonNull final UtilsRingtone.RingtoneType type, @NonNull final String name) {
         this.type = type;
         this.name = name;
         this.uri = null;
@@ -35,7 +35,7 @@ public final class RingtoneItem {
      * @param name Ringtone Name
      * @param uri  Uri path of tone
      */
-    public RingtoneItem(@NonNull UtilsRingtone.RingtoneType type, @NonNull String name, @NonNull Uri uri) {
+    public RingtoneItem(@NonNull final UtilsRingtone.RingtoneType type, @NonNull final String name, @NonNull final Uri uri) {
         this.type = type;
         this.name = name;
         this.uri = uri;
@@ -49,7 +49,7 @@ public final class RingtoneItem {
      * @param uri       Uri path of tone
      * @param isDefault True if default tone
      */
-    public RingtoneItem(@NonNull UtilsRingtone.RingtoneType type, @NonNull String name, @NonNull Uri uri, boolean isDefault) {
+    public RingtoneItem(@NonNull final UtilsRingtone.RingtoneType type, @NonNull final String name, @NonNull final Uri uri, final boolean isDefault) {
         this.type = type;
         this.name = name;
         this.uri = uri;

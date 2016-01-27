@@ -33,7 +33,7 @@ public final class DatePickerMultiDialogBuilder {
      * @param context Context
      * @param style   Style
      */
-    private DatePickerMultiDialogBuilder(@NonNull Context context, int style) {
+    private DatePickerMultiDialogBuilder(@NonNull final Context context, final int style) {
         builder = new AlertDialog.Builder(context, style);
         LayoutInflater vi = LayoutInflater.from(context);
         if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
@@ -51,7 +51,8 @@ public final class DatePickerMultiDialogBuilder {
      * @param style   Style
      * @return The dialog builder
      */
-    public static DatePickerMultiDialogBuilder with(@NonNull Context context, int style) {
+    @NonNull
+    public static DatePickerMultiDialogBuilder with(@NonNull final Context context, final int style) {
         return new DatePickerMultiDialogBuilder(context, style);
     }
 
@@ -60,7 +61,8 @@ public final class DatePickerMultiDialogBuilder {
      * @param endDate   Latest allowed date
      * @return The dialog builder
      */
-    public final DatePickerMultiDialogBuilder setDateRange(@NonNull DateItem startDate, @NonNull DateItem endDate) {
+    @NonNull
+    public final DatePickerMultiDialogBuilder setDateRange(@NonNull final DateItem startDate, @NonNull final DateItem endDate) {
         this.startDate = startDate;
         this.endDate = endDate;
         return this;
@@ -74,7 +76,8 @@ public final class DatePickerMultiDialogBuilder {
      * @param singleListener Date picked listener
      * @return The dialog builder
      */
-    public final DatePickerMultiDialogBuilder setSelectedDate(@NonNull DateItem selectedDate, @NonNull SingleDatePickerListener singleListener) {
+    @NonNull
+    public final DatePickerMultiDialogBuilder setSelectedDate(@NonNull final DateItem selectedDate, @NonNull final SingleDatePickerListener singleListener) {
         this.selectedDate = selectedDate;
         this.singleListener = singleListener;
         return this;
@@ -88,7 +91,8 @@ public final class DatePickerMultiDialogBuilder {
      * @param multiListener Date list picked listener
      * @return The dialog builder
      */
-    public final DatePickerMultiDialogBuilder setSelectedDates(@NonNull ArrayList<DateItem> selectedDates, @NonNull MultiDatePickerListener multiListener) {
+    @NonNull
+    public final DatePickerMultiDialogBuilder setSelectedDates(@NonNull final ArrayList<DateItem> selectedDates, @NonNull final MultiDatePickerListener multiListener) {
         this.selectedDates = selectedDates;
         this.multiListener = multiListener;
         return this;
@@ -99,6 +103,7 @@ public final class DatePickerMultiDialogBuilder {
      *
      * @return The alert dialog. Call execute to display it
      */
+    @NonNull
     public final AlertDialog build() {
         if (selectedDate != null) {
             mainView.init(UtilsTime.dateItemToDate(startDate), UtilsTime.dateItemToDate(endDate))
@@ -142,7 +147,7 @@ public final class DatePickerMultiDialogBuilder {
         /**
          * @param selectedDate The users selected date
          */
-        void onSelection(@NonNull DateItem selectedDate);
+        void onSelection(@NonNull final DateItem selectedDate);
 
         /**
          * Canceled the dialog
@@ -158,7 +163,7 @@ public final class DatePickerMultiDialogBuilder {
         /**
          * @param selectedDates List of the users selected dates. Empty list for none.
          */
-        void onSelection(@NonNull ArrayList<DateItem> selectedDates);
+        void onSelection(@NonNull final ArrayList<DateItem> selectedDates);
 
         /**
          * Canceled the dialog

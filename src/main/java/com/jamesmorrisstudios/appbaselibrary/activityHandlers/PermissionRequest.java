@@ -22,7 +22,7 @@ public final class PermissionRequest extends AbstractActivityRequest {
      * @param permission Single permission to request
      * @param listener   Callback listener
      */
-    public PermissionRequest(@NonNull AppPermission permission, @NonNull OnPermissionRequestListener listener) {
+    public PermissionRequest(@NonNull final AppPermission permission, @NonNull final OnPermissionRequestListener listener) {
         this.permissions = new AppPermission[]{permission};
         this.listener = listener;
         this.requestCode = Utils.generateUniqueInt();
@@ -34,7 +34,7 @@ public final class PermissionRequest extends AbstractActivityRequest {
      * @param permissions Array of permissions to request. Will fail if any are denied.
      * @param listener    Callback listener
      */
-    public PermissionRequest(@NonNull AppPermission[] permissions, @NonNull OnPermissionRequestListener listener) {
+    public PermissionRequest(@NonNull final AppPermission[] permissions, @NonNull final OnPermissionRequestListener listener) {
         this.permissions = permissions;
         this.listener = listener;
         this.requestCode = Utils.generateUniqueInt();
@@ -298,6 +298,11 @@ public final class PermissionRequest extends AbstractActivityRequest {
          * Permission was denied for one or more requested permissions
          */
         void permissionDenied();
+
+        /**
+         *
+         */
+        void shouldShowRationale();
     }
 
 }

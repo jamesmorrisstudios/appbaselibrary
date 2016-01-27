@@ -25,7 +25,7 @@ public final class WriteImageAsync extends AsyncTask<Void, Void, Uri> {
      * @param location Storage location
      * @param listener Callback listener
      */
-    public WriteImageAsync(@NonNull String path, @NonNull Bitmap data, @NonNull FileWriter.FileLocation location, @NonNull ImageWriteListener listener) {
+    public WriteImageAsync(@NonNull final String path, @NonNull final Bitmap data, @NonNull final FileWriter.FileLocation location, @NonNull final ImageWriteListener listener) {
         this.path = path;
         this.data = data;
         this.location = location;
@@ -40,7 +40,7 @@ public final class WriteImageAsync extends AsyncTask<Void, Void, Uri> {
      */
     @Nullable
     @Override
-    protected final Uri doInBackground(Void... params) {
+    protected final Uri doInBackground(final Void... params) {
         return FileWriter.writeImage(path, data, location);
     }
 
@@ -50,7 +50,7 @@ public final class WriteImageAsync extends AsyncTask<Void, Void, Uri> {
      * @param result Uri of written file
      */
     @Override
-    protected final void onPostExecute(@Nullable Uri result) {
+    protected final void onPostExecute(@Nullable final Uri result) {
         listener.writeComplete(result);
     }
 
@@ -62,6 +62,6 @@ public final class WriteImageAsync extends AsyncTask<Void, Void, Uri> {
         /**
          * @param filePath Uri of written image file
          */
-        void writeComplete(@Nullable Uri filePath);
+        void writeComplete(@Nullable final Uri filePath);
     }
 }

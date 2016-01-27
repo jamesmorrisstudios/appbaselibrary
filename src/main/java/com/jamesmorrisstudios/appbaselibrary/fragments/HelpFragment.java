@@ -26,12 +26,6 @@ public final class HelpFragment extends BaseFragment {
     public static final String TAG = "HelpFragment";
 
     /**
-     * Required empty constructor
-     */
-    public HelpFragment() {
-    }
-
-    /**
      * Create the view
      *
      * @param inflater           Inflater object
@@ -41,7 +35,7 @@ public final class HelpFragment extends BaseFragment {
      */
     @NonNull
     @Override
-    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_help, container, false);
         Button readHow = (Button) view.findViewById(R.id.howToUseRead);
         Button watchHow = (Button) view.findViewById(R.id.howToUseWatch);
@@ -80,7 +74,7 @@ public final class HelpFragment extends BaseFragment {
         } else {
             versionType.setText(R.string.free);
         }
-        version.setText(UtilsVersion.getVersionName() + " " + UtilsVersion.getVersionType());
+        version.setText(UtilsVersion.getVersionName() +" ("+UtilsVersion.getVersionCode()+") " + UtilsVersion.getVersionType());
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,7 +131,7 @@ public final class HelpFragment extends BaseFragment {
      * @return Toolbar title text.
      */
     @NonNull
-    protected String getToolbarTitle() {
+    protected final String getToolbarTitle() {
         return getString(R.string.help_and_feedback);
     }
 
@@ -147,6 +141,23 @@ public final class HelpFragment extends BaseFragment {
     @Override
     protected final void afterViewCreated() {
         hideFab();
+    }
+
+    /**
+     * Unused
+     * @return 0
+     */
+    @Override
+    protected int getOptionsMenuRes() {
+        return 0;
+    }
+
+    /**
+     * @return False
+     */
+    @Override
+    protected boolean usesOptionsMenu() {
+        return false;
     }
 
     /**
@@ -161,7 +172,7 @@ public final class HelpFragment extends BaseFragment {
      * Register bus listener if used
      */
     @Override
-    protected void registerBus() {
+    protected final void registerBus() {
 
     }
 
@@ -169,7 +180,7 @@ public final class HelpFragment extends BaseFragment {
      * Unregister bus listener if used
      */
     @Override
-    protected void unregisterBus() {
+    protected final void unregisterBus() {
 
     }
 
@@ -179,7 +190,7 @@ public final class HelpFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected final void saveState(@NonNull Bundle bundle) {
+    protected final void saveState(@NonNull final Bundle bundle) {
 
     }
 
@@ -189,7 +200,7 @@ public final class HelpFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected final void restoreState(@NonNull Bundle bundle) {
+    protected final void restoreState(@NonNull final Bundle bundle) {
 
     }
 

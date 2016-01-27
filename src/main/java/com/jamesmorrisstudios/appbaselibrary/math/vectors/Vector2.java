@@ -19,6 +19,8 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -26,8 +28,11 @@ import java.io.Serializable;
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class Vector2 implements Serializable {
-    public float x, y;
+public final class Vector2 implements Serializable {
+    @SerializedName("x")
+    public float x;
+    @SerializedName("y")
+    public float y;
 
     /**
      * Creates a new float vector
@@ -35,7 +40,7 @@ public class Vector2 implements Serializable {
      * @param x X value
      * @param y Y value
      */
-    public Vector2(float x, float y) {
+    public Vector2(final float x, final float y) {
         this.x = x;
         this.y = y;
     }
@@ -57,65 +62,16 @@ public class Vector2 implements Serializable {
     }
 
     /**
-     * @param a First vector
-     * @param b Second vector
-     * @return The dot product of a dot b
-     */
-    public static float dotProduct(@NonNull Vector2 a, @NonNull Vector2 b) {
-        return a.x * b.x + a.y * b.y;
-    }
-
-    /**
-     * @param a The input vector
-     * @return The vector after being normalized (magnitude 1)
-     */
-    @NonNull
-    public static Vector2 normalize(@NonNull Vector2 a) {
-        float mag = magnitude(a);
-        if (mag != 0) {
-            return new Vector2(a.x / mag, a.y / mag);
-        }
-        return a;
-    }
-
-    /**
-     * @param a The input vector
-     * @return The magnitude of the vector
-     */
-    public static float magnitude(@NonNull Vector2 a) {
-        return (float) Math.sqrt(Math.pow(a.x, 2) + Math.pow(a.y, 2));
-    }
-
-    /**
-     * @param a Input vector a
-     * @param b Input vector b
-     * @return True if the vectors are basically equal
-     */
-    public static boolean closeTo(@NonNull Vector2 a, @NonNull Vector2 b) {
-        float margin = 4.0f;
-        return Math.abs(a.x - b.x) < margin && Math.abs(a.y - b.y) < margin;
-    }
-
-    /**
      * @param o A second object to compare to
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof Vector2) {
             Vector2 v = (Vector2) o;
             return x == v.x && y == v.y;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     */
-    public void set(float x, float y) {
-        this.x = x;
-        this.y = y;
     }
 
 }

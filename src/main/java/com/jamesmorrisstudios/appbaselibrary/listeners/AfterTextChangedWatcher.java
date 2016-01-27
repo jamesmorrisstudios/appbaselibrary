@@ -17,7 +17,7 @@ public abstract class AfterTextChangedWatcher implements TextWatcher {
      * @param after After char
      */
     @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    public void beforeTextChanged(final CharSequence s, final int start, final int count, final int after) {
 
     }
 
@@ -29,7 +29,7 @@ public abstract class AfterTextChangedWatcher implements TextWatcher {
      * @param count number of chars
      */
     @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
+    public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
 
     }
 

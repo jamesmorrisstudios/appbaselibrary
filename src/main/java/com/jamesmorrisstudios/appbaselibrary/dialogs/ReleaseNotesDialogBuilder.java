@@ -29,7 +29,7 @@ public final class ReleaseNotesDialogBuilder {
      * @param context Context
      * @param style   Style
      */
-    private ReleaseNotesDialogBuilder(@NonNull Context context, int style) {
+    private ReleaseNotesDialogBuilder(@NonNull final Context context, final int style) {
         builder = new AlertDialog.Builder(context, style);
         mainView = new ScrollView(context);
         builder.setView(mainView);
@@ -42,7 +42,8 @@ public final class ReleaseNotesDialogBuilder {
      * @param style   Style
      * @return Dialog Builder
      */
-    public static ReleaseNotesDialogBuilder with(@NonNull Context context, int style) {
+    @NonNull
+    public static ReleaseNotesDialogBuilder with(@NonNull final Context context, final int style) {
         return new ReleaseNotesDialogBuilder(context, style);
     }
 
@@ -50,7 +51,8 @@ public final class ReleaseNotesDialogBuilder {
      * @param title String title
      * @return Dialog Builder
      */
-    public final ReleaseNotesDialogBuilder setTitle(@NonNull String title) {
+    @NonNull
+    public final ReleaseNotesDialogBuilder setTitle(@NonNull final String title) {
         builder.setTitle(title);
         return this;
     }
@@ -59,7 +61,8 @@ public final class ReleaseNotesDialogBuilder {
      * @param content String content
      * @return Dialog Builder
      */
-    public final ReleaseNotesDialogBuilder setContent(@NonNull String content) {
+    @NonNull
+    public final ReleaseNotesDialogBuilder setContent(@NonNull final String content) {
         this.content = content;
         return this;
     }
@@ -69,6 +72,7 @@ public final class ReleaseNotesDialogBuilder {
      *
      * @return Alert dialog. Must call execute
      */
+    @NonNull
     public final AlertDialog build() {
         builder.setPositiveButton(R.string.close, new DialogInterface.OnClickListener() {
             @Override
@@ -86,7 +90,7 @@ public final class ReleaseNotesDialogBuilder {
      *
      * @param context Context
      */
-    private void buildReleaseNotesPage(@NonNull Context context) {
+    private void buildReleaseNotesPage(@NonNull final Context context) {
         LayoutInflater vi = LayoutInflater.from(context);
         View view = vi.inflate(R.layout.dialog_release_notes, null);
         TextView notes = (TextView) view.findViewById(R.id.notes);
@@ -94,7 +98,6 @@ public final class ReleaseNotesDialogBuilder {
         Button btnRate = (Button) view.findViewById(R.id.btn_rate);
         Button btnSupport = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button btnTranslate = (Button) view.findViewById(R.id.btn_translate);
-
         btnRate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -24,7 +24,7 @@ public final class MultiDatePickerRequest extends AbstractDialogRequest {
      * @param selectedDates Currently selected dates
      * @param multiListener Listener
      */
-    public MultiDatePickerRequest(@NonNull DateItem startDate, @NonNull DateItem endDate, @NonNull ArrayList<DateItem> selectedDates, @NonNull DatePickerMultiDialogBuilder.MultiDatePickerListener multiListener) {
+    public MultiDatePickerRequest(@NonNull final DateItem startDate, @NonNull final DateItem endDate, @NonNull final ArrayList<DateItem> selectedDates, @NonNull final DatePickerMultiDialogBuilder.MultiDatePickerListener multiListener) {
         this.startDate = startDate;
         this.endDate = endDate;
         this.selectedDates = selectedDates;

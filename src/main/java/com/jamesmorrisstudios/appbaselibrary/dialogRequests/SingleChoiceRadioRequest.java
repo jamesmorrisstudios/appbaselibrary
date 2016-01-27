@@ -26,7 +26,7 @@ public final class SingleChoiceRadioRequest extends AbstractDialogRequest {
      * @param onPositive    onPositive
      * @param onNegative    onNegative
      */
-    public SingleChoiceRadioRequest(@NonNull String title, @NonNull String[] items, int defaultValue, @NonNull DialogInterface.OnClickListener clickListener, @NonNull DialogInterface.OnClickListener onPositive, @Nullable DialogInterface.OnClickListener onNegative) {
+    public SingleChoiceRadioRequest(@NonNull final String title, @NonNull final String[] items, final int defaultValue, @NonNull final DialogInterface.OnClickListener clickListener, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.items = items;
         this.defaultValue = defaultValue;

@@ -8,10 +8,12 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Environment;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.TextView;
@@ -30,8 +32,10 @@ import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDial
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.DualSpinnerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTextListRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTextRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTimesListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.FileBrowserRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ImageRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.MultiChoiceRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.MultiDatePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.PromptDialogRequest;
@@ -46,8 +50,10 @@ import com.jamesmorrisstudios.appbaselibrary.dialogRequests.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.VibratePatternRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DatePickerMultiDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DualSpinnerDialogBuilder;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTimesListDialog;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.ImageDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.ReleaseNotesDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceIconDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.SingleChoiceRadioIconDialogBuilder;
@@ -57,6 +63,7 @@ import com.jamesmorrisstudios.appbaselibrary.items.RingtoneItem;
 import com.jamesmorrisstudios.appbaselibrary.sound.SoundInstant;
 import com.nononsenseapps.filepicker.FilePickerActivity;
 import com.squareup.otto.Subscribe;
+import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
 import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
@@ -87,9 +94,17 @@ public final class DialogBuildManager extends BaseBuildManager {
         }
         i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
         if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
-            i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerTheme);
+            if(UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
+                i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeToolLight);
+            } else {
+                i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeToolDark);
+            }
         } else {
-            i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDark);
+            if(UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
+                i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDarkToolLight);
+            } else {
+                i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDarkToolDark);
+            }
         }
         i.putExtra(CustomFilePickerActivity.EXTRA_THEME_PRIMARY, UtilsTheme.getPrimaryColorStyle());
         i.putExtra(CustomFilePickerActivity.EXTRA_THEME_ACCENT, UtilsTheme.getAccentColorStyle());
@@ -131,13 +146,16 @@ public final class DialogBuildManager extends BaseBuildManager {
                     intent.putExtra(RingtoneManager.EXTRA_RINGTONE_EXISTING_URI, defaultUri);
                     new StartActivityForResultRequest(intent, new StartActivityForResultRequest.OnStartActivityForResultListener() {
                         @Override
-                        public void resultOk(Intent intent) {
+                        public void resultOk(@Nullable final Intent intent) {
                             String name = null;
-                            Uri uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
-                            if (uri != null) {
-                                Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), uri);
-                                if (ringtone != null) {
-                                    name = ringtone.getTitle(getActivity());
+                            Uri uri = null;
+                            if(intent != null) {
+                                uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
+                                if (uri != null) {
+                                    Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), uri);
+                                    if (ringtone != null) {
+                                        name = ringtone.getTitle(getActivity());
+                                    }
                                 }
                             }
                             request.listener.ringtoneResponse(uri, name);
@@ -176,7 +194,6 @@ public final class DialogBuildManager extends BaseBuildManager {
                             //Selection changed
                             UtilsRingtone.ringtoneCancel();
                             if (ringtones.get(which).uri != null) {
-                                //UtilsRingtone.ringtonePlay(ringtones.get(which).uri);
                                 SoundInstant.getInstance().loadAndPlayNotification(ringtones.get(which).uri);
                             }
                             for (int i = 0; i < ringtones.size(); i++) {
@@ -188,7 +205,6 @@ public final class DialogBuildManager extends BaseBuildManager {
                         public void onClick(DialogInterface dialog, int which) {
                             //Confirmed
                             SoundInstant.getInstance().stopPlayback();
-                            //UtilsRingtone.ringtoneCancel();
                             for (int i = 0; i < ringtones.size(); i++) {
                                 if (ringtones.get(i).selected) {
                                     request.listener.ringtoneResponse(ringtones.get(i).uri, ringtones.get(i).name);
@@ -200,7 +216,6 @@ public final class DialogBuildManager extends BaseBuildManager {
                         public void onClick(DialogInterface dialog, int which) {
                             //Canceled
                             SoundInstant.getInstance().stopPlayback();
-                            //UtilsRingtone.ringtoneCancel();
                         }
                     }).show();
                 }
@@ -208,6 +223,11 @@ public final class DialogBuildManager extends BaseBuildManager {
 
             @Override
             public void permissionDenied() {
+
+            }
+
+            @Override
+            public void shouldShowRationale() {
 
             }
         }).execute();
@@ -220,7 +240,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onColorPickerRequest(@NonNull ColorPickerRequest request) {
+    public final void onColorPickerRequest(@NonNull final ColorPickerRequest request) {
         ColorPickerDialogBuilder builder = ColorPickerDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(getActivity().getResources().getString(R.string.choose_color))
                 .initialColor(request.initialColor)
@@ -248,7 +268,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onPromptDialogRequest(@NonNull PromptDialogRequest request) {
+    public final void onPromptDialogRequest(@NonNull final PromptDialogRequest request) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setMessage(request.content);
@@ -272,9 +292,14 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onTimePickerDialogRequest(@NonNull TimePickerRequest request) {
+    public final void onTimePickerDialogRequest(@NonNull final TimePickerRequest request) {
         TimePickerDialog time = new TimePickerDialog();
-        time.initialize(request.onTimeSetListener, request.timeItem.hour, request.timeItem.minute, 0, request.timeItem.is24Hour());
+        time.initialize(new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(@NonNull final RadialPickerLayout view, final int hourOfDay, final int minute, final int second) {
+                request.listener.onTimeSet(hourOfDay, minute);
+            }
+        }, request.timeItem.hour, request.timeItem.minute, 0, request.timeItem.is24Hour());
         if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.DARK) {
             time.setThemeDark(true);
         }
@@ -292,7 +317,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onSingleDatePickerDialogRequest(@NonNull SingleDatePickerRequest request) {
+    public final void onSingleDatePickerDialogRequest(@NonNull final SingleDatePickerRequest request) {
         DatePickerMultiDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setDateRange(request.startDate, request.endDate)
                 .setSelectedDate(request.selectedDate, request.singleListener)
@@ -307,7 +332,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onMultiDatePickerDialogRequest(@NonNull MultiDatePickerRequest request) {
+    public final void onMultiDatePickerDialogRequest(@NonNull final MultiDatePickerRequest request) {
         DatePickerMultiDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setDateRange(request.startDate, request.endDate)
                 .setSelectedDates(request.selectedDates, request.multiListener)
@@ -322,7 +347,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onDualSpinnerDialogRequest(@NonNull DualSpinnerRequest request) {
+    public final void onDualSpinnerDialogRequest(@NonNull final DualSpinnerRequest request) {
         DualSpinnerDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setFirst(request.first, request.firstSelected, request.firstRestrictingSecond)
@@ -339,7 +364,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onEditTextListRequest(@NonNull EditTextListRequest request) {
+    public final void onEditTextListRequest(@NonNull final EditTextListRequest request) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         EditTextListDialog editTextListDialog = new EditTextListDialog();
         editTextListDialog.setData(request.title, request.messages, request.onPositive, request.onNegative);
@@ -353,7 +378,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onEditTimesListRequest(@NonNull EditTimesListRequest request) {
+    public final void onEditTimesListRequest(@NonNull final EditTimesListRequest request) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         EditTimesListDialog editTimesListDialog = new EditTimesListDialog();
         editTimesListDialog.setData(request.title, request.times, request.onPositive, request.onNegative);
@@ -408,7 +433,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onSingleChoiceRadioRequest(@NonNull SingleChoiceRadioRequest request) {
+    public final void onSingleChoiceRadioRequest(@NonNull final SingleChoiceRadioRequest request) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setPositiveButton(R.string.okay, request.onPositive)
@@ -426,7 +451,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onMultiChoiceRadioRequest(@NonNull MultiChoiceRequest request) {
+    public final void onMultiChoiceRadioRequest(@NonNull final MultiChoiceRequest request) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setPositiveButton(R.string.okay, request.onPositive)
@@ -444,7 +469,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onSingleChoiceIconRequest(@NonNull SingleChoiceIconRequest request) {
+    public final void onSingleChoiceIconRequest(@NonNull final SingleChoiceIconRequest request) {
         SingleChoiceIconDialogBuilder builder = SingleChoiceIconDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setBackgroundColor(request.backgroundColor)
@@ -469,7 +494,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onSingleChoiceRadioIconRequest(@NonNull SingleChoiceRadioIconRequest request) {
+    public final void onSingleChoiceRadioIconRequest(@NonNull final SingleChoiceRadioIconRequest request) {
         SingleChoiceRadioIconDialogBuilder builder = SingleChoiceRadioIconDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setBackgroundColor(request.backgroundColor)
                 .setTitle(request.title);
@@ -489,7 +514,7 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog request
      */
     @Subscribe
-    public final void onReleastNotesDialogRequest(@NonNull ReleaseNotesDialogRequest request) {
+    public final void onReleastNotesDialogRequest(@NonNull final ReleaseNotesDialogRequest request) {
         String content = "";
         TypedArray array = getActivity().getResources().obtainTypedArray(R.array.current_release_notes);
         CharSequence[] data = array.getTextArray(array.getIndex(0));
@@ -511,11 +536,42 @@ public final class DialogBuildManager extends BaseBuildManager {
      * @param request Dialog Request
      */
     @Subscribe
-    public final void onVibratePatternRequest(@NonNull VibratePatternRequest request) {
+    public final void onVibratePatternRequest(@NonNull final VibratePatternRequest request) {
         FragmentManager fm = getActivity().getSupportFragmentManager();
         VibratePatternDialog dialog = new VibratePatternDialog();
         dialog.setData(request.title, request.pattern, request.listener);
         dialog.show(fm, "VibratePatternDialog");
+    }
+
+    /**
+     * Not Called Directly
+     * Creates an edit text prompt dialog
+     *
+     * @param request Dialog Request
+     */
+    @Subscribe
+    public final void onEditTextRequest(@NonNull final EditTextRequest request) {
+        EditTextDialogBuilder builder = EditTextDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
+                .setTitle(request.title)
+                .setText(request.text, request.hint)
+                .setListener(request.listener, AppBase.getContext().getString(R.string.okay), AppBase.getContext().getString(R.string.cancel));
+        if(request.message != null) {
+            builder.setMessage(request.message);
+        }
+        builder.build().show();
+    }
+
+    @Subscribe
+    public final void onImageRequest(@NonNull final ImageRequest request) {
+        ImageDialogBuilder builder = ImageDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
+            .setImage(request.imagePath);
+        AlertDialog dialog = builder.build();
+        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+        lp.copyFrom(dialog.getWindow().getAttributes());
+        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+        lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+        dialog.show();
+        dialog.getWindow().setAttributes(lp);
     }
 
 }

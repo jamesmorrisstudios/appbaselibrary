@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -35,7 +36,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param resultCode  Result Code
      * @param intent      Result Intent. May be null
      */
-    public final void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent intent) {
+    public final boolean onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent intent) {
         for (int i = 0; i < startActivityForResultRequests.size(); i++) {
             if (startActivityForResultRequests.get(i).requestCode == requestCode) {
                 AutoLockOrientation.disableAutoLock(getActivity());
@@ -45,9 +46,10 @@ public final class ActivityResultManager extends BaseBuildManager {
                     startActivityForResultRequests.get(i).listener.resultFailed();
                 }
                 startActivityForResultRequests.remove(i);
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     /**
@@ -57,19 +59,26 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param permissions  Permissions list
      * @param grantResults Grant status list
      */
-    public final void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
+    public final boolean onRequestPermissionsResult(final int requestCode, @NonNull final String permissions[], @NonNull final int[] grantResults) {
         for (int i = 0; i < permissionRequests.size(); i++) {
             if (permissionRequests.get(i).requestCode == requestCode) {
                 AutoLockOrientation.disableAutoLock(getActivity());
-                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    permissionRequests.get(i).listener.permissionGranted();
-                } else {
+                if(grantResults.length == 0) {
                     permissionRequests.get(i).listener.permissionDenied();
+                } else {
+                    for (int grantResult : grantResults) {
+                        if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                            permissionRequests.get(i).listener.permissionDenied();
+                            return true;
+                        }
+                    }
+                    permissionRequests.get(i).listener.permissionGranted();
                 }
                 permissionRequests.remove(i);
-                break;
+                return true;
             }
         }
+        return false;
     }
 
     /**
@@ -78,11 +87,19 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param request Permission Request
      */
     @Subscribe
-    public final void onPermissionRequest(@NonNull PermissionRequest request) {
+    public final void onPermissionRequest(@NonNull final PermissionRequest request) {
         if (Build.VERSION.SDK_INT >= 23) {
             String[] permList = request.getRequestedPermissions();
+            if(permList.length == 0) {
+                request.listener.permissionGranted();
+                return;
+            }
             for (String perm : permList) {
                 if (getActivity().checkSelfPermission(perm) != PackageManager.PERMISSION_GRANTED) {
+                    if(getActivity().shouldShowRequestPermissionRationale(perm)) {
+                        request.listener.shouldShowRationale();
+                        return;
+                    }
                     permissionRequests.add(request);
                     AutoLockOrientation.enableAutoLock(getActivity());
                     getActivity().requestPermissions(permList, request.requestCode);
@@ -99,7 +116,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param request Start Activity for Result Request
      */
     @Subscribe
-    public final void onStartActivityForResultRequest(@NonNull StartActivityForResultRequest request) {
+    public final void onStartActivityForResultRequest(@NonNull final StartActivityForResultRequest request) {
         startActivityForResultRequests.add(request);
         AutoLockOrientation.enableAutoLock(getActivity());
         getActivity().startActivityForResult(request.intent, request.requestCode);
@@ -111,7 +128,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param request Start Activity request
      */
     @Subscribe
-    public final void onStartActivityRequest(@NonNull StartActivityRequest request) {
+    public final void onStartActivityRequest(@NonNull final StartActivityRequest request) {
         getActivity().startActivity(request.intent);
     }
 
@@ -121,7 +138,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param event App Base Event
      */
     @Subscribe
-    public final void onAppBaseEvent(@NonNull BaseActivity.AppBaseEvent event) {
+    public final void onAppBaseEvent(@NonNull final BaseActivity.AppBaseEvent event) {
         getActivity().onAppBaseEvent(event);
     }
 
@@ -131,7 +148,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param event App Base Event
      */
     @Subscribe
-    public final void onFabEvent(@NonNull BaseActivity.FabEvent event) {
+    public final void onFabEvent(@NonNull final BaseActivity.FabEvent event) {
         getActivity().onFabEvent(event);
     }
 
@@ -141,7 +158,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param request Request object
      */
     @Subscribe
-    public final void onSnackbarRequest(@NonNull SnackbarRequest request) {
+    public final void onSnackbarRequest(@NonNull final SnackbarRequest request) {
         Snackbar snackbar;
         if (request.actionText != null && request.actionListener != null) {
             snackbar = Snackbar.make(getActivity().findViewById(R.id.coordinatorLayout), request.text, request.duration.getDuration())
@@ -168,7 +185,7 @@ public final class ActivityResultManager extends BaseBuildManager {
      * @param request Restart App Request
      */
     @Subscribe
-    public final void onRestartAppRequest(@NonNull RestartAppRequest request) {
+    public final void onRestartAppRequest(@NonNull final RestartAppRequest request) {
         getActivity().restartApp(request);
     }
 

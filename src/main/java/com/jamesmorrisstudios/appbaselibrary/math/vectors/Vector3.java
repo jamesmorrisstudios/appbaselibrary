@@ -19,6 +19,8 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -26,7 +28,12 @@ import java.io.Serializable;
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class Vector3 extends Vector2 implements Serializable {
+public final class Vector3 implements Serializable {
+    @SerializedName("x")
+    public float x;
+    @SerializedName("y")
+    public float y;
+    @SerializedName("z")
     public float z;
 
     /**
@@ -36,8 +43,9 @@ public class Vector3 extends Vector2 implements Serializable {
      * @param y Y value
      * @param z Z value
      */
-    public Vector3(float x, float y, float z) {
-        super(x, y);
+    public Vector3(final float x, final float y, final float z) {
+        this.x = x;
+        this.y = y;
         this.z = z;
     }
 
@@ -62,23 +70,12 @@ public class Vector3 extends Vector2 implements Serializable {
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof Vector3) {
             Vector3 v = (Vector3) o;
             return x == v.x && y == v.y && z == v.z;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     * @param z Sets the Z parameter
-     */
-    public void set(float x, float y, float z) {
-        this.x = x;
-        this.y = y;
-        this.x = z;
     }
 
 }

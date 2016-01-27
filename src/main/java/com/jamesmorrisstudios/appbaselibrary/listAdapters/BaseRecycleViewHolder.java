@@ -36,7 +36,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      * @param view      Parent view
      * @param mListener Click listener. Null if none desired
      */
-    public BaseRecycleViewHolder(@NonNull View view, boolean isHeader, @Nullable cardClickListener mListener) {
+    public BaseRecycleViewHolder(@NonNull final View view, final boolean isHeader, @Nullable final cardClickListener mListener) {
         super(view);
         this.isHeader = isHeader;
         this.mListener = mListener;
@@ -68,14 +68,14 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      *
      * @param view Header view
      */
-    protected abstract void initHeader(@NonNull View view);
+    protected abstract void initHeader(@NonNull final View view);
 
     /**
      * Init the item view
      *
      * @param view Item view
      */
-    protected abstract void initItem(@NonNull View view);
+    protected abstract void initItem(@NonNull final View view);
 
     /**
      * Bind the header to the data source
@@ -83,7 +83,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      * @param headerItem Header data source
      * @param expanded   True if expanded view
      */
-    protected abstract void bindHeader(@NonNull BaseRecycleItem headerItem, boolean expanded);
+    protected abstract void bindHeader(@NonNull final BaseRecycleItem headerItem, final boolean expanded);
 
     /**
      * Bind the item to the data source
@@ -91,7 +91,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      * @param item     Item data source
      * @param expanded True if expanded view
      */
-    protected abstract void bindItem(@NonNull BaseRecycleItem item, boolean expanded);
+    protected abstract void bindItem(@NonNull final BaseRecycleItem item, final boolean expanded);
 
     /**
      * Toggle expanded vs compact view
@@ -105,7 +105,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      *
      * @param data Data to bind
      */
-    public final void bindItem(@NonNull final BaseRecycleContainer data, boolean expanded) {
+    public final void bindItem(@NonNull final BaseRecycleContainer data, final boolean expanded) {
         if (isHeader) {
             bindHeader(data.getHeader(), expanded);
         } else {
@@ -117,7 +117,7 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
      * @param view The view that was clicked
      */
     @Override
-    public final void onClick(@NonNull View view) {
+    public final void onClick(@NonNull final View view) {
         if (mListener != null) {
             mListener.cardClicked(getLayoutPosition());
         }
@@ -131,12 +131,12 @@ public abstract class BaseRecycleViewHolder extends RecyclerView.ViewHolder impl
         /**
          * @param position Clicked card position
          */
-        void cardClicked(int position);
+        void cardClicked(final int position);
 
         /**
          * @param position Card that should toggle expanded view
          */
-        void toggleExpanded(int position);
+        void toggleExpanded(final int position);
     }
 
 }

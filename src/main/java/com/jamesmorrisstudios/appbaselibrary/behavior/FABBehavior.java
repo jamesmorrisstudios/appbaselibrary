@@ -1,6 +1,7 @@
 package com.jamesmorrisstudios.appbaselibrary.behavior;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -20,7 +21,7 @@ public final class FABBehavior extends CoordinatorLayout.Behavior<FloatingAction
      * @param context Context
      * @param attrs   Attributes
      */
-    public FABBehavior(Context context, AttributeSet attrs) {
+    public FABBehavior(@NonNull final Context context, @NonNull final AttributeSet attrs) {
     }
 
     /**
@@ -30,7 +31,7 @@ public final class FABBehavior extends CoordinatorLayout.Behavior<FloatingAction
      * @return true if depends on
      */
     @Override
-    public final boolean layoutDependsOn(CoordinatorLayout parent, FloatingActionButton child, View dependency) {
+    public final boolean layoutDependsOn(@NonNull final CoordinatorLayout parent, @NonNull final FloatingActionButton child, @NonNull final View dependency) {
         return dependency instanceof Snackbar.SnackbarLayout;
     }
 
@@ -41,7 +42,7 @@ public final class FABBehavior extends CoordinatorLayout.Behavior<FloatingAction
      * @return true
      */
     @Override
-    public final boolean onDependentViewChanged(CoordinatorLayout parent, FloatingActionButton child, View dependency) {
+    public final boolean onDependentViewChanged(@NonNull final CoordinatorLayout parent, @NonNull final FloatingActionButton child, @NonNull final View dependency) {
         float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
         child.setTranslationY(translationY);
         return true;

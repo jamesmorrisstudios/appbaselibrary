@@ -6,10 +6,14 @@ import android.graphics.Canvas;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.CallSuper;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.MenuRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -26,12 +30,10 @@ import com.squareup.otto.Subscribe;
  * Created by James on 4/29/2015.
  */
 public abstract class BaseFragment extends Fragment {
-    /**
-     * Listener handler
-     */
+    public static final String TAG_MAIN_FRAGMENT = "MainFragment";
     private final Object object = new Object() {
         @Subscribe
-        public void onFabEvent(BaseActivity.FabEvent event) {
+        public void onFabEvent(@NonNull final BaseActivity.FabEvent event) {
             if (event == BaseActivity.FabEvent.CLICKED) {
                 BaseFragment.this.fabClicked();
             }
@@ -40,7 +42,18 @@ public abstract class BaseFragment extends Fragment {
     protected int startScrollY = -1;
     protected Bundle startBundle = null;
     protected Object startObject = null;
-    private boolean fabAutoHide = true;
+    private boolean fabAutoHide = false;
+
+    /**
+     * @return Options menu resource Id
+     */
+    @MenuRes
+    protected abstract int getOptionsMenuRes();
+
+    /**
+     * @return True if using the options menu
+     */
+    protected abstract boolean usesOptionsMenu();
 
     /**
      * @return True to show the toolbar title
@@ -62,14 +75,14 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param bundle bundle
      */
-    protected abstract void saveState(@NonNull Bundle bundle);
+    protected abstract void saveState(@NonNull final Bundle bundle);
 
     /**
      * restore instance state
      *
      * @param bundle bundle
      */
-    protected abstract void restoreState(@NonNull Bundle bundle);
+    protected abstract void restoreState(@NonNull final Bundle bundle);
 
     /**
      * After view created. Setup fragment here
@@ -91,7 +104,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param scrollY Set start scrollY position
      */
-    public final void setScrollY(int scrollY) {
+    public final void setScrollY(final int scrollY) {
         this.startScrollY = scrollY;
     }
 
@@ -100,7 +113,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param bundle Set starting data bundle
      */
-    public final void setBundle(@Nullable Bundle bundle) {
+    public final void setBundle(@Nullable final Bundle bundle) {
         this.startBundle = bundle;
     }
 
@@ -109,15 +122,54 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param object Set starting data object
      */
-    public final void setObject(@Nullable Object object) {
+    public final void setObject(@Nullable final Object object) {
         this.startObject = object;
     }
 
     /**
-     * On Start
+     * @param savedInstanceState Saved instance state
      */
-    public void onStart() {
-        super.onStart();
+    @Override
+    public void onCreate(@Nullable final Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(usesOptionsMenu());
+    }
+
+    /**
+     * Create options menu
+     * @param menu Menu to inflate
+     * @param inflater Inflater
+     */
+    @Override
+    public final void onCreateOptionsMenu(@NonNull final Menu menu, @NonNull final MenuInflater inflater) {
+        if (usesOptionsMenu()) {
+            inflater.inflate(getOptionsMenuRes(), menu);
+            postCreateOptionsMenu(menu);
+        }
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(@NonNull final Menu menu) {
+        super.onPrepareOptionsMenu(menu);
+        menu.clear();
+        if (usesOptionsMenu()) {
+            getActivity().getMenuInflater().inflate(getOptionsMenuRes(), menu);
+            postCreateOptionsMenu(menu);
+        }
+    }
+
+    /**
+     * Override to run custom post creation work on the options menu
+     * @param menu Menu
+     */
+    @CallSuper
+    protected void postCreateOptionsMenu(@NonNull final Menu menu) {
+
+    }
+
+    public final void updateOptionsMenu() {
+        getActivity().supportInvalidateOptionsMenu();
     }
 
     /**
@@ -126,7 +178,7 @@ public abstract class BaseFragment extends Fragment {
      * @param bundle bundle
      */
     @Override
-    public void onSaveInstanceState(@Nullable Bundle bundle) {
+    public final void onSaveInstanceState(@Nullable final Bundle bundle) {
         if (bundle != null) {
             saveState(bundle);
         }
@@ -137,7 +189,7 @@ public abstract class BaseFragment extends Fragment {
      * On view being destroyed
      */
     @Override
-    public void onDestroyView() {
+    public final void onDestroyView() {
         super.onDestroyView();
         unregisterBus();
         Bus.unregister(object);
@@ -150,7 +202,7 @@ public abstract class BaseFragment extends Fragment {
      * @param savedInstanceState Saved instance state
      */
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         if (savedInstanceState != null) {
             restoreState(savedInstanceState);
@@ -165,10 +217,10 @@ public abstract class BaseFragment extends Fragment {
         Bus.register(object);
         afterViewCreated();
     }
-    //R.anim.right_to_center, R.anim.center_to_left, R.anim.left_to_center, R.anim.center_to_right
 
     @Override
-    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+    @NonNull
+    public Animation onCreateAnimation(final int transit, final boolean enter, final int nextAnim) {
         if (nextAnim == 0) {
             if (enter) {
                 return AnimationUtils.loadAnimation(getActivity(), R.anim.left_to_center);
@@ -190,7 +242,7 @@ public abstract class BaseFragment extends Fragment {
     /**
      * @param resourceId Resource id of the FAB icon
      */
-    protected final void setFabIcon(@DrawableRes int resourceId) {
+    protected final void setFabIcon(@DrawableRes final int resourceId) {
         BaseActivity.FabEvent.SET_ICON.setIcon(resourceId).post();
     }
 
@@ -231,7 +283,7 @@ public abstract class BaseFragment extends Fragment {
      *
      * @param fabAutoHide True to auto hide fab on scroll
      */
-    protected final void setFabAutoHide(boolean fabAutoHide) {
+    protected final void setFabAutoHide(final boolean fabAutoHide) {
         this.fabAutoHide = fabAutoHide;
         if (!fabAutoHide) {
             showFab();
@@ -277,8 +329,8 @@ public abstract class BaseFragment extends Fragment {
                     image = Bitmap.createScaledBitmap(image, width, height, true);
                 }
                 //TODO use a FileProvider instead
-                FileWriter.writeImage("ShareImage.png", image, FileWriter.FileLocation.CACHE);
-                return Uri.fromFile(FileWriter.getFile("ShareImage.png", FileWriter.FileLocation.CACHE));
+                FileWriter.writeImage("ShareImage.png", image, FileWriter.FileLocation.CACHE_EXTERNAL);
+                return Uri.fromFile(FileWriter.getFile("ShareImage.png", FileWriter.FileLocation.CACHE_EXTERNAL));
             }
 
             @Override

@@ -14,6 +14,7 @@ import android.widget.EditText;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
+import com.jamesmorrisstudios.appbaselibrary.listeners.AfterTextChangedWatcher;
 import com.nononsenseapps.filepicker.NewItemFragment;
 
 /**
@@ -27,7 +28,7 @@ public abstract class CustomNewItemFragment extends NewItemFragment {
     /**
      * @param listener Listener
      */
-    public void setListener(final OnNewFolderListener listener) {
+    public void setListener(@NonNull final OnNewFolderListener listener) {
         this.listener = listener;
     }
 
@@ -37,7 +38,7 @@ public abstract class CustomNewItemFragment extends NewItemFragment {
      */
     @NonNull
     @Override
-    public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
+    public Dialog onCreateDialog(@Nullable final Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle());
         builder.setView(R.layout.nnf_dialog_folder_name)
                 .setTitle(R.string.nnf_new_folder)
@@ -53,7 +54,6 @@ public abstract class CustomNewItemFragment extends NewItemFragment {
                 final EditText editText = (EditText) dialog.findViewById(R.id.edit_text);
                 Button cancel = dialog.getButton(AlertDialog.BUTTON_NEGATIVE);
                 cancel.setOnClickListener(new View.OnClickListener() {
-
                     @Override
                     public void onClick(View view) {
                         dialog.cancel();
@@ -63,7 +63,6 @@ public abstract class CustomNewItemFragment extends NewItemFragment {
                 // Start disabled
                 ok.setEnabled(false);
                 ok.setOnClickListener(new View.OnClickListener() {
-
                     @Override
                     public void onClick(View view) {
                         String itemName = editText.getText().toString();
@@ -75,19 +74,9 @@ public abstract class CustomNewItemFragment extends NewItemFragment {
                         }
                     }
                 });
-                editText.addTextChangedListener(new TextWatcher() {
+                editText.addTextChangedListener(new AfterTextChangedWatcher() {
                     @Override
-                    public void beforeTextChanged(final CharSequence s, final int start,
-                                                  final int count, final int after) {
-                    }
-
-                    @Override
-                    public void onTextChanged(final CharSequence s, final int start,
-                                              final int before, final int count) {
-                    }
-
-                    @Override
-                    public void afterTextChanged(final Editable s) {
+                    public void afterTextChanged(@NonNull final Editable s) {
                         ok.setEnabled(validateName(s.toString()));
                     }
                 });

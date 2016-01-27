@@ -30,7 +30,7 @@ public abstract class BaseRecycleContainer {
     /**
      * Constructor defining if header or not
      */
-    public BaseRecycleContainer(boolean isHeader) {
+    public BaseRecycleContainer(final boolean isHeader) {
         this.isHeader = isHeader;
     }
 

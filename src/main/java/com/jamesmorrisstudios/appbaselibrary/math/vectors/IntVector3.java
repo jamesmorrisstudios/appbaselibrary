@@ -20,12 +20,21 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Vector class with 3 integer dimensions
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class IntVector3 extends IntVector2 {
+public final class IntVector3 implements Serializable {
+    @SerializedName("x")
+    public int x;
+    @SerializedName("y")
+    public int y;
+    @SerializedName("z")
     public int z;
 
     /**
@@ -35,8 +44,9 @@ public class IntVector3 extends IntVector2 {
      * @param y Y value
      * @param z Z value
      */
-    public IntVector3(int x, int y, int z) {
-        super(x, y);
+    public IntVector3(final int x, final int y, final int z) {
+        this.x = x;
+        this.y = y;
         this.z = z;
     }
 
@@ -61,23 +71,12 @@ public class IntVector3 extends IntVector2 {
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof IntVector3) {
             IntVector3 v = (IntVector3) o;
             return x == v.x && y == v.y && z == v.z;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     * @param z Sets the z parameter
-     */
-    public void set(int x, int y, int z) {
-        this.x = x;
-        this.y = y;
-        this.z = z;
     }
 
 }

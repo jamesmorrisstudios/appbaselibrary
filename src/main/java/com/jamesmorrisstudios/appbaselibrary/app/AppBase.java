@@ -58,7 +58,7 @@ public class AppBase extends Application {
      * Sets application level context
      */
     @Override
-    public void onCreate() {
+    public final void onCreate() {
         super.onCreate();
         instance = this;
         applyTheme();

@@ -26,12 +26,12 @@ import android.widget.LinearLayout;
  * <p/>
  * Created by James on 10/14/2014.
  */
-public final class SquareWidthLineaerLayout extends LinearLayout {
+public final class SquareWidthLinearLayout extends LinearLayout {
 
     /**
      * @param context Local context
      */
-    public SquareWidthLineaerLayout(@NonNull Context context) {
+    public SquareWidthLinearLayout(@NonNull final Context context) {
         super(context);
     }
 
@@ -39,7 +39,7 @@ public final class SquareWidthLineaerLayout extends LinearLayout {
      * @param context Local context
      * @param attrs   Attribute set
      */
-    public SquareWidthLineaerLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public SquareWidthLinearLayout(@NonNull final Context context, @Nullable final AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -48,7 +48,7 @@ public final class SquareWidthLineaerLayout extends LinearLayout {
      * @param attrs    Attribute set
      * @param defStyle Style def
      */
-    public SquareWidthLineaerLayout(@NonNull Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public SquareWidthLinearLayout(@NonNull final Context context, @Nullable final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
     }
 
@@ -57,7 +57,7 @@ public final class SquareWidthLineaerLayout extends LinearLayout {
      * @param heightMeasureSpec The height spec of the view
      */
     @Override
-    public final void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    public final void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, widthMeasureSpec);
     }
 

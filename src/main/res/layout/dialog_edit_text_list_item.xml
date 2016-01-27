@@ -13,9 +13,10 @@
         android:gravity="center_horizontal"
         android:imeOptions="actionNone"
         android:inputType="text|textAutoCorrect|textMultiLine|textCapSentences"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:singleLine="false" />
 
-    <com.jamesmorrisstudios.appbaselibrary.controls.tint.TintedImageView
+    <ImageView
         android:id="@+id/delete1"
         android:layout_width="32dp"
         android:layout_height="32dp"

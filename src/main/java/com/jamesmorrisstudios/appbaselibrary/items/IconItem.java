@@ -17,7 +17,7 @@ public final class IconItem {
      * @param text Text
      * @param icon Icon resource id
      */
-    public IconItem(@NonNull String text, @DrawableRes Integer icon) {
+    public IconItem(@NonNull final String text, @DrawableRes final Integer icon) {
         this.text = text;
         this.icon = icon;
     }

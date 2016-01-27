@@ -19,6 +19,8 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -26,7 +28,14 @@ import java.io.Serializable;
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class Vector4 extends Vector3 implements Serializable {
+public final class Vector4 implements Serializable {
+    @SerializedName("x")
+    public float x;
+    @SerializedName("y")
+    public float y;
+    @SerializedName("z")
+    public float z;
+    @SerializedName("w")
     public float w;
 
     /**
@@ -37,8 +46,10 @@ public class Vector4 extends Vector3 implements Serializable {
      * @param z Z value
      * @param w W value
      */
-    public Vector4(float x, float y, float z, float w) {
-        super(x, y, z);
+    public Vector4(final float x, final float y, final float z, final float w) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
         this.w = w;
     }
 
@@ -63,25 +74,12 @@ public class Vector4 extends Vector3 implements Serializable {
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof Vector4) {
             Vector4 v = (Vector4) o;
             return x == v.x && y == v.y && z == v.z && w == v.w;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     * @param z Sets the z parameter
-     * @param w Sets the w parameter
-     */
-    public void set(float x, float y, float z, float w) {
-        this.x = x;
-        this.y = y;
-        this.x = z;
-        this.w = w;
     }
 
 }

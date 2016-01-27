@@ -17,7 +17,7 @@ public final class StartActivityRequest extends AbstractActivityRequest {
      *
      * @param intent Activity to start
      */
-    public StartActivityRequest(@NonNull Intent intent) {
+    public StartActivityRequest(@NonNull final Intent intent) {
         this.intent = intent;
     }
 

@@ -399,7 +399,7 @@ public final class UtilsTime {
      * @return Day of Week
      */
     @NonNull
-    private static DayOfWeek getDayFromCalendar(final int calendarDay) {
+    public static DayOfWeek getDayFromCalendar(final int calendarDay) {
         switch (calendarDay) {
             case Calendar.SUNDAY:
                 return DayOfWeek.SUNDAY;
@@ -449,7 +449,7 @@ public final class UtilsTime {
      * @return An array of each day of the week matching the users locale of first day strings
      */
     @NonNull
-    public static String[] getWeekStringArray() {
+    public static String[] getWeekNameArray() {
         DayOfWeek[] week = getWeekArray();
         String[] weekString = new String[7];
         for (int i = 0; i < week.length; i++) {
@@ -459,16 +459,16 @@ public final class UtilsTime {
     }
 
     /**
-     * @return An array of each day of the week matching the users locale of first day strings of the first letter only
+     * @return An array of each day of the week matching the users locale of first day strings of the short names
      */
     @NonNull
-    public static String[] getWeekStringFirstLetterArray() {
-        String[] week = getWeekStringArray();
-        String[] weekLetter = new String[week.length];
+    public static String[] getWeekNameShortArray() {
+        DayOfWeek[] week = getWeekArray();
+        String[] weekString = new String[7];
         for (int i = 0; i < week.length; i++) {
-            weekLetter[i] = week[i].substring(0, 1);
+            weekString[i] = week[i].getNameShort();
         }
-        return weekLetter;
+        return weekString;
     }
 
     /**
@@ -868,12 +868,30 @@ public final class UtilsTime {
     }
 
     /**
+     * This does NOT change based on the first day of the week.
      * @param dateItem Date Item
      * @return Day of the week
      */
     public static int getDayOfWeek(@NonNull final DateItem dateItem) {
         Calendar calendar = getCalendar(dateItem);
         return calendar.get(Calendar.DAY_OF_WEEK);
+    }
+
+    /**
+     * This adjusts based off of the first day of the week
+     * @param dateItem Date Item
+     * @return Day of the week (1-7)
+     */
+    public static int getDayOfWeekAdjusted(@NonNull final DateItem dateItem) {
+        Calendar calendar = getCalendar(dateItem);
+        DayOfWeek day = getDayFromCalendar(calendar.get(Calendar.DAY_OF_WEEK));
+        DayOfWeek[] week = getWeekArray();
+        for(int i=0; i<week.length; i++) {
+            if(week[i] == day) {
+                return i + 1;
+            }
+        }
+        return 1;
     }
 
     /**

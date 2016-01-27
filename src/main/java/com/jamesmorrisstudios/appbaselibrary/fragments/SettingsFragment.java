@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.UtilsDisplay;
 import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
@@ -30,16 +31,10 @@ import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
  * <p/>
  * Created by James on 4/29/2015.
  */
-public class SettingsFragment extends BaseFragment {
+public final class SettingsFragment extends BaseFragment {
     public static final String TAG = "SettingsFragment";
     private transient boolean allowListener = false;
     private NestedScrollView scrollView;
-
-    /**
-     * Required empty public constructor
-     */
-    public SettingsFragment() {
-    }
 
     /**
      * Create view
@@ -50,7 +45,8 @@ public class SettingsFragment extends BaseFragment {
      * @return The top view for this fragment
      */
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         scrollView = (NestedScrollView) inflater.inflate(R.layout.fragment_settings, container, false);
         allowListener = false;
         addSettingsOptions(scrollView);
@@ -63,7 +59,7 @@ public class SettingsFragment extends BaseFragment {
      * @param v                  view
      * @param savedInstanceState Saved instance state
      */
-    public void onViewCreated(@NonNull View v, @Nullable Bundle savedInstanceState) {
+    public final void onViewCreated(@NonNull final View v, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(v, savedInstanceState);
         scrollView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
@@ -80,7 +76,7 @@ public class SettingsFragment extends BaseFragment {
      * On pause
      */
     @Override
-    public void onPause() {
+    public final void onPause() {
         super.onPause();
         allowListener = false;
     }
@@ -89,7 +85,7 @@ public class SettingsFragment extends BaseFragment {
      * @param view Top view
      * @return Settings container layout
      */
-    protected final LinearLayout getSettingsContainer(@NonNull View view) {
+    private LinearLayout getSettingsContainer(@NonNull final View view) {
         return (LinearLayout) view.findViewById(R.id.settings_container);
     }
 
@@ -98,7 +94,7 @@ public class SettingsFragment extends BaseFragment {
      *
      * @param view Top View
      */
-    protected final void addSettingsOptions(@NonNull View view) {
+    private void addSettingsOptions(@NonNull final View view) {
         LinearLayout settingsContainer = getSettingsContainer(view);
         TypedArray settingsTop = getResources().obtainTypedArray(R.array.settings_array);
         for (int i = 0; i < settingsTop.length(); i++) {
@@ -126,7 +122,7 @@ public class SettingsFragment extends BaseFragment {
      * @param settingsContainer Container view
      * @param settingsArr       Settings typed array
      */
-    protected void addSettingsCategory(@NonNull LinearLayout settingsContainer, @NonNull TypedArray settingsArr) {
+    private void addSettingsCategory(@NonNull final LinearLayout settingsContainer, @NonNull final TypedArray settingsArr) {
         for (int i = 1; i < settingsArr.length(); i++) {
             int id = settingsArr.getResourceId(i, 0);
             if (id > 0) {
@@ -179,17 +175,12 @@ public class SettingsFragment extends BaseFragment {
      * @param restartActivity True to restart the activity on change
      * @param pro             True if this setting requires pro
      */
-    protected void addListSettingsItem(@NonNull LinearLayout container, @NonNull String primary, final @NonNull String key, final int defaultValue, String[] list, final boolean restartActivity, final boolean pro) {
+    private void addListSettingsItem(@NonNull final LinearLayout container, @NonNull final String primary, @NonNull final String key, final int defaultValue, final String[] list, final boolean restartActivity, final boolean pro) {
         View item = getActivity().getLayoutInflater().inflate(R.layout.fragment_settings_item_list, null);
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
         if (pro && !UtilsVersion.isPro()) {
-            if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
-                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_pro_black_24dp, 0, 0, 0);
-            } else {
-                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_pro_white_24dp, 0, 0, 0);
-            }
-            int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
-            primaryItem.setCompoundDrawablePadding(dp5);
+            primaryItem.setCompoundDrawablesWithIntrinsicBounds(UtilsVersion.getProIcon(), 0, 0, 0);
+            primaryItem.setCompoundDrawablePadding(UtilsDisplay.getDipInt(5));
         }
         final AppCompatSpinner listItem = (AppCompatSpinner) item.findViewById(R.id.listItem);
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<>(item.getContext(), R.layout.support_simple_spinner_dropdown_item, list);
@@ -259,7 +250,7 @@ public class SettingsFragment extends BaseFragment {
      * @param restartActivity True to restart the activity on change
      * @param pro             True if this setting requires pro
      */
-    protected void addBooleanSettingsItem(@NonNull LinearLayout container, @NonNull String primary, @NonNull String secondary, final @NonNull String key, final boolean defaultValue, final boolean restartActivity, final boolean pro) {
+    private void addBooleanSettingsItem(@NonNull final LinearLayout container, @NonNull final String primary, @NonNull final String secondary, @NonNull final String key, final boolean defaultValue, final boolean restartActivity, final boolean pro) {
         View item;
         if (!secondary.isEmpty()) {
             item = getActivity().getLayoutInflater().inflate(R.layout.fragment_settings_item_boolean, null);
@@ -270,13 +261,8 @@ public class SettingsFragment extends BaseFragment {
         }
         TextView primaryItem = (TextView) item.findViewById(R.id.primary);
         if (pro && !UtilsVersion.isPro()) {
-            if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
-                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_pro_black_24dp, 0, 0, 0);
-            } else {
-                primaryItem.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_pro_white_24dp, 0, 0, 0);
-            }
-            int dp5 = (int) (5 * getResources().getDisplayMetrics().density + 0.5f);
-            primaryItem.setCompoundDrawablePadding(dp5);
+            primaryItem.setCompoundDrawablesWithIntrinsicBounds(UtilsVersion.getProIcon(), 0, 0, 0);
+            primaryItem.setCompoundDrawablePadding(UtilsDisplay.getDipInt(5));
         }
         final CheckBox switchItem = (CheckBox) item.findViewById(R.id.switchItem);
         switchItem.setChecked(Prefs.getBoolean(getString(R.string.settings_pref), key, defaultValue));
@@ -333,7 +319,7 @@ public class SettingsFragment extends BaseFragment {
      * @return Toolbar title text.
      */
     @NonNull
-    protected String getToolbarTitle() {
+    protected final String getToolbarTitle() {
         return getString(R.string.settings);
     }
 
@@ -341,7 +327,7 @@ public class SettingsFragment extends BaseFragment {
      * @return true
      */
     @Override
-    public boolean showToolbarTitle() {
+    public final boolean showToolbarTitle() {
         return true;
     }
 
@@ -351,7 +337,7 @@ public class SettingsFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected void saveState(@NonNull Bundle bundle) {
+    protected final void saveState(@NonNull final Bundle bundle) {
 
     }
 
@@ -361,7 +347,7 @@ public class SettingsFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected void restoreState(@NonNull Bundle bundle) {
+    protected final void restoreState(@NonNull final Bundle bundle) {
 
     }
 
@@ -369,7 +355,7 @@ public class SettingsFragment extends BaseFragment {
      * Register bus listener if used
      */
     @Override
-    protected void registerBus() {
+    protected final void registerBus() {
 
     }
 
@@ -377,15 +363,32 @@ public class SettingsFragment extends BaseFragment {
      * Unregister bus listener if used
      */
     @Override
-    protected void unregisterBus() {
+    protected final void unregisterBus() {
 
+    }
+
+    /**
+     * Unused
+     * @return 0
+     */
+    @Override
+    protected int getOptionsMenuRes() {
+        return 0;
+    }
+
+    /**
+     * @return False
+     */
+    @Override
+    protected boolean usesOptionsMenu() {
+        return false;
     }
 
     /**
      * Unused
      */
     @Override
-    protected void afterViewCreated() {
+    protected final void afterViewCreated() {
         hideFab();
     }
 

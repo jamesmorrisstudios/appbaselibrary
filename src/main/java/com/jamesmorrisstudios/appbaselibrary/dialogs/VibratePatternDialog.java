@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.AppCompatSpinner;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,27 +25,20 @@ import java.util.List;
  * <p/>
  * Created by James on 11/25/2015.
  */
-public class VibratePatternDialog extends DialogFragment {
+public final class VibratePatternDialog extends BaseDialogFragment {
     private ListView list;
     private TextView title;
-    private ListAdapter adapter = null;
+    private VibrateListAdapter adapter = null;
     private String titleText;
     private long[] pattern;
     private VibratePatternListener listener;
 
     /**
-     * Empty constructor required for DialogFragment
+     * On Stop
      */
-    public VibratePatternDialog() {
-    }
-
-    /**
-     * On Pause
-     */
-    public void onPause() {
+    public final void onStop() {
         UtilsRingtone.vibrateCancel();
-        dismiss();
-        super.onPause();
+        super.onStop();
     }
 
     /**
@@ -58,7 +50,8 @@ public class VibratePatternDialog extends DialogFragment {
      * @return Item view
      */
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dialog_vibrate_pattern, container);
         list = (ListView) view.findViewById(R.id.list);
         Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
@@ -67,7 +60,7 @@ public class VibratePatternDialog extends DialogFragment {
         title = (TextView) view.findViewById(R.id.title);
         title.setText(titleText);
         btnPreview.setText(R.string.preview);
-        adapter = new ListAdapter(getActivity(), R.layout.dialog_vibrate_pattern_list_item, wrapLong(pattern));
+        adapter = new VibrateListAdapter(getActivity(), R.layout.dialog_vibrate_pattern_list_item, wrapLong(pattern));
         list.setAdapter(adapter);
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,13 +107,11 @@ public class VibratePatternDialog extends DialogFragment {
      * @param titleText Title text
      * @param pattern   Current pattern. Must be even length
      * @param listener  Listener
-     * @return Dialog
      */
-    public VibratePatternDialog setData(@NonNull String titleText, @NonNull long[] pattern, @NonNull VibratePatternListener listener) {
+    public void setData(@NonNull final String titleText, @NonNull final long[] pattern, @NonNull final VibratePatternListener listener) {
         this.titleText = titleText;
         this.pattern = pattern;
         this.listener = listener;
-        return this;
     }
 
     /**
@@ -130,7 +121,7 @@ public class VibratePatternDialog extends DialogFragment {
      * @return List of wrapped objects
      */
     @NonNull
-    private List<LongWrapper> wrapLong(@NonNull long[] list) {
+    private List<LongWrapper> wrapLong(@NonNull final long[] list) {
         List<LongWrapper> wrapList = new ArrayList<>();
         for (int i = 1; i < list.length; i += 2) {
             wrapList.add(new LongWrapper(list[i - 1], list[i]));
@@ -147,7 +138,7 @@ public class VibratePatternDialog extends DialogFragment {
      * @param value Value
      * @return Index
      */
-    private int valueToIndex(long value) {
+    private int valueToIndex(final long value) {
         return (int) value / 50;
     }
 
@@ -157,7 +148,7 @@ public class VibratePatternDialog extends DialogFragment {
      * @param index Index
      * @return Value
      */
-    private long indexToValue(int index) {
+    private long indexToValue(final int index) {
         return 50 * index;
     }
 
@@ -165,7 +156,7 @@ public class VibratePatternDialog extends DialogFragment {
      * @param spinner Spinner
      * @param value   Value
      */
-    private void configureSpinner(@NonNull AppCompatSpinner spinner, long value) {
+    private void configureSpinner(@NonNull final AppCompatSpinner spinner, final long value) {
         ArrayList<String> firstList = new ArrayList<>();
         for (int i = 0; i <= 50; i++) {
             firstList.add(50 * i + "");
@@ -187,7 +178,7 @@ public class VibratePatternDialog extends DialogFragment {
          * @param title   Title Text
          * @param pattern Pattern
          */
-        void onConfirm(@NonNull String title, @NonNull long[] pattern);
+        void onConfirm(@NonNull final String title, @NonNull final long[] pattern);
 
         /**
          * Canceled
@@ -201,7 +192,12 @@ public class VibratePatternDialog extends DialogFragment {
     class LongWrapper {
         public long offTime, onTime;
 
-        public LongWrapper(long offTime, long onTime) {
+        /**
+         * Constructor of the wrapper object
+         * @param offTime OffTime
+         * @param onTime onTime
+         */
+        public LongWrapper(final long offTime, final long onTime) {
             this.offTime = offTime;
             this.onTime = onTime;
         }
@@ -210,7 +206,7 @@ public class VibratePatternDialog extends DialogFragment {
     /**
      * List Adapter
      */
-    class ListAdapter extends ArrayAdapter<LongWrapper> {
+    class VibrateListAdapter extends ArrayAdapter<LongWrapper> {
         private int resourceId;
 
         /**
@@ -220,7 +216,7 @@ public class VibratePatternDialog extends DialogFragment {
          * @param resource Item resource id
          * @param items    Item List
          */
-        public ListAdapter(@NonNull Context context, int resource, @NonNull List<LongWrapper> items) {
+        public VibrateListAdapter(@NonNull final Context context, final int resource, @NonNull final List<LongWrapper> items) {
             super(context, resource, items);
             this.resourceId = resource;
         }
@@ -255,7 +251,7 @@ public class VibratePatternDialog extends DialogFragment {
          */
         @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
             final LongWrapper item = getItem(position);
             AppCompatSpinner offSpinner, onSpinner;
             View view = convertView;
@@ -269,23 +265,23 @@ public class VibratePatternDialog extends DialogFragment {
             configureSpinner(onSpinner, item.onTime);
             offSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(@NonNull final AdapterView<?> parent, @NonNull final View view, final int position, final long id) {
                     item.offTime = indexToValue(position);
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
+                public void onNothingSelected(@NonNull final AdapterView<?> parent) {
 
                 }
             });
             onSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                 @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                public void onItemSelected(@NonNull final AdapterView<?> parent, @NonNull final View view, final int position, final long id) {
                     item.onTime = indexToValue(position);
                 }
 
                 @Override
-                public void onNothingSelected(AdapterView<?> parent) {
+                public void onNothingSelected(@NonNull final AdapterView<?> parent) {
 
                 }
             });

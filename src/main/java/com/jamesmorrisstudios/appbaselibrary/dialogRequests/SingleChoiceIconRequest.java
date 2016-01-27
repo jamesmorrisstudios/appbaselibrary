@@ -28,7 +28,7 @@ public final class SingleChoiceIconRequest extends AbstractDialogRequest {
      * @param itemsIds               Id list of icons
      * @param onOptionPickedListener selection listener
      */
-    public SingleChoiceIconRequest(@NonNull String title, @DrawableRes @NonNull int[] itemsIds, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
+    public SingleChoiceIconRequest(@NonNull final String title, @DrawableRes @NonNull final int[] itemsIds, @NonNull final SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
         this.title = title;
         this.itemsIds = itemsIds;
         this.itemsUri = null;
@@ -40,7 +40,7 @@ public final class SingleChoiceIconRequest extends AbstractDialogRequest {
      * @param itemsUri               Uri list of icons
      * @param onOptionPickedListener selection listener
      */
-    public SingleChoiceIconRequest(@NonNull String title, @DrawableRes @NonNull Uri[] itemsUri, @NonNull SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
+    public SingleChoiceIconRequest(@NonNull final String title, @DrawableRes @NonNull final Uri[] itemsUri, @NonNull final SingleChoiceIconDialogBuilder.OptionPickerListener onOptionPickedListener) {
         this.title = title;
         this.itemsIds = null;
         this.itemsUri = itemsUri;
@@ -53,7 +53,7 @@ public final class SingleChoiceIconRequest extends AbstractDialogRequest {
      * @param text     Text of button
      * @param listener onNeutral listener
      */
-    public final void addNeutralAction(@NonNull String text, @NonNull DialogInterface.OnClickListener listener) {
+    public final void addNeutralAction(@NonNull final String text, @NonNull final DialogInterface.OnClickListener listener) {
         this.textNeutral = text;
         this.onNeutral = listener;
     }
@@ -61,7 +61,7 @@ public final class SingleChoiceIconRequest extends AbstractDialogRequest {
     /**
      * @param backgroundColor Set a background color for each icon
      */
-    public final void setBackgroundColor(int backgroundColor) {
+    public final void setBackgroundColor(final int backgroundColor) {
         this.backgroundColor = backgroundColor;
     }
 }

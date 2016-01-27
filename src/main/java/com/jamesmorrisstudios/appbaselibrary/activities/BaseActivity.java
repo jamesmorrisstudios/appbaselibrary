@@ -36,7 +36,6 @@ import com.jamesmorrisstudios.appbaselibrary.activityHandlers.DialogBuildManager
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.RestartAppRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ReleaseNotesDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
-import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.LicenseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.SettingsFragment;
@@ -81,7 +80,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param aux          New aux version
      * @param firstLaunch  True if this was the first launch as you may or may not want to take actions depending.
      */
-    protected abstract void onVersionChanged(boolean majorChanged, int major, boolean minorChanged, int minor, boolean auxChanged, int aux, boolean firstLaunch);
+    protected abstract void onVersionChanged(final boolean majorChanged, final int major, final boolean minorChanged, final int minor, final boolean auxChanged, final int aux, final boolean firstLaunch);
 
     /**
      * Called only on the users first launch of the app.
@@ -105,9 +104,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param savedInstanceState Saved instance state
      */
-    protected void OnCreate(@Nullable Bundle savedInstanceState) {
-        addFragment(SettingsFragment.TAG, SettingsFragment.class, BaseMainFragment.TAG);
-        addFragment(HelpFragment.TAG, HelpFragment.class, BaseMainFragment.TAG);
+    protected void OnCreate(@Nullable final Bundle savedInstanceState) {
+        addFragment(SettingsFragment.TAG, SettingsFragment.class, BaseFragment.TAG_MAIN_FRAGMENT);
+        addFragment(HelpFragment.TAG, HelpFragment.class, BaseFragment.TAG_MAIN_FRAGMENT);
         addFragment(LicenseFragment.TAG, LicenseFragment.class, HelpFragment.TAG);
     }
 
@@ -117,9 +116,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param savedInstanceState savedInstanceState
      */
     @Override
-    protected final void onCreate(@Nullable Bundle savedInstanceState) {
+    protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         UtilsTheme.applyTheme(this);
         UtilsAppBase.applyLocale();
+        UtilsAppBase.applyFirstDayOfWeek();
         UtilsDisplay.updateImmersiveMode(this, true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -133,9 +133,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param savedInstanceState savedInstanceState
      */
-    private void OnPostCreate(@Nullable Bundle savedInstanceState) {
+    private void OnPostCreate(@Nullable final Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-        //Get Views
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,7 +156,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
         UtilsDisplay.toggleShowToolbar(toolbar, true, true);
         //UtilsDisplay.toggleToolbarOverlay(getFragmentContainer(), getTheme(), false);
         if (!hasBackStack()) {
-            loadFragment(BaseMainFragment.TAG);
+            loadFragment(BaseFragment.TAG_MAIN_FRAGMENT);
         }
         processIntentsBase();
     }
@@ -184,6 +183,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
         if (firstLaunch) {
             UtilsAppBase.setFirstLaunchComplete();
             onFirstLaunchActions();
+            onFirstLaunchActionsSub();
         }
         int major = UtilsVersion.getVersionMajor();
         int majorOld = UtilsVersion.getOldVersionMajor();
@@ -199,6 +199,14 @@ public abstract class BaseActivity extends AppCompatActivity implements
     }
 
     /**
+     * Called only on the users first launch of the app.
+     * This is called in onResume
+     */
+    private void onFirstLaunchActionsSub() {
+        openDrawer();
+    }
+
+    /**
      * Called on the first launch after a version change.
      * Called after onFirstLaunchActions on a new install
      *
@@ -210,7 +218,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param aux          New aux version
      * @param firstLaunch  True if this was the first launch as you may or may not want to take actions depending.
      */
-    private void onBaseVersionChanged(boolean majorChanged, int major, boolean minorChanged, int minor, boolean auxChanged, int aux, boolean firstLaunch) {
+    private void onBaseVersionChanged(final boolean majorChanged, final int major, final boolean minorChanged, final int minor, final boolean auxChanged, final int aux, final boolean firstLaunch) {
         if (majorChanged || minorChanged) {
             new ReleaseNotesDialogRequest().show();
         }
@@ -246,8 +254,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param intent      Result intent
      */
     public void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent intent) {
-        super.onActivityResult(requestCode, resultCode, intent);
-        activityResultManager.onActivityResult(requestCode, resultCode, intent);
+        if(!activityResultManager.onActivityResult(requestCode, resultCode, intent)) {
+            super.onActivityResult(requestCode, resultCode, intent);
+        }
     }
 
     /**
@@ -259,9 +268,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param grantResults Grant result list
      */
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[], @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        activityResultManager.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    public void onRequestPermissionsResult(final int requestCode, @NonNull final String permissions[], @NonNull final int[] grantResults) {
+        if(!activityResultManager.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
+            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
 
     /**
@@ -269,7 +279,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param event App Base Event
      */
-    public final void onAppBaseEvent(@NonNull AppBaseEvent event) {
+    public final void onAppBaseEvent(@NonNull final AppBaseEvent event) {
         switch (event) {
             case SHOW_SPINNER:
                 spinner.setVisibility(View.VISIBLE);
@@ -297,7 +307,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 break;
             case BACK_TO_MAIN_FRAGMENT:
                 clearBackStack();
-                loadFragment(BaseMainFragment.TAG);
+                loadFragment(BaseFragment.TAG_MAIN_FRAGMENT);
                 break;
             case BACK_ONE_FRAGMENT:
                 onBackPressed();
@@ -341,7 +351,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param request Restart Request
      */
-    public final void restartApp(@NonNull RestartAppRequest request) {
+    public final void restartApp(@NonNull final RestartAppRequest request) {
         Utils.restartApp(this, request.pageTag, request.scrollY, request.bundle);
     }
 
@@ -364,7 +374,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param intent Launch Intent
      */
     @Override
-    protected void onNewIntent(@NonNull Intent intent) {
+    protected void onNewIntent(@NonNull final Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
         processIntentsBase();
@@ -403,11 +413,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
         //Init navigation
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(true);
-
         mDrawerToggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.BLANK, R.string.BLANK) {
 
             /** Called when a drawer has settled in a completely closed state. */
-            public void onDrawerClosed(View view) {
+            public void onDrawerClosed(@NonNull final View view) {
                 super.onDrawerClosed(view);
                 if (loadRequest.active) {
                     loadFragment(loadRequest.tag, loadRequest.bundle, loadRequest.object, loadRequest.scrollY);
@@ -417,7 +426,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             }
 
             /** Called when a drawer has settled in a completely open state. */
-            public void onDrawerOpened(View drawerView) {
+            public void onDrawerOpened(@NonNull final View drawerView) {
                 super.onDrawerOpened(drawerView);
                 super.onDrawerSlide(drawerView, 0);
                 loadRequest.clearData();
@@ -425,17 +434,14 @@ public abstract class BaseActivity extends AppCompatActivity implements
             }
 
             @Override
-            public void onDrawerSlide(View drawerView, float slideOffset) {
+            public void onDrawerSlide(@NonNull final View drawerView, final float slideOffset) {
                 super.onDrawerSlide(drawerView, 0); // this disables the animation
             }
 
         };
-
         // Set the drawer toggle as the DrawerListener
         drawer.setDrawerListener(mDrawerToggle);
-
         navigationView.setNavigationItemSelectedListener(this);
-
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -446,7 +452,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 }
             }
         });
-
         mDrawerToggle.syncState();
     }
 
@@ -457,7 +462,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @return True if consumed action
      */
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         return mDrawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
@@ -468,7 +473,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @return True if consumed action
      */
     @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull final MenuItem item) {
         if (item.getItemId() == R.id.navigation_settings) {
             item.setChecked(false);
             loadFragment(SettingsFragment.TAG);
@@ -486,7 +491,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param savedInstanceState Saved instance state
      */
     @Override
-    protected void onPostCreate(@Nullable Bundle savedInstanceState) {
+    protected void onPostCreate(@Nullable final Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         updateDrawerEnable();
         mDrawerToggle.syncState();
@@ -498,7 +503,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param newConfig configuration
      */
     @Override
-    public void onConfigurationChanged(@Nullable Configuration newConfig) {
+    public void onConfigurationChanged(@Nullable final Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         mDrawerToggle.onConfigurationChanged(newConfig);
     }
@@ -531,7 +536,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
     /**
      * @param isEnabled True to enable nav drawer.
      */
-    private void setDrawerState(boolean isEnabled) {
+    private void setDrawerState(final boolean isEnabled) {
         mDrawerToggle.setDrawerIndicatorEnabled(isEnabled);
         if (isEnabled) {
             drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
@@ -599,13 +604,21 @@ public abstract class BaseActivity extends AppCompatActivity implements
         return true;
     }
 
+    protected final void openDrawer() {
+        drawer.openDrawer(GravityCompat.START);
+    }
+
+    protected final void closeDrawer() {
+        drawer.closeDrawers();
+    }
+
     /**
      * Window focus has changed
      *
      * @param hasFocus True if app is focused
      */
     @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
+    public void onWindowFocusChanged(final boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         UtilsDisplay.updateImmersiveMode(this, hasFocus);
     }
@@ -616,7 +629,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param tag   Use the Fragment.TAG for the tag
      * @param clazz Use Fragment.class
      */
-    protected final void addFragment(@NonNull String tag, @NonNull Class clazz, @Nullable String parentTag) {
+    protected final void addFragment(@NonNull final String tag, @NonNull final Class clazz, @Nullable final String parentTag) {
         for (int i = 0; i < fragmentItems.size(); i++) {
             if (fragmentItems.get(i).tag.equals(tag)) {
                 fragmentItems.remove(i);
@@ -633,7 +646,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @return Instance of the fragment.
      */
     @Nullable
-    private FragmentItem getFragmentItem(@NonNull String tag) {
+    private FragmentItem getFragmentItem(@NonNull final String tag) {
         for (FragmentItem item : fragmentItems) {
             if (tag.contains(item.tag)) {
                 return item;
@@ -647,7 +660,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param tag Use the Fragment.TAG for the tag
      */
-    protected final void loadFragment(@NonNull String tag) {
+    protected final void loadFragment(@NonNull final String tag) {
         loadFragment(tag, null);
     }
 
@@ -657,7 +670,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param tag    Use the Fragment.TAG for the tag
      * @param bundle Extra bundle of data to pass to the fragment
      */
-    protected final void loadFragment(@NonNull String tag, @Nullable Bundle bundle) {
+    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle) {
         loadFragment(tag, bundle, null);
     }
 
@@ -668,7 +681,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param bundle Extra bundle of data to pass to the fragment
      * @param object Generic object to pass to the fragment
      */
-    protected final void loadFragment(@NonNull String tag, @Nullable Bundle bundle, @Nullable Object object) {
+    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle, @Nullable final Object object) {
         loadFragment(tag, bundle, object, -1);
     }
 
@@ -680,7 +693,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param object  Generic object to pass to the fragment
      * @param scrollY Starting scroll Y position
      */
-    protected final void loadFragment(@NonNull String tag, @Nullable Bundle bundle, @Nullable Object object, int scrollY) {
+    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle, @Nullable final Object object, final int scrollY) {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             loadRequest.tag = tag;
             loadRequest.bundle = bundle;
@@ -689,7 +702,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
             loadRequest.active = true;
             return;
         }
-
         FragmentItem item = getFragmentItem(tag);
         if (item == null) {
             return;
@@ -710,7 +722,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param fragment Fragment to add
      * @param item     Fragment Item
      */
-    private void loadFragment(@NonNull BaseFragment fragment, @NonNull FragmentItem item) {
+    private void loadFragment(@NonNull final BaseFragment fragment, @NonNull final FragmentItem item) {
         if (!isFragmentUIActive(fragment)) {
             Log.v("BaseActivity", "LoadFragment: " + item.tag);
             if (!item.isMain()) {
@@ -736,14 +748,14 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param fragment Fragment to check
      * @return True if fragment is added and visible
      */
-    private boolean isFragmentUIActive(@NonNull BaseFragment fragment) {
+    private boolean isFragmentUIActive(@NonNull final BaseFragment fragment) {
         return fragment.isAdded() && !fragment.isDetached() && !fragment.isRemoving();
     }
 
     /**
      * @param event Fab Event
      */
-    public final void onFabEvent(@NonNull BaseActivity.FabEvent event) {
+    public final void onFabEvent(@NonNull final BaseActivity.FabEvent event) {
         switch (event) {
             case CLICKED:
 
@@ -780,10 +792,19 @@ public abstract class BaseActivity extends AppCompatActivity implements
         HIDE,
         SET_ICON;
 
+        /**
+         * Icon resource id
+         */
         @DrawableRes
         public int icon;
 
-        public FabEvent setIcon(@DrawableRes int icon) {
+        /**
+         * Set the icon. Only used with SET_ICON
+         * @param icon Icon resource id
+         * @return This event
+         */
+        @NonNull
+        public final FabEvent setIcon(@DrawableRes final int icon) {
             this.icon = icon;
             return this;
         }
@@ -833,7 +854,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
          * @param text Text to set
          * @return this event
          */
-        public final AppBaseEvent text(String text) {
+        @NonNull
+        public final AppBaseEvent text(@NonNull final String text) {
             this.text = text;
             return this;
         }

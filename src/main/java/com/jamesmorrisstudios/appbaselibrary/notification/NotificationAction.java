@@ -38,7 +38,7 @@ public final class NotificationAction {
      * @param text          Action text
      * @param pendingIntent Action pending intent
      */
-    public NotificationAction(@DrawableRes int iconRes, @NonNull String text, @NonNull PendingIntent pendingIntent) {
+    public NotificationAction(@DrawableRes final int iconRes, @NonNull final String text, @NonNull final PendingIntent pendingIntent) {
         this.iconRes = iconRes;
         this.text = text;
         this.pendingIntent = pendingIntent;

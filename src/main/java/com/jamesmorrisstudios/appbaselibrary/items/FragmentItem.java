@@ -6,7 +6,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
-import com.jamesmorrisstudios.appbaselibrary.fragments.BaseMainFragment;
 
 /**
  * Fragment item. Build and add this before you can load a fragment into view.
@@ -24,7 +23,7 @@ public final class FragmentItem {
      * @param clazz     Class of the fragment to load
      * @param parentTag Fragment Tag of parent object. Use null if it doesn't matter what is the parent
      */
-    public <T> FragmentItem(@NonNull String tag, @NonNull Class<T> clazz, @Nullable String parentTag) {
+    public FragmentItem(@NonNull final String tag, @NonNull final Class clazz, @Nullable final String parentTag) {
         this.tag = tag;
         this.clazz = clazz;
         this.parentTag = parentTag;
@@ -34,7 +33,7 @@ public final class FragmentItem {
      * @return True if this is the main fragment
      */
     public final boolean isMain() {
-        return tag.equals(BaseMainFragment.TAG);
+        return tag.equals(BaseFragment.TAG_MAIN_FRAGMENT);
     }
 
     /**
@@ -44,7 +43,7 @@ public final class FragmentItem {
      * @return Instance of the fragment.
      */
     @Nullable
-    public final BaseFragment getFragment(@NonNull AppCompatActivity activity) {
+    public final BaseFragment getFragment(@NonNull final AppCompatActivity activity) {
         FragmentManager fragmentManager = activity.getSupportFragmentManager();
         BaseFragment fragment = (BaseFragment) fragmentManager.findFragmentByTag(tag);
         if (fragment == null) {

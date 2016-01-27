@@ -19,12 +19,23 @@ package com.jamesmorrisstudios.appbaselibrary.math.vectors;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 /**
  * Vector class with 4 integer dimensions
  * <p/>
  * Created by James on 7/29/2014.
  */
-public class IntVector4 extends IntVector3 {
+public final class IntVector4 implements Serializable {
+    @SerializedName("x")
+    public int x;
+    @SerializedName("y")
+    public int y;
+    @SerializedName("z")
+    public int z;
+    @SerializedName("w")
     public int w;
 
     /**
@@ -35,8 +46,10 @@ public class IntVector4 extends IntVector3 {
      * @param z Z value
      * @param w W value
      */
-    public IntVector4(int x, int y, int z, int w) {
-        super(x, y, z);
+    public IntVector4(final int x, final int y, final int z, final int w) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
         this.w = w;
     }
 
@@ -61,25 +74,12 @@ public class IntVector4 extends IntVector3 {
      * @return True if the objects are equal
      */
     @Override
-    public boolean equals(@Nullable Object o) {
+    public final boolean equals(@Nullable final Object o) {
         if (o != null && o instanceof IntVector4) {
             IntVector4 v = (IntVector4) o;
             return x == v.x && y == v.y && z == v.z && w == v.w;
         }
         return false;
-    }
-
-    /**
-     * @param x Sets the x parameter
-     * @param y Sets the y parameter
-     * @param z Sets the z parameter
-     * @param w Sets the w parameter
-     */
-    public void set(int x, int y, int z, int w) {
-        this.x = x;
-        this.y = y;
-        this.x = z;
-        this.w = w;
     }
 
 }

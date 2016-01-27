@@ -31,8 +31,7 @@ public final class SingleChoiceIconDialogBuilder {
     private AlertDialog.Builder builder;
     private ListView list;
     private OptionPickerListener onOptionPickedListener;
-    @DrawableRes
-    private int[] itemsIds;
+    @DrawableRes private int[] itemsIds;
     private Uri[] itemsUri;
     private AlertDialog dialog;
     private int backgroundColor = -1;
@@ -41,7 +40,7 @@ public final class SingleChoiceIconDialogBuilder {
      * @param context Context
      * @param style   Style
      */
-    private SingleChoiceIconDialogBuilder(@NonNull Context context, int style) {
+    private SingleChoiceIconDialogBuilder(@NonNull final Context context, final int style) {
         builder = new AlertDialog.Builder(context, style);
         LayoutInflater vi = LayoutInflater.from(context);
         RelativeLayout topView = (RelativeLayout) vi.inflate(R.layout.dialog_helper_list, null);
@@ -55,7 +54,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param style   Style
      * @return Dialog Builder
      */
-    public static SingleChoiceIconDialogBuilder with(@NonNull Context context, int style) {
+    @NonNull
+    public static SingleChoiceIconDialogBuilder with(@NonNull final Context context, final int style) {
         return new SingleChoiceIconDialogBuilder(context, style);
     }
 
@@ -63,7 +63,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param title String title
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder setTitle(@NonNull String title) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder setTitle(@NonNull final String title) {
         builder.setTitle(title);
         return this;
     }
@@ -73,7 +74,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param listener Neutral listener
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder onNeutral(@NonNull String text, @NonNull DialogInterface.OnClickListener listener) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder onNeutral(@NonNull final String text, @NonNull final DialogInterface.OnClickListener listener) {
         builder.setNeutralButton(text, listener);
         return this;
     }
@@ -82,7 +84,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param itemsIds Item Id list
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder setItemsIds(@NonNull @DrawableRes int[] itemsIds) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder setItemsIds(@NonNull @DrawableRes final int[] itemsIds) {
         this.itemsIds = itemsIds;
         return this;
     }
@@ -91,7 +94,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param itemsUri Item Uri list
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder setItemsUri(@NonNull Uri[] itemsUri) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder setItemsUri(@NonNull final Uri[] itemsUri) {
         this.itemsUri = itemsUri;
         return this;
     }
@@ -100,7 +104,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param onOptionPickedListener Option picker listener
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder setOnOptionPicked(@NonNull OptionPickerListener onOptionPickedListener) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder setOnOptionPicked(@NonNull final OptionPickerListener onOptionPickedListener) {
         this.onOptionPickedListener = onOptionPickedListener;
         return this;
     }
@@ -109,7 +114,8 @@ public final class SingleChoiceIconDialogBuilder {
      * @param backgroundColor background color. -1 to disable
      * @return Dialog Builder
      */
-    public final SingleChoiceIconDialogBuilder setBackgroundColor(int backgroundColor) {
+    @NonNull
+    public final SingleChoiceIconDialogBuilder setBackgroundColor(final int backgroundColor) {
         this.backgroundColor = backgroundColor;
         return this;
     }
@@ -119,9 +125,10 @@ public final class SingleChoiceIconDialogBuilder {
      *
      * @return Alert dialog. Must call execute
      */
+    @NonNull
     public final AlertDialog build() {
         ArrayList<ItemWrapper> items = wrapItems();
-        ListAdapter adapter = new ListAdapter(builder.getContext(), R.layout.dialog_icon_picker_list_item, items);
+        SingleChoiceIconListAdapter adapter = new SingleChoiceIconListAdapter(builder.getContext(), R.layout.dialog_icon_picker_list_item, items);
         list.setAdapter(adapter);
         dialog = builder.create();
         return dialog;
@@ -155,7 +162,7 @@ public final class SingleChoiceIconDialogBuilder {
         /**
          * @param which Selected item index
          */
-        void onClick(int which);
+        void onClick(final int which);
     }
 
     /**
@@ -171,7 +178,7 @@ public final class SingleChoiceIconDialogBuilder {
          *
          * @param itemId Int id
          */
-        public ItemWrapper(int itemId) {
+        public ItemWrapper(final int itemId) {
             this.itemId = itemId;
             this.itemUri = null;
         }
@@ -181,7 +188,7 @@ public final class SingleChoiceIconDialogBuilder {
          *
          * @param itemUri Uri
          */
-        public ItemWrapper(@NonNull Uri itemUri) {
+        public ItemWrapper(@NonNull final Uri itemUri) {
             this.itemId = -1;
             this.itemUri = itemUri;
         }
@@ -190,7 +197,7 @@ public final class SingleChoiceIconDialogBuilder {
     /**
      * List Adapter class
      */
-    private class ListAdapter extends ArrayAdapter<ItemWrapper> {
+    private class SingleChoiceIconListAdapter extends ArrayAdapter<ItemWrapper> {
         private int textViewResourceId = -1;
 
         /**
@@ -198,7 +205,7 @@ public final class SingleChoiceIconDialogBuilder {
          * @param textViewResourceId Row layout id
          * @param items              Item list
          */
-        public ListAdapter(@NonNull Context context, int textViewResourceId, @NonNull List<ItemWrapper> items) {
+        public SingleChoiceIconListAdapter(@NonNull final Context context, final int textViewResourceId, @NonNull final List<ItemWrapper> items) {
             super(context, textViewResourceId, items);
             this.textViewResourceId = textViewResourceId;
         }
@@ -222,7 +229,8 @@ public final class SingleChoiceIconDialogBuilder {
          * @return Returned view
          */
         @Override
-        public View getView(final int position, @Nullable View convertView, @NonNull final ViewGroup parent) {
+        @NonNull
+        public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
             final ItemWrapper item = getItem(position);
             ImageView image;
             View view = convertView;

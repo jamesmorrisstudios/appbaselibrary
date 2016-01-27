@@ -22,12 +22,6 @@ public final class LicenseFragment extends BaseFragment {
     public static final String TAG = "LicenseFragment";
 
     /**
-     * Required empty public constructor
-     */
-    public LicenseFragment() {
-    }
-
-    /**
      * Create view
      *
      * @param inflater           Inflater object
@@ -36,7 +30,8 @@ public final class LicenseFragment extends BaseFragment {
      * @return The top view for this fragment
      */
     @Override
-    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         NestedScrollView view = (NestedScrollView) inflater.inflate(R.layout.fragment_license, container, false);
         LinearLayout contView = (LinearLayout) view.findViewById(R.id.license_container);
         TypedArray licensesLibrary = getResources().obtainTypedArray(R.array.help_license_library);
@@ -55,7 +50,7 @@ public final class LicenseFragment extends BaseFragment {
      * @param arrayApp     App specific license list
      * @param container    Container view for this section
      */
-    private void buildLicense(@NonNull TypedArray arrayLibrary, @NonNull TypedArray arrayApp, @NonNull LinearLayout container) {
+    private void buildLicense(@NonNull final TypedArray arrayLibrary, @NonNull final TypedArray arrayApp, @NonNull final LinearLayout container) {
         boolean found = false;
         for (int i = 0; i < arrayApp.length(); i++) {
             int id = arrayApp.getResourceId(i, 0);
@@ -92,7 +87,7 @@ public final class LicenseFragment extends BaseFragment {
      * @param link_site    Link to web site
      * @param link_license Link to license file
      */
-    private void addLicenseItem(@NonNull LinearLayout container, @NonNull String title, @NonNull String link_site, @NonNull String link_license) {
+    private void addLicenseItem(@NonNull final LinearLayout container, @NonNull final String title, @NonNull final String link_site, @NonNull final String link_license) {
         LinearLayout licenseItem = (LinearLayout) getActivity().getLayoutInflater().inflate(R.layout.fragment_license_item, null);
         TextView textTitle = (TextView) licenseItem.findViewById(R.id.license_title);
         textTitle.setText(title);
@@ -109,7 +104,7 @@ public final class LicenseFragment extends BaseFragment {
      * @return Toolbar title text.
      */
     @NonNull
-    protected String getToolbarTitle() {
+    protected final String getToolbarTitle() {
         return getString(R.string.licenses);
     }
 
@@ -127,7 +122,7 @@ public final class LicenseFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected final void saveState(@NonNull Bundle bundle) {
+    protected final void saveState(@NonNull final Bundle bundle) {
 
     }
 
@@ -137,7 +132,7 @@ public final class LicenseFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected final void restoreState(@NonNull Bundle bundle) {
+    protected final void restoreState(@NonNull final Bundle bundle) {
 
     }
 
@@ -145,7 +140,7 @@ public final class LicenseFragment extends BaseFragment {
      * Register bus listener if used
      */
     @Override
-    protected void registerBus() {
+    protected final void registerBus() {
 
     }
 
@@ -153,8 +148,25 @@ public final class LicenseFragment extends BaseFragment {
      * Unregister bus listener if used
      */
     @Override
-    protected void unregisterBus() {
+    protected final void unregisterBus() {
 
+    }
+
+    /**
+     * Unused
+     * @return 0
+     */
+    @Override
+    protected int getOptionsMenuRes() {
+        return 0;
+    }
+
+    /**
+     * @return False
+     */
+    @Override
+    protected boolean usesOptionsMenu() {
+        return false;
     }
 
     /**

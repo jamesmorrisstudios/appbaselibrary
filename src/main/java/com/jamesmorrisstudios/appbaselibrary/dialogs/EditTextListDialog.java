@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.listeners.AfterTextChangedWatcher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +28,7 @@ import java.util.List;
  * <p/>
  * Created by James on 7/9/2015.
  */
-public final class EditTextListDialog extends DialogFragment {
+public final class EditTextListDialog extends BaseDialogFragment {
     private ListView list;
     private ArrayList<String> messages = null;
     private EditTextListAdapter adapter = null;
@@ -36,27 +37,14 @@ public final class EditTextListDialog extends DialogFragment {
     private View.OnClickListener onNegative;
 
     /**
-     * Empty constructor required for DialogFragment
-     */
-    public EditTextListDialog() {
-    }
-
-    /**
-     * Dismiss dialog on pause
-     */
-    public final void onPause() {
-        dismiss();
-        super.onPause();
-    }
-
-    /**
      * @param inflater           Inflater
      * @param container          Container view
      * @param savedInstanceState Saved instance state
      * @return Dialog view
      */
     @Override
-    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dialog_edit_text_list, container);
         list = (ListView) view.findViewById(R.id.list);
         Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
@@ -66,7 +54,6 @@ public final class EditTextListDialog extends DialogFragment {
         title.setText(titleText);
         if (messages != null) {
             adapter = new EditTextListAdapter(getActivity(), R.layout.dialog_edit_text_list_item, wrapString(messages));
-            // Assign adapter to ListView
             list.setAdapter(adapter);
         }
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +97,7 @@ public final class EditTextListDialog extends DialogFragment {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public final void setData(@NonNull String titleText, @NonNull ArrayList<String> messages, @NonNull EditTextListListener onPositive, @Nullable View.OnClickListener onNegative) {
+    public final void setData(@NonNull final String titleText, @NonNull final ArrayList<String> messages, @NonNull final EditTextListListener onPositive, @Nullable final View.OnClickListener onNegative) {
         this.titleText = titleText;
         this.messages = new ArrayList<>(messages);
         this.onPositive = onPositive;
@@ -122,7 +109,7 @@ public final class EditTextListDialog extends DialogFragment {
      * @return Wrapped string items
      */
     @NonNull
-    private List<StringWrapper> wrapString(@NonNull List<String> list) {
+    private List<StringWrapper> wrapString(@NonNull final List<String> list) {
         List<StringWrapper> wrapList = new ArrayList<>();
         for (String text : list) {
             wrapList.add(new StringWrapper(text));
@@ -138,7 +125,7 @@ public final class EditTextListDialog extends DialogFragment {
         /**
          * @param messages list of Strings
          */
-        void onPositive(@NonNull ArrayList<String> messages);
+        void onPositive(@NonNull final ArrayList<String> messages);
     }
 
     /**
@@ -146,19 +133,9 @@ public final class EditTextListDialog extends DialogFragment {
      */
     private class StringWrapper {
         public String text;
-        public TextWatcher textWatcher = new TextWatcher() {
+        public TextWatcher textWatcher = new AfterTextChangedWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(@NonNull Editable s) {
+            public void afterTextChanged(@NonNull final Editable s) {
                 text = s.toString();
             }
         };
@@ -168,7 +145,7 @@ public final class EditTextListDialog extends DialogFragment {
          *
          * @param text String
          */
-        public StringWrapper(String text) {
+        public StringWrapper(@NonNull final String text) {
             this.text = text;
         }
     }
@@ -183,7 +160,7 @@ public final class EditTextListDialog extends DialogFragment {
          * @param resource Row layout id
          * @param items    List of items
          */
-        public EditTextListAdapter(@NonNull Context context, int resource, @NonNull List<StringWrapper> items) {
+        public EditTextListAdapter(@NonNull final Context context, final int resource, @NonNull final List<StringWrapper> items) {
             super(context, resource, items);
         }
 
@@ -206,7 +183,8 @@ public final class EditTextListDialog extends DialogFragment {
          * @return Dialog view
          */
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        @NonNull
+        public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
             final StringWrapper item = getItem(position);
             EditText editText;
             ImageView delete;

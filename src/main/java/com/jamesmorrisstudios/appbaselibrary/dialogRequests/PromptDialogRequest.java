@@ -23,7 +23,7 @@ public final class PromptDialogRequest extends AbstractDialogRequest {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public PromptDialogRequest(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, DialogInterface.OnClickListener onNegative) {
+    public PromptDialogRequest(@NonNull final String title, @NonNull final String content, @NonNull final DialogInterface.OnClickListener onPositive, @NonNull final DialogInterface.OnClickListener onNegative) {
         this.title = title;
         this.content = content;
         this.onPositive = onPositive;
@@ -42,7 +42,7 @@ public final class PromptDialogRequest extends AbstractDialogRequest {
      * @param onNegative   onNegative
      * @param negativeText negative text
      */
-    public PromptDialogRequest(@NonNull String title, @NonNull String content, DialogInterface.OnClickListener onPositive, @Nullable String positiveText, DialogInterface.OnClickListener onNegative, @Nullable String negativeText) {
+    public PromptDialogRequest(@NonNull final String title, @NonNull final String content, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable String positiveText, @NonNull DialogInterface.OnClickListener onNegative, @Nullable String negativeText) {
         this.title = title;
         this.content = content;
         this.onPositive = onPositive;

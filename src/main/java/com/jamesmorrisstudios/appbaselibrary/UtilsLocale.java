@@ -45,4 +45,13 @@ public final class UtilsLocale {
         AppBase.getContext().getResources().updateConfiguration(config2, AppBase.getContext().getResources().getDisplayMetrics());
     }
 
+    /**
+     * @return The current locale
+     */
+    @NonNull
+    public static Locale getLocale() {
+        return Locale.getDefault();
+    }
+
+
 }

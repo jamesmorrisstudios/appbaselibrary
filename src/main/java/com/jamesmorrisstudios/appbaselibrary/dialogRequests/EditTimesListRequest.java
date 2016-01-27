@@ -28,7 +28,7 @@ public final class EditTimesListRequest extends AbstractDialogRequest {
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public EditTimesListRequest(@NonNull String title, @NonNull ArrayList<TimeItem> times, @NonNull EditTimesListDialog.EditTimesListListener onPositive, @Nullable View.OnClickListener onNegative) {
+    public EditTimesListRequest(@NonNull final String title, @NonNull final ArrayList<TimeItem> times, @NonNull final EditTimesListDialog.EditTimesListListener onPositive, @Nullable final View.OnClickListener onNegative) {
         this.title = title;
         this.times = times;
         this.onPositive = onPositive;

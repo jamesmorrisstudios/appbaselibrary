@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +36,7 @@ import com.jamesmorrisstudios.appbaselibrary.activities.AppLauncherActivity;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.UUID;
 
@@ -123,6 +125,36 @@ public final class Utils {
     }
 
     /**
+     * Parses a string that contains only a double value into an double.
+     *
+     * @param value        String value containing only a double
+     * @param defaultValue Value that returns on parsing error
+     * @return Parsed value
+     */
+    public static double stringToDouble(@NonNull final String value, final double defaultValue) {
+        try {
+            return Double.parseDouble(value);
+        } catch (Exception ex) {
+            return defaultValue;
+        }
+    }
+
+    /**
+     * Parses a string that contains only a long value into an long.
+     *
+     * @param value        String value containing only a long
+     * @param defaultValue Value that returns on parsing error
+     * @return Parsed value
+     */
+    public static long stringToLong(@NonNull final String value, final long defaultValue) {
+        try {
+            return Long.parseLong(value);
+        } catch (Exception ex) {
+            return defaultValue;
+        }
+    }
+
+    /**
      * Parses a string that contains only a byte value into a byte.
      *
      * @param value        String value containing only a byte
@@ -154,6 +186,39 @@ public final class Utils {
             }
         }
         return false;
+    }
+
+    /**
+     * Checks if the given value is one of the items in the array
+     *
+     * @param value Value to check for
+     * @param array Array to check from
+     * @return True if the item is in the array
+     */
+    public static boolean isInArray(@NonNull final String value, @NonNull final ArrayList<String> array) {
+        for (String item : array) {
+            if (item == null) {
+                continue;
+            }
+            if (item.equals(value)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Removes any instance of the given value from the array
+     *
+     * @param value Value to check for
+     * @param array Array to check from
+     */
+    public static void removeFromArray(@NonNull final String value, @NonNull final ArrayList<String> array) {
+        for(int i=array.size()-1; i>=0; i--) {
+            if(array.get(i).equals(value)) {
+                array.remove(i);
+            }
+        }
     }
 
     /**
@@ -252,6 +317,12 @@ public final class Utils {
         Intent chooser = Intent.createChooser(share, chooserTitle);
         chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         AppBase.getContext().startActivity(chooser);
+    }
+
+    public static void openSettingsPage() {
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.fromParts("package", Utils.getPackage(), null));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        AppBase.getContext().startActivity(intent);
     }
 
     /**

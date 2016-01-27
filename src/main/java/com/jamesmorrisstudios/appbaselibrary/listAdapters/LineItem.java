@@ -15,7 +15,7 @@ public final class LineItem {
      *
      * @param data Reminder line item data
      */
-    public LineItem(@NonNull BaseRecycleContainer data) {
+    public LineItem(@NonNull final BaseRecycleContainer data) {
         this.data = data;
     }
 }

@@ -23,7 +23,7 @@ public final class FileBrowserRequest extends AbstractDialogRequest {
      * @param extension                    Allowed file extensions to sort on comma separated in form of ".png,.jpg". Null will execute all files.
      * @param onFileBrowserRequestListener Listener
      */
-    public FileBrowserRequest(@NonNull DirType dirType, boolean allowCreateDir, @Nullable String extension, @NonNull OnFileBrowserRequestListener onFileBrowserRequestListener) {
+    public FileBrowserRequest(@NonNull final DirType dirType, final boolean allowCreateDir, @Nullable final String extension, @NonNull final OnFileBrowserRequestListener onFileBrowserRequestListener) {
         this.dirType = dirType;
         this.allowCreateDir = allowCreateDir;
         this.onFileBrowserRequestListener = onFileBrowserRequestListener;
@@ -45,7 +45,7 @@ public final class FileBrowserRequest extends AbstractDialogRequest {
         /**
          * @param path Path to the selected item
          */
-        void itemSelected(@Nullable Uri path);
+        void itemSelected(@Nullable final Uri path);
 
         /**
          * No item selected

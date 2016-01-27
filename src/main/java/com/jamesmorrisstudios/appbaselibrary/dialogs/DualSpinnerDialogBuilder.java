@@ -37,7 +37,7 @@ public final class DualSpinnerDialogBuilder {
      * @param context Context
      * @param style   Style
      */
-    private DualSpinnerDialogBuilder(@NonNull Context context, int style) {
+    private DualSpinnerDialogBuilder(@NonNull final Context context, final int style) {
         builder = new AlertDialog.Builder(context, style);
         LayoutInflater vi = LayoutInflater.from(context);
         LinearLayout mainView = (LinearLayout) vi.inflate(R.layout.dialog_dual_spinner_layout, null);
@@ -53,7 +53,8 @@ public final class DualSpinnerDialogBuilder {
      * @param style   Style
      * @return Dialog builder
      */
-    public static DualSpinnerDialogBuilder with(@NonNull Context context, int style) {
+    @NonNull
+    public static DualSpinnerDialogBuilder with(@NonNull final Context context, final int style) {
         return new DualSpinnerDialogBuilder(context, style);
     }
 
@@ -61,7 +62,8 @@ public final class DualSpinnerDialogBuilder {
      * @param title Dialog title
      * @return Dialog builder
      */
-    public final DualSpinnerDialogBuilder setTitle(@NonNull String title) {
+    @NonNull
+    public final DualSpinnerDialogBuilder setTitle(@NonNull final String title) {
         builder.setTitle(title);
         return this;
     }
@@ -72,7 +74,8 @@ public final class DualSpinnerDialogBuilder {
      * @param firstRestrictions Restrictions
      * @return Dialog builder
      */
-    public final DualSpinnerDialogBuilder setFirst(@NonNull List<String> first, int firstSelected, @Nullable int[][] firstRestrictions) {
+    @NonNull
+    public final DualSpinnerDialogBuilder setFirst(@NonNull final List<String> first, final int firstSelected, @Nullable final int[][] firstRestrictions) {
         this.first = first;
         this.firstSelected = firstSelected;
         this.firstRestrictingSecond = firstRestrictions;
@@ -85,7 +88,8 @@ public final class DualSpinnerDialogBuilder {
      * @param secondRestrictions Restrictions
      * @return Dialog builder
      */
-    public final DualSpinnerDialogBuilder setSecond(@NonNull List<String> second, int secondSelected, @Nullable int[][] secondRestrictions) {
+    @NonNull
+    public final DualSpinnerDialogBuilder setSecond(@NonNull final List<String> second, final int secondSelected, @Nullable final int[][] secondRestrictions) {
         this.second = second;
         this.secondSelected = secondSelected;
         this.secondRestrictingFirst = secondRestrictions;
@@ -96,7 +100,8 @@ public final class DualSpinnerDialogBuilder {
      * @param listener Dialog selection listener
      * @return Dialog builder
      */
-    public final DualSpinnerDialogBuilder setListener(@NonNull DualSpinnerListener listener) {
+    @NonNull
+    public final DualSpinnerDialogBuilder setListener(@NonNull final DualSpinnerListener listener) {
         this.listener = listener;
         return this;
     }
@@ -106,9 +111,9 @@ public final class DualSpinnerDialogBuilder {
      *
      * @return Alert dialog. Must call execute
      */
+    @NonNull
     public final AlertDialog build() {
         setData(firstSelected, firstSelected, secondSelected, secondSelected);
-
         builder.setPositiveButton(R.string.okay, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -136,11 +141,12 @@ public final class DualSpinnerDialogBuilder {
      * @param secondSelected1     Currently selected item in second spinner
      * @param secondSelected1Prev Previously selected item in second spinner
      */
-    private void setData(int firstSelected1, int firstSelected1Prev, int secondSelected1, int secondSelected1Prev) {
+    private void setData(final int firstSelected1, final int firstSelected1Prev, final int secondSelected1, final int secondSelected1Prev) {
         firstSpinner.setOnItemSelectedListener(null);
         secondSpinner.setOnItemSelectedListener(null);
         List<String> firstList, secondList;
-
+        int firstSelected = firstSelected1;
+        int secondSelected = secondSelected1;
         if (firstRestrictingSecond != null) {
             secondList = new ArrayList<>();
             for (int i = firstRestrictingSecond[firstSelected1][0]; i < firstRestrictingSecond[firstSelected1][1]; i++) {
@@ -149,12 +155,11 @@ public final class DualSpinnerDialogBuilder {
             int prevStartIndex = firstRestrictingSecond[firstSelected1Prev][0];
             int currStartIndex = firstRestrictingSecond[firstSelected1][0];
             if (prevStartIndex != currStartIndex) {
-                secondSelected1 = secondSelected1 + (prevStartIndex - currStartIndex);
+                secondSelected = secondSelected1 + (prevStartIndex - currStartIndex);
             }
         } else {
             secondList = second;
         }
-
         if (secondRestrictingFirst != null) {
             firstList = new ArrayList<>();
             for (int i = secondRestrictingFirst[secondSelected1][0]; i < secondRestrictingFirst[secondSelected1][1]; i++) {
@@ -163,53 +168,47 @@ public final class DualSpinnerDialogBuilder {
             int prevStartIndex = secondRestrictingFirst[secondSelected1Prev][0];
             int currStartIndex = secondRestrictingFirst[secondSelected1][0];
             if (prevStartIndex != currStartIndex) {
-                firstSelected1 = firstSelected1 + (prevStartIndex - currStartIndex);
+                firstSelected = firstSelected1 + (prevStartIndex - currStartIndex);
             }
         } else {
             firstList = first;
         }
-
-        final int firstSelected2 = Math.min(firstSelected1, firstList.size() - 1);
-        final int secondSelected2 = Math.min(secondSelected1, secondList.size() - 1);
-
+        final int firstSelected2 = Math.min(firstSelected, firstList.size() - 1);
+        final int secondSelected2 = Math.min(secondSelected, secondList.size() - 1);
         ArrayAdapter<String> firstAdapter = new ArrayAdapter<>(builder.getContext(), R.layout.support_simple_spinner_dropdown_item, firstList);
         firstAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         firstSpinner.setAdapter(firstAdapter);
         firstSpinner.setSelection(firstSelected2, false);
-
         ArrayAdapter<String> secondAdapter = new ArrayAdapter<>(builder.getContext(), R.layout.support_simple_spinner_dropdown_item, secondList);
         secondAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         secondSpinner.setAdapter(secondAdapter);
         secondSpinner.setSelection(secondSelected2, false);
-
         firstSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(@NonNull final AdapterView<?> parent, @NonNull final View view, final int position, final long id) {
                 if (position != firstSelected2) {
                     setData(position, firstSelected2, secondSpinner.getSelectedItemPosition(), secondSpinner.getSelectedItemPosition());
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(@NonNull AdapterView<?> parent) {
 
             }
         });
-
         secondSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(@NonNull final AdapterView<?> parent, @NonNull final View view, final int position, final long id) {
                 if (position != secondSelected2) {
                     setData(firstSpinner.getSelectedItemPosition(), firstSpinner.getSelectedItemPosition(), position, secondSelected2);
                 }
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(@NonNull AdapterView<?> parent) {
 
             }
         });
-
     }
 
     /**
@@ -221,7 +220,7 @@ public final class DualSpinnerDialogBuilder {
          * @param firstSelected  Selected item in first spinner
          * @param secondSelected Selected item in second spinner
          */
-        void onSelection(int firstSelected, int secondSelected);
+        void onSelection(final int firstSelected, final int secondSelected);
 
         /**
          * Dialog canceled

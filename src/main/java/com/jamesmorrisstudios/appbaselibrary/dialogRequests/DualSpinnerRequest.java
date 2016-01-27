@@ -27,7 +27,7 @@ public final class DualSpinnerRequest extends AbstractDialogRequest {
      * @param secondSelected Second spinner selected index
      * @param listener       Listener
      */
-    public DualSpinnerRequest(@NonNull String title, @NonNull List<String> first, int firstSelected, @NonNull List<String> second, int secondSelected, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
+    public DualSpinnerRequest(@NonNull final String title, @NonNull final List<String> first, final int firstSelected, @NonNull final List<String> second, final int secondSelected, @NonNull final DualSpinnerDialogBuilder.DualSpinnerListener listener) {
         this.title = title;
         this.first = first;
         this.second = second;
@@ -51,7 +51,7 @@ public final class DualSpinnerRequest extends AbstractDialogRequest {
      * @param secondSelected         Second spinner selected index
      * @param listener               Listener
      */
-    public DualSpinnerRequest(@NonNull String title, @NonNull List<String> first, int firstSelected, @NonNull int[][] firstRestrictingSecond, @NonNull List<String> second, int secondSelected, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
+    public DualSpinnerRequest(@NonNull final String title, @NonNull final List<String> first, final int firstSelected, @NonNull final int[][] firstRestrictingSecond, @NonNull final List<String> second, final int secondSelected, @NonNull final DualSpinnerDialogBuilder.DualSpinnerListener listener) {
         this.title = title;
         this.first = first;
         this.second = second;
@@ -75,7 +75,7 @@ public final class DualSpinnerRequest extends AbstractDialogRequest {
      * @param secondRestrictingFirst Restrictions of allowed values in the first spinner based on second spinner selection
      * @param listener               Listener
      */
-    public DualSpinnerRequest(@NonNull String title, @NonNull List<String> first, int firstSelected, @NonNull List<String> second, int secondSelected, @NonNull int[][] secondRestrictingFirst, @NonNull DualSpinnerDialogBuilder.DualSpinnerListener listener) {
+    public DualSpinnerRequest(@NonNull final String title, @NonNull final List<String> first, final int firstSelected, @NonNull final List<String> second, final int secondSelected, @NonNull final int[][] secondRestrictingFirst, @NonNull final DualSpinnerDialogBuilder.DualSpinnerListener listener) {
         this.title = title;
         this.first = first;
         this.second = second;

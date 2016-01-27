@@ -1,27 +1,27 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.MenuRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.fragmentHelpers.TabbedFragmentBaseTab;
 import com.jamesmorrisstudios.appbaselibrary.fragmentHelpers.TabbedFragmentViewPager;
 
 /**
- * TODO Early implementation
+ * Tabbed fragment implementation. Extend this and use TabbedFragmentBaseTab for the tabs
  * <p/>
  * Created by James on 12/8/2015.
  */
 public abstract class TabbedFragment extends BaseFragment {
-    public static final String TAG = "TabbedFragment";
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private TabbedFragmentBaseTab[] tabs = null;
@@ -38,7 +38,7 @@ public abstract class TabbedFragment extends BaseFragment {
     /**
      * Get tab mode
      *
-     * @return Tab Mode MODE_FIXED, or MODE_SCROLLABLE
+     * @return Tab Mode TabLayout.MODE_FIXED, or TabLayout.MODE_SCROLLABLE
      */
     protected abstract int getTabMode();
 
@@ -49,7 +49,8 @@ public abstract class TabbedFragment extends BaseFragment {
      * @return This fragments top view
      */
     @Override
-    public final View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    @NonNull
+    public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_tabbed, container, false);
     }
 
@@ -59,6 +60,7 @@ public abstract class TabbedFragment extends BaseFragment {
     private void setupPageChangeHandler() {
         tabs[viewPager.getCurrentItem()].viewVisible();
         updateFab();
+        updateMenu();
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -71,6 +73,7 @@ public abstract class TabbedFragment extends BaseFragment {
                 selectedTab = position;
                 tabs[viewPager.getCurrentItem()].viewVisible();
                 updateFab();
+                updateMenu();
             }
 
             @Override
@@ -78,6 +81,28 @@ public abstract class TabbedFragment extends BaseFragment {
 
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
+        if (tabsValid()) {
+            tabs[viewPager.getCurrentItem()].onOptionsItemSelected(item);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    @MenuRes
+    protected int getOptionsMenuRes() {
+        if (!tabsValid() || !tabs[viewPager.getCurrentItem()].menuEnable()) {
+            return R.menu.base_menu_blank;
+        }
+        return tabs[viewPager.getCurrentItem()].menuRes();
+    }
+
+    @Override
+    protected boolean usesOptionsMenu() {
+        return true;
     }
 
     /**
@@ -94,6 +119,9 @@ public abstract class TabbedFragment extends BaseFragment {
      * Update the fab for the current tab
      */
     private void updateFab() {
+        if (!tabsValid()) {
+            return;
+        }
         if (tabs[viewPager.getCurrentItem()].fabEnable()) {
             setFabIcon(tabs[viewPager.getCurrentItem()].fabIconRes());
             showFab();
@@ -103,13 +131,23 @@ public abstract class TabbedFragment extends BaseFragment {
     }
 
     /**
+     * Update the fab for the current tab
+     */
+    private void updateMenu() {
+        if (!tabsValid()) {
+            return;
+        }
+        updateOptionsMenu();
+    }
+
+    /**
      * Save tab state
      *
      * @param bundle bundle
      */
     @Override
-    protected void saveState(@NonNull Bundle bundle) {
-        if (tabs == null) {
+    protected void saveState(@NonNull final Bundle bundle) {
+        if (!tabsValid()) {
             return;
         }
         for (int i = 0; i < tabs.length; i++) {
@@ -125,7 +163,7 @@ public abstract class TabbedFragment extends BaseFragment {
      * @param bundle bundle
      */
     @Override
-    protected void restoreState(@NonNull Bundle bundle) {
+    protected void restoreState(@NonNull final Bundle bundle) {
         if (tabs == null) {
             tabs = getTabs();
         }
@@ -153,6 +191,7 @@ public abstract class TabbedFragment extends BaseFragment {
         TabbedFragmentViewPager pager = new TabbedFragmentViewPager(getContext(), tabs);
         viewPager.setAdapter(pager);
         tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        //noinspection ResourceType
         tabLayout.setTabMode(getTabMode());
         tabLayout.setupWithViewPager(viewPager);
         if (tabsValid()) {
@@ -171,14 +210,8 @@ public abstract class TabbedFragment extends BaseFragment {
         for (int i = 0; i < tabs.length; i++) {
             if (tabs[i].requiresPro()) {
                 TabLayout.Tab tab = tabLayout.getTabAt(i);
-                if (UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.DARK_TEXT) {
-                    if (tab != null) {
-                        tab.setIcon(R.drawable.ic_pro_black_24dp);
-                    }
-                } else {
-                    if (tab != null) {
-                        tab.setIcon(R.drawable.ic_pro_white_24dp);
-                    }
+                if (tab != null) {
+                    tab.setIcon(UtilsVersion.getProIconToolbar());
                 }
             }
         }

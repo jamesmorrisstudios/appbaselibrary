@@ -21,7 +21,7 @@ public final class AppLauncherActivity extends AppCompatActivity {
      * @param savedInstanceState Unused
      */
     @Override
-    protected final void onCreate(@Nullable Bundle savedInstanceState) {
+    protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         processIntents();
     }
@@ -30,7 +30,7 @@ public final class AppLauncherActivity extends AppCompatActivity {
      * @param intent Restart Intent.
      */
     @Override
-    protected final void onNewIntent(@NonNull Intent intent) {
+    protected final void onNewIntent(@NonNull final Intent intent) {
         super.onNewIntent(intent);
         setIntent(intent);
         processIntents();

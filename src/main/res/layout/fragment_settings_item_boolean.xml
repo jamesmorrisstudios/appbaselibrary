@@ -11,12 +11,12 @@
     android:paddingTop="4dp">
 
     <CheckBox
-        android:id="@+id/switchItem"
-        android:layout_width="45dp"
-        android:layout_height="60dp"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:saveEnabled="false" />
+    android:id="@+id/switchItem"
+    android:layout_width="45dp"
+    android:layout_height="60dp"
+    android:layout_alignParentRight="true"
+    android:layout_centerVertical="true"
+    android:saveEnabled="false" />
 
     <TextView
         android:id="@+id/primary"

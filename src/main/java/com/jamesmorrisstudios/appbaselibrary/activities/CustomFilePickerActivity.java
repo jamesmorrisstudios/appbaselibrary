@@ -31,7 +31,7 @@ public final class CustomFilePickerActivity extends FilePickerActivity {
      *
      * @param savedInstanceState Saved instance state
      */
-    protected final void onCreate(@Nullable Bundle savedInstanceState) {
+    protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         Intent intent = getIntent();
         if (intent != null) {
             extension = intent.getStringExtra(EXTRA_EXTENSION);
