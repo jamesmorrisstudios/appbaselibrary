@@ -214,8 +214,8 @@ public final class Utils {
      * @param array Array to check from
      */
     public static void removeFromArray(@NonNull final String value, @NonNull final ArrayList<String> array) {
-        for(int i=array.size()-1; i>=0; i--) {
-            if(array.get(i).equals(value)) {
+        for (int i = array.size() - 1; i >= 0; i--) {
+            if (array.get(i).equals(value)) {
                 array.remove(i);
             }
         }
@@ -281,7 +281,7 @@ public final class Utils {
         } catch (Exception ex) {
             ex.printStackTrace();
             Log.v("Utils", ex.getMessage());
-            new SnackbarRequest(AppBase.getContext().getResources().getString(R.string.failed_open_link), SnackbarRequest.SnackBarDuration.SHORT).execute();
+            new SnackbarRequest(AppBase.getContext().getResources().getString(R.string.failed), SnackbarRequest.SnackBarDuration.SHORT).execute();
         }
     }
 

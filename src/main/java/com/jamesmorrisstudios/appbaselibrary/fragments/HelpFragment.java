@@ -74,7 +74,7 @@ public final class HelpFragment extends BaseFragment {
         } else {
             versionType.setText(R.string.free);
         }
-        version.setText(UtilsVersion.getVersionName() +" ("+UtilsVersion.getVersionCode()+") " + UtilsVersion.getVersionType());
+        version.setText(UtilsVersion.getVersionName() + " (" + UtilsVersion.getVersionCode() + ") " + UtilsVersion.getVersionType());
         rateNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,6 +145,7 @@ public final class HelpFragment extends BaseFragment {
 
     /**
      * Unused
+     *
      * @return 0
      */
     @Override

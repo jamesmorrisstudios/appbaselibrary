@@ -130,6 +130,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
                     mListener.itemClicked(visibleItems.get(position).data);
                 }
             }
+
             /**
              * @param position Card that should toggle expanded view
              */

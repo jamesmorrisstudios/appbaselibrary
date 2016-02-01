@@ -33,6 +33,14 @@ public final class UtilsLocale {
     }
 
     /**
+     * @return The current locale
+     */
+    @NonNull
+    public static Locale getLocale() {
+        return Locale.getDefault();
+    }
+
+    /**
      * @param locale Locale to set to
      */
     public static void setLocale(@NonNull final Locale locale) {
@@ -43,14 +51,6 @@ public final class UtilsLocale {
         Configuration config2 = new Configuration();
         config2.locale = locale;
         AppBase.getContext().getResources().updateConfiguration(config2, AppBase.getContext().getResources().getDisplayMetrics());
-    }
-
-    /**
-     * @return The current locale
-     */
-    @NonNull
-    public static Locale getLocale() {
-        return Locale.getDefault();
     }
 
 

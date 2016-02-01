@@ -11,7 +11,7 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 
 /**
  * Edit Text dialog builder
- *
+ * <p/>
  * Created by James on 12/22/2015.
  */
 public class EditTextDialogBuilder {
@@ -124,6 +124,7 @@ public class EditTextDialogBuilder {
 
         /**
          * Commit changes
+         *
          * @param text Set Text
          */
         void onCommit(@NonNull final String text);

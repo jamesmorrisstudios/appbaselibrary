@@ -1,6 +1,5 @@
 package com.jamesmorrisstudios.appbaselibrary.dialogRequests;
 
-import android.app.TimePickerDialog;
 import android.support.annotation.NonNull;
 
 import com.jamesmorrisstudios.appbaselibrary.time.TimeItem;
@@ -16,7 +15,7 @@ public final class TimePickerRequest extends AbstractDialogRequest {
     public final TimeItem timeItem;
 
     /**
-     * @param timeItem          Initial time
+     * @param timeItem Initial time
      * @param listener Callback listener
      */
     public TimePickerRequest(@NonNull final TimeItem timeItem, @NonNull final OnTimePickerListener listener) {
@@ -31,8 +30,9 @@ public final class TimePickerRequest extends AbstractDialogRequest {
 
         /**
          * Time was set
+         *
          * @param hourOfDay Hour of day
-         * @param minute Minute
+         * @param minute    Minute
          */
         void onTimeSet(final int hourOfDay, final int minute);
     }

@@ -137,7 +137,8 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * Create options menu
-     * @param menu Menu to inflate
+     *
+     * @param menu     Menu to inflate
      * @param inflater Inflater
      */
     @Override
@@ -161,6 +162,7 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * Override to run custom post creation work on the options menu
+     *
      * @param menu Menu
      */
     @CallSuper

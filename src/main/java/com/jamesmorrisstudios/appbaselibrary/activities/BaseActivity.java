@@ -254,7 +254,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param intent      Result intent
      */
     public void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent intent) {
-        if(!activityResultManager.onActivityResult(requestCode, resultCode, intent)) {
+        if (!activityResultManager.onActivityResult(requestCode, resultCode, intent)) {
             super.onActivityResult(requestCode, resultCode, intent);
         }
     }
@@ -269,7 +269,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     public void onRequestPermissionsResult(final int requestCode, @NonNull final String permissions[], @NonNull final int[] grantResults) {
-        if(!activityResultManager.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
+        if (!activityResultManager.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
@@ -735,7 +735,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             } else {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                                //.setCustomAnimations(R.anim.right_to_center, R.anim.center_to_left)
+                        //.setCustomAnimations(R.anim.right_to_center, R.anim.center_to_left)
                         .replace(R.id.container, fragment, item.tag)
                         .commit();
             }
@@ -800,6 +800,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
 
         /**
          * Set the icon. Only used with SET_ICON
+         *
          * @param icon Icon resource id
          * @return This event
          */

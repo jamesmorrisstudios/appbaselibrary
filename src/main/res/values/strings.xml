@@ -16,680 +16,1044 @@
 
 <resources>
 
-    <!--
-        Time
-     -->
-    <!-- -->
-    <string name="day_singular">Day</string>
-    <!-- -->
-    <string name="day_plural">Days</string>
-    <!-- -->
-    <string name="hour_singular">Hour</string>
-    <!-- -->
-    <string name="hour_plural">Hours</string>
-    <!-- -->
-    <string name="minute_singular">Minute</string>
-    <!-- -->
-    <string name="minute_plural">Minutes</string>
-    <!-- -->
-    <string name="second_singular">Second</string>
-    <!-- -->
-    <string name="second_plural">Seconds</string>
+    <!-- (Settings categories) Display -->
+    <string name="settings_category_display">Display</string>
+    <!-- (Settings categories) Sound -->
+    <string name="settings_category_sound">Sound</string>
+    <!-- (Settings categories) General -->
+    <string name="settings_category_general">General</string>
+    <!-- (Settings categories) Locale -->
+    <string name="settings_category_locale">Locale</string>
+    <!-- (Settings categories) Theme -->
+    <string name="settings_category_theme">Theme</string>
+    <!-- (Settings categories) Notification -->
+    <string name="settings_category_notification">Notification</string>
+    <!-- (Settings categories) Custom Notification -->
+    <string name="settings_category_notification_custom">Custom Notification</string>
+    <!-- (Settings categories) Override Notification -->
+    <string name="settings_category_notification_override">Override Notification</string>
+    <!-- (Settings categories) Defaults -->
+    <string name="settings_category_defaults">Defaults</string>
+    <!-- (Settings categories) Randomness -->
+    <string name="settings_category_random">Randomness</string>
+    <!-- (Settings categories) Widget -->
+    <string name="settings_category_widget">Widget</string>
 
-    <string name="millisecond_singular">Millisecond</string>
-    <string name="millisecond_plural">Milliseconds</string>
-    <string name="millisecond_abrev">ms</string>
+    <!-- (Base Settings) Immersive Mode-->
+    <string name="setting_immersive_enable_primary">Immersive Mode</string>
+    <!-- (Base Settings) Sound Effects -->
+    <string name="setting_sound_enable_primary">Sound Effects</string>
+    <!-- (Base Settings) Music -->
+    <string name="setting_music_enable_primary">Music</string>
+    <!-- (Base Settings) Language -->
+    <string name="setting_language_picker_primary">Language</string>
+    <!-- (Base Settings) Custom Ringtone Picker -->
+    <string name="setting_ringtone_picker_enable_primary">Custom Ringtone Picker</string>
+    <!-- (Base Settings) App Theme -->
+    <string name="setting_theme_picker_primary">App Theme</string>
+    <!-- (Base Settings) Accent Color -->
+    <string name="setting_accent_color_primary">Accent Color</string>
+    <!-- (Base Settings) Primary Color -->
+    <string name="setting_primary_color_primary">Primary Color</string>
+    <!-- (Base Settings) Toolbar Text Color -->
+    <string name="setting_toolbar_text_color_primary">Toolbar Text Color</string>
 
-    <!--
-        Numbers
-    -->
-    <!-- -->
-    <string name="one">One</string>
-    <!-- -->
-    <string name="two">Two</string>
-    <!-- -->
-    <string name="three">Three</string>
-    <!-- -->
-    <string name="four">Four</string>
-    <!-- -->
-    <string name="five">Five</string>
-    <!-- -->
-    <string name="six">Six</string>
-    <!-- -->
-    <string name="seven">Seven</string>
-    <!-- -->
-    <string name="eight">Eight</string>
-    <!-- -->
-    <string name="nine">Nine</string>
-    <!-- -->
-    <string name="ten">Ten</string>
+    <!-- (RandRemind Settings) Click Action -->
+    <string name="setting_notification_click_action_primary">Click action</string>
+    <!-- (RandRemind Settings) Custom Notification -->
+    <string name="setting_notification_custom_primary">Custom Notification</string>
+    <!-- (RandRemind Settings) Ongoing Notification -->
+    <string name="setting_notification_ongoing_primary">Ongoing Notification</string>
+    <!-- (RandRemind Settings) Ongoing notifications are not supported on SmartWatches -->
+    <string name="setting_notification_ongoing_secondary">Ongoing notifications are not supported on SmartWatches</string>
+    <!-- (RandRemind Settings) Custom Notification Background -->
+    <string name="setting_notification_theme_primary">Custom Notification Background</string>
+    <!-- (RandRemind Settings) Custom Notification Text -->
+    <string name="setting_notification_theme_text_primary">Custom Notification Text</string>
+    <!-- (RandRemind Settings) First Day of the Week -->
+    <string name="setting_first_day_of_week_primary">First Day of the Week</string>
+    <!-- (RandRemind Settings) Always Show Advanced Options -->
+    <string name="setting_force_advanced_primary">Always Show Advanced Options</string>
+    <!-- (RandRemind Settings) Disable to show advanced options on a per reminder basis -->
+    <string name="setting_force_advanced_secondary">Disable to show advanced options on a per reminder basis</string>
+    <!-- (RandRemind Settings) Swipe Action -->
+    <string name="setting_notification_swipe_away_action_primary">Swipe Action</string>
+    <!-- (RandRemind Settings) Click Opens App -->
+    <string name="setting_notification_click_open_primary">Click Opens App</string>
+    <!-- (RandRemind Settings) Swipe Opens App -->
+    <string name="setting_notification_swipe_away_open_primary">Swipe Opens App</string>
+    <!-- (RandRemind Settings) Random -->
+    <string name="setting_random_amount_primary">Random</string>
+    <!-- (RandRemind Settings) Less Random -->
+    <string name="setting_less_random_amount_primary">Less Random</string>
+    <!-- (RandRemind Settings) Even -->
+    <string name="setting_even_amount_primary">Even</string>
+    <!-- (RandRemind Settings) Theme -->
+    <string name="setting_widget_theme_primary">Theme</string>
+    <!-- (RandRemind Settings) Text Color -->
+    <string name="setting_widget_text_color_primary">Text Color</string>
+    <!-- (RandRemind Settings) Override notification vibrate -->
+    <string name="setting_override_vibrate_primary">Override notification vibrate</string>
+    <!-- (RandRemind Settings) Override notification tone playback -->
+    <string name="setting_override_ringtone_primary">Override notification tone playback</string>
+    <!-- (RandRemind Settings) This must be enabled to override the audio stream -->
+    <string name="setting_override_ringtone_secondary">This must be enabled to override the audio stream</string>
+    <!-- (RandRemind Settings) Override notification audio stream -->
+    <string name="setting_override_ringtone_stream_primary">Override notification audio stream</string>
+    <!-- (RandRemind Settings) Override speech stream -->
+    <string name="setting_override_speech_stream_primary">Override speech stream</string>
 
-    <!--
-        Number Designations
-    -->
-    <!-- -->
-    <string name="first">First</string>
-    <!-- -->
-    <string name="second">Second</string>
-    <!-- -->
-    <string name="third">Third</string>
-    <!-- -->
-    <string name="fourth">Fourth</string>
-    <!-- -->
-    <string name="fifth">Fifth</string>
-    <!-- -->
-    <string name="sixth">Sixth</string>
-    <!-- -->
-    <string name="seventh">Seventh</string>
-    <!-- -->
-    <string name="eighth">Eighth</string>
-    <!-- -->
-    <string name="ninth">Ninth</string>
-    <!-- -->
-    <string name="tenth">Tenth</string>
+    <!-- (Time) MilliSecond Singular -->
+    <string name="time_millisecond">Millisecond</string>
+    <!-- (Time) MilliSecond Plural -->
+    <string name="time_milliseconds">Milliseconds</string>
+    <!-- (Time) Millisecond abbreviation -->
+    <string name="time_millisecond_abrev">ms</string>
+    <!-- (Time) Second Singular -->
+    <string name="time_second">Second</string>
+    <!-- (Time) Second Plural -->
+    <string name="time_seconds">Seconds</string>
+    <!-- (Time) Second abbreviation -->
+    <string name="time_second_abrev">s</string>
+    <!-- (Time) Minute Singular -->
+    <string name="time_minute">Minute</string>
+    <!-- (Time) Minute Plural -->
+    <string name="time_minutes">Minutes</string>
+    <!-- (Time) Hour Singular -->
+    <string name="time_hour">Hour</string>
+    <!-- (Time) Hour Plural -->
+    <string name="time_hours">Hours</string>
+    <!-- (Time) Day Singular -->
+    <string name="time_day">Day</string>
+    <!-- (Time) Days Plural -->
+    <string name="time_days">Days</string>
+    <!-- (Time) Daily -->
+    <string name="time_daily">Daily</string>
+    <!-- (Time) Week Singular -->
+    <string name="time_week">Week</string>
+    <!-- (Time) Week Plural -->
+    <string name="time_weeks">Weeks</string>
+    <!-- (Time) Weekly -->
+    <string name="time_weekly">Weekly</string>
+    <!-- (Time) Month Singular -->
+    <string name="time_month">Month</string>
+    <!-- (Time) Month Plural -->
+    <string name="time_months">Months</string>
+    <!-- (Time) Monthly -->
+    <string name="time_monthly">Monthly</string>
+    <!-- (Time) Year Singular -->
+    <string name="time_year">Year</string>
+    <!-- (Time) Year Plural -->
+    <string name="time_years">Years</string>
+    <!-- (Time) Yearly -->
+    <string name="time_yearly">Yearly</string>
 
-    <!--
-        Days of the week/month/year
-    -->
-    <!-- -->
-    <string name="days_of_week">Days Of Week</string>
-    <!-- -->
-    <string name="days_of_month">Days Of Month</string>
-    <!-- -->
-    <string name="days_of_year">Days Of Year</string>
-    <!-- -->
-    <string name="weeks_of_month">Weeks of Month</string>
-    <!-- -->
-    <string name="weeks_of_year">Weeks of Year</string>
-    <!-- -->
-    <string name="months_of_year">Months of Year</string>
-    <!-- -->
+    <!-- (Distance) Meter -->
+    <string name="meter">Meter</string>
+    <!-- (Distance) Meters -->
+    <string name="meters">Meters</string>
+
+    <!-- (Number) One Written Out -->
+    <string name="num_one">One</string>
+    <!-- (Number) Two Written Out -->
+    <string name="num_two">Two</string>
+    <!-- (Number) Three Written Out -->
+    <string name="num_three">Three</string>
+    <!-- (Number) Four Written Out -->
+    <string name="num_four">Four</string>
+    <!-- (Number) Five Written Out -->
+    <string name="num_five">Five</string>
+    <!-- (Number) Six Written Out -->
+    <string name="num_six">Six</string>
+    <!-- (Number) Seven Written Out -->
+    <string name="num_seven">Seven</string>
+    <!-- (Number) Eight Written Out -->
+    <string name="num_eight">Eight</string>
+    <!-- (Number) Nine Written Out -->
+    <string name="num_nine">Nine</string>
+    <!-- (Number) Ten Written Out -->
+    <string name="num_ten">Ten</string>
+
+    <!-- (Number Designations) First -->
+    <string name="num_first">First</string>
+    <!-- (Number Designations) First -->
+    <string name="num_second">Second</string>
+    <!-- (Number Designations) First -->
+    <string name="num_third">Third</string>
+    <!-- (Number Designations) First -->
+    <string name="num_fourth">Fourth</string>
+    <!-- (Number Designations) First -->
+    <string name="num_fifth">Fifth</string>
+    <!-- (Number Designations) First -->
+    <string name="num_sixth">Sixth</string>
+    <!-- (Number Designations) First -->
+    <string name="num_seventh">Seventh</string>
+    <!-- (Number Designations) First -->
+    <string name="num_eighth">Eighth</string>
+    <!-- (Number Designations) First -->
+    <string name="num_ninth">Ninth</string>
+    <!-- (Number Designations) First -->
+    <string name="num_tenth">Tenth</string>
+
+    <!-- (Day) Sunday -->
     <string name="day_sunday">Sunday</string>
-    <!-- -->
+    <!-- (Day) Monday -->
     <string name="day_monday">Monday</string>
-    <!-- -->
+    <!-- (Day) Tuesday -->
     <string name="day_tuesday">Tuesday</string>
-    <!-- -->
+    <!-- (Day) Wednesday -->
     <string name="day_wednesday">Wednesday</string>
-    <!-- -->
+    <!-- (Day) Thursday -->
     <string name="day_thursday">Thursday</string>
-    <!-- -->
+    <!-- (Day) Friday -->
     <string name="day_friday">Friday</string>
-    <!-- -->
+    <!-- (Day) Saturday -->
     <string name="day_saturday">Saturday</string>
-
-    <!--
-        Timing
-    -->
-    <string name="start_date">Start Date</string>
-    <string name="start_time">Start Time</string>
-    <string name="end_date">End Date</string>
-    <string name="end_time">End Time</string>
-    <string name="end_type">End Type</string>
-    <string name="timing_type">Timing Type</string>
-    <string name="edit_times">Edit Times</string>
-    <string name="time">Time</string>
-    <string name="times">Times</string>
-    <string name="timing">Timing</string>
+    <!-- (Day) Today -->
     <string name="today">Today</string>
+    <!-- (Day) Tomorrow -->
     <string name="tomorrow">Tomorrow</string>
+    <!-- (Day) Yesterday -->
     <string name="yesterday">Yesterday</string>
-    <string name="all_time">All Time</string>
-    <string name="next_week">Next Week</string>
-    <string name="last_week">Last Week</string>
-    <string name="once_month">Once a Month</string>
-    <string name="twice_month">Twice a Month</string>
-    <string name="every_week">Every Week</string>
-    <string name="every_other_week">Every Other Week</string>
-    <string name="lifetime">Lifetime</string>
-    <string name="day">Day</string>
-    <string name="days">Days</string>
-    <string name="daily">Daily</string>
-    <string name="week">Week</string>
-    <string name="weeks">Weeks</string>
-    <string name="weekly">Weekly</string>
-    <string name="month">Month</string>
-    <string name="months">Months</string>
-    <string name="monthly">Monthly</string>
-    <string name="year">Year</string>
-    <string name="years">Years</string>
-    <string name="Yearly">Yearly</string>
 
-    <!--
-        Next/Prev
-    -->
+    <!-- (X Time of Y Period) Days of Week -->
+    <string name="days_of_week">Days Of Week</string>
+    <!-- (X Time of Y Period) Days Of Month -->
+    <string name="days_of_month">Days Of Month</string>
+    <!-- (X Time of Y Period) Days Of Year -->
+    <string name="days_of_year">Days Of Year</string>
+    <!-- (X Time of Y Period) Weeks of Month -->
+    <string name="weeks_of_month">Weeks of Month</string>
+    <!-- (X Time of Y Period) Weeks of Year -->
+    <string name="weeks_of_year">Weeks of Year</string>
+    <!-- (X Time of Y Period) Months of Year -->
+    <string name="months_of_year">Months of Year</string>
+
+    <!-- (Navigation) Next -->
     <string name="next">Next</string>
+    <!-- (Navigation) Previous -->
     <string name="previous">Previous</string>
+    <!-- (Navigation) Back -->
     <string name="back">Back</string>
+    <!-- (Navigation) Forward -->
     <string name="forward">Forward</string>
 
-    <!--
-        Patterns
-    -->
+    <!-- (Pattern) Pattern 1 -->
     <string name="pattern_1">Pattern 1</string>
+    <!-- (Pattern) Pattern 2 -->
     <string name="pattern_2">Pattern 2</string>
+    <!-- (Pattern) Pattern 3 -->
     <string name="pattern_3">Pattern 3</string>
+    <!-- (Pattern) Pattern 4 -->
     <string name="pattern_4">Pattern 4</string>
+    <!-- (Pattern) Pattern 5 -->
     <string name="pattern_5">Pattern 5</string>
+    <!-- (Pattern) Pattern 6 -->
     <string name="pattern_6">Pattern 6</string>
 
-    <!--
-        Import/Export//backup/restore
-    -->
-    <string name="import_">Import</string>
-    <string name="export">Export</string>
-    <string name="import_log">Import Log</string>
-    <string name="export_log">Export Log</string>
-    <string name="import_reminder">Import Reminder</string>
-    <string name="export_reminder">Export Reminder</string>
-    <string name="import_export">Import/Export</string>
-    <string name="import_all">Import All</string>
-    <string name="export_all">Export All</string>
-    <string name="export_to">Export To</string>
-    <string name="export_location">Export Location</string>
-    <string name="import_failed">Import Failed</string>
-    <string name="export_failed">Export Failed</string>
-    <string name="export_complete">Export Complete</string>
-    <string name="import_complete">Import Complete</string>
-    <string name="exporting_please_wait">Exporting, Please Wait</string>
-    <string name="importing_please_wait">Importing, Please Wait</string>
-    <string name="data_loaded">Data Loaded</string>
-    <string name="file">File</string>
-    <string name="local_storage">Local Storage</string>
-    <string name="backup_location">Backup Location</string>
-    <string name="backup_restore">Backup/Restore</string>
+    <!-- (Selection) Select -->
+    <string name="select">Select</string>
+    <!-- (Selection) Select All -->
+    <string name="select_all">Select All</string>
+    <!-- (Selection) Select None -->
+    <string name="select_none">Select None</string>
+
+    <!-- (Difficulty) Difficulty -->
+    <string name="diff_difficulty">Difficulty</string>
+    <!-- (Difficulty) Select Difficulty-->
+    <string name="diff_select_difficulty">Select Difficulty</string>
+    <!-- (Difficulty) Easy -->
+    <string name="diff_easy">Easy</string>
+    <!-- (Difficulty) Normal -->
+    <string name="diff_normal">Normal</string>
+    <!-- (Difficulty) Hard -->
+    <string name="diff_hard">Hard</string>
+
+    <!-- (Two State Options) Enable -->
+    <string name="enable">Enable</string>
+    <!-- (Two State Options) Enabled -->
+    <string name="enabled">Enabled</string>
+    <!-- (Two State Options) Disable -->
+    <string name="disable">Disable</string>
+    <!-- (Two State Options) Disabled -->
+    <string name="disabled">Disabled</string>
+    <!-- (Two State Options) Lock -->
+    <string name="lock">Lock</string>
+    <!-- (Two State Options) Unlock -->
+    <string name="unlock">Unlock</string>
+    <!-- (Two State Options) Locked -->
+    <string name="locked">Locked</string>
+    <!-- (Two State Options) Unlocked -->
+    <string name="unlocked">Unlocked</string>
+    <!-- (Two State Options) Open -->
+    <string name="open">Open</string>
+    <!-- (Two State Options) Close -->
+    <string name="close">Close</string>
+    <!-- (Two State Options) Opened -->
+    <string name="opened">Opened</string>
+    <!-- (Two State Options) Closed -->
+    <string name="closed">Closed</string>
+    <!-- (Two State Options) Show -->
+    <string name="show">Show</string>
+    <!-- (Two State Options) Hide -->
+    <string name="hide">Hide</string>
+    <!-- (Two State Options) Shown -->
+    <string name="shown">Shown</string>
+    <!-- (Two State Options) Hidden -->
+    <string name="Hidden">Hidden</string>
+    <!-- (Two State Options) Automatic -->
+    <string name="automatic">Automatic</string>
+    <!-- (Two State Options) Manual -->
+    <string name="manual">Manual</string>
+    <!-- (Two State Options) Online -->
+    <string name="online">Online</string>
+    <!-- (Two State Options) Offline -->
+    <string name="offline">Offline</string>
+    <!-- (Two State Options) Active -->
+    <string name="active">Active</string>
+    <!-- (Two State Options) Inactive -->
+    <string name="inactive">Inactive</string>
+
+    <!-- (Prompts) OK -->
+    <string name="okay">OK</string>
+    <!-- (Prompts) Cancel -->
+    <string name="cancel">Cancel</string>
+    <!-- (Prompts) Yes -->
+    <string name="yes">Yes</string>
+    <!-- (Prompts) No -->
+    <string name="no">No</string>
+    <!-- (Prompts) Maybe -->
+    <string name="maybe">Maybe</string>
+    <!-- (Prompts) Some -->
+    <string name="some">Some</string>
+    <!-- (Prompts) None -->
+    <string name="none">None</string>
+    <!-- (Prompts) All -->
+    <string name="all">All</string>
+    <!-- (Prompts) Set -->
+    <string name="set">Set</string>
+    <!-- (Prompts) Unset -->
+    <string name="unset">Unset</string>
+    <!-- (Prompts) Last -->
+    <string name="last">Last</string>
+    <!-- (Prompts) First -->
+    <string name="first">First</string>
+    <!-- (Prompts) Every -->
+    <string name="every">Every</string>
+    <!-- (Prompts) Other -->
+    <string name="other">Other</string>
+    <!-- (Prompts) Off -->
+    <string name="off">Off</string>
+    <!-- (Prompts) On -->
+    <string name="on">On</string>
+    <!-- (Prompts) Delete Reminder -->
+    <string name="delete_reminder_prompt_title">Delete Reminder</string>
+    <!-- (Prompts) Are you sure you want to delete this reminder? -->
+    <string name="delete_reminder_prompt_content">Are you sure you want to delete this reminder?</string>
+    <!-- (Prompts) Delete Icon -->
+    <string name="delete_custom_icon_prompt_title">Delete Icon</string>
+    <!-- (Prompts) Are you sure you want to delete this icon? -->
+    <string name="delete_custom_icon_prompt_content">Are you sure you want to delete this icon?</string>
+    <!-- (Prompts) Discard Changes -->
+    <string name="cancel_reminder_prompt_title">Discard Changes</string>
+    <!-- (Prompts) Are you sure you want to discard your changes? -->
+    <string name="cancel_reminder_prompt_content">Are you sure you want to discard your changes?</string>
+    <!-- (Prompts) Delete Vibrate Pattern -->
+    <string name="delete_vibrate_pattern_prompt_title">Delete Vibrate Pattern</string>
+    <!-- (Prompts) Are you sure you want to delete this vibrate pattern? -->
+    <string name="delete_vibrate_pattern_prompt_content">Are you sure you want to delete this vibrate pattern?</string>
+    <!-- (Prompts) Delete Location -->
+    <string name="delete_location_prompt_title">Delete Location</string>
+    <!-- (Prompts) Are you sure you want to delete this location? -->
+    <string name="delete_location_prompt_content">Are you sure you want to delete this location?</string>
+    <!-- (Prompts) Duplicate Reminder -->
+    <string name="duplicate_reminder_prompt_title">Duplicate Reminder</string>
+    <!-- (Prompts) Are you sure you want to duplicate this reminder? -->
+    <string name="duplicate_reminder_prompt_content">Are you sure you want to duplicate this reminder?</string>
+    <!-- (Prompts) Include Log -->
+    <string name="include_log_prompt_title">Include Log</string>
+    <!-- (Prompts) Do you want to include the reminder log? -->
+    <string name="include_log_prompt_content">Do you want to include the reminder log?</string>
+    <!-- (Prompts) Start New Game -->
+    <string name="start_new_game_title">Start New Game</string>
+    <!-- (Prompts) Are you sure you want to start a new game? -->
+    <string name="start_new_game_prompt">Are you sure you want to start a new game?</string>
+    <!-- (Prompts) End Game -->
+    <string name="end_game_title">End Game</string>
+    <!-- (Prompts) Are you sure you want to end this game? -->
+    <string name="end_game_prompt">Are you sure you want to end this game?</string>
+
+    <!-- (Menu Pages) Help -->
+    <string name="help">Help</string>
+    <!-- (Menu Pages) About -->
+    <string name="about">About</string>
+    <!-- (Menu Pages) Settings -->
+    <string name="settings">Settings</string>
+    <!-- (Menu Pages) Help & Feedback-->
+    <string name="help_and_feedback">Help &amp; Feedback</string>
+    <!-- (Menu Pages) Rate App-->
+    <string name="rate_app">Rate App</string>
+    <!-- (Menu Pages) More Apps -->
+    <string name="more_apps">More Apps</string>
+    <!-- (Menu Pages) Tutorial-->
+    <string name="tutorial">Tutorial</string>
+    <!-- (Menu Pages) Read-->
+    <string name="read">Read</string>
+    <!-- (Menu Pages) Watch-->
+    <string name="watch">Watch</string>
+    <!-- (Menu Pages) Links-->
+    <string name="links">Links</string>
+    <!-- (Menu Pages) Licenses -->
+    <string name="licenses">Licenses</string>
+    <!-- (Menu Pages) Help Translate -->
+    <string name="help_translate">Help Translate</string>
+    <!-- (Menu Pages) Get the Beta -->
+    <string name="get_the_beta">Get the Beta</string>
+    <!-- (Menu Pages) Achievements -->
+    <string name="achievements">Achievements</string>
+    <!-- (Menu Pages) Leaderboards -->
+    <string name="leaderboards">Leaderboards</string>
+    <!-- (Menu Pages) High Scores -->
+    <string name="high_scores">High Scores</string>
+    <!-- (Menu Pages) My Circles -->
+    <string name="my_circles">My Circles</string>
+    <!-- (Menu Pages) Invitations -->
+    <string name="invitations">Invitations</string>
+    <!-- (Menu Pages) Options -->
+    <string name="options">Options</string>
+    <!-- (Menu Pages) Game Options -->
+    <string name="game_options">Game Options</string>
+    <!-- (Menu Pages) Advanced Options -->
+    <string name="advanced_options">Advanced Options</string>
+    <!-- (Menu Pages) Automatch -->
+    <string name="automatch">Automatch</string>
+    <!-- (Menu Pages) Guest -->
+    <string name="guest">Guest</string>
+
+    <!-- (Theme) Light -->
+    <string name="light">Light</string>
+    <!-- (Theme) Light Transparent -->
+    <string name="light_transparent">Light Transparent</string>
+    <!-- (Theme) Dark -->
+    <string name="dark">Dark</string>
+    <!-- (Theme) Dark Transparent -->
+    <string name="dark_transparent">Dark Transparent</string>
+    <!-- (Theme) Transparent -->
+    <string name="transparent">Transparent</string>
+    <!-- (Theme) Night -->
+    <string name="night">Night</string>
+    <!-- (Theme) Black -->
+    <string name="black">Black</string>
+    <!-- (Theme) White -->
+    <string name="white">White</string>
+    <!-- (Theme) System -->
+    <string name="system">System</string>
+    <!-- (Theme) Light Text -->
+    <string name="light_text">Light Text</string>
+    <!-- (Theme) Dark Text -->
+    <string name="dark_text">Dark Text</string>
+
+    <!-- (Color) Red -->
+    <string name="red">Red</string>
+    <!-- (Color) Pink -->
+    <string name="pink">Pink</string>
+    <!-- (Color) Purple -->
+    <string name="purple">Purple</string>
+    <!-- (Color) Deep Purple -->
+    <string name="deep_purple">Deep Purple</string>
+    <!-- (Color) Indigo -->
+    <string name="indigo">Indigo</string>
+    <!-- (Color) Blue -->
+    <string name="blue">Blue</string>
+    <!-- (Color) Light Blue -->
+    <string name="light_blue">Light Blue</string>
+    <!-- (Color) Cyan -->
+    <string name="cyan">Cyan</string>
+    <!-- (Color) Teal -->
+    <string name="teal">Teal</string>
+    <!-- (Color) Green -->
+    <string name="green">Green</string>
+    <!-- (Color) Light Green -->
+    <string name="light_green">Light Green</string>
+    <!-- (Color) Lime -->
+    <string name="lime">Lime</string>
+    <!-- (Color) Yellow -->
+    <string name="yellow">Yellow</string>
+    <!-- (Color) Amber -->
+    <string name="amber">Amber</string>
+    <!-- (Color) Orange -->
+    <string name="orange">Orange</string>
+    <!-- (Color) Deep Orange -->
+    <string name="deep_orange">Deep Orange</string>
+    <!-- (Color) Brown -->
+    <string name="brown">Brown</string>
+    <!-- (Color) Grey -->
+    <string name="grey">Grey</string>
+    <!-- (Color) Blue Grey -->
+    <string name="blue_grey">Blue Grey</string>
+    <!-- (Color) Dark Grey -->
+    <string name="dark_grey">Dark Grey</string>
+
+    <!-- (Version) Major -->
+    <string name="major">Major</string>
+    <!-- (Version) Major -->
+    <string name="minor">Major</string>
+    <!-- (Version) Aux -->
+    <string name="aux">Aux</string>
+    <!-- (Version) Version -->
+    <string name="version">Version</string>
+    <!-- (Version) Production -->
+    <string name="production">Production</string>
+    <!-- (Version) Beta -->
+    <string name="beta">Beta</string>
+    <!-- (Version) Alpha -->
+    <string name="alpha">Alpha</string>
+
+    <!-- (Icon) Icon -->
+    <string name="icon">Icon</string>
+    <!-- (Icon) Icons -->
+    <string name="icons">Icons</string>
+    <!-- (Icon) Custom Icon -->
+    <string name="custom_icon">Custom Icon</string>
+    <!-- (Icon) Custom Icons -->
+    <string name="custom_icons">Custom Icons</string>
+    <!-- (Icon) Choose Icon -->
+    <string name="choose_icon">Choose Icon</string>
+
+    <!-- (Import/Export Backup -->
     <string name="backup">Backup</string>
-    <string name="backup_log">Backup_Log</string>
-    <string name="restore">Restore</string>
-    <string name="backup_complete">Backup Complete</string>
-    <string name="restore_complete">Restore Complete</string>
-    <string name="backup_failed">Backup Failed</string>
-    <string name="restore_failed">Restore Failed</string>
-    <string name="include_log">Include Log</string>
-    <string name="select_atleast_one">Select at least one item</string>
+    <!-- (Import/Export Import -->
+    <string name="import_">Import</string>
+    <!-- (Import/Export Export -->
+    <string name="export">Export</string>
+    <!-- (Import/Export Export Log -->
+    <string name="export_log">Export Log</string>
+    <!-- (Import/Export Import/Export -->
+    <string name="import_export">Import/Export</string>
+    <!-- (Import/Export Export Location -->
+    <string name="export_location">Export Location</string>
+    <!-- (Import/Export Import Failed -->
+    <string name="import_failed">Import Failed</string>
+    <!-- (Import/Export Import Canceled -->
+    <string name="import_canceled">Import Canceled</string>
+    <!-- (Import/Export Export Failed -->
+    <string name="export_failed">Export Failed</string>
+    <!-- (Import/Export Export Canceled -->
+    <string name="export_canceled">Export Canceled</string>
+    <!-- (Import/Export Import Complete -->
+    <string name="import_complete">Import Complete</string>
+    <!-- (Import/Export Export Complete -->
+    <string name="export_complete">Export Complete</string>
+    <!-- (Import/Export Importing, Please Wait -->
+    <string name="importing_please_wait">Importing, Please Wait</string>
+    <!-- (Import/Export Exporting, Please Wait -->
+    <string name="exporting_please_wait">Exporting, Please Wait</string>
+
+    <!-- (Snooze) Snooze -->
+    <string name="snooze">Snooze</string>
+    <!-- (Snooze) Snoozed -->
+    <string name="snoozed">Snoozed</string>
+    <!-- (Snooze) Auto Snooze -->
+    <string name="auto_snooze">Auto Snooze</string>
+    <!-- (Snooze) Manual Snooze -->
+    <string name="manual_snooze">Manual Snooze</string>
+
+    <!-- (Message) Message -->
+    <string name="message">Message</string>
+    <!-- (Message) Messages -->
+    <string name="messages">Messages</string>
+    <!-- (Message) Number of Messages -->
+    <string name="num_messages">Number of Messages</string>
+    <!-- (Message) Edit Messages -->
+    <string name="edit_messages">Edit Messages</string>
+    <!-- (Message) View Messages -->
+    <string name="view_messages">View Messages</string>
+    <!-- (Message) Import Messages -->
+    <string name="import_messages">Import Messages</string>
+    <!-- (Message) Message Separator |||| -->
+    <string name="message_separator">Message Separator ||||</string>
+
+    <!-- (Sign in/out) Sign In -->
+    <string name="sign_in">Sign In</string>
+    <!-- (Sign in/out) Signed In -->
+    <string name="signed_in">Signed In</string>
+    <!-- (Sign in/out) Sign in failed -->
+    <string name="sign_in_failed">Sign in failed</string>
+    <!-- (Sign in/out) Sign Out -->
+    <string name="sign_out">Sign Out</string>
+    <!-- (Sign in/out) Signed Out -->
+    <string name="signed_out">Signed Out</string>
+
+    <!-- (Length/Size) Low -->
+    <string name="low">Low</string>
+    <!-- (Length/Size) Mid -->
+    <string name="mid">Mid</string>
+    <!-- (Length/Size) High -->
+    <string name="high">High</string>
+    <!-- (Length/Size) Min -->
+    <string name="min">Min</string>
+    <!-- (Length/Size) Max -->
+    <string name="max">Max</string>
+    <!-- (Length/Size) Minimum -->
+    <string name="minimum">Minimum</string>
+    <!-- (Length/Size) Medium -->
+    <string name="medium">Medium</string>
+    <!-- (Length/Size) Maximum -->
+    <string name="maximum">Maximum</string>
+    <!-- (Length/Size) Small -->
+    <string name="small">Small</string>
+    <!-- (Length/Size) Large -->
+    <string name="large">Large</string>
+    <!-- (Length/Size) Short -->
+    <string name="short_">Short</string>
+    <!-- (Length/Size) Long -->
+    <string name="long_">Long</string>
+    <!-- (Length/Size) Slow -->
+    <string name="slow">Slow</string>
+    <!-- (Length/Size) Fast -->
+    <string name="fast">Fast</string>
+    <!-- (Length/Size) Quick -->
+    <string name="quick">Quick</string>
+
+    <!-- (Polite) Thank You -->
+    <string name="thank_you">Thank You</string>
+    <!-- (Polite) You\'re Welcome -->
+    <string name="youre_welcome">You\'re Welcome</string>
+    <!-- (Polite) Please -->
+    <string name="please">Please</string>
+
+    <!-- (Personal) You -->
+    <string name="you">You</string>
+    <!-- (Personal) Me -->
+    <string name="me">Me</string>
+    <!-- (Personal) Us -->
+    <string name="us">Us</string>
+    <!-- (Personal) We -->
+    <string name="we">We</string>
+    <!-- (Personal) Them -->
+    <string name="them">Them</string>
+
+    <!-- (On/Off) Short on -->
+    <string name="short_on">Short on</string>
+    <!-- (On/Off) Medium on -->
+    <string name="medium_on">Medium on</string>
+    <!-- (On/Off) Long on -->
+    <string name="long_on">Long on</string>
+    <!-- (On/Off) Short off -->
+    <string name="short_off">Short off</string>
+    <!-- (On/Off) Medium off -->
+    <string name="medium_off">Medium off</string>
+    <!-- (On/Off) Long off -->
+    <string name="long_off">Long off</string>
+
+    <!-- (Pro Upgrade) Pro -->
+    <string name="pro">Pro</string>
+    <!-- (Pro Upgrade) Pro Feature -->
+    <string name="pro_feature">Pro Feature</string>
+    <!-- (Pro Upgrade) Upgrade -->
+    <string name="upgrade">Upgrade</string>
+    <!-- (Pro Upgrade) This feature requires the pro version -->
+    <string name="feature_requires_pro">This feature requires the pro version</string>
+    <!-- (Pro Upgrade) This feature is limited in the free version. Upgrade to pro or remove an existing item. -->
+    <string name="feature_requires_pro_limited">This feature is limited in the free version. Upgrade to pro or remove an existing item.</string>
+    <!-- (Pro Upgrade) Upgrade to Pro -->
+    <string name="upgrade_to_pro">Upgrade to Pro</string>
+    <!-- (Pro Upgrade) Upgrade Now -->
+    <string name="upgrade_now">Upgrade Now</string>
+
+    <!-- (Timing) Start Date -->
+    <string name="start_date">Start Date</string>
+    <!-- (Timing) End Date -->
+    <string name="end_date">End Date</string>
+    <!-- (Timing) Start Time -->
+    <string name="start_time">Start Time</string>
+    <!-- (Timing) End Time -->
+    <string name="end_time">End Time</string>
+    <!-- (Timing) End Type -->
+    <string name="end_type">End Type</string>
+    <!-- (Timing) Timing Type -->
+    <string name="timing_type">Timing Type</string>
+    <!-- (Timing) Edit Times -->
+    <string name="edit_times">Edit Times</string>
+    <!-- (Timing) Time -->
+    <string name="time">Time</string>
+    <!-- (Timing) Times -->
+    <string name="times">Times</string>
+    <!-- (Timing) Timing -->
+    <string name="timing">Timing</string>
+    <!-- (Timing) All Time -->
+    <string name="all_time">All Time</string>
+    <!-- (Timing) Every Week -->
+    <string name="every_week">Every Week</string>
+    <!-- (Timing) Lifetime -->
+    <string name="lifetime">Lifetime</string>
+    <!-- (Timing) Forever -->
+    <string name="forever">Forever</string>
+    <!-- (Timing) Time period -->
+    <string name="time_period">Time period</string>
+    <!-- (Timing) Random -->
+    <string name="random">Random</string>
+    <!-- (Timing) Randomly -->
+    <string name="randomly">Randomly</string>
+    <!-- (Timing) Less Random -->
+    <string name="less_random">Less Random</string>
+    <!-- (Timing) Even -->
+    <string name="even">Even</string>
+    <!-- (Timing) Evenly -->
+    <string name="evenly">Evenly</string>
+    <!-- (Timing) Specific -->
+    <string name="specific">Specific</string>
+    <!-- (Timing) Interval -->
+    <string name="interval">Interval</string>
+    <!-- (Timing) Specific Times -->
+    <string name="specific_times">Specific Times</string>
+    <!-- (Timing) Repeat Every -->
+    <string name="repeat_every">Repeat Every</string>
+
+    <!-- (Storage) Data Loaded -->
+    <string name="data_loaded">Data Loaded</string>
+    <!-- (Storage) File -->
+    <string name="file">File</string>
+    <!-- (Storage) Local Storage -->
+    <string name="local_storage">Local Storage</string>
+    <!-- (Storage) Filename -->
+    <string name="filename">Filename</string>
+
+    <!-- (Permission) Permission Granted -->
+    <string name="permission_granted">Permission Granted</string>
+    <!-- (Permission) Permission Denied -->
+    <string name="permission_denied">Permission Denied</string>
+    <!-- (Permission) Allow if any -->
+    <string name="allow_if_any">Allow if any</string>
+    <!-- (Permission) Allow if all -->
+    <string name="allow_if_all">Allow if all</string>
+    <!-- (Permission) Disallow if any -->
+    <string name="disallow_if_any">Disallow if any</string>
+    <!-- (Permission) Disallow if all -->
+    <string name="disallow_if_all">Disallow if all</string>
+    <!-- (Permission) Trigger if any -->
+    <string name="trigger_if_any">Trigger if any</string>
+    <!-- (Permission) Trigger if all -->
+    <string name="trigger_if_all">Trigger if all</string>
+
+    <!-- (Reminders) Reminders -->
+    <string name="reminders">Reminders</string>
+    <!-- (Reminders) No Reminders -->
+    <string name="no_reminder">No Reminders</string>
+    <!-- (Reminders) You have no reminders yet -->
+    <string name="no_reminders_yet">You have no reminders yet</string>
+    <!-- (Reminders) Reminders Per Day -->
+    <string name="alerts_per_day">Reminders Per Day</string>
+    <!-- (Reminders) Number of reminders -->
+    <string name="number_of_reminders">Number of reminders</string>
+
+    <!-- (Response) Changes Discarded -->
+    <string name="changes_discarded">Changes Discarded</string>
+    <!-- (Response) Changes Saved -->
+    <string name="changes_saved">Changes Saved</string>
+    <!-- (Response) No Changes -->
+    <string name="no_changes">No Changes</string>
+    <!-- (Response) Select at least one item -->
+    <string name="select_at_least_one_item">Select at least one item</string>
+
+    <!-- (Response) Loading -->
+    <string name="loading">Loading</string>
+    <!-- (Response) Loaded -->
+    <string name="loaded">Loaded</string>
+    <!-- (Response) Loading Failed -->
+    <string name="loading_failed">Loading Failed</string>
+    <!-- (Response) Loading Complete -->
+    <string name="loading_complete">Loading Complete</string>
+    <!-- (Response) Error -->
+    <string name="error">Error</string>
+    <!-- (Response) Fail -->
+    <string name="fail">Fail</string>
+    <!-- (Response) Failed -->
+    <string name="failed">Failed</string>
+    <!-- (Response) Success -->
+    <string name="success">Success</string>
+    <!-- (Response) Successful -->
+    <string name="successful">Successful</string>
+    <!-- (Response) Unsuccessful -->
+    <string name="unsuccessful">Unsuccessful</string>
+    <!-- (Response) Valid -->
+    <string name="valid">Valid</string>
+    <!-- (Response) Invalid -->
+    <string name="invalid">Invalid</string>
+    <!-- (Response) Complete -->
+    <string name="complete">Complete</string>
+    <!-- (Response) Completed -->
+    <string name="completed">Completed</string>
+    <!-- (Response) Skipped -->
+    <string name="skipped">Skipped</string>
+    <!-- (Response) Incomplete -->
+    <string name="incomplete">Incomplete</string>
+    <!-- (Response) Dismiss -->
+    <string name="dismiss">Dismiss</string>
+    <!-- (Response) Dismissed -->
+    <string name="dismissed">Dismissed</string>
+    <!-- (Response) Acknowledge -->
+    <string name="acknowledge">Acknowledge</string>
+    <!-- (Response) Acknowledged-->
+    <string name="acknowledged">Acknowledged</string>
+    <!-- (Response) Add -->
+    <string name="add">Add</string>
+    <!-- (Response) Added -->
+    <string name="added">Added</string>
+    <!-- (Response) Add Item -->
+    <string name="add_item">Add Item</string>
+    <!-- (Response) Remove-->
+    <string name="remove">Remove</string>
+    <!-- (Response) Removed -->
+    <string name="removed">Removed</string>
+    <!-- (Response) Remove Item -->
+    <string name="remove_item">Remove Item</string>
+    <!-- (Response) Delete -->
+    <string name="delete">Delete</string>
+    <!-- (Response) Deleted -->
+    <string name="deleted">Deleted</string>
+    <!-- (Response) Duplicate -->
+    <string name="duplicate">Duplicate</string>
+    <!-- (Response) Duplicated -->
+    <string name="duplicated">Duplicated</string>
+    <!-- (Response) Restart -->
+    <string name="restart">Restart</string>
+    <!-- (Response) Restarting -->
+    <string name="restarting">Restarting</string>
+    <!-- (Response) Restarting App, Please Wait -->
+    <string name="restarting_app_please_wait">Restarting App, Please Wait</string>
+
+    <!-- (Location) Map -->
+    <string name="map">Map</string>
+    <!-- (Location) Location -->
+    <string name="location">Location</string>
+    <!-- (Location) Locations -->
+    <string name="locations">Locations</string>
+    <!-- (Location) Latitude -->
+    <string name="latitude">Latitude</string>
+    <!-- (Location) Longitude -->
+    <string name="longitude">Longitude</string>
+    <!-- (Location) Radius -->
+    <string name="radius">Radius</string>
+    <!-- (Location) Enter -->
+    <string name="enter">Enter</string>
+    <!-- (Location) Exit -->
+    <string name="exit">Exit</string>
+    <!-- (Location) Linger Time -->
+    <string name="linger_time">Linger Time</string>
+
+    <!-- (Sound) Music -->
+    <string name="music">Music</string>
+    <!-- (Sound) Ring -->
+    <string name="ring">Ring</string>
+    <!-- (Sound) Speak Time -->
+    <string name="speak_time">Speak Time</string>
+    <!-- (Sound) Speak Title -->
+    <string name="speak_title">Speak Title</string>
+    <!-- (Sound) Speak Message -->
+    <string name="speak_message">Speak Message</string>
+    <!-- (Sound) Tone -->
+    <string name="tone">Tone</string>
+    <!-- (Sound) Sound -->
+    <string name="sound">Sound</string>
+
+    <!-- (Notification) Notification -->
+    <string name="notification">Notification</string>
+    <!-- (Notification) Notifications -->
+    <string name="notifications">Notifications</string>
+    <!-- (Notification) Select Notification -->
+    <string name="select_notification">Select Notification</string>
+
+    <!-- (Vibrate) Vibrate -->
+    <string name="vibrate">Vibrate</string>
+    <!-- (Vibrate) Vibrate Pattern -->
+    <string name="vibrate_pattern">Vibrate Pattern</string>
+    <!-- (Vibrate) Vibrate Patterns -->
+    <string name="vibrate_patterns">Vibrate Patterns</string>
+    <!-- (Vibrate) Create Vibrate Pattern -->
+    <string name="create_vibrate_pattern">Create Vibrate Pattern</string>
 
     <!--
-        Protection level
+
+    Game Focused strings
+
     -->
+
+    <!-- (Win/Loss) You Win -->
+    <string name="you_win">You Win</string>
+    <!-- (Win/Loss) You Won -->
+    <string name="you_won">You Won</string>
+    <!-- (Win/Loss) You Lost -->
+    <string name="you_lost">You Lost</string>
+    <!-- (Win/Loss) You Lose -->
+    <string name="you_lose">You Lose</string>
+    <!-- (Win/Loss) You Tied -->
+    <string name="you_tied">You Tied</string>
+    <!-- (Win/Loss) Winner -->
+    <string name="winner">Winner</string>
+    <!-- (Win/Loss) Winners -->
+    <string name="winners">Winners</string>
+    <!-- (Win/Loss) Loser -->
+    <string name="loser">Loser</string>
+    <!-- (Win/Loss) Losers -->
+    <string name="Losers">Losers</string>
+
+    <!-- (Player/Team) Number of Players -->
+    <string name="number_of_players">Number of Players</string>
+    <!-- (Player/Team) Player -->
+    <string name="player">Player</string>
+    <!-- (Player/Team) Players -->
+    <string name="players">Players</string>
+    <!-- (Player/Team) Player 1 -->
+    <string name="player_1">Player 1</string>
+    <!-- (Player/Team) Player 2 -->
+    <string name="player_2">Player 2</string>
+    <!-- (Player/Team) Player 3 -->
+    <string name="player_3">Player 3</string>
+    <!-- (Player/Team) Player 4 -->
+    <string name="player_4">Player 4</string>
+    <!-- (Player/Team) Player 5 -->
+    <string name="player_5">Player 5</string>
+    <!-- (Player/Team) Player 6 -->
+    <string name="player_6">Player 6</string>
+    <!-- (Player/Team) Team -->
+    <string name="team">Team</string>
+    <!-- (Player/Team) Teams -->
+    <string name="teams">Teams</string>
+    <!-- (Player/Team) Number of Teams -->
+    <string name="number_of_teams">Number of Teams</string>
+    <!-- (Player/Team) Team 1 -->
+    <string name="team_1">Team 1</string>
+    <!-- (Player/Team) Team 2 -->
+    <string name="team_2">Team 2</string>
+    <!-- (Player/Team) Team 3 -->
+    <string name="team_3">Team 3</string>
+    <!-- (Player/Team) Team 4 -->
+    <string name="team_4">Team 4</string>
+
+    <!-- (Google Play) This action requires Google Play Games -->
+    <string name="requires_google_play">This action requires Google Play Games</string>
+    <!-- (Google Play) Compare Play Games Profiles -->
+    <string name="compare_profiles">Compare Play Games Profiles</string>
+    <!-- (Google Play) View Play Games Profile -->
+    <string name="view_profile">View Play Games Profile</string>
+
+    <!-- (Ads) Sponsored -->
+    <string name="sponsored">Sponsored</string>
+    <!-- (Ads) Ads -->
+    <string name="ads">Ads</string>
+    <!-- (Ads) Remove Ads -->
+    <string name="remove_ads">Remove Ads</string>
+    <!-- (Ads) Ads Removed -->
+    <string name="ads_removed">Ads Removed</string>
+
+    <!-- (Scoring) Current Score -->
+    <string name="current_score">Current Score</string>
+    <!-- (Scoring) Top Score -->
+    <string name="top_score">Top Score</string>
+    <!-- (Scoring) Score -->
+    <string name="score">Score</string>
+
+    <!-- (Turn/Round) Your Turn -->
+    <string name="your_turn">Your Turn</string>
+    <!-- (Turn/Round) Their Turn -->
+    <string name="their_turn">Their Turn</string>
+    <!-- (Turn/Round) Turn -->
+    <string name="turn">Turn</string>
+    <!-- (Turn/Round) Turns -->
+    <string name="turns">Turns</string>
+    <!-- (Turn/Round) Round -->
+    <string name="round">Round</string>
+    <!-- (Turn/Round) Rounds -->
+    <string name="rounds">Rounds</string>
+    <!-- (Turn/Round) Match -->
+    <string name="match">Match</string>
+    <!-- (Turn/Round) Matches -->
+    <string name="matches">Matches</string>
+
+    <!-- (Currency) Dollar -->
+    <string name="dollar">Dollar</string>
+    <!-- (Currency) Dollars -->
+    <string name="dollars">Dollars</string>
+    <!-- (Currency) Buy -->
+    <string name="buy">Buy</string>
+    <!-- (Currency) Sell -->
+    <string name="sell">Sell</string>
+    <!-- (Currency) Purchase -->
+    <string name="purchase">Purchase</string>
+    <!-- (Currency) Diamond -->
+    <string name="diamond">Diamond</string>
+    <!-- (Currency) Diamonds -->
+    <string name="diamonds">Diamonds</string>
+
+    <!-- (Game State) Rematch -->
+    <string name="rematch">Rematch</string>
+    <!-- (Game State) Try Again -->
+    <string name="try_again">Try Again</string>
+    <!-- (Game State) Touch to Continue -->
+    <string name="touch_continue">Touch to Continue</string>
+    <!-- (Game State) Touch to Resume -->
+    <string name="touch_resume">Touch to Resume</string>
+    <!-- (Game State) Touch to edit -->
+    <string name="touch_edit">Touch to edit</string>
+    <!-- (Game State) Pause -->
+    <string name="pause">Pause</string>
+    <!-- (Game State) Pause Game -->
+    <string name="pause_game">Pause Game</string>
+    <!-- (Game State) Resume -->
+    <string name="resume">Resume</string>
+    <!-- (Game State) Resume Game -->
+    <string name="resume_game">Resume Game</string>
+    <!-- (Game State) New -->
+    <string name="new_">New</string>
+    <!-- (Game State) New Game -->
+    <string name="new_game">New Game</string>
+    <!-- (Game State) Select Save -->
+    <string name="select_save">Select Save</string>
+    <!-- (Game State) Save -->
+    <string name="save">Save</string>
+    <!-- (Game State) Save Game -->
+    <string name="save_game">Save Game</string>
+    <!-- (Game State) Load -->
+    <string name="load">Load</string>
+    <!-- (Game State) Load Game -->
+    <string name="load_game">Load Game</string>
+    <!-- (Game State) Game Over -->
+    <string name="game_over">Game Over</string>
+    <!-- (Game State) Start -->
+    <string name="start">Start</string>
+    <!-- (Game State) Start Game -->
+    <string name="start_game">Start Game</string>
+    <!-- (Game State) End -->
+    <string name="end">End</string>
+    <!-- (Game State) End Game -->
+    <string name="end_game">End Game</string>
+    <!-- (Game State) Stop -->
+    <string name="stop">Stop</string>
+    <!-- (Game State) Stop Game -->
+    <string name="stop_game">Stop Game</string>
+
+    <!--
+
+    Not cleaned up yet below this point
+
+    -->
+
+    <string name="free">Free</string>
+    <string name="pull">Pull</string>
+    <string name="wild">Wild</string>
+    <string name="normal">Normal</string>
     <string name="public_">Public</string>
     <string name="private_">Private</string>
     <string name="default_">Default</string>
     <string name="defaults">Defaults</string>
-
-    <!--
-       Min/Max/size//length
-    -->
-    <string name="low">Low</string>
-    <string name="mid">Mid</string>
-    <string name="high">High</string>
-    <string name="min">Min</string>
-    <string name="max">Max</string>
-    <string name="minimum">Minimum</string>
-    <string name="medium">Medium</string>
-    <string name="maximum">Maximum</string>
-    <string name="small">Small</string>
-    <string name="large">Large</string>
-    <string name="short_">Short</string>
-    <string name="long_">Long</string>
-
-    <!--
-      Select all/none
-    -->
-    <string name="select">Select</string>
-    <string name="select_all">Select All</string>
-    <string name="select_none">Select None</string>
-
-    <!--
-       Difficulty/Game Options
-    -->
-    <string name="difficulty">Difficulty</string>
-    <string name="select_difficulty">Select Difficulty</string>
-    <string name="easy">Easy</string>
-    <string name="normal">Normal</string>
-    <string name="hard">Hard</string>
-    <string name="quick">Quick</string>
-
-    <!--
-       Enable/Disable/Lock
-    -->
-    <string name="enable">Enable</string>
-    <string name="enabled">Enabled</string>
-    <string name="disable">Disable</string>
-    <string name="disabled">Disabled</string>
-    <string name="lock">Lock</string>
-    <string name="locked">Locked</string>
-    <string name="unlock">Unlock</string>
-    <string name="unlocked">Unlocked</string>
-    <string name="open">Open</string>
-    <string name="opened">Opened</string>
-    <string name="close">Close</string>
-    <string name="closed">Closed</string>
-
-    <!--
-       Success/Fail/Error/Valid
-    -->
-    <string name="loading">Loading</string>
-    <string name="error">Error</string>
-    <string name="fail">Fail</string>
-    <string name="failed">Failed</string>
-    <string name="success">Success</string>
-    <string name="successful">Successful</string>
-    <string name="valid">Valid</string>
-    <string name="invalid">Invalid</string>
-    <string name="failed_open_link">Failed to open link</string>
-    <string name="app_open_fail">Failed to open app</string>
-    <string name="no_items_found">No items found</string>
-    <string name="data_load_fail">Failed to load list</string>
-    <string name="invalid_time">Invalid time</string>
-    <string name="complete">Complete</string>
-    <string name="completed">Completed</string>
     <string name="completed_early">Completed Early</string>
-    <string name="skipped">Skipped</string>
-    <string name="incomplete">Incomplete</string>
-    <string name="invalid_path">Invalid Path</string>
-    <string name="invalid_file">Invalid File</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="dismissed">Dismissed</string>
-    <string name="acknowledge">Acknowledge</string>
-    <string name="acknowledged">Acknowledged</string>
-
-    <!--
-        Common Menu Pages
-    -->
-    <string name="help">Help</string>
-    <string name="about">About</string>
-    <string name="settings">Settings</string>
-    <string name="help_and_feedback">Help &amp; Feedback</string>
-    <string name="rate_app">Rate App</string>
-    <string name="more_apps">More Apps</string>
-    <string name="tutorial">Tutorial</string>
-    <string name="read">Read</string>
-    <string name="watch">Watch</string>
-    <string name="links">Links</string>
-    <string name="licenses">Licenses</string>
-    <string name="help_translate">Help Translate</string>
-
-    <!--
-       Release Notes/Version
-    -->
-    <string name="major">Major</string>
-    <string name="minor">Minor</string>
-    <string name="aux">Aux</string>
+    <string name="no_items_found">No items found</string>
     <string name="release_notes">Release Notes</string>
-    <string name="version">Version</string>
-    <string name="production">Production</string>
-    <string name="beta">Beta</string>
-    <string name="alpha">Alpha</string>
-
-    <!--
-        Visibility
-    -->
-    <string name="show">Show</string>
-    <string name="shown">Shown</string>
-    <string name="shown_again">Shown Again</string>
-    <string name="hide">Hide</string>
-    <string name="Hidden">Hidden</string>
-
-    <!--
-        Prompts
-    -->
-    <string name="okay">OK</string>
-    <string name="cancel">Cancel</string>
-    <string name="yes">Yes</string>
-    <string name="no">No</string>
-    <string name="maybe">Maybe</string>
-
-    <!--
-        All or None
-    -->
-    <string name="some">Some</string>
-    <string name="none">None</string>
-    <string name="set">Set</string>
-    <string name="all">All</string>
-    <string name="last">Last</string>
-    <string name="every">Every</string>
-    <string name="other">Other</string>
-
-
-    <!--
-        Icons and Logos
-    -->
-    <string name="icon">Icon</string>
-    <string name="custom_icon">Custom Icon</string>
-    <string name="choose_icon">Choose Icon</string>
     <string name="logo">Logo</string>
-
-    <!--
-        Snooze
-    -->
-    <string name="snooze">Snooze</string>
-    <string name="snoozed">Snoozed</string>
-    <string name="auto_snooze">Auto Snooze</string>
-    <string name="manual_snooze">Manual Snooze</string>
-
-    <!--
-        Messages
-    -->
-    <string name="message">Message</string>
-    <string name="messages">Messages</string>
-    <string name="num_messages">Number of Messages</string>
-    <string name="edit_messages">Edit Messages</string>
-
-    <!--
-        Add/Remove/Delete/Duplicate/etc
-    -->
-    <string name="add">Add</string>
-    <string name="added">Added</string>
-    <string name="add_item">Add Item</string>
-    <string name="remove">Remove</string>
-    <string name="removed">Removed</string>
-    <string name="remove_item">Remove Item</string>
-    <string name="delete">Delete</string>
-    <string name="deleted">Deleted</string>
-    <string name="duplicate">Duplicate</string>
-
-    <!--
-        polite statements
-    -->
-    <string name="thank_you">Thank You</string>
-    <string name="youre_welcome">You\'re Welcome</string>
-
-    <!--
-        Card Types
-    -->
-    <string name="free">Free</string>
-    <string name="pull">Pull</string>
-    <string name="wild">Wild</string>
-
-    <!--
-        Person Naming
-    -->
-    <string name="you">You</string>
-    <string name="me">Me</string>
-    <string name="us">Us</string>
-    <string name="them">Them</string>
-
-    <!--
-        On / Off
-    -->
-    <string name="short_on">Short on</string>
-    <string name="medium_on">Medium on</string>
-    <string name="long_on">Long on</string>
-    <string name="short_off">Short off</string>
-    <string name="medium_off">Medium off</string>
-    <string name="long_off">Long off</string>
-
-    <!--
-        Game Menu
-    -->
-    <string name="achievements">Achievements</string>
-    <string name="leaderboards">Leaderboards</string>
-    <string name="high_scores">High Scores</string>
-    <string name="my_circles">My Circles</string>
-    <string name="invitations">Invitations</string>
-    <string name="options">Options</string>
-    <string name="game_options">Game Options</string>
-    <string name="automatch">Automatch</string>
-    <string name="guest">Guest</string>
-
-    <!--
-        Game State
-        Pause/Resume/start/stop
-    -->
-    <string name="rematch">Rematch</string>
-    <string name="try_again">Try Again</string>
-    <string name="touch_continue">Touch to Continue</string>
-    <string name="touch_resume">Touch to Resume</string>
-    <string name="touch_edit">Touch to edit</string>
-    <string name="pause">Pause</string>
-    <string name="pause_game">Pause Game</string>
-    <string name="resume">Resume</string>
-    <string name="resume_game">Resume Game</string>
-    <string name="new_">New</string>
-    <string name="new_game">New Game</string>
-    <string name="select_save">Select Save</string>
-    <string name="save">Save</string>
-    <string name="save_game">Save Game</string>
-    <string name="load_game">Load Game</string>
-    <string name="load">Load</string>
-    <string name="game_over">Game Over</string>
-    <string name="start">Start</string>
-    <string name="start_game">Start Game</string>
-    <string name="end">End</string>
-    <string name="end_game">End Game</string>
-    <string name="stop">Stop</string>
-    <string name="stop_game">Stop Game</string>
-    <string name="start_new_game_title">Start New Game</string>
-    <string name="start_new_game_prompt">Are you sure you want to start a new game?</string>
-
-    <!--
-        Scoring
-    -->
-    <string name="current_score">Current Score</string>
-    <string name="top_score">Top Score</string>
-    <string name="score">Score</string>
     <string name="combo">Combo</string>
     <string name="special">Special</string>
-
-    <!--
-        Turn/Rounds
-    -->
-    <string name="your_turn">Your Turn</string>
-    <string name="their_turn">Their Turn</string>
-    <string name="turn">Turn</string>
-    <string name="turns">Turns</string>
-    <string name="round">Round</string>
-    <string name="rounds">Rounds</string>
-    <string name="matches">Matches</string>
-
-    <!--
-        Win/Loss
-    -->
-    <string name="you_win">You Win</string>
-    <string name="you_won">You Won</string>
-    <string name="you_lost">You Lost</string>
-    <string name="you_lose">You Lose</string>
-    <string name="you_tied">You Tied</string>
-    <string name="winner">Winner</string>
-    <string name="winners">Winners</string>
-    <string name="loser">Loser</string>
-    <string name="Losers">Losers</string>
-
-    <!--
-        Currency management
-    -->
-    <string name="buy">Buy</string>
-    <string name="purchase">Purchase</string>
-    <string name="diamond">Diamond</string>
-    <string name="diamonds">Diamonds</string>
-
-    <!--
-        Sign in and out
-    -->
-    <string name="sign_in">Sign In</string>
-    <string name="signed_in">Signed In</string>
-    <string name="sign_out">Sign Out</string>
-    <string name="signed_out">Signed Out</string>
-
-    <!--
-        Ads
-    -->
-    <string name="sponsored">Sponsored</string>
-    <string name="ads">Ads</string>
-    <string name="remove_ads">Remove Ads</string>
-    <string name="ads_removed">Ads Removed</string>
-
-    <!--
-        Players
-    -->
-    <string name="number_players">Number of Players</string>
-    <string name="player">Player</string>
-    <string name="players">Players</string>
-    <string name="player_1">Player 1</string>
-    <string name="player_2">Player 2</string>
-    <string name="player_3">Player 3</string>
-    <string name="player_4">Player 4</string>
-    <string name="player_5">Player 5</string>
-    <string name="player_6">Player 6</string>
-
-    <!--
-        Team numbers
-    -->
-    <string name="team">Team</string>
-    <string name="teams">Teams</string>
-    <string name="team_1">Team 1</string>
-    <string name="team_2">Team 2</string>
-    <string name="team_3">Team 3</string>
-    <string name="team_4">Team 4</string>
-
-    <!--
-        Toast Messages
-    -->
-    <string name="reminder_cancel">Changes Discarded</string>
-    <string name="reminder_save">Changes Saved</string>
-    <string name="reminder_delete">Reminder Deleted</string>
-    <string name="reminder_duplicate">Reminder Duplicated</string>
-    <string name="no_changes">No Changes</string>
-    <!--
-        Settings categories
-    -->
-    <string name="settings_category_display">Display</string>
-    <string name="settings_category_sound">Sound</string>
-    <string name="settings_category_general">General</string>
-    <string name="settings_category_locale">Locale</string>
-    <string name="settings_category_theme">Theme</string>
-    <string name="settings_category_notification">Notification</string>
-    <string name="settings_category_notification_custom">Custom Notification</string>
-    <string name="settings_category_notification_override">Override Notification</string>
-    <string name="settings_category_defaults">Defaults</string>
-    <string name="settings_category_random">Randomness</string>
-    <string name="settings_category_widget">Widget</string>
-
-
-    <!--
-        Base App Settings
-    -->
-    <string name="setting_immersive_enable_primary">Immersive Mode</string>
-    <string name="setting_sound_enable_primary">Sound Effects</string>
-    <string name="setting_music_enable_primary">Music</string>
-    <string name="setting_language_picker_primary">Language</string>
-    <string name="setting_ringtone_picker_enable_primary">Custom Ringtone Picker</string>
-    <string name="setting_theme_picker_primary">App Theme</string>
-    <string name="setting_accent_color_primary">Accent Color</string>
-    <string name="setting_primary_color_primary">Primary Color</string>
-    <string name="setting_toolbar_text_color_primary">Toolbar Text Color</string>
-
-    <!--
-        Google Play specific
-    -->
-    <string name="unable_setup_iap">ERROR: Unable to setup in app billing</string>
-    <string name="failed_purchase">ERROR: Failed to purchase item</string>
-    <string name="failed_load_google_page">Failed to load page</string>
-    <string name="requires_google_play">This action requires Google Play Games</string>
-    <string name="compare_profiles">Compare Play Games Profiles</string>
-    <string name="view_profile">View Play Games Profile</string>
-    <string name="gamehelper_license_failed">License check failed.</string>
-    <string name="gamehelper_unknown_error">Unknown error.</string>
-    <string name="network_failure">Network Connection Failure</string>
-    <string name="gamehelper_sign_in_failed">Failed to sign in. Please check your network connection and try again.</string>
-
-    <!--
-        Randomly RemindMe Specific
-    -->
-    <string name="reminders">Reminders</string>
-    <string name="custom_icons">Custom Icons</string>
-    <string name="no_reminder">No Reminders</string>
-    <string name="no_reminders_yet">You have no reminders yet</string>
-    <string name="delete_reminder_prompt_title">Delete Reminder</string>
-    <string name="delete_reminder_prompt_content">Are you sure you want to delete this reminder?</string>
-    <string name="delete_custom_icon_prompt_title">Delete Icon</string>
-    <string name="delete_custom_icon_prompt_content">Are you sure you want to delete this icon?</string>
-    <string name="cancel_reminder_prompt_title">Discard Changes</string>
-    <string name="cancel_reminder_prompt_content">Are you sure you want to discard your changes?</string>
-    <string name="delete_vibrate_pattern_prompt_title">Delete Vibrate Pattern</string>
-    <string name="delete_vibrate_pattern_prompt_content">Are you sure you want to delete this vibrate pattern?</string>
-    <string name="delete_location_prompt_title">Delete Location</string>
-    <string name="delete_location_prompt_content">Are you sure you want to delete this location?</string>
-    <string name="duplicate_reminder_prompt_title">Duplicate Reminder</string>
-    <string name="duplicate_reminder_prompt_content">Are you sure you want to duplicate this reminder?</string>
-    <string name="include_log_prompt_title">@string/include_log</string>
-    <string name="include_log_prompt_content">Do you want to include the reminder log?</string>
-    <string name="notification_theme_title">Please select the notification style that matches your phone</string>
-    <string name="alerts_per_day">Reminders Per Day</string>
-
-    <!--
-        Randomly RemindMe Settings
-    -->
-    <string name="setting_notification_click_action_primary">Click action</string>
-    <string name="setting_notification_custom_primary">Custom Notification</string>
-    <string name="setting_notification_ongoing_primary">Ongoing Notification</string>
-    <string name="setting_notification_ongoing_secondary">Ongoing notifications are not supported on SmartWatches</string>
-    <string name="setting_notification_theme_primary">Custom Notification Background</string>
-    <string name="setting_notification_theme_text_primary">Custom Notification Text</string>
-    <string name="setting_first_day_of_week_primary">First Day of the Week</string>
-    <string name="setting_force_advanced_primary">Always Show Advanced Options</string>
-    <string name="setting_force_advanced_secondary">Disable to show advanced options on a per reminder basis</string>
-    <string name="setting_notification_swipe_away_action_primary">Swipe Action</string>
-    <string name="setting_notification_click_open_primary">Click Opens App</string>
-    <string name="setting_notification_swipe_away_open_primary">Swipe Opens App</string>
-    <string name="setting_random_amount_primary">Random</string>
-    <string name="setting_less_random_amount_primary">Less Random</string>
-    <string name="setting_even_amount_primary">Even</string>
-    <string name="setting_widget_theme_primary">Theme</string>
-    <string name="setting_widget_text_color_primary">Text Color</string>
-    <string name="setting_override_vibrate_primary">Override notification vibrate</string>
-    <string name="setting_override_ringtone_primary">Override notification tone playback</string>
-    <string name="setting_override_ringtone_secondary">This must be enabled to override the audio stream</string>
-    <string name="setting_override_ringtone_stream_primary">Override notification audio stream</string>
-    <string name="setting_override_speech_stream_primary">Override speech stream</string>
-
-    <!--
-        Google Play Settings
-    -->
-    <string name="google_play_settings_0_primary">Hide Banner Ads</string>
-    <string name="google_play_settings_0_secondary">Uncheck to hide banner ads but show full page ads instead</string>
-
-
-    <!--
-        Theme
-    -->
-    <string name="light">Light</string>
-    <string name="light_transparent">Light Transparent</string>
-    <string name="dark">Dark</string>
-    <string name="dark_transparent">Dark Transparent</string>
-    <string name="transparent">Transparent</string>
-    <string name="night">Night</string>
-    <string name="black">Black</string>
-    <string name="white">White</string>
-    <string name="light_text">Light Text</string>
-    <string name="dark_text">Dark Text</string>
-    <!--
-        Color List
-    -->
-    <string name="red">Red</string>
-    <string name="pink">Pink</string>
-    <string name="purple">Purple</string>
-    <string name="deep_purple">Deep Purple</string>
-    <string name="indigo">Indigo</string>
-    <string name="blue">Blue</string>
-    <string name="light_blue">Light Blue</string>
-    <string name="cyan">Cyan</string>
-    <string name="teal">Teal</string>
-    <string name="green">Green</string>
-    <string name="light_green">Light Green</string>
-    <string name="lime">Lime</string>
-    <string name="yellow">Yellow</string>
-    <string name="amber">Amber</string>
-    <string name="orange">Orange</string>
-    <string name="deep_orange">Deep Orange</string>
-    <string name="brown">Brown</string>
-    <string name="grey">Grey</string>
-    <string name="blue_grey">Blue Grey</string>
-    <string name="dark_grey">Dark Grey</string>
-
-    <!--
-        Uncategorized
-    -->
+    <string name="shown_again">Shown Again</string>
     <string name="edit">Edit</string>
     <string name="in_order">In Order</string>
     <string name="ordering">Ordering</string>
@@ -698,131 +1062,38 @@
     <string name="share_game">Share Game</string>
     <string name="download">Download</string>
     <string name="view">View</string>
-    <string name="automatic">Automatic</string>
-    <string name="manual">Manual</string>
-    <string name="local">Local</string>
-    <string name="online">Online</string>
-    <string name="offline">Offline</string>
-    <string name="header">Header</string>
-    <string name="footer">Footer</string>
     <string name="custom">Custom</string>
     <string name="title">Title</string>
     <string name="name">Name</string>
-    <string name="off">Off</string>
-    <string name="on">On</string>
-    <string name="notification">Notification</string>
-    <string name="select_notification">Select Notification</string>
     <string name="color">Color</string>
-    <string name="tone">Tone</string>
-    <string name="sound">Sound</string>
     <string name="repeat">Repeat</string>
     <string name="alarm">Alarm</string>
-    <string name="vibrate">Vibrate</string>
     <string name="general">General</string>
     <string name="range">Range</string>
     <string name="priority">Priority</string>
     <string name="accent">Accent</string>
     <string name="accent_color">Accent Color</string>
     <string name="choose_color">Choose Color</string>
-    <string name="get">Get</string>
-    <string name="type">Type</string>
-    <string name="missed">Missed</string>
-    <string name="restart">Restart</string>
-    <string name="restarting">Restarting</string>
-    <string name="restarting_app_please_wait">Restarting App, Please Wait</string>
-    <string name="forever">Forever</string>
-    <string name="nothing">Nothing</string>
-
     <string name="filter_type">Filter Type</string>
-    <string name="number_of_reminders">Number of reminders</string>
-    <string name="time_period">Time period</string>
-
-    <string name="random">Random</string>
-    <string name="randomly">Randomly</string>
-    <string name="less_random">Less Random</string>
-    <string name="even">Even</string>
-    <string name="evenly">Evenly</string>
-    <string name="specific">Specific</string>
-    <string name="interval">Interval</string>
-    <string name="specific_times">Specific Times</string>
-    <string name="repeat_every">Repeat Every</string>
-
     <string name="criteria">Criteria</string>
     <string name="trigger">Trigger</string>
     <string name="triggers">Triggers</string>
     <string name="trigger_type">Trigger Type</string>
-    <string name="advanced_options">Advanced Options</string>
-
-    <string name="get_the_beta">Get the Beta</string>
-
     <string name="led_pattern">LED Pattern</string>
     <string name="search">Search</string>
-
     <string name="customizer">Customizer</string>
     <string name="customize">Customize</string>
-
-    <string name="vibrate_pattern">Vibrate Pattern</string>
-    <string name="vibrate_patterns">Vibrate Patterns</string>
-    <string name="icons">Icons</string>
-    <string name="import_icon">Import Icon</string>
     <string name="create">Create</string>
-    <string name="create_vibrate_pattern">Create Vibrate Pattern</string>
-
-    <string name="system">System</string>
-    <string name="notifications">Notifications</string>
-    <string name="active">Active</string>
-    <string name="current">Current</string>
-    <string name="location">Location</string>
-    <string name="locations">Locations</string>
-
     <string name="home">Home</string>
     <string name="upcoming">Upcoming</string>
-
     <string name="edit_reminder">Edit Reminder</string>
     <string name="summary">Summary</string>
     <string name="note">Note</string>
     <string name="image">Image</string>
-
-
-    <string name="latitude">Latitude</string>
-    <string name="longitude">Longitude</string>
-    <string name="radius">Radius</string>
-    <string name="enter">Enter</string>
-    <string name="exit">Exit</string>
-    <string name="linger_time">Linger Time</string>
-
-    <string name="permission_granted">Permission Granted</string>
-    <string name="permission_denied">Permission Denied</string>
-    <string name="filename">Filename</string>
-    <string name="music">Music</string>
-    <string name="ring">Ring</string>
-    <string name="pro">Pro</string>
-    <string name="pro_feature">Pro Feature</string>
-    <string name="upgrade">Upgrade</string>
-    <string name="feature_requires_pro">This feature requires the pro version</string>
-    <string name="feature_requires_pro_limited">This feature is limited in the free version. Upgrade to pro or remove an existing item.</string>
-    <string name="upgrade_to_pro">Upgrade to Pro</string>
-    <string name="upgrade_now">Upgrade Now</string>
-
-    <string name="map">Map</string>
-
-    <string name="speak_time">Speak Time</string>
-    <string name="speak_title">Speak Title</string>
-    <string name="speak_message">Speak Message</string>
-
-    <string name="meter">Meter</string>
-    <string name="meters">Meters</string>
-
-    <string name="import_messages">Import Messages</string>
+    <string name="get">Get</string>
+    <string name="type">Type</string>
+    <string name="missed">Missed</string>
+    <string name="nothing">Nothing</string>
     <string name="clipboard">Clipboard</string>
-
-    <string name="message_separator">Message Separator ||||</string>
-
-    <string name="allow_if_any">Allow if any</string>
-    <string name="allow_if_all">Allow if all</string>
-    <string name="disallow_if_any">Disallow if any</string>
-    <string name="disallow_if_all">Disallow if all</string>
-    <string name="trigger_if_any">Trigger if any</string>
-    <string name="trigger_if_all">Trigger if all</string>
 
 </resources>

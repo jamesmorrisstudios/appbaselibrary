@@ -61,6 +61,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
 
     /**
      * Override to run custom post creation work on the options menu
+     *
      * @param menu Menu
      */
     @CallSuper

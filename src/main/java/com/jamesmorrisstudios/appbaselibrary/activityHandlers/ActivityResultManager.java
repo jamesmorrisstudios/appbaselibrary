@@ -8,7 +8,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
-import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -63,7 +62,7 @@ public final class ActivityResultManager extends BaseBuildManager {
         for (int i = 0; i < permissionRequests.size(); i++) {
             if (permissionRequests.get(i).requestCode == requestCode) {
                 AutoLockOrientation.disableAutoLock(getActivity());
-                if(grantResults.length == 0) {
+                if (grantResults.length == 0) {
                     permissionRequests.get(i).listener.permissionDenied();
                 } else {
                     for (int grantResult : grantResults) {
@@ -90,13 +89,13 @@ public final class ActivityResultManager extends BaseBuildManager {
     public final void onPermissionRequest(@NonNull final PermissionRequest request) {
         if (Build.VERSION.SDK_INT >= 23) {
             String[] permList = request.getRequestedPermissions();
-            if(permList.length == 0) {
+            if (permList.length == 0) {
                 request.listener.permissionGranted();
                 return;
             }
             for (String perm : permList) {
                 if (getActivity().checkSelfPermission(perm) != PackageManager.PERMISSION_GRANTED) {
-                    if(getActivity().shouldShowRequestPermissionRationale(perm)) {
+                    if (getActivity().shouldShowRequestPermissionRationale(perm)) {
                         request.listener.shouldShowRationale();
                         return;
                     }

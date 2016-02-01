@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<EditText
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_margin="8dp"
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/text1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="8dp"
     android:gravity="center_horizontal"
     android:imeOptions="actionNone"
     android:inputType="text|textAutoCorrect|textMultiLine|textCapSentences"
-    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-    android:singleLine="false" />
+    android:singleLine="false"
+    android:textAppearance="@style/TextAppearance.AppCompat.Medium" />

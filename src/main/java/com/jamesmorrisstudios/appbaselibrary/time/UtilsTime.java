@@ -607,19 +607,19 @@ public final class UtilsTime {
         StringBuilder sb = new StringBuilder(64);
         if (days > 0) {
             sb.append(days);
-            sb.append(days == 1 ? getStringSpaced(R.string.day_singular) : getStringSpaced(R.string.day_plural));
+            sb.append(days == 1 ? getStringSpaced(R.string.time_day) : getStringSpaced(R.string.time_days));
         }
         if (hours > 0) {
             sb.append(hours);
-            sb.append(hours == 1 ? getStringSpaced(R.string.hour_singular) : getStringSpaced(R.string.hour_plural));
+            sb.append(hours == 1 ? getStringSpaced(R.string.time_hour) : getStringSpaced(R.string.time_hours));
         }
         if (minutes > 0) {
             sb.append(minutes);
-            sb.append(minutes == 1 ? getStringSpaced(R.string.minute_singular) : getStringSpaced(R.string.minute_plural));
+            sb.append(minutes == 1 ? getStringSpaced(R.string.time_minute) : getStringSpaced(R.string.time_minutes));
         }
         if (seconds > 0) {
             sb.append(seconds);
-            sb.append(seconds == 1 ? getStringSpaced(R.string.second_singular) : getStringSpaced(R.string.second_plural));
+            sb.append(seconds == 1 ? getStringSpaced(R.string.time_second) : getStringSpaced(R.string.time_seconds));
         }
         return (sb.toString());
     }
@@ -869,6 +869,7 @@ public final class UtilsTime {
 
     /**
      * This does NOT change based on the first day of the week.
+     *
      * @param dateItem Date Item
      * @return Day of the week
      */
@@ -879,6 +880,7 @@ public final class UtilsTime {
 
     /**
      * This adjusts based off of the first day of the week
+     *
      * @param dateItem Date Item
      * @return Day of the week (1-7)
      */
@@ -886,8 +888,8 @@ public final class UtilsTime {
         Calendar calendar = getCalendar(dateItem);
         DayOfWeek day = getDayFromCalendar(calendar.get(Calendar.DAY_OF_WEEK));
         DayOfWeek[] week = getWeekArray();
-        for(int i=0; i<week.length; i++) {
-            if(week[i] == day) {
+        for (int i = 0; i < week.length; i++) {
+            if (week[i] == day) {
                 return i + 1;
             }
         }

@@ -31,7 +31,8 @@ public final class SingleChoiceIconDialogBuilder {
     private AlertDialog.Builder builder;
     private ListView list;
     private OptionPickerListener onOptionPickedListener;
-    @DrawableRes private int[] itemsIds;
+    @DrawableRes
+    private int[] itemsIds;
     private Uri[] itemsUri;
     private AlertDialog dialog;
     private int backgroundColor = -1;

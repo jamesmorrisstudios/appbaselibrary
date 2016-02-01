@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,8 +19,6 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.time.TimeItem;
 import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
-import com.wdullaer.materialdatetimepicker.time.RadialPickerLayout;
-import com.wdullaer.materialdatetimepicker.time.TimePickerDialog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -108,6 +105,17 @@ public final class EditTimesListDialog extends BaseDialogFragment {
     }
 
     /**
+     * Edit times listener
+     */
+    public interface EditTimesListListener {
+
+        /**
+         * @param times List of times
+         */
+        void onPositive(@NonNull final ArrayList<TimeItem> times);
+    }
+
+    /**
      * List adapter
      */
     class EditTimesListAdapter extends ArrayAdapter<TimeItem> {
@@ -181,17 +189,6 @@ public final class EditTimesListDialog extends BaseDialogFragment {
             }
             return view;
         }
-    }
-
-    /**
-     * Edit times listener
-     */
-    public interface EditTimesListListener {
-
-        /**
-         * @param times List of times
-         */
-        void onPositive(@NonNull final ArrayList<TimeItem> times);
     }
 
 }

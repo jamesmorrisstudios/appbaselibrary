@@ -4,7 +4,7 @@ import android.support.v4.app.DialogFragment;
 
 /**
  * Base dialog fragment
- *
+ * <p/>
  * Created by James on 12/21/2015.
  */
 public abstract class BaseDialogFragment extends DialogFragment {

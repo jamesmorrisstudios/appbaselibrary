@@ -96,10 +96,9 @@ public final class UtilsBits {
     }
 
     /**
-     *
      * @param value Value to convert
      * @param index Index in array
-     * @param dest Array to place the short into
+     * @param dest  Array to place the short into
      */
     public static void shortToByteArr(final short value, final int index, @NonNull final byte[] dest) {
         byte[] valueArr = shortToByteArr(value);

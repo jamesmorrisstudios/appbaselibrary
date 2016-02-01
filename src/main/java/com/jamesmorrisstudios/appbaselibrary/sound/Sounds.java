@@ -412,7 +412,7 @@ public final class Sounds {
 
         /**
          * @param playerIndex Index of music player
-         * @param volume Current volume
+         * @param volume      Current volume
          */
         public final void setValues(final int playerIndex, final float volume) {
             this.playerIndex = playerIndex;
@@ -440,7 +440,7 @@ public final class Sounds {
 
         /**
          * @param playerIndex Index of music player
-         * @param volume Current volume
+         * @param volume      Current volume
          */
         public final void setValues(final int playerIndex, final float volume) {
             this.playerIndex = playerIndex;

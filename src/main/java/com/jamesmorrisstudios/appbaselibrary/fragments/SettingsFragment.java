@@ -20,7 +20,6 @@ import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.UtilsDisplay;
-import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.RestartAppRequest;
@@ -369,6 +368,7 @@ public final class SettingsFragment extends BaseFragment {
 
     /**
      * Unused
+     *
      * @return 0
      */
     @Override

@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,7 +16,6 @@ import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.nononsenseapps.filepicker.FilePickerFragment;
 import com.nononsenseapps.filepicker.LogicHandler;
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -162,7 +160,7 @@ public final class CustomFilePickerFragment extends FilePickerFragment {
                 //noinspection SuspiciousMethodCalls
                 mCheckedVisibleViewHolders.remove(vh);
                 ((CheckableViewHolder) vh).checkbox.setChecked(false);
-                if(isImage(data)) {
+                if (isImage(data)) {
                     ImageView icon = (ImageView) vh.icon.findViewById(R.id.item_icon_sub);
                     ImageView image = (ImageView) vh.icon.findViewById(R.id.item_icon_image);
                     icon.setVisibility(View.GONE);
@@ -174,7 +172,7 @@ public final class CustomFilePickerFragment extends FilePickerFragment {
     }
 
     public boolean isImage(File file) {
-        final String[] okFileExtensions =  new String[] {"jpg", "png","jpeg"};
+        final String[] okFileExtensions = new String[]{"jpg", "png", "jpeg"};
         for (String extension : okFileExtensions) {
             if (file.getName().toLowerCase().endsWith(extension)) {
                 return true;

@@ -94,13 +94,13 @@ public final class DialogBuildManager extends BaseBuildManager {
         }
         i.putExtra(FilePickerActivity.EXTRA_START_PATH, Environment.getExternalStorageDirectory().getPath());
         if (UtilsTheme.getAppTheme() == UtilsTheme.AppTheme.LIGHT) {
-            if(UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
+            if (UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
                 i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeToolLight);
             } else {
                 i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeToolDark);
             }
         } else {
-            if(UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
+            if (UtilsTheme.getToolbarTheme() == UtilsTheme.ToolbarTheme.LIGHT_TEXT) {
                 i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDarkToolLight);
             } else {
                 i.putExtra(CustomFilePickerActivity.EXTRA_THEME, R.style.FilePickerThemeDarkToolDark);
@@ -149,7 +149,7 @@ public final class DialogBuildManager extends BaseBuildManager {
                         public void resultOk(@Nullable final Intent intent) {
                             String name = null;
                             Uri uri = null;
-                            if(intent != null) {
+                            if (intent != null) {
                                 uri = intent.getParcelableExtra(RingtoneManager.EXTRA_RINGTONE_PICKED_URI);
                                 if (uri != null) {
                                     Ringtone ringtone = RingtoneManager.getRingtone(getActivity(), uri);
@@ -555,7 +555,7 @@ public final class DialogBuildManager extends BaseBuildManager {
                 .setTitle(request.title)
                 .setText(request.text, request.hint)
                 .setListener(request.listener, AppBase.getContext().getString(R.string.okay), AppBase.getContext().getString(R.string.cancel));
-        if(request.message != null) {
+        if (request.message != null) {
             builder.setMessage(request.message);
         }
         builder.build().show();
@@ -564,7 +564,7 @@ public final class DialogBuildManager extends BaseBuildManager {
     @Subscribe
     public final void onImageRequest(@NonNull final ImageRequest request) {
         ImageDialogBuilder builder = ImageDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())
-            .setImage(request.imagePath);
+                .setImage(request.imagePath);
         AlertDialog dialog = builder.build();
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());

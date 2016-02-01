@@ -212,6 +212,7 @@ public final class UtilsVersion {
 
     /**
      * Dark icon for light theme and light icon for dark theme
+     *
      * @return The pro icon in the proper color for the app theme
      */
     @DrawableRes
@@ -225,6 +226,7 @@ public final class UtilsVersion {
 
     /**
      * Light for light text and dark for dark text
+     *
      * @return The pro icon in the proper color for the app theme to go in the toolbar
      */
     @DrawableRes

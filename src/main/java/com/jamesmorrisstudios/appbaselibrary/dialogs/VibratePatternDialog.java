@@ -194,8 +194,9 @@ public final class VibratePatternDialog extends BaseDialogFragment {
 
         /**
          * Constructor of the wrapper object
+         *
          * @param offTime OffTime
-         * @param onTime onTime
+         * @param onTime  onTime
          */
         public LongWrapper(final long offTime, final long onTime) {
             this.offTime = offTime;

@@ -40,7 +40,7 @@ public final class WriteFileAsync extends AsyncTask<Void, Void, Uri> {
      * @param data     byte array to write
      * @param location Storage location
      * @param listener Callback listener
-     * @param append true to append data, false to overwrite
+     * @param append   true to append data, false to overwrite
      */
     public WriteFileAsync(@NonNull final String path, @NonNull final byte[] data, @NonNull final FileWriter.FileLocation location, @NonNull final FileWriteListener listener, final boolean append) {
         this.path = path;
@@ -59,7 +59,7 @@ public final class WriteFileAsync extends AsyncTask<Void, Void, Uri> {
     @Nullable
     @Override
     protected final Uri doInBackground(final Void... params) {
-        if(append) {
+        if (append) {
             return FileWriter.appendFile(path, data, location);
         } else {
             return FileWriter.writeFile(path, data, location);

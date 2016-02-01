@@ -48,6 +48,7 @@ public abstract class BaseBuildManager {
 
         /**
          * NEVER store the result from this function.
+         *
          * @return The base Activity
          */
         @NonNull

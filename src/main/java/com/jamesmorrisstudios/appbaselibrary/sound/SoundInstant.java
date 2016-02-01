@@ -8,11 +8,8 @@ import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.UtilsLocale;
-import com.jamesmorrisstudios.appbaselibrary.UtilsLocation;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
-import com.jamesmorrisstudios.appbaselibrary.time.UtilsTime;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Locale;
 
@@ -97,8 +94,12 @@ public final class SoundInstant {
                     music.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
                         @Override
                         public void onCompletion(MediaPlayer mp) {
-                            music.stop();
-                            music.release();
+                            try {
+                                music.stop();
+                                music.release();
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
                         }
                     });
                     music.setLooping(false);
@@ -107,7 +108,7 @@ public final class SoundInstant {
                 }
             });
             music.prepareAsync();
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -123,7 +124,8 @@ public final class SoundInstant {
                 }
                 music.release();
             }
-        } catch (Exception ex) {
+        } catch (Exception e) {
+            e.printStackTrace();
             //Do nothing as the media player is stupid.
         }
     }
@@ -174,13 +176,13 @@ public final class SoundInstant {
         tts = new TextToSpeech(AppBase.getContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
-                if(status == TextToSpeech.SUCCESS) {
-                    int result=tts.setLanguage(UtilsLocale.getLocale());
-                    if(result==TextToSpeech.LANG_MISSING_DATA || result==TextToSpeech.LANG_NOT_SUPPORTED){
+                if (status == TextToSpeech.SUCCESS) {
+                    int result = tts.setLanguage(UtilsLocale.getLocale());
+                    if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         Log.e("SoundInstant", "This Language is not supported");
-                        result=tts.setLanguage(Locale.US);
+                        result = tts.setLanguage(Locale.US);
                     }
-                    if(result==TextToSpeech.LANG_MISSING_DATA || result==TextToSpeech.LANG_NOT_SUPPORTED){
+                    if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
                         Log.e("SoundInstant", "English not supported");
                         return;
                     }

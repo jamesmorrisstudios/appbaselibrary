@@ -20,16 +20,25 @@ public class UtilsClipboard {
     }
 
     public static void set(@NonNull final String text) {
-        ClipData clip = ClipData.newPlainText("",text);
+        ClipData clip = ClipData.newPlainText("", text);
         getClipboardManager().setPrimaryClip(clip);
     }
 
     @Nullable
     public static String getText() {
         ClipboardManager clipboard = getClipboardManager();
-        if (clipboard.hasPrimaryClip() && (clipboard.getPrimaryClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)) || clipboard.getPrimaryClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_HTML)) {
+        if (!clipboard.hasPrimaryClip()) {
+            return null;
+        }
+        ClipDescription clipDescription = clipboard.getPrimaryClipDescription();
+        if (clipDescription == null) {
+            return null;
+        }
+        if (clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN) || clipDescription.hasMimeType(ClipDescription.MIMETYPE_TEXT_HTML)) {
             ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
-            return item.getText().toString();
+            if (item != null) {
+                return item.getText().toString();
+            }
         }
         return null;
     }

@@ -13,8 +13,8 @@
         android:gravity="center_horizontal"
         android:imeOptions="actionNone"
         android:inputType="text|textAutoCorrect|textMultiLine|textCapSentences"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <ImageView
         android:id="@+id/delete1"

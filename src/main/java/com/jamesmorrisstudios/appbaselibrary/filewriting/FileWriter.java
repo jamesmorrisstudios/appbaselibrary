@@ -104,17 +104,17 @@ public final class FileWriter {
         int BUFFER = 2048;
         BufferedInputStream origin = null;
         File zipFile = getFile(zipFileName, zipLocation);
-        if(zipFile == null) {
+        if (zipFile == null) {
             return null;
         }
         try {
             FileOutputStream dest = new FileOutputStream(zipFile);
             ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(dest));
             byte data[] = new byte[BUFFER];
-            for(int i=0; i < files.length; i++) {
+            for (int i = 0; i < files.length; i++) {
                 Log.v("Compress", "Adding: " + files[i].getPath());
                 File file = getFile(files[i].getPath(), FileLocation.PATH);
-                if(file == null || !file.canRead()) {
+                if (file == null || !file.canRead()) {
                     continue;
                 }
                 FileInputStream fi = new FileInputStream(file);
@@ -129,7 +129,7 @@ public final class FileWriter {
             }
             out.close();
             return Uri.fromFile(zipFile);
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -142,9 +142,9 @@ public final class FileWriter {
             ZipEntry ze = null;
             while ((ze = zin.getNextEntry()) != null) {
                 Log.v("Decompress", "Unzipping " + ze.getName());
-                if(!ze.isDirectory()) {
+                if (!ze.isDirectory()) {
                     File file = getFile(ze.getName(), destLocation);
-                    if(file != null) {
+                    if (file != null) {
                         Log.v("Decompress", "Unzipping " + file.getPath());
                         FileOutputStream fout = new FileOutputStream(file);
                         for (int c = zin.read(); c != -1; c = zin.read()) {
@@ -157,7 +157,7 @@ public final class FileWriter {
                 }
             }
             zin.close();
-        } catch(Exception e) {
+        } catch (Exception e) {
             Log.e("Decompress", "unzip", e);
         }
     }
@@ -274,7 +274,7 @@ public final class FileWriter {
      * @param fileName The name of the file
      * @param bytes    The byte array to write
      * @param location If internal or external storage
-     * @param append True to append to the file, false to overwrite
+     * @param append   True to append to the file, false to overwrite
      * @return Uri of file or null if failed
      */
     @Nullable
@@ -357,7 +357,7 @@ public final class FileWriter {
      * Writes a string to a file
      *
      * @param fileName The name of the file
-     * @param string    The string to write
+     * @param string   The string to write
      * @param location If internal or external storage
      * @return Uri of file or null if failed
      */
@@ -370,7 +370,7 @@ public final class FileWriter {
      * Writes a string to a file
      *
      * @param fileName The name of the file
-     * @param string    The string to write
+     * @param string   The string to write
      * @param location If internal or external storage
      * @return Uri of file or null if failed
      */
@@ -383,9 +383,9 @@ public final class FileWriter {
      * Writes a String to a file
      *
      * @param fileName The name of the file
-     * @param string    The string to write
+     * @param string   The string to write
      * @param location If internal or external storage
-     * @param append True to append to the file, false to overwrite
+     * @param append   True to append to the file, false to overwrite
      * @return Uri of file or null if failed
      */
     @Nullable
