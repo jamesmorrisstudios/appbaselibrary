@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Version 2.0.0"</item>
+        <item name="line1">"Re-Branding \"Spende\" zu \"Pro\". Alle bisher kostenlose Funktionen und viele der neuen Funktionen sind kostenlos."</item>
+        <item name="line2">"eine App Schublade für Unterseiten hinzugefügt."</item>
+        <item name="line5">"Added Fähigkeit, Standard-Erinnerungseinstellungen für jede Mahnung zu setzen, die Sie erstellen."</item>
+        <item name="line3">"Aktualisiert die App Thema."</item>
+        <item name="line4">"Aktualisiert die Einstellungen und Hilfe &amp; Feedback-Seiten."</item>
+        <item name="line4">"eine App-Widget hinzugefügt."</item>
+        <item name="line5">"Viele zusätzliche Erinnerungsoptionen (alle anzeigen von \"Show Advanced\" Überprüfung)."</item>
+        <item name="line5">"Hinzugefügt Location Based Erinnerungen. In der \"Customizer\" Seite."</item>
+        <item name="line5">"Einige neue Features \"Pro\" Version gesperrt."</item>
+        <item name="line5">"App Themen"</item>
+        <item name="line5">"Fesselnde Modus."</item>
+        <item name="line4">"Benutzerdefinierte Vibrieren Muster."</item>
+        <item name="line4">"Benutzerdefinierte Benachrichtigungssymbole (Android 6.0+ nur)."</item>
+        <item name="line5">"Entdecken Sie die App für zusätzliche Funktionen. Weitere werden bald folgen."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nichts"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nichts"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nichts"</item>
+    </string-array>
+
+</resources>

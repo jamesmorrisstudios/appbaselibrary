@@ -255,10 +255,18 @@ public final class Notifier {
     @NonNull
     private static RemoteViews getContentView(@NonNull final NotificationContent notif, final boolean snooze) {
         RemoteViews contentView;
-        if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
-            contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_dark);
+        if(notif.isWideButtons()) {
+            if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+                contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_dark_wide);
+            } else {
+                contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_light_wide);
+            }
         } else {
-            contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_light);
+            if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+                contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_dark_narrow);
+            } else {
+                contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_light_narrow);
+            }
         }
         if (notif.themeBackground == NotificationContent.NotificationThemeBackground.DARK) {
             contentView.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundDark);
@@ -311,10 +319,18 @@ public final class Notifier {
     @NonNull
     private static RemoteViews getContentBigView(@NonNull final NotificationContent notif, final boolean snooze) {
         RemoteViews contentViewBig;
-        if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
-            contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_dark);
+        if(notif.isWideButtons()) {
+            if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+                contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_dark_wide);
+            } else {
+                contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_light_wide);
+            }
         } else {
-            contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_light);
+            if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
+                contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_dark_narrow);
+            } else {
+                contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_light_narrow);
+            }
         }
         if (notif.themeBackground == NotificationContent.NotificationThemeBackground.DARK) {
             contentViewBig.setInt(R.id.layout, "setBackgroundResource", R.color.backgroundDark);

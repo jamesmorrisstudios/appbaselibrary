@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Version 2.0.0"</item>
+        <item name="line1">"Re-marque \"don\" à \"Pro\". Toutes les fonctionnalités précédemment gratuites et un grand nombre des nouvelles fonctionnalités sont gratuites."</item>
+        <item name="line2">"Ajout d'un tiroir app pour les sous-pages."</item>
+        <item name="line5">"Ajout de la possibilité de définir les paramètres de rappel par défaut pour chaque rappel que vous créez."</item>
+        <item name="line3">"Mise à jour le thème de l'application."</item>
+        <item name="line4">"Mise à jour des paramètres et Aide et pages de rétroaction."</item>
+        <item name="line4">"Ajout d'un widget app."</item>
+        <item name="line5">"De nombreuses options de rappel supplémentaires (voir tous en cochant \"Afficher Avancé\")."</item>
+        <item name="line5">"rappels basés sur la localisation Ajouté. Ajouter à partir de la page \"Customizer\"."</item>
+        <item name="line5">"Quelques nouvelles fonctionnalités verrouillées à la version \"Pro\"."</item>
+        <item name="line5">"App Thèmes"</item>
+        <item name="line5">"Immersive mode."</item>
+        <item name="line4">"modèles de vibreur personnalisé."</item>
+        <item name="line4">"icônes de notification personnalisée (Android 6.0+ uniquement)."</item>
+        <item name="line5">"Explorez l'application pour des fonctionnalités supplémentaires. Plus viendront bientôt."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"rien"</item>
+    </string-array>
+
+</resources>

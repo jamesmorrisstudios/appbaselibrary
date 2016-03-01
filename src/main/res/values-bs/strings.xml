@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    
+    <string name="settings_category_display">"prikaz"</string>
+    
+    <string name="settings_category_sound">"zvuk"</string>
+    
+    <string name="settings_category_general">"general"</string>
+    
+    <string name="settings_category_locale">"locale"</string>
+    
+    <string name="settings_category_theme">"tema"</string>
+    
+    <string name="settings_category_notification">"obavijest"</string>
+    
+    <string name="settings_category_notification_custom">"Custom Notification"</string>
+    
+    <string name="settings_category_notification_override">"Override Notification"</string>
+    
+    <string name="settings_category_defaults">"defaults"</string>
+    
+    <string name="settings_category_random">"slučajnost"</string>
+    
+    <string name="settings_category_widget">"widget"</string>
+
+    
+    <string name="setting_immersive_enable_primary">"Impresivni Mode"</string>
+    
+    <string name="setting_sound_enable_primary">"zvučni efekti"</string>
+    
+    <string name="setting_music_enable_primary">"muzika"</string>
+    
+    <string name="setting_language_picker_primary">"jezik"</string>
+    
+    <string name="setting_ringtone_picker_enable_primary">"Custom zvona Picker"</string>
+    
+    <string name="setting_theme_picker_primary">"App Tema"</string>
+    
+    <string name="setting_accent_color_primary">"Accent boja"</string>
+    
+    <string name="setting_primary_color_primary">"osnovne boje"</string>
+    
+    <string name="setting_toolbar_text_color_primary">"Toolbar Boja teksta"</string>
+
+    
+    <string name="setting_notification_click_action_primary">"kliknite akcija"</string>
+    
+    <string name="setting_notification_custom_primary">"omogućiti"</string>
+    
+    <string name="setting_notification_button_style_primary">"Button Style"</string>
+    
+    <string name="setting_notification_ongoing_primary">"U toku Notification"</string>
+    
+    <string name="setting_notification_ongoing_secondary">"U toku obavijesti nisu podržane na pametni satovi"</string>
+    
+    <string name="setting_notification_theme_primary">"pozadina"</string>
+    
+    <string name="setting_notification_theme_text_primary">"Boja teksta"</string>
+    
+    <string name="setting_first_day_of_week_primary">"Prvi dan u nedelji"</string>
+    
+    <string name="setting_force_advanced_primary">"Uvijek Prikaži napredne opcije"</string>
+    
+    <string name="setting_force_advanced_secondary">"Onemogućiti da pokaže napredne opcije na po podsjetnik osnova"</string>
+    
+    <string name="setting_notification_swipe_away_action_primary">"Swipe Akcija"</string>
+    
+    <string name="setting_notification_click_open_primary">"Kliknite otvorila App"</string>
+    
+    <string name="setting_notification_swipe_away_open_primary">"Swipe otvorila App"</string>
+    
+    <string name="setting_random_amount_primary">"slučajan"</string>
+    
+    <string name="setting_less_random_amount_primary">"manje Random"</string>
+    
+    <string name="setting_even_amount_primary">"čak"</string>
+    
+    <string name="setting_widget_theme_primary">"tema"</string>
+    
+    <string name="setting_widget_text_color_primary">"Boja teksta"</string>
+    
+    <string name="setting_override_vibrate_primary">"Override vibrirati obavijest"</string>
+    
+    <string name="setting_override_ringtone_primary">"Zaobiđi ton obavijest reprodukciju"</string>
+    
+    <string name="setting_override_ringtone_secondary">"Ovo mora biti omogućeno da nadjača audio stream"</string>
+    
+    <string name="setting_override_ringtone_stream_primary">"Zaobiđi audio obavijest stream"</string>
+    
+    <string name="setting_override_speech_stream_primary">"Override govora stream"</string>
+
+    
+    <string name="time_millisecond">"milisekundi"</string>
+    
+    <string name="time_milliseconds">"milisekundi"</string>
+    
+    <string name="time_millisecond_abrev">"gospođa"</string>
+    
+    <string name="time_second">"drugi"</string>
+    
+    <string name="time_seconds">"sekundi"</string>
+    
+    <string name="time_second_abrev">"e"</string>
+    
+    <string name="time_minute">"minuta"</string>
+    
+    <string name="time_minutes">"zapisnik"</string>
+    
+    <string name="time_hour">"sat"</string>
+    
+    <string name="time_hours">"sati"</string>
+    
+    <string name="time_day">"dan"</string>
+    
+    <string name="time_days">"dani"</string>
+    
+    <string name="time_daily">"svakodnevno"</string>
+    
+    <string name="time_week">"sedmica"</string>
+    
+    <string name="time_weeks">"Weeks"</string>
+    
+    <string name="time_weekly">"nedjeljno"</string>
+    
+    <string name="time_month">"mjesec"</string>
+    
+    <string name="time_months">"Mjeseci"</string>
+    
+    <string name="time_monthly">"mjesečno"</string>
+    
+    <string name="time_year">"godina"</string>
+    
+    <string name="time_years">"godina"</string>
+    
+    <string name="time_yearly">"godišnje"</string>
+
+    
+    <string name="meter">"metar"</string>
+    
+    <string name="meters">"metara"</string>
+
+    
+    <string name="num_one">"jedan"</string>
+    
+    <string name="num_two">"dva"</string>
+    
+    <string name="num_three">"tri"</string>
+    
+    <string name="num_four">"četiri"</string>
+    
+    <string name="num_five">"pet"</string>
+    
+    <string name="num_six">"šest"</string>
+    
+    <string name="num_seven">"sedam"</string>
+    
+    <string name="num_eight">"osam"</string>
+    
+    <string name="num_nine">"devet"</string>
+    
+    <string name="num_ten">"deset"</string>
+
+    
+    <string name="num_first">"prvo"</string>
+    
+    <string name="num_second">"drugi"</string>
+    
+    <string name="num_third">"treći"</string>
+    
+    <string name="num_fourth">"četvrti"</string>
+    
+    <string name="num_fifth">"peti"</string>
+    
+    <string name="num_sixth">"šesti"</string>
+    
+    <string name="num_seventh">"sedmi"</string>
+    
+    <string name="num_eighth">"osmi"</string>
+    
+    <string name="num_ninth">"deveti"</string>
+    
+    <string name="num_tenth">"deseti"</string>
+
+    
+    <string name="day_sunday">"nedjelja"</string>
+    
+    <string name="day_monday">"ponedjeljak"</string>
+    
+    <string name="day_tuesday">"utorak"</string>
+    
+    <string name="day_wednesday">"srijeda"</string>
+    
+    <string name="day_thursday">"četvrtak"</string>
+    
+    <string name="day_friday">"petak"</string>
+    
+    <string name="day_saturday">"subota"</string>
+    
+    <string name="today">"danas"</string>
+    
+    <string name="tomorrow">"sutra"</string>
+    
+    <string name="yesterday">"juče"</string>
+
+    
+    <string name="days_of_week">"Dani u tjednu"</string>
+    
+    <string name="days_of_month">"Dani u mjesecu"</string>
+    
+    <string name="days_of_year">"Dani godine"</string>
+    
+    <string name="weeks_of_month">"Sedmice Mjesec"</string>
+    
+    <string name="weeks_of_year">"Sedmice godine"</string>
+    
+    <string name="months_of_year">"Meseci"</string>
+
+    
+    <string name="next">"sljedeći"</string>
+    
+    <string name="previous">"Prethodna"</string>
+    
+    <string name="back">"natrag"</string>
+    
+    <string name="forward">"naprijed"</string>
+
+    
+    <string name="pattern_1">"uzorak 1"</string>
+    
+    <string name="pattern_2">"uzorak 2"</string>
+    
+    <string name="pattern_3">"uzorak 3"</string>
+    
+    <string name="pattern_4">"uzorak 4"</string>
+    
+    <string name="pattern_5">"uzorak 5"</string>
+    
+    <string name="pattern_6">"uzorak 6"</string>
+
+    
+    <string name="select">"izabrati"</string>
+    
+    <string name="select_all">"Označi sve"</string>
+    
+    <string name="select_none">"Odaberite None"</string>
+
+    
+    <string name="diff_difficulty">"teškoća"</string>
+    
+    <string name="diff_select_difficulty">"Izaberite Teškoća"</string>
+    
+    <string name="diff_easy">"lako"</string>
+    
+    <string name="diff_normal">"normalan"</string>
+    
+    <string name="diff_hard">"tvrd"</string>
+
+    
+    <string name="enable">"omogućiti"</string>
+    
+    <string name="enabled">"omogućeno"</string>
+    
+    <string name="disable">"onesposobiti"</string>
+    
+    <string name="disabled">"invaliditetom"</string>
+    
+    <string name="lock">"zaključati"</string>
+    
+    <string name="unlock">"Unlock"</string>
+    
+    <string name="locked">"zaključan"</string>
+    
+    <string name="unlocked">"nezaključan"</string>
+    
+    <string name="open">"otvoreno"</string>
+    
+    <string name="close">"blizu"</string>
+    
+    <string name="opened">"otvorena"</string>
+    
+    <string name="closed">"zatvoreno"</string>
+    
+    <string name="show">"pokazati"</string>
+    
+    <string name="hide">"sakriti"</string>
+    
+    <string name="shown">"prikazan"</string>
+    
+    <string name="Hidden">"sakriven"</string>
+    
+    <string name="automatic">"automatski"</string>
+    
+    <string name="manual">"priručnik"</string>
+    
+    <string name="online">"online"</string>
+    
+    <string name="offline">"Offline"</string>
+    
+    <string name="active">"aktivan"</string>
+    
+    <string name="inactive">"neaktivan"</string>
+
+    
+    <string name="okay">"uredu"</string>
+    
+    <string name="cancel">"otkazati"</string>
+    
+    <string name="yes">"da"</string>
+    
+    <string name="no">"ne"</string>
+    
+    <string name="maybe">"Možda"</string>
+    
+    <string name="some">"neki"</string>
+    
+    <string name="none">"nijedan"</string>
+    
+    <string name="all">"sve"</string>
+    
+    <string name="set">"Set"</string>
+    
+    <string name="unset">"unset"</string>
+    
+    <string name="last">"posljednji"</string>
+    
+    <string name="first">"prvo"</string>
+    
+    <string name="every">"svaki"</string>
+    
+    <string name="other">"drugi"</string>
+    
+    <string name="off">"isključen"</string>
+    
+    <string name="on">"na"</string>
+    
+    <string name="delete_reminder_prompt_title">"Brisanje Podsjetnik"</string>
+    
+    <string name="delete_reminder_prompt_content">"Jeste li sigurni da želite izbrisati ovaj podsjetnik?"</string>
+    
+    <string name="delete_custom_icon_prompt_title">"Brisanje Icon"</string>
+    
+    <string name="delete_custom_icon_prompt_content">"Jeste li sigurni da želite izbrisati ovu ikonu?"</string>
+    
+    <string name="cancel_reminder_prompt_title">"Odbaci promjene"</string>
+    
+    <string name="cancel_reminder_prompt_content">"Jeste li sigurni da želite odbaciti promjene?"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_title">"Brisanje Vibrate uzorak"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_content">"Jeste li sigurni da želite izbrisati ovu vibraciju obrazac?"</string>
+    
+    <string name="delete_location_prompt_title">"Brisanje Lokacija"</string>
+    
+    <string name="delete_location_prompt_content">"Jeste li sigurni da želite izbrisati ovu lokaciju?"</string>
+    
+    <string name="duplicate_reminder_prompt_title">"Duplicate Podsjetnik"</string>
+    
+    <string name="duplicate_reminder_prompt_content">"Jeste li sigurni da želite kopirati ovaj podsjetnik?"</string>
+    
+    <string name="include_log_prompt_title">"uključiti Prijavite"</string>
+    
+    <string name="include_log_prompt_content">"Želite li uključiti podsjetnik dnevnik?"</string>
+    
+    <string name="include_default_reminder_prompt_title">"Uključiti Uobičajeno Podsjetnik"</string>
+    
+    <string name="include_default_reminder_prompt_content">"Želite li uključiti default podsjetnik?"</string>
+    
+    <string name="start_new_game_title">"Start New Game"</string>
+    
+    <string name="start_new_game_prompt">"Jeste li sigurni da želite pokrenuti novu igru?"</string>
+    
+    <string name="end_game_title">"End Game"</string>
+    
+    <string name="end_game_prompt">"Jeste li sigurni da želite završiti ovu igru?"</string>
+
+    
+    <string name="help">"pomoći"</string>
+    
+    <string name="about">"oko"</string>
+    
+    <string name="settings">"Postavke"</string>
+    
+    <string name="help_and_feedback">"Pomoć i povratne informacije"</string>
+    
+    <string name="rate_app">"Stopa App"</string>
+    
+    <string name="more_apps">"Više aplikacija"</string>
+    
+    <string name="tutorial">"tutorski"</string>
+    
+    <string name="read">"čitati"</string>
+    
+    <string name="watch">"Watch"</string>
+    
+    <string name="links">"Linkovi"</string>
+    
+    <string name="licenses">"licence"</string>
+    
+    <string name="help_translate">"Pomoć Translate"</string>
+    
+    <string name="get_the_beta">"Nabavite Beta"</string>
+    
+    <string name="achievements">"Dostignuća"</string>
+    
+    <string name="leaderboards">"rang"</string>
+    
+    <string name="high_scores">"visoke rezultate"</string>
+    
+    <string name="my_circles">"Moja Circles"</string>
+    
+    <string name="invitations">"pozivnice"</string>
+    
+    <string name="options">"mogućnosti"</string>
+    
+    <string name="game_options">"igra Mogućnosti"</string>
+    
+    <string name="advanced_options">"napredne opcije"</string>
+    
+    <string name="automatch">"Automatch"</string>
+    
+    <string name="guest">"gost"</string>
+
+    
+    <string name="light">"svjetlo"</string>
+    
+    <string name="light_transparent">"Light Transparent"</string>
+    
+    <string name="dark">"mrak"</string>
+    
+    <string name="dark_transparent">"Dark Transparent"</string>
+    
+    <string name="transparent">"transparentan"</string>
+    
+    <string name="night">"noć"</string>
+    
+    <string name="black">"crn"</string>
+    
+    <string name="white">"bijel"</string>
+    
+    <string name="system">"sistem"</string>
+    
+    <string name="light_text">"Light Tekst"</string>
+    
+    <string name="dark_text">"Dark Tekst"</string>
+
+    
+    <string name="red">"crven"</string>
+    
+    <string name="pink">"roze"</string>
+    
+    <string name="purple">"Purple"</string>
+    
+    <string name="deep_purple">"Tamno ljubičasta"</string>
+    
+    <string name="indigo">"indigo"</string>
+    
+    <string name="blue">"plava boja"</string>
+    
+    <string name="light_blue">"Svijetlo plavo"</string>
+    
+    <string name="cyan">"Cyan"</string>
+    
+    <string name="teal">"grogotovac"</string>
+    
+    <string name="green">"zelen"</string>
+    
+    <string name="light_green">"Light Green"</string>
+    
+    <string name="lime">"lipa"</string>
+    
+    <string name="yellow">"žut"</string>
+    
+    <string name="amber">"ćilibar"</string>
+    
+    <string name="orange">"narandža"</string>
+    
+    <string name="deep_orange">"Deep Orange"</string>
+    
+    <string name="brown">"braon"</string>
+    
+    <string name="grey">"Grey"</string>
+    
+    <string name="blue_grey">"plavo sivi"</string>
+    
+    <string name="dark_grey">"tamno siva"</string>
+
+    
+    <string name="major">"major"</string>
+    
+    <string name="minor">"manji"</string>
+    
+    <string name="aux">"aux"</string>
+    
+    <string name="version">"verzija"</string>
+    
+    <string name="production">"proizvodnja"</string>
+    
+    <string name="beta">"beta"</string>
+    
+    <string name="alpha">"alfa"</string>
+
+    
+    <string name="icon">"ikona"</string>
+    
+    <string name="icons">"Icons"</string>
+    
+    <string name="custom_icon">"Custom Icon"</string>
+    
+    <string name="custom_icons">"Custom Icons"</string>
+    
+    <string name="choose_icon">"Odaberite Icon"</string>
+
+    
+    <string name="backup">"rezerva"</string>
+    
+    <string name="import_">"uvoz"</string>
+    
+    <string name="export">"izvoz"</string>
+    
+    <string name="export_log">"Export Dnevnik"</string>
+    
+    <string name="import_export">"Import / Export"</string>
+    
+    <string name="export_location">"izvoz Lokacija"</string>
+    
+    <string name="import_failed">"Import Failed"</string>
+    
+    <string name="import_canceled">"uvoz Poništen"</string>
+    
+    <string name="export_failed">"izvoz nije uspjelo"</string>
+    
+    <string name="export_canceled">"izvoz Poništen"</string>
+    
+    <string name="import_complete">"Import Complete"</string>
+    
+    <string name="export_complete">"izvoz Kompletna"</string>
+    
+    <string name="importing_please_wait">"Uvoz, molimo pričekajte"</string>
+    
+    <string name="exporting_please_wait">"Izvoz, molimo pričekajte"</string>
+
+    
+    <string name="snooze">"drijemež"</string>
+    
+    <string name="snoozed">"drijemao"</string>
+    
+    <string name="auto_snooze">"Auto Snooze"</string>
+    
+    <string name="manual_snooze">"Ručni Snooze"</string>
+
+    
+    <string name="message">"poruka"</string>
+    
+    <string name="messages">"poruke"</string>
+    
+    <string name="num_messages">"Broj poruka"</string>
+    
+    <string name="edit_messages">"Uredi Poruke"</string>
+    
+    <string name="view_messages">"Pogledaj Poruke"</string>
+    
+    <string name="import_messages">"uvoz Poruke"</string>
+    
+    <string name="message_separator">"Poruka Separator ||||"</string>
+
+    
+    <string name="sign_in">"Prijavi se"</string>
+    
+    <string name="signed_in">"potpisan U"</string>
+    
+    <string name="sign_in_failed">"Prijavi se nije uspio"</string>
+    
+    <string name="sign_out">"Odjaviti se"</string>
+    
+    <string name="signed_out">"potpisan Out"</string>
+
+    
+    <string name="low">"nizak"</string>
+    
+    <string name="mid">"srednji"</string>
+    
+    <string name="high">"visok"</string>
+    
+    <string name="min">"min"</string>
+    
+    <string name="max">"maksimum"</string>
+    
+    <string name="minimum">"minimum"</string>
+    
+    <string name="medium">"srednji"</string>
+    
+    <string name="maximum">"maksimum"</string>
+    
+    <string name="small">"mali"</string>
+    
+    <string name="large">"veliki"</string>
+    
+    <string name="short_">"kratak"</string>
+    
+    <string name="long_">"dugačak"</string>
+    
+    <string name="slow">"sporo"</string>
+    
+    <string name="fast">"brzo"</string>
+    
+    <string name="quick">"brz"</string>
+    
+    <string name="narrow">"uzak"</string>
+    
+    <string name="wide">"širok"</string>
+
+    
+    <string name="thank_you">"Hvala ti"</string>
+    
+    <string name="youre_welcome">"Nema na čemu"</string>
+    
+    <string name="please">"molim vas"</string>
+
+    
+    <string name="you">"vas"</string>
+    
+    <string name="me">"mene"</string>
+    
+    <string name="us">"nas"</string>
+    
+    <string name="we">"mi"</string>
+    
+    <string name="them">"ih"</string>
+
+    
+    <string name="short_on">"Kratka na"</string>
+    
+    <string name="medium_on">"Medium na"</string>
+    
+    <string name="long_on">"Long na"</string>
+    
+    <string name="short_off">"Kratki off"</string>
+    
+    <string name="medium_off">"Srednji off"</string>
+    
+    <string name="long_off">"Long off"</string>
+
+    
+    <string name="pro">"profesionalac"</string>
+    
+    <string name="pro_feature">"Pro karakteristike"</string>
+    
+    <string name="upgrade">"nadogradnja"</string>
+    
+    <string name="feature_requires_pro">"Ova funkcija zahtijeva Pro verzija"</string>
+    
+    <string name="feature_requires_pro_limited">"Ova opcija je ograničena u besplatnoj verziji. Nadogradnja na Pro ili ukloniti postojeće stavke."</string>
+    
+    <string name="upgrade_to_pro">"Nadogradnja na Pro"</string>
+    
+    <string name="upgrade_now">"Nadogradi sada"</string>
+
+    
+    <string name="start_date">"Datum početka"</string>
+    
+    <string name="end_date">"Kraj datum"</string>
+    
+    <string name="start_time">"Vrijeme početka"</string>
+    
+    <string name="end_time">"End Time"</string>
+    
+    <string name="end_type">"Kraj Tip"</string>
+    
+    <string name="timing_type">"timing Tip"</string>
+    
+    <string name="edit_times">"Uredi Times"</string>
+    
+    <string name="time">"vrijeme"</string>
+    
+    <string name="times">"puta"</string>
+    
+    <string name="timing">"podešavanje vremena"</string>
+    
+    <string name="all_time">"Sve vrijeme"</string>
+    
+    <string name="every_week">"Svake sedmice"</string>
+    
+    <string name="lifetime">"život"</string>
+    
+    <string name="forever">"zauvijek"</string>
+    
+    <string name="time_period">"Vremenski period"</string>
+    
+    <string name="random">"slučajan"</string>
+    
+    <string name="randomly">"slučajno"</string>
+    
+    <string name="less_random">"manje Random"</string>
+    
+    <string name="even">"čak"</string>
+    
+    <string name="evenly">"jednako"</string>
+    
+    <string name="specific">"specifičan"</string>
+    
+    <string name="interval">"interval"</string>
+    
+    <string name="specific_times">"Specifična Times"</string>
+    
+    <string name="repeat_every">"ponovite Svaki"</string>
+
+    
+    <string name="data_loaded">"Loaded podataka"</string>
+    
+    <string name="file">"fajl"</string>
+    
+    <string name="local_storage">"Lokalno skladištenje"</string>
+    
+    <string name="filename">"Ime dokumenta"</string>
+
+    
+    <string name="permission_granted">"Imate dozvolu"</string>
+    
+    <string name="permission_denied">"Dozvola odbijena"</string>
+    
+    <string name="allow_if_any">"Dozvolite ako postoje"</string>
+    
+    <string name="allow_if_all">"Dozvolite ako sve"</string>
+    
+    <string name="disallow_if_any">"Zabranite ako postoje"</string>
+    
+    <string name="disallow_if_all">"Zabranite ako sve"</string>
+    
+    <string name="trigger_if_any">"Trigger ako postoje"</string>
+    
+    <string name="trigger_if_all">"Trigger ako sve"</string>
+
+    
+    <string name="reminders">"podsjetnici"</string>
+    
+    <string name="no_reminder">"No Podsjetnici"</string>
+    
+    <string name="no_reminders_yet">"Imate još nema podsjetnika"</string>
+    
+    <string name="alerts_per_day">"Podsjetnici po danu"</string>
+    
+    <string name="number_of_reminders">"Broj podsjetnika"</string>
+
+    
+    <string name="changes_discarded">"promjene Odbačena"</string>
+    
+    <string name="changes_saved">"promjene spremljene"</string>
+    
+    <string name="no_changes">"Bez promjena"</string>
+    
+    <string name="select_at_least_one_item">"Odaberite barem jednu stavku"</string>
+
+    
+    <string name="loading">"utovar"</string>
+    
+    <string name="loaded">"napunjen"</string>
+    
+    <string name="loading_failed">"loading Failed"</string>
+    
+    <string name="loading_complete">"od Kompletna"</string>
+    
+    <string name="error">"greška"</string>
+    
+    <string name="fail">"fail"</string>
+    
+    <string name="failed">"Failed"</string>
+    
+    <string name="success">"uspjeh"</string>
+    
+    <string name="successful">"uspješan"</string>
+    
+    <string name="unsuccessful">"neuspješan"</string>
+    
+    <string name="valid">"Valid"</string>
+    
+    <string name="invalid">"nevažeći"</string>
+    
+    <string name="complete">"kompletan"</string>
+    
+    <string name="completed">"završen"</string>
+    
+    <string name="skipped">"preskočene"</string>
+    
+    <string name="incomplete">"nepotpun"</string>
+    
+    <string name="dismiss">"odbaciti"</string>
+    
+    <string name="dismissed">"odbacio"</string>
+    
+    <string name="acknowledge">"priznati"</string>
+    
+    <string name="acknowledged">"priznat"</string>
+    
+    <string name="add">"Dodati"</string>
+    
+    <string name="added">"Dodano"</string>
+    
+    <string name="add_item">"Dodaj stavku"</string>
+    
+    <string name="remove">"ukloniti"</string>
+    
+    <string name="removed">"udaljen"</string>
+    
+    <string name="remove_item">"Ukloni stavku"</string>
+    
+    <string name="delete">"izbrisati"</string>
+    
+    <string name="deleted">"Deleted"</string>
+    
+    <string name="duplicate">"duplikat"</string>
+    
+    <string name="duplicated">"duplirani"</string>
+    
+    <string name="restart">"Restart"</string>
+    
+    <string name="restarting">"Ponovno pokretanje"</string>
+    
+    <string name="restarting_app_please_wait">"Ponovno pokretanje aplikacija, molimo pričekajte"</string>
+
+    
+    <string name="map">"karta"</string>
+    
+    <string name="location">"lokacija"</string>
+    
+    <string name="locations">"Lokacije"</string>
+    
+    <string name="latitude">"širina"</string>
+    
+    <string name="longitude">"dužina"</string>
+    
+    <string name="radius">"poluprečnik"</string>
+    
+    <string name="enter">"ući"</string>
+    
+    <string name="exit">"Izlaz"</string>
+    
+    <string name="linger_time">"Vrem"</string>
+
+    
+    <string name="music">"muzika"</string>
+    
+    <string name="ring">"prsten"</string>
+    
+    <string name="speak_time">"Speak Time"</string>
+    
+    <string name="speak_title">"Speak Naslov"</string>
+    
+    <string name="speak_message">"Speak Message"</string>
+    
+    <string name="tone">"ton"</string>
+    
+    <string name="sound">"zvuk"</string>
+
+    
+    <string name="notification">"obavijest"</string>
+    
+    <string name="notifications">"Obavijesti"</string>
+    
+    <string name="select_notification">"Select Notification"</string>
+
+    
+    <string name="vibrate">"vibrirati"</string>
+    
+    <string name="vibrate_pattern">"Vibrate uzorak"</string>
+    
+    <string name="vibrate_patterns">"Vibrate Patterns"</string>
+    
+    <string name="create_vibrate_pattern">"Napravi Vibrate uzorak"</string>
+
+    
+
+    
+    <string name="you_win">"Pobijedio si"</string>
+    
+    <string name="you_won">"Ti si pobijedio"</string>
+    
+    <string name="you_lost">"Izgubio si"</string>
+    
+    <string name="you_lose">"Gubiš"</string>
+    
+    <string name="you_tied">"Ti Već nastupao"</string>
+    
+    <string name="winner">"pobjednik"</string>
+    
+    <string name="winners">"Pobjednici"</string>
+    
+    <string name="loser">"Gubitnik"</string>
+    
+    <string name="Losers">"gubitnici"</string>
+
+    
+    <string name="number_of_players">"Broj igrača"</string>
+    
+    <string name="player">"igrač"</string>
+    
+    <string name="players">"Igrači"</string>
+    
+    <string name="player_1">"Player 1"</string>
+    
+    <string name="player_2">"Player 2"</string>
+    
+    <string name="player_3">"igrača 3"</string>
+    
+    <string name="player_4">"Player 4"</string>
+    
+    <string name="player_5">"igrača 5"</string>
+    
+    <string name="player_6">"igrača 6"</string>
+    
+    <string name="team">"tim"</string>
+    
+    <string name="teams">"Timovi"</string>
+    
+    <string name="number_of_teams">"Broj timova"</string>
+    
+    <string name="team_1">"Team 1"</string>
+    
+    <string name="team_2">"Team 2"</string>
+    
+    <string name="team_3">"Tim 3"</string>
+    
+    <string name="team_4">"Tim 4"</string>
+
+    
+    <string name="requires_google_play">"Ova akcija zahtijeva Google Play igre"</string>
+    
+    <string name="compare_profiles">"Usporedba Play Games profili"</string>
+    
+    <string name="view_profile">"Vidi Play Games Profil"</string>
+
+    
+    <string name="sponsored">"Sponzorirani"</string>
+    
+    <string name="ads">"Aplikacije"</string>
+    
+    <string name="remove_ads">"Skloni reklame"</string>
+    
+    <string name="ads_removed">"Aplikacije Uklonjeno"</string>
+
+    
+    <string name="current_score">"Trenutni rezultat"</string>
+    
+    <string name="top_score">"Top Score"</string>
+    
+    <string name="score">"skor"</string>
+
+    
+    <string name="your_turn">"Tvoj red"</string>
+    
+    <string name="their_turn">"svoj red"</string>
+    
+    <string name="turn">"zaokret"</string>
+    
+    <string name="turns">"Turns"</string>
+    
+    <string name="round">"krug"</string>
+    
+    <string name="rounds">"Rounds"</string>
+    
+    <string name="match">"utakmica"</string>
+    
+    <string name="matches">"šibice"</string>
+
+    
+    <string name="dollar">"dolar"</string>
+    
+    <string name="dollars">"dolara"</string>
+    
+    <string name="buy">"kupiti"</string>
+    
+    <string name="sell">"prodati"</string>
+    
+    <string name="purchase">"kupovina"</string>
+    
+    <string name="diamond">"dijamant"</string>
+    
+    <string name="diamonds">"Diamonds"</string>
+
+    
+    <string name="rematch">"revanš"</string>
+    
+    <string name="try_again">"Pokušaj ponovo"</string>
+    
+    <string name="touch_continue">"Dodirnite da Nastavi"</string>
+    
+    <string name="touch_resume">"Dodirnite da nastavi"</string>
+    
+    <string name="touch_edit">"Dodirnite za uređivanje"</string>
+    
+    <string name="pause">"pauza"</string>
+    
+    <string name="pause_game">"Pauza igra"</string>
+    
+    <string name="resume">"rezime"</string>
+    
+    <string name="resume_game">"Nastavak igre"</string>
+    
+    <string name="new_">"novi"</string>
+    
+    <string name="new_game">"Nova igra"</string>
+    
+    <string name="select_save">"Odaberite Save"</string>
+    
+    <string name="save">"Save"</string>
+    
+    <string name="save_game">"Save Game"</string>
+    
+    <string name="load">"opterećenje"</string>
+    
+    <string name="load_game">"Load Game"</string>
+    
+    <string name="game_over">"Game Over"</string>
+    
+    <string name="start">"start"</string>
+    
+    <string name="start_game">"Start Game"</string>
+    
+    <string name="end">"kraj"</string>
+    
+    <string name="end_game">"End Game"</string>
+    
+    <string name="stop">"Stop"</string>
+    
+    <string name="stop_game">"Stop Game"</string>
+
+    
+
+    <string name="free">"besplatno"</string>
+    <string name="pull">"povući"</string>
+    <string name="wild">"divlji"</string>
+    <string name="normal">"normalan"</string>
+    <string name="public_">"javnost"</string>
+    <string name="private_">"privatan"</string>
+    <string name="default_">"Uobičajeno"</string>
+    <string name="defaults">"defaults"</string>
+    <string name="completed_early">"završena Early"</string>
+    <string name="no_items_found">"Nema pronađenih"</string>
+    <string name="release_notes">"Napomene o izdanju"</string>
+    <string name="logo">"logo"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"Poseban"</string>
+    <string name="shown_again">"prikazano Again"</string>
+    <string name="edit">"Uredi"</string>
+    <string name="in_order">"U redu"</string>
+    <string name="ordering">"naručivanje"</string>
+    <string name="preview">"Pregled"</string>
+    <string name="share">"udio"</string>
+    <string name="share_game">"Share Game"</string>
+    <string name="download">"Preuzimanje"</string>
+    <string name="view">"pogled"</string>
+    <string name="custom">"običaj"</string>
+    <string name="title">"naslov"</string>
+    <string name="name">"ime"</string>
+    <string name="color">"boja"</string>
+    <string name="repeat">"ponavljanje"</string>
+    <string name="alarm">"alarm"</string>
+    <string name="general">"general"</string>
+    <string name="range">"domet"</string>
+    <string name="priority">"prioritet"</string>
+    <string name="accent">"naglasak"</string>
+    <string name="accent_color">"Accent boja"</string>
+    <string name="choose_color">"Odaberite boju"</string>
+    <string name="filter_type">"Tip filtera"</string>
+    <string name="criteria">"kriteriji"</string>
+    <string name="trigger">"okidač"</string>
+    <string name="triggers">"okidači"</string>
+    <string name="trigger_type">"Trigger Tip"</string>
+    <string name="led_pattern">"LED uzorak"</string>
+    <string name="search">"pretraživanje"</string>
+    <string name="customizer">"customiZer"</string>
+    <string name="customize">"prilagodi"</string>
+    <string name="create">"stvoriti"</string>
+    <string name="home">"kući"</string>
+    <string name="upcoming">"predstojeći"</string>
+    <string name="edit_reminder">"Uredi Podsjetnik"</string>
+    <string name="summary">"rezime"</string>
+    <string name="note">"Bilješka"</string>
+    <string name="image">"slika"</string>
+    <string name="get">"dobiti"</string>
+    <string name="type">"tip"</string>
+    <string name="missed">"propušteni"</string>
+    <string name="nothing">"ništa"</string>
+    <string name="clipboard">"clipboard"</string>
+
+
+
+    
+    <string name="test_string_ignore">test</string>
+
+</resources>

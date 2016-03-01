@@ -40,6 +40,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.Charset;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -136,29 +138,33 @@ public final class FileWriter {
     }
 
     public static void readFromZip(@NonNull final Uri zipFile, @NonNull final FileLocation destLocation) {
-        try {
-            FileInputStream fin = new FileInputStream(zipFile.getPath());
-            ZipInputStream zin = new ZipInputStream(fin);
-            ZipEntry ze = null;
-            while ((ze = zin.getNextEntry()) != null) {
-                Log.v("Decompress", "Unzipping " + ze.getName());
-                if (!ze.isDirectory()) {
-                    File file = getFile(ze.getName(), destLocation);
-                    if (file != null) {
-                        Log.v("Decompress", "Unzipping " + file.getPath());
-                        FileOutputStream fout = new FileOutputStream(file);
-                        for (int c = zin.read(); c != -1; c = zin.read()) {
-                            fout.write(c);
+        if (isContentUri(zipFile, FileLocation.PATH)) {
+            readFromZipContent(zipFile, destLocation);
+        } else {
+            try {
+                FileInputStream fin = new FileInputStream(zipFile.getPath());
+                ZipInputStream zin = new ZipInputStream(fin);
+                ZipEntry ze = null;
+                while ((ze = zin.getNextEntry()) != null) {
+                    Log.v("Decompress", "Unzipping " + ze.getName());
+                    if (!ze.isDirectory()) {
+                        File file = getFile(ze.getName(), destLocation);
+                        if (file != null) {
+                            Log.v("Decompress", "Unzipping " + file.getPath());
+                            FileOutputStream fout = new FileOutputStream(file);
+                            for (int c = zin.read(); c != -1; c = zin.read()) {
+                                fout.write(c);
+                            }
+                            fout.close();
+                            Log.v("Decompress", "Unzipping File Written " + ze.getName());
                         }
-                        fout.close();
-                        Log.v("Decompress", "Unzipping File Written " + ze.getName());
+                        zin.closeEntry();
                     }
-                    zin.closeEntry();
                 }
+                zin.close();
+            } catch (Exception e) {
+                Log.e("Decompress", "unzip", e);
             }
-            zin.close();
-        } catch (Exception e) {
-            Log.e("Decompress", "unzip", e);
         }
     }
 
@@ -432,10 +438,23 @@ public final class FileWriter {
      */
     @Nullable
     public synchronized static String readString(@NonNull final Uri uri, @NonNull final FileLocation location) {
+        byte[] data = readFile(uri, location);
+        if(data == null) {
+            return null;
+        }
+        try {
+            return new String(data, Utils.stringType);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+
+        /*
         if (isContentUri(uri, location)) {
             return readStringContent(uri);
         }
         return readStringSub(getFile(uri.getPath(), location));
+        */
     }
 
     /**
@@ -478,6 +497,44 @@ public final class FileWriter {
             }
         }
         return false;
+    }
+
+    private static void readFromZipContent(@NonNull final Uri zipFile, @NonNull final FileLocation destLocation) {
+        ParcelFileDescriptor mInputPFD;
+        try {
+            mInputPFD = AppBase.getContext().getContentResolver().openFileDescriptor(zipFile, "r");
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return;
+        }
+        if (mInputPFD == null) {
+            return;
+        }
+        FileDescriptor fd = mInputPFD.getFileDescriptor();
+        try {
+            FileInputStream fin = new FileInputStream(fd);
+            ZipInputStream zin = new ZipInputStream(fin);
+            ZipEntry ze = null;
+            while ((ze = zin.getNextEntry()) != null) {
+                Log.v("Decompress", "Unzipping " + ze.getName());
+                if (!ze.isDirectory()) {
+                    File file = getFile(ze.getName(), destLocation);
+                    if (file != null) {
+                        Log.v("Decompress", "Unzipping " + file.getPath());
+                        FileOutputStream fout = new FileOutputStream(file);
+                        for (int c = zin.read(); c != -1; c = zin.read()) {
+                            fout.write(c);
+                        }
+                        fout.close();
+                        Log.v("Decompress", "Unzipping File Written " + ze.getName());
+                    }
+                    zin.closeEntry();
+                }
+            }
+            zin.close();
+        } catch (Exception e) {
+            Log.e("Decompress", "unzip", e);
+        }
     }
 
     /**

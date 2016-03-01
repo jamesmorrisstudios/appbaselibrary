@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versão 2.0.0"</item>
+        <item name="line1">"Re-branded \"doação\" para \"Pro\". Todos os recursos anteriormente livres e muitas das novas funcionalidades são gratuitas."</item>
+        <item name="line2">"Adicionado uma gaveta app para sub-páginas."</item>
+        <item name="line5">"capacidade de definir configurações padrão do lembrete para cada lembrete de que você cria acrescentou."</item>
+        <item name="line3">"Atualizado o tema app."</item>
+        <item name="line4">"Atualizado Configurações e Ajuda &amp; páginas feedback."</item>
+        <item name="line4">"Adicionado um widget app."</item>
+        <item name="line5">"Muitas opções de lembrete adicionais (mostrar todos marcando \"Mostrar avançada\")."</item>
+        <item name="line5">"lembretes baseados em localização acrescentou. Adicionar a partir da página \"Customizer\"."</item>
+        <item name="line5">"Algumas das novas funcionalidades bloqueado para a versão \"Pro\"."</item>
+        <item name="line5">"Temas App"</item>
+        <item name="line5">"Modo envolvente."</item>
+        <item name="line4">"padrões de vibração personalizado."</item>
+        <item name="line4">"ícones de notificação personalizada (Android 6.0+ apenas)."</item>
+        <item name="line5">"Explorar o aplicativo para recursos adicionais. Mais será em breve."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+</resources>

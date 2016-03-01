@@ -1,11 +1,13 @@
 package com.jamesmorrisstudios.appbaselibrary.activityHandlers;
 
+import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -85,7 +87,7 @@ public final class DialogBuildManager extends BaseBuildManager {
     public final void onFileBrowserRequest(@NonNull final FileBrowserRequest request) {
         Intent i = new Intent(AppBase.getContext(), CustomFilePickerActivity.class);
         i.putExtra(CustomFilePickerActivity.EXTRA_EXTENSION, request.extension);
-        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, false);
+        i.putExtra(FilePickerActivity.EXTRA_ALLOW_MULTIPLE, request.allowMultiSelect);
         i.putExtra(FilePickerActivity.EXTRA_ALLOW_CREATE_DIR, request.allowCreateDir);
         if (request.dirType == FileBrowserRequest.DirType.DIRECTORY) {
             i.putExtra(FilePickerActivity.EXTRA_MODE, FilePickerActivity.MODE_DIR);
@@ -111,7 +113,30 @@ public final class DialogBuildManager extends BaseBuildManager {
         new StartActivityForResultRequest(i, new StartActivityForResultRequest.OnStartActivityForResultListener() {
             @Override
             public void resultOk(Intent intent) {
-                request.onFileBrowserRequestListener.itemSelected(intent.getData());
+                if(request.allowMultiSelect) {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                        ClipData clip = intent.getClipData();
+                        if (clip != null) {
+                            ArrayList<Uri> uris = new ArrayList<>();
+                            for (int i = 0; i < clip.getItemCount(); i++) {
+                                uris.add(clip.getItemAt(i).getUri());
+                            }
+                            request.onFileBrowserRequestListener.multiItemSelected(uris);
+                        }
+                    } else {
+                        ArrayList<String> paths = intent.getStringArrayListExtra(FilePickerActivity.EXTRA_PATHS);
+                        if (paths != null) {
+                            ArrayList<Uri> uris = new ArrayList<>();
+                            for (String path: paths) {
+                                uris.add(Uri.parse(path));
+                            }
+                            request.onFileBrowserRequestListener.multiItemSelected(uris);
+                        }
+                    }
+                    request.onFileBrowserRequestListener.canceled();
+                } else {
+                    request.onFileBrowserRequestListener.itemSelected(intent.getData());
+                }
             }
 
             @Override
@@ -245,7 +270,6 @@ public final class DialogBuildManager extends BaseBuildManager {
                 .setTitle(getActivity().getResources().getString(R.string.choose_color))
                 .initialColor(request.initialColor)
                 .wheelType(ColorPickerView.WHEEL_TYPE.CIRCLE)
-                .noSliders()
                 .density(6)
                 .setOnColorSelectedListener(new OnColorSelectedListener() {
                     @Override
@@ -253,6 +277,8 @@ public final class DialogBuildManager extends BaseBuildManager {
                         //Unused as the onPositive call gives the same info
                     }
                 })
+                .showLightnessSlider(request.showLightnessSlider)
+                .showAlphaSlider(false)
                 .setPositiveButton(getActivity().getResources().getString(R.string.okay), request.onColorPickerClickListener)
                 .setNegativeButton(getActivity().getResources().getString(R.string.cancel), request.onNegative);
         if (request.onDisable != null) {

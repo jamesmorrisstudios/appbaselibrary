@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versió 2.0.0"</item>
+        <item name="line1">"Re-marca \"donació\" a \"Pro\". Totes les funcions que abans eren gratuïts i moltes de les noves característiques són gratis."</item>
+        <item name="line2">"S'ha afegit un calaix d'aplicació per a la sub-pàgines."</item>
+        <item name="line5">"capacitat per a establir la configuració del recordatori per defecte per a cada recordatori que es crea afegit."</item>
+        <item name="line3">"S'ha actualitzat el tema d'aplicació."</item>
+        <item name="line4">"Actualització de la configuració i Ajuda i pàgines de vots."</item>
+        <item name="line4">"S'ha afegit un giny d'aplicació."</item>
+        <item name="line5">"Moltes opcions de recordatori addicionals (mostrar tots marcant \"Mostra avançada\")."</item>
+        <item name="line5">"recordatoris basats afegit ubicació. Afegir des de la pàgina \"personalitzades\"."</item>
+        <item name="line5">"Algunes de les noves característiques bloquejades a la versió \"Pro\"."</item>
+        <item name="line5">"Temes d'aplicacions"</item>
+        <item name="line5">"Mode d'immersió."</item>
+        <item name="line4">"patrons de vibració personalitzat."</item>
+        <item name="line4">"les icones de notificació personalitzada (Android 6.0+ només)."</item>
+        <item name="line5">"Explorar l'aplicació de característiques addicionals. Més vindran aviat."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"res"</item>
+    </string-array>
+
+</resources>

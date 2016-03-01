@@ -103,12 +103,17 @@ public final class HelpFragment extends BaseFragment {
                 Utils.openLink(getResources().getString(R.string.help_link_translate));
             }
         });
-        beta.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utils.openLink(getResources().getString(R.string.store_link_beta));
-            }
-        });
+        if(getResources().getString(R.string.store_link_beta) == null || getResources().getString(R.string.store_link_beta).isEmpty()) {
+            beta.setVisibility(View.GONE);
+        } else {
+            beta.setVisibility(View.VISIBLE);
+            beta.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utils.openLink(getResources().getString(R.string.store_link_beta));
+                }
+            });
+        }
         releaseNotes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"גרסה 2.0.0"</item>
+        <item name="line1">"מחדש למותג \"תרומה\" ל \"פרו\". כל התכונות חינם בעבר ורבים מן התכונות החדשות חופשיים."</item>
+        <item name="line2">"הוספה במגירת App עבור דפי משנה."</item>
+        <item name="line5">"נוסף יכולת להגדיר הגדרות תזכורת ברירת מחדל עבור כל תזכורת שאתה יוצר."</item>
+        <item name="line3">"עודכן נושא האפליקציה."</item>
+        <item name="line4">"עודכן ההגדרות והעזרה ועמודי משוב."</item>
+        <item name="line4">"הוספת יישומון אפליקציה."</item>
+        <item name="line5">"אפשרויות רבות תזכורת נוספת (הצג את כל על ידי סימון \"הצג מתקדם\")."</item>
+        <item name="line5">"תזכורות מבוססות מיקום נוסף. להוסיף מהעמוד בו \"Customizer\"."</item>
+        <item name="line5">"תכונות חדשות חלק נעול לגרסה \"פרו\"."</item>
+        <item name="line5">"נושאי App"</item>
+        <item name="line5">"מצב עשיר."</item>
+        <item name="line4">"דפוסי רטט מותאם אישית."</item>
+        <item name="line4">"אייקוני התרעות אישית (אנדרואיד 6.0 ומעלה בלבד)."</item>
+        <item name="line5">"חקור את האפליקציה עבור תכונות נוספות. עוד יגיע בקרוב."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"שום דבר"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"שום דבר"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"שום דבר"</item>
+    </string-array>
+
+</resources>

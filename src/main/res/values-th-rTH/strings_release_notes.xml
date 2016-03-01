@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"เวอร์ชัน 2.0.0"</item>
+        <item name="line1">"ตราหน้า \"บริจาค\" กับ \"โปร\" ทั้งหมดคุณลักษณะฟรีก่อนหน้านี้และคุณสมบัติใหม่ต่างๆของได้ฟรี"</item>
+        <item name="line2">"เพิ่มลิ้นชัก app สำหรับเพจย่อย"</item>
+        <item name="line5">"เพิ่มความสามารถในการตั้งค่าการแจ้งเตือนเริ่มต้นสำหรับการแจ้งเตือนที่คุณสร้างทุก"</item>
+        <item name="line3">"การปรับปรุงรูปแบบแอป"</item>
+        <item name="line4">"ปรับปรุงการตั้งค่าและความช่วยเหลือและหน้าข้อเสนอแนะ"</item>
+        <item name="line4">"เพิ่มเครื่องมือ app"</item>
+        <item name="line5">"หลายตัวเลือกการแจ้งเตือนเพิ่มเติม (แสดงทั้งหมดโดยการตรวจสอบ \"แสดงขั้นสูง\")"</item>
+        <item name="line5">"เพิ่มการแจ้งเตือนตามสถานที่ เพิ่มจาก \"Customizer หน้า\""</item>
+        <item name="line5">"คุณสมบัติใหม่บางล็อครุ่น \"โปร\""</item>
+        <item name="line5">"ธีม App"</item>
+        <item name="line5">"โหมดใหญ่พิเศษ"</item>
+        <item name="line4">"รูปแบบการสั่นที่กำหนดเอง"</item>
+        <item name="line4">"ไอคอนแจ้งที่กำหนดเอง (Android 6.0 ขึ้นไปเท่านั้น)"</item>
+        <item name="line5">"สำรวจ app สำหรับคุณสมบัติเพิ่มเติม เพิ่มเติมจะมาเร็ว ๆ นี้"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"ไม่มีอะไร"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"ไม่มีอะไร"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"ไม่มีอะไร"</item>
+    </string-array>
+
+</resources>

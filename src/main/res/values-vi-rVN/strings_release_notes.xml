@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"phiên bản 2.0.0"</item>
+        <item name="line1">"Re-mang nhãn hiệu \"hiến\" để \"Pro\". Tất cả các tính năng trước đây miễn phí và rất nhiều các tính năng mới được tự do."</item>
+        <item name="line2">"Thêm một ngăn kéo ứng dụng cho trang phụ."</item>
+        <item name="line5">"Thêm khả năng để đặt thiết lập nhắc nhở mặc định cho mỗi lời nhắc nhở rằng bạn tạo ra."</item>
+        <item name="line3">"Cập nhật các chủ đề ứng dụng."</item>
+        <item name="line4">"Cập nhật Cài đặt và Help &amp; trang phản hồi."</item>
+        <item name="line4">"Thêm một widget ứng dụng."</item>
+        <item name="line5">"Nhiều tùy chọn nhắc nhở thêm (hiển thị tất cả bằng cách kiểm tra \"Hiển thị chi tiết\")."</item>
+        <item name="line5">"Thêm vị trí nhắc nhở dựa. Thêm từ trang \"Customizer\"."</item>
+        <item name="line5">"Một số tính năng mới đã bị khóa với phiên bản \"Pro\"."</item>
+        <item name="line5">"App Themes"</item>
+        <item name="line5">"Chế độ nhập vai."</item>
+        <item name="line4">"mô hình tùy chỉnh rung."</item>
+        <item name="line4">"biểu tượng thông báo tùy chỉnh (Android 6.0+ chỉ)."</item>
+        <item name="line5">"Khám phá các ứng dụng cho các tính năng bổ sung. Hơn sẽ đến sớm."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"không có gì"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"không có gì"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"không có gì"</item>
+    </string-array>
+
+</resources>

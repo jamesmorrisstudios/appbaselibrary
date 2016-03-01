@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"версія 2.0.0"</item>
+        <item name="line1">"Ребрендинг \"Пожертвування\" на \"Pro\". Всі раніше вільні ознаки і багато хто з нових функцій вільні."</item>
+        <item name="line2">"Доданий ящик додатки для підлеглих."</item>
+        <item name="line5">"Додана можливість встановлювати настройки нагадувань за замовчуванням для кожного нагадування, що ви створюєте."</item>
+        <item name="line3">"Оновлення теми програми."</item>
+        <item name="line4">"Оновлення налаштувань і Допомога &amp; Зворотній зв'язок сторінок."</item>
+        <item name="line4">"Додано додаток віджет."</item>
+        <item name="line5">"Багато додаткові опції нагадування (показати все шляхом перевірки \"Show Advanced\")."</item>
+        <item name="line5">"Додано розташування нагадування на основі. Додати зі сторінки \"Настроювач\"."</item>
+        <item name="line5">"Деякі нові функції заблоковані \"Pro\" версії."</item>
+        <item name="line5">"App Теми"</item>
+        <item name="line5">"Immersive режим."</item>
+        <item name="line4">"Призначені для користувача вібрує візерунки."</item>
+        <item name="line4">"Значки для користувача повідомлень (Android 6.0+ тільки)."</item>
+        <item name="line5">"Досліджуйте додаток для додаткових функцій. Більше буде найближчим часом."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"нічого"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"нічого"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"нічого"</item>
+    </string-array>
+
+</resources>

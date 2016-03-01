@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"2.0.0 verzió"</item>
+        <item name="line1">"Re-branded \"adomány\", hogy \"Pro\". Minden korábban ingyenes szolgáltatásokat és sok az új funkciók ingyenesek."</item>
+        <item name="line2">"Hozzáadott egy alkalmazást fiókban aloldalak."</item>
+        <item name="line5">"Hozzáadott képes alapértelmezett emlékeztető beállítása minden emlékeztető, hogy hozzon létre."</item>
+        <item name="line3">"Frissítette az alkalmazást témát."</item>
+        <item name="line4">"Frissült a beállítások és a Súgó és visszajelzés oldalakon."</item>
+        <item name="line4">"Hozzáadott egy app widget."</item>
+        <item name="line5">"Számos további emlékeztető lehetőségek (összes ellenőrzésével \"Show Advanced\")."</item>
+        <item name="line5">"Hozzáadott helyfüggő emlékeztetők. Add a \"testreszabási\" oldalon."</item>
+        <item name="line5">"Néhány új funkciók zárva \"Pro\" változat."</item>
+        <item name="line5">"App témák"</item>
+        <item name="line5">"Magával ragadó mód."</item>
+        <item name="line4">"Egyedi rezgő mintákat."</item>
+        <item name="line4">"Egyedi értesítés ikonok (android 6.0+ esetén)."</item>
+        <item name="line5">"Fedezze fel az alkalmazást további funkciókat. Több lesz hamarosan."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"semmi"</item>
+    </string-array>
+
+</resources>

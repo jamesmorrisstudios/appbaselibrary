@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Версия 2.0.0"</item>
+        <item name="line1">"Re-брандирана \"Дарение\" да \"Pro\". Всички по-рано безплатни функции и много от новите функции са безплатни."</item>
+        <item name="line2">"Добавен ап чекмедже за под-страници."</item>
+        <item name="line5">"Добавена възможност да зададете настройки за напомняне по подразбиране за всеки напомняне, че вие ​​създавате."</item>
+        <item name="line3">"Обновено на ап тема."</item>
+        <item name="line4">"Обновено на Настройки и помощ и обратна връзка страници."</item>
+        <item name="line4">"Добавен приложение джаджа."</item>
+        <item name="line5">"Много допълнителни опции за напомняне (покажи всички чрез проверка на \"Show Advanced\")."</item>
+        <item name="line5">"Добавен местоположение базирани напомняния. Добави от страницата \"Customizer\"."</item>
+        <item name="line5">"Някои нови функции заключени към \"Pro\" версия."</item>
+        <item name="line5">"App Теми"</item>
+        <item name="line5">"Пълно потапяне Mode."</item>
+        <item name="line4">"Персонализирана вибриране модели."</item>
+        <item name="line4">"икони за уведомяване по поръчка (Android 6.0+ само)."</item>
+        <item name="line5">"Изследване на приложението за допълнителни функции. Повече ще бъде идва скоро."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"Нищо"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"Нищо"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"Нищо"</item>
+    </string-array>
+
+</resources>

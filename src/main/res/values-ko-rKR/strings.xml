@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    
+    <string name="settings_category_display">"디스플레이"</string>
+    
+    <string name="settings_category_sound">"소리"</string>
+    
+    <string name="settings_category_general">"일반"</string>
+    
+    <string name="settings_category_locale">"장소"</string>
+    
+    <string name="settings_category_theme">"테마"</string>
+    
+    <string name="settings_category_notification">"공고"</string>
+    
+    <string name="settings_category_notification_custom">"사용자 정의 알림"</string>
+    
+    <string name="settings_category_notification_override">"재정의 알림"</string>
+    
+    <string name="settings_category_defaults">"기본값"</string>
+    
+    <string name="settings_category_random">"임의성"</string>
+    
+    <string name="settings_category_widget">"위젯"</string>
+
+    
+    <string name="setting_immersive_enable_primary">"몰입 모드"</string>
+    
+    <string name="setting_sound_enable_primary">"음향 효과"</string>
+    
+    <string name="setting_music_enable_primary">"음악"</string>
+    
+    <string name="setting_language_picker_primary">"언어"</string>
+    
+    <string name="setting_ringtone_picker_enable_primary">"사용자 정의 벨소리 선택기"</string>
+    
+    <string name="setting_theme_picker_primary">"앱 테마"</string>
+    
+    <string name="setting_accent_color_primary">"악센트 컬러"</string>
+    
+    <string name="setting_primary_color_primary">"원색"</string>
+    
+    <string name="setting_toolbar_text_color_primary">"도구 모음 텍스트 색상"</string>
+
+    
+    <string name="setting_notification_click_action_primary">"작업을 클릭"</string>
+    
+    <string name="setting_notification_custom_primary">"사용"</string>
+    
+    <string name="setting_notification_button_style_primary">"버튼 스타일"</string>
+    
+    <string name="setting_notification_ongoing_primary">"지속적인 알림"</string>
+    
+    <string name="setting_notification_ongoing_secondary">"지속적인 알림 SmartWatches에서 지원되지 않습니다"</string>
+    
+    <string name="setting_notification_theme_primary">"배경"</string>
+    
+    <string name="setting_notification_theme_text_primary">"텍스트 색상"</string>
+    
+    <string name="setting_first_day_of_week_primary">"금주의 첫 날"</string>
+    
+    <string name="setting_force_advanced_primary">"항상 고급 옵션보기"</string>
+    
+    <string name="setting_force_advanced_secondary">"당 알림을 기준으로 고급 옵션을 표시하지 않도록 설정"</string>
+    
+    <string name="setting_notification_swipe_away_action_primary">"스 와이프 ​​액션"</string>
+    
+    <string name="setting_notification_click_open_primary">"엽니 다 응용 프로그램을 클릭합니다"</string>
+    
+    <string name="setting_notification_swipe_away_open_primary">"스 와이프 ​​엽니 앱"</string>
+    
+    <string name="setting_random_amount_primary">"닥치는대로의"</string>
+    
+    <string name="setting_less_random_amount_primary">"이하 임의"</string>
+    
+    <string name="setting_even_amount_primary">"조차"</string>
+    
+    <string name="setting_widget_theme_primary">"테마"</string>
+    
+    <string name="setting_widget_text_color_primary">"텍스트 색상"</string>
+    
+    <string name="setting_override_vibrate_primary">"재정의 알림 진동"</string>
+    
+    <string name="setting_override_ringtone_primary">"무시 알림 음 재생"</string>
+    
+    <string name="setting_override_ringtone_secondary">"이것은 오디오 스트림을 대체 할 수 있어야합니다"</string>
+    
+    <string name="setting_override_ringtone_stream_primary">"재정 통지 오디오 스트림"</string>
+    
+    <string name="setting_override_speech_stream_primary">"재정의 음성 스트림"</string>
+
+    
+    <string name="time_millisecond">"밀리 초"</string>
+    
+    <string name="time_milliseconds">"밀리 초"</string>
+    
+    <string name="time_millisecond_abrev">"MS"</string>
+    
+    <string name="time_second">"둘째"</string>
+    
+    <string name="time_seconds">"초"</string>
+    
+    <string name="time_second_abrev">"에스"</string>
+    
+    <string name="time_minute">"분"</string>
+    
+    <string name="time_minutes">"의사록"</string>
+    
+    <string name="time_hour">"시간"</string>
+    
+    <string name="time_hours">"시간"</string>
+    
+    <string name="time_day">"일"</string>
+    
+    <string name="time_days">"일"</string>
+    
+    <string name="time_daily">"매일"</string>
+    
+    <string name="time_week">"주"</string>
+    
+    <string name="time_weeks">"주"</string>
+    
+    <string name="time_weekly">"주간"</string>
+    
+    <string name="time_month">"달"</string>
+    
+    <string name="time_months">"달"</string>
+    
+    <string name="time_monthly">"월간 간행물"</string>
+    
+    <string name="time_year">"년"</string>
+    
+    <string name="time_years">"연령"</string>
+    
+    <string name="time_yearly">"매년"</string>
+
+    
+    <string name="meter">"미터"</string>
+    
+    <string name="meters">"미터"</string>
+
+    
+    <string name="num_one">"하나"</string>
+    
+    <string name="num_two">"두"</string>
+    
+    <string name="num_three">"세"</string>
+    
+    <string name="num_four">"네"</string>
+    
+    <string name="num_five">"다섯"</string>
+    
+    <string name="num_six">"여섯"</string>
+    
+    <string name="num_seven">"일곱"</string>
+    
+    <string name="num_eight">"여덟"</string>
+    
+    <string name="num_nine">"아홉"</string>
+    
+    <string name="num_ten">"열"</string>
+
+    
+    <string name="num_first">"먼저"</string>
+    
+    <string name="num_second">"둘째"</string>
+    
+    <string name="num_third">"제삼"</string>
+    
+    <string name="num_fourth">"네번째"</string>
+    
+    <string name="num_fifth">"다섯"</string>
+    
+    <string name="num_sixth">"육분의 하나"</string>
+    
+    <string name="num_seventh">"제칠"</string>
+    
+    <string name="num_eighth">"여덟 번째"</string>
+    
+    <string name="num_ninth">"제구"</string>
+    
+    <string name="num_tenth">"제십"</string>
+
+    
+    <string name="day_sunday">"일요일"</string>
+    
+    <string name="day_monday">"월요일"</string>
+    
+    <string name="day_tuesday">"화요일"</string>
+    
+    <string name="day_wednesday">"수요일"</string>
+    
+    <string name="day_thursday">"목요일"</string>
+    
+    <string name="day_friday">"금요일"</string>
+    
+    <string name="day_saturday">"토요일"</string>
+    
+    <string name="today">"오늘"</string>
+    
+    <string name="tomorrow">"내일"</string>
+    
+    <string name="yesterday">"어제"</string>
+
+    
+    <string name="days_of_week">"요일"</string>
+    
+    <string name="days_of_month">"월의 일"</string>
+    
+    <string name="days_of_year">"올해의 일"</string>
+    
+    <string name="weeks_of_month">"이달의 주"</string>
+    
+    <string name="weeks_of_year">"올해의 주"</string>
+    
+    <string name="months_of_year">"올해의 달"</string>
+
+    
+    <string name="next">"다음 것"</string>
+    
+    <string name="previous">"너무 이른"</string>
+    
+    <string name="back">"뒤로"</string>
+    
+    <string name="forward">"앞으로"</string>
+
+    
+    <string name="pattern_1">"패턴 1"</string>
+    
+    <string name="pattern_2">"패턴 2"</string>
+    
+    <string name="pattern_3">"패턴 3"</string>
+    
+    <string name="pattern_4">"패턴 4"</string>
+    
+    <string name="pattern_5">"패턴 (5)"</string>
+    
+    <string name="pattern_6">"패턴 (6)"</string>
+
+    
+    <string name="select">"고른"</string>
+    
+    <string name="select_all">"모두 선택"</string>
+    
+    <string name="select_none">"선택 없음"</string>
+
+    
+    <string name="diff_difficulty">"어려움"</string>
+    
+    <string name="diff_select_difficulty">"선택의 어려움"</string>
+    
+    <string name="diff_easy">"쉬운"</string>
+    
+    <string name="diff_normal">"표준"</string>
+    
+    <string name="diff_hard">"단단한"</string>
+
+    
+    <string name="enable">"사용"</string>
+    
+    <string name="enabled">"사용"</string>
+    
+    <string name="disable">"사용 안 함"</string>
+    
+    <string name="disabled">"장애인"</string>
+    
+    <string name="lock">"자물쇠"</string>
+    
+    <string name="unlock">"터놓다"</string>
+    
+    <string name="locked">"잠금"</string>
+    
+    <string name="unlocked">"잠금 해제"</string>
+    
+    <string name="open">"열린"</string>
+    
+    <string name="close">"가까운"</string>
+    
+    <string name="opened">"개설"</string>
+    
+    <string name="closed">"닫은"</string>
+    
+    <string name="show">"표시"</string>
+    
+    <string name="hide">"숨는 장소"</string>
+    
+    <string name="shown">"도시"</string>
+    
+    <string name="Hidden">"숨겨진"</string>
+    
+    <string name="automatic">"오토매틱"</string>
+    
+    <string name="manual">"조작"</string>
+    
+    <string name="online">"온라인으로"</string>
+    
+    <string name="offline">"오프라인"</string>
+    
+    <string name="active">"유효한"</string>
+    
+    <string name="inactive">"비활성"</string>
+
+    
+    <string name="okay">"그래"</string>
+    
+    <string name="cancel">"취소"</string>
+    
+    <string name="yes">"예"</string>
+    
+    <string name="no">"아니오"</string>
+    
+    <string name="maybe">"아마도"</string>
+    
+    <string name="some">"약간"</string>
+    
+    <string name="none">"없음"</string>
+    
+    <string name="all">"모든"</string>
+    
+    <string name="set">"세트"</string>
+    
+    <string name="unset">"설정 해제"</string>
+    
+    <string name="last">"마지막"</string>
+    
+    <string name="first">"먼저"</string>
+    
+    <string name="every">"마다"</string>
+    
+    <string name="other">"다른"</string>
+    
+    <string name="off">"떨어져서"</string>
+    
+    <string name="on">"에"</string>
+    
+    <string name="delete_reminder_prompt_title">"알림 삭제"</string>
+    
+    <string name="delete_reminder_prompt_content">"이 알림을 삭제 하시겠습니까?"</string>
+    
+    <string name="delete_custom_icon_prompt_title">"아이콘 삭제"</string>
+    
+    <string name="delete_custom_icon_prompt_content">"이 아이콘을 삭제 하시겠습니까?"</string>
+    
+    <string name="cancel_reminder_prompt_title">"변경 사항을 취소"</string>
+    
+    <string name="cancel_reminder_prompt_content">"당신은 당신의 변경 사항을 취소 하시겠습니까?"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_title">"진동 패턴 삭제"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_content">"이 진동 패턴을 삭제 하시겠습니까?"</string>
+    
+    <string name="delete_location_prompt_title">"위치 삭제"</string>
+    
+    <string name="delete_location_prompt_content">"이 위치를 삭제 하시겠습니까?"</string>
+    
+    <string name="duplicate_reminder_prompt_title">"중복 알림"</string>
+    
+    <string name="duplicate_reminder_prompt_content">"이 알림을 복제 하시겠습니까?"</string>
+    
+    <string name="include_log_prompt_title">"로그인을 포함"</string>
+    
+    <string name="include_log_prompt_content">"당신은 알림 로그를 포함 하시겠습니까?"</string>
+    
+    <string name="include_default_reminder_prompt_title">"기본 알림 포함"</string>
+    
+    <string name="include_default_reminder_prompt_content">"당신은 기본 미리 알림을 포함 하시겠습니까?"</string>
+    
+    <string name="start_new_game_title">"새 게임을 시작합니다"</string>
+    
+    <string name="start_new_game_prompt">"새 게임을 시작 하시겠습니까?"</string>
+    
+    <string name="end_game_title">"엔드 게임"</string>
+    
+    <string name="end_game_prompt">"당신은이 게임을 종료 하시겠습니까?"</string>
+
+    
+    <string name="help">"도움"</string>
+    
+    <string name="about">"약"</string>
+    
+    <string name="settings">"설정"</string>
+    
+    <string name="help_and_feedback">"도움말 및 피드백"</string>
+    
+    <string name="rate_app">"속도 앱"</string>
+    
+    <string name="more_apps">"더 많은 애플 리케이션"</string>
+    
+    <string name="tutorial">"지도 시간"</string>
+    
+    <string name="read">"독서"</string>
+    
+    <string name="watch">"손목 시계"</string>
+    
+    <string name="links">"모래밭"</string>
+    
+    <string name="licenses">"라이센스"</string>
+    
+    <string name="help_translate">"번역 도움말"</string>
+    
+    <string name="get_the_beta">"베타 가져 오기"</string>
+    
+    <string name="achievements">"업적"</string>
+    
+    <string name="leaderboards">"리더"</string>
+    
+    <string name="high_scores">"높은 점수"</string>
+    
+    <string name="my_circles">"내 서클"</string>
+    
+    <string name="invitations">"초대"</string>
+    
+    <string name="options">"옵션"</string>
+    
+    <string name="game_options">"게임 옵션"</string>
+    
+    <string name="advanced_options">"고급 옵션"</string>
+    
+    <string name="automatch">"자동 매치"</string>
+    
+    <string name="guest">"손님"</string>
+
+    
+    <string name="light">"빛"</string>
+    
+    <string name="light_transparent">"투명 빛"</string>
+    
+    <string name="dark">"어두운"</string>
+    
+    <string name="dark_transparent">"투명 다크"</string>
+    
+    <string name="transparent">"투명한"</string>
+    
+    <string name="night">"밤"</string>
+    
+    <string name="black">"검은"</string>
+    
+    <string name="white">"화이트"</string>
+    
+    <string name="system">"체계"</string>
+    
+    <string name="light_text">"빛 텍스트"</string>
+    
+    <string name="dark_text">"어두운 텍스트"</string>
+
+    
+    <string name="red">"빨간"</string>
+    
+    <string name="pink">"담홍색"</string>
+    
+    <string name="purple">"자"</string>
+    
+    <string name="deep_purple">"딥 퍼플"</string>
+    
+    <string name="indigo">"남빛"</string>
+    
+    <string name="blue">"푸른"</string>
+    
+    <string name="light_blue">"라이트 블루"</string>
+    
+    <string name="cyan">"시안"</string>
+    
+    <string name="teal">"물오리"</string>
+    
+    <string name="green">"녹색"</string>
+    
+    <string name="light_green">"연한 초록색"</string>
+    
+    <string name="lime">"라임"</string>
+    
+    <string name="yellow">"황색"</string>
+    
+    <string name="amber">"호박색"</string>
+    
+    <string name="orange">"주황색"</string>
+    
+    <string name="deep_orange">"깊은 오렌지"</string>
+    
+    <string name="brown">"갈색"</string>
+    
+    <string name="grey">"회색"</string>
+    
+    <string name="blue_grey">"블루 그레이"</string>
+    
+    <string name="dark_grey">"어두운 회색"</string>
+
+    
+    <string name="major">"주요한"</string>
+    
+    <string name="minor">"미성년자"</string>
+    
+    <string name="aux">"보조"</string>
+    
+    <string name="version">"번역"</string>
+    
+    <string name="production">"생산"</string>
+    
+    <string name="beta">"베타"</string>
+    
+    <string name="alpha">"알파"</string>
+
+    
+    <string name="icon">"상"</string>
+    
+    <string name="icons">"아이콘"</string>
+    
+    <string name="custom_icon">"사용자 정의 아이콘"</string>
+    
+    <string name="custom_icons">"사용자 정의 아이콘"</string>
+    
+    <string name="choose_icon">"아이콘을 선택"</string>
+
+    
+    <string name="backup">"지원"</string>
+    
+    <string name="import_">"수입"</string>
+    
+    <string name="export">"수출"</string>
+    
+    <string name="export_log">"수출 로그인"</string>
+    
+    <string name="import_export">"수입 수출"</string>
+    
+    <string name="export_location">"내보내기 위치"</string>
+    
+    <string name="import_failed">"가져 오기 실패"</string>
+    
+    <string name="import_canceled">"가져 오기 취소"</string>
+    
+    <string name="export_failed">"수출 실패"</string>
+    
+    <string name="export_canceled">"수출 취소"</string>
+    
+    <string name="import_complete">"전체 가져 오기"</string>
+    
+    <string name="export_complete">"전체 수출"</string>
+    
+    <string name="importing_please_wait">"가져 오기, 잠시 기다려주십시오"</string>
+    
+    <string name="exporting_please_wait">"수출, 잠시 기다려주십시오"</string>
+
+    
+    <string name="snooze">"선잠"</string>
+    
+    <string name="snoozed">"일시 중지"</string>
+    
+    <string name="auto_snooze">"자동 일시 중지"</string>
+    
+    <string name="manual_snooze">"수동 일시 중지"</string>
+
+    
+    <string name="message">"전언"</string>
+    
+    <string name="messages">"메시지"</string>
+    
+    <string name="num_messages">"메시지의 수"</string>
+    
+    <string name="edit_messages">"편집 메시지"</string>
+    
+    <string name="view_messages">"메시지보기"</string>
+    
+    <string name="import_messages">"가져 오기 메시지"</string>
+    
+    <string name="message_separator">"메시지 구분 ||||"</string>
+
+    
+    <string name="sign_in">"로그인"</string>
+    
+    <string name="signed_in">"로그인"</string>
+    
+    <string name="sign_in_failed">"실패 로그인"</string>
+    
+    <string name="sign_out">"아웃"</string>
+    
+    <string name="signed_out">"로그 아웃"</string>
+
+    
+    <string name="low">"낮은"</string>
+    
+    <string name="mid">"중앙의"</string>
+    
+    <string name="high">"높은"</string>
+    
+    <string name="min">"최소"</string>
+    
+    <string name="max">"최대"</string>
+    
+    <string name="minimum">"최저한의"</string>
+    
+    <string name="medium">"매질"</string>
+    
+    <string name="maximum">"최고"</string>
+    
+    <string name="small">"작은"</string>
+    
+    <string name="large">"큰"</string>
+    
+    <string name="short_">"짧은"</string>
+    
+    <string name="long_">"긴"</string>
+    
+    <string name="slow">"느린"</string>
+    
+    <string name="fast">"빠른"</string>
+    
+    <string name="quick">"빨리"</string>
+    
+    <string name="narrow">"제한된"</string>
+    
+    <string name="wide">"넓은"</string>
+
+    
+    <string name="thank_you">"고맙습니다"</string>
+    
+    <string name="youre_welcome">"별말씀을 요"</string>
+    
+    <string name="please">"부디"</string>
+
+    
+    <string name="you">"당신"</string>
+    
+    <string name="me">"나를"</string>
+    
+    <string name="us">"우리"</string>
+    
+    <string name="we">"우리"</string>
+    
+    <string name="them">"그들"</string>
+
+    
+    <string name="short_on">"짧은에"</string>
+    
+    <string name="medium_on">"중간에"</string>
+    
+    <string name="long_on">"롱에"</string>
+    
+    <string name="short_off">"짧은 해제"</string>
+    
+    <string name="medium_off">"중간 오프"</string>
+    
+    <string name="long_off">"긴 오프"</string>
+
+    
+    <string name="pro">"찬성"</string>
+    
+    <string name="pro_feature">"프로 기능"</string>
+    
+    <string name="upgrade">"업그레이드"</string>
+    
+    <string name="feature_requires_pro">"이 기능은 프로 버전이 필요합니다"</string>
+    
+    <string name="feature_requires_pro_limited">"이 기능은 무료 버전에서 제한된다. 프로로 업그레이드하거나 기존 항목을 제거합니다."</string>
+    
+    <string name="upgrade_to_pro">"프로로 업그레이드"</string>
+    
+    <string name="upgrade_now">"지금 업그레이드"</string>
+
+    
+    <string name="start_date">"시작 일"</string>
+    
+    <string name="end_date">"종료 날짜"</string>
+    
+    <string name="start_time">"시작 시간"</string>
+    
+    <string name="end_time">"종료 시간"</string>
+    
+    <string name="end_type">"엔드 형"</string>
+    
+    <string name="timing_type">"타이밍 유형"</string>
+    
+    <string name="edit_times">"편집 타임즈"</string>
+    
+    <string name="time">"시각"</string>
+    
+    <string name="times">"타임스"</string>
+    
+    <string name="timing">"타이밍"</string>
+    
+    <string name="all_time">"모든 시간"</string>
+    
+    <string name="every_week">"매주"</string>
+    
+    <string name="lifetime">"일생"</string>
+    
+    <string name="forever">"영원히"</string>
+    
+    <string name="time_period">"기간"</string>
+    
+    <string name="random">"닥치는대로의"</string>
+    
+    <string name="randomly">"무작위"</string>
+    
+    <string name="less_random">"이하 임의"</string>
+    
+    <string name="even">"조차"</string>
+    
+    <string name="evenly">"고르게"</string>
+    
+    <string name="specific">"특유한"</string>
+    
+    <string name="interval">"간격"</string>
+    
+    <string name="specific_times">"특정 시간"</string>
+    
+    <string name="repeat_every">"모든 반복"</string>
+
+    
+    <string name="data_loaded">"데이터로드"</string>
+    
+    <string name="file">"파일"</string>
+    
+    <string name="local_storage">"로컬 저장소"</string>
+    
+    <string name="filename">"파일 이름"</string>
+
+    
+    <string name="permission_granted">"권한 부여"</string>
+    
+    <string name="permission_denied">"권한 거부"</string>
+    
+    <string name="allow_if_any">"어떤 경우에 허용"</string>
+    
+    <string name="allow_if_all">"모든 경우에 허용"</string>
+    
+    <string name="disallow_if_any">"어떤 경우 금지"</string>
+    
+    <string name="disallow_if_all">"모든 경우 금지"</string>
+    
+    <string name="trigger_if_any">"트리거있는 경우"</string>
+    
+    <string name="trigger_if_all">"트리거 모든 경우"</string>
+
+    
+    <string name="reminders">"알림"</string>
+    
+    <string name="no_reminder">"없음 알림 없음"</string>
+    
+    <string name="no_reminders_yet">"당신은 아직 알림이 없습니다"</string>
+    
+    <string name="alerts_per_day">"일 당 알림"</string>
+    
+    <string name="number_of_reminders">"미리 알림의 수"</string>
+
+    
+    <string name="changes_discarded">"변경 사항은 폐기"</string>
+    
+    <string name="changes_saved">"변경 사항 저장"</string>
+    
+    <string name="no_changes">"변경 사항 없음"</string>
+    
+    <string name="select_at_least_one_item">"하나 이상의 항목을 선택"</string>
+
+    
+    <string name="loading">"로드"</string>
+    
+    <string name="loaded">"짐을 실은"</string>
+    
+    <string name="loading_failed">"로드 실패"</string>
+    
+    <string name="loading_complete">"전체로드"</string>
+    
+    <string name="error">"오류"</string>
+    
+    <string name="fail">"실패"</string>
+    
+    <string name="failed">"실패한"</string>
+    
+    <string name="success">"성공"</string>
+    
+    <string name="successful">"성공한"</string>
+    
+    <string name="unsuccessful">"성공하지 못한"</string>
+    
+    <string name="valid">"유효한"</string>
+    
+    <string name="invalid">"잘못된"</string>
+    
+    <string name="complete">"완전한"</string>
+    
+    <string name="completed">"완료"</string>
+    
+    <string name="skipped">"건너 뜀"</string>
+    
+    <string name="incomplete">"불완전한"</string>
+    
+    <string name="dismiss">"버리다"</string>
+    
+    <string name="dismissed">"해산"</string>
+    
+    <string name="acknowledge">"인정"</string>
+    
+    <string name="acknowledged">"인정"</string>
+    
+    <string name="add">"더하다"</string>
+    
+    <string name="added">"추가"</string>
+    
+    <string name="add_item">"항목 추가"</string>
+    
+    <string name="remove">"풀다"</string>
+    
+    <string name="removed">"제거"</string>
+    
+    <string name="remove_item">"항목 제거"</string>
+    
+    <string name="delete">"지우다"</string>
+    
+    <string name="deleted">"삭제"</string>
+    
+    <string name="duplicate">"복제"</string>
+    
+    <string name="duplicated">"중복"</string>
+    
+    <string name="restart">"재시작"</string>
+    
+    <string name="restarting">"다시 시작"</string>
+    
+    <string name="restarting_app_please_wait">"응용 프로그램을 다시 시작하면, 잠시 기다려주십시오"</string>
+
+    
+    <string name="map">"지도"</string>
+    
+    <string name="location">"위치"</string>
+    
+    <string name="locations">"위치"</string>
+    
+    <string name="latitude">"위도"</string>
+    
+    <string name="longitude">"경도"</string>
+    
+    <string name="radius">"반지름"</string>
+    
+    <string name="enter">"들어가다"</string>
+    
+    <string name="exit">"출구"</string>
+    
+    <string name="linger_time">"링거 시간"</string>
+
+    
+    <string name="music">"음악"</string>
+    
+    <string name="ring">"링"</string>
+    
+    <string name="speak_time">"시간 이야기"</string>
+    
+    <string name="speak_title">"제목 이야기"</string>
+    
+    <string name="speak_message">"메시지 이야기"</string>
+    
+    <string name="tone">"음정"</string>
+    
+    <string name="sound">"소리"</string>
+
+    
+    <string name="notification">"공고"</string>
+    
+    <string name="notifications">"알림"</string>
+    
+    <string name="select_notification">"선택 알림"</string>
+
+    
+    <string name="vibrate">"떨리다"</string>
+    
+    <string name="vibrate_pattern">"진동 패턴"</string>
+    
+    <string name="vibrate_patterns">"진동 패턴"</string>
+    
+    <string name="create_vibrate_pattern">"진동 패턴 만들기"</string>
+
+    
+
+    
+    <string name="you_win">"네가 이겼다"</string>
+    
+    <string name="you_won">"당신은 원"</string>
+    
+    <string name="you_lost">"당신은 분실"</string>
+    
+    <string name="you_lose">"당신은 잃을"</string>
+    
+    <string name="you_tied">"당신은 묶여"</string>
+    
+    <string name="winner">"우승자"</string>
+    
+    <string name="winners">"수상자"</string>
+    
+    <string name="loser">"실패자"</string>
+    
+    <string name="Losers">"패자"</string>
+
+    
+    <string name="number_of_players">"선수의 수"</string>
+    
+    <string name="player">"플레이어"</string>
+    
+    <string name="players">"플레이어"</string>
+    
+    <string name="player_1">"플레이어 1"</string>
+    
+    <string name="player_2">"플레이어 2"</string>
+    
+    <string name="player_3">"플레이어 3"</string>
+    
+    <string name="player_4">"플레이어 4"</string>
+    
+    <string name="player_5">"플레이어 (5)"</string>
+    
+    <string name="player_6">"플레이어 6"</string>
+    
+    <string name="team">"팀"</string>
+    
+    <string name="teams">"팀"</string>
+    
+    <string name="number_of_teams">"팀의 수"</string>
+    
+    <string name="team_1">"1 팀"</string>
+    
+    <string name="team_2">"2 팀"</string>
+    
+    <string name="team_3">"팀 3"</string>
+    
+    <string name="team_4">"팀 4"</string>
+
+    
+    <string name="requires_google_play">"이 작업은 구글 플레이 게임이 필요합니다"</string>
+    
+    <string name="compare_profiles">"게임 프로필을 재생 비교"</string>
+    
+    <string name="view_profile">"보기 플레이 게임 프로필"</string>
+
+    
+    <string name="sponsored">"스폰서"</string>
+    
+    <string name="ads">"광고"</string>
+    
+    <string name="remove_ads">"광고를 제거하다"</string>
+    
+    <string name="ads_removed">"광고 제거"</string>
+
+    
+    <string name="current_score">"현재 점수"</string>
+    
+    <string name="top_score">"최고 점수"</string>
+    
+    <string name="score">"점수"</string>
+
+    
+    <string name="your_turn">"네 차례 야"</string>
+    
+    <string name="their_turn">"자신의 차례"</string>
+    
+    <string name="turn">"회전"</string>
+    
+    <string name="turns">"턴"</string>
+    
+    <string name="round">"일주"</string>
+    
+    <string name="rounds">"라운드"</string>
+    
+    <string name="match">"시합"</string>
+    
+    <string name="matches">"성냥"</string>
+
+    
+    <string name="dollar">"달러"</string>
+    
+    <string name="dollars">"불화"</string>
+    
+    <string name="buy">"사기"</string>
+    
+    <string name="sell">"팔다"</string>
+    
+    <string name="purchase">"매수"</string>
+    
+    <string name="diamond">"다이아몬드"</string>
+    
+    <string name="diamonds">"다이아 패 한 벌"</string>
+
+    
+    <string name="rematch">"재 시합"</string>
+    
+    <string name="try_again">"다시 시도"</string>
+    
+    <string name="touch_continue">"계속하려면 터치"</string>
+    
+    <string name="touch_resume">"다시 시작하려면 터치"</string>
+    
+    <string name="touch_edit">"편집 터치"</string>
+    
+    <string name="pause">"중지"</string>
+    
+    <string name="pause_game">"일시 정지 게임"</string>
+    
+    <string name="resume">"이력서"</string>
+    
+    <string name="resume_game">"이력서 게임"</string>
+    
+    <string name="new_">"새로운"</string>
+    
+    <string name="new_game">"새로운 게임"</string>
+    
+    <string name="select_save">"저장을 선택"</string>
+    
+    <string name="save">"구하다"</string>
+    
+    <string name="save_game">"게임을 저장"</string>
+    
+    <string name="load">"하중"</string>
+    
+    <string name="load_game">"로드 게임"</string>
+    
+    <string name="game_over">"게임 끝"</string>
+    
+    <string name="start">"스타트"</string>
+    
+    <string name="start_game">"시작 게임"</string>
+    
+    <string name="end">"종료"</string>
+    
+    <string name="end_game">"엔드 게임"</string>
+    
+    <string name="stop">"그만"</string>
+    
+    <string name="stop_game">"정지 게임"</string>
+
+    
+
+    <string name="free">"비어 있는"</string>
+    <string name="pull">"손잡이"</string>
+    <string name="wild">"야생"</string>
+    <string name="normal">"표준"</string>
+    <string name="public_">"공적인"</string>
+    <string name="private_">"은밀한"</string>
+    <string name="default_">"태만"</string>
+    <string name="defaults">"기본값"</string>
+    <string name="completed_early">"조기 완료"</string>
+    <string name="no_items_found">"발견 된 항목이 없습니다"</string>
+    <string name="release_notes">"릴리즈 노트"</string>
+    <string name="logo">"심벌 마크"</string>
+    <string name="combo">"콤보"</string>
+    <string name="special">"특별한"</string>
+    <string name="shown_again">"다시 표시"</string>
+    <string name="edit">"편집"</string>
+    <string name="in_order">"순서대로"</string>
+    <string name="ordering">"주문"</string>
+    <string name="preview">"시사"</string>
+    <string name="share">"몫"</string>
+    <string name="share_game">"공유 게임"</string>
+    <string name="download">"다운로드"</string>
+    <string name="view">"전망"</string>
+    <string name="custom">"관습"</string>
+    <string name="title">"표제"</string>
+    <string name="name">"이름"</string>
+    <string name="color">"색"</string>
+    <string name="repeat">"반복"</string>
+    <string name="alarm">"경보"</string>
+    <string name="general">"일반"</string>
+    <string name="range">"범위"</string>
+    <string name="priority">"우선 순위"</string>
+    <string name="accent">"악센트"</string>
+    <string name="accent_color">"악센트 컬러"</string>
+    <string name="choose_color">"색상을 선택"</string>
+    <string name="filter_type">"필터 유형"</string>
+    <string name="criteria">"기준"</string>
+    <string name="trigger">"트리거"</string>
+    <string name="triggers">"트리거"</string>
+    <string name="trigger_type">"트리거 유형"</string>
+    <string name="led_pattern">"LED 패턴"</string>
+    <string name="search">"수색"</string>
+    <string name="customizer">"사용자 정의"</string>
+    <string name="customize">"사용자 정의"</string>
+    <string name="create">"몹시 떠들어 대다"</string>
+    <string name="home">"집"</string>
+    <string name="upcoming">"다가오는"</string>
+    <string name="edit_reminder">"편집 알림"</string>
+    <string name="summary">"개요"</string>
+    <string name="note">"노트"</string>
+    <string name="image">"영상"</string>
+    <string name="get">"도망"</string>
+    <string name="type">"유형"</string>
+    <string name="missed">"부재 중"</string>
+    <string name="nothing">"아무것도"</string>
+    <string name="clipboard">"클립 보드"</string>
+
+
+
+    
+    <string name="test_string_ignore">test</string>
+
+</resources>

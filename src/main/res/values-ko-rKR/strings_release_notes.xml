@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"버전 2.0.0"</item>
+        <item name="line1">"다시 브랜드 \"프로\"에서 \"기부\". 이전에 무료 기능 및 새로운 기능의 대부분은 무료입니다."</item>
+        <item name="line2">"서브 페이지의 앱 서랍을 추가했습니다."</item>
+        <item name="line5">"사용자가 만든 모든 알림에 대한 기본 미리 알림 설정을 설정하는 기능을 추가했습니다."</item>
+        <item name="line3">"앱 테마를 업데이트되었습니다."</item>
+        <item name="line4">"설정 및 도움말 및 피드백 페이지를 업데이트했습니다."</item>
+        <item name="line4">"앱 위젯을 추가했습니다."</item>
+        <item name="line5">"많은 추가 알림 옵션 (모든은 \"고급\"을 선택하여 표시)."</item>
+        <item name="line5">"추가 된 위치 기반 알림. \"사용자 정의\"페이지에서 추가합니다."</item>
+        <item name="line5">"일부 새로운 기능 \"프로\"버전에 잠겨 있습니다."</item>
+        <item name="line5">"앱 테마"</item>
+        <item name="line5">"몰입 모드."</item>
+        <item name="line4">"사용자 정의 진동 패턴."</item>
+        <item name="line4">"사용자 정의 알림 아이콘 (안드로이드 6.0 이상 만 해당)."</item>
+        <item name="line5">"추가 기능을위한 응용 프로그램을 탐험 해보세요. 더 곧 올 것입니다."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"무"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"무"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"무"</item>
+    </string-array>
+
+</resources>

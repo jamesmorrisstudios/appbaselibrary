@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Sürüm 2.0.0"</item>
+        <item name="line1">"Yeniden markalı \"Pro\" için \"Bağış\". Tüm önce ücretsiz özellikleri ve yeni özellikleri birçok ücretsizdir."</item>
+        <item name="line2">"Alt sayfaları için bir uygulama çekmece eklendi."</item>
+        <item name="line5">"Oluşturduğunuz her hatırlatma için varsayılan hatırlatma ayarlarını yapmak için yeteneği eklendi."</item>
+        <item name="line3">"Uygulamanın tema güncellendi."</item>
+        <item name="line4">"Ayarlar ve Yardım ve Geribildirim sayfaları güncellendi."</item>
+        <item name="line4">"Bir uygulama widget'ı eklendi."</item>
+        <item name="line5">"Birçok ek hatırlatma seçenekleri (tüm göster \"Gelişmiş\" kontrol ederek gösterir)."</item>
+        <item name="line5">"Eklenen konum tabanlı hatırlatmalar. \"Özelleştirici\" sayfasından ekleyin."</item>
+        <item name="line5">"Bazı yeni özellikler \"Pro\" sürümü kilitledi."</item>
+        <item name="line5">"Uygulama Temalar"</item>
+        <item name="line5">"Sürükleyici Mod."</item>
+        <item name="line4">"Özel titreşim desenleri."</item>
+        <item name="line4">"Özel bildirim simgeleri (android 6.0+ sadece)."</item>
+        <item name="line5">"ek özellikler için uygulamayı keşfedin. Daha yakında olacak."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"hiçbir şey"</item>
+    </string-array>
+
+</resources>

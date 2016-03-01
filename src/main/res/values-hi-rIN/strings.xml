@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    
+    <string name="settings_category_display">"प्रदर्शन"</string>
+    
+    <string name="settings_category_sound">"ध्वनि"</string>
+    
+    <string name="settings_category_general">"सामान्य"</string>
+    
+    <string name="settings_category_locale">"स्थान"</string>
+    
+    <string name="settings_category_theme">"विषय"</string>
+    
+    <string name="settings_category_notification">"अधिसूचना"</string>
+    
+    <string name="settings_category_notification_custom">"कस्टम अधिसूचना"</string>
+    
+    <string name="settings_category_notification_override">"अवहेलना की अधिसूचना"</string>
+    
+    <string name="settings_category_defaults">"चूक"</string>
+    
+    <string name="settings_category_random">"randomness"</string>
+    
+    <string name="settings_category_widget">"विजेट"</string>
+
+    
+    <string name="setting_immersive_enable_primary">"immersive मोड"</string>
+    
+    <string name="setting_sound_enable_primary">"ध्वनि प्रभाव"</string>
+    
+    <string name="setting_music_enable_primary">"संगीत"</string>
+    
+    <string name="setting_language_picker_primary">"भाषा"</string>
+    
+    <string name="setting_ringtone_picker_enable_primary">"कस्टम रिंगटोन बीनने"</string>
+    
+    <string name="setting_theme_picker_primary">"अनुप्रयोग विषय"</string>
+    
+    <string name="setting_accent_color_primary">"एक्सेंट रंग"</string>
+    
+    <string name="setting_primary_color_primary">"प्राथमिक रंग"</string>
+    
+    <string name="setting_toolbar_text_color_primary">"टूलबार पाठ रंग"</string>
+
+    
+    <string name="setting_notification_click_action_primary">"क्लिक कार्रवाई"</string>
+    
+    <string name="setting_notification_custom_primary">"सक्षम करें"</string>
+    
+    <string name="setting_notification_button_style_primary">"बटन शैली"</string>
+    
+    <string name="setting_notification_ongoing_primary">"चल रहे अधिसूचना"</string>
+    
+    <string name="setting_notification_ongoing_secondary">"चल रही सूचनाओं smartwatches पर समर्थित नहीं हैं"</string>
+    
+    <string name="setting_notification_theme_primary">"पृष्ठभूमि"</string>
+    
+    <string name="setting_notification_theme_text_primary">"पाठ का रंग"</string>
+    
+    <string name="setting_first_day_of_week_primary">"सप्ताह के पहले दिन"</string>
+    
+    <string name="setting_force_advanced_primary">"हमेशा उन्नत विकल्प दिखाएं"</string>
+    
+    <string name="setting_force_advanced_secondary">"एक प्रति अनुस्मारक आधार पर उन्नत विकल्प दिखाने के लिए अक्षम"</string>
+    
+    <string name="setting_notification_swipe_away_action_primary">"कड़ी चोट कार्रवाई"</string>
+    
+    <string name="setting_notification_click_open_primary">"खोलता अनुप्रयोग के लिए क्लिक करें"</string>
+    
+    <string name="setting_notification_swipe_away_open_primary">"कड़ी चोट खोलता ऐप"</string>
+    
+    <string name="setting_random_amount_primary">"बिना सोचे समझे"</string>
+    
+    <string name="setting_less_random_amount_primary">"कम यादृच्छिक"</string>
+    
+    <string name="setting_even_amount_primary">"यहाँ तक की"</string>
+    
+    <string name="setting_widget_theme_primary">"विषय"</string>
+    
+    <string name="setting_widget_text_color_primary">"पाठ का रंग"</string>
+    
+    <string name="setting_override_vibrate_primary">"अवहेलना अधिसूचना कांपना"</string>
+    
+    <string name="setting_override_ringtone_primary">"अवहेलना अधिसूचना टोन प्लेबैक"</string>
+    
+    <string name="setting_override_ringtone_secondary">"इस ऑडियो स्ट्रीम ओवरराइड करने के लिए सक्षम होना चाहिए"</string>
+    
+    <string name="setting_override_ringtone_stream_primary">"अवहेलना अधिसूचना ऑडियो स्ट्रीम"</string>
+    
+    <string name="setting_override_speech_stream_primary">"अवहेलना भाषण धारा"</string>
+
+    
+    <string name="time_millisecond">"millisecond"</string>
+    
+    <string name="time_milliseconds">"मिसे"</string>
+    
+    <string name="time_millisecond_abrev">"सुश्री"</string>
+    
+    <string name="time_second">"दूसरा"</string>
+    
+    <string name="time_seconds">"सेकंड"</string>
+    
+    <string name="time_second_abrev">"रों"</string>
+    
+    <string name="time_minute">"मिनट"</string>
+    
+    <string name="time_minutes">"मिनट"</string>
+    
+    <string name="time_hour">"समय"</string>
+    
+    <string name="time_hours">"घंटे"</string>
+    
+    <string name="time_day">"दिन"</string>
+    
+    <string name="time_days">"दिन"</string>
+    
+    <string name="time_daily">"रोज"</string>
+    
+    <string name="time_week">"सप्ताह"</string>
+    
+    <string name="time_weeks">"सप्ताह"</string>
+    
+    <string name="time_weekly">"साप्ताहिक"</string>
+    
+    <string name="time_month">"महीना"</string>
+    
+    <string name="time_months">"महीने"</string>
+    
+    <string name="time_monthly">"मासिक"</string>
+    
+    <string name="time_year">"साल"</string>
+    
+    <string name="time_years">"वर्षों"</string>
+    
+    <string name="time_yearly">"सालाना"</string>
+
+    
+    <string name="meter">"मीटर"</string>
+    
+    <string name="meters">"मीटर"</string>
+
+    
+    <string name="num_one">"एक"</string>
+    
+    <string name="num_two">"दो"</string>
+    
+    <string name="num_three">"तीन"</string>
+    
+    <string name="num_four">"चार"</string>
+    
+    <string name="num_five">"पंज"</string>
+    
+    <string name="num_six">"छक्का"</string>
+    
+    <string name="num_seven">"सात"</string>
+    
+    <string name="num_eight">"आठ"</string>
+    
+    <string name="num_nine">"नौ"</string>
+    
+    <string name="num_ten">"दस"</string>
+
+    
+    <string name="num_first">"प्रथम"</string>
+    
+    <string name="num_second">"दूसरा"</string>
+    
+    <string name="num_third">"तिहाई"</string>
+    
+    <string name="num_fourth">"चौथा"</string>
+    
+    <string name="num_fifth">"पांचवां"</string>
+    
+    <string name="num_sixth">"छठा"</string>
+    
+    <string name="num_seventh">"सातवाँ"</string>
+    
+    <string name="num_eighth">"आठवाँ"</string>
+    
+    <string name="num_ninth">"नौवां"</string>
+    
+    <string name="num_tenth">"दसवां"</string>
+
+    
+    <string name="day_sunday">"रविवार"</string>
+    
+    <string name="day_monday">"सोमवार"</string>
+    
+    <string name="day_tuesday">"मंगलवार"</string>
+    
+    <string name="day_wednesday">"बुधवार"</string>
+    
+    <string name="day_thursday">"गुरूवार"</string>
+    
+    <string name="day_friday">"शुक्रवार"</string>
+    
+    <string name="day_saturday">"शनिवार"</string>
+    
+    <string name="today">"आज"</string>
+    
+    <string name="tomorrow">"आने वाला कल"</string>
+    
+    <string name="yesterday">"बिता कल"</string>
+
+    
+    <string name="days_of_week">"सप्ताह के दिन"</string>
+    
+    <string name="days_of_month">"महीने के दिनों"</string>
+    
+    <string name="days_of_year">"वर्ष के दिनों"</string>
+    
+    <string name="weeks_of_month">"इस माह के सप्ताह"</string>
+    
+    <string name="weeks_of_year">"वर्ष के सप्ताह"</string>
+    
+    <string name="months_of_year">"इस साल के महीने"</string>
+
+    
+    <string name="next">"अगला"</string>
+    
+    <string name="previous">"पिछला"</string>
+    
+    <string name="back">"वापस"</string>
+    
+    <string name="forward">"आगे"</string>
+
+    
+    <string name="pattern_1">"पैटर्न 1"</string>
+    
+    <string name="pattern_2">"पैटर्न 2"</string>
+    
+    <string name="pattern_3">"पैटर्न 3"</string>
+    
+    <string name="pattern_4">"पैटर्न 4"</string>
+    
+    <string name="pattern_5">"पैटर्न 5"</string>
+    
+    <string name="pattern_6">"पैटर्न 6"</string>
+
+    
+    <string name="select">"चुनते हैं"</string>
+    
+    <string name="select_all">"सभी का चयन करे"</string>
+    
+    <string name="select_none">"किसी का चयन न करें"</string>
+
+    
+    <string name="diff_difficulty">"कठिनाई"</string>
+    
+    <string name="diff_select_difficulty">"कठिनाई का चयन"</string>
+    
+    <string name="diff_easy">"आसान"</string>
+    
+    <string name="diff_normal">"साधारण"</string>
+    
+    <string name="diff_hard">"कठिन"</string>
+
+    
+    <string name="enable">"सक्षम करें"</string>
+    
+    <string name="enabled">"सक्षम"</string>
+    
+    <string name="disable">"अक्षम"</string>
+    
+    <string name="disabled">"विकलांग"</string>
+    
+    <string name="lock">"ताला"</string>
+    
+    <string name="unlock">"अनलॉक"</string>
+    
+    <string name="locked">"बंद"</string>
+    
+    <string name="unlocked">"खुला"</string>
+    
+    <string name="open">"खुला"</string>
+    
+    <string name="close">"बंद करे"</string>
+    
+    <string name="opened">"खुल गया"</string>
+    
+    <string name="closed">"बन्द है"</string>
+    
+    <string name="show">"प्रदर्शन"</string>
+    
+    <string name="hide">"छिपाना"</string>
+    
+    <string name="shown">"दिखाया"</string>
+    
+    <string name="Hidden">"छिपा हुआ"</string>
+    
+    <string name="automatic">"स्वचालित"</string>
+    
+    <string name="manual">"गाइड"</string>
+    
+    <string name="online">"ऑनलाइन"</string>
+    
+    <string name="offline">"ऑफलाइन"</string>
+    
+    <string name="active">"सक्रिय"</string>
+    
+    <string name="inactive">"निष्क्रिय"</string>
+
+    
+    <string name="okay">"ठीक"</string>
+    
+    <string name="cancel">"रद्द करना"</string>
+    
+    <string name="yes">"हाँ"</string>
+    
+    <string name="no">"नहीं"</string>
+    
+    <string name="maybe">"शायद"</string>
+    
+    <string name="some">"कुछ"</string>
+    
+    <string name="none">"कोई नहीं"</string>
+    
+    <string name="all">"सब"</string>
+    
+    <string name="set">"संग्रह"</string>
+    
+    <string name="unset">"सेट नहीं"</string>
+    
+    <string name="last">"पिछली बार"</string>
+    
+    <string name="first">"प्रथम"</string>
+    
+    <string name="every">"हर एक"</string>
+    
+    <string name="other">"अन्य"</string>
+    
+    <string name="off">"बंद"</string>
+    
+    <string name="on">"पर"</string>
+    
+    <string name="delete_reminder_prompt_title">"अनुस्मारक हटाएं"</string>
+    
+    <string name="delete_reminder_prompt_content">"आप इस अनुस्मारक हटाना चाहते हैं आप सुनिश्चित हैं?"</string>
+    
+    <string name="delete_custom_icon_prompt_title">"आइकन को नष्ट"</string>
+    
+    <string name="delete_custom_icon_prompt_content">"आप इस आइकन को हटाना चाहते हैं आप सुनिश्चित हैं?"</string>
+    
+    <string name="cancel_reminder_prompt_title">"परिवर्तनों को निरस्त करें"</string>
+    
+    <string name="cancel_reminder_prompt_content">"आप अपने परिवर्तनों को त्यागना चाहते तुम्हें यकीन है?"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_title">"कंपन पैटर्न को मिटाने"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_content">"आप इस कांपना पैटर्न को हटाना चाहते हैं आप सुनिश्चित हैं?"</string>
+    
+    <string name="delete_location_prompt_title">"स्थान को हटाने"</string>
+    
+    <string name="delete_location_prompt_content">"क्या आप सच में इस स्थान को हटाना चाहते हैं?"</string>
+    
+    <string name="duplicate_reminder_prompt_title">"डुप्लीकेट अनुस्मारक"</string>
+    
+    <string name="duplicate_reminder_prompt_content">"आप इस अनुस्मारक नकल करना चाहते हैं आप सुनिश्चित हैं?"</string>
+    
+    <string name="include_log_prompt_title">"लॉग शामिल करें"</string>
+    
+    <string name="include_log_prompt_content">"आप अनुस्मारक लॉग शामिल करना चाहते हैं?"</string>
+    
+    <string name="include_default_reminder_prompt_title">"डिफ़ॉल्ट अनुस्मारक शामिल करें"</string>
+    
+    <string name="include_default_reminder_prompt_content">"आप डिफ़ॉल्ट अनुस्मारक शामिल करने के लिए करना चाहते हैं?"</string>
+    
+    <string name="start_new_game_title">"नया खेल शुरू करें"</string>
+    
+    <string name="start_new_game_prompt">"आप एक नया खेल शुरू करने के लिए चाहते हैं आप सुनिश्चित हैं?"</string>
+    
+    <string name="end_game_title">"खेल समाप्ति"</string>
+    
+    <string name="end_game_prompt">"आप इस खेल को खत्म करना चाहते हैं आप सुनिश्चित हैं?"</string>
+
+    
+    <string name="help">"मदद"</string>
+    
+    <string name="about">"के बारे में"</string>
+    
+    <string name="settings">"सेटिंग"</string>
+    
+    <string name="help_and_feedback">"सहायता और प्रतिक्रिया"</string>
+    
+    <string name="rate_app">"एप्लिकेशन का मूल्यांकन करें"</string>
+    
+    <string name="more_apps">"और ऐप"</string>
+    
+    <string name="tutorial">"ट्यूटोरियल"</string>
+    
+    <string name="read">"पढ़ना"</string>
+    
+    <string name="watch">"घड़ी"</string>
+    
+    <string name="links">"लिंक"</string>
+    
+    <string name="licenses">"लाइसेंस"</string>
+    
+    <string name="help_translate">"अनुवाद करने में मदद"</string>
+    
+    <string name="get_the_beta">"बीटा मिल"</string>
+    
+    <string name="achievements">"उपलब्धियां"</string>
+    
+    <string name="leaderboards">"लीडरबोर्ड"</string>
+    
+    <string name="high_scores">"उच्च स्कोर"</string>
+    
+    <string name="my_circles">"मेरी मंडलियां"</string>
+    
+    <string name="invitations">"निमंत्रण"</string>
+    
+    <string name="options">"विकल्प"</string>
+    
+    <string name="game_options">"गेम विकल्प"</string>
+    
+    <string name="advanced_options">"उन्नत विकल्प"</string>
+    
+    <string name="automatch">"Automatch"</string>
+    
+    <string name="guest">"अतिथि"</string>
+
+    
+    <string name="light">"रोशनी"</string>
+    
+    <string name="light_transparent">"प्रकाश पारदर्शी"</string>
+    
+    <string name="dark">"अंधेरा"</string>
+    
+    <string name="dark_transparent">"डार्क पारदर्शी"</string>
+    
+    <string name="transparent">"पारदर्शक"</string>
+    
+    <string name="night">"रात"</string>
+    
+    <string name="black">"काली"</string>
+    
+    <string name="white">"सफेद"</string>
+    
+    <string name="system">"प्रणाली"</string>
+    
+    <string name="light_text">"प्रकाश पाठ"</string>
+    
+    <string name="dark_text">"अंधेरे पाठ"</string>
+
+    
+    <string name="red">"लाल"</string>
+    
+    <string name="pink">"गुलाबी"</string>
+    
+    <string name="purple">"बैंगनी"</string>
+    
+    <string name="deep_purple">"गहरा बैंगनी"</string>
+    
+    <string name="indigo">"नील"</string>
+    
+    <string name="blue">"नीला"</string>
+    
+    <string name="light_blue">"हल्का नीला"</string>
+    
+    <string name="cyan">"सियान"</string>
+    
+    <string name="teal">"टील"</string>
+    
+    <string name="green">"हरा"</string>
+    
+    <string name="light_green">"हल्का हरा"</string>
+    
+    <string name="lime">"चूना"</string>
+    
+    <string name="yellow">"पीला"</string>
+    
+    <string name="amber">"अंबर"</string>
+    
+    <string name="orange">"नारंगी"</string>
+    
+    <string name="deep_orange">"गहरे नारंगी"</string>
+    
+    <string name="brown">"भूरा"</string>
+    
+    <string name="grey">"ग्रे"</string>
+    
+    <string name="blue_grey">"नीला ग्रे"</string>
+    
+    <string name="dark_grey">"गहरा भूरा"</string>
+
+    
+    <string name="major">"प्रमुख"</string>
+    
+    <string name="minor">"नाबालिग"</string>
+    
+    <string name="aux">"औक्स"</string>
+    
+    <string name="version">"संस्करण"</string>
+    
+    <string name="production">"उत्पादन"</string>
+    
+    <string name="beta">"बीटा"</string>
+    
+    <string name="alpha">"अल्फा"</string>
+
+    
+    <string name="icon">"चिह्न"</string>
+    
+    <string name="icons">"प्रतीक"</string>
+    
+    <string name="custom_icon">"कस्टम चिह्न"</string>
+    
+    <string name="custom_icons">"कस्टम प्रतीक"</string>
+    
+    <string name="choose_icon">"चिह्न चुनें"</string>
+
+    
+    <string name="backup">"बैकअप"</string>
+    
+    <string name="import_">"आयात"</string>
+    
+    <string name="export">"निर्यात"</string>
+    
+    <string name="export_log">"निर्यात लॉग"</string>
+    
+    <string name="import_export">"आयात निर्यात"</string>
+    
+    <string name="export_location">"निर्यात स्थान"</string>
+    
+    <string name="import_failed">"आयात विफल"</string>
+    
+    <string name="import_canceled">"आयात रद्द किया"</string>
+    
+    <string name="export_failed">"निर्यात विफल"</string>
+    
+    <string name="export_canceled">"निर्यात रद्द किया"</string>
+    
+    <string name="import_complete">"आयात पूरा"</string>
+    
+    <string name="export_complete">"निर्यात को पूरा"</string>
+    
+    <string name="importing_please_wait">"आयात, कृपया प्रतीक्षा करें"</string>
+    
+    <string name="exporting_please_wait">"निर्यात, कृपया प्रतीक्षा करें"</string>
+
+    
+    <string name="snooze">"दिन में झपकी लेना"</string>
+    
+    <string name="snoozed">"याद दिलाए गए"</string>
+    
+    <string name="auto_snooze">"ऑटो दिन में झपकी लेना"</string>
+    
+    <string name="manual_snooze">"मैनुअल दिन में झपकी लेना"</string>
+
+    
+    <string name="message">"संदेश"</string>
+    
+    <string name="messages">"संदेश"</string>
+    
+    <string name="num_messages">"संदेशों की संख्या"</string>
+    
+    <string name="edit_messages">"संदेश संपादित"</string>
+    
+    <string name="view_messages">"संदेशों को देखने के"</string>
+    
+    <string name="import_messages">"आयात संदेश"</string>
+    
+    <string name="message_separator">"संदेश सेपरेटर ||||"</string>
+
+    
+    <string name="sign_in">"साइन इन करें"</string>
+    
+    <string name="signed_in">"साइन इन किया"</string>
+    
+    <string name="sign_in_failed">"भाग लेना विफल हुआ"</string>
+    
+    <string name="sign_out">"साइन आउट"</string>
+    
+    <string name="signed_out">"साइन आउट"</string>
+
+    
+    <string name="low">"कम"</string>
+    
+    <string name="mid">"मध्य"</string>
+    
+    <string name="high">"उच्च"</string>
+    
+    <string name="min">"मिन"</string>
+    
+    <string name="max">"मैक्स"</string>
+    
+    <string name="minimum">"न्यूनतम"</string>
+    
+    <string name="medium">"मध्यम"</string>
+    
+    <string name="maximum">"ज्यादा से ज्यादा"</string>
+    
+    <string name="small">"छोटा"</string>
+    
+    <string name="large">"विशाल"</string>
+    
+    <string name="short_">"कम"</string>
+    
+    <string name="long_">"लंबा"</string>
+    
+    <string name="slow">"धीरे"</string>
+    
+    <string name="fast">"उपवास"</string>
+    
+    <string name="quick">"शीघ्र"</string>
+    
+    <string name="narrow">"संकीर्ण"</string>
+    
+    <string name="wide">"चौड़ा"</string>
+
+    
+    <string name="thank_you">"धन्यवाद"</string>
+    
+    <string name="youre_welcome">"आपका स्वागत है"</string>
+    
+    <string name="please">"कृपया"</string>
+
+    
+    <string name="you">"आप"</string>
+    
+    <string name="me">"मैं"</string>
+    
+    <string name="us">"हमें"</string>
+    
+    <string name="we">"हम"</string>
+    
+    <string name="them">"उन्हें"</string>
+
+    
+    <string name="short_on">"पर छोटा"</string>
+    
+    <string name="medium_on">"मीडियम पर"</string>
+    
+    <string name="long_on">"अपेक्षाकृत"</string>
+    
+    <string name="short_off">"की कमी"</string>
+    
+    <string name="medium_off">"मध्यम बंद"</string>
+    
+    <string name="long_off">"लंबा अवकाश"</string>
+
+    
+    <string name="pro">"समर्थक"</string>
+    
+    <string name="pro_feature">"प्रो सुविधा"</string>
+    
+    <string name="upgrade">"नवीनीकरण"</string>
+    
+    <string name="feature_requires_pro">"यह सुविधा प्रो संस्करण की आवश्यकता है"</string>
+    
+    <string name="feature_requires_pro_limited">"यह सुविधा नि: शुल्क संस्करण में सीमित है। प्रो करने के लिए उन्नयन करना है या किसी मौजूदा आइटम को हटा दें।"</string>
+    
+    <string name="upgrade_to_pro">"प्रो में अपग्रेड"</string>
+    
+    <string name="upgrade_now">"अभी अपग्रेड करें"</string>
+
+    
+    <string name="start_date">"आरंभ करने की तिथि"</string>
+    
+    <string name="end_date">"अंतिम तिथि"</string>
+    
+    <string name="start_time">"समय शुरू"</string>
+    
+    <string name="end_time">"अंतिम समय"</string>
+    
+    <string name="end_type">"अंत प्रकार"</string>
+    
+    <string name="timing_type">"समय के प्रकार"</string>
+    
+    <string name="edit_times">"टाइम्स संपादित करें"</string>
+    
+    <string name="time">"पहर"</string>
+    
+    <string name="times">"टाइम्स"</string>
+    
+    <string name="timing">"समय"</string>
+    
+    <string name="all_time">"पूरे समय"</string>
+    
+    <string name="every_week">"प्रति सप्ताह"</string>
+    
+    <string name="lifetime">"जीवन काल"</string>
+    
+    <string name="forever">"सदैव"</string>
+    
+    <string name="time_period">"समय सीमा"</string>
+    
+    <string name="random">"बिना सोचे समझे"</string>
+    
+    <string name="randomly">"बेतरतीब ढंग से"</string>
+    
+    <string name="less_random">"कम यादृच्छिक"</string>
+    
+    <string name="even">"यहाँ तक की"</string>
+    
+    <string name="evenly">"के बराबर"</string>
+    
+    <string name="specific">"विशिष्ट"</string>
+    
+    <string name="interval">"मध्यान्तर"</string>
+    
+    <string name="specific_times">"विशिष्ट टाइम्स"</string>
+    
+    <string name="repeat_every">"दोहराएँ हर"</string>
+
+    
+    <string name="data_loaded">"डेटा लोड"</string>
+    
+    <string name="file">"फ़ाइल"</string>
+    
+    <string name="local_storage">"स्थानीय भंडार"</string>
+    
+    <string name="filename">"फ़ाइल का नाम"</string>
+
+    
+    <string name="permission_granted">"अनुमति प्रदान की गई"</string>
+    
+    <string name="permission_denied">"अनुमति नहीं मिली"</string>
+    
+    <string name="allow_if_any">"अगर किसी भी अनुमति दें"</string>
+    
+    <string name="allow_if_all">"अगर सब अनुमति दें"</string>
+    
+    <string name="disallow_if_any">"यदि कोई हो नामंज़ूर"</string>
+    
+    <string name="disallow_if_all">"अगर सब नामंज़ूर"</string>
+    
+    <string name="trigger_if_any">"उत्प्रेरक यदि कोई हो"</string>
+    
+    <string name="trigger_if_all">"उत्प्रेरक अगर सब"</string>
+
+    
+    <string name="reminders">"अनुस्मारक"</string>
+    
+    <string name="no_reminder">"कोई अनुस्मारक"</string>
+    
+    <string name="no_reminders_yet">"आप अभी तक कोई याद दिलाते हैं"</string>
+    
+    <string name="alerts_per_day">"प्रति दिन अनुस्मारक"</string>
+    
+    <string name="number_of_reminders">"अनुस्मारक की संख्या"</string>
+
+    
+    <string name="changes_discarded">"परिवर्तन त्याग"</string>
+    
+    <string name="changes_saved">"परिवर्तनों को सहेजा"</string>
+    
+    <string name="no_changes">"कोई बदलाव नहीं"</string>
+    
+    <string name="select_at_least_one_item">"कम से कम एक आइटम का चयन करें"</string>
+
+    
+    <string name="loading">"लोड हो रहा है"</string>
+    
+    <string name="loaded">"लदा हुआ"</string>
+    
+    <string name="loading_failed">"लोड हो रहा है विफल"</string>
+    
+    <string name="loading_complete">"पूरा लोड हो रहा है"</string>
+    
+    <string name="error">"त्रुटि"</string>
+    
+    <string name="fail">"असफल"</string>
+    
+    <string name="failed">"अनुत्तीर्ण होना"</string>
+    
+    <string name="success">"सफलता"</string>
+    
+    <string name="successful">"सफल"</string>
+    
+    <string name="unsuccessful">"असफल"</string>
+    
+    <string name="valid">"मान्य"</string>
+    
+    <string name="invalid">"अमान्य"</string>
+    
+    <string name="complete">"पूर्ण"</string>
+    
+    <string name="completed">"पूरा कर लिया है"</string>
+    
+    <string name="skipped">"छोड़ा"</string>
+    
+    <string name="incomplete">"अधूरा"</string>
+    
+    <string name="dismiss">"बर्खास्त"</string>
+    
+    <string name="dismissed">"ख़ारिज"</string>
+    
+    <string name="acknowledge">"स्वीकार करो"</string>
+    
+    <string name="acknowledged">"स्वीकार किया"</string>
+    
+    <string name="add">"जोड़ना"</string>
+    
+    <string name="added">"जोड़ा"</string>
+    
+    <string name="add_item">"सामान जोडें"</string>
+    
+    <string name="remove">"हटाना"</string>
+    
+    <string name="removed">"हटा दिया"</string>
+    
+    <string name="remove_item">"वस्तु निकालो"</string>
+    
+    <string name="delete">"मिटाना"</string>
+    
+    <string name="deleted">"हटाए गए"</string>
+    
+    <string name="duplicate">"नक़ल"</string>
+    
+    <string name="duplicated">"दोहराए"</string>
+    
+    <string name="restart">"पुनः आरंभ करें"</string>
+    
+    <string name="restarting">"को पुन: प्रारंभ"</string>
+    
+    <string name="restarting_app_please_wait">"App शुरु, कृपया प्रतीक्षा करें"</string>
+
+    
+    <string name="map">"नक्शा"</string>
+    
+    <string name="location">"स्थान"</string>
+    
+    <string name="locations">"स्थान"</string>
+    
+    <string name="latitude">"अक्षांश"</string>
+    
+    <string name="longitude">"देशान्तर"</string>
+    
+    <string name="radius">"त्रिज्या"</string>
+    
+    <string name="enter">"दर्ज"</string>
+    
+    <string name="exit">"बाहर जाएं"</string>
+    
+    <string name="linger_time">"अभी भी ताजा टाइम"</string>
+
+    
+    <string name="music">"संगीत"</string>
+    
+    <string name="ring">"अंगूठी"</string>
+    
+    <string name="speak_time">"समय बोलते हैं"</string>
+    
+    <string name="speak_title">"शीर्षक बोलो"</string>
+    
+    <string name="speak_message">"संदेश बोलो"</string>
+    
+    <string name="tone">"सुर"</string>
+    
+    <string name="sound">"ध्वनि"</string>
+
+    
+    <string name="notification">"अधिसूचना"</string>
+    
+    <string name="notifications">"सूचनाएं"</string>
+    
+    <string name="select_notification">"सूचना का चयन"</string>
+
+    
+    <string name="vibrate">"कांपना"</string>
+    
+    <string name="vibrate_pattern">"कंपन पैटर्न"</string>
+    
+    <string name="vibrate_patterns">"कंपन पैटर्न"</string>
+    
+    <string name="create_vibrate_pattern">"कंपन पैटर्न बनाने"</string>
+
+    
+
+    
+    <string name="you_win">"तुम जीते"</string>
+    
+    <string name="you_won">"तुम जीते"</string>
+    
+    <string name="you_lost">"तुम हार गए"</string>
+    
+    <string name="you_lose">"तुम हारे"</string>
+    
+    <string name="you_tied">"आप बंधी"</string>
+    
+    <string name="winner">"विजेता"</string>
+    
+    <string name="winners">"विजेताओं"</string>
+    
+    <string name="loser">"परास्त"</string>
+    
+    <string name="Losers">"हारे"</string>
+
+    
+    <string name="number_of_players">"खिलाड़ियों की संख्या"</string>
+    
+    <string name="player">"खिलाड़ी"</string>
+    
+    <string name="players">"खिलाड़ियों"</string>
+    
+    <string name="player_1">"खिलाड़ी 1"</string>
+    
+    <string name="player_2">"खिलाड़ी 2"</string>
+    
+    <string name="player_3">"प्लेयर 3"</string>
+    
+    <string name="player_4">"प्लेयर 4"</string>
+    
+    <string name="player_5">"प्लेयर 5"</string>
+    
+    <string name="player_6">"प्लेयर 6"</string>
+    
+    <string name="team">"टीम"</string>
+    
+    <string name="teams">"टीमें इस प्रकार हैं"</string>
+    
+    <string name="number_of_teams">"टीमों की संख्या"</string>
+    
+    <string name="team_1">"टीम 1"</string>
+    
+    <string name="team_2">"टीम 2"</string>
+    
+    <string name="team_3">"टीम 3"</string>
+    
+    <string name="team_4">"टीम 4"</string>
+
+    
+    <string name="requires_google_play">"यह कार्रवाई Google Play खेलों की आवश्यकता है"</string>
+    
+    <string name="compare_profiles">"तुलना प्ले खेलों प्रोफाइल"</string>
+    
+    <string name="view_profile">"देखें प्ले खेल प्रोफाइल"</string>
+
+    
+    <string name="sponsored">"प्रायोजित"</string>
+    
+    <string name="ads">"विज्ञापन"</string>
+    
+    <string name="remove_ads">"विज्ञापन हटाएँ"</string>
+    
+    <string name="ads_removed">"टॉप निकाला"</string>
+
+    
+    <string name="current_score">"वर्तमान स्कोर"</string>
+    
+    <string name="top_score">"शीर्ष स्कोर"</string>
+    
+    <string name="score">"स्कोर"</string>
+
+    
+    <string name="your_turn">"तुम्हारी बारी"</string>
+    
+    <string name="their_turn">"उनकी बारी"</string>
+    
+    <string name="turn">"मोड़"</string>
+    
+    <string name="turns">"वर्षगांठ"</string>
+    
+    <string name="round">"गोल"</string>
+    
+    <string name="rounds">"राउंड"</string>
+    
+    <string name="match">"मैच"</string>
+    
+    <string name="matches">"मेल खाता है"</string>
+
+    
+    <string name="dollar">"डॉलर"</string>
+    
+    <string name="dollars">"डॉलर"</string>
+    
+    <string name="buy">"खरीदें"</string>
+    
+    <string name="sell">"बेचना"</string>
+    
+    <string name="purchase">"खरीद फरोख्त"</string>
+    
+    <string name="diamond">"हीरा"</string>
+    
+    <string name="diamonds">"हीरे"</string>
+
+    
+    <string name="rematch">"दोबारा मैच"</string>
+    
+    <string name="try_again">"पुनः प्रयास करें"</string>
+    
+    <string name="touch_continue">"जारी रखें स्पर्श करने के लिए"</string>
+    
+    <string name="touch_resume">"फिर से शुरू करने के लिए स्पर्श"</string>
+    
+    <string name="touch_edit">"संपादित करने के लिए स्पर्श"</string>
+    
+    <string name="pause">"ठहराव"</string>
+    
+    <string name="pause_game">"रोकें खेल"</string>
+    
+    <string name="resume">"बायोडाटा"</string>
+    
+    <string name="resume_game">"खेल फिर से शुरू करें"</string>
+    
+    <string name="new_">"नया"</string>
+    
+    <string name="new_game">"नया खेल"</string>
+    
+    <string name="select_save">"सहेजें का चयन करें"</string>
+    
+    <string name="save">"बचाना"</string>
+    
+    <string name="save_game">"खेल को सेव करें"</string>
+    
+    <string name="load">"भार"</string>
+    
+    <string name="load_game">"खेल लोड करें"</string>
+    
+    <string name="game_over">"खेल खत्म"</string>
+    
+    <string name="start">"प्रारंभ"</string>
+    
+    <string name="start_game">"खेल शुरू"</string>
+    
+    <string name="end">"समाप्त"</string>
+    
+    <string name="end_game">"खेल समाप्ति"</string>
+    
+    <string name="stop">"रुकें"</string>
+    
+    <string name="stop_game">"बंद करो खेल"</string>
+
+    
+
+    <string name="free">"मुक्त"</string>
+    <string name="pull">"खींचें"</string>
+    <string name="wild">"जंगली"</string>
+    <string name="normal">"साधारण"</string>
+    <string name="public_">"जनता"</string>
+    <string name="private_">"प्राइवेट"</string>
+    <string name="default_">"चूक"</string>
+    <string name="defaults">"चूक"</string>
+    <string name="completed_early">"जल्दी पूरा"</string>
+    <string name="no_items_found">"कोई आइटम नहीं मिला"</string>
+    <string name="release_notes">"रिलीज नोट्स"</string>
+    <string name="logo">"लोगो"</string>
+    <string name="combo">"कॉम्बो"</string>
+    <string name="special">"विशेष"</string>
+    <string name="shown_again">"फिर से दिखाया"</string>
+    <string name="edit">"संपादित करें"</string>
+    <string name="in_order">"क्रम में"</string>
+    <string name="ordering">"आदेश"</string>
+    <string name="preview">"पूर्वावलोकन"</string>
+    <string name="share">"शेयर"</string>
+    <string name="share_game">"शेयर खेल"</string>
+    <string name="download">"डाउनलोड"</string>
+    <string name="view">"राय"</string>
+    <string name="custom">"रिवाज"</string>
+    <string name="title">"शीर्षक"</string>
+    <string name="name">"नाम"</string>
+    <string name="color">"रंग"</string>
+    <string name="repeat">"दोहराना"</string>
+    <string name="alarm">"अलार्म"</string>
+    <string name="general">"सामान्य"</string>
+    <string name="range">"रेंज"</string>
+    <string name="priority">"प्राथमिकता"</string>
+    <string name="accent">"उच्चारण"</string>
+    <string name="accent_color">"एक्सेंट रंग"</string>
+    <string name="choose_color">"रंग पसंद करो"</string>
+    <string name="filter_type">"फ़िल्टर प्रकार"</string>
+    <string name="criteria">"मानदंड"</string>
+    <string name="trigger">"उत्प्रेरक"</string>
+    <string name="triggers">"ट्रिगर"</string>
+    <string name="trigger_type">"उत्प्रेरक प्रकार"</string>
+    <string name="led_pattern">"एलईडी पैटर्न"</string>
+    <string name="search">"खोज"</string>
+    <string name="customizer">"Customizer"</string>
+    <string name="customize">"अनुकूलित करें"</string>
+    <string name="create">"बनाएं"</string>
+    <string name="home">"घर"</string>
+    <string name="upcoming">"आगामी"</string>
+    <string name="edit_reminder">"अनुस्मारक संपादित करें"</string>
+    <string name="summary">"सारांश"</string>
+    <string name="note">"ध्यान दें"</string>
+    <string name="image">"छवि"</string>
+    <string name="get">"प्राप्त"</string>
+    <string name="type">"प्रकार"</string>
+    <string name="missed">"चुक गया"</string>
+    <string name="nothing">"कुछ भी तो नहीं"</string>
+    <string name="clipboard">"क्लिपबोर्ड"</string>
+
+
+
+    
+    <string name="test_string_ignore">test</string>
+
+</resources>

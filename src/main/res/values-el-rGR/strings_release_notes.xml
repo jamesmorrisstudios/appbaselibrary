@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"έκδοση 2.0.0"</item>
+        <item name="line1">"Re-branded \"Δωρεά\" στο \"Pro\". Όλα τα προηγούμενα δωρεάν χαρακτηριστικά και πολλά από τα νέα χαρακτηριστικά είναι δωρεάν."</item>
+        <item name="line2">"Προστέθηκε ένα συρτάρι app για επιμέρους σελίδες."</item>
+        <item name="line5">"Προστέθηκε η δυνατότητα να ορίσετε τις προεπιλεγμένες ρυθμίσεις υπενθύμισης για κάθε υπενθύμιση που δημιουργείτε."</item>
+        <item name="line3">"Ενημερώθηκε το θέμα της εφαρμογής."</item>
+        <item name="line4">"Ενημερώθηκε τις Ρυθμίσεις και Βοήθεια &amp; σελίδες σχολίων."</item>
+        <item name="line4">"Προστέθηκε ένα widget app."</item>
+        <item name="line5">"Πολλές πρόσθετες επιλογές υπενθύμισης (προβολή όλων επιλέγοντας \"Εμφάνιση Advanced\")."</item>
+        <item name="line5">"Προστέθηκε τοποθεσία υπενθυμίσεις βάση. Προσθήκη από τη σελίδα \"Customizer\"."</item>
+        <item name="line5">"Μερικά νέα χαρακτηριστικά κλειδωμένο στο \"Pro\" έκδοση."</item>
+        <item name="line5">"Θέματα App"</item>
+        <item name="line5">"Μοναδική λειτουργία."</item>
+        <item name="line4">"μοτίβα έθιμο δονείται."</item>
+        <item name="line4">"εικονίδια συνήθειας κοινοποίηση (Android 6.0+ μόνο)."</item>
+        <item name="line5">"Εξερευνήστε το app για πρόσθετες λειτουργίες. Περισσότερες θα είναι σύντομα κοντά σας."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"τίποτα"</item>
+    </string-array>
+
+</resources>

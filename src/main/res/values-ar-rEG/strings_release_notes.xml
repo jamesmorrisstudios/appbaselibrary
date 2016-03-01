@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"النسخة 2.0.0"</item>
+        <item name="line1">"إعادة صفت \"التبرع\" إلى \"برو\". كل الميزات المجانية سابقا والعديد من الميزات الجديدة هي حرة."</item>
+        <item name="line2">"وأضاف درج التطبيق لصفحات فرعية."</item>
+        <item name="line5">"وأضاف القدرة على ضبط إعدادات التذكير الافتراضية لكل تذكير التي تقوم بإنشائها."</item>
+        <item name="line3">"تحديث موضوع التطبيق."</item>
+        <item name="line4">"تحديث الإعدادات والمساعدة وصفحات ملاحظات."</item>
+        <item name="line4">"وأضاف على القطعة التطبيق."</item>
+        <item name="line5">"العديد من الخيارات تذكير إضافية (عرض الكل عن طريق فحص \"مشاهدة المتقدم\")."</item>
+        <item name="line5">"تذكير تعتمد على الموقع المضافة. إضافته من صفحة \"مخصص\"."</item>
+        <item name="line5">"بعض الميزات الجديدة مقفلة ل\"برو\" الإصدار."</item>
+        <item name="line5">"التطبيق موبايل"</item>
+        <item name="line5">"الوضع غامرة."</item>
+        <item name="line4">"أنماط اهتزاز مخصصة."</item>
+        <item name="line4">"أيقونات الإشعار مخصصة (الروبوت 6.0+ فقط)."</item>
+        <item name="line5">"استكشاف التطبيق لميزات إضافية. أكثر سيأتي قريبا."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"لا شى"</item>
+    </string-array>
+
+</resources>

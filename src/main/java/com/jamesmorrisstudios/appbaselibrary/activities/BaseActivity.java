@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -54,6 +55,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
         FragmentManager.OnBackStackChangedListener,
         BaseBuildManager.BaseBuildManagerListener,
         NavigationView.OnNavigationItemSelectedListener {
+
+    public static boolean previouslyRunning = false;
 
     private DrawerLayout drawer;
     private NavigationView navigationView;
@@ -117,6 +120,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
+        Log.v("BaseActivity", "On Create");
         UtilsTheme.applyTheme(this);
         UtilsAppBase.applyLocale();
         UtilsAppBase.applyFirstDayOfWeek();
@@ -134,6 +138,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param savedInstanceState savedInstanceState
      */
     private void OnPostCreate(@Nullable final Bundle savedInstanceState) {
+        Log.v("BaseActivity", "OnPostCreate");
         super.onPostCreate(savedInstanceState);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -155,9 +160,12 @@ public abstract class BaseActivity extends AppCompatActivity implements
         activityResultManager.attach(this);
         UtilsDisplay.toggleShowToolbar(toolbar, true, true);
         //UtilsDisplay.toggleToolbarOverlay(getFragmentContainer(), getTheme(), false);
-        if (!hasBackStack()) {
+        if (!hasBackStack() || !previouslyRunning) {
+            Log.v("BaseActivity", "No back stack. Loading Main");
+            clearBackStack();
             loadFragment(BaseFragment.TAG_MAIN_FRAGMENT);
         }
+        previouslyRunning = true;
         processIntentsBase();
     }
 
@@ -315,6 +323,12 @@ public abstract class BaseActivity extends AppCompatActivity implements
             case HIDE_KEYBOARD:
                 Utils.hideKeyboard(this);
                 break;
+            case HIDE_KEYBOARD_FROM:
+                if(event.context != null && event.view != null) {
+                    Utils.hideKeyboardFrom(event.context, event.view);
+                }
+                event.clear();
+                break;
             case HIDE_TOOLBAR_TITLE:
                 ActionBar actionbar1 = getSupportActionBar();
                 if (actionbar1 != null) {
@@ -340,7 +354,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 onSettingsChanged();
                 break;
             case SET_TOOLBAR_TITLE:
-                toolbar.setTitle(event.text);
+                if(event.text != null) {
+                    toolbar.setTitle(event.text);
+                }
+                event.clear();
                 break;
         }
     }
@@ -553,6 +570,10 @@ public abstract class BaseActivity extends AppCompatActivity implements
         return getSupportFragmentManager().getBackStackEntryCount() > 0;
     }
 
+    public final int getBackStackSize() {
+        return getSupportFragmentManager().getBackStackEntryCount();
+    }
+
     /**
      * @return Fragment item at the top of the back stack. Null if none (or main).
      */
@@ -723,8 +744,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param item     Fragment Item
      */
     private void loadFragment(@NonNull final BaseFragment fragment, @NonNull final FragmentItem item) {
+        Log.v("BaseActivity", "LoadFragment 1: " + item.tag);
         if (!isFragmentUIActive(fragment)) {
-            Log.v("BaseActivity", "LoadFragment: " + item.tag);
+            Log.v("BaseActivity", "LoadFragment 2: " + item.tag);
             if (!item.isMain()) {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_NONE)
@@ -834,6 +856,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
         BACK_TO_MAIN_FRAGMENT,
         BACK_ONE_FRAGMENT,
         HIDE_KEYBOARD,
+        HIDE_KEYBOARD_FROM,
         HIDE_TOOLBAR_TITLE,
         SHOW_TOOLBAR_TITLE,
         SETTINGS_CLICKED,
@@ -843,6 +866,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
         SET_TOOLBAR_TITLE;
 
         public String text;
+        public Context context;
+        public View view;
 
         /**
          * Send the action event
@@ -859,6 +884,33 @@ public abstract class BaseActivity extends AppCompatActivity implements
         public final AppBaseEvent text(@NonNull final String text) {
             this.text = text;
             return this;
+        }
+
+        /**
+         * @param context Context to set
+         * @return this event
+         */
+        public final AppBaseEvent context(@NonNull final Context context) {
+            this.context = context;
+            return this;
+        }
+
+        /**
+         * @param view View to set
+         * @return this event
+         */
+        public final AppBaseEvent view(@NonNull final View view) {
+            this.view = view;
+            return this;
+        }
+
+        /**
+         * Clear saved state in enum
+         */
+        public final void clear() {
+            this.text = null;
+            this.context = null;
+            this.view = null;
         }
     }
 

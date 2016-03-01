@@ -18,6 +18,7 @@ package com.jamesmorrisstudios.appbaselibrary;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -87,6 +88,7 @@ public final class Serializer {
         try {
             st = new String(bytes, Utils.stringType);
         } catch (Exception e1) {
+            //Log.v("Serializer", "Failed to deserialize: String conversion");
             return null;
         }
         try {
@@ -94,6 +96,8 @@ public final class Serializer {
             Gson gson = builder.create();
             return gson.fromJson(st, clazz);
         } catch (Exception e) {
+            e.printStackTrace();
+            //Log.v("Serializer", "Failed to deserialize: builder: "+st);
             return null;
         }
     }

@@ -1,14 +1,18 @@
 package com.jamesmorrisstudios.appbaselibrary.dialogs;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,6 +21,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
+import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
 import com.jamesmorrisstudios.appbaselibrary.listeners.AfterTextChangedWatcher;
 
 import java.util.ArrayList;
@@ -51,6 +56,14 @@ public final class EditTextListDialog extends BaseDialogFragment {
         Button btnAdd = (Button) view.findViewById(R.id.btn_neutral);
         TextView title = (TextView) view.findViewById(R.id.title);
         title.setText(titleText);
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.requestFocus();
+                BaseActivity.AppBaseEvent.HIDE_KEYBOARD_FROM.context(getContext()).view(v).post();
+                return false;
+            }
+        });
         if (messages != null) {
             adapter = new EditTextListAdapter(getActivity(), R.layout.dialog_edit_text_list_item, wrapString(messages));
             list.setAdapter(adapter);

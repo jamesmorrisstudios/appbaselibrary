@@ -4,6 +4,7 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
@@ -163,6 +164,7 @@ public final class UtilsVersion {
      * @return True if pro version
      */
     public static boolean isPro() {
+        //Log.v("UtilsVersion", "PRO Package: "+AppBase.getContext().getString(R.string.pro_package_name)+" Package: "+Utils.getPackage());
         return AppBase.getContext().getString(R.string.pro_package_name).equals(Utils.getPackage());
     }
 

@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Wersja 2.0.0"</item>
+        <item name="line1">"Re-branded \"Darowizna\" na \"Pro\". Wszystkie poprzednio darmowe funkcje oraz wiele nowych funkcji są bezpłatne."</item>
+        <item name="line2">"Dodano aplikację szufladę do podstron."</item>
+        <item name="line5">"Dodano możliwość ustawienia domyślne ustawienia przypomnień dla każdego przypomnienia, którą tworzysz."</item>
+        <item name="line3">"Zaktualizowany app motywu."</item>
+        <item name="line4">"Zaktualizowano ustawienia i Pomoc i stron zwrotnego."</item>
+        <item name="line4">"Dodano widżet aplikacji."</item>
+        <item name="line5">"Wiele dodatkowych opcji przypomnienia (wyświetl wszystkie sprawdzając \"Pokaż zaawansowane\")."</item>
+        <item name="line5">"Przypomnienia oparte Dodano lokalizacja. Dodaj ze strony \"Customizer\"."</item>
+        <item name="line5">"Niektóre nowe funkcje zablokowane \"Pro\" wersji."</item>
+        <item name="line5">"Motywy App"</item>
+        <item name="line5">"Wciągające Tryb."</item>
+        <item name="line4">"niestandardowe wzory wibrować."</item>
+        <item name="line4">"Niestandardowe ikony powiadomień (Android 6.0+ tylko)."</item>
+        <item name="line5">"Poznaj aplikację dla dodatkowych funkcji. Więcej już wkrótce."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+</resources>

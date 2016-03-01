@@ -61,15 +61,17 @@
     <!-- (RandRemind Settings) Click Action -->
     <string name="setting_notification_click_action_primary">Click action</string>
     <!-- (RandRemind Settings) Custom Notification -->
-    <string name="setting_notification_custom_primary">Custom Notification</string>
+    <string name="setting_notification_custom_primary">Enable</string>
+    <!-- (RandRemind Settings) Custom Notification -->
+    <string name="setting_notification_button_style_primary">Button Style</string>
     <!-- (RandRemind Settings) Ongoing Notification -->
     <string name="setting_notification_ongoing_primary">Ongoing Notification</string>
     <!-- (RandRemind Settings) Ongoing notifications are not supported on SmartWatches -->
     <string name="setting_notification_ongoing_secondary">Ongoing notifications are not supported on SmartWatches</string>
     <!-- (RandRemind Settings) Custom Notification Background -->
-    <string name="setting_notification_theme_primary">Custom Notification Background</string>
+    <string name="setting_notification_theme_primary">Background</string>
     <!-- (RandRemind Settings) Custom Notification Text -->
-    <string name="setting_notification_theme_text_primary">Custom Notification Text</string>
+    <string name="setting_notification_theme_text_primary">Text Color</string>
     <!-- (RandRemind Settings) First Day of the Week -->
     <string name="setting_first_day_of_week_primary">First Day of the Week</string>
     <!-- (RandRemind Settings) Always Show Advanced Options -->
@@ -374,6 +376,10 @@
     <string name="include_log_prompt_title">Include Log</string>
     <!-- (Prompts) Do you want to include the reminder log? -->
     <string name="include_log_prompt_content">Do you want to include the reminder log?</string>
+    <!-- (Prompts) Include Default Reminder -->
+    <string name="include_default_reminder_prompt_title">Include Default Reminder</string>
+    <!-- (Prompts) Do you want to include the default reminder?? -->
+    <string name="include_default_reminder_prompt_content">Do you want to include the default reminder?</string>
     <!-- (Prompts) Start New Game -->
     <string name="start_new_game_title">Start New Game</string>
     <!-- (Prompts) Are you sure you want to start a new game? -->
@@ -496,8 +502,8 @@
 
     <!-- (Version) Major -->
     <string name="major">Major</string>
-    <!-- (Version) Major -->
-    <string name="minor">Major</string>
+    <!-- (Version) Minor -->
+    <string name="minor">Minor</string>
     <!-- (Version) Aux -->
     <string name="aux">Aux</string>
     <!-- (Version) Version -->
@@ -614,6 +620,10 @@
     <string name="fast">Fast</string>
     <!-- (Length/Size) Quick -->
     <string name="quick">Quick</string>
+    <!-- (Length/Size) Narrow -->
+    <string name="narrow">Narrow</string>
+    <!-- (Length/Size) Wide -->
+    <string name="wide">Wide</string>
 
     <!-- (Polite) Thank You -->
     <string name="thank_you">Thank You</string>
@@ -1095,5 +1105,10 @@
     <string name="missed">Missed</string>
     <string name="nothing">Nothing</string>
     <string name="clipboard">Clipboard</string>
+
+
+
+    <!-- Test String IGNORE -->
+    <string name="test_string_ignore">Ignore This</string>
 
 </resources>

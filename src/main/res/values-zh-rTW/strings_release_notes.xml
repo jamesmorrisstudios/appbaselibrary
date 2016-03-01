@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"版本2.0.0"</item>
+        <item name="line1">"重新打上了“捐贈”到“親”。所有以前免費的功能和許多新功能都是免費的。"</item>
+        <item name="line2">"增加了子頁面的應用程序的抽屜。"</item>
+        <item name="line5">"添加到您創建的每一個提醒設置默認提醒設置的能力。"</item>
+        <item name="line3">"更新了應用程序的主題。"</item>
+        <item name="line4">"更新設置和幫助與反饋頁面。"</item>
+        <item name="line4">"添加的應用程序部件。"</item>
+        <item name="line5">"許多額外提醒選項（顯示全部通過檢查“顯示高級”）。"</item>
+        <item name="line5">"基於新增位置提醒。添加從“定制”頁面。"</item>
+        <item name="line5">"一些新的功能鎖定為“親”的版本。"</item>
+        <item name="line5">"應用主題"</item>
+        <item name="line5">"沉浸模式。"</item>
+        <item name="line4">"自定義振動模式。"</item>
+        <item name="line4">"自定義通知圖標（安卓6.0+只）。"</item>
+        <item name="line5">"探索附加功能的應用程序。更多即將到來。"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"沒什麼"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"沒什麼"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"沒什麼"</item>
+    </string-array>
+
+</resources>

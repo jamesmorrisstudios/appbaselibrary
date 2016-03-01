@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"različica 2.0.0"</item>
+        <item name="line1">"Re-blagovno znamko \"Donacija\" v \"Pro\". Vse prej brezplačne funkcije in mnoge nove funkcije so brezplačne."</item>
+        <item name="line2">"Dodano aplikacijo predal za podstrani."</item>
+        <item name="line5">"Dodana možnost, da nastavite privzete nastavitve opomnika za vsak opomnik, ki ga ustvarite."</item>
+        <item name="line3">"Posodobljeno temo aplikacije."</item>
+        <item name="line4">"Posodobljene Nastavitve in Pomoč in povratne strani."</item>
+        <item name="line4">"Dodal aplikacije pripomočka."</item>
+        <item name="line5">"Veliko dodatne možnosti opomnik (prikaz vseh s preverjanjem \"Show Advanced\")."</item>
+        <item name="line5">"Dodano lega opomniki osnovi. Dodaj iz \"za prilagajanje\" stran."</item>
+        <item name="line5">"Nekatere nove funkcije zaklenjen na \"Pro\" različici."</item>
+        <item name="line5">"aplikacije Teme"</item>
+        <item name="line5">"Čelada način."</item>
+        <item name="line4">"Meri vibriranja vzorci."</item>
+        <item name="line4">"Ikone obvestil po meri (android 6.0+ samo)."</item>
+        <item name="line5">"Razišči aplikacijo za dodatne funkcije. Več bo kmalu."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+</resources>

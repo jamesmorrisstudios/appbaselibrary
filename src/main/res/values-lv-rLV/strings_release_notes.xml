@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versija 2.0.0"</item>
+        <item name="line1">"Re-firmas \"Ziedojums\" uz \"Pro\". Visi iepriekš bezmaksas funkcijas un daudzas jaunas funkcijas ir bezmaksas."</item>
+        <item name="line2">"Pievienots lietotnes atvilktne apakšgrupas lapām."</item>
+        <item name="line5">"Pievienots spēja noteikt noklusējuma atgādinājumu iestatījumus katru atgādinājums, ka jūs izveidojat."</item>
+        <item name="line3">"Atjaunināja lietotnes tēmu."</item>
+        <item name="line4">"Atjaunots uzstādījumus un Palīdzība un atsauksmes lapas."</item>
+        <item name="line4">"Pievienots lietotnes logrīku."</item>
+        <item name="line5">"Daudzas papildus atgādinājumu iespējas (rādīt visus, pārbaudot \"Rādīt papildus\")."</item>
+        <item name="line5">"Pievienots atrašanās balstīti atgādinājumus. Pievienot no \"pielāgošanas\" lapā."</item>
+        <item name="line5">"Dažas jaunas funkcijas bloķēta \"Pro\" versija."</item>
+        <item name="line5">"lietotnes Tēmas"</item>
+        <item name="line5">"Immersive Mode."</item>
+        <item name="line4">"Custom vibrācijas modeļi."</item>
+        <item name="line4">"Custom paziņojumu ikonas (Android 6.0 vai jaunāka versija tikai)."</item>
+        <item name="line5">"Izpētīt lietotni papildu funkcijas. Vairāk tiks drīzumā."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nekas"</item>
+    </string-array>
+
+</resources>

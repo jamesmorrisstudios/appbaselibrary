@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Version 2.0.0"</item>
+        <item name="line1">"Re-branded \"Donation\" to \"Pro\". All previously free features and many of the new features are free."</item>
+        <item name="line2">"Added an app drawer for sub pages."</item>
+        <item name="line5">"Added ability to set default reminder settings for every reminder that you create."</item>
+        <item name="line3">"Updated the app theme."</item>
+        <item name="line4">"Updated the Settings and Help &amp; Feedback pages."</item>
+        <item name="line4">"Added an app widget."</item>
+        <item name="line5">"Many additional reminder options (show all by checking \"Show Advanced\")."</item>
+        <item name="line5">"Added location based reminders. Add from the \"Customizer\" page."</item>
+        <item name="line5">"Some new features locked to \"Pro\" version."</item>
+        <item name="line5">"App Themes"</item>
+        <item name="line5">"Immersive Mode."</item>
+        <item name="line4">"Custom vibrate patterns."</item>
+        <item name="line4">"Custom notification icons (android 6.0+ only)."</item>
+        <item name="line5">"Explore the app for additional features. More will be coming soon."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nothing"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nothing"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nothing"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Version 2.0.0"</item>
+        <item name="line1">"Re-branded \"Donation\" til \"Pro\". Alle tidligere gratis funktioner og mange af de nye funktioner er gratis."</item>
+        <item name="line2">"Tilføjet en app skuffe til undersider."</item>
+        <item name="line5">"Lagt evne til at sætte standardindstillinger påmindelser indstillingerne for hver påmindelse om, at du opretter."</item>
+        <item name="line3">"Opdateret app tema."</item>
+        <item name="line4">"Opdateret Indstillinger og Hjælp og feedback sider."</item>
+        <item name="line4">"Tilføjet en app widget."</item>
+        <item name="line5">"Mange ekstra påmindelse muligheder (vis alle ved at markere \"Show Advanced\")."</item>
+        <item name="line5">"Tilføjet lokationsbaserede påmindelser. Tilføj fra \"Customizer\" side."</item>
+        <item name="line5">"Nogle nye funktioner låst til \"Pro\" version."</item>
+        <item name="line5">"App Temaer"</item>
+        <item name="line5">"Immersive Mode."</item>
+        <item name="line4">"Tilpasset vibration mønstre."</item>
+        <item name="line4">"ikoner Brugerdefineret anmeldelse (android 6.0+ kun)."</item>
+        <item name="line5">"Udforsk app til ekstra funktioner. Flere vil komme snart."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"intet"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"intet"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"intet"</item>
+    </string-array>
+
+</resources>

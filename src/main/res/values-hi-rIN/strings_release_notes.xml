@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"संस्करण 2.0.0"</item>
+        <item name="line1">"फिर से ब्रांडेड करने के लिए \"प्रो\" \"दान\"। सभी पहले से मुक्त सुविधाओं और नई सुविधाओं के कई स्वतंत्र हैं।"</item>
+        <item name="line2">"उप पृष्ठों के लिए एक app दराज जोड़ा।"</item>
+        <item name="line5">"हर याद आता है कि तुम बनाने के लिए डिफ़ॉल्ट अनुस्मारक सेटिंग्स निर्धारित करने की क्षमता जोड़ा गया।"</item>
+        <item name="line3">"अनुप्रयोग विषय नवीनीकृत।"</item>
+        <item name="line4">"सेटिंग और सहायता और प्रतिक्रिया पृष्ठों को अद्यतन।"</item>
+        <item name="line4">"एक app विजेट जोड़ा गया।"</item>
+        <item name="line5">"कई अतिरिक्त अनुस्मारक विकल्प (सभी की जाँच \"दिखाएँ उन्नत\" से दिखाने)।"</item>
+        <item name="line5">"जोड़ा स्थान आधारित अनुस्मारक। \"अनुकूलित\" पेज से जोड़ें।"</item>
+        <item name="line5">"कुछ नई सुविधाओं \"प्रो\" संस्करण के लिए बंद कर दिया।"</item>
+        <item name="line5">"अनुप्रयोग विषय-वस्तु"</item>
+        <item name="line5">"Immersive मोड।"</item>
+        <item name="line4">"कस्टम कांपना पैटर्न।"</item>
+        <item name="line4">"कस्टम अधिसूचना चिह्न (Android 6.0+ केवल)।"</item>
+        <item name="line5">"अतिरिक्त सुविधाओं के लिए एप्लिकेशन का अन्वेषण करें। अधिक जल्द ही आ जाएगा।"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"कुछ भी तो नहीं"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"कुछ भी तो नहीं"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"कुछ भी तो नहीं"</item>
+    </string-array>
+
+</resources>

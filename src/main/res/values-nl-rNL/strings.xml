@@ -1,0 +1,1091 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    
+    <string name="settings_category_display">"tonen"</string>
+    
+    <string name="settings_category_sound">"Geluid"</string>
+    
+    <string name="settings_category_general">"Algemeen"</string>
+    
+    <string name="settings_category_locale">"locale"</string>
+    
+    <string name="settings_category_theme">"Thema"</string>
+    
+    <string name="settings_category_notification">"Kennisgeving"</string>
+    
+    <string name="settings_category_notification_custom">"Custom Notification"</string>
+    
+    <string name="settings_category_notification_override">"override Notification"</string>
+    
+    <string name="settings_category_defaults">"defaults"</string>
+    
+    <string name="settings_category_random">"Randomness"</string>
+    
+    <string name="settings_category_widget">"widget"</string>
+
+    
+    <string name="setting_immersive_enable_primary">"meeslepende Mode"</string>
+    
+    <string name="setting_sound_enable_primary">"Geluidseffecten"</string>
+    
+    <string name="setting_music_enable_primary">"Muziek"</string>
+    
+    <string name="setting_language_picker_primary">"Taal"</string>
+    
+    <string name="setting_ringtone_picker_enable_primary">"Aangepaste Ringtone Picker"</string>
+    
+    <string name="setting_theme_picker_primary">"App Theme"</string>
+    
+    <string name="setting_accent_color_primary">"Accent kleur"</string>
+    
+    <string name="setting_primary_color_primary">"Primaire kleur"</string>
+    
+    <string name="setting_toolbar_text_color_primary">"Toolbar Tekst Kleur"</string>
+
+    
+    <string name="setting_notification_click_action_primary">"Klik actie"</string>
+    
+    <string name="setting_notification_custom_primary">"in staat stellen"</string>
+    
+    <string name="setting_notification_button_style_primary">"button Style"</string>
+    
+    <string name="setting_notification_ongoing_primary">"Lopende Notification"</string>
+    
+    <string name="setting_notification_ongoing_secondary">"Lopende meldingen worden niet ondersteund op SmartWatches"</string>
+    
+    <string name="setting_notification_theme_primary">"Achtergrond"</string>
+    
+    <string name="setting_notification_theme_text_primary">"Tekstkleur"</string>
+    
+    <string name="setting_first_day_of_week_primary">"Eerste Dag van de Week"</string>
+    
+    <string name="setting_force_advanced_primary">"Altijd Toon geavanceerde opties"</string>
+    
+    <string name="setting_force_advanced_secondary">"Uitschakelen om geavanceerde opties op een per herinnering basis tonen"</string>
+    
+    <string name="setting_notification_swipe_away_action_primary">"Swipe Actie"</string>
+    
+    <string name="setting_notification_click_open_primary">"Klik Opens App"</string>
+    
+    <string name="setting_notification_swipe_away_open_primary">"Swipe Opens App"</string>
+    
+    <string name="setting_random_amount_primary">"toevallig"</string>
+    
+    <string name="setting_less_random_amount_primary">"minder Random"</string>
+    
+    <string name="setting_even_amount_primary">"Zelfs"</string>
+    
+    <string name="setting_widget_theme_primary">"Thema"</string>
+    
+    <string name="setting_widget_text_color_primary">"Tekstkleur"</string>
+    
+    <string name="setting_override_vibrate_primary">"Override kennisgeving trillen"</string>
+    
+    <string name="setting_override_ringtone_primary">"Override afspelen waarschuwingstoon"</string>
+    
+    <string name="setting_override_ringtone_secondary">"Dit moet zijn ingeschakeld om de audiostream overschrijven"</string>
+    
+    <string name="setting_override_ringtone_stream_primary">"Override kennisgeving audiostream"</string>
+    
+    <string name="setting_override_speech_stream_primary">"Override toespraak stroom"</string>
+
+    
+    <string name="time_millisecond">"milliseconde"</string>
+    
+    <string name="time_milliseconds">"milliseconden"</string>
+    
+    <string name="time_millisecond_abrev">"Mevrouw"</string>
+    
+    <string name="time_second">"Tweede"</string>
+    
+    <string name="time_seconds">"seconden"</string>
+    
+    <string name="time_second_abrev">"s"</string>
+    
+    <string name="time_minute">"Minuut"</string>
+    
+    <string name="time_minutes">"Notulen"</string>
+    
+    <string name="time_hour">"Uur"</string>
+    
+    <string name="time_hours">"uren"</string>
+    
+    <string name="time_day">"Dag"</string>
+    
+    <string name="time_days">"dagen"</string>
+    
+    <string name="time_daily">"Dagelijks"</string>
+    
+    <string name="time_week">"Week"</string>
+    
+    <string name="time_weeks">"Weken"</string>
+    
+    <string name="time_weekly">"wekelijks"</string>
+    
+    <string name="time_month">"Maand"</string>
+    
+    <string name="time_months">"Maanden"</string>
+    
+    <string name="time_monthly">"Maandelijks"</string>
+    
+    <string name="time_year">"Jaar"</string>
+    
+    <string name="time_years">"jaren"</string>
+    
+    <string name="time_yearly">"jaar-"</string>
+
+    
+    <string name="meter">"Meter"</string>
+    
+    <string name="meters">"meters"</string>
+
+    
+    <string name="num_one">"een"</string>
+    
+    <string name="num_two">"Twee"</string>
+    
+    <string name="num_three">"Drie"</string>
+    
+    <string name="num_four">"Vier"</string>
+    
+    <string name="num_five">"Vijf"</string>
+    
+    <string name="num_six">"Zes"</string>
+    
+    <string name="num_seven">"Zeven"</string>
+    
+    <string name="num_eight">"Acht"</string>
+    
+    <string name="num_nine">"Negen"</string>
+    
+    <string name="num_ten">"Tien"</string>
+
+    
+    <string name="num_first">"Eerste"</string>
+    
+    <string name="num_second">"Tweede"</string>
+    
+    <string name="num_third">"Derde"</string>
+    
+    <string name="num_fourth">"Vierde"</string>
+    
+    <string name="num_fifth">"Vijfde"</string>
+    
+    <string name="num_sixth">"Zesde"</string>
+    
+    <string name="num_seventh">"Zevende"</string>
+    
+    <string name="num_eighth">"Achtste"</string>
+    
+    <string name="num_ninth">"Negende"</string>
+    
+    <string name="num_tenth">"Tiende"</string>
+
+    
+    <string name="day_sunday">"zondag"</string>
+    
+    <string name="day_monday">"maandag"</string>
+    
+    <string name="day_tuesday">"dinsdag"</string>
+    
+    <string name="day_wednesday">"woensdag"</string>
+    
+    <string name="day_thursday">"donderdag"</string>
+    
+    <string name="day_friday">"vrijdag"</string>
+    
+    <string name="day_saturday">"zaterdag"</string>
+    
+    <string name="today">"Vandaag"</string>
+    
+    <string name="tomorrow">"Morgen"</string>
+    
+    <string name="yesterday">"Gisteren"</string>
+
+    
+    <string name="days_of_week">"Dagen van de week"</string>
+    
+    <string name="days_of_month">"Dagen van de maand"</string>
+    
+    <string name="days_of_year">"Days Of Jaar"</string>
+    
+    <string name="weeks_of_month">"Weken van de Maand"</string>
+    
+    <string name="weeks_of_year">"Weken van het jaar"</string>
+    
+    <string name="months_of_year">"Maanden van het jaar"</string>
+
+    
+    <string name="next">"volgende"</string>
+    
+    <string name="previous">"voorgaand"</string>
+    
+    <string name="back">"Terug"</string>
+    
+    <string name="forward">"vooruit"</string>
+
+    
+    <string name="pattern_1">"patroon 1"</string>
+    
+    <string name="pattern_2">"patroon 2"</string>
+    
+    <string name="pattern_3">"patroon 3"</string>
+    
+    <string name="pattern_4">"patroon 4"</string>
+    
+    <string name="pattern_5">"patroon 5"</string>
+    
+    <string name="pattern_6">"patroon 6"</string>
+
+    
+    <string name="select">"kiezen"</string>
+    
+    <string name="select_all">"Selecteer alles"</string>
+    
+    <string name="select_none">"Niets selecteren"</string>
+
+    
+    <string name="diff_difficulty">"moeilijkheid"</string>
+    
+    <string name="diff_select_difficulty">"Selecteer Moeilijkheid"</string>
+    
+    <string name="diff_easy">"Gemakkelijk"</string>
+    
+    <string name="diff_normal">"normaal"</string>
+    
+    <string name="diff_hard">"Hard"</string>
+
+    
+    <string name="enable">"in staat stellen"</string>
+    
+    <string name="enabled">"Ingeschakeld"</string>
+    
+    <string name="disable">"onbruikbaar maken"</string>
+    
+    <string name="disabled">"invalide"</string>
+    
+    <string name="lock">"Slot"</string>
+    
+    <string name="unlock">"ontsluiten"</string>
+    
+    <string name="locked">"opgesloten"</string>
+    
+    <string name="unlocked">"Unlocked"</string>
+    
+    <string name="open">"Open"</string>
+    
+    <string name="close">"Dichtbij"</string>
+    
+    <string name="opened">"geopend"</string>
+    
+    <string name="closed">"Gesloten"</string>
+    
+    <string name="show">"Tonen"</string>
+    
+    <string name="hide">"Verbergen"</string>
+    
+    <string name="shown">"getoond"</string>
+    
+    <string name="Hidden">"Verborgen"</string>
+    
+    <string name="automatic">"automatisch"</string>
+    
+    <string name="manual">"handboek"</string>
+    
+    <string name="online">"Online"</string>
+    
+    <string name="offline">"offline"</string>
+    
+    <string name="active">"Actief"</string>
+    
+    <string name="inactive">"Inactief"</string>
+
+    
+    <string name="okay">"OK"</string>
+    
+    <string name="cancel">"Annuleer"</string>
+    
+    <string name="yes">"Ja"</string>
+    
+    <string name="no">"Nee"</string>
+    
+    <string name="maybe">"Kan zijn"</string>
+    
+    <string name="some">"sommige"</string>
+    
+    <string name="none">"Geen"</string>
+    
+    <string name="all">"Alle"</string>
+    
+    <string name="set">"set"</string>
+    
+    <string name="unset">"ongezet"</string>
+    
+    <string name="last">"Laatste"</string>
+    
+    <string name="first">"Eerste"</string>
+    
+    <string name="every">"elk"</string>
+    
+    <string name="other">"anders"</string>
+    
+    <string name="off">"Uit"</string>
+    
+    <string name="on">"Op"</string>
+    
+    <string name="delete_reminder_prompt_title">"Verwijder Reminder"</string>
+    
+    <string name="delete_reminder_prompt_content">"Bent u zeker dat u deze herinnering wilt verwijderen?"</string>
+    
+    <string name="delete_custom_icon_prompt_title">"Verwijderen Icon"</string>
+    
+    <string name="delete_custom_icon_prompt_content">"Bent u zeker dat u dit pictogram verwijderen?"</string>
+    
+    <string name="cancel_reminder_prompt_title">"Veranderingen ongedaan maken"</string>
+    
+    <string name="cancel_reminder_prompt_content">"Bent u zeker dat u uw wijzigingen annuleren?"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_title">"Verwijder Trillen Patroon"</string>
+    
+    <string name="delete_vibrate_pattern_prompt_content">"Bent u zeker dat u dit wilt trillen patroon verwijderen?"</string>
+    
+    <string name="delete_location_prompt_title">"Verwijder Regio"</string>
+    
+    <string name="delete_location_prompt_content">"Bent u zeker dat u deze locatie wilt verwijderen?"</string>
+    
+    <string name="duplicate_reminder_prompt_title">"Duplicate Reminder"</string>
+    
+    <string name="duplicate_reminder_prompt_content">"Bent u zeker dat u deze herinnering te dupliceren?"</string>
+    
+    <string name="include_log_prompt_title">"omvatten Log"</string>
+    
+    <string name="include_log_prompt_content">"Wilt u de herinnering log omvatten?"</string>
+    
+    <string name="include_default_reminder_prompt_title">"Inclusief Standaard Reminder"</string>
+    
+    <string name="include_default_reminder_prompt_content">"Wilt u de standaard herinnering bevatten?"</string>
+    
+    <string name="start_new_game_title">"Start New Game"</string>
+    
+    <string name="start_new_game_prompt">"Bent u zeker dat u een nieuw spel beginnen?"</string>
+    
+    <string name="end_game_title">"Eindspel"</string>
+    
+    <string name="end_game_prompt">"Weet je zeker dat je dit spel te beëindigen?"</string>
+
+    
+    <string name="help">"Hulp"</string>
+    
+    <string name="about">"Over"</string>
+    
+    <string name="settings">"instellingen"</string>
+    
+    <string name="help_and_feedback">"Help en feedback"</string>
+    
+    <string name="rate_app">"Beoordeel app"</string>
+    
+    <string name="more_apps">"Meer apps"</string>
+    
+    <string name="tutorial">"Tutorial"</string>
+    
+    <string name="read">"Lezen"</string>
+    
+    <string name="watch">"Horloge"</string>
+    
+    <string name="links">"Links"</string>
+    
+    <string name="licenses">"licenties"</string>
+    
+    <string name="help_translate">"Help Translate"</string>
+    
+    <string name="get_the_beta">"Klik hier voor de Beta"</string>
+    
+    <string name="achievements">"Prestaties"</string>
+    
+    <string name="leaderboards">"leaderboards"</string>
+    
+    <string name="high_scores">"high Scores"</string>
+    
+    <string name="my_circles">"mijn Circles"</string>
+    
+    <string name="invitations">"Uitnodigingen"</string>
+    
+    <string name="options">"opties"</string>
+    
+    <string name="game_options">"spelopties"</string>
+    
+    <string name="advanced_options">"Geavanceerde mogelijkheden"</string>
+    
+    <string name="automatch">"Automatch"</string>
+    
+    <string name="guest">"Gast"</string>
+
+    
+    <string name="light">"Licht"</string>
+    
+    <string name="light_transparent">"lichtdoorlatend"</string>
+    
+    <string name="dark">"Donker"</string>
+    
+    <string name="dark_transparent">"Dark Transparant"</string>
+    
+    <string name="transparent">"Transparant"</string>
+    
+    <string name="night">"Nacht"</string>
+    
+    <string name="black">"Zwart"</string>
+    
+    <string name="white">"Wit"</string>
+    
+    <string name="system">"Systeem"</string>
+    
+    <string name="light_text">"lichte tekst"</string>
+    
+    <string name="dark_text">"Dark tekst"</string>
+
+    
+    <string name="red">"Rood"</string>
+    
+    <string name="pink">"Roze"</string>
+    
+    <string name="purple">"purper"</string>
+    
+    <string name="deep_purple">"Donker paars"</string>
+    
+    <string name="indigo">"Indigo"</string>
+    
+    <string name="blue">"Blauw"</string>
+    
+    <string name="light_blue">"Lichtblauw"</string>
+    
+    <string name="cyan">"Cyan"</string>
+    
+    <string name="teal">"taling"</string>
+    
+    <string name="green">"Groen"</string>
+    
+    <string name="light_green">"Licht groen"</string>
+    
+    <string name="lime">"Limoen"</string>
+    
+    <string name="yellow">"Geel"</string>
+    
+    <string name="amber">"Amber"</string>
+    
+    <string name="orange">"Oranje"</string>
+    
+    <string name="deep_orange">"Deep Orange"</string>
+    
+    <string name="brown">"Bruin"</string>
+    
+    <string name="grey">"Grijs"</string>
+    
+    <string name="blue_grey">"Blauw grijs"</string>
+    
+    <string name="dark_grey">"Donker grijs"</string>
+
+    
+    <string name="major">"groot"</string>
+    
+    <string name="minor">"mineur"</string>
+    
+    <string name="aux">"aux"</string>
+    
+    <string name="version">"Versie"</string>
+    
+    <string name="production">"Productie"</string>
+    
+    <string name="beta">"beta"</string>
+    
+    <string name="alpha">"Alpha"</string>
+
+    
+    <string name="icon">"Icoon"</string>
+    
+    <string name="icons">"Icons"</string>
+    
+    <string name="custom_icon">"Custom Icon"</string>
+    
+    <string name="custom_icons">"Aangepaste pictogrammen"</string>
+    
+    <string name="choose_icon">"Kies Icon"</string>
+
+    
+    <string name="backup">"backup"</string>
+    
+    <string name="import_">"Importeren"</string>
+    
+    <string name="export">"Exporteren"</string>
+    
+    <string name="export_log">"export Logboek"</string>
+    
+    <string name="import_export">"Import / Export"</string>
+    
+    <string name="export_location">"export Locatie"</string>
+    
+    <string name="import_failed">"import mislukt"</string>
+    
+    <string name="import_canceled">"importeren geannuleerd"</string>
+    
+    <string name="export_failed">"export mislukt"</string>
+    
+    <string name="export_canceled">"export geannuleerd"</string>
+    
+    <string name="import_complete">"importeren voltooid"</string>
+    
+    <string name="export_complete">"export Compleet"</string>
+    
+    <string name="importing_please_wait">"Importeren, Please Wait"</string>
+    
+    <string name="exporting_please_wait">"Exporteren, Please Wait"</string>
+
+    
+    <string name="snooze">"dutten"</string>
+    
+    <string name="snoozed">"gesnoozed"</string>
+    
+    <string name="auto_snooze">"Auto Snooze"</string>
+    
+    <string name="manual_snooze">"Manual Snooze"</string>
+
+    
+    <string name="message">"Bericht"</string>
+    
+    <string name="messages">"berichten"</string>
+    
+    <string name="num_messages">"Aantal Berichten"</string>
+    
+    <string name="edit_messages">"Berichten bewerken"</string>
+    
+    <string name="view_messages">"Bekijk Berichten"</string>
+    
+    <string name="import_messages">"Berichten importeren"</string>
+    
+    <string name="message_separator">"Message Separator ||||"</string>
+
+    
+    <string name="sign_in">"Aanmelden"</string>
+    
+    <string name="signed_in">"Ingelogd"</string>
+    
+    <string name="sign_in_failed">"Aanmelden mislukt"</string>
+    
+    <string name="sign_out">"Afmelden"</string>
+    
+    <string name="signed_out">"Uitgelogd"</string>
+
+    
+    <string name="low">"Laag"</string>
+    
+    <string name="mid">"midden"</string>
+    
+    <string name="high">"hoog"</string>
+    
+    <string name="min">"min"</string>
+    
+    <string name="max">"Max"</string>
+    
+    <string name="minimum">"Minimum"</string>
+    
+    <string name="medium">"Medium"</string>
+    
+    <string name="maximum">"maximaal"</string>
+    
+    <string name="small">"Klein"</string>
+    
+    <string name="large">"Groot"</string>
+    
+    <string name="short_">"kort"</string>
+    
+    <string name="long_">"Lang"</string>
+    
+    <string name="slow">"Langzaam"</string>
+    
+    <string name="fast">"Snel"</string>
+    
+    <string name="quick">"Snel"</string>
+    
+    <string name="narrow">"smal"</string>
+    
+    <string name="wide">"Breed"</string>
+
+    
+    <string name="thank_you">"Dank je"</string>
+    
+    <string name="youre_welcome">"Graag gedaan"</string>
+    
+    <string name="please">"alsjeblieft"</string>
+
+    
+    <string name="you">"U"</string>
+    
+    <string name="me">"Me"</string>
+    
+    <string name="us">"Ons"</string>
+    
+    <string name="we">"Wij"</string>
+    
+    <string name="them">"Hen"</string>
+
+    
+    <string name="short_on">"kort op"</string>
+    
+    <string name="medium_on">"medium op"</string>
+    
+    <string name="long_on">"lang aan"</string>
+    
+    <string name="short_off">"Short off"</string>
+    
+    <string name="medium_off">"medium off"</string>
+    
+    <string name="long_off">"lange off"</string>
+
+    
+    <string name="pro">"Pro"</string>
+    
+    <string name="pro_feature">"Pro Feature"</string>
+    
+    <string name="upgrade">"Upgrade"</string>
+    
+    <string name="feature_requires_pro">"Voor deze functie is de pro-versie"</string>
+    
+    <string name="feature_requires_pro_limited">"Deze functie is beperkt in de gratis versie. Upgrade naar pro of verwijderen van een bestaand item."</string>
+    
+    <string name="upgrade_to_pro">"Upgraden naar Pro"</string>
+    
+    <string name="upgrade_now">"Waardeer nu op"</string>
+
+    
+    <string name="start_date">"Begin datum"</string>
+    
+    <string name="end_date">"Einddatum"</string>
+    
+    <string name="start_time">"Starttijd"</string>
+    
+    <string name="end_time">"Eindtijd"</string>
+    
+    <string name="end_type">"end Type"</string>
+    
+    <string name="timing_type">"timing Type"</string>
+    
+    <string name="edit_times">"bewerken Times"</string>
+    
+    <string name="time">"Tijd"</string>
+    
+    <string name="times">"Times"</string>
+    
+    <string name="timing">"timing"</string>
+    
+    <string name="all_time">"Altijd"</string>
+    
+    <string name="every_week">"Elke week"</string>
+    
+    <string name="lifetime">"Levenslang"</string>
+    
+    <string name="forever">"Voor altijd"</string>
+    
+    <string name="time_period">"Tijdsperiode"</string>
+    
+    <string name="random">"toevallig"</string>
+    
+    <string name="randomly">"willekeurig"</string>
+    
+    <string name="less_random">"minder Random"</string>
+    
+    <string name="even">"Zelfs"</string>
+    
+    <string name="evenly">"Gelijkmatig"</string>
+    
+    <string name="specific">"specifiek"</string>
+    
+    <string name="interval">"Interval"</string>
+    
+    <string name="specific_times">"bepaalde Times"</string>
+    
+    <string name="repeat_every">"Herhaal elke"</string>
+
+    
+    <string name="data_loaded">"gegevens Loaded"</string>
+    
+    <string name="file">"file"</string>
+    
+    <string name="local_storage">"Lokale opslag"</string>
+    
+    <string name="filename">"Bestandsnaam"</string>
+
+    
+    <string name="permission_granted">"Toestemming verleend"</string>
+    
+    <string name="permission_denied">"Geen toestemming"</string>
+    
+    <string name="allow_if_any">"Toestaan ​​eventuele"</string>
+    
+    <string name="allow_if_all">"Toestaan ​​als alle"</string>
+    
+    <string name="disallow_if_any">"Verbieden indien van toepassing"</string>
+    
+    <string name="disallow_if_all">"Verbieden indien alle"</string>
+    
+    <string name="trigger_if_any">"Trigger eventuele"</string>
+    
+    <string name="trigger_if_all">"Trigger als alle"</string>
+
+    
+    <string name="reminders">"herinneringen"</string>
+    
+    <string name="no_reminder">"geen Herinneringen"</string>
+    
+    <string name="no_reminders_yet">"Je hebt nog geen herinneringen"</string>
+    
+    <string name="alerts_per_day">"Herinneringen per dag"</string>
+    
+    <string name="number_of_reminders">"Aantal herinneringen"</string>
+
+    
+    <string name="changes_discarded">"wijzigingen Afgedankte"</string>
+    
+    <string name="changes_saved">"Wijzigingen opgeslagen"</string>
+    
+    <string name="no_changes">"Geen veranderingen"</string>
+    
+    <string name="select_at_least_one_item">"Selecteer ten minste één punt"</string>
+
+    
+    <string name="loading">"het laden"</string>
+    
+    <string name="loaded">"loaded"</string>
+    
+    <string name="loading_failed">"Laden Kan"</string>
+    
+    <string name="loading_complete">"Laden Compleet"</string>
+    
+    <string name="error">"Fout"</string>
+    
+    <string name="fail">"mislukken"</string>
+    
+    <string name="failed">"Mislukt"</string>
+    
+    <string name="success">"Succes"</string>
+    
+    <string name="successful">"geslaagd"</string>
+    
+    <string name="unsuccessful">"mislukte"</string>
+    
+    <string name="valid">"Geldig"</string>
+    
+    <string name="invalid">"Invalide"</string>
+    
+    <string name="complete">"compleet"</string>
+    
+    <string name="completed">"Voltooid"</string>
+    
+    <string name="skipped">"overgeslagen"</string>
+    
+    <string name="incomplete">"Incompleet"</string>
+    
+    <string name="dismiss">"ontslaan"</string>
+    
+    <string name="dismissed">"ontslagen"</string>
+    
+    <string name="acknowledge">"Erkennen"</string>
+    
+    <string name="acknowledged">"Erkend"</string>
+    
+    <string name="add">"Toevoegen"</string>
+    
+    <string name="added">"Toegevoegd"</string>
+    
+    <string name="add_item">"Voeg item toe"</string>
+    
+    <string name="remove">"Verwijderen"</string>
+    
+    <string name="removed">"verwijderd"</string>
+    
+    <string name="remove_item">"Verwijder voorwerp"</string>
+    
+    <string name="delete">"Verwijder"</string>
+    
+    <string name="deleted">"verwijderde"</string>
+    
+    <string name="duplicate">"Duplicaat"</string>
+    
+    <string name="duplicated">"gedupliceerd"</string>
+    
+    <string name="restart">"Herstarten"</string>
+    
+    <string name="restarting">"Het opnieuw beginnen"</string>
+    
+    <string name="restarting_app_please_wait">"Herstarten van App, Please Wait"</string>
+
+    
+    <string name="map">"Kaart"</string>
+    
+    <string name="location">"plaats"</string>
+    
+    <string name="locations">"locaties"</string>
+    
+    <string name="latitude">"Breedtegraad"</string>
+    
+    <string name="longitude">"Lengtegraad"</string>
+    
+    <string name="radius">"Radius"</string>
+    
+    <string name="enter">"invoeren"</string>
+    
+    <string name="exit">"afrit"</string>
+    
+    <string name="linger_time">"Linger Time"</string>
+
+    
+    <string name="music">"Muziek"</string>
+    
+    <string name="ring">"Ring"</string>
+    
+    <string name="speak_time">"spreek Time"</string>
+    
+    <string name="speak_title">"spreek Titel"</string>
+    
+    <string name="speak_message">"Message spreken"</string>
+    
+    <string name="tone">"Toon"</string>
+    
+    <string name="sound">"Geluid"</string>
+
+    
+    <string name="notification">"Kennisgeving"</string>
+    
+    <string name="notifications">"meldingen"</string>
+    
+    <string name="select_notification">"Select Notification"</string>
+
+    
+    <string name="vibrate">"Trillen"</string>
+    
+    <string name="vibrate_pattern">"trillen Patroon"</string>
+    
+    <string name="vibrate_patterns">"trillen Patterns"</string>
+    
+    <string name="create_vibrate_pattern">"Maak Trillen Patroon"</string>
+
+    
+
+    
+    <string name="you_win">"Jij wint"</string>
+    
+    <string name="you_won">"Jij hebt gewonnen"</string>
+    
+    <string name="you_lost">"u Lost"</string>
+    
+    <string name="you_lose">"Jij verliest"</string>
+    
+    <string name="you_tied">"u Tied"</string>
+    
+    <string name="winner">"Winnaar"</string>
+    
+    <string name="winners">"winnaars"</string>
+    
+    <string name="loser">"Verliezer"</string>
+    
+    <string name="Losers">"verliezers"</string>
+
+    
+    <string name="number_of_players">"Aantal spelers"</string>
+    
+    <string name="player">"Speler"</string>
+    
+    <string name="players">"spelers"</string>
+    
+    <string name="player_1">"Speler 1"</string>
+    
+    <string name="player_2">"Speler 2"</string>
+    
+    <string name="player_3">"Speler 3"</string>
+    
+    <string name="player_4">"Player 4"</string>
+    
+    <string name="player_5">"Player 5"</string>
+    
+    <string name="player_6">"Player 6"</string>
+    
+    <string name="team">"Team"</string>
+    
+    <string name="teams">"Teams"</string>
+    
+    <string name="number_of_teams">"Aantal Teams"</string>
+    
+    <string name="team_1">"team 1"</string>
+    
+    <string name="team_2">"team 2"</string>
+    
+    <string name="team_3">"team 3"</string>
+    
+    <string name="team_4">"team 4"</string>
+
+    
+    <string name="requires_google_play">"Deze actie is Google Play Games"</string>
+    
+    <string name="compare_profiles">"Vergelijk Play Games Profielen"</string>
+    
+    <string name="view_profile">"Bekijk Play Games profiel"</string>
+
+    
+    <string name="sponsored">"Sponsored"</string>
+    
+    <string name="ads">"advertenties"</string>
+    
+    <string name="remove_ads">"Verwijder advertenties"</string>
+    
+    <string name="ads_removed">"advertenties verwijderd"</string>
+
+    
+    <string name="current_score">"huidige score"</string>
+    
+    <string name="top_score">"Top Score"</string>
+    
+    <string name="score">"partituur"</string>
+
+    
+    <string name="your_turn">"Jouw beurt"</string>
+    
+    <string name="their_turn">"hun Turn"</string>
+    
+    <string name="turn">"Beurt"</string>
+    
+    <string name="turns">"Turns"</string>
+    
+    <string name="round">"Ronde"</string>
+    
+    <string name="rounds">"rondes"</string>
+    
+    <string name="match">"Wedstrijd"</string>
+    
+    <string name="matches">"lucifers"</string>
+
+    
+    <string name="dollar">"Dollar"</string>
+    
+    <string name="dollars">"dollars"</string>
+    
+    <string name="buy">"Kopen"</string>
+    
+    <string name="sell">"Verkopen"</string>
+    
+    <string name="purchase">"Aankoop"</string>
+    
+    <string name="diamond">"Diamant"</string>
+    
+    <string name="diamonds">"ruiten"</string>
+
+    
+    <string name="rematch">"rematch"</string>
+    
+    <string name="try_again">"Probeer het nog eens"</string>
+    
+    <string name="touch_continue">"Tik op om door te gaan"</string>
+    
+    <string name="touch_resume">"Tik op om verder te gaan"</string>
+    
+    <string name="touch_edit">"Tik om te bewerken"</string>
+    
+    <string name="pause">"Pauze"</string>
+    
+    <string name="pause_game">"pauze Game"</string>
+    
+    <string name="resume">"Hervat"</string>
+    
+    <string name="resume_game">"Spel hervatten"</string>
+    
+    <string name="new_">"nieuwe"</string>
+    
+    <string name="new_game">"Nieuw spel"</string>
+    
+    <string name="select_save">"Selecteer Opslaan"</string>
+    
+    <string name="save">"Save"</string>
+    
+    <string name="save_game">"Spel opslaan"</string>
+    
+    <string name="load">"Laden"</string>
+    
+    <string name="load_game">"Spel laden"</string>
+    
+    <string name="game_over">"Spel is over"</string>
+    
+    <string name="start">"Begin"</string>
+    
+    <string name="start_game">"Start het spel"</string>
+    
+    <string name="end">"Einde"</string>
+    
+    <string name="end_game">"Eindspel"</string>
+    
+    <string name="stop">"Stop"</string>
+    
+    <string name="stop_game">"Stop Game"</string>
+
+    
+
+    <string name="free">"Gratis"</string>
+    <string name="pull">"Trekken"</string>
+    <string name="wild">"Wild"</string>
+    <string name="normal">"normaal"</string>
+    <string name="public_">"publiek"</string>
+    <string name="private_">"privaat"</string>
+    <string name="default_">"Standaard"</string>
+    <string name="defaults">"defaults"</string>
+    <string name="completed_early">"Vroege afgerond"</string>
+    <string name="no_items_found">"Geen items gevonden"</string>
+    <string name="release_notes">"release Notes"</string>
+    <string name="logo">"Logo"</string>
+    <string name="combo">"Combo"</string>
+    <string name="special">"speciaal"</string>
+    <string name="shown_again">"opnieuw getoond"</string>
+    <string name="edit">"Bewerk"</string>
+    <string name="in_order">"In volgorde"</string>
+    <string name="ordering">"Bestellen"</string>
+    <string name="preview">"Voorbeschouwing"</string>
+    <string name="share">"Delen"</string>
+    <string name="share_game">"Share Game"</string>
+    <string name="download">"Download"</string>
+    <string name="view">"Uitzicht"</string>
+    <string name="custom">"gewoonte"</string>
+    <string name="title">"Titel"</string>
+    <string name="name">"Naam"</string>
+    <string name="color">"Kleur"</string>
+    <string name="repeat">"Herhaling"</string>
+    <string name="alarm">"Alarm"</string>
+    <string name="general">"Algemeen"</string>
+    <string name="range">"reeks"</string>
+    <string name="priority">"Prioriteit"</string>
+    <string name="accent">"Accent"</string>
+    <string name="accent_color">"Accent kleur"</string>
+    <string name="choose_color">"Kies Kleur"</string>
+    <string name="filter_type">"filter Type"</string>
+    <string name="criteria">"criteria"</string>
+    <string name="trigger">"trekker"</string>
+    <string name="triggers">"triggers"</string>
+    <string name="trigger_type">"Trigger Type"</string>
+    <string name="led_pattern">"LED patroon"</string>
+    <string name="search">"Zoeken"</string>
+    <string name="customizer">"Customizer"</string>
+    <string name="customize">"aanpassen"</string>
+    <string name="create">"creëren"</string>
+    <string name="home">"Huis"</string>
+    <string name="upcoming">"Aankomende"</string>
+    <string name="edit_reminder">"Herinnering bewerken"</string>
+    <string name="summary">"Overzicht"</string>
+    <string name="note">"Notitie"</string>
+    <string name="image">"Beeld"</string>
+    <string name="get">"Krijgen"</string>
+    <string name="type">"Type"</string>
+    <string name="missed">"gemiste"</string>
+    <string name="nothing">"Niks"</string>
+    <string name="clipboard">"Clipboard"</string>
+
+
+
+    
+    <string name="test_string_ignore">test</string>
+
+</resources>

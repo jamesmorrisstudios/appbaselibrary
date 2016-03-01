@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"verze 2.0.0"</item>
+        <item name="line1">"Re-brandové \"dar\" na \"Pro\". Všechny dříve volné funkce a mnoho nových funkcí jsou zdarma."</item>
+        <item name="line2">"Přidal zásuvku aplikaci pro podstránek."</item>
+        <item name="line5">"Přidána možnost nastavit výchozí nastavení připomenutí pro každou připomínku, kterou vytvoříte."</item>
+        <item name="line3">"Aktualizováno téma aplikace."</item>
+        <item name="line4">"Aktualizováno nastavení a Nápověda a zpětná vazba stránky."</item>
+        <item name="line4">"Přidal aplikace widgetu."</item>
+        <item name="line5">"Mnoho dalších možností připomenutí (zobrazit všechny zaškrtnutím \"Show Advanced\")."</item>
+        <item name="line5">"upomínky založené přidán umístění. Přidejte ze stránky \"Customizer\"."</item>
+        <item name="line5">"Některé nové funkce uzamčen \"Pro\" verze."</item>
+        <item name="line5">"App Témata"</item>
+        <item name="line5">"Pohlcující Mode."</item>
+        <item name="line4">"Custom vibrací vzory."</item>
+        <item name="line4">"Ikony oznámení na zakázku (Android 6.0+ pouze)."</item>
+        <item name="line5">"Prozkoumejte aplikaci pro přídavné funkce. Další budou brzy."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nic"</item>
+    </string-array>
+
+</resources>

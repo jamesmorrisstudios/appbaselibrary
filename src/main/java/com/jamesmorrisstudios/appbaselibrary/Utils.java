@@ -47,6 +47,7 @@ import java.util.UUID;
  */
 public final class Utils {
     public static final String stringType = "UTF-8";
+    public static final String stringType16 = "UTF-16";
     public final static Random rand = new Random();
 
     /**
@@ -236,9 +237,17 @@ public final class Utils {
         // Check if no view has focus:
         View view = activity.getCurrentFocus();
         if (view != null) {
-            InputMethodManager inputManager = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
-            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
+    }
+
+    /**
+     * Hides the keyboard if visible from a specific view. Use if keyboard is in a dialog
+     */
+    public static void hideKeyboardFrom(@NonNull final Context context, @NonNull final View view) {
+        InputMethodManager imm = (InputMethodManager) context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     /**

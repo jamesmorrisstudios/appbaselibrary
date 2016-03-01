@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versión 2.0.0"</item>
+        <item name="line1">"Re-marca \"donación\" a \"Pro\". Todas las funciones que antes eran gratuitos y muchas de las nuevas características son gratis."</item>
+        <item name="line2">"Se ha añadido un cajón de aplicación para la sub-páginas."</item>
+        <item name="line5">"capacidad para establecer la configuración de aviso predeterminado para cada recordatorio de que se crea añadido."</item>
+        <item name="line3">"Se ha actualizado el tema de aplicación."</item>
+        <item name="line4">"Actualización de la configuración y Ayuda y páginas de votos."</item>
+        <item name="line4">"Se ha añadido un widget de aplicación."</item>
+        <item name="line5">"Muchas opciones de recordatorio adicionales (mostrar todos marcando \"Mostrar avanzada\")."</item>
+        <item name="line5">"recordatorios basados ​​añadido ubicación. Añadir desde la página \"Personalizador\"."</item>
+        <item name="line5">"Algunas de las nuevas características bloqueadas a la versión \"Pro\"."</item>
+        <item name="line5">"Temas de aplicaciones"</item>
+        <item name="line5">"Modo de inmersión."</item>
+        <item name="line4">"patrones de vibración personalizado."</item>
+        <item name="line4">"los iconos de notificación personalizada (Android 6.0+ solamente)."</item>
+        <item name="line5">"Explorar la aplicación de características adicionales. Más vendrán pronto."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nada"</item>
+    </string-array>
+
+</resources>

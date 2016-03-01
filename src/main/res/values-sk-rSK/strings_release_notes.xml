@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"verzia 2.0.0"</item>
+        <item name="line1">"Re-brandové \"dar\" na \"Pro\". Všetky skôr voľné funkcie a mnoho nových funkcií sú zadarmo."</item>
+        <item name="line2">"Pridal zásuvku aplikáciu pre podstránok."</item>
+        <item name="line5">"Pridaná možnosť nastaviť predvolené nastavenia pripomenutie pre každú pripomienku, ktorú vytvoríte."</item>
+        <item name="line3">"Aktualizované tému aplikácie."</item>
+        <item name="line4">"Aktualizované nastavenia a Pomocník a spätná väzba stránky."</item>
+        <item name="line4">"Pridal aplikácie widgetu."</item>
+        <item name="line5">"Mnoho ďalších možností pripomenutie (zobraziť všetky zaškrtnutím \"Show Advanced\")."</item>
+        <item name="line5">"upomienky založené pridaný umiestnení. Pridajte zo stránky \"Customizer\"."</item>
+        <item name="line5">"Niektoré nové funkcie uzamknutý \"Pre\" verzia."</item>
+        <item name="line5">"app Témy"</item>
+        <item name="line5">"Pohlcujúce Mode."</item>
+        <item name="line4">"Custom vibrácií vzory."</item>
+        <item name="line4">"Ikony oznámenia na zákazku (Android 6.0+ iba)."</item>
+        <item name="line5">"Preskúmajte aplikáciu pre prídavné funkcie. Ďalšie budú čoskoro."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nič"</item>
+    </string-array>
+
+</resources>

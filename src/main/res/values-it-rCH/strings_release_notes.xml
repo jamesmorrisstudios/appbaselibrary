@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versione 2.0.0"</item>
+        <item name="line1">"Re-branded \"Donazione\" a \"Pro\". Tutte le caratteristiche in precedenza liberi e molte delle nuove funzionalità sono gratuiti."</item>
+        <item name="line2">"Aggiunto un cassetto app per le pagine secondarie."</item>
+        <item name="line5">"Aggiunta la possibilità di configurare le impostazioni predefinite per ogni promemoria promemoria che si crea."</item>
+        <item name="line3">"Aggiornato il tema app."</item>
+        <item name="line4">"Aggiornamento delle impostazioni e Guida e pagine feedback."</item>
+        <item name="line4">"Aggiunta di un widget di app."</item>
+        <item name="line5">"Molte opzioni promemoria aggiuntive (mostra tutto selezionando \"Mostra avanzate\")."</item>
+        <item name="line5">"promemoria basati sulla localizzazione aggiunto. Aggiungere dalla pagina \"Customizer\"."</item>
+        <item name="line5">"Alcune nuove caratteristiche bloccate alla versione \"Pro\"."</item>
+        <item name="line5">"App temi"</item>
+        <item name="line5">"Modalità immersiva."</item>
+        <item name="line4">"modelli di vibrazione personalizzate."</item>
+        <item name="line4">"icone di notifica personalizzate (Android 6.0 e versioni successive solo)."</item>
+        <item name="line5">"Esplorare l'applicazione per funzionalità aggiuntive. Più saranno disponibili a breve."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"Niente"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"Niente"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"Niente"</item>
+    </string-array>
+
+</resources>

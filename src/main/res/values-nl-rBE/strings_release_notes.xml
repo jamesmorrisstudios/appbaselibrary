@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versie 2.0.0"</item>
+        <item name="line1">"Re-branded \"Donatie\" naar \"Pro\". Alle eerder gratis features en veel van de nieuwe functies zijn gratis."</item>
+        <item name="line2">"Toegevoegd een app lade voor sub-pagina's."</item>
+        <item name="line5">"Toegevoegd mogelijkheid om standaard herinnering in te stellen voor elke herinnering die u maakt."</item>
+        <item name="line3">"Bijgewerkt de app thema."</item>
+        <item name="line4">"Bijgewerkt de Instellingen en Help en feedback pagina's."</item>
+        <item name="line4">"Toegevoegd een app widget."</item>
+        <item name="line5">"Veel extra herinnering opties (alles bekijken door te controleren \"Show Advanced\")."</item>
+        <item name="line5">"Toegevoegd locatie gebaseerde herinneringen. Voeg uit de \"Customizer\" pagina."</item>
+        <item name="line5">"Een aantal nieuwe functies vergrendeld om \"Pro\" versie."</item>
+        <item name="line5">"App Themes"</item>
+        <item name="line5">"Meeslepende Mode."</item>
+        <item name="line4">"Custom trillen patronen."</item>
+        <item name="line4">"Custom meldingspictogrammen (Android 6.0 + alleen)."</item>
+        <item name="line5">"Ontdek de app voor extra functies. Meer zal spoedig komen."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"niks"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"niks"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"niks"</item>
+    </string-array>
+
+</resources>

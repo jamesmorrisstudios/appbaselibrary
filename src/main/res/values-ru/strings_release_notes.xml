@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"Версия 2.0.0"</item>
+        <item name="line1">"Ребрендинг \"Пожертвование\" на \"Pro\". Все ранее свободные признаки и многие из новых функций свободны."</item>
+        <item name="line2">"Добавлен ящик приложения для подстраниц."</item>
+        <item name="line5">"Добавлена ​​возможность устанавливать настройки напоминаний по умолчанию для каждого напоминания, что вы создаете."</item>
+        <item name="line3">"Обновление темы приложения."</item>
+        <item name="line4">"Обновление настроек и Помощь &amp; Обратная связь страниц."</item>
+        <item name="line4">"Добавлено приложение виджет."</item>
+        <item name="line5">"Многие дополнительные опции напоминания (показать все путем проверки \"Show Advanced\")."</item>
+        <item name="line5">"Добавлено расположение напоминания на основе. Добавить со страницы \"Настройщик\"."</item>
+        <item name="line5">"Некоторые новые функции заблокированы \"Pro\" версии."</item>
+        <item name="line5">"App Темы"</item>
+        <item name="line5">"Immersive режим."</item>
+        <item name="line4">"Пользовательские вибрирует узоры."</item>
+        <item name="line4">"Значки пользовательских уведомлений (Android 6.0+ только)."</item>
+        <item name="line5">"Исследуйте приложение для дополнительных функций. Больше будет в ближайшее время."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"ничего"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"ничего"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"ничего"</item>
+    </string-array>
+
+</resources>

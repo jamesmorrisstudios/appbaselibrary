@@ -1,0 +1,37 @@
+<resources>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="randremind_release_notes">
+        <item name="line0">"versiunea 2.0.0"</item>
+        <item name="line1">"Re-branded \"donație\" la \"Pro\". Toate caracteristicile anterioare gratuite și multe dintre noile caracteristici sunt gratuite."</item>
+        <item name="line2">"A adăugat un sertar app pentru pagini sub."</item>
+        <item name="line5">"capacitatea de a seta setările implicite de memento pentru fiecare memento pe care le creați adăugate."</item>
+        <item name="line3">"Actualizarea tema app."</item>
+        <item name="line4">"Actualizat Setări și Ajutor &amp; pagini Feedback."</item>
+        <item name="line4">"A adăugat un widget app."</item>
+        <item name="line5">"Mai multe opțiuni suplimentare de memento (arata tot prin verificarea \"Show Advanced\")."</item>
+        <item name="line5">"memento-uri bazate pe locație adăugată. Adăugați din pagina \"Customizer\"."</item>
+        <item name="line5">"Unele caracteristici noi blocate la versiunea \"Pro\"."</item>
+        <item name="line5">"app Teme"</item>
+        <item name="line5">"Modul imersiva."</item>
+        <item name="line4">"modele personalizate. vibrării"</item>
+        <item name="line4">"Pictogramele de notificare personalizată (Android 6.0+ numai)."</item>
+        <item name="line5">"Exploreaza aplicația pentru caracteristici suplimentare. Mai mult va veni în curând."</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="matchblock_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="oneup_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <string-array name="bandit_release_notes">
+        <item name="line0">"nimic"</item>
+    </string-array>
+
+</resources>

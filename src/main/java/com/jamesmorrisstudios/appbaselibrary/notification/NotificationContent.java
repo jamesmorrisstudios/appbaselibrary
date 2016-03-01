@@ -63,6 +63,7 @@ public final class NotificationContent {
     private long[] vibrateCustom = null;
     private boolean onGoing = false;
     private Bitmap iconOverride = null;
+    private boolean wideButtons = false;
 
     /**
      * Builder that includes all required components of the notification
@@ -126,6 +127,20 @@ public final class NotificationContent {
      */
     public final void setVibrate(@NonNull final NotificationVibrate vibrate) {
         this.vibrate = vibrate;
+    }
+
+    /**
+     * @return true for wide buttons. Default false
+     */
+    public boolean isWideButtons() {
+        return wideButtons;
+    }
+
+    /**
+     * @param wideButtons true for wide buttons. Default false
+     */
+    public final void setWideButtons(final boolean wideButtons) {
+        this.wideButtons = wideButtons;
     }
 
     /**
