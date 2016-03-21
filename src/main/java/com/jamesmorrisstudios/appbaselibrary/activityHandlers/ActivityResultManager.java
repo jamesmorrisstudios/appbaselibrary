@@ -188,4 +188,14 @@ public final class ActivityResultManager extends BaseBuildManager {
         getActivity().restartApp(request);
     }
 
+    /**
+     * Not called directly
+     *
+     * @param request Finish App Request
+     */
+    @Subscribe
+    public final void onFinishAppRequest(@NonNull final FinishAppRequest request) {
+        getActivity().finish();
+    }
+
 }

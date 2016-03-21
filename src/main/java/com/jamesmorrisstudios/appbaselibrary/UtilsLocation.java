@@ -6,7 +6,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Looper;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresPermission;
 
@@ -64,6 +66,16 @@ public final class UtilsLocation {
         criteria.setCostAllowed(false);
         criteria.setSpeedRequired(false);
         return getLocationManager().getLastKnownLocation(getLocationManager().getBestProvider(criteria, true));
+    }
+
+    @RequiresPermission(allOf = {Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION})
+    public static void getSingleUpdate(LocationListener listener) {
+        Criteria criteria = new Criteria();
+        criteria.setAltitudeRequired(false);
+        criteria.setBearingRequired(false);
+        criteria.setCostAllowed(false);
+        criteria.setSpeedRequired(false);
+        getLocationManager().requestSingleUpdate(criteria, listener, Looper.getMainLooper());
     }
 
 }

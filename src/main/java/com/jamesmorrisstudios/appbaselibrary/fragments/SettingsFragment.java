@@ -34,6 +34,7 @@ public final class SettingsFragment extends BaseFragment {
     public static final String TAG = "SettingsFragment";
     private transient boolean allowListener = false;
     private NestedScrollView scrollView;
+    private int startScrollY = -1;
 
     /**
      * Create view
@@ -364,6 +365,11 @@ public final class SettingsFragment extends BaseFragment {
     @Override
     protected final void unregisterBus() {
 
+    }
+
+    @Override
+    protected void setStartData(@Nullable Bundle startBundle, int startScrollY) {
+        this.startScrollY = startScrollY;
     }
 
     /**

@@ -298,15 +298,22 @@ public final class DialogBuildManager extends BaseBuildManager {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setMessage(request.content);
-        if (request.positiveText != null) {
-            builder.setPositiveButton(request.positiveText, request.onPositive);
-        } else {
-            builder.setPositiveButton(R.string.okay, request.onPositive);
+        if(request.onPositive != null) {
+            if (request.positiveText != null) {
+                builder.setPositiveButton(request.positiveText, request.onPositive);
+            } else {
+                builder.setPositiveButton(R.string.okay, request.onPositive);
+            }
         }
-        if (request.negativeText != null) {
-            builder.setNegativeButton(request.negativeText, request.onNegative);
-        } else {
-            builder.setNegativeButton(R.string.cancel, request.onNegative);
+        if(request.onNegative != null) {
+            if (request.negativeText != null) {
+                builder.setNegativeButton(request.negativeText, request.onNegative);
+            } else {
+                builder.setNegativeButton(R.string.cancel, request.onNegative);
+            }
+        }
+        if(request.dismissListener != null) {
+            builder.setOnDismissListener(request.dismissListener);
         }
         builder.show();
     }

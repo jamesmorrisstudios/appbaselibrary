@@ -40,10 +40,11 @@ public abstract class BaseFragment extends Fragment {
             }
         }
     };
-    protected int startScrollY = -1;
-    protected Bundle startBundle = null;
-    protected Object startObject = null;
+    private int startScrollY = -1;
+    private Bundle startBundle = null;
     private boolean fabAutoHide = false;
+
+    protected abstract void setStartData(@Nullable Bundle startBundle, int startScrollY);
 
     /**
      * @return Options menu resource Id
@@ -119,15 +120,6 @@ public abstract class BaseFragment extends Fragment {
     }
 
     /**
-     * Call before fragment is attached to activity
-     *
-     * @param object Set starting data object
-     */
-    public final void setObject(@Nullable final Object object) {
-        this.startObject = object;
-    }
-
-    /**
      * @param savedInstanceState Saved instance state
      */
     @Override
@@ -175,6 +167,24 @@ public abstract class BaseFragment extends Fragment {
         getActivity().supportInvalidateOptionsMenu();
     }
 
+    private void saveStartData(@NonNull Bundle bundle) {
+        if(startBundle != null) {
+            bundle.putBundle("startBundle", startBundle);
+        }
+        if(startScrollY != -1) {
+            bundle.putInt("startScrollY", startScrollY);
+        }
+    }
+
+    private void restoreStartData(@NonNull Bundle bundle) {
+        if(bundle.containsKey("startBundle")) {
+            startBundle = bundle.getBundle("startBundle");
+        }
+        if(bundle.containsKey("startScrollY")) {
+            startScrollY = bundle.getInt("startScrollY");
+        }
+    }
+
     /**
      * Save instance state
      *
@@ -183,6 +193,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public final void onSaveInstanceState(@Nullable final Bundle bundle) {
         if (bundle != null) {
+            saveStartData(bundle);
             saveState(bundle);
         }
         super.onSaveInstanceState(bundle);
@@ -207,6 +218,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(savedInstanceState != null) {
+            restoreStartData(savedInstanceState);
+        }
+        setStartData(startBundle, startScrollY);
         if (savedInstanceState != null) {
             restoreState(savedInstanceState);
         }

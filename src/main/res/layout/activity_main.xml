@@ -37,7 +37,30 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
                 android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/toolbarStyleSet" />
+                android:theme="?attr/toolbarStyleSet">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:gravity="left|center_vertical"
+                    android:layout_gravity="left|center_vertical"
+                    android:visibility="gone"
+                    android:id="@+id/spinner_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+
+                    android:saveEnabled="false"
+                    android:theme="@style/AppSpinnerLight"/>
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:gravity="right|center_vertical"
+                    android:layout_gravity="right|center_vertical"
+                    android:visibility="gone"
+                    android:layout_marginRight="16dp"
+                    android:id="@+id/spinner_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:saveEnabled="false"/>
+
+                </android.support.v7.widget.Toolbar>
 
             <FrameLayout
                 android:id="@+id/container"

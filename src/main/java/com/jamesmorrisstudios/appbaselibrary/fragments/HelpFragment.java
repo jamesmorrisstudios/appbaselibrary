@@ -148,6 +148,11 @@ public final class HelpFragment extends BaseFragment {
         hideFab();
     }
 
+    @Override
+    protected void setStartData(@Nullable Bundle startBundle, int startScrollY) {
+
+    }
+
     /**
      * Unused
      *

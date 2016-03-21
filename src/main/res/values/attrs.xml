@@ -4,6 +4,7 @@
     <attr name="toolbarStyleSet" format="reference" />
     <attr name="cardViewStyle" format="reference" />
 
+    <attr name="colorBackgroundCard" format="color|reference" />
     <attr name="colorPrimaryLight" format="color|reference" />
     <attr name="colorAccentLight" format="color|reference" />
     <attr name="colorAccentText" format="color|reference" />

@@ -127,19 +127,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
         UtilsDisplay.updateImmersiveMode(this, true);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        OnCreate(savedInstanceState);
-        OnPostCreate(savedInstanceState);
-    }
-
-    /**
-     * Setup the toolbar and all helper classes.
-     * Load the main fragment if the stack is empty
-     *
-     * @param savedInstanceState savedInstanceState
-     */
-    private void OnPostCreate(@Nullable final Bundle savedInstanceState) {
-        Log.v("BaseActivity", "OnPostCreate");
-        super.onPostCreate(savedInstanceState);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,6 +142,19 @@ public abstract class BaseActivity extends AppCompatActivity implements
         initToolAndNavigationBar();
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         dialogBuildManager = new DialogBuildManager();
+        OnCreate(savedInstanceState);
+        OnPostCreate(savedInstanceState);
+    }
+
+    /**
+     * Setup the toolbar and all helper classes.
+     * Load the main fragment if the stack is empty
+     *
+     * @param savedInstanceState savedInstanceState
+     */
+    private void OnPostCreate(@Nullable final Bundle savedInstanceState) {
+        Log.v("BaseActivity", "OnPostCreate");
+        super.onPostCreate(savedInstanceState);
         activityResultManager = new ActivityResultManager();
         dialogBuildManager.attach(this);
         activityResultManager.attach(this);
@@ -363,6 +363,15 @@ public abstract class BaseActivity extends AppCompatActivity implements
     }
 
     /**
+     * Restart app to the main page
+     * Event is forwarded from the activity result manager.
+     *
+     */
+    public final void restartApp() {
+        restartApp(new RestartAppRequest(null, 0, null));
+    }
+
+    /**
      * Restart app to page given by the request.
      * Event is forwarded from the activity result manager.
      *
@@ -410,7 +419,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             String page = intent.getStringExtra("PAGE");
             int scrollY = intent.getIntExtra("SCROLL_Y", -1);
             Bundle bundle = intent.getBundleExtra("EXTRAS");
-            loadFragment(page, bundle, null, scrollY);
+            loadFragment(page, bundle, scrollY);
             return;
         }
         processIntents();
@@ -436,7 +445,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             public void onDrawerClosed(@NonNull final View view) {
                 super.onDrawerClosed(view);
                 if (loadRequest.active) {
-                    loadFragment(loadRequest.tag, loadRequest.bundle, loadRequest.object, loadRequest.scrollY);
+                    loadFragment(loadRequest.tag, loadRequest.bundle, loadRequest.scrollY);
                     loadRequest.clearData();
                 }
                 syncState();
@@ -600,7 +609,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * Called when the android back button was pressed
      */
     @Override
-    public final void onBackPressed() {
+    public void onBackPressed() {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawers();
         } else {
@@ -692,18 +701,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param bundle Extra bundle of data to pass to the fragment
      */
     protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle) {
-        loadFragment(tag, bundle, null);
-    }
-
-    /**
-     * Load the fragment into view
-     *
-     * @param tag    Use the Fragment.TAG for the tag
-     * @param bundle Extra bundle of data to pass to the fragment
-     * @param object Generic object to pass to the fragment
-     */
-    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle, @Nullable final Object object) {
-        loadFragment(tag, bundle, object, -1);
+        loadFragment(tag, bundle, -1);
     }
 
     /**
@@ -711,14 +709,12 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param tag     Use the Fragment.TAG for the tag
      * @param bundle  Extra bundle of data to pass to the fragment
-     * @param object  Generic object to pass to the fragment
      * @param scrollY Starting scroll Y position
      */
-    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle, @Nullable final Object object, final int scrollY) {
+    protected final void loadFragment(@NonNull final String tag, @Nullable final Bundle bundle, final int scrollY) {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             loadRequest.tag = tag;
             loadRequest.bundle = bundle;
-            loadRequest.object = object;
             loadRequest.scrollY = scrollY;
             loadRequest.active = true;
             return;
@@ -732,7 +728,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
             return;
         }
         fragment.setBundle(bundle);
-        fragment.setObject(object);
         fragment.setScrollY(scrollY);
         loadFragment(fragment, item);
     }
@@ -746,7 +741,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
     private void loadFragment(@NonNull final BaseFragment fragment, @NonNull final FragmentItem item) {
         Log.v("BaseActivity", "LoadFragment 1: " + item.tag);
         if (!isFragmentUIActive(fragment)) {
-            Log.v("BaseActivity", "LoadFragment 2: " + item.tag);
+            //Log.v("BaseActivity", "LoadFragment 2: " + item.tag);
             if (!item.isMain()) {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_NONE)

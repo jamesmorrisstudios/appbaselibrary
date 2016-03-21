@@ -152,6 +152,11 @@ public final class LicenseFragment extends BaseFragment {
 
     }
 
+    @Override
+    protected void setStartData(@Nullable Bundle startBundle, int startScrollY) {
+
+    }
+
     /**
      * Unused
      *

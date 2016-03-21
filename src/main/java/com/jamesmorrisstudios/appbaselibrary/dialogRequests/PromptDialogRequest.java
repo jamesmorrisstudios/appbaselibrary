@@ -14,6 +14,7 @@ public final class PromptDialogRequest extends AbstractDialogRequest {
     public final String title, content;
     public final DialogInterface.OnClickListener onPositive, onNegative;
     public final String positiveText, negativeText;
+    public DialogInterface.OnDismissListener dismissListener = null;
 
     /**
      * Prompt with only ok/cancel buttons
@@ -49,6 +50,47 @@ public final class PromptDialogRequest extends AbstractDialogRequest {
         this.onNegative = onNegative;
         this.positiveText = positiveText;
         this.negativeText = negativeText;
+    }
+
+    /**
+     * Prompt with only ok button
+     *
+     * @param title      Title
+     * @param content    Content text
+     * @param onPositive onPositive
+     */
+    public PromptDialogRequest(@NonNull final String title, @NonNull final String content, @NonNull final DialogInterface.OnClickListener onPositive) {
+        this.title = title;
+        this.content = content;
+        this.onPositive = onPositive;
+        this.onNegative = null;
+        this.positiveText = null;
+        this.negativeText = null;
+    }
+
+    /**
+     * Prompt with custom button text
+     *
+     * @param title        Title
+     * @param content      Content text
+     * @param onPositive   onPositive
+     * @param positiveText positive text
+     */
+    public PromptDialogRequest(@NonNull final String title, @NonNull final String content, @NonNull final DialogInterface.OnClickListener onPositive, @Nullable String positiveText) {
+        this.title = title;
+        this.content = content;
+        this.onPositive = onPositive;
+        this.onNegative = null;
+        this.positiveText = positiveText;
+        this.negativeText = null;
+    }
+
+    /**
+     * Sets the dismiss listener to callback if the dialog is dismissed for any reason
+     * @param dismissListener dismissListener
+     */
+    public final void setOnDismissListener(DialogInterface.OnDismissListener dismissListener) {
+        this.dismissListener = dismissListener;
     }
 
 }

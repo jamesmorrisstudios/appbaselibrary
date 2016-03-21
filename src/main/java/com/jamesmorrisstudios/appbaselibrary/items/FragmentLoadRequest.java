@@ -11,7 +11,6 @@ public final class FragmentLoadRequest {
     public boolean active = false;
     public String tag = null;
     public Bundle bundle = null;
-    public Object object = null;
     public int scrollY = -1;
 
     /**
@@ -21,7 +20,6 @@ public final class FragmentLoadRequest {
         this.active = false;
         this.tag = null;
         this.bundle = null;
-        this.object = null;
         this.scrollY = -1;
     }
 

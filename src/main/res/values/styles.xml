@@ -26,6 +26,8 @@
         <item name="cardViewStyle">@style/CardView.Light</item>
         <!-- Background color -->
         <item name="colorBackground">@color/backgroundLight</item>
+        <item name="colorBackgroundCard">@color/cardview_light_background</item>
+
         <!-- Icon Tint -->
         <item name="colorIconTint">@color/tintColorLight</item>
         <!-- Text colors -->
@@ -46,6 +48,7 @@
         <item name="cardViewStyle">@style/cardStyleDark</item>
         <!-- Background color -->
         <item name="colorBackground">@color/backgroundDark</item>
+        <item name="colorBackgroundCard">@color/cardview_dark_background</item>
         <!-- Icon Tint -->
         <item name="colorIconTint">@color/tintColorDark</item>
         <!-- Text colors -->
@@ -160,6 +163,39 @@
     <!-- Dark Toolbar Popup -->
     <style name="toolbarPopupDarkDarkText" parent="ThemeOverlay.AppCompat">
         <item name="android:textColorPrimary">@color/textLightMain</item>
+    </style>
+
+
+    <style name="AppSpinnerLight" parent="Theme.AppCompat">
+        <!--<item name="android:textColor">@color/textLightMain</item>-->
+
+        <item name="colorControlNormal">@color/textLightMain</item>
+        <!-- Title text -->
+        <item name="android:textColorPrimary">@color/textLightMain</item>
+        <!-- Title color in AppCompat.Light  -->
+        <item name="android:textColorPrimaryInverse">@color/textLightMain</item>
+        <!-- Menu text-->
+        <item name="actionMenuTextColor">@color/textLightMain</item>
+        <!-- Overflow -->
+        <item name="android:textColorSecondary">@color/textLightMain</item>
+        <!-- This will change drawer icon -->
+        <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
+    </style>
+
+    <style name="AppSpinnerDark" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/textDarkMain</item>
+        <item name="colorPrimary">@color/textDarkMain</item>
+        <item name="colorPrimaryDark">@color/textDarkMain</item>
+        <item name="colorAccent">@color/textDarkMain</item>
+    </style>
+
+    <style name="YourCustomDropDownItemStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textAppearance">@style/YourCustomDropDownItemTextStyle</item>
+    </style>
+
+    <style name="YourCustomDropDownItemTextStyle" parent="@android:style/Widget">
+        <item name="android:textColor">@color/textLightMain</item>
+        <!-- Here you can set the color and other text attributes -->
     </style>
 
     <!-- TabLayout Popup -->

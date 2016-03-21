@@ -470,7 +470,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
      * @param position Clicked item position
      */
     @Override
-    public final void itemClicked(final int position) {
+    public void itemClicked(final int position) {
         //Unused
     }
 
