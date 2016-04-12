@@ -2,9 +2,9 @@ package com.jamesmorrisstudios.appbaselibrary.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 
@@ -23,16 +23,7 @@ public final class AppLauncherActivity extends AppCompatActivity {
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        processIntents();
-    }
-
-    /**
-     * @param intent Restart Intent.
-     */
-    @Override
-    protected final void onNewIntent(@NonNull final Intent intent) {
-        super.onNewIntent(intent);
-        setIntent(intent);
+        Log.v("AppLauncherActivity", "onCreate");
         processIntents();
     }
 
@@ -40,7 +31,7 @@ public final class AppLauncherActivity extends AppCompatActivity {
      * Process the starting intent.
      */
     private void processIntents() {
-        Intent intent = getIntent();
+        final Intent intent = getIntent();
         if (intent == null) {
             return;
         }
@@ -68,7 +59,7 @@ public final class AppLauncherActivity extends AppCompatActivity {
         if (bundle != null) {
             i.putExtra("EXTRAS", bundle);
         }
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         AppBase.getContext().startActivity(i);
         finish();
     }

@@ -35,6 +35,8 @@ import com.jamesmorrisstudios.appbaselibrary.activityHandlers.ActivityResultMana
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.BaseBuildManager;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.DialogBuildManager;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.RestartAppRequest;
+import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
+import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ReleaseNotesDialogRequest;
 import com.jamesmorrisstudios.appbaselibrary.fragments.BaseFragment;
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
@@ -57,7 +59,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener {
 
     public static boolean previouslyRunning = false;
-
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private View splashScreen;
@@ -107,7 +108,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
      *
      * @param savedInstanceState Saved instance state
      */
-    protected void OnCreate(@Nullable final Bundle savedInstanceState) {
+    @CallSuper
+    protected void onCreateComplete(@Nullable final Bundle savedInstanceState) {
+        Log.v("BaseActivity", "onCreateComplete");
         addFragment(SettingsFragment.TAG, SettingsFragment.class, BaseFragment.TAG_MAIN_FRAGMENT);
         addFragment(HelpFragment.TAG, HelpFragment.class, BaseFragment.TAG_MAIN_FRAGMENT);
         addFragment(LicenseFragment.TAG, LicenseFragment.class, HelpFragment.TAG);
@@ -120,7 +123,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
-        Log.v("BaseActivity", "On Create");
+        Log.v("BaseActivity", "onCreate");
         UtilsTheme.applyTheme(this);
         UtilsAppBase.applyLocale();
         UtilsAppBase.applyFirstDayOfWeek();
@@ -142,19 +145,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
         initToolAndNavigationBar();
         getSupportFragmentManager().addOnBackStackChangedListener(this);
         dialogBuildManager = new DialogBuildManager();
-        OnCreate(savedInstanceState);
-        OnPostCreate(savedInstanceState);
-    }
-
-    /**
-     * Setup the toolbar and all helper classes.
-     * Load the main fragment if the stack is empty
-     *
-     * @param savedInstanceState savedInstanceState
-     */
-    private void OnPostCreate(@Nullable final Bundle savedInstanceState) {
-        Log.v("BaseActivity", "OnPostCreate");
-        super.onPostCreate(savedInstanceState);
+        //Signal that the primary onCreate step is complete so extending activities can do their onCreate work
+        onCreateComplete(savedInstanceState);
+        //Finish post create steps
         activityResultManager = new ActivityResultManager();
         dialogBuildManager.attach(this);
         activityResultManager.attach(this);
@@ -174,6 +167,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     public void onStart() {
+        Log.v("BaseActivity", "onStart");
         super.onStart();
         if (enableSound()) {
             Sounds.getInstance().onStart();
@@ -186,6 +180,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     public void onResume() {
+        Log.v("BaseActivity", "onResume");
         super.onResume();
         boolean firstLaunch = UtilsAppBase.isFirstLaunch();
         if (firstLaunch) {
@@ -200,8 +195,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
         int aux = UtilsVersion.getVersionAux();
         int auxOld = UtilsVersion.getOldVersionAux();
         if (major != majorOld || minor != minorOld || aux != auxOld) {
-            onVersionChanged(major == majorOld, major, minor == minorOld, minor, aux == auxOld, aux, firstLaunch);
-            onBaseVersionChanged(major == majorOld, major, minor == minorOld, minor, aux == auxOld, aux, firstLaunch);
+            onVersionChanged(major != majorOld, major, minor != minorOld, minor, aux != auxOld, aux, firstLaunch);
+            onBaseVersionChanged(major != majorOld, major, minor != minorOld, minor, aux != auxOld, aux, firstLaunch);
             UtilsVersion.updateVersion();
         }
     }
@@ -237,6 +232,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     public void onStop() {
+        Log.v("BaseActivity", "onStop");
         super.onStop();
         if (enableSound()) {
             Sounds.getInstance().onStop();
@@ -248,6 +244,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     @Override
     public void onDestroy() {
+        Log.v("BaseActivity", "onDestroy");
         super.onDestroy();
         dialogBuildManager.detach();
         activityResultManager.detach();
@@ -324,7 +321,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 Utils.hideKeyboard(this);
                 break;
             case HIDE_KEYBOARD_FROM:
-                if(event.context != null && event.view != null) {
+                if (event.context != null && event.view != null) {
                     Utils.hideKeyboardFrom(event.context, event.view);
                 }
                 event.clear();
@@ -354,10 +351,13 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 onSettingsChanged();
                 break;
             case SET_TOOLBAR_TITLE:
-                if(event.text != null) {
+                if (event.text != null) {
                     toolbar.setTitle(event.text);
                 }
                 event.clear();
+                break;
+            case UPGRADE_TO_PRO:
+                upgradeToPro();
                 break;
         }
     }
@@ -365,7 +365,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
     /**
      * Restart app to the main page
      * Event is forwarded from the activity result manager.
-     *
      */
     public final void restartApp() {
         restartApp(new RestartAppRequest(null, 0, null));
@@ -379,6 +378,18 @@ public abstract class BaseActivity extends AppCompatActivity implements
      */
     public final void restartApp(@NonNull final RestartAppRequest request) {
         Utils.restartApp(this, request.pageTag, request.scrollY, request.bundle);
+    }
+
+    /**
+     * Go to the pro upgrade location. By default this is a pro app version.
+     * Override this function to use a different method as a pro upgrade such as an in app purchase.
+     */
+    protected void upgradeToPro() {
+        if (UtilsVersion.isPro()) {
+            new SnackbarRequest(AppBase.getContext().getString(R.string.pro_unlocked), SnackbarRequest.SnackBarDuration.SHORT).execute();
+        } else {
+            Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
+        }
     }
 
     /**
@@ -579,6 +590,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
         return getSupportFragmentManager().getBackStackEntryCount() > 0;
     }
 
+    /**
+     * @return The size of the backstack.
+     */
     public final int getBackStackSize() {
         return getSupportFragmentManager().getBackStackEntryCount();
     }
@@ -634,10 +648,18 @@ public abstract class BaseActivity extends AppCompatActivity implements
         return true;
     }
 
+    /**
+     * Open the navigation drawer.
+     * Normally the user opens this on their own.
+     */
     protected final void openDrawer() {
         drawer.openDrawer(GravityCompat.START);
     }
 
+    /**
+     * Close the navigation drawer.
+     * Normally the user closes this on their own.
+     */
     protected final void closeDrawer() {
         drawer.closeDrawers();
     }
@@ -745,7 +767,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
             if (!item.isMain()) {
                 getSupportFragmentManager().beginTransaction()
                         .setTransition(FragmentTransaction.TRANSIT_NONE)
-                        .setCustomAnimations(R.anim.right_to_center, R.anim.center_to_left)
+                        //.setCustomAnimations(R.anim.right_to_center, R.anim.center_to_left)
                         .addToBackStack(item.tag)
                         .replace(R.id.container, fragment, item.tag)
                         .commit();
@@ -858,7 +880,8 @@ public abstract class BaseActivity extends AppCompatActivity implements
         LICENSE_CLICKED,
         HELP_CLICKED,
         SETTINGS_CHANGED,
-        SET_TOOLBAR_TITLE;
+        SET_TOOLBAR_TITLE,
+        UPGRADE_TO_PRO;
 
         public String text;
         public Context context;

@@ -158,7 +158,9 @@ public final class Sounds {
      */
     @SuppressWarnings("deprecation")
     private void startSoundEffects() {
+        Log.v("Sounds", "Start sound effects");
         if (soundEffectEnabled && soundPool == null) {
+            //Log.v("Sounds", "Start sound effects. Initial");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 AudioAttributes attr = new AudioAttributes.Builder()
                         .setUsage(AudioAttributes.USAGE_GAME)
@@ -175,6 +177,7 @@ public final class Sounds {
                 @Override
                 public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
                     soundEffectLoaded = true;
+                    Log.v("Sounds", "Sound effects loaded");
                 }
             });
             soundIdMap = new HashMap<>();
@@ -184,7 +187,7 @@ public final class Sounds {
                 //Log.v("SOUNDS", "Have an ID");
                 int id = sounds.getResourceId(i, 0);
                 if (id > 0) {
-                    //Log.v("SOUNDS", "Adding to sound pool");
+                    Log.v("SOUNDS", "Adding to sound pool");
                     soundIdMap.put(id, soundPool.load(AppBase.getContext(), id, 1));
                 }
             }

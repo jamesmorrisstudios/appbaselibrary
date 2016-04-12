@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"Afişa"</string>
-    
+
     <string name="settings_category_sound">"Sunet"</string>
-    
+
     <string name="settings_category_general">"General"</string>
-    
+
     <string name="settings_category_locale">"localizare"</string>
-    
+
     <string name="settings_category_theme">"Temă"</string>
-    
+
     <string name="settings_category_notification">"Notificare"</string>
-    
+
     <string name="settings_category_notification_custom">"Notificare personalizată"</string>
-    
+
     <string name="settings_category_notification_override">"Notificarea supracontrol"</string>
-    
+
     <string name="settings_category_defaults">"valori prestabilite"</string>
-    
+
     <string name="settings_category_random">"intamplarea"</string>
-    
+
     <string name="settings_category_widget">"widget"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Modul imersiva"</string>
-    
+
     <string name="setting_sound_enable_primary">"Efecte sonore"</string>
-    
+
     <string name="setting_music_enable_primary">"Muzică"</string>
-    
+
     <string name="setting_language_picker_primary">"Limba"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Ton de apel personalizat Picker"</string>
-    
+
     <string name="setting_theme_picker_primary">"aplicaţia Tema"</string>
-    
+
     <string name="setting_accent_color_primary">"Accentul de culoare"</string>
-    
+
     <string name="setting_primary_color_primary">"Culoare primară"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Bara de instrumente Culoare text"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"Faceți clic pe acțiune"</string>
-    
+
     <string name="setting_notification_custom_primary">"Permite"</string>
-    
+
     <string name="setting_notification_button_style_primary">"butonul Stil"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Notificare în curs de desfășurare"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"Notificările în curs de desfășurare nu sunt acceptate pe SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"Fundal"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"Culoare text"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Prima zi a săptămânii"</string>
-    
+
     <string name="setting_force_advanced_primary">"Afișați întotdeauna Opțiuni avansate"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Nu fi de acord pentru a afișa opțiuni avansate pe o bază per memento"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"glisează Acțiune"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Faceți clic pe Deschide App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Glisează Deschide App"</string>
-    
+
     <string name="setting_random_amount_primary">"Întâmplător"</string>
-    
+
     <string name="setting_less_random_amount_primary">"mai puțin aleatorie"</string>
-    
+
     <string name="setting_even_amount_primary">"Chiar"</string>
-    
+
     <string name="setting_widget_theme_primary">"Temă"</string>
-    
+
     <string name="setting_widget_text_color_primary">"Culoare text"</string>
-    
+
     <string name="setting_override_vibrate_primary">"Vibrații de notificare supracontrol"</string>
-    
+
     <string name="setting_override_ringtone_primary">"Supracontrol redare ton de notificare"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Acest lucru trebuie să fie activat pentru a suprascrie fluxul audio"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"Supracontrol flux audio de notificare"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"flux de vorbire supracontrol"</string>
 
-    
+
     <string name="time_millisecond">"milisecundă"</string>
-    
+
     <string name="time_milliseconds">"milisecunde"</string>
-    
+
     <string name="time_millisecond_abrev">"Domnișoară"</string>
-    
+
     <string name="time_second">"Al doilea"</string>
-    
+
     <string name="time_seconds">"secunde"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"Minut"</string>
-    
+
     <string name="time_minutes">"minute"</string>
-    
+
     <string name="time_hour">"Ora"</string>
-    
+
     <string name="time_hours">"ore"</string>
-    
+
     <string name="time_day">"Zi"</string>
-    
+
     <string name="time_days">"zi"</string>
-    
+
     <string name="time_daily">"Zilnic"</string>
-    
+
     <string name="time_week">"Săptămână"</string>
-    
+
     <string name="time_weeks">"săptămâni"</string>
-    
+
     <string name="time_weekly">"Săptămânal"</string>
-    
+
     <string name="time_month">"Lună"</string>
-    
+
     <string name="time_months">"Luni"</string>
-    
+
     <string name="time_monthly">"Lunar"</string>
-    
+
     <string name="time_year">"An"</string>
-    
+
     <string name="time_years">"Ani"</string>
-    
+
     <string name="time_yearly">"Anual"</string>
 
-    
+
     <string name="meter">"Metru"</string>
-    
+
     <string name="meters">"metri"</string>
 
-    
+
     <string name="num_one">"unu"</string>
-    
+
     <string name="num_two">"Două"</string>
-    
+
     <string name="num_three">"Trei"</string>
-    
+
     <string name="num_four">"Patru"</string>
-    
+
     <string name="num_five">"Cinci"</string>
-    
+
     <string name="num_six">"Şase"</string>
-    
+
     <string name="num_seven">"Șapte"</string>
-    
+
     <string name="num_eight">"Opt"</string>
-    
+
     <string name="num_nine">"Nouă"</string>
-    
+
     <string name="num_ten">"Zece"</string>
 
-    
+
     <string name="num_first">"Primul"</string>
-    
+
     <string name="num_second">"Al doilea"</string>
-    
+
     <string name="num_third">"Al treilea"</string>
-    
+
     <string name="num_fourth">"Al patrulea"</string>
-    
+
     <string name="num_fifth">"a cincea"</string>
-    
+
     <string name="num_sixth">"Şaselea"</string>
-    
+
     <string name="num_seventh">"Al șaptelea"</string>
-    
+
     <string name="num_eighth">"Al optulea"</string>
-    
+
     <string name="num_ninth">"Nouălea"</string>
-    
+
     <string name="num_tenth">"Al zecelea"</string>
 
-    
+
     <string name="day_sunday">"duminică"</string>
-    
+
     <string name="day_monday">"luni"</string>
-    
+
     <string name="day_tuesday">"marţi"</string>
-    
+
     <string name="day_wednesday">"miercuri"</string>
-    
+
     <string name="day_thursday">"joi"</string>
-    
+
     <string name="day_friday">"vineri"</string>
-    
+
     <string name="day_saturday">"sâmbătă"</string>
-    
+
     <string name="today">"Astăzi"</string>
-    
+
     <string name="tomorrow">"Mâine"</string>
-    
+
     <string name="yesterday">"Ieri"</string>
 
-    
+
     <string name="days_of_week">"Zilele saptamanii"</string>
-    
+
     <string name="days_of_month">"Zilele lunii"</string>
-    
+
     <string name="days_of_year">"Days Of Year"</string>
-    
+
     <string name="weeks_of_month">"Săptămâni de Luna"</string>
-    
+
     <string name="weeks_of_year">"Săptămâni de Anul"</string>
-    
+
     <string name="months_of_year">"Luni de An"</string>
 
-    
+
     <string name="next">"Următor →"</string>
-    
+
     <string name="previous">"Anterior"</string>
-    
+
     <string name="back">"Înapoi"</string>
-    
+
     <string name="forward">"Redirecţiona"</string>
 
-    
+
     <string name="pattern_1">"model 1"</string>
-    
+
     <string name="pattern_2">"modelul 2"</string>
-    
+
     <string name="pattern_3">"3 model"</string>
-    
+
     <string name="pattern_4">"model 4"</string>
-    
+
     <string name="pattern_5">"model 5"</string>
-    
+
     <string name="pattern_6">"model 6"</string>
 
-    
+
     <string name="select">"Selecta"</string>
-    
+
     <string name="select_all">"Selectează tot"</string>
-    
+
     <string name="select_none">"Selectați Fără"</string>
 
-    
+
     <string name="diff_difficulty">"Dificultate"</string>
-    
+
     <string name="diff_select_difficulty">"Selectați Dificultate"</string>
-    
+
     <string name="diff_easy">"Uşor"</string>
-    
+
     <string name="diff_normal">"Normal"</string>
-    
+
     <string name="diff_hard">"Greu"</string>
 
-    
+
     <string name="enable">"Permite"</string>
-    
+
     <string name="enabled">"activat"</string>
-    
+
     <string name="disable">"nu fi de acord"</string>
-    
+
     <string name="disabled">"invalid"</string>
-    
+
     <string name="lock">"Blocare"</string>
-    
+
     <string name="unlock">"descuia"</string>
-    
+
     <string name="locked">"blocat"</string>
-    
+
     <string name="unlocked">"descuiat"</string>
-    
+
     <string name="open">"Deschis"</string>
-    
+
     <string name="close">"Închide"</string>
-    
+
     <string name="opened">"Deschis"</string>
-    
+
     <string name="closed">"Închis"</string>
-    
+
     <string name="show">"Spectacol"</string>
-    
+
     <string name="hide">"Ascunde"</string>
-    
+
     <string name="shown">"Afișate"</string>
-    
+
     <string name="Hidden">"Ascuns"</string>
-    
+
     <string name="automatic">"Automat"</string>
-    
+
     <string name="manual">"Manual"</string>
-    
+
     <string name="online">"Pe net"</string>
-    
+
     <string name="offline">"Deconectat"</string>
-    
+
     <string name="active">"Activ"</string>
-    
+
     <string name="inactive">"Inactiv"</string>
 
-    
+
     <string name="okay">"bine"</string>
-    
+
     <string name="cancel">"Anulare"</string>
-    
+
     <string name="yes">"da"</string>
-    
+
     <string name="no">"Nu"</string>
-    
+
     <string name="maybe">"Poate"</string>
-    
+
     <string name="some">"niste"</string>
-    
+
     <string name="none">"Nici unul"</string>
-    
+
     <string name="all">"Toate"</string>
-    
+
     <string name="set">"A stabilit"</string>
-    
+
     <string name="unset">"unset"</string>
-    
+
     <string name="last">"Ultimul"</string>
-    
+
     <string name="first">"Primul"</string>
-    
+
     <string name="every">"Fiecare"</string>
-    
+
     <string name="other">"Alte"</string>
-    
+
     <string name="off">"de pe"</string>
-    
+
     <string name="on">"Pe"</string>
-    
+
     <string name="delete_reminder_prompt_title">"şterge memento"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Sunteți sigur că doriți să ștergeți acest memento?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"şterge Icon"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Sunteți sigur că doriți să ștergeți această pictogramă?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Renunțați la modificări"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Sunteți sigur că doriți să renunțați la modificări?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Șterge Vibrații Pattern"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Sunteți sigur că doriți să ștergeți acest model vibra?"</string>
-    
+
     <string name="delete_location_prompt_title">"şterge Locație"</string>
-    
+
     <string name="delete_location_prompt_content">"Sunteți sigur că doriți să ștergeți această locație?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"Memento dublură"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Sunteți sigur că doriți să duplicat acest memento?"</string>
-    
+
     <string name="include_log_prompt_title">"Includeți Log"</string>
-    
+
     <string name="include_log_prompt_content">"Doriți să includeți jurnalul memento?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Includeți un memento implicit"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Doriți să includeți un memento implicit?"</string>
-    
+
     <string name="start_new_game_title">"Începeți un joc nou"</string>
-    
+
     <string name="start_new_game_prompt">"Sunteți sigur că doriți să începeți un nou joc?"</string>
-    
+
     <string name="end_game_title">"Sfârșitul de joc"</string>
-    
+
     <string name="end_game_prompt">"Sunteți sigur că doriți să se încheie acest joc?"</string>
 
-    
+
     <string name="help">"Ajutor"</string>
-    
+
     <string name="about">"Despre"</string>
-    
+
     <string name="settings">"setările"</string>
-    
+
     <string name="help_and_feedback">"Ajutor și feedback"</string>
-    
+
     <string name="rate_app">"Rata de App"</string>
-    
+
     <string name="more_apps">"Mai multe aplicatii"</string>
-    
+
     <string name="tutorial">"tutorial"</string>
-    
+
     <string name="read">"Citire"</string>
-    
+
     <string name="watch">"Ceas"</string>
-    
+
     <string name="links">"Link-uri"</string>
-    
+
     <string name="licenses">"licenţele"</string>
-    
+
     <string name="help_translate">"Traducător de ajutor"</string>
-    
+
     <string name="get_the_beta">"Beta a obține"</string>
-    
+
     <string name="achievements">"Realizările"</string>
-    
+
     <string name="leaderboards">"leaderboard"</string>
-    
+
     <string name="high_scores">"Scoruri mari"</string>
-    
+
     <string name="my_circles">"Cercurile mele"</string>
-    
+
     <string name="invitations">"Invitații la"</string>
-    
+
     <string name="options">"opţiuni"</string>
-    
+
     <string name="game_options">"Opțiuni de joc"</string>
-    
+
     <string name="advanced_options">"Opțiuni avansate"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"Oaspete"</string>
 
-    
+
     <string name="light">"Ușoară"</string>
-    
+
     <string name="light_transparent">"transparent lumină"</string>
-    
+
     <string name="dark">"Întuneric"</string>
-    
+
     <string name="dark_transparent">"transparent întuneric"</string>
-    
+
     <string name="transparent">"Transparent"</string>
-    
+
     <string name="night">"Noapte"</string>
-    
+
     <string name="black">"Negru"</string>
-    
+
     <string name="white">"alb"</string>
-    
+
     <string name="system">"Sistem"</string>
-    
+
     <string name="light_text">"Text de lumină"</string>
-    
+
     <string name="dark_text">"Text dark"</string>
 
-    
+
     <string name="red">"roșu"</string>
-    
+
     <string name="pink">"Roz"</string>
-    
+
     <string name="purple">"Violet"</string>
-    
+
     <string name="deep_purple">"Mov inchis"</string>
-    
+
     <string name="indigo">"Indigo"</string>
-    
+
     <string name="blue">"Albastru"</string>
-    
+
     <string name="light_blue">"Albastru deschis"</string>
-    
+
     <string name="cyan">"Cyan"</string>
-    
+
     <string name="teal">"teal"</string>
-    
+
     <string name="green">"Verde"</string>
-    
+
     <string name="light_green">"Verde deschis"</string>
-    
+
     <string name="lime">"Lămâie verde"</string>
-    
+
     <string name="yellow">"Galben"</string>
-    
+
     <string name="amber">"Chihlimbar"</string>
-    
+
     <string name="orange">"Portocale"</string>
-    
+
     <string name="deep_orange">"adâncime Orange"</string>
-    
+
     <string name="brown">"Maro"</string>
-    
+
     <string name="grey">"Gri"</string>
-    
+
     <string name="blue_grey">"albastru Gri"</string>
-    
+
     <string name="dark_grey">"Gri inchis"</string>
 
-    
+
     <string name="major">"Major"</string>
-    
+
     <string name="minor">"Minor"</string>
-    
+
     <string name="aux">"Aux"</string>
-    
+
     <string name="version">"Versiune"</string>
-    
+
     <string name="production">"producere"</string>
-    
+
     <string name="beta">"beta"</string>
-    
+
     <string name="alpha">"Alfa"</string>
 
-    
+
     <string name="icon">"icoană"</string>
-    
+
     <string name="icons">"pictogramele"</string>
-    
+
     <string name="custom_icon">"Icon personalizat"</string>
-    
+
     <string name="custom_icons">"Icoane personalizate"</string>
-    
+
     <string name="choose_icon">"alege Icon"</string>
 
-    
+
     <string name="backup">"Backup"</string>
-    
+
     <string name="import_">"Import"</string>
-    
+
     <string name="export">"Export"</string>
-    
+
     <string name="export_log">"export jurnal"</string>
-    
+
     <string name="import_export">"Import Export"</string>
-    
+
     <string name="export_location">"Locație pentru export"</string>
-    
+
     <string name="import_failed">"import eșuat"</string>
-    
+
     <string name="import_canceled">"import anulat"</string>
-    
+
     <string name="export_failed">"export nu a reușit"</string>
-    
+
     <string name="export_canceled">"export Canceled"</string>
-    
+
     <string name="import_complete">"import complet"</string>
-    
+
     <string name="export_complete">"export finalizat"</string>
-    
+
     <string name="importing_please_wait">"Importatoare, vă rugăm așteptați"</string>
-    
+
     <string name="exporting_please_wait">"Exportatoare, vă rugăm așteptați"</string>
 
-    
+
     <string name="snooze">"ațipi"</string>
-    
+
     <string name="snoozed">"snoozed"</string>
-    
+
     <string name="auto_snooze">"Auto Amânați"</string>
-    
+
     <string name="manual_snooze">"Amânați manuală"</string>
 
-    
+
     <string name="message">"Mesaj"</string>
-    
+
     <string name="messages">"mesaje"</string>
-    
+
     <string name="num_messages">"Numărul de mesaje"</string>
-    
+
     <string name="edit_messages">"Editați Mesaje"</string>
-    
+
     <string name="view_messages">"Vizualizați mesajele"</string>
-    
+
     <string name="import_messages">"Mesajele de import"</string>
-    
+
     <string name="message_separator">"Mesaj Separator ||||"</string>
 
-    
+
     <string name="sign_in">"Conectare"</string>
-    
+
     <string name="signed_in">"Inscris"</string>
-    
+
     <string name="sign_in_failed">"Conectare eșuată"</string>
-    
+
     <string name="sign_out">"Sign out"</string>
-    
+
     <string name="signed_out">"semnat Out"</string>
 
-    
+
     <string name="low">"Scăzut"</string>
-    
+
     <string name="mid">"la mijlocul"</string>
-    
+
     <string name="high">"Înalt"</string>
-    
+
     <string name="min">"min"</string>
-    
+
     <string name="max">"max"</string>
-    
+
     <string name="minimum">"Minim"</string>
-    
+
     <string name="medium">"Mediu"</string>
-    
+
     <string name="maximum">"Maxim"</string>
-    
+
     <string name="small">"Mic"</string>
-    
+
     <string name="large">"Mare"</string>
-    
+
     <string name="short_">"Mic de statura"</string>
-    
+
     <string name="long_">"Lung"</string>
-    
+
     <string name="slow">"Lent"</string>
-    
+
     <string name="fast">"Rapid"</string>
-    
+
     <string name="quick">"Rapid"</string>
-    
+
     <string name="narrow">"Îngust"</string>
-    
+
     <string name="wide">"lat"</string>
 
-    
+
     <string name="thank_you">"Mulțumesc"</string>
-    
+
     <string name="youre_welcome">"Cu plăcere"</string>
-    
+
     <string name="please">"Vă rog"</string>
 
-    
+
     <string name="you">"Tu"</string>
-    
+
     <string name="me">"Pe mine"</string>
-    
+
     <string name="us">"Ne"</string>
-    
+
     <string name="we">"Noi"</string>
-    
+
     <string name="them">"Lor"</string>
 
-    
+
     <string name="short_on">"scurt"</string>
-    
+
     <string name="medium_on">"medie pe"</string>
-    
+
     <string name="long_on">"mult timp pe"</string>
-    
+
     <string name="short_off">"scurt off"</string>
-    
+
     <string name="medium_off">"mediu off"</string>
-    
+
     <string name="long_off">"lung off"</string>
 
-    
+
     <string name="pro">"Pro"</string>
-    
+
     <string name="pro_feature">"în versiunea Pro"</string>
-    
+
     <string name="upgrade">"Actualizare"</string>
-    
+
     <string name="feature_requires_pro">"Această caracteristică necesită versiunea pro"</string>
-    
+
     <string name="feature_requires_pro_limited">"Această caracteristică este limitată în versiunea gratuită. Treceți la pro sau de a elimina un element existent."</string>
-    
+
     <string name="upgrade_to_pro">"Upgrade la Pro"</string>
-    
+
     <string name="upgrade_now">"Imbunatateste acum"</string>
 
-    
+
     <string name="start_date">"Data de început"</string>
-    
+
     <string name="end_date">"Data de încheiere"</string>
-    
+
     <string name="start_time">"Timpul de începere"</string>
-    
+
     <string name="end_time">"Ora de terminare"</string>
-    
+
     <string name="end_type">"Sfârșitul Tip"</string>
-    
+
     <string name="timing_type">"Tipul de sincronizare"</string>
-    
+
     <string name="edit_times">"edita Times"</string>
-    
+
     <string name="time">"Timp"</string>
-    
+
     <string name="times">"ori"</string>
-    
+
     <string name="timing">"Sincronizare"</string>
-    
+
     <string name="all_time">"Tot timpul"</string>
-    
+
     <string name="every_week">"În fiecare săptămână"</string>
-    
+
     <string name="lifetime">"Durata de viață"</string>
-    
+
     <string name="forever">"Pentru totdeauna"</string>
-    
+
     <string name="time_period">"Perioada de timp"</string>
-    
+
     <string name="random">"Întâmplător"</string>
-    
+
     <string name="randomly">"în ordine aleatorie"</string>
-    
+
     <string name="less_random">"mai puțin aleatorie"</string>
-    
+
     <string name="even">"Chiar"</string>
-    
+
     <string name="evenly">"egal"</string>
-    
+
     <string name="specific">"Specific"</string>
-    
+
     <string name="interval">"Interval"</string>
-    
+
     <string name="specific_times">"Perioade specifice"</string>
-    
+
     <string name="repeat_every">"Se repetă în fiecare"</string>
 
-    
+
     <string name="data_loaded">"date încărcate"</string>
-    
+
     <string name="file">"Fişier"</string>
-    
+
     <string name="local_storage">"Stocare locală"</string>
-    
+
     <string name="filename">"Nume de fișier"</string>
 
-    
+
     <string name="permission_granted">"Permisiunea acordată"</string>
-    
+
     <string name="permission_denied">"Acces refuzat"</string>
-    
+
     <string name="allow_if_any">"Se lasă în cazul în care orice"</string>
-    
+
     <string name="allow_if_all">"Se lasă în cazul în care toate"</string>
-    
+
     <string name="disallow_if_any">"Interziceți dacă există"</string>
-    
+
     <string name="disallow_if_all">"Interziceți dacă toate"</string>
-    
+
     <string name="trigger_if_any">"Declanșare în cazul în care orice"</string>
-    
+
     <string name="trigger_if_all">"Declanșare în cazul în care toate"</string>
 
-    
+
     <string name="reminders">"mementouri"</string>
-    
+
     <string name="no_reminder">"Nu există mementouri"</string>
-    
+
     <string name="no_reminders_yet">"Încă nu aveți memento"</string>
-    
+
     <string name="alerts_per_day">"Mementouri pe zi"</string>
-    
+
     <string name="number_of_reminders">"Numărul de memento-uri"</string>
 
-    
+
     <string name="changes_discarded">"modificări Șters"</string>
-    
+
     <string name="changes_saved">"modificări salvate"</string>
-    
+
     <string name="no_changes">"Nici o schimbare"</string>
-    
+
     <string name="select_at_least_one_item">"Selectați cel puțin un element"</string>
 
-    
+
     <string name="loading">"se incarca"</string>
-    
+
     <string name="loaded">"Încărcat"</string>
-    
+
     <string name="loading_failed">"Se încarcă nu a reușit"</string>
-    
+
     <string name="loading_complete">"Se încarcă complet"</string>
-    
+
     <string name="error">"Eroare"</string>
-    
+
     <string name="fail">"eșua"</string>
-    
+
     <string name="failed">"A eșuat"</string>
-    
+
     <string name="success">"Succes"</string>
-    
+
     <string name="successful">"De succes"</string>
-    
+
     <string name="unsuccessful">"Fără succes"</string>
-    
+
     <string name="valid">"Valabil"</string>
-    
+
     <string name="invalid">"Invalid"</string>
-    
+
     <string name="complete">"Complet"</string>
-    
+
     <string name="completed">"terminat"</string>
-    
+
     <string name="skipped">"Omisă"</string>
-    
+
     <string name="incomplete">"Incomplet"</string>
-    
+
     <string name="dismiss">"destitui"</string>
-    
+
     <string name="dismissed">"Respinge"</string>
-    
+
     <string name="acknowledge">"recunoaște"</string>
-    
+
     <string name="acknowledged">"Recunoscut"</string>
-    
+
     <string name="add">"Adăuga"</string>
-    
+
     <string name="added">"Adăugat"</string>
-    
+
     <string name="add_item">"Adaugare element"</string>
-    
+
     <string name="remove">"Elimina"</string>
-    
+
     <string name="removed">"Îndepărtat"</string>
-    
+
     <string name="remove_item">"eliminaţi elementul"</string>
-    
+
     <string name="delete">"Șterge"</string>
-    
+
     <string name="deleted">"eliminat"</string>
-    
+
     <string name="duplicate">"Duplicat"</string>
-    
+
     <string name="duplicated">"duplicată"</string>
-    
+
     <string name="restart">"Repornire"</string>
-    
+
     <string name="restarting">"repornind"</string>
-    
+
     <string name="restarting_app_please_wait">"Reînceperea App, vă rugăm așteptați"</string>
 
-    
+
     <string name="map">"Hartă"</string>
-    
+
     <string name="location">"Locație"</string>
-    
+
     <string name="locations">"locaţii"</string>
-    
+
     <string name="latitude">"Latitudine"</string>
-    
+
     <string name="longitude">"Longitudine"</string>
-    
+
     <string name="radius">"Rază"</string>
-    
+
     <string name="enter">"introduce"</string>
-    
+
     <string name="exit">"Ieșire"</string>
-    
+
     <string name="linger_time">"Linger Ora"</string>
 
-    
+
     <string name="music">"Muzică"</string>
-    
+
     <string name="ring">"Inel"</string>
-    
+
     <string name="speak_time">"timp de vorbire"</string>
-    
+
     <string name="speak_title">"Titlu vorbesc"</string>
-    
+
     <string name="speak_message">"Mesajul vorbesc"</string>
-    
+
     <string name="tone">"Ton"</string>
-    
+
     <string name="sound">"Sunet"</string>
 
-    
+
     <string name="notification">"Notificare"</string>
-    
+
     <string name="notifications">"notificările"</string>
-    
+
     <string name="select_notification">"Selectați Notificare"</string>
 
-    
+
     <string name="vibrate">"vibra"</string>
-    
+
     <string name="vibrate_pattern">"Vibrații model"</string>
-    
+
     <string name="vibrate_patterns">"Modele vibrării"</string>
-    
+
     <string name="create_vibrate_pattern">"Creați Vibrații model"</string>
 
-    
 
-    
     <string name="you_win">"Ai câștigat"</string>
-    
+
     <string name="you_won">"Ai castigat"</string>
-    
+
     <string name="you_lost">"Ai pierdut"</string>
-    
+
     <string name="you_lose">"Ai pierdut"</string>
-    
+
     <string name="you_tied">"ai legat"</string>
-    
+
     <string name="winner">"Câştigător"</string>
-    
+
     <string name="winners">"câştigătorii"</string>
-    
+
     <string name="loser">"Pierzător"</string>
-    
+
     <string name="Losers">"învinşi"</string>
 
-    
+
     <string name="number_of_players">"Numărul de Participanți"</string>
-    
+
     <string name="player">"Jucător"</string>
-    
+
     <string name="players">"jucători"</string>
-    
+
     <string name="player_1">"1 jucător"</string>
-    
+
     <string name="player_2">"2 player"</string>
-    
+
     <string name="player_3">"jucător 3"</string>
-    
+
     <string name="player_4">"4 jucător"</string>
-    
+
     <string name="player_5">"5 jucător"</string>
-    
+
     <string name="player_6">"Player 6"</string>
-    
+
     <string name="team">"Echipă"</string>
-    
+
     <string name="teams">"echipe"</string>
-    
+
     <string name="number_of_teams">"Numărul de echipe"</string>
-    
+
     <string name="team_1">"echipa 1"</string>
-    
+
     <string name="team_2">"echipa 2"</string>
-    
+
     <string name="team_3">"echipa 3"</string>
-    
+
     <string name="team_4">"echipa 4"</string>
 
-    
+
     <string name="requires_google_play">"Pentru această acțiune Jocuri Google Play"</string>
-    
+
     <string name="compare_profiles">"Compară Jocuri Play Profile"</string>
-    
+
     <string name="view_profile">"Vizualizare profil Jocuri Play"</string>
 
-    
+
     <string name="sponsored">"sponsorizate"</string>
-    
+
     <string name="ads">"anunţurile"</string>
-    
+
     <string name="remove_ads">"Elimina anunțurile"</string>
-    
+
     <string name="ads_removed">"anunţurile Eliminat"</string>
 
-    
+
     <string name="current_score">"Scor de curent"</string>
-    
+
     <string name="top_score">"Cel mai mare scor"</string>
-    
+
     <string name="score">"Scor"</string>
 
-    
+
     <string name="your_turn">"Rândul tau"</string>
-    
+
     <string name="their_turn">"Turn lor"</string>
-    
+
     <string name="turn">"viraj"</string>
-    
+
     <string name="turns">"viraje"</string>
-    
+
     <string name="round">"Rundă"</string>
-    
+
     <string name="rounds">"runde"</string>
-    
+
     <string name="match">"Meci"</string>
-    
+
     <string name="matches">"Chibrituri"</string>
 
-    
+
     <string name="dollar">"Dolar"</string>
-    
+
     <string name="dollars">"dolari"</string>
-    
+
     <string name="buy">"A cumpara"</string>
-    
+
     <string name="sell">"Vinde"</string>
-    
+
     <string name="purchase">"Cumpărare"</string>
-    
+
     <string name="diamond">"Diamant"</string>
-    
+
     <string name="diamonds">"caro"</string>
 
-    
+
     <string name="rematch">"revansa"</string>
-    
+
     <string name="try_again">"Încearcă din nou"</string>
-    
+
     <string name="touch_continue">"Atingeți pentru a continua"</string>
-    
+
     <string name="touch_resume">"Atingeți pentru a relua"</string>
-    
+
     <string name="touch_edit">"Atingeți pentru a edita"</string>
-    
+
     <string name="pause">"Pauză"</string>
-    
+
     <string name="pause_game">"Joc pauză"</string>
-    
+
     <string name="resume">"Relua"</string>
-    
+
     <string name="resume_game">"CV-ul de joc"</string>
-    
+
     <string name="new_">"Nou"</string>
-    
+
     <string name="new_game">"Joc nou"</string>
-    
+
     <string name="select_save">"selectați Salvare"</string>
-    
+
     <string name="save">"Salvați"</string>
-    
+
     <string name="save_game">"Salveaza jocul"</string>
-    
+
     <string name="load">"Sarcină"</string>
-    
+
     <string name="load_game">"Incarca jocul"</string>
-    
+
     <string name="game_over">"Joc încheiat"</string>
-    
+
     <string name="start">"start"</string>
-    
+
     <string name="start_game">"Incepe jocul"</string>
-    
+
     <string name="end">"Sfârşit"</string>
-    
+
     <string name="end_game">"Sfârșitul de joc"</string>
-    
+
     <string name="stop">"Stop"</string>
-    
+
     <string name="stop_game">"Joc de oprire"</string>
 
-    
 
     <string name="free">"Gratuit"</string>
     <string name="pull">"Trage"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"Clipboard"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"Kijelző"</string>
-    
+
     <string name="settings_category_sound">"Hang"</string>
-    
+
     <string name="settings_category_general">"Általános"</string>
-    
+
     <string name="settings_category_locale">"helyszín"</string>
-    
+
     <string name="settings_category_theme">"Téma"</string>
-    
+
     <string name="settings_category_notification">"Bejelentés"</string>
-    
+
     <string name="settings_category_notification_custom">"Egyedi értesítés"</string>
-    
+
     <string name="settings_category_notification_override">"felülírása Notification"</string>
-    
+
     <string name="settings_category_defaults">"Alapértékek"</string>
-    
+
     <string name="settings_category_random">"véletlenszerűség"</string>
-    
+
     <string name="settings_category_widget">"Widget"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Magával ragadó Mode"</string>
-    
+
     <string name="setting_sound_enable_primary">"Hang hatások"</string>
-    
+
     <string name="setting_music_enable_primary">"Zene"</string>
-    
+
     <string name="setting_language_picker_primary">"Nyelv"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Egyedi csengőhang Picker"</string>
-    
+
     <string name="setting_theme_picker_primary">"App Theme"</string>
-    
+
     <string name="setting_accent_color_primary">"Kiemelőszín"</string>
-    
+
     <string name="setting_primary_color_primary">"elsődleges szín"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Eszköztár Szöveg színe"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"Kattintson akció"</string>
-    
+
     <string name="setting_notification_custom_primary">"Engedélyezze"</string>
-    
+
     <string name="setting_notification_button_style_primary">"Gombstílus"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Folyamatban lévő Notification"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"Folyamatban lévő bejelentések nem támogatja SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"Háttér"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"szöveg színe"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Első nap a hét"</string>
-    
+
     <string name="setting_force_advanced_primary">"Mindig Speciális beállítások megjelenítése"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Kikapcsolja a speciális lehetőségek megjelenítése a per emlékeztető alapján"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"Swipe Action"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Kattintson megnyitása App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Swipe megnyitása App"</string>
-    
+
     <string name="setting_random_amount_primary">"Véletlen"</string>
-    
+
     <string name="setting_less_random_amount_primary">"kevesebb Random"</string>
-    
+
     <string name="setting_even_amount_primary">"Még"</string>
-    
+
     <string name="setting_widget_theme_primary">"Téma"</string>
-    
+
     <string name="setting_widget_text_color_primary">"szöveg színe"</string>
-    
+
     <string name="setting_override_vibrate_primary">"Felülírása bejelentés rezeg"</string>
-    
+
     <string name="setting_override_ringtone_primary">"Felülírása értesítés hang lejátszás"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Ezt engedélyezni kell, hogy felülbírálja az audio stream"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"Felülírása bejelentés audio stream"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"Felülírása beszéd patak"</string>
 
-    
+
     <string name="time_millisecond">"ezredmásodperc"</string>
-    
+
     <string name="time_milliseconds">"ezredmásodperc"</string>
-    
+
     <string name="time_millisecond_abrev">"Kisasszony"</string>
-    
+
     <string name="time_second">"Második"</string>
-    
+
     <string name="time_seconds">"másodperc"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"Perc"</string>
-    
+
     <string name="time_minutes">"Percek"</string>
-    
+
     <string name="time_hour">"Óra"</string>
-    
+
     <string name="time_hours">"Órák"</string>
-    
+
     <string name="time_day">"Nap"</string>
-    
+
     <string name="time_days">"Napok"</string>
-    
+
     <string name="time_daily">"Napi"</string>
-    
+
     <string name="time_week">"Hét"</string>
-    
+
     <string name="time_weeks">"Hetek"</string>
-    
+
     <string name="time_weekly">"Heti"</string>
-    
+
     <string name="time_month">"Hónap"</string>
-    
+
     <string name="time_months">"hónapok"</string>
-    
+
     <string name="time_monthly">"Havi"</string>
-    
+
     <string name="time_year">"Év"</string>
-    
+
     <string name="time_years">"év"</string>
-    
+
     <string name="time_yearly">"Évi"</string>
 
-    
+
     <string name="meter">"Méter"</string>
-    
+
     <string name="meters">"méter"</string>
 
-    
+
     <string name="num_one">"Egy"</string>
-    
+
     <string name="num_two">"Kettő"</string>
-    
+
     <string name="num_three">"Három"</string>
-    
+
     <string name="num_four">"Négy"</string>
-    
+
     <string name="num_five">"Öt"</string>
-    
+
     <string name="num_six">"Hat"</string>
-    
+
     <string name="num_seven">"Hét"</string>
-    
+
     <string name="num_eight">"Nyolc"</string>
-    
+
     <string name="num_nine">"Kilenc"</string>
-    
+
     <string name="num_ten">"Tíz"</string>
 
-    
+
     <string name="num_first">"Első"</string>
-    
+
     <string name="num_second">"Második"</string>
-    
+
     <string name="num_third">"Harmadik"</string>
-    
+
     <string name="num_fourth">"Negyedik"</string>
-    
+
     <string name="num_fifth">"Ötödik"</string>
-    
+
     <string name="num_sixth">"Hatodik"</string>
-    
+
     <string name="num_seventh">"Hetedik"</string>
-    
+
     <string name="num_eighth">"Nyolcadik"</string>
-    
+
     <string name="num_ninth">"Kilencedik"</string>
-    
+
     <string name="num_tenth">"Tizedik"</string>
 
-    
+
     <string name="day_sunday">"vasárnap"</string>
-    
+
     <string name="day_monday">"hétfő"</string>
-    
+
     <string name="day_tuesday">"kedd"</string>
-    
+
     <string name="day_wednesday">"szerda"</string>
-    
+
     <string name="day_thursday">"csütörtök"</string>
-    
+
     <string name="day_friday">"péntek"</string>
-    
+
     <string name="day_saturday">"szombat"</string>
-    
+
     <string name="today">"Ma"</string>
-    
+
     <string name="tomorrow">"Holnap"</string>
-    
+
     <string name="yesterday">"Tegnap"</string>
 
-    
+
     <string name="days_of_week">"A hét napjai"</string>
-    
+
     <string name="days_of_month">"Január hónap"</string>
-    
+
     <string name="days_of_year">"Days Of Year"</string>
-    
+
     <string name="weeks_of_month">"Hetek hónap"</string>
-    
+
     <string name="weeks_of_year">"Hetek év"</string>
-    
+
     <string name="months_of_year">"Hónapon év"</string>
 
-    
+
     <string name="next">"Következő"</string>
-    
+
     <string name="previous">"Előző"</string>
-    
+
     <string name="back">"Hát"</string>
-    
+
     <string name="forward">"Előre"</string>
 
-    
+
     <string name="pattern_1">"1. minta"</string>
-    
+
     <string name="pattern_2">"minta 2"</string>
-    
+
     <string name="pattern_3">"minta 3"</string>
-    
+
     <string name="pattern_4">"minta 4"</string>
-    
+
     <string name="pattern_5">"5. mintázat"</string>
-    
+
     <string name="pattern_6">"minta 6"</string>
 
-    
+
     <string name="select">"választ"</string>
-    
+
     <string name="select_all">"Mindet kiválaszt"</string>
-    
+
     <string name="select_none">"Select None"</string>
 
-    
+
     <string name="diff_difficulty">"Nehézség"</string>
-    
+
     <string name="diff_select_difficulty">"Select Nehézségi"</string>
-    
+
     <string name="diff_easy">"Könnyen"</string>
-    
+
     <string name="diff_normal">"Normál"</string>
-    
+
     <string name="diff_hard">"Kemény"</string>
 
-    
+
     <string name="enable">"Engedélyezze"</string>
-    
+
     <string name="enabled">"Engedélyezett"</string>
-    
+
     <string name="disable">"Kikapcsolja"</string>
-    
+
     <string name="disabled">"Tiltva"</string>
-    
+
     <string name="lock">"Zár"</string>
-    
+
     <string name="unlock">"Kinyit"</string>
-    
+
     <string name="locked">"Bezárt"</string>
-    
+
     <string name="unlocked">"kártyafüggetlen"</string>
-    
+
     <string name="open">"Nyisd ki"</string>
-    
+
     <string name="close">"Közeli"</string>
-    
+
     <string name="opened">"Nyitott"</string>
-    
+
     <string name="closed">"Zárva"</string>
-    
+
     <string name="show">"Előadás"</string>
-    
+
     <string name="hide">"Elrejt"</string>
-    
+
     <string name="shown">"Látható"</string>
-    
+
     <string name="Hidden">"Rejtett"</string>
-    
+
     <string name="automatic">"Automatikus"</string>
-    
+
     <string name="manual">"Kézikönyv"</string>
-    
+
     <string name="online">"Online"</string>
-    
+
     <string name="offline">"Offline"</string>
-    
+
     <string name="active">"Aktív"</string>
-    
+
     <string name="inactive">"tétlen"</string>
 
-    
+
     <string name="okay">"rendben"</string>
-    
+
     <string name="cancel">"Törölni"</string>
-    
+
     <string name="yes">"Igen"</string>
-    
+
     <string name="no">"Nem"</string>
-    
+
     <string name="maybe">"Talán"</string>
-    
+
     <string name="some">"Néhány"</string>
-    
+
     <string name="none">"Egyik sem"</string>
-    
+
     <string name="all">"Minden"</string>
-    
+
     <string name="set">"Készlet"</string>
-    
+
     <string name="unset">"hatástalanított"</string>
-    
+
     <string name="last">"Utolsó"</string>
-    
+
     <string name="first">"Első"</string>
-    
+
     <string name="every">"Minden"</string>
-    
+
     <string name="other">"Más"</string>
-    
+
     <string name="off">"Ki"</string>
-    
+
     <string name="on">"Tovább"</string>
-    
+
     <string name="delete_reminder_prompt_title">"Emlékeztető törlése"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Biztosan törölni szeretné ezt az emlékeztetőt?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"Törlés ikon"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Biztosan törölni szeretné ezt az ikont?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Módosítások elvetése"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Biztos, hogy elveti a módosításokat?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Törlés rezgés minta"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Biztosan törölni szeretné ezt a rezgő minta?"</string>
-    
+
     <string name="delete_location_prompt_title">"törölni Régió"</string>
-    
+
     <string name="delete_location_prompt_content">"Biztosan törölni szeretné ezt a helyet?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"Ismétlődő Emlékeztető"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Biztosan másolni kívánt az emlékeztetőt?"</string>
-    
+
     <string name="include_log_prompt_title">"Tartalmazza Belépés"</string>
-    
+
     <string name="include_log_prompt_content">"Szeretné, hogy tartalmazza az emlékeztető napló?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Tartalmazza Alapértelmezett emlékeztető"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Szeretné, hogy tartalmazza az alapértelmezett emlékeztető?"</string>
-    
+
     <string name="start_new_game_title">"Új játék indítása"</string>
-    
+
     <string name="start_new_game_prompt">"Biztos benne, hogy szeretné, hogy egy új játék?"</string>
-    
+
     <string name="end_game_title">"végjáték"</string>
-    
+
     <string name="end_game_prompt">"Biztosan be szeretné fejezni ezt a játékot?"</string>
 
-    
+
     <string name="help">"Segítség"</string>
-    
+
     <string name="about">"Ról ről"</string>
-    
+
     <string name="settings">"Beállítások"</string>
-    
+
     <string name="help_and_feedback">"Súgó és visszajelzés"</string>
-    
+
     <string name="rate_app">"Értékeld az alkalmazást"</string>
-    
+
     <string name="more_apps">"További alkalmazások"</string>
-    
+
     <string name="tutorial">"oktatói"</string>
-    
+
     <string name="read">"Olvas"</string>
-    
+
     <string name="watch">"Óra"</string>
-    
+
     <string name="links">"linkek"</string>
-    
+
     <string name="licenses">"engedélyek"</string>
-    
+
     <string name="help_translate">"Segítség Fordítás"</string>
-    
+
     <string name="get_the_beta">"Szerezd meg a Beta"</string>
-    
+
     <string name="achievements">"Kitüntetések"</string>
-    
+
     <string name="leaderboards">"ranglisták"</string>
-    
+
     <string name="high_scores">"Magas pontszám"</string>
-    
+
     <string name="my_circles">"Saját körök"</string>
-    
+
     <string name="invitations">"meghívók"</string>
-    
+
     <string name="options">"Lehetőségek"</string>
-    
+
     <string name="game_options">"A játék beállításai"</string>
-    
+
     <string name="advanced_options">"Haladó beállítások"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"Vendég"</string>
 
-    
+
     <string name="light">"Fény"</string>
-    
+
     <string name="light_transparent">"fény Átlátszó"</string>
-    
+
     <string name="dark">"Sötét"</string>
-    
+
     <string name="dark_transparent">"sötét Átlátszó"</string>
-    
+
     <string name="transparent">"Átlátszó"</string>
-    
+
     <string name="night">"Éjszaka"</string>
-    
+
     <string name="black">"Fekete"</string>
-    
+
     <string name="white">"fehér"</string>
-    
+
     <string name="system">"Rendszer"</string>
-    
+
     <string name="light_text">"világos szöveg"</string>
-    
+
     <string name="dark_text">"sötét szöveg"</string>
 
-    
+
     <string name="red">"Piros"</string>
-    
+
     <string name="pink">"Rózsaszín"</string>
-    
+
     <string name="purple">"Lila"</string>
-    
+
     <string name="deep_purple">"Mély lila"</string>
-    
+
     <string name="indigo">"Indigó"</string>
-    
+
     <string name="blue">"Kék"</string>
-    
+
     <string name="light_blue">"Világoskék"</string>
-    
+
     <string name="cyan">"Cián"</string>
-    
+
     <string name="teal">"Böjti réce"</string>
-    
+
     <string name="green">"Zöld"</string>
-    
+
     <string name="light_green">"Világos zöld"</string>
-    
+
     <string name="lime">"Mész"</string>
-    
+
     <string name="yellow">"Sárga"</string>
-    
+
     <string name="amber">"Borostyán"</string>
-    
+
     <string name="orange">"narancs"</string>
-    
+
     <string name="deep_orange">"Mélynarancs"</string>
-    
+
     <string name="brown">"Barna"</string>
-    
+
     <string name="grey">"szürke"</string>
-    
+
     <string name="blue_grey">"kék Szürke"</string>
-    
+
     <string name="dark_grey">"Sötétszürke"</string>
 
-    
+
     <string name="major">"Őrnagy"</string>
-    
+
     <string name="minor">"kisebb"</string>
-    
+
     <string name="aux">"aux"</string>
-    
+
     <string name="version">"Változat"</string>
-    
+
     <string name="production">"Termelés"</string>
-    
+
     <string name="beta">"Beta"</string>
-    
+
     <string name="alpha">"Alpha"</string>
 
-    
+
     <string name="icon">"Ikon"</string>
-    
+
     <string name="icons">"ikonok"</string>
-    
+
     <string name="custom_icon">"egyéni ikon"</string>
-    
+
     <string name="custom_icons">"egyéni ikonok"</string>
-    
+
     <string name="choose_icon">"Válassza ki az ikon"</string>
 
-    
+
     <string name="backup">"biztonsági mentés"</string>
-    
+
     <string name="import_">"import"</string>
-    
+
     <string name="export">"Export"</string>
-    
+
     <string name="export_log">"export Napló"</string>
-    
+
     <string name="import_export">"Import Export"</string>
-    
+
     <string name="export_location">"export Location"</string>
-    
+
     <string name="import_failed">"import sikerült"</string>
-    
+
     <string name="import_canceled">"import megszakítva"</string>
-    
+
     <string name="export_failed">"Az exportálás nem sikerült"</string>
-    
+
     <string name="export_canceled">"export megszakítva"</string>
-    
+
     <string name="import_complete">"import Complete"</string>
-    
+
     <string name="export_complete">"Az exportálás befejeződött"</string>
-    
+
     <string name="importing_please_wait">"Importálása, kérem várjon"</string>
-    
+
     <string name="exporting_please_wait">"Exportálása, kérem várjon"</string>
 
-    
+
     <string name="snooze">"Szundikálás"</string>
-    
+
     <string name="snoozed">"elhalasztva"</string>
-    
+
     <string name="auto_snooze">"Auto Szundi"</string>
-    
+
     <string name="manual_snooze">"Kézi Szundi"</string>
 
-    
+
     <string name="message">"Üzenet"</string>
-    
+
     <string name="messages">"Üzenetek"</string>
-    
+
     <string name="num_messages">"Üzenetek száma"</string>
-    
+
     <string name="edit_messages">"szerkesztés üzenetek"</string>
-    
+
     <string name="view_messages">"Üzenetek megtekintése"</string>
-    
+
     <string name="import_messages">"Üzenetek importálása"</string>
-    
+
     <string name="message_separator">"Üzenet Separator ||||"</string>
 
-    
+
     <string name="sign_in">"Bejelentkezés"</string>
-    
+
     <string name="signed_in">"Bejelentkezett"</string>
-    
+
     <string name="sign_in_failed">"Nem sikerült bejelentkezni"</string>
-    
+
     <string name="sign_out">"Kijelentkezés"</string>
-    
+
     <string name="signed_out">"Kilépett"</string>
 
-    
+
     <string name="low">"Alacsony"</string>
-    
+
     <string name="mid">"Középső"</string>
-    
+
     <string name="high">"Magas"</string>
-    
+
     <string name="min">"min"</string>
-    
+
     <string name="max">"Max"</string>
-    
+
     <string name="minimum">"Minimális"</string>
-    
+
     <string name="medium">"Közepes"</string>
-    
+
     <string name="maximum">"Maximális"</string>
-    
+
     <string name="small">"Kicsi"</string>
-    
+
     <string name="large">"Nagy"</string>
-    
+
     <string name="short_">"Rövid"</string>
-    
+
     <string name="long_">"Hosszú"</string>
-    
+
     <string name="slow">"Lassú"</string>
-    
+
     <string name="fast">"Gyors"</string>
-    
+
     <string name="quick">"Gyors"</string>
-    
+
     <string name="narrow">"Keskeny"</string>
-    
+
     <string name="wide">"Széles"</string>
 
-    
+
     <string name="thank_you">"Köszönöm"</string>
-    
+
     <string name="youre_welcome">"Szívesen"</string>
-    
+
     <string name="please">"Kérem"</string>
 
-    
+
     <string name="you">"te"</string>
-    
+
     <string name="me">"Nekem"</string>
-    
+
     <string name="us">"Minket"</string>
-    
+
     <string name="we">"Mi"</string>
-    
+
     <string name="them">"Őket"</string>
 
-    
+
     <string name="short_on">"rövid az"</string>
-    
+
     <string name="medium_on">"közepes on"</string>
-    
+
     <string name="long_on">"hosszú a"</string>
-    
+
     <string name="short_off">"rövid off"</string>
-    
+
     <string name="medium_off">"közepes off"</string>
-    
+
     <string name="long_off">"hosszú ki"</string>
 
-    
+
     <string name="pro">"Pro"</string>
-    
+
     <string name="pro_feature">"Pro Feature"</string>
-    
+
     <string name="upgrade">"frissítés"</string>
-    
+
     <string name="feature_requires_pro">"Ez a funkció csak a Pro változat"</string>
-    
+
     <string name="feature_requires_pro_limited">"Ezt a funkciót csak az ingyenes változat. Frissítés a pro vagy eltávolítása egy meglévő elemet."</string>
-    
+
     <string name="upgrade_to_pro">"Frissítés Pro verzióra"</string>
-    
+
     <string name="upgrade_now">"Frissíts most"</string>
 
-    
+
     <string name="start_date">"Kezdő dátum"</string>
-    
+
     <string name="end_date">"Befejezés dátuma"</string>
-    
+
     <string name="start_time">"Kezdési idő"</string>
-    
+
     <string name="end_time">"Idő vége"</string>
-    
+
     <string name="end_type">"vége típus"</string>
-    
+
     <string name="timing_type">"időzítés típusa"</string>
-    
+
     <string name="edit_times">"Szerkesztés Times"</string>
-    
+
     <string name="time">"Idő"</string>
-    
+
     <string name="times">"Times"</string>
-    
+
     <string name="timing">"Időzítés"</string>
-    
+
     <string name="all_time">"Mindig"</string>
-    
+
     <string name="every_week">"Minden héten"</string>
-    
+
     <string name="lifetime">"Élettartam"</string>
-    
+
     <string name="forever">"Örökké"</string>
-    
+
     <string name="time_period">"Időszak"</string>
-    
+
     <string name="random">"Véletlen"</string>
-    
+
     <string name="randomly">"Véletlenszerűen"</string>
-    
+
     <string name="less_random">"kevesebb Random"</string>
-    
+
     <string name="even">"Még"</string>
-    
+
     <string name="evenly">"egyformán"</string>
-    
+
     <string name="specific">"Különleges"</string>
-    
+
     <string name="interval">"Intervallum"</string>
-    
+
     <string name="specific_times">"konkrét időpontok"</string>
-    
+
     <string name="repeat_every">"Ismétlés"</string>
 
-    
+
     <string name="data_loaded">"adatok betöltése"</string>
-    
+
     <string name="file">"akta"</string>
-    
+
     <string name="local_storage">"Helyi raktár"</string>
-    
+
     <string name="filename">"Fájl név"</string>
 
-    
+
     <string name="permission_granted">"Hozzáférés megadva"</string>
-    
+
     <string name="permission_denied">"Engedély megtagadva"</string>
-    
+
     <string name="allow_if_any">"Hagyjuk esetleges"</string>
-    
+
     <string name="allow_if_all">"Hagyjuk, ha az összes"</string>
-    
+
     <string name="disallow_if_any">"Tiltása, ha bármilyen"</string>
-    
+
     <string name="disallow_if_all">"Tiltása, ha az összes"</string>
-    
+
     <string name="trigger_if_any">"Trigger esetleges"</string>
-    
+
     <string name="trigger_if_all">"Trigger, ha minden"</string>
 
-    
+
     <string name="reminders">"emlékeztetők"</string>
-    
+
     <string name="no_reminder">"nem emlékeztetők"</string>
-    
+
     <string name="no_reminders_yet">"Nincsenek emlékeztetők még"</string>
-    
+
     <string name="alerts_per_day">"Emlékeztetők naponta"</string>
-    
+
     <string name="number_of_reminders">"Számú emlékeztetőt"</string>
 
-    
+
     <string name="changes_discarded">"változások kiselejtezett"</string>
-    
+
     <string name="changes_saved">"változások Mentett"</string>
-    
+
     <string name="no_changes">"Nincs változás"</string>
-    
+
     <string name="select_at_least_one_item">"Válasszon ki legalább egy elemet"</string>
 
-    
+
     <string name="loading">"Tölt"</string>
-    
+
     <string name="loaded">"Töltött"</string>
-    
+
     <string name="loading_failed">"Betöltés Nem"</string>
-    
+
     <string name="loading_complete">"betöltése Complete"</string>
-    
+
     <string name="error">"Hiba"</string>
-    
+
     <string name="fail">"nem sikerül"</string>
-    
+
     <string name="failed">"nem sikerült"</string>
-    
+
     <string name="success">"Siker"</string>
-    
+
     <string name="successful">"Sikeres"</string>
-    
+
     <string name="unsuccessful">"Sikertelen"</string>
-    
+
     <string name="valid">"Érvényes"</string>
-    
+
     <string name="invalid">"Érvénytelen"</string>
-    
+
     <string name="complete">"teljes"</string>
-    
+
     <string name="completed">"befejezték"</string>
-    
+
     <string name="skipped">"Kihagyott"</string>
-    
+
     <string name="incomplete">"Befejezetlen"</string>
-    
+
     <string name="dismiss">"elvetése"</string>
-    
+
     <string name="dismissed">"elutasította"</string>
-    
+
     <string name="acknowledge">"Ismerjék"</string>
-    
+
     <string name="acknowledged">"Elismert"</string>
-    
+
     <string name="add">"hozzáad"</string>
-    
+
     <string name="added">"hozzáadott"</string>
-    
+
     <string name="add_item">"Elem hozzáadása"</string>
-    
+
     <string name="remove">"eltávolít"</string>
-    
+
     <string name="removed">"eltávolított"</string>
-    
+
     <string name="remove_item">"Elem eltávolítása"</string>
-    
+
     <string name="delete">"Töröl"</string>
-    
+
     <string name="deleted">"törölve"</string>
-    
+
     <string name="duplicate">"Másolat"</string>
-    
+
     <string name="duplicated">"duplikált"</string>
-    
+
     <string name="restart">"Újrakezd"</string>
-    
+
     <string name="restarting">"újraindítása"</string>
-    
+
     <string name="restarting_app_please_wait">"Újraindítás App, kérem várjon"</string>
 
-    
+
     <string name="map">"Térkép"</string>
-    
+
     <string name="location">"Elhelyezkedés"</string>
-    
+
     <string name="locations">"Helyszínek"</string>
-    
+
     <string name="latitude">"Szélességi kör"</string>
-    
+
     <string name="longitude">"Hosszúság"</string>
-    
+
     <string name="radius">"Sugár"</string>
-    
+
     <string name="enter">"Belép"</string>
-    
+
     <string name="exit">"Kijárat"</string>
-    
+
     <string name="linger_time">"Várakozási idő"</string>
 
-    
+
     <string name="music">"Zene"</string>
-    
+
     <string name="ring">"Gyűrű"</string>
-    
+
     <string name="speak_time">"Beszélj idő"</string>
-    
+
     <string name="speak_title">"Beszélj Cím"</string>
-    
+
     <string name="speak_message">"Speak Message"</string>
-    
+
     <string name="tone">"tónus"</string>
-    
+
     <string name="sound">"Hang"</string>
 
-    
+
     <string name="notification">"Bejelentés"</string>
-    
+
     <string name="notifications">"Értesítések"</string>
-    
+
     <string name="select_notification">"Select Notification"</string>
 
-    
+
     <string name="vibrate">"Rezeg"</string>
-    
+
     <string name="vibrate_pattern">"Rezgés Pattern"</string>
-    
+
     <string name="vibrate_patterns">"Rezgés minták"</string>
-    
+
     <string name="create_vibrate_pattern">"Készítsen rezgés minta"</string>
 
-    
 
-    
     <string name="you_win">"Nyersz"</string>
-    
+
     <string name="you_won">"Ön nyert"</string>
-    
+
     <string name="you_lost">"Vesztettél"</string>
-    
+
     <string name="you_lose">"Vesztesz"</string>
-    
+
     <string name="you_tied">"Akkor Tied"</string>
-    
+
     <string name="winner">"Győztes"</string>
-    
+
     <string name="winners">"A nyertesek"</string>
-    
+
     <string name="loser">"Vesztes"</string>
-    
+
     <string name="Losers">"vesztesek"</string>
 
-    
+
     <string name="number_of_players">"Játékosok száma"</string>
-    
+
     <string name="player">"Játékos"</string>
-    
+
     <string name="players">"Játékosok"</string>
-    
+
     <string name="player_1">"1. játékos"</string>
-    
+
     <string name="player_2">"2 játékos"</string>
-    
+
     <string name="player_3">"Player 3"</string>
-    
+
     <string name="player_4">"4. játékos"</string>
-    
+
     <string name="player_5">"Player 5"</string>
-    
+
     <string name="player_6">"Player 6"</string>
-    
+
     <string name="team">"Csapat"</string>
-    
+
     <string name="teams">"csapatok"</string>
-    
+
     <string name="number_of_teams">"Létszám"</string>
-    
+
     <string name="team_1">"1. csapat"</string>
-    
+
     <string name="team_2">"2. csapat"</string>
-    
+
     <string name="team_3">"3. csapat"</string>
-    
+
     <string name="team_4">"4. csapat"</string>
 
-    
+
     <string name="requires_google_play">"Ez a művelet csak a Google Play Játékok"</string>
-    
+
     <string name="compare_profiles">"Összehasonlítása Játszhat profilok"</string>
-    
+
     <string name="view_profile">"Részletek Play Játékok Profil"</string>
 
-    
+
     <string name="sponsored">"Szponzorált"</string>
-    
+
     <string name="ads">"hirdetések"</string>
-    
+
     <string name="remove_ads">"Hirdetések eltávolítása"</string>
-    
+
     <string name="ads_removed">"eltávolított hirdetések"</string>
 
-    
+
     <string name="current_score">"aktuális pontszám"</string>
-    
+
     <string name="top_score">"Top Score"</string>
-    
+
     <string name="score">"Pontszám"</string>
 
-    
+
     <string name="your_turn">"Te jössz"</string>
-    
+
     <string name="their_turn">"maguk"</string>
-    
+
     <string name="turn">"Fordulat"</string>
-    
+
     <string name="turns">"fordulat"</string>
-    
+
     <string name="round">"Kerek"</string>
-    
+
     <string name="rounds">"kerekít"</string>
-    
+
     <string name="match">"Mérkőzés"</string>
-    
+
     <string name="matches">"Gyufa"</string>
 
-    
+
     <string name="dollar">"Dollár"</string>
-    
+
     <string name="dollars">"dollár"</string>
-    
+
     <string name="buy">"Vétel"</string>
-    
+
     <string name="sell">"Elad"</string>
-    
+
     <string name="purchase">"Vásárlás"</string>
-    
+
     <string name="diamond">"gyémánt"</string>
-    
+
     <string name="diamonds">"Diamonds"</string>
 
-    
+
     <string name="rematch">"visszavágó"</string>
-    
+
     <string name="try_again">"Próbáld újra"</string>
-    
+
     <string name="touch_continue">"Érintse meg a folytatáshoz"</string>
-    
+
     <string name="touch_resume">"Folytatásához érintse"</string>
-    
+
     <string name="touch_edit">"Érintse meg a szerkeszteni"</string>
-    
+
     <string name="pause">"Szünet"</string>
-    
+
     <string name="pause_game">"szünet játék"</string>
-    
+
     <string name="resume">"Önéletrajz"</string>
-    
+
     <string name="resume_game">"Játék folytatása"</string>
-    
+
     <string name="new_">"Új"</string>
-    
+
     <string name="new_game">"Új játék"</string>
-    
+
     <string name="select_save">"Válassza a Mentés"</string>
-    
+
     <string name="save">"Mentés"</string>
-    
+
     <string name="save_game">"Játék mentése"</string>
-    
+
     <string name="load">"Terhelés"</string>
-    
+
     <string name="load_game">"Játék betöltése"</string>
-    
+
     <string name="game_over">"Játék vége"</string>
-    
+
     <string name="start">"Indul"</string>
-    
+
     <string name="start_game">"Játék kezdése"</string>
-    
+
     <string name="end">"vég"</string>
-    
+
     <string name="end_game">"végjáték"</string>
-    
+
     <string name="stop">"Állj meg"</string>
-    
+
     <string name="stop_game">"leállítása játék"</string>
 
-    
 
     <string name="free">"Ingyenes"</string>
     <string name="pull">"Húzni"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"Vágólap"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

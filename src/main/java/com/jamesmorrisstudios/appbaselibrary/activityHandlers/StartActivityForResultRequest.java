@@ -25,7 +25,7 @@ public final class StartActivityForResultRequest extends AbstractActivityRequest
      */
     public StartActivityForResultRequest(@NonNull Intent intent, @NonNull OnStartActivityForResultListener listener) {
         this.intent = intent;
-        this.requestCode = Utils.generateUniqueIntLower16();
+        this.requestCode = Utils.getNextRequestCode();
         this.listener = listener;
     }
 

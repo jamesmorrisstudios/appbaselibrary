@@ -4,9 +4,9 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.View;
 
+import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.PromptDialogRequest;
@@ -20,6 +20,8 @@ import java.util.regex.Pattern;
  * Created by James on 12/8/2015.
  */
 public final class UtilsVersion {
+    private static boolean isProUpdate = false;
+    private static boolean hasProBeenSet = false;
 
     /**
      * Updates the saved version name
@@ -161,11 +163,32 @@ public final class UtilsVersion {
     }
 
     /**
+     * Update pro to the cached value
+     */
+    public static void updatePro() {
+        if (!hasProBeenSet) {
+            isProUpdate = Prefs.getBoolean(AppBase.getContext().getResources().getString(R.string.settings_pref), "PROSET", false);
+            hasProBeenSet = true;
+        }
+    }
+
+    /**
+     * @param isPro True the user updated to pro. This is commonly checked and updated by an in app purchase.
+     */
+    public static void updatePro(boolean isPro) {
+        if (!hasProBeenSet || isPro != isProUpdate) {
+            Prefs.putBoolean(AppBase.getContext().getResources().getString(R.string.settings_pref), "PROSET", isPro);
+        }
+        isProUpdate = isPro;
+        hasProBeenSet = true;
+    }
+
+    /**
      * @return True if pro version
      */
     public static boolean isPro() {
-        //Log.v("UtilsVersion", "PRO Package: "+AppBase.getContext().getString(R.string.pro_package_name)+" Package: "+Utils.getPackage());
-        return AppBase.getContext().getString(R.string.pro_package_name).equals(Utils.getPackage());
+        updatePro();
+        return AppBase.getContext().getString(R.string.pro_package_name).equals(Utils.getPackage()) || isProUpdate;
     }
 
     /**
@@ -190,7 +213,7 @@ public final class UtilsVersion {
         new PromptDialogRequest(title, content, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
+                BaseActivity.AppBaseEvent.UPGRADE_TO_PRO.post();
             }
         }, positiveText, new DialogInterface.OnClickListener() {
             @Override
@@ -203,13 +226,17 @@ public final class UtilsVersion {
     /**
      * Shows the permission denied snackbar that links the user to the settings page
      */
-    public static void showPermDeniedSnackbar() {
-        new SnackbarRequest(AppBase.getContext().getString(R.string.permission_denied), SnackbarRequest.SnackBarDuration.INDEFINITE, AppBase.getContext().getString(R.string.enable), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Utils.openSettingsPage();
-            }
-        }).execute();
+    public static void showPermDeniedSnackbar(boolean includeAction) {
+        if (includeAction) {
+            new SnackbarRequest(AppBase.getContext().getString(R.string.permission_denied), SnackbarRequest.SnackBarDuration.INDEFINITE, AppBase.getContext().getString(R.string.enable), new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Utils.openSettingsPage();
+                }
+            }).execute();
+        } else {
+            new SnackbarRequest(AppBase.getContext().getString(R.string.permission_denied), SnackbarRequest.SnackBarDuration.LONG).execute();
+        }
     }
 
     /**

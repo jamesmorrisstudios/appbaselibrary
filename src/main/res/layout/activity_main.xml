@@ -40,27 +40,27 @@
                 android:theme="?attr/toolbarStyleSet">
 
                 <android.support.v7.widget.AppCompatSpinner
-                    android:gravity="left|center_vertical"
-                    android:layout_gravity="left|center_vertical"
-                    android:visibility="gone"
                     android:id="@+id/spinner_left"
                     android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
-
+                    android:layout_gravity="left|center_vertical"
+                    android:gravity="left|center_vertical"
                     android:saveEnabled="false"
-                    android:theme="@style/AppSpinnerLight"/>
+
+                    android:theme="@style/AppSpinnerLight"
+                    android:visibility="gone" />
 
                 <android.support.v7.widget.AppCompatSpinner
-                    android:gravity="right|center_vertical"
-                    android:layout_gravity="right|center_vertical"
-                    android:visibility="gone"
-                    android:layout_marginRight="16dp"
                     android:id="@+id/spinner_right"
                     android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
-                    android:saveEnabled="false"/>
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right|center_vertical"
+                    android:saveEnabled="false"
+                    android:visibility="gone" />
 
-                </android.support.v7.widget.Toolbar>
+            </android.support.v7.widget.Toolbar>
 
             <FrameLayout
                 android:id="@+id/container"
@@ -72,12 +72,12 @@
                 android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right|end"
                 android:layout_margin="@dimen/fab_margin"
                 android:clickable="true"
                 app:backgroundTint="?attr/colorAccent"
                 app:borderWidth="0dp"
                 app:elevation="6dp"
-                android:layout_gravity="bottom|right|end"
                 app:layout_behavior="com.jamesmorrisstudios.appbaselibrary.behavior.FABBehavior"
                 app:pressedTranslationZ="12dp" />
 

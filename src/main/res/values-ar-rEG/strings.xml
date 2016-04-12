@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"عرض"</string>
-    
+
     <string name="settings_category_sound">"صوت"</string>
-    
+
     <string name="settings_category_general">"جنرال لواء"</string>
-    
+
     <string name="settings_category_locale">"مكان"</string>
-    
+
     <string name="settings_category_theme">"موضوع"</string>
-    
+
     <string name="settings_category_notification">"إعلام"</string>
-    
+
     <string name="settings_category_notification_custom">"إعلام مخصص"</string>
-    
+
     <string name="settings_category_notification_override">"إعلام تجاوز"</string>
-    
+
     <string name="settings_category_defaults">"التخلف"</string>
-    
+
     <string name="settings_category_random">"العشوائية"</string>
-    
+
     <string name="settings_category_widget">"القطعة"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"الوضع غامرة"</string>
-    
+
     <string name="setting_sound_enable_primary">"مؤثرات صوتية"</string>
-    
+
     <string name="setting_music_enable_primary">"موسيقى"</string>
-    
+
     <string name="setting_language_picker_primary">"لغة"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"عرف النغمات المنتقى"</string>
-    
+
     <string name="setting_theme_picker_primary">"التطبيق موضوع"</string>
-    
+
     <string name="setting_accent_color_primary">"لهجة اللون"</string>
-    
+
     <string name="setting_primary_color_primary">"لون أصلي"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"شريط الأدوات لون الخط"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"فوق العمل"</string>
-    
+
     <string name="setting_notification_custom_primary">"تمكين"</string>
-    
+
     <string name="setting_notification_button_style_primary">"زر نمط"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"إعلام مستمر"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"غير معتمدة الإخطارات الجارية بشأن SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"خلفية"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"لون الخط"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"اليوم الأول من الأسبوع"</string>
-    
+
     <string name="setting_force_advanced_primary">"مشاهدة دائما خيارات متقدمة"</string>
-    
+
     <string name="setting_force_advanced_secondary">"تعطيل لإظهار خيارات متقدمة على أساس لكل تذكرة"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"عمل انتقاد"</string>
-    
+
     <string name="setting_notification_click_open_primary">"انقر يفتح التطبيقات"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"انتقاد يفتح التطبيقات"</string>
-    
+
     <string name="setting_random_amount_primary">"عشوائية"</string>
-    
+
     <string name="setting_less_random_amount_primary">"أقل عشوائية"</string>
-    
+
     <string name="setting_even_amount_primary">"حتى"</string>
-    
+
     <string name="setting_widget_theme_primary">"موضوع"</string>
-    
+
     <string name="setting_widget_text_color_primary">"لون الخط"</string>
-    
+
     <string name="setting_override_vibrate_primary">"تجاوز الاخطار يهتز"</string>
-    
+
     <string name="setting_override_ringtone_primary">"تجاوز تشغيل إخطار نغمة"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"هذا يجب تفعيل لتجاوز دفق الصوت"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"تجاوز تيار إخطار الصوت"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"خطاب تيار تجاوز"</string>
 
-    
+
     <string name="time_millisecond">"ميلي ثانية واحدة"</string>
-    
+
     <string name="time_milliseconds">"ميلي ثانية"</string>
-    
+
     <string name="time_millisecond_abrev">"الآنسة"</string>
-    
+
     <string name="time_second">"ثانيا"</string>
-    
+
     <string name="time_seconds">"ثواني"</string>
-    
+
     <string name="time_second_abrev">"الصورة"</string>
-    
+
     <string name="time_minute">"دقيقة"</string>
-    
+
     <string name="time_minutes">"دقيقة"</string>
-    
+
     <string name="time_hour">"ساعة"</string>
-    
+
     <string name="time_hours">"ساعات"</string>
-    
+
     <string name="time_day">"يوم"</string>
-    
+
     <string name="time_days">"أيام"</string>
-    
+
     <string name="time_daily">"يومي"</string>
-    
+
     <string name="time_week">"أسبوع"</string>
-    
+
     <string name="time_weeks">"أسابيع"</string>
-    
+
     <string name="time_weekly">"أسبوعي"</string>
-    
+
     <string name="time_month">"شهر"</string>
-    
+
     <string name="time_months">"أشهر"</string>
-    
+
     <string name="time_monthly">"شهريا"</string>
-    
+
     <string name="time_year">"عام"</string>
-    
+
     <string name="time_years">"سنوات"</string>
-    
+
     <string name="time_yearly">"سنوي"</string>
 
-    
+
     <string name="meter">"متر"</string>
-    
+
     <string name="meters">"متر"</string>
 
-    
+
     <string name="num_one">"واحد"</string>
-    
+
     <string name="num_two">"اثنان"</string>
-    
+
     <string name="num_three">"ثلاثة"</string>
-    
+
     <string name="num_four">"أربعة"</string>
-    
+
     <string name="num_five">"خمسة"</string>
-    
+
     <string name="num_six">"ستة"</string>
-    
+
     <string name="num_seven">"سبعة"</string>
-    
+
     <string name="num_eight">"ثمانية"</string>
-    
+
     <string name="num_nine">"تسعة"</string>
-    
+
     <string name="num_ten">"عشرة"</string>
 
-    
+
     <string name="num_first">"الأول"</string>
-    
+
     <string name="num_second">"ثانيا"</string>
-    
+
     <string name="num_third">"ثلث"</string>
-    
+
     <string name="num_fourth">"رابع"</string>
-    
+
     <string name="num_fifth">"خامس"</string>
-    
+
     <string name="num_sixth">"السادس"</string>
-    
+
     <string name="num_seventh">"سابع"</string>
-    
+
     <string name="num_eighth">"ثامن"</string>
-    
+
     <string name="num_ninth">"تاسع"</string>
-    
+
     <string name="num_tenth">"العاشر"</string>
 
-    
+
     <string name="day_sunday">"الأحد"</string>
-    
+
     <string name="day_monday">"الإثنين"</string>
-    
+
     <string name="day_tuesday">"الثلاثاء"</string>
-    
+
     <string name="day_wednesday">"الأربعاء"</string>
-    
+
     <string name="day_thursday">"الخميس"</string>
-    
+
     <string name="day_friday">"الجمعة"</string>
-    
+
     <string name="day_saturday">"يوم السبت"</string>
-    
+
     <string name="today">"اليوم"</string>
-    
+
     <string name="tomorrow">"يوم غد"</string>
-    
+
     <string name="yesterday">"اليوم السابق"</string>
 
-    
+
     <string name="days_of_week">"ايام الاسبوع"</string>
-    
+
     <string name="days_of_month">"أيام من شهر"</string>
-    
+
     <string name="days_of_year">"أيام من السنة"</string>
-    
+
     <string name="weeks_of_month">"أسابيع من شهر"</string>
-    
+
     <string name="weeks_of_year">"أسابيع من السنة"</string>
-    
+
     <string name="months_of_year">"أشهر من السنة"</string>
 
-    
+
     <string name="next">"التالى"</string>
-    
+
     <string name="previous">"سابق"</string>
-    
+
     <string name="back">"الى الخلف"</string>
-    
+
     <string name="forward">"إلى الأمام"</string>
 
-    
+
     <string name="pattern_1">"نمط 1"</string>
-    
+
     <string name="pattern_2">"نمط 2"</string>
-    
+
     <string name="pattern_3">"نمط 3"</string>
-    
+
     <string name="pattern_4">"نمط 4"</string>
-    
+
     <string name="pattern_5">"نمط 5"</string>
-    
+
     <string name="pattern_6">"نمط 6"</string>
 
-    
+
     <string name="select">"اختار"</string>
-    
+
     <string name="select_all">"اختر الكل"</string>
-    
+
     <string name="select_none">"حدد بلا"</string>
 
-    
+
     <string name="diff_difficulty">"صعوبة"</string>
-    
+
     <string name="diff_select_difficulty">"اختر الصعوبة"</string>
-    
+
     <string name="diff_easy">"سهل"</string>
-    
+
     <string name="diff_normal">"عادي"</string>
-    
+
     <string name="diff_hard">"الصعب"</string>
 
-    
+
     <string name="enable">"تمكين"</string>
-    
+
     <string name="enabled">"تمكين"</string>
-    
+
     <string name="disable">"تعطيل"</string>
-    
+
     <string name="disabled">"معاق"</string>
-    
+
     <string name="lock">"قفل"</string>
-    
+
     <string name="unlock">"فتح"</string>
-    
+
     <string name="locked">"مغلق"</string>
-    
+
     <string name="unlocked">"مقفلة"</string>
-    
+
     <string name="open">"فتح"</string>
-    
+
     <string name="close">"قريب"</string>
-    
+
     <string name="opened">"افتتح"</string>
-    
+
     <string name="closed">"مغلق"</string>
-    
+
     <string name="show">"تبين"</string>
-    
+
     <string name="hide">"إخفاء"</string>
-    
+
     <string name="shown">"أظهرت"</string>
-    
+
     <string name="Hidden">"مخفي"</string>
-    
+
     <string name="automatic">"أوتوماتيكي"</string>
-    
+
     <string name="manual">"كتيب"</string>
-    
+
     <string name="online">"على الانترنت"</string>
-    
+
     <string name="offline">"غير متصل"</string>
-    
+
     <string name="active">"نشط"</string>
-    
+
     <string name="inactive">"غير نشط"</string>
 
-    
+
     <string name="okay">"حسنا"</string>
-    
+
     <string name="cancel">"إلغاء"</string>
-    
+
     <string name="yes">"نعم فعلا"</string>
-    
+
     <string name="no">"لا"</string>
-    
+
     <string name="maybe">"يمكن"</string>
-    
+
     <string name="some">"بعض"</string>
-    
+
     <string name="none">"لا شيء"</string>
-    
+
     <string name="all">"جميع"</string>
-    
+
     <string name="set">"مجموعة"</string>
-    
+
     <string name="unset">"غير مصلد"</string>
-    
+
     <string name="last">"آخر"</string>
-    
+
     <string name="first">"الأول"</string>
-    
+
     <string name="every">"كل"</string>
-    
+
     <string name="other">"آخر"</string>
-    
+
     <string name="off">"بعيدا"</string>
-    
+
     <string name="on">"على"</string>
-    
+
     <string name="delete_reminder_prompt_title">"حذف تذكير"</string>
-    
+
     <string name="delete_reminder_prompt_content">"هل أنت متأكد أنك تريد حذف هذا التذكير؟"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"حذف أيقونة"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"هل أنت متأكد أنك تريد حذف هذا الرمز؟"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"تجاهل التغييرات"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"هل أنت متأكد أنك تريد تجاهل التغييرات؟"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"حذف نمط يهتز"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"هل أنت متأكد أنك تريد حذف هذا النمط يهتز؟"</string>
-    
+
     <string name="delete_location_prompt_title">"حذف الموقع"</string>
-    
+
     <string name="delete_location_prompt_content">"هل أنت متأكد أنك تريد حذف هذا الموقع؟"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"تذكير مكررة"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"هل أنت متأكد أنك تريد تكرار هذا التذكير؟"</string>
-    
+
     <string name="include_log_prompt_title">"تشمل دخول"</string>
-    
+
     <string name="include_log_prompt_content">"هل ترغب في تضمين السجل تذكير؟"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"تشمل افتراضي تذكير"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"هل ترغب في تضمين التذكير الافتراضي؟"</string>
-    
+
     <string name="start_new_game_title">"بدء لعبة جديدة"</string>
-    
+
     <string name="start_new_game_prompt">"هل أنت متأكد أنك تريد أن تبدأ لعبة جديدة؟"</string>
-    
+
     <string name="end_game_title">"لعبة نهاية"</string>
-    
+
     <string name="end_game_prompt">"هل أنت متأكد أنك تريد إنهاء هذه اللعبة؟"</string>
 
-    
+
     <string name="help">"مساعدة"</string>
-    
+
     <string name="about">"حول"</string>
-    
+
     <string name="settings">"إعدادات"</string>
-    
+
     <string name="help_and_feedback">"مساعدة وملاحظات"</string>
-    
+
     <string name="rate_app">"معدل التطبيقات"</string>
-    
+
     <string name="more_apps">"تطبيقات أكثر"</string>
-    
+
     <string name="tutorial">"البرنامج التعليمي"</string>
-    
+
     <string name="read">"اقرأ"</string>
-    
+
     <string name="watch">"راقب"</string>
-    
+
     <string name="links">"الروابط"</string>
-    
+
     <string name="licenses">"تراخيص"</string>
-    
+
     <string name="help_translate">"ساعد في الترجمة"</string>
-    
+
     <string name="get_the_beta">"الحصول على بيتا"</string>
-    
+
     <string name="achievements">"الإنجازات"</string>
-    
+
     <string name="leaderboards">"المتصدرين"</string>
-    
+
     <string name="high_scores">"نتائج عالية"</string>
-    
+
     <string name="my_circles">"بلدي الدوائر"</string>
-    
+
     <string name="invitations">"دعوات"</string>
-    
+
     <string name="options">"خيارات"</string>
-    
+
     <string name="game_options">"خيارات اللعبة"</string>
-    
+
     <string name="advanced_options">"خيارات متقدمة"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"ضيف"</string>
 
-    
+
     <string name="light">"ضوء"</string>
-    
+
     <string name="light_transparent">"ضوء شفاف"</string>
-    
+
     <string name="dark">"ظلام"</string>
-    
+
     <string name="dark_transparent">"الظلام شفاف"</string>
-    
+
     <string name="transparent">"شفاف"</string>
-    
+
     <string name="night">"ليل"</string>
-    
+
     <string name="black">"أسود"</string>
-    
+
     <string name="white">"أبيض"</string>
-    
+
     <string name="system">"نظام"</string>
-    
+
     <string name="light_text">"نص الضوء"</string>
-    
+
     <string name="dark_text">"نص غامق"</string>
 
-    
+
     <string name="red">"أحمر"</string>
-    
+
     <string name="pink">"وردي"</string>
-    
+
     <string name="purple">"أرجواني"</string>
-    
+
     <string name="deep_purple">"ديب بيربل"</string>
-    
+
     <string name="indigo">"اللون النيلي"</string>
-    
+
     <string name="blue">"أزرق"</string>
-    
+
     <string name="light_blue">"أزرق فاتح"</string>
-    
+
     <string name="cyan">"ازرق سماوي"</string>
-    
+
     <string name="teal">"الحذف بط نهري صغير"</string>
-    
+
     <string name="green">"أخضر"</string>
-    
+
     <string name="light_green">"اخضر فاتح"</string>
-    
+
     <string name="lime">"كلس"</string>
-    
+
     <string name="yellow">"أصفر"</string>
-    
+
     <string name="amber">"كهرمان"</string>
-    
+
     <string name="orange">"البرتقالي"</string>
-    
+
     <string name="deep_orange">"أورانج العميق"</string>
-    
+
     <string name="brown">"بنى"</string>
-    
+
     <string name="grey">"لون رمادي"</string>
-    
+
     <string name="blue_grey">"رمادي مزرق"</string>
-    
+
     <string name="dark_grey">"رمادي داكن"</string>
 
-    
+
     <string name="major">"رائد"</string>
-    
+
     <string name="minor">"قاصر"</string>
-    
+
     <string name="aux">"مدخل aux"</string>
-    
+
     <string name="version">"الإصدار"</string>
-    
+
     <string name="production">"الإنتاج"</string>
-    
+
     <string name="beta">"بيتا"</string>
-    
+
     <string name="alpha">"ألفا"</string>
 
-    
+
     <string name="icon">"أيقونة"</string>
-    
+
     <string name="icons">"الرموز"</string>
-    
+
     <string name="custom_icon">"رمز مخصص"</string>
-    
+
     <string name="custom_icons">"الرموز المخصصة"</string>
-    
+
     <string name="choose_icon">"اختيار أيقونة"</string>
 
-    
+
     <string name="backup">"دعم"</string>
-    
+
     <string name="import_">"استيراد"</string>
-    
+
     <string name="export">"تصدير"</string>
-    
+
     <string name="export_log">"تصدير دخول"</string>
-    
+
     <string name="import_export">"استيراد وتصدير"</string>
-    
+
     <string name="export_location">"تصدير الموقع"</string>
-    
+
     <string name="import_failed">"فشل استيراد"</string>
-    
+
     <string name="import_canceled">"تم إلغاء الاستيراد"</string>
-    
+
     <string name="export_failed">"فشل تصدير"</string>
-    
+
     <string name="export_canceled">"تصدير إلغاء"</string>
-    
+
     <string name="import_complete">"استيراد كاملة"</string>
-    
+
     <string name="export_complete">"تصدير الكامل"</string>
-    
+
     <string name="importing_please_wait">"استيراد، الرجاء الانتظار"</string>
-    
+
     <string name="exporting_please_wait">"المصدرة، من فضلك انتظر"</string>
 
-    
+
     <string name="snooze">"غفوة"</string>
-    
+
     <string name="snoozed">"تم التأجيل"</string>
-    
+
     <string name="auto_snooze">"غفوة السيارات"</string>
-    
+
     <string name="manual_snooze">"غفوة اليدوي"</string>
 
-    
+
     <string name="message">"الرسالة"</string>
-    
+
     <string name="messages">"رسائل"</string>
-    
+
     <string name="num_messages">"عدد الرسائل"</string>
-    
+
     <string name="edit_messages">"الرسائل تحرير"</string>
-    
+
     <string name="view_messages">"عرض الرسائل"</string>
-    
+
     <string name="import_messages">"استيراد الرسائل"</string>
-    
+
     <string name="message_separator">"رسالة فاصل ||||"</string>
 
-    
+
     <string name="sign_in">"تسجيل الدخول"</string>
-    
+
     <string name="signed_in">"تم الدخول"</string>
-    
+
     <string name="sign_in_failed">"تسجيل الدخول الفاشلة"</string>
-    
+
     <string name="sign_out">"خروج"</string>
-    
+
     <string name="signed_out">"تسجيل الخروج"</string>
 
-    
+
     <string name="low">"منخفض"</string>
-    
+
     <string name="mid">"منتصف"</string>
-    
+
     <string name="high">"عالي"</string>
-    
+
     <string name="min">"دقيقة"</string>
-    
+
     <string name="max">"ماكس"</string>
-    
+
     <string name="minimum">"الحد الأدنى"</string>
-    
+
     <string name="medium">"متوسط"</string>
-    
+
     <string name="maximum">"أقصى"</string>
-    
+
     <string name="small">"صغير"</string>
-    
+
     <string name="large">"كبير"</string>
-    
+
     <string name="short_">"قصير"</string>
-    
+
     <string name="long_">"طويل"</string>
-    
+
     <string name="slow">"بطيء"</string>
-    
+
     <string name="fast">"بسرعة"</string>
-    
+
     <string name="quick">"سريع"</string>
-    
+
     <string name="narrow">"ضيق"</string>
-    
+
     <string name="wide">"واسع"</string>
 
-    
+
     <string name="thank_you">"شكرا"</string>
-    
+
     <string name="youre_welcome">"على الرحب و السعة"</string>
-    
+
     <string name="please">"من فضلك"</string>
 
-    
+
     <string name="you">"أنت"</string>
-    
+
     <string name="me">"أنا"</string>
-    
+
     <string name="us">"لنا"</string>
-    
+
     <string name="we">"نحن"</string>
-    
+
     <string name="them">"هم"</string>
 
-    
+
     <string name="short_on">"باختصار على"</string>
-    
+
     <string name="medium_on">"متوسطة على"</string>
-    
+
     <string name="long_on">"منذ فترة طويلة على"</string>
-    
+
     <string name="short_off">"من القصير"</string>
-    
+
     <string name="medium_off">"المتوسط ​​قبالة"</string>
-    
+
     <string name="long_off">"بعيد المنال"</string>
 
-    
+
     <string name="pro">"برو"</string>
-    
+
     <string name="pro_feature">"برو ميزة"</string>
-    
+
     <string name="upgrade">"تطوير"</string>
-    
+
     <string name="feature_requires_pro">"تتطلب هذه الميزة نسخة للمحترفين"</string>
-    
+
     <string name="feature_requires_pro_limited">"وتقتصر هذه الميزة في الإصدار المجاني. الترقية إلى المؤيدة أو إزالة عنصر موجود."</string>
-    
+
     <string name="upgrade_to_pro">"التطور للاحترافية"</string>
-    
+
     <string name="upgrade_now">"ترقية الآن"</string>
 
-    
+
     <string name="start_date">"تاريخ البدء"</string>
-    
+
     <string name="end_date">"تاريخ الانتهاء"</string>
-    
+
     <string name="start_time">"وقت البدء"</string>
-    
+
     <string name="end_time">"وقت الانتهاء"</string>
-    
+
     <string name="end_type">"نوع النهاية"</string>
-    
+
     <string name="timing_type">"نوع توقيت"</string>
-    
+
     <string name="edit_times">"تحرير تايمز"</string>
-    
+
     <string name="time">"مرة"</string>
-    
+
     <string name="times">"مرات"</string>
-    
+
     <string name="timing">"توقيت"</string>
-    
+
     <string name="all_time">"كل الوقت"</string>
-    
+
     <string name="every_week">"كل اسبوع"</string>
-    
+
     <string name="lifetime">"أوقات الحياة"</string>
-    
+
     <string name="forever">"إلى الأبد"</string>
-    
+
     <string name="time_period">"فترة زمنية"</string>
-    
+
     <string name="random">"عشوائية"</string>
-    
+
     <string name="randomly">"بشكل عشوائي"</string>
-    
+
     <string name="less_random">"أقل عشوائية"</string>
-    
+
     <string name="even">"حتى"</string>
-    
+
     <string name="evenly">"بالتساوي"</string>
-    
+
     <string name="specific">"محددة"</string>
-    
+
     <string name="interval">"فترة"</string>
-    
+
     <string name="specific_times">"أوقات محددة"</string>
-    
+
     <string name="repeat_every">"كرر كل"</string>
 
-    
+
     <string name="data_loaded">"تحميل البيانات"</string>
-    
+
     <string name="file">"ملف"</string>
-    
+
     <string name="local_storage">"التخزين المحلي"</string>
-    
+
     <string name="filename">"اسم الملف"</string>
 
-    
+
     <string name="permission_granted">"إذن الممنوح"</string>
-    
+
     <string name="permission_denied">"طلب الاذن مرفوض"</string>
-    
+
     <string name="allow_if_any">"اسمحوا إن وجدت"</string>
-    
+
     <string name="allow_if_all">"السماح إذا كل"</string>
-    
+
     <string name="disallow_if_any">"عدم السماح إن وجدت"</string>
-    
+
     <string name="disallow_if_all">"عدم السماح لو كان كل"</string>
-    
+
     <string name="trigger_if_any">"الزناد إن وجدت"</string>
-    
+
     <string name="trigger_if_all">"الزناد إذا كان كل"</string>
 
-    
+
     <string name="reminders">"تذكير"</string>
-    
+
     <string name="no_reminder">"لا تذكير"</string>
-    
+
     <string name="no_reminders_yet">"لا يوجد لديك تذكير بعد"</string>
-    
+
     <string name="alerts_per_day">"تذكير لكل يوم"</string>
-    
+
     <string name="number_of_reminders">"عدد من رسائل التذكير"</string>
 
-    
+
     <string name="changes_discarded">"التغييرات تجاهل"</string>
-    
+
     <string name="changes_saved">"تم حفظ التغييرات"</string>
-    
+
     <string name="no_changes">"لا تغيرات"</string>
-    
+
     <string name="select_at_least_one_item">"تحديد عنصر واحد على الأقل"</string>
 
-    
+
     <string name="loading">"جار التحميل"</string>
-    
+
     <string name="loaded">"محمل"</string>
-    
+
     <string name="loading_failed">"فشل التحميل"</string>
-    
+
     <string name="loading_complete">"تحميل كامل"</string>
-    
+
     <string name="error">"خطأ"</string>
-    
+
     <string name="fail">"فشل"</string>
-    
+
     <string name="failed">"فشل"</string>
-    
+
     <string name="success">"نجاح"</string>
-    
+
     <string name="successful">"ناجح"</string>
-    
+
     <string name="unsuccessful">"غير ناجح"</string>
-    
+
     <string name="valid">"صالح"</string>
-    
+
     <string name="invalid">"غير صالحة"</string>
-    
+
     <string name="complete">"كامل"</string>
-    
+
     <string name="completed">"منجز"</string>
-    
+
     <string name="skipped">"تخطي"</string>
-    
+
     <string name="incomplete">"غير مكتمل"</string>
-    
+
     <string name="dismiss">"صرف النظر"</string>
-    
+
     <string name="dismissed">"رفض"</string>
-    
+
     <string name="acknowledge">"اعترف"</string>
-    
+
     <string name="acknowledged">"اعترف"</string>
-    
+
     <string name="add">"إضافة"</string>
-    
+
     <string name="added">"وأضاف"</string>
-    
+
     <string name="add_item">"إضافة عنصر"</string>
-    
+
     <string name="remove">"إزالة"</string>
-    
+
     <string name="removed">"إزالة"</string>
-    
+
     <string name="remove_item">"إزالة بند"</string>
-    
+
     <string name="delete">"حذف"</string>
-    
+
     <string name="deleted">"تم الحذف"</string>
-    
+
     <string name="duplicate">"مكرر"</string>
-    
+
     <string name="duplicated">"تكرار"</string>
-    
+
     <string name="restart">"إعادة بدء"</string>
-    
+
     <string name="restarting">"إعادة تشغيل"</string>
-    
+
     <string name="restarting_app_please_wait">"إعادة تشغيل التطبيقات، يرجى الانتظار"</string>
 
-    
+
     <string name="map">"رسم خريطة"</string>
-    
+
     <string name="location">"موقع"</string>
-    
+
     <string name="locations">"مواقع"</string>
-    
+
     <string name="latitude">"خط العرض"</string>
-    
+
     <string name="longitude">"خط الطول"</string>
-    
+
     <string name="radius">"نصف القطر"</string>
-    
+
     <string name="enter">"أدخل"</string>
-    
+
     <string name="exit">"مخرج"</string>
-    
+
     <string name="linger_time">"نطيل الوقت"</string>
 
-    
+
     <string name="music">"موسيقى"</string>
-    
+
     <string name="ring">"حلقة"</string>
-    
+
     <string name="speak_time">"التحدث الوقت"</string>
-    
+
     <string name="speak_title">"التحدث عنوان"</string>
-    
+
     <string name="speak_message">"التحدث رسالة"</string>
-    
+
     <string name="tone">"نغمة"</string>
-    
+
     <string name="sound">"صوت"</string>
 
-    
+
     <string name="notification">"إعلام"</string>
-    
+
     <string name="notifications">"الإشعارات"</string>
-    
+
     <string name="select_notification">"حدد إعلام"</string>
 
-    
+
     <string name="vibrate">"تذبذب"</string>
-    
+
     <string name="vibrate_pattern">"نمط الاهتزاز"</string>
-    
+
     <string name="vibrate_patterns">"أنماط يهتز"</string>
-    
+
     <string name="create_vibrate_pattern">"إنشاء نمط يهتز"</string>
 
-    
 
-    
     <string name="you_win">"فزت"</string>
-    
+
     <string name="you_won">"لقد فزت"</string>
-    
+
     <string name="you_lost">"لقد خسرت"</string>
-    
+
     <string name="you_lose">"أنت تخسر"</string>
-    
+
     <string name="you_tied">"هل تعادل"</string>
-    
+
     <string name="winner">"الفائز"</string>
-    
+
     <string name="winners">"الفائزين"</string>
-    
+
     <string name="loser">"الخاسر"</string>
-    
+
     <string name="Losers">"الخاسرين"</string>
 
-    
+
     <string name="number_of_players">"عدد اللاعبين"</string>
-    
+
     <string name="player">"لاعب"</string>
-    
+
     <string name="players">"لاعبين"</string>
-    
+
     <string name="player_1">"لاعب 1"</string>
-    
+
     <string name="player_2">"لاعب 2"</string>
-    
+
     <string name="player_3">"لاعب 3"</string>
-    
+
     <string name="player_4">"لاعب 4"</string>
-    
+
     <string name="player_5">"لاعب 5"</string>
-    
+
     <string name="player_6">"لاعب 6"</string>
-    
+
     <string name="team">"الفريق"</string>
-    
+
     <string name="teams">"فرق"</string>
-    
+
     <string name="number_of_teams">"عدد من فرق"</string>
-    
+
     <string name="team_1">"فريق 1"</string>
-    
+
     <string name="team_2">"فريق 2"</string>
-    
+
     <string name="team_3">"فريق 3"</string>
-    
+
     <string name="team_4">"فريق 4"</string>
 
-    
+
     <string name="requires_google_play">"يتطلب هذا الإجراء لعب ألعاب جوجل"</string>
-    
+
     <string name="compare_profiles">"قارن لعب ألعاب الملامح"</string>
-    
+
     <string name="view_profile">"عرض مسرحية ألعاب الملف الشخصي"</string>
 
-    
+
     <string name="sponsored">"برعاية"</string>
-    
+
     <string name="ads">"إعلانات"</string>
-    
+
     <string name="remove_ads">"ازالة الاعلانات"</string>
-    
+
     <string name="ads_removed">"الإعلانات التي تمت إزالتها"</string>
 
-    
+
     <string name="current_score">"النتيجة الحالية"</string>
-    
+
     <string name="top_score">"أعلى درجة"</string>
-    
+
     <string name="score">"أحرز هدفاً"</string>
 
-    
+
     <string name="your_turn">"دورك"</string>
-    
+
     <string name="their_turn">"دورهم"</string>
-    
+
     <string name="turn">"منعطف"</string>
-    
+
     <string name="turns">"يتحول"</string>
-    
+
     <string name="round">"الجولة"</string>
-    
+
     <string name="rounds">"جولات"</string>
-    
+
     <string name="match">"مباراة"</string>
-    
+
     <string name="matches">"اعواد الثقاب"</string>
 
-    
+
     <string name="dollar">"دولار"</string>
-    
+
     <string name="dollars">"دولار"</string>
-    
+
     <string name="buy">"يشترى"</string>
-    
+
     <string name="sell">"يبيع"</string>
-    
+
     <string name="purchase">"شراء"</string>
-    
+
     <string name="diamond">"الماس"</string>
-    
+
     <string name="diamonds">"الماس"</string>
 
-    
+
     <string name="rematch">"مباراة العودة"</string>
-    
+
     <string name="try_again">"حاول ثانية"</string>
-    
+
     <string name="touch_continue">"المس لمواصلة"</string>
-    
+
     <string name="touch_resume">"المس لسير"</string>
-    
+
     <string name="touch_edit">"المس لتعديل"</string>
-    
+
     <string name="pause">"وقفة"</string>
-    
+
     <string name="pause_game">"وقفة لعبة"</string>
-    
+
     <string name="resume">"استئنف"</string>
-    
+
     <string name="resume_game">"السيرة الذاتية لعبة"</string>
-    
+
     <string name="new_">"جديد"</string>
-    
+
     <string name="new_game">"لعبة جديدة"</string>
-    
+
     <string name="select_save">"اختر حفظ"</string>
-    
+
     <string name="save">"حفظ"</string>
-    
+
     <string name="save_game">"حفظ لعبة"</string>
-    
+
     <string name="load">"حمل"</string>
-    
+
     <string name="load_game">"تحميل لعبة"</string>
-    
+
     <string name="game_over">"انتهت اللعبة"</string>
-    
+
     <string name="start">"بداية"</string>
-    
+
     <string name="start_game">"بداية اللعبة"</string>
-    
+
     <string name="end">"النهاية"</string>
-    
+
     <string name="end_game">"لعبة نهاية"</string>
-    
+
     <string name="stop">"توقف"</string>
-    
+
     <string name="stop_game">"توقف لعبة"</string>
 
-    
 
     <string name="free">"حر"</string>
     <string name="pull">"سحب"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"الحافظة"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

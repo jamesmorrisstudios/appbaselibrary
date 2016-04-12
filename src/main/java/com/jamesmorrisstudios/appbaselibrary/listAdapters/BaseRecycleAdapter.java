@@ -18,7 +18,6 @@ package com.jamesmorrisstudios.appbaselibrary.listAdapters;
 
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
@@ -85,7 +84,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      */
     @Override
     public final boolean allowMove() {
-        return mListener.getFilterText() == null || mListener.getFilterText().isEmpty();
+        return mListener.getFilterText().isEmpty();
     }
 
     /**
@@ -215,7 +214,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
      */
     private void updateVisibleItems() {
         visibleItems.clear();
-        if (mListener.getFilterText() == null || mListener.getFilterText().isEmpty()) {
+        if (mListener.getFilterText().isEmpty()) {
             visibleItems.addAll(allItems);
         } else {
             for (LineItem item : allItems) {
@@ -272,7 +271,7 @@ public abstract class BaseRecycleAdapter extends RecyclerView.Adapter<BaseRecycl
         /**
          * @return Filter Text. Null for none
          */
-        @Nullable
+        @NonNull
         String getFilterText();
 
         /**

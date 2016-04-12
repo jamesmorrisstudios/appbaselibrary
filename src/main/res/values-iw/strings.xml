@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"לְהַצִיג"</string>
-    
+
     <string name="settings_category_sound">"נשמע"</string>
-    
+
     <string name="settings_category_general">"כְּלָלִי"</string>
-    
+
     <string name="settings_category_locale">"אזור"</string>
-    
+
     <string name="settings_category_theme">"נושא"</string>
-    
+
     <string name="settings_category_notification">"הוֹדָעָה"</string>
-    
+
     <string name="settings_category_notification_custom">"הודעה אישית"</string>
-    
+
     <string name="settings_category_notification_override">"הודעה דרוסה"</string>
-    
+
     <string name="settings_category_defaults">"ברירות מחדל"</string>
-    
+
     <string name="settings_category_random">"אקראי"</string>
-    
+
     <string name="settings_category_widget">"יישומון"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"מצב עשיר"</string>
-    
+
     <string name="setting_sound_enable_primary">"אפקטים קוליים"</string>
-    
+
     <string name="setting_music_enable_primary">"מוּסִיקָה"</string>
-    
+
     <string name="setting_language_picker_primary">"שָׂפָה"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"פיקר רינגטון מותאם אישית"</string>
-    
+
     <string name="setting_theme_picker_primary">"נושא App"</string>
-    
+
     <string name="setting_accent_color_primary">"צבע הדגשה"</string>
-    
+
     <string name="setting_primary_color_primary">"צבע ראשוני"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"צבע טקסט סרגל כלים"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"לחץ פעולה"</string>
-    
+
     <string name="setting_notification_custom_primary">"לְאַפשֵׁר"</string>
-    
+
     <string name="setting_notification_button_style_primary">"סגנון לחצן"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"התראה מתמשכת"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"הודעות מתמשכות אינן נתמכות על SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"רקע"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"צבע טקסט"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"היום הראשון של השבוע"</string>
-    
+
     <string name="setting_force_advanced_primary">"הצג תמיד אפשרויות מתקדמות"</string>
-    
+
     <string name="setting_force_advanced_secondary">"שבת כדי לצפות באפשרויות מתקדמות על בסיס תזכורת לכל"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"פעולה לסחוב"</string>
-    
+
     <string name="setting_notification_click_open_primary">"לחץ יפתח את האפליקציה"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"לסחוב תפתח את האפליקציה"</string>
-    
+
     <string name="setting_random_amount_primary">"אַקרַאִי"</string>
-    
+
     <string name="setting_less_random_amount_primary">"פחות אקראי"</string>
-    
+
     <string name="setting_even_amount_primary">"אֲפִילוּ"</string>
-    
+
     <string name="setting_widget_theme_primary">"נושא"</string>
-    
+
     <string name="setting_widget_text_color_primary">"צבע טקסט"</string>
-    
+
     <string name="setting_override_vibrate_primary">"דרוס הודעות רטט"</string>
-    
+
     <string name="setting_override_ringtone_primary">"השמעה דרוסה טון הודעה"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"זו חייבת להיות מופעלת כדי לעקוף את זרם השמע"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"זרם שמע הודעה דרוס"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"זרם דיבור דרוס"</string>
 
-    
+
     <string name="time_millisecond">"מילי-שניות"</string>
-    
+
     <string name="time_milliseconds">"אלפיות"</string>
-    
+
     <string name="time_millisecond_abrev">"גברת"</string>
-    
+
     <string name="time_second">"שְׁנִיָה"</string>
-    
+
     <string name="time_seconds">"שניים"</string>
-    
+
     <string name="time_second_abrev">"הים"</string>
-    
+
     <string name="time_minute">"דַקָה"</string>
-    
+
     <string name="time_minutes">"דקות"</string>
-    
+
     <string name="time_hour">"שָׁעָה"</string>
-    
+
     <string name="time_hours">"שעות"</string>
-    
+
     <string name="time_day">"יְוֹם"</string>
-    
+
     <string name="time_days">"ימים"</string>
-    
+
     <string name="time_daily">"יום יומי"</string>
-    
+
     <string name="time_week">"שָׁבוּעַ"</string>
-    
+
     <string name="time_weeks">"שבועות"</string>
-    
+
     <string name="time_weekly">"שְׁבוּעִי"</string>
-    
+
     <string name="time_month">"חוֹדֶשׁ"</string>
-    
+
     <string name="time_months">"חודשים"</string>
-    
+
     <string name="time_monthly">"יַרחוֹן"</string>
-    
+
     <string name="time_year">"שָׁנָה"</string>
-    
+
     <string name="time_years">"שנים"</string>
-    
+
     <string name="time_yearly">"שְׁנָתִי"</string>
 
-    
+
     <string name="meter">"מטר"</string>
-    
+
     <string name="meters">"מטר"</string>
 
-    
+
     <string name="num_one">"אֶחָד"</string>
-    
+
     <string name="num_two">"דוּ"</string>
-    
+
     <string name="num_three">"שְׁלוֹשָׁה"</string>
-    
+
     <string name="num_four">"אַרְבָּעָה"</string>
-    
+
     <string name="num_five">"חָמֵשׁ"</string>
-    
+
     <string name="num_six">"שֵׁשׁ"</string>
-    
+
     <string name="num_seven">"שֶׁבַע"</string>
-    
+
     <string name="num_eight">"שמונה"</string>
-    
+
     <string name="num_nine">"תֵשַׁע"</string>
-    
+
     <string name="num_ten">"עשר"</string>
 
-    
+
     <string name="num_first">"ראשון"</string>
-    
+
     <string name="num_second">"שְׁנִיָה"</string>
-    
+
     <string name="num_third">"שְׁלִישִׁי"</string>
-    
+
     <string name="num_fourth">"רביעי"</string>
-    
+
     <string name="num_fifth">"חמישי"</string>
-    
+
     <string name="num_sixth">"שִׁשִׁית"</string>
-    
+
     <string name="num_seventh">"שְׁבִיעִית"</string>
-    
+
     <string name="num_eighth">"ח"</string>
-    
+
     <string name="num_ninth">"ט"</string>
-    
+
     <string name="num_tenth">"עֲשִׂירִית"</string>
 
-    
+
     <string name="day_sunday">"יוֹם רִאשׁוֹן"</string>
-    
+
     <string name="day_monday">"יוֹם שֵׁנִי"</string>
-    
+
     <string name="day_tuesday">"יוֹם שְׁלִישִׁי"</string>
-    
+
     <string name="day_wednesday">"יום רביעי"</string>
-    
+
     <string name="day_thursday">"יוֹם חֲמִישִׁי"</string>
-    
+
     <string name="day_friday">"יוֹם שִׁישִׁי"</string>
-    
+
     <string name="day_saturday">"יום שבת"</string>
-    
+
     <string name="today">"היום"</string>
-    
+
     <string name="tomorrow">"מָחָר"</string>
-    
+
     <string name="yesterday">"אתמול"</string>
 
-    
+
     <string name="days_of_week">"ימי השבוע"</string>
-    
+
     <string name="days_of_month">"ימים של חודש"</string>
-    
+
     <string name="days_of_year">"ימים של השנה"</string>
-    
+
     <string name="weeks_of_month">"שבועות של חודש"</string>
-    
+
     <string name="weeks_of_year">"שבועות של השנה"</string>
-    
+
     <string name="months_of_year">"חודשים של השנה"</string>
 
-    
+
     <string name="next">"הַבָּא"</string>
-    
+
     <string name="previous">"קוֹדֵם"</string>
-    
+
     <string name="back">"חזור"</string>
-    
+
     <string name="forward">"קָדִימָה"</string>
 
-    
+
     <string name="pattern_1">"תבנית 1"</string>
-    
+
     <string name="pattern_2">"תבנית 2"</string>
-    
+
     <string name="pattern_3">"תבנית 3"</string>
-    
+
     <string name="pattern_4">"תבנית 4"</string>
-    
+
     <string name="pattern_5">"תבנית 5"</string>
-    
+
     <string name="pattern_6">"תבנית 6"</string>
 
-    
+
     <string name="select">"בחר"</string>
-    
+
     <string name="select_all">"בחר הכל"</string>
-    
+
     <string name="select_none">"אל תבחר באף אחת מהאפשרויות"</string>
 
-    
+
     <string name="diff_difficulty">"קושי"</string>
-    
+
     <string name="diff_select_difficulty">"קושי בחר"</string>
-    
+
     <string name="diff_easy">"קַל"</string>
-    
+
     <string name="diff_normal">"נוֹרמָלִי"</string>
-    
+
     <string name="diff_hard">"קָשֶׁה"</string>
 
-    
+
     <string name="enable">"לְאַפשֵׁר"</string>
-    
+
     <string name="enabled">"מופעל"</string>
-    
+
     <string name="disable">"שבת"</string>
-    
+
     <string name="disabled">"נָכֶה"</string>
-    
+
     <string name="lock">"לנעול"</string>
-    
+
     <string name="unlock">"לִפְתוֹחַ"</string>
-    
+
     <string name="locked">"נָעוּל"</string>
-    
+
     <string name="unlocked">"לא נעול"</string>
-    
+
     <string name="open">"לִפְתוֹחַ"</string>
-    
+
     <string name="close">"לִסְגוֹר"</string>
-    
+
     <string name="opened">"נפתח"</string>
-    
+
     <string name="closed">"סָגוּר"</string>
-    
+
     <string name="show">"לְהַצִיג"</string>
-    
+
     <string name="hide">"להחביא"</string>
-    
+
     <string name="shown">"מוצג"</string>
-    
+
     <string name="Hidden">"מוּסתָר"</string>
-    
+
     <string name="automatic">"אוֹטוֹמָטִי"</string>
-    
+
     <string name="manual">"מדריך ל"</string>
-    
+
     <string name="online">"באינטרנט"</string>
-    
+
     <string name="offline">"מנותק"</string>
-    
+
     <string name="active">"פָּעִיל"</string>
-    
+
     <string name="inactive">"לֹא פָּעִיל"</string>
 
-    
+
     <string name="okay">"בסדר"</string>
-    
+
     <string name="cancel">"לְבַטֵל"</string>
-    
+
     <string name="yes">"כן"</string>
-    
+
     <string name="no">"לא"</string>
-    
+
     <string name="maybe">"אולי"</string>
-    
+
     <string name="some">"כמה"</string>
-    
+
     <string name="none">"אַף לֹא אֶחָד"</string>
-    
+
     <string name="all">"כל"</string>
-    
+
     <string name="set">"מַעֲרֶכֶת"</string>
-    
+
     <string name="unset">"לא הוגדר"</string>
-    
+
     <string name="last">"אַחֲרוֹן"</string>
-    
+
     <string name="first">"ראשון"</string>
-    
+
     <string name="every">"כֹּל"</string>
-    
+
     <string name="other">"אַחֵר"</string>
-    
+
     <string name="off">"כבוי"</string>
-    
+
     <string name="on">"עַל"</string>
-    
+
     <string name="delete_reminder_prompt_title">"מחק תזכורת"</string>
-    
+
     <string name="delete_reminder_prompt_content">"האם אתה בטוח שברצונך למחוק את התזכורת הזו?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"מחק אייקון"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"האם אתה בטוח שברצונך למחוק את הסמל הזה?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"בטל שינויים"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"האם אתה בטוח שאתה רוצה למחוק את השינויים שלך?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"מחק תבנית רטט"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"האם אתה בטוח שאתה רוצה למחוק את תבנית לרטוט זה?"</string>
-    
+
     <string name="delete_location_prompt_title">"מחק מיקום"</string>
-    
+
     <string name="delete_location_prompt_content">"האם אתה בטוח שברצונך למחוק מיקום זה?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"תזכורת כפולה"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"האם אתה בטוח שאתה רוצה לשכפל את התזכורת הזו?"</string>
-    
+
     <string name="include_log_prompt_title">"כלול התחבר"</string>
-    
+
     <string name="include_log_prompt_content">"האם אתה רוצה לכלול ביומן תזכורת?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"כלול ברירת מחדל תזכורת"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"האם אתה רוצה לכלול את תזכורת ברירת המחדל?"</string>
-    
+
     <string name="start_new_game_title">"התחל משחק חדש"</string>
-    
+
     <string name="start_new_game_prompt">"האם אתה בטוח שברצונך להתחיל משחק חדש?"</string>
-    
+
     <string name="end_game_title">"סייםמשחק"</string>
-    
+
     <string name="end_game_prompt">"האם אתה בטוח שאתה רוצה לסיים את המשחק הזה?"</string>
 
-    
+
     <string name="help">"עֶזרָה"</string>
-    
+
     <string name="about">"אוֹדוֹת"</string>
-    
+
     <string name="settings">"הגדרות"</string>
-    
+
     <string name="help_and_feedback">"עזרה ומשוב"</string>
-    
+
     <string name="rate_app">"דרג אפליקציה"</string>
-    
+
     <string name="more_apps">"עוד אפליקציות"</string>
-    
+
     <string name="tutorial">"הדרכה"</string>
-    
+
     <string name="read">"קרא"</string>
-    
+
     <string name="watch">"לִצְפּוֹת"</string>
-    
+
     <string name="links">"קישורים"</string>
-    
+
     <string name="licenses">"רישיונות"</string>
-    
+
     <string name="help_translate">"עזרת תרגום"</string>
-    
+
     <string name="get_the_beta">"קבל את Beta"</string>
-    
+
     <string name="achievements">"הישגים"</string>
-    
+
     <string name="leaderboards">"leaderboards"</string>
-    
+
     <string name="high_scores">"ציונים גבוהים"</string>
-    
+
     <string name="my_circles">"המעגלים שלי"</string>
-    
+
     <string name="invitations">"הזמנות"</string>
-    
+
     <string name="options">"אפשרויות"</string>
-    
+
     <string name="game_options">"אפשרויות משחק"</string>
-    
+
     <string name="advanced_options">"אפשרויות מתקדמות"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"אוֹרֵחַ"</string>
 
-    
+
     <string name="light">"אוֹר"</string>
-    
+
     <string name="light_transparent">"אור שקוף"</string>
-    
+
     <string name="dark">"כֵּהֶה"</string>
-    
+
     <string name="dark_transparent">"שקוף כהה"</string>
-    
+
     <string name="transparent">"שָׁקוּף"</string>
-    
+
     <string name="night">"לַיְלָה"</string>
-    
+
     <string name="black">"שָׁחוֹר"</string>
-    
+
     <string name="white">"לבן"</string>
-    
+
     <string name="system">"מַעֲרֶכֶת"</string>
-    
+
     <string name="light_text">"טקסט בהיר"</string>
-    
+
     <string name="dark_text">"טקסט כהה"</string>
 
-    
+
     <string name="red">"אָדוֹם"</string>
-    
+
     <string name="pink">"וָרוֹד"</string>
-    
+
     <string name="purple">"סָגוֹל"</string>
-    
+
     <string name="deep_purple">"סגול עמוק"</string>
-    
+
     <string name="indigo">"אִינדִיגוֹ"</string>
-    
+
     <string name="blue">"כָּחוֹל"</string>
-    
+
     <string name="light_blue">"כחול בהיר"</string>
-    
+
     <string name="cyan">"טורקיז"</string>
-    
+
     <string name="teal">"Teal"</string>
-    
+
     <string name="green">"ירוק"</string>
-    
+
     <string name="light_green">"ירוק בהיר"</string>
-    
+
     <string name="lime">"סִיד"</string>
-    
+
     <string name="yellow">"צהוב"</string>
-    
+
     <string name="amber">"עַנבָּר"</string>
-    
+
     <string name="orange">"כָּתוֹם"</string>
-    
+
     <string name="deep_orange">"עמוק אורנג"</string>
-    
+
     <string name="brown">"חום"</string>
-    
+
     <string name="grey">"אפור"</string>
-    
+
     <string name="blue_grey">"כחול אפור"</string>
-    
+
     <string name="dark_grey">"אפור כהה"</string>
 
-    
+
     <string name="major">"גדול"</string>
-    
+
     <string name="minor">"קַטִין"</string>
-    
+
     <string name="aux">"aux"</string>
-    
+
     <string name="version">"גִרְסָה"</string>
-    
+
     <string name="production">"הֲפָקָה"</string>
-    
+
     <string name="beta">"Beta"</string>
-    
+
     <string name="alpha">"אלפא"</string>
 
-    
+
     <string name="icon">"אייקון"</string>
-    
+
     <string name="icons">"סמלים"</string>
-    
+
     <string name="custom_icon">"אייקון מותאם אישית"</string>
-    
+
     <string name="custom_icons">"סמלים מותאמים אישית"</string>
-    
+
     <string name="choose_icon">"בחר אייקון"</string>
 
-    
+
     <string name="backup">"גיבוי"</string>
-    
+
     <string name="import_">"יְבוּא"</string>
-    
+
     <string name="export">"יְצוּא"</string>
-    
+
     <string name="export_log">"ייצוא יומן"</string>
-    
+
     <string name="import_export">"יבוא ויצוא"</string>
-    
+
     <string name="export_location">"מיקום יצוא"</string>
-    
+
     <string name="import_failed">"נכשל יבוא"</string>
-    
+
     <string name="import_canceled">"יבוא בוטל"</string>
-    
+
     <string name="export_failed">"יצוא נכשל"</string>
-    
+
     <string name="export_canceled">"יצוא בוטל"</string>
-    
+
     <string name="import_complete">"יבוא הושלם"</string>
-    
+
     <string name="export_complete">"יצוא הושלם"</string>
-    
+
     <string name="importing_please_wait">"יבוא, אנא המתן"</string>
-    
+
     <string name="exporting_please_wait">"יצוא, אנא המתן"</string>
 
-    
+
     <string name="snooze">"נִמנוּם"</string>
-    
+
     <string name="snoozed">"הושהה"</string>
-    
+
     <string name="auto_snooze">"נודניק אוטומטי"</string>
-    
+
     <string name="manual_snooze">"נודניק ידני"</string>
 
-    
+
     <string name="message">"הוֹדָעָה"</string>
-    
+
     <string name="messages">"הודעות"</string>
-    
+
     <string name="num_messages">"מספר הודעות"</string>
-    
+
     <string name="edit_messages">"הודעות ערוכות"</string>
-    
+
     <string name="view_messages">"הודעות צפו"</string>
-    
+
     <string name="import_messages">"יבוא הודעות"</string>
-    
+
     <string name="message_separator">"מפריד הודעה ||||"</string>
 
-    
+
     <string name="sign_in">"הירשם"</string>
-    
+
     <string name="signed_in">"מחובר"</string>
-    
+
     <string name="sign_in_failed">"הכניסה למערכת נכשלה"</string>
-    
+
     <string name="sign_out">"התנתק"</string>
-    
+
     <string name="signed_out">"הוצאו מחשבון"</string>
 
-    
+
     <string name="low">"נָמוּך"</string>
-    
+
     <string name="mid">"בֵּינוֹנִי"</string>
-    
+
     <string name="high">"גָבוֹהַ"</string>
-    
+
     <string name="min">"Min"</string>
-    
+
     <string name="max">"מקס"</string>
-    
+
     <string name="minimum">"מִינִימוּם"</string>
-    
+
     <string name="medium">"בֵּינוֹנִי"</string>
-    
+
     <string name="maximum">"מַקסִימוּם"</string>
-    
+
     <string name="small">"קָטָן"</string>
-    
+
     <string name="large">"גָדוֹל"</string>
-    
+
     <string name="short_">"קצר"</string>
-    
+
     <string name="long_">"אָרוֹך"</string>
-    
+
     <string name="slow">"לְהַאֵט"</string>
-    
+
     <string name="fast">"מָהִיר"</string>
-    
+
     <string name="quick">"מָהִיר"</string>
-    
+
     <string name="narrow">"לְצַמְצֵם"</string>
-    
+
     <string name="wide">"רָחָב"</string>
 
-    
+
     <string name="thank_you">"תודה"</string>
-    
+
     <string name="youre_welcome">"בבקשה"</string>
-    
+
     <string name="please">"אנא"</string>
 
-    
+
     <string name="you">"את"</string>
-    
+
     <string name="me">"לִי"</string>
-    
+
     <string name="us">"לָנוּ"</string>
-    
+
     <string name="we">"אָנוּ"</string>
-    
+
     <string name="them">"אוֹתָם"</string>
 
-    
+
     <string name="short_on">"קצר על"</string>
-    
+
     <string name="medium_on">"בינוני על"</string>
-    
+
     <string name="long_on">"לונג על"</string>
-    
+
     <string name="short_off">"מעל קצר"</string>
-    
+
     <string name="medium_off">"בינוני הנחה"</string>
-    
+
     <string name="long_off">"רחוק"</string>
 
-    
+
     <string name="pro">"מִקצוֹעָן"</string>
-    
+
     <string name="pro_feature">"Pro תכונות"</string>
-    
+
     <string name="upgrade">"שדרוג"</string>
-    
+
     <string name="feature_requires_pro">"תכונה זו מחייבת שימוש בגרסה פרו"</string>
-    
+
     <string name="feature_requires_pro_limited">"תכונה זו מוגבלת בגרסת החינם. שדרגתי פרו או להסיר פריט קיים."</string>
-    
+
     <string name="upgrade_to_pro">"שדרוג לפרו"</string>
-    
+
     <string name="upgrade_now">"שדרג עכשיו"</string>
 
-    
+
     <string name="start_date">"תאריך התחלה"</string>
-    
+
     <string name="end_date">"תאריך סיום"</string>
-    
+
     <string name="start_time">"שעת התחלה"</string>
-    
+
     <string name="end_time">"שעת סיום"</string>
-    
+
     <string name="end_type">"סוג End"</string>
-    
+
     <string name="timing_type">"סוג התזמון"</string>
-    
+
     <string name="edit_times">"טיימס ערוך"</string>
-    
+
     <string name="time">"זְמַן"</string>
-    
+
     <string name="times">"פעמים"</string>
-    
+
     <string name="timing">"תִזמוּן"</string>
-    
+
     <string name="all_time">"כל הזמן"</string>
-    
+
     <string name="every_week">"כל שבוע"</string>
-    
+
     <string name="lifetime">"לכל החיים"</string>
-    
+
     <string name="forever">"לָנֶצַח"</string>
-    
+
     <string name="time_period">"תקופת זמן"</string>
-    
+
     <string name="random">"אַקרַאִי"</string>
-    
+
     <string name="randomly">"אקראי"</string>
-    
+
     <string name="less_random">"פחות אקראי"</string>
-    
+
     <string name="even">"אֲפִילוּ"</string>
-    
+
     <string name="evenly">"שווה"</string>
-    
+
     <string name="specific">"ספֵּצִיפִי"</string>
-    
+
     <string name="interval">"הַפסָקָה"</string>
-    
+
     <string name="specific_times">"לפי זמנים ספציפיים"</string>
-    
+
     <string name="repeat_every">"חזור על כל"</string>
 
-    
+
     <string name="data_loaded">"נתונים נטענו"</string>
-    
+
     <string name="file">"קוֹבֶץ"</string>
-    
+
     <string name="local_storage">"אחסון מקומי"</string>
-    
+
     <string name="filename">"שם קובץ"</string>
 
-    
+
     <string name="permission_granted">"ההרשאה ניתנה"</string>
-    
+
     <string name="permission_denied">"ההרשאה נדחתה"</string>
-    
+
     <string name="allow_if_any">"אפשר אם בכלל"</string>
-    
+
     <string name="allow_if_all">"אפשר אם כל"</string>
-    
+
     <string name="disallow_if_any">"תתיר אם בכלל"</string>
-    
+
     <string name="disallow_if_all">"תתיר אם כל"</string>
-    
+
     <string name="trigger_if_any">"טריגר אם בכלל"</string>
-    
+
     <string name="trigger_if_all">"טריגר אם כל"</string>
 
-    
+
     <string name="reminders">"תזכורות"</string>
-    
+
     <string name="no_reminder">"אין תזכורות"</string>
-    
+
     <string name="no_reminders_yet">"אין לך תזכורות עדיין"</string>
-    
+
     <string name="alerts_per_day">"תזכורות ליום"</string>
-    
+
     <string name="number_of_reminders">"מספר תזכורות"</string>
 
-    
+
     <string name="changes_discarded">"זרוקים שינויים"</string>
-    
+
     <string name="changes_saved">"שמורה שינויים"</string>
-    
+
     <string name="no_changes">"אין שינויים"</string>
-    
+
     <string name="select_at_least_one_item">"בחר לפחות פריט אחד"</string>
 
-    
+
     <string name="loading">"טְעִינָה"</string>
-    
+
     <string name="loaded">"עמוס"</string>
-    
+
     <string name="loading_failed">"טעינה נכשלה"</string>
-    
+
     <string name="loading_complete">"העמסה מושלמת"</string>
-    
+
     <string name="error">"שְׁגִיאָה"</string>
-    
+
     <string name="fail">"לְהִכָּשֵׁל"</string>
-    
+
     <string name="failed">"נִכשָׁל"</string>
-    
+
     <string name="success">"הַצלָחָה"</string>
-    
+
     <string name="successful">"מוּצלָח"</string>
-    
+
     <string name="unsuccessful">"לא מוצלח"</string>
-    
+
     <string name="valid">"תָקֵף"</string>
-    
+
     <string name="invalid">"לא חוקי"</string>
-    
+
     <string name="complete">"לְהַשְׁלִים"</string>
-    
+
     <string name="completed">"הושלם"</string>
-    
+
     <string name="skipped">"דילוג על"</string>
-    
+
     <string name="incomplete">"לוקה בחסר"</string>
-    
+
     <string name="dismiss">"לְפַטֵר"</string>
-    
+
     <string name="dismissed">"מְפוּטָר"</string>
-    
+
     <string name="acknowledge">"לְהוֹדוֹת"</string>
-    
+
     <string name="acknowledged">"הודה"</string>
-    
+
     <string name="add">"לְהוֹסִיף"</string>
-    
+
     <string name="added">"נוסף"</string>
-    
+
     <string name="add_item">"הוסף פריט"</string>
-    
+
     <string name="remove">"לְהַסִיר"</string>
-    
+
     <string name="removed">"הוסר"</string>
-    
+
     <string name="remove_item">"הסר פריט"</string>
-    
+
     <string name="delete">"לִמְחוֹק"</string>
-    
+
     <string name="deleted">"נמחק"</string>
-    
+
     <string name="duplicate">"לְשַׁכְפֵּל"</string>
-    
+
     <string name="duplicated">"מוּעֲתָק"</string>
-    
+
     <string name="restart">"איתחול"</string>
-    
+
     <string name="restarting">"הפעלה מחדש"</string>
-    
+
     <string name="restarting_app_please_wait">"הפעלה מחדש של App, אנא המתן"</string>
 
-    
+
     <string name="map">"מַפָּה"</string>
-    
+
     <string name="location">"מקום"</string>
-    
+
     <string name="locations">"מיקומים"</string>
-    
+
     <string name="latitude">"קו רוחב"</string>
-    
+
     <string name="longitude">"קו אורך"</string>
-    
+
     <string name="radius">"רַדִיוּס"</string>
-    
+
     <string name="enter">"לְהַכנִיס"</string>
-    
+
     <string name="exit">"יְצִיאָה"</string>
-    
+
     <string name="linger_time">"לינגר זמן"</string>
 
-    
+
     <string name="music">"מוּסִיקָה"</string>
-    
+
     <string name="ring">"טַבַּעַת"</string>
-    
+
     <string name="speak_time">"דבר זמן"</string>
-    
+
     <string name="speak_title">"דבר כותרת"</string>
-    
+
     <string name="speak_message">"אמור את ההודעה"</string>
-    
+
     <string name="tone">"טוֹן"</string>
-    
+
     <string name="sound">"נשמע"</string>
 
-    
+
     <string name="notification">"הוֹדָעָה"</string>
-    
+
     <string name="notifications">"התראות"</string>
-    
+
     <string name="select_notification">"הודעה בחר"</string>
 
-    
+
     <string name="vibrate">"לְנַדְנֵד"</string>
-    
+
     <string name="vibrate_pattern">"תבנית רטט"</string>
-    
+
     <string name="vibrate_patterns">"דפוסי רטט"</string>
-    
+
     <string name="create_vibrate_pattern">"צור תבנית רטט"</string>
 
-    
 
-    
     <string name="you_win">"ניצחת"</string>
-    
+
     <string name="you_won">"ניצחת"</string>
-    
+
     <string name="you_lost">"הפסדת"</string>
-    
+
     <string name="you_lose">"הפסדת"</string>
-    
+
     <string name="you_tied">"סיימת בתיקו"</string>
-    
+
     <string name="winner">"זוֹכֵה"</string>
-    
+
     <string name="winners">"הזוכה"</string>
-    
+
     <string name="loser">"מפסידן"</string>
-    
+
     <string name="Losers">"מפסידנים"</string>
 
-    
+
     <string name="number_of_players">"מספר שחקנים"</string>
-    
+
     <string name="player">"שחקן"</string>
-    
+
     <string name="players">"שחקנים"</string>
-    
+
     <string name="player_1">"שחקן 1"</string>
-    
+
     <string name="player_2">"שחקן 2"</string>
-    
+
     <string name="player_3">"שחקן 3"</string>
-    
+
     <string name="player_4">"נגן 4"</string>
-    
+
     <string name="player_5">"נגן 5"</string>
-    
+
     <string name="player_6">"שחקן 6"</string>
-    
+
     <string name="team">"קְבוּצָה"</string>
-    
+
     <string name="teams">"צוותי"</string>
-    
+
     <string name="number_of_teams">"מספר צוותים"</string>
-    
+
     <string name="team_1">"קבוצה 1"</string>
-    
+
     <string name="team_2">"צוות 2"</string>
-    
+
     <string name="team_3">"צוות 3"</string>
-    
+
     <string name="team_4">"צוות 4"</string>
 
-    
+
     <string name="requires_google_play">"פעולה זו דורשת Google Play משחק"</string>
-    
+
     <string name="compare_profiles">"השווה לשחק משחקי פרופילים"</string>
-    
+
     <string name="view_profile">"Play Games צפה בפרופיל"</string>
 
-    
+
     <string name="sponsored">"ממומן"</string>
-    
+
     <string name="ads">"מודעות"</string>
-    
+
     <string name="remove_ads">"הסר פרסומות"</string>
-    
+
     <string name="ads_removed">"המודעות שהוסרו"</string>
 
-    
+
     <string name="current_score">"ציון נוכחי"</string>
-    
+
     <string name="top_score">"ציון למעלה"</string>
-    
+
     <string name="score">"צִיוּן"</string>
 
-    
+
     <string name="your_turn">"תורך"</string>
-    
+
     <string name="their_turn">"לתורם"</string>
-    
+
     <string name="turn">"לפנות"</string>
-    
+
     <string name="turns">"תורים"</string>
-    
+
     <string name="round">"עָגוֹל"</string>
-    
+
     <string name="rounds">"טיולי"</string>
-    
+
     <string name="match">"התאמה"</string>
-    
+
     <string name="matches">"התאמות"</string>
 
-    
+
     <string name="dollar">"דוֹלָר"</string>
-    
+
     <string name="dollars">"דולר"</string>
-    
+
     <string name="buy">"לִקְנוֹת"</string>
-    
+
     <string name="sell">"מְכִירָה"</string>
-    
+
     <string name="purchase">"לִרְכּוֹשׁ"</string>
-    
+
     <string name="diamond">"יהלום"</string>
-    
+
     <string name="diamonds">"יהלומים"</string>
 
-    
+
     <string name="rematch">"משחק חוזר"</string>
-    
+
     <string name="try_again">"נסה שוב"</string>
-    
+
     <string name="touch_continue">"גע כדי להמשיך"</string>
-    
+
     <string name="touch_resume">"גע כדי לחדש"</string>
-    
+
     <string name="touch_edit">"גע כדי לערוך"</string>
-    
+
     <string name="pause">"הַפסָקָה"</string>
-    
+
     <string name="pause_game">"משחק השהה"</string>
-    
+
     <string name="resume">"קורות חיים"</string>
-    
+
     <string name="resume_game">"משחק חדש"</string>
-    
+
     <string name="new_">"חָדָשׁ"</string>
-    
+
     <string name="new_game">"משחק חדש"</string>
-    
+
     <string name="select_save">"בחר שמור"</string>
-    
+
     <string name="save">"להציל"</string>
-    
+
     <string name="save_game">"שמור משחק"</string>
-    
+
     <string name="load">"לִטעוֹן"</string>
-    
+
     <string name="load_game">"טעןמשחק"</string>
-    
+
     <string name="game_over">"סוף המשחק"</string>
-    
+
     <string name="start">"הַתחָלָה"</string>
-    
+
     <string name="start_game">"התחל משחק"</string>
-    
+
     <string name="end">"סוֹף"</string>
-    
+
     <string name="end_game">"סייםמשחק"</string>
-    
+
     <string name="stop">"לעצור"</string>
-    
+
     <string name="stop_game">"עצור משחק"</string>
 
-    
 
     <string name="free">"בן חורין"</string>
     <string name="pull">"מְשׁוֹך"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"לוח"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

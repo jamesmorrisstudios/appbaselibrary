@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"Vise"</string>
-    
+
     <string name="settings_category_sound">"Sund"</string>
-    
+
     <string name="settings_category_general">"Generel"</string>
-    
+
     <string name="settings_category_locale">"locale"</string>
-    
+
     <string name="settings_category_theme">"Tema"</string>
-    
+
     <string name="settings_category_notification">"Notifikation"</string>
-    
+
     <string name="settings_category_notification_custom">"Tilpasset Notification"</string>
-    
+
     <string name="settings_category_notification_override">"Tilsidesæt Notification"</string>
-    
+
     <string name="settings_category_defaults">"standarder"</string>
-    
+
     <string name="settings_category_random">"tilfældighed"</string>
-    
+
     <string name="settings_category_widget">"Widget"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Immersive tilstand"</string>
-    
+
     <string name="setting_sound_enable_primary">"Lydeffekter"</string>
-    
+
     <string name="setting_music_enable_primary">"Musik"</string>
-    
+
     <string name="setting_language_picker_primary">"Sprog"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Tilpasset Ringtone Picker"</string>
-    
+
     <string name="setting_theme_picker_primary">"App Tema"</string>
-    
+
     <string name="setting_accent_color_primary">"Accent Color"</string>
-    
+
     <string name="setting_primary_color_primary">"Primær Farve"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Toolbar Text Color"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"Klik handling"</string>
-    
+
     <string name="setting_notification_custom_primary">"Aktiver"</string>
-    
+
     <string name="setting_notification_button_style_primary">"Button Style"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Løbende Notification"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"Igangværende meddelelser understøttes ikke på SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"Baggrund"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"Tekstfarve"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Første dag i ugen"</string>
-    
+
     <string name="setting_force_advanced_primary">"Altid Vis Avancerede indstillinger"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Deaktiver for at vise avancerede indstillinger på et per påmindelse grundlag"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"Swipe Action"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Klik Åbner App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Swipe Åbner App"</string>
-    
+
     <string name="setting_random_amount_primary">"Tilfældig"</string>
-    
+
     <string name="setting_less_random_amount_primary">"mindre Random"</string>
-    
+
     <string name="setting_even_amount_primary">"Endog"</string>
-    
+
     <string name="setting_widget_theme_primary">"Tema"</string>
-    
+
     <string name="setting_widget_text_color_primary">"Tekstfarve"</string>
-    
+
     <string name="setting_override_vibrate_primary">"vibrere meddelelse Tilsidesæt"</string>
-    
+
     <string name="setting_override_ringtone_primary">"Tilsidesæt meddelelse tone afspilning"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Dette skal være aktiveret for at tilsidesætte audio stream"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"Tilsidesæt meddelelse audio stream"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"Tilsidesæt tale stream"</string>
 
-    
+
     <string name="time_millisecond">"ms"</string>
-    
+
     <string name="time_milliseconds">"millisekunder"</string>
-    
+
     <string name="time_millisecond_abrev">"Frk"</string>
-    
+
     <string name="time_second">"Anden"</string>
-    
+
     <string name="time_seconds">"Sekunder"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"Minut"</string>
-    
+
     <string name="time_minutes">"minutter"</string>
-    
+
     <string name="time_hour">"Time"</string>
-    
+
     <string name="time_hours">"Timer"</string>
-    
+
     <string name="time_day">"Dag"</string>
-    
+
     <string name="time_days">"Dage"</string>
-    
+
     <string name="time_daily">"Daglige"</string>
-    
+
     <string name="time_week">"Uge"</string>
-    
+
     <string name="time_weeks">"uger"</string>
-    
+
     <string name="time_weekly">"Ugentlig"</string>
-    
+
     <string name="time_month">"Måned"</string>
-    
+
     <string name="time_months">"måneder"</string>
-    
+
     <string name="time_monthly">"Månedlige"</string>
-    
+
     <string name="time_year">"År"</string>
-    
+
     <string name="time_years">"år"</string>
-    
+
     <string name="time_yearly">"årlig"</string>
 
-    
+
     <string name="meter">"Måler"</string>
-    
+
     <string name="meters">"Målere"</string>
 
-    
+
     <string name="num_one">"En"</string>
-    
+
     <string name="num_two">"To"</string>
-    
+
     <string name="num_three">"Tre"</string>
-    
+
     <string name="num_four">"fire"</string>
-    
+
     <string name="num_five">"Fem"</string>
-    
+
     <string name="num_six">"Seks"</string>
-    
+
     <string name="num_seven">"Syv"</string>
-    
+
     <string name="num_eight">"otte"</string>
-    
+
     <string name="num_nine">"Ni"</string>
-    
+
     <string name="num_ten">"Ti"</string>
 
-    
+
     <string name="num_first">"Først"</string>
-    
+
     <string name="num_second">"Anden"</string>
-    
+
     <string name="num_third">"Tredje"</string>
-    
+
     <string name="num_fourth">"Fjerde"</string>
-    
+
     <string name="num_fifth">"femte"</string>
-    
+
     <string name="num_sixth">"sjette"</string>
-    
+
     <string name="num_seventh">"Syvende"</string>
-    
+
     <string name="num_eighth">"ottende"</string>
-    
+
     <string name="num_ninth">"Niende"</string>
-    
+
     <string name="num_tenth">"Tiende"</string>
 
-    
+
     <string name="day_sunday">"Søndag"</string>
-    
+
     <string name="day_monday">"mandag"</string>
-    
+
     <string name="day_tuesday">"tirsdag"</string>
-    
+
     <string name="day_wednesday">"onsdag"</string>
-    
+
     <string name="day_thursday">"torsdag"</string>
-    
+
     <string name="day_friday">"Fredag"</string>
-    
+
     <string name="day_saturday">"lørdag"</string>
-    
+
     <string name="today">"I dag"</string>
-    
+
     <string name="tomorrow">"I morgen"</string>
-    
+
     <string name="yesterday">"I går"</string>
 
-    
+
     <string name="days_of_week">"Days Of uge"</string>
-    
+
     <string name="days_of_month">"Days Of måned"</string>
-    
+
     <string name="days_of_year">"Days Of År"</string>
-    
+
     <string name="weeks_of_month">"Ugers måned"</string>
-    
+
     <string name="weeks_of_year">"Ugers år"</string>
-    
+
     <string name="months_of_year">"Måneders år"</string>
 
-    
+
     <string name="next">"Næste"</string>
-    
+
     <string name="previous">"Tidligere"</string>
-    
+
     <string name="back">"Tilbage"</string>
-    
+
     <string name="forward">"Forward"</string>
 
-    
+
     <string name="pattern_1">"Mønster 1"</string>
-    
+
     <string name="pattern_2">"Pattern 2"</string>
-    
+
     <string name="pattern_3">"Mønster 3"</string>
-    
+
     <string name="pattern_4">"M.4"</string>
-    
+
     <string name="pattern_5">"Mønster 5"</string>
-    
+
     <string name="pattern_6">"Mønster 6"</string>
 
-    
+
     <string name="select">"Vælge"</string>
-    
+
     <string name="select_all">"Vælg alle"</string>
-    
+
     <string name="select_none">"Vælg None"</string>
 
-    
+
     <string name="diff_difficulty">"Vanskelighed"</string>
-    
+
     <string name="diff_select_difficulty">"Vælg Sværhedsgrad"</string>
-    
+
     <string name="diff_easy">"Let"</string>
-    
+
     <string name="diff_normal">"Normal"</string>
-    
+
     <string name="diff_hard">"Hårdt"</string>
 
-    
+
     <string name="enable">"Aktiver"</string>
-    
+
     <string name="enabled">"Aktiveret"</string>
-    
+
     <string name="disable">"Deaktiver"</string>
-    
+
     <string name="disabled">"Handicappet"</string>
-    
+
     <string name="lock">"Låse"</string>
-    
+
     <string name="unlock">"Lås"</string>
-    
+
     <string name="locked">"Låst"</string>
-    
+
     <string name="unlocked">"Unlocked"</string>
-    
+
     <string name="open">"Åben"</string>
-    
+
     <string name="close">"Tæt"</string>
-    
+
     <string name="opened">"åbnede"</string>
-    
+
     <string name="closed">"Lukket"</string>
-    
+
     <string name="show">"At vise"</string>
-    
+
     <string name="hide">"Skjule"</string>
-    
+
     <string name="shown">"vist"</string>
-    
+
     <string name="Hidden">"Skjult"</string>
-    
+
     <string name="automatic">"Automatisk"</string>
-    
+
     <string name="manual">"Manuel"</string>
-    
+
     <string name="online">"Online"</string>
-    
+
     <string name="offline">"Offline"</string>
-    
+
     <string name="active">"Aktiv"</string>
-    
+
     <string name="inactive">"Inaktiv"</string>
 
-    
+
     <string name="okay">"Okay"</string>
-    
+
     <string name="cancel">"Ophæve"</string>
-    
+
     <string name="yes">"Ja"</string>
-    
+
     <string name="no">"Ingen"</string>
-    
+
     <string name="maybe">"Kan være"</string>
-    
+
     <string name="some">"Nogle"</string>
-    
+
     <string name="none">"Ingen"</string>
-    
+
     <string name="all">"Alle"</string>
-    
+
     <string name="set">"Sæt"</string>
-    
+
     <string name="unset">"Omstil"</string>
-    
+
     <string name="last">"Sidste"</string>
-    
+
     <string name="first">"Først"</string>
-    
+
     <string name="every">"Hver"</string>
-    
+
     <string name="other">"Andre"</string>
-    
+
     <string name="off">"Slukket"</string>
-    
+
     <string name="on">"På"</string>
-    
+
     <string name="delete_reminder_prompt_title">"Slet Påmindelse"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Er du sikker på at du vil slette denne påmindelse?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"Slet Icon"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Er du sikker på at du vil slette dette ikon?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Kassér ændringer"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Er du sikker på du vil kassere dine ændringer?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Slet Vibration Mønster"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Er du sikker på at du vil slette denne vibrere mønster?"</string>
-    
+
     <string name="delete_location_prompt_title">"Slet Beliggenhed"</string>
-    
+
     <string name="delete_location_prompt_content">"Er du sikker på at du vil slette denne placering?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"Duplicate Reminder"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Er du sikker på du vil duplikere denne påmindelse?"</string>
-    
+
     <string name="include_log_prompt_title">"Medtag Log"</string>
-    
+
     <string name="include_log_prompt_content">"Ønsker du at inkludere log påmindelse?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Medtag Standard Reminder"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Vil du ønsker at inkludere standard påmindelse?"</string>
-    
+
     <string name="start_new_game_title">"Start nyt spil"</string>
-    
+
     <string name="start_new_game_prompt">"Er du sikker på du vil starte et nyt spil?"</string>
-    
+
     <string name="end_game_title">"Afslut spil"</string>
-    
+
     <string name="end_game_prompt">"Er du sikker på du ønsker at afslutte dette spil?"</string>
 
-    
+
     <string name="help">"Hjælp"</string>
-    
+
     <string name="about">"Om"</string>
-    
+
     <string name="settings">"Indstillinger"</string>
-    
+
     <string name="help_and_feedback">"Hjælp og feedback"</string>
-    
+
     <string name="rate_app">"rate App"</string>
-    
+
     <string name="more_apps">"Flere apps"</string>
-    
+
     <string name="tutorial">"tutorial"</string>
-    
+
     <string name="read">"Læse"</string>
-    
+
     <string name="watch">"Ur"</string>
-    
+
     <string name="links">"Links"</string>
-    
+
     <string name="licenses">"Licenser"</string>
-    
+
     <string name="help_translate">"Hjælp Oversæt"</string>
-    
+
     <string name="get_the_beta">"Få Beta"</string>
-    
+
     <string name="achievements">"resultater"</string>
-    
+
     <string name="leaderboards">"Ranglister"</string>
-    
+
     <string name="high_scores">"High Scores"</string>
-    
+
     <string name="my_circles">"Mine cirkler"</string>
-    
+
     <string name="invitations">"Invitationer"</string>
-    
+
     <string name="options">"Indstillinger"</string>
-    
+
     <string name="game_options">"Spil indstillinger"</string>
-    
+
     <string name="advanced_options">"Avancerede indstillinger"</string>
-    
+
     <string name="automatch">"automatch"</string>
-    
+
     <string name="guest">"Gæst"</string>
 
-    
+
     <string name="light">"Lys"</string>
-    
+
     <string name="light_transparent">"Light Transparent"</string>
-    
+
     <string name="dark">"Mørk"</string>
-    
+
     <string name="dark_transparent">"mørk transparent"</string>
-    
+
     <string name="transparent">"Gennemsigtig"</string>
-    
+
     <string name="night">"Nat"</string>
-    
+
     <string name="black">"Sort"</string>
-    
+
     <string name="white">"Hvid"</string>
-    
+
     <string name="system">"System"</string>
-    
+
     <string name="light_text">"Lys tekst"</string>
-    
+
     <string name="dark_text">"Mørk tekst"</string>
 
-    
+
     <string name="red">"Rød"</string>
-    
+
     <string name="pink">"Lyserød"</string>
-    
+
     <string name="purple">"Lilla"</string>
-    
+
     <string name="deep_purple">"Mørke lilla"</string>
-    
+
     <string name="indigo">"indigo"</string>
-    
+
     <string name="blue">"Blå"</string>
-    
+
     <string name="light_blue">"Lyseblå"</string>
-    
+
     <string name="cyan">"Cyan"</string>
-    
+
     <string name="teal">"Teal"</string>
-    
+
     <string name="green">"Grøn"</string>
-    
+
     <string name="light_green">"Lysegrøn"</string>
-    
+
     <string name="lime">"lime"</string>
-    
+
     <string name="yellow">"Gul"</string>
-    
+
     <string name="amber">"Rav"</string>
-    
+
     <string name="orange">"Orange"</string>
-    
+
     <string name="deep_orange">"Deep Orange"</string>
-    
+
     <string name="brown">"Brun"</string>
-    
+
     <string name="grey">"Grå"</string>
-    
+
     <string name="blue_grey">"Blå Grå"</string>
-    
+
     <string name="dark_grey">"Mørkegrå"</string>
 
-    
+
     <string name="major">"Major"</string>
-    
+
     <string name="minor">"Mindre"</string>
-    
+
     <string name="aux">"Aux"</string>
-    
+
     <string name="version">"Version"</string>
-    
+
     <string name="production">"Produktion"</string>
-    
+
     <string name="beta">"Beta"</string>
-    
+
     <string name="alpha">"Alpha"</string>
 
-    
+
     <string name="icon">"Ikon"</string>
-    
+
     <string name="icons">"Ikoner"</string>
-    
+
     <string name="custom_icon">"Tilpasset ikon"</string>
-    
+
     <string name="custom_icons">"Brugerdefinerede ikoner"</string>
-    
+
     <string name="choose_icon">"Vælg Ikon"</string>
 
-    
+
     <string name="backup">"Backup"</string>
-    
+
     <string name="import_">"Importere"</string>
-    
+
     <string name="export">"Eksport"</string>
-    
+
     <string name="export_log">"Export Log"</string>
-    
+
     <string name="import_export">"Import Eksport"</string>
-    
+
     <string name="export_location">"Eksport Beliggenhed"</string>
-    
+
     <string name="import_failed">"Import mislykkedes"</string>
-    
+
     <string name="import_canceled">"Import Annulleret"</string>
-    
+
     <string name="export_failed">"Eksport mislykkedes"</string>
-    
+
     <string name="export_canceled">"Eksport Annulleret"</string>
-    
+
     <string name="import_complete">"Import Complete"</string>
-    
+
     <string name="export_complete">"Eksport Complete"</string>
-    
+
     <string name="importing_please_wait">"Import, vent venligst"</string>
-    
+
     <string name="exporting_please_wait">"Eksport, vent venligst"</string>
 
-    
+
     <string name="snooze">"Snooze"</string>
-    
+
     <string name="snoozed">"udskudt"</string>
-    
+
     <string name="auto_snooze">"Auto Snooze"</string>
-    
+
     <string name="manual_snooze">"Manuel Snooze"</string>
 
-    
+
     <string name="message">"Besked"</string>
-    
+
     <string name="messages">"Meddelelser"</string>
-    
+
     <string name="num_messages">"Antal beskeder"</string>
-    
+
     <string name="edit_messages">"Rediger Meddelelser"</string>
-    
+
     <string name="view_messages">"Vis meddelelser"</string>
-    
+
     <string name="import_messages">"Importer meddelelser"</string>
-    
+
     <string name="message_separator">"Message Separator ||||"</string>
 
-    
+
     <string name="sign_in">"Log ind"</string>
-    
+
     <string name="signed_in">"Signeret I"</string>
-    
+
     <string name="sign_in_failed">"Log ind mislykkedes"</string>
-    
+
     <string name="sign_out">"Log ud"</string>
-    
+
     <string name="signed_out">"Signeret Out"</string>
 
-    
+
     <string name="low">"Lav"</string>
-    
+
     <string name="mid">"Mid"</string>
-    
+
     <string name="high">"Høj"</string>
-    
+
     <string name="min">"Min"</string>
-    
+
     <string name="max">"Max"</string>
-    
+
     <string name="minimum">"Minimum"</string>
-    
+
     <string name="medium">"Medium"</string>
-    
+
     <string name="maximum">"Maksimum"</string>
-    
+
     <string name="small">"Lille"</string>
-    
+
     <string name="large">"Stor"</string>
-    
+
     <string name="short_">"Kort"</string>
-    
+
     <string name="long_">"Lang"</string>
-    
+
     <string name="slow">"Langsom"</string>
-    
+
     <string name="fast">"Hurtig"</string>
-    
+
     <string name="quick">"Hurtig"</string>
-    
+
     <string name="narrow">"Smal"</string>
-    
+
     <string name="wide">"Bred"</string>
 
-    
+
     <string name="thank_you">"Tak"</string>
-    
+
     <string name="youre_welcome">"Selv tak"</string>
-    
+
     <string name="please">"Vær venlig"</string>
 
-    
+
     <string name="you">"Du"</string>
-    
+
     <string name="me">"Mig"</string>
-    
+
     <string name="us">"Os"</string>
-    
+
     <string name="we">"Vi"</string>
-    
+
     <string name="them">"Dem"</string>
 
-    
+
     <string name="short_on">"Kort om"</string>
-    
+
     <string name="medium_on">"medium"</string>
-    
+
     <string name="long_on">"længe på"</string>
-    
+
     <string name="short_off">"short off"</string>
-    
+
     <string name="medium_off">"Medium off"</string>
-    
+
     <string name="long_off">"længe off"</string>
 
-    
+
     <string name="pro">"Pro"</string>
-    
+
     <string name="pro_feature">"Pro Feature"</string>
-    
+
     <string name="upgrade">"Upgrade"</string>
-    
+
     <string name="feature_requires_pro">"Denne funktion kræver pro version"</string>
-    
+
     <string name="feature_requires_pro_limited">"Denne funktion er begrænset i den gratis version. Opgrader til pro eller fjerne et eksisterende element."</string>
-    
+
     <string name="upgrade_to_pro">"Opgrader til Pro"</string>
-    
+
     <string name="upgrade_now">"Opgrader nu"</string>
 
-    
+
     <string name="start_date">"Start dato"</string>
-    
+
     <string name="end_date">"Slutdato"</string>
-    
+
     <string name="start_time">"Starttidspunkt"</string>
-    
+
     <string name="end_time">"End Time"</string>
-    
+
     <string name="end_type">"End Type"</string>
-    
+
     <string name="timing_type">"Timing Type"</string>
-    
+
     <string name="edit_times">"Edit Times"</string>
-    
+
     <string name="time">"Tid"</string>
-    
+
     <string name="times">"Times"</string>
-    
+
     <string name="timing">"Timing"</string>
-    
+
     <string name="all_time">"Hele tiden"</string>
-    
+
     <string name="every_week">"Hver uge"</string>
-    
+
     <string name="lifetime">"Levetid"</string>
-    
+
     <string name="forever">"For evigt"</string>
-    
+
     <string name="time_period">"Tidsperiode"</string>
-    
+
     <string name="random">"Tilfældig"</string>
-    
+
     <string name="randomly">"tilfældigt"</string>
-    
+
     <string name="less_random">"mindre Random"</string>
-    
+
     <string name="even">"Endog"</string>
-    
+
     <string name="evenly">"jævnt"</string>
-    
+
     <string name="specific">"Bestemt"</string>
-    
+
     <string name="interval">"Interval"</string>
-    
+
     <string name="specific_times">"Specifikke Times"</string>
-    
+
     <string name="repeat_every">"Gentag hver"</string>
 
-    
+
     <string name="data_loaded">"data, Loaded"</string>
-    
+
     <string name="file">"Fil"</string>
-    
+
     <string name="local_storage">"Lokalt lager"</string>
-    
+
     <string name="filename">"Filnavn"</string>
 
-    
+
     <string name="permission_granted">"Tilladelse Indrømmet"</string>
-    
+
     <string name="permission_denied">"Tilladelse nægtet"</string>
-    
+
     <string name="allow_if_any">"Tillad eventuelle"</string>
-    
+
     <string name="allow_if_all">"Tillad hvis alle"</string>
-    
+
     <string name="disallow_if_any">"Tillad ikke om nogen"</string>
-    
+
     <string name="disallow_if_all">"Forbyd hvis alle"</string>
-    
+
     <string name="trigger_if_any">"Trigger hvis nogen"</string>
-    
+
     <string name="trigger_if_all">"Trigger hvis alle"</string>
 
-    
+
     <string name="reminders">"Påmindelser"</string>
-    
+
     <string name="no_reminder">"Ingen Påmindelser"</string>
-    
+
     <string name="no_reminders_yet">"Du har ingen påmindelser endnu"</string>
-    
+
     <string name="alerts_per_day">"Påmindelser per dag"</string>
-    
+
     <string name="number_of_reminders">"Antal påmindelser"</string>
 
-    
+
     <string name="changes_discarded">"Ændringer Kasseret"</string>
-    
+
     <string name="changes_saved">"Ændringer gemt"</string>
-    
+
     <string name="no_changes">"Ingen ændringer"</string>
-    
+
     <string name="select_at_least_one_item">"Vælg mindst ét ​​element"</string>
 
-    
+
     <string name="loading">"Loading"</string>
-    
+
     <string name="loaded">"loaded"</string>
-    
+
     <string name="loading_failed">"Loading mislykkedes"</string>
-    
+
     <string name="loading_complete">"Indlæser Komplet"</string>
-    
+
     <string name="error">"Fejl"</string>
-    
+
     <string name="fail">"Svigte"</string>
-    
+
     <string name="failed">"Mislykket"</string>
-    
+
     <string name="success">"Succes"</string>
-    
+
     <string name="successful">"Vellykket"</string>
-    
+
     <string name="unsuccessful">"Mislykket"</string>
-    
+
     <string name="valid">"Gyldig"</string>
-    
+
     <string name="invalid">"Ugyldigt"</string>
-    
+
     <string name="complete">"Komplet"</string>
-    
+
     <string name="completed">"Afsluttet"</string>
-    
+
     <string name="skipped">"Sprunget"</string>
-    
+
     <string name="incomplete">"Ufuldstændig"</string>
-    
+
     <string name="dismiss">"Afskedige"</string>
-    
+
     <string name="dismissed">"afvist"</string>
-    
+
     <string name="acknowledge">"Anerkende"</string>
-    
+
     <string name="acknowledged">"anerkendt"</string>
-    
+
     <string name="add">"Tilføje"</string>
-    
+
     <string name="added">"Tilføjet"</string>
-    
+
     <string name="add_item">"Tilføj element"</string>
-    
+
     <string name="remove">"Fjerne"</string>
-    
+
     <string name="removed">"Fjernet"</string>
-    
+
     <string name="remove_item">"Fjern element"</string>
-    
+
     <string name="delete">"Slet"</string>
-    
+
     <string name="deleted">"slettet"</string>
-    
+
     <string name="duplicate">"Duplikere"</string>
-    
+
     <string name="duplicated">"Duplicated"</string>
-    
+
     <string name="restart">"Genstart"</string>
-    
+
     <string name="restarting">"Genstart"</string>
-    
+
     <string name="restarting_app_please_wait">"Genstart App, vent venligst"</string>
 
-    
+
     <string name="map">"Kort"</string>
-    
+
     <string name="location">"Beliggenhed"</string>
-    
+
     <string name="locations">"steder"</string>
-    
+
     <string name="latitude">"Breddegrad"</string>
-    
+
     <string name="longitude">"Længde"</string>
-    
+
     <string name="radius">"Radius"</string>
-    
+
     <string name="enter">"Indtast"</string>
-    
+
     <string name="exit">"Udgang"</string>
-    
+
     <string name="linger_time">"Linger Time"</string>
 
-    
+
     <string name="music">"Musik"</string>
-    
+
     <string name="ring">"Ring"</string>
-    
+
     <string name="speak_time">"Tal Time"</string>
-    
+
     <string name="speak_title">"Tal titel"</string>
-    
+
     <string name="speak_message">"Tal Message"</string>
-    
+
     <string name="tone">"Tone"</string>
-    
+
     <string name="sound">"Sund"</string>
 
-    
+
     <string name="notification">"Notifikation"</string>
-    
+
     <string name="notifications">"underretninger"</string>
-    
+
     <string name="select_notification">"Vælg Notification"</string>
 
-    
+
     <string name="vibrate">"Vibrere"</string>
-    
+
     <string name="vibrate_pattern">"Vibration Mønster"</string>
-    
+
     <string name="vibrate_patterns">"Vibrer Mønstre"</string>
-    
+
     <string name="create_vibrate_pattern">"Opret Vibration Mønster"</string>
 
-    
 
-    
     <string name="you_win">"Du vinder"</string>
-    
+
     <string name="you_won">"Du vandt"</string>
-    
+
     <string name="you_lost">"Du tabte"</string>
-    
+
     <string name="you_lose">"Du taber"</string>
-    
+
     <string name="you_tied">"Du Tied"</string>
-    
+
     <string name="winner">"Vinder"</string>
-    
+
     <string name="winners">"Vindere"</string>
-    
+
     <string name="loser">"Taber"</string>
-    
+
     <string name="Losers">"tabere"</string>
 
-    
+
     <string name="number_of_players">"Antal spillere"</string>
-    
+
     <string name="player">"Spiller"</string>
-    
+
     <string name="players">"Spillere"</string>
-    
+
     <string name="player_1">"Spiller 1"</string>
-    
+
     <string name="player_2">"Spiller 2"</string>
-    
+
     <string name="player_3">"Spiller 3"</string>
-    
+
     <string name="player_4">"Spiller 4"</string>
-    
+
     <string name="player_5">"Player 5"</string>
-    
+
     <string name="player_6">"Player 6"</string>
-    
+
     <string name="team">"Hold"</string>
-    
+
     <string name="teams">"Teams"</string>
-    
+
     <string name="number_of_teams">"Antal Teams"</string>
-    
+
     <string name="team_1">"Hold 1"</string>
-    
+
     <string name="team_2">"Team 2"</string>
-    
+
     <string name="team_3">"Team 3"</string>
-    
+
     <string name="team_4">"Team 4"</string>
 
-    
+
     <string name="requires_google_play">"Denne handling kræver Google Play Games"</string>
-    
+
     <string name="compare_profiles">"Sammenlign Play Spil Profiler"</string>
-    
+
     <string name="view_profile">"Se Play Games profil"</string>
 
-    
+
     <string name="sponsored">"Sponsoreret"</string>
-    
+
     <string name="ads">"annoncer"</string>
-    
+
     <string name="remove_ads">"Fjern annoncer"</string>
-    
+
     <string name="ads_removed">"annoncer Fjernet"</string>
 
-    
+
     <string name="current_score">"Aktuel score"</string>
-    
+
     <string name="top_score">"Top score"</string>
-    
+
     <string name="score">"score"</string>
 
-    
+
     <string name="your_turn">"Din tur"</string>
-    
+
     <string name="their_turn">"deres Turn"</string>
-    
+
     <string name="turn">"Tur"</string>
-    
+
     <string name="turns">"Slår"</string>
-    
+
     <string name="round">"Rund"</string>
-    
+
     <string name="rounds">"Runder"</string>
-    
+
     <string name="match">"Match"</string>
-    
+
     <string name="matches">"tændstikker"</string>
 
-    
+
     <string name="dollar">"dollar"</string>
-    
+
     <string name="dollars">"Dollars"</string>
-    
+
     <string name="buy">"Købe"</string>
-    
+
     <string name="sell">"Sælge"</string>
-    
+
     <string name="purchase">"Køb"</string>
-    
+
     <string name="diamond">"Diamant"</string>
-    
+
     <string name="diamonds">"diamanter"</string>
 
-    
+
     <string name="rematch">"omkamp"</string>
-    
+
     <string name="try_again">"Prøv igen"</string>
-    
+
     <string name="touch_continue">"Tryk for at fortsætte"</string>
-    
+
     <string name="touch_resume">"Tryk for at Genoptag"</string>
-    
+
     <string name="touch_edit">"Tryk for at redigere"</string>
-    
+
     <string name="pause">"Pause"</string>
-    
+
     <string name="pause_game">"Pause Spil"</string>
-    
+
     <string name="resume">"Genoptag"</string>
-    
+
     <string name="resume_game">"Genoptag spil"</string>
-    
+
     <string name="new_">"Ny"</string>
-    
+
     <string name="new_game">"Nyt spil"</string>
-    
+
     <string name="select_save">"Vælg Gem"</string>
-    
+
     <string name="save">"Spare"</string>
-    
+
     <string name="save_game">"Gem spil"</string>
-    
+
     <string name="load">"Load"</string>
-    
+
     <string name="load_game">"Indlæs spil"</string>
-    
+
     <string name="game_over">"game Over"</string>
-    
+
     <string name="start">"Starte"</string>
-    
+
     <string name="start_game">"Start spil"</string>
-    
+
     <string name="end">"Ende"</string>
-    
+
     <string name="end_game">"Afslut spil"</string>
-    
+
     <string name="stop">"Stop"</string>
-    
+
     <string name="stop_game">"Stop Spil"</string>
 
-    
 
     <string name="free">"Gratis"</string>
     <string name="pull">"Trække"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"Udklipsholder"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

@@ -3,7 +3,7 @@
 
     <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">Version 2.0.0</item>
+        <item name="line0">Version 2.0</item>
         <item name="line1">Re-branded "Donation" to "Pro". All previously free features and many of the new features are free.</item>
         <item name="line2">Added an app drawer for sub pages.</item>
         <item name="line5">Added ability to set default reminder settings for every reminder that you create.</item>

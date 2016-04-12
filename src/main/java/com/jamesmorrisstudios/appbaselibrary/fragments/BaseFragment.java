@@ -1,5 +1,6 @@
 package com.jamesmorrisstudios.appbaselibrary.fragments;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -12,12 +13,9 @@ import android.support.annotation.MenuRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
@@ -147,9 +145,13 @@ public abstract class BaseFragment extends Fragment {
     public void onPrepareOptionsMenu(@NonNull final Menu menu) {
         super.onPrepareOptionsMenu(menu);
         menu.clear();
-        if (usesOptionsMenu()) {
-            getActivity().getMenuInflater().inflate(getOptionsMenuRes(), menu);
-            postCreateOptionsMenu(menu);
+        Activity activity = getActivity();
+        if (usesOptionsMenu() && activity != null) {
+            MenuInflater mi = activity.getMenuInflater();
+            if (mi != null) {
+                mi.inflate(getOptionsMenuRes(), menu);
+                postCreateOptionsMenu(menu);
+            }
         }
     }
 
@@ -168,19 +170,19 @@ public abstract class BaseFragment extends Fragment {
     }
 
     private void saveStartData(@NonNull Bundle bundle) {
-        if(startBundle != null) {
+        if (startBundle != null) {
             bundle.putBundle("startBundle", startBundle);
         }
-        if(startScrollY != -1) {
+        if (startScrollY != -1) {
             bundle.putInt("startScrollY", startScrollY);
         }
     }
 
     private void restoreStartData(@NonNull Bundle bundle) {
-        if(bundle.containsKey("startBundle")) {
+        if (bundle.containsKey("startBundle")) {
             startBundle = bundle.getBundle("startBundle");
         }
-        if(bundle.containsKey("startScrollY")) {
+        if (bundle.containsKey("startScrollY")) {
             startScrollY = bundle.getInt("startScrollY");
         }
     }
@@ -218,7 +220,7 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             restoreStartData(savedInstanceState);
         }
         setStartData(startBundle, startScrollY);
@@ -234,20 +236,6 @@ public abstract class BaseFragment extends Fragment {
         registerBus();
         Bus.register(object);
         afterViewCreated();
-    }
-
-    @Override
-    @NonNull
-    public Animation onCreateAnimation(final int transit, final boolean enter, final int nextAnim) {
-        if (nextAnim == 0) {
-            if (enter) {
-                return AnimationUtils.loadAnimation(getActivity(), R.anim.left_to_center);
-            } else {
-                return AnimationUtils.loadAnimation(getActivity(), R.anim.center_to_right);
-            }
-        } else {
-            return AnimationUtils.loadAnimation(getActivity(), nextAnim);
-        }
     }
 
     /**

@@ -69,8 +69,7 @@ public final class CustomFilePickerActivity extends FilePickerActivity {
             currentFragment.setExtension(extensions);
         }
         // startPath is allowed to be null. In that case, default folder should be SD-card and not "/"
-        currentFragment.setArgs(startPath != null ? startPath : Environment.getExternalStorageDirectory().getPath(),
-                mode, allowMultiple, allowCreateDir);
+        currentFragment.setArgs(startPath != null ? startPath : Environment.getExternalStorageDirectory().getPath(), mode, allowMultiple, allowCreateDir);
         return currentFragment;
     }
 

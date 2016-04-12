@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"visualització"</string>
-    
+
     <string name="settings_category_sound">"sonar"</string>
-    
+
     <string name="settings_category_general">"General"</string>
-    
+
     <string name="settings_category_locale">"lloc"</string>
-    
+
     <string name="settings_category_theme">"tema"</string>
-    
+
     <string name="settings_category_notification">"Notificació"</string>
-    
+
     <string name="settings_category_notification_custom">"notificació personalitzada"</string>
-    
+
     <string name="settings_category_notification_override">"Notificació d'anul·lació"</string>
-    
+
     <string name="settings_category_defaults">"predeterminats"</string>
-    
+
     <string name="settings_category_random">"aleatorietat"</string>
-    
+
     <string name="settings_category_widget">"widget"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Mode immersiu"</string>
-    
+
     <string name="setting_sound_enable_primary">"Efectes de so"</string>
-    
+
     <string name="setting_music_enable_primary">"Música"</string>
-    
+
     <string name="setting_language_picker_primary">"Idioma"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Selector de to personalitzada"</string>
-    
+
     <string name="setting_theme_picker_primary">"Aplicació del tema"</string>
-    
+
     <string name="setting_accent_color_primary">"color de requadre"</string>
-    
+
     <string name="setting_primary_color_primary">"color primari"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Barra d'eines de color de text"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"Feu clic en l'acció"</string>
-    
+
     <string name="setting_notification_custom_primary">"permetre"</string>
-    
+
     <string name="setting_notification_button_style_primary">"estil botó"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Notificació en curs"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"notificacions en curs no s'admeten en SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"fons"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"color del text"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Primer dia de la setmana"</string>
-    
+
     <string name="setting_force_advanced_primary">"Sempre Mostra opcions avançades"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Desactivar per mostrar opcions avançades sobre una base per recordatori"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"acció swipe"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Clic obre App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Lliscar Obre App"</string>
-    
+
     <string name="setting_random_amount_primary">"atzar"</string>
-    
+
     <string name="setting_less_random_amount_primary">"menys aleatòria"</string>
-    
+
     <string name="setting_even_amount_primary">"Fins i tot"</string>
-    
+
     <string name="setting_widget_theme_primary">"tema"</string>
-    
+
     <string name="setting_widget_text_color_primary">"color del text"</string>
-    
+
     <string name="setting_override_vibrate_primary">"Anul·lació d'una notificació de vibració"</string>
-    
+
     <string name="setting_override_ringtone_primary">"reproducció de to de notificació d'anul·lació"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Això ha de ser habilitat per anul·lar el flux d'àudio"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"flux d'àudio de notificació d'anul·lació"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"Ignorar flux de la parla"</string>
 
-    
+
     <string name="time_millisecond">"mil·lisegon"</string>
-    
+
     <string name="time_milliseconds">"mil·lisegons"</string>
-    
+
     <string name="time_millisecond_abrev">"Senyora"</string>
-    
+
     <string name="time_second">"segon"</string>
-    
+
     <string name="time_seconds">"segons"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"minut"</string>
-    
+
     <string name="time_minutes">"acta"</string>
-    
+
     <string name="time_hour">"Hores"</string>
-    
+
     <string name="time_hours">"hores"</string>
-    
+
     <string name="time_day">"dia"</string>
-    
+
     <string name="time_days">"dies"</string>
-    
+
     <string name="time_daily">"diari"</string>
-    
+
     <string name="time_week">"setmana"</string>
-    
+
     <string name="time_weeks">"setmanes"</string>
-    
+
     <string name="time_weekly">"setmanal"</string>
-    
+
     <string name="time_month">"mes"</string>
-    
+
     <string name="time_months">"mesos"</string>
-    
+
     <string name="time_monthly">"Mensual"</string>
-    
+
     <string name="time_year">"Curs"</string>
-    
+
     <string name="time_years">"anys"</string>
-    
+
     <string name="time_yearly">"anual"</string>
 
-    
+
     <string name="meter">"Metre"</string>
-    
+
     <string name="meters">"metres"</string>
 
-    
+
     <string name="num_one">"1"</string>
-    
+
     <string name="num_two">"2"</string>
-    
+
     <string name="num_three">"tres"</string>
-    
+
     <string name="num_four">"4"</string>
-    
+
     <string name="num_five">"5"</string>
-    
+
     <string name="num_six">"Sis"</string>
-    
+
     <string name="num_seven">"07:00"</string>
-    
+
     <string name="num_eight">"08:00"</string>
-    
+
     <string name="num_nine">"09:00"</string>
-    
+
     <string name="num_ten">"Deu"</string>
 
-    
+
     <string name="num_first">"Primer"</string>
-    
+
     <string name="num_second">"segon"</string>
-    
+
     <string name="num_third">"Tercer"</string>
-    
+
     <string name="num_fourth">"Quart"</string>
-    
+
     <string name="num_fifth">"cinquè"</string>
-    
+
     <string name="num_sixth">"sisè"</string>
-    
+
     <string name="num_seventh">"setè"</string>
-    
+
     <string name="num_eighth">"vuitè"</string>
-    
+
     <string name="num_ninth">"Novè"</string>
-    
+
     <string name="num_tenth">"Desè"</string>
 
-    
+
     <string name="day_sunday">"diumenge"</string>
-    
+
     <string name="day_monday">"dilluns"</string>
-    
+
     <string name="day_tuesday">"dimarts"</string>
-    
+
     <string name="day_wednesday">"dimecres"</string>
-    
+
     <string name="day_thursday">"dijous"</string>
-    
+
     <string name="day_friday">"divendres"</string>
-    
+
     <string name="day_saturday">"dissabte"</string>
-    
+
     <string name="today">"avui"</string>
-    
+
     <string name="tomorrow">"matí"</string>
-    
+
     <string name="yesterday">"ahir"</string>
 
-    
+
     <string name="days_of_week">"Dia de la setmana"</string>
-    
+
     <string name="days_of_month">"Dies del Mes"</string>
-    
+
     <string name="days_of_year">"Dies de l'any"</string>
-    
+
     <string name="weeks_of_month">"Setmanes del mes"</string>
-    
+
     <string name="weeks_of_year">"Setmanes d'Any"</string>
-    
+
     <string name="months_of_year">"Mesos de l'any"</string>
 
-    
+
     <string name="next">"següent"</string>
-    
+
     <string name="previous">"anterior"</string>
-    
+
     <string name="back">"esquena"</string>
-    
+
     <string name="forward">"endavant"</string>
 
-    
+
     <string name="pattern_1">"patró 1"</string>
-    
+
     <string name="pattern_2">"patró 2"</string>
-    
+
     <string name="pattern_3">"patró 3"</string>
-    
+
     <string name="pattern_4">"4 del model"</string>
-    
+
     <string name="pattern_5">"El patró maig"</string>
-    
+
     <string name="pattern_6">"patró juny"</string>
 
-    
+
     <string name="select">"seleccionar"</string>
-    
+
     <string name="select_all">"Seleccionar tot"</string>
-    
+
     <string name="select_none">"Seleccioneu Cap"</string>
 
-    
+
     <string name="diff_difficulty">"dificultat"</string>
-    
+
     <string name="diff_select_difficulty">"Seleccioneu dificultat"</string>
-    
+
     <string name="diff_easy">"Fàcil"</string>
-    
+
     <string name="diff_normal">"normal"</string>
-    
+
     <string name="diff_hard">"dur"</string>
 
-    
+
     <string name="enable">"permetre"</string>
-    
+
     <string name="enabled">"habilitat"</string>
-    
+
     <string name="disable">"Desactivar"</string>
-    
+
     <string name="disabled">"discapacitat"</string>
-    
+
     <string name="lock">"bloquejar"</string>
-    
+
     <string name="unlock">"Descobrir"</string>
-    
+
     <string name="locked">"bloquejat"</string>
-    
+
     <string name="unlocked">"desbloquejat"</string>
-    
+
     <string name="open">"obert"</string>
-    
+
     <string name="close">"a prop"</string>
-    
+
     <string name="opened">"Obert"</string>
-    
+
     <string name="closed">"tancat"</string>
-    
+
     <string name="show">"show"</string>
-    
+
     <string name="hide">"amagar"</string>
-    
+
     <string name="shown">"mostrat"</string>
-    
+
     <string name="Hidden">"ocult"</string>
-    
+
     <string name="automatic">"automàtic"</string>
-    
+
     <string name="manual">"manual"</string>
-    
+
     <string name="online">"en línia"</string>
-    
+
     <string name="offline">"desconnectat"</string>
-    
+
     <string name="active">"Actiu"</string>
-    
+
     <string name="inactive">"inactiu"</string>
 
-    
+
     <string name="okay">"D'acord"</string>
-    
+
     <string name="cancel">"Cancel · lar"</string>
-    
+
     <string name="yes">"si"</string>
-    
+
     <string name="no">"No"</string>
-    
+
     <string name="maybe">"Pot ser"</string>
-    
+
     <string name="some">"alguns"</string>
-    
+
     <string name="none">"cap"</string>
-    
+
     <string name="all">"tots"</string>
-    
+
     <string name="set">"conjunt"</string>
-    
+
     <string name="unset">"no definit"</string>
-    
+
     <string name="last">"passat"</string>
-    
+
     <string name="first">"Primer"</string>
-    
+
     <string name="every">"Cada"</string>
-    
+
     <string name="other">"un altre"</string>
-    
+
     <string name="off">"apagat"</string>
-    
+
     <string name="on">"a"</string>
-    
+
     <string name="delete_reminder_prompt_title">"eliminar Recordatori"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Esteu segur que voleu suprimir aquest recordatori?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"eliminar Icona"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Esteu segur que voleu suprimir aquesta icona?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Descartar els canvis"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Esteu segur que voleu descartar els canvis?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Eliminar el tipus de vibració"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Esteu segur que voleu suprimir aquest tipus de vibració?"</string>
-    
+
     <string name="delete_location_prompt_title">"eliminar Location"</string>
-    
+
     <string name="delete_location_prompt_content">"Esteu segur que voleu suprimir aquesta ubicació?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"recordatori duplicat"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Esteu segur que voleu duplicar aquest recordatori?"</string>
-    
+
     <string name="include_log_prompt_title">"incloure Entrada"</string>
-    
+
     <string name="include_log_prompt_content">"Voleu incloure el registre de recordatori?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Incloure Avís predeterminat"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Vols incloure l'avís predeterminat?"</string>
-    
+
     <string name="start_new_game_title">"Iniciar nou joc"</string>
-    
+
     <string name="start_new_game_prompt">"Esteu segur que voleu executar un nou joc?"</string>
-    
+
     <string name="end_game_title">"fi del joc"</string>
-    
+
     <string name="end_game_prompt">"Esteu segur que voleu acabar aquest joc?"</string>
 
-    
+
     <string name="help">"ajudar"</string>
-    
+
     <string name="about">"sobre"</string>
-    
+
     <string name="settings">"ajustos"</string>
-    
+
     <string name="help_and_feedback">"Ajuda i Feedback"</string>
-    
+
     <string name="rate_app">"taxa d'Aplicació"</string>
-    
+
     <string name="more_apps">"Més aplicacions"</string>
-    
+
     <string name="tutorial">"tutorial"</string>
-    
+
     <string name="read">"llegir"</string>
-    
+
     <string name="watch">"Veure"</string>
-    
+
     <string name="links">"enllaços"</string>
-    
+
     <string name="licenses">"llicències"</string>
-    
+
     <string name="help_translate">"Ajuda a traduir"</string>
-    
+
     <string name="get_the_beta">"Obtenir el Beta"</string>
-    
+
     <string name="achievements">"assoliments"</string>
-    
+
     <string name="leaderboards">"taules de classificació"</string>
-    
+
     <string name="high_scores">"puntuacions més altes"</string>
-    
+
     <string name="my_circles">"Els meus Cercles"</string>
-    
+
     <string name="invitations">"invitacions"</string>
-    
+
     <string name="options">"opcions"</string>
-    
+
     <string name="game_options">"Opcions de joc"</string>
-    
+
     <string name="advanced_options">"Opcions avançades"</string>
-    
+
     <string name="automatch">"correspondència automàtica"</string>
-    
+
     <string name="guest">"convidat"</string>
 
-    
+
     <string name="light">"llum"</string>
-    
+
     <string name="light_transparent">"llum transparent"</string>
-    
+
     <string name="dark">"fosc"</string>
-    
+
     <string name="dark_transparent">"fosc transparent"</string>
-    
+
     <string name="transparent">"transparent"</string>
-    
+
     <string name="night">"Nit"</string>
-    
+
     <string name="black">"negre"</string>
-    
+
     <string name="white">"blanc"</string>
-    
+
     <string name="system">"sistema"</string>
-    
+
     <string name="light_text">"text llum"</string>
-    
+
     <string name="dark_text">"text fosc"</string>
 
-    
+
     <string name="red">"vermell"</string>
-    
+
     <string name="pink">"rosa"</string>
-    
+
     <string name="purple">"Porpra"</string>
-    
+
     <string name="deep_purple">"Lila fosc"</string>
-    
+
     <string name="indigo">"anyil"</string>
-    
+
     <string name="blue">"blau"</string>
-    
+
     <string name="light_blue">"Blau clar"</string>
-    
+
     <string name="cyan">"cien"</string>
-    
+
     <string name="teal">"Teal"</string>
-    
+
     <string name="green">"verd"</string>
-    
+
     <string name="light_green">"Llum verda"</string>
-    
+
     <string name="lime">"Lima"</string>
-    
+
     <string name="yellow">"groc"</string>
-    
+
     <string name="amber">"ambre"</string>
-    
+
     <string name="orange">"taronja"</string>
-    
+
     <string name="deep_orange">"taronja intens"</string>
-    
+
     <string name="brown">"marró"</string>
-    
+
     <string name="grey">"gris"</string>
-    
+
     <string name="blue_grey">"blau Gris"</string>
-    
+
     <string name="dark_grey">"Gris fosc"</string>
 
-    
+
     <string name="major">"major"</string>
-    
+
     <string name="minor">"menor"</string>
-    
+
     <string name="aux">"aux"</string>
-    
+
     <string name="version">"versió"</string>
-    
+
     <string name="production">"producció"</string>
-    
+
     <string name="beta">"beta"</string>
-    
+
     <string name="alpha">"alfa"</string>
 
-    
+
     <string name="icon">"icona"</string>
-    
+
     <string name="icons">"icones"</string>
-    
+
     <string name="custom_icon">"icona personal"</string>
-    
+
     <string name="custom_icons">"Les icones personalitzats"</string>
-    
+
     <string name="choose_icon">"triar icona"</string>
 
-    
+
     <string name="backup">"reserva"</string>
-    
+
     <string name="import_">"importació"</string>
-    
+
     <string name="export">"exportació"</string>
-    
+
     <string name="export_log">"Accedir a l'exportació"</string>
-    
+
     <string name="import_export">"Importació-exportació"</string>
-    
+
     <string name="export_location">"Ubicació d'exportació"</string>
-    
+
     <string name="import_failed">"Error en importar"</string>
-    
+
     <string name="import_canceled">"importació Cancel·lat"</string>
-    
+
     <string name="export_failed">"Fallada d'Exportació"</string>
-    
+
     <string name="export_canceled">"exportació Cancel·lat"</string>
-    
+
     <string name="import_complete">"importació completa"</string>
-    
+
     <string name="export_complete">"exportació completa"</string>
-    
+
     <string name="importing_please_wait">"La importació, si us plau esperi"</string>
-    
+
     <string name="exporting_please_wait">"L'exportació, si us plau esperi"</string>
 
-    
+
     <string name="snooze">"dormisquejar"</string>
-    
+
     <string name="snoozed">"posposat"</string>
-    
+
     <string name="auto_snooze">"acte Pausa"</string>
-    
+
     <string name="manual_snooze">"repetir Instruccions"</string>
 
-    
+
     <string name="message">"missatge"</string>
-    
+
     <string name="messages">"missatges"</string>
-    
+
     <string name="num_messages">"Nombre de missatges"</string>
-    
+
     <string name="edit_messages">"Edita missatges"</string>
-    
+
     <string name="view_messages">"veure Missatges"</string>
-    
+
     <string name="import_messages">"Importa missatges"</string>
-    
+
     <string name="message_separator">"Missatge Separador ||||"</string>
 
-    
+
     <string name="sign_in">"Registra `t"</string>
-    
+
     <string name="signed_in">"en signat"</string>
-    
+
     <string name="sign_in_failed">"Inicia sessió fallit"</string>
-    
+
     <string name="sign_out">"Tancar sessió"</string>
-    
+
     <string name="signed_out">"fora signat"</string>
 
-    
+
     <string name="low">"sota"</string>
-    
+
     <string name="mid">"mitjà"</string>
-    
+
     <string name="high">"alt"</string>
-    
+
     <string name="min">"min"</string>
-    
+
     <string name="max">"Max"</string>
-    
+
     <string name="minimum">"mínim"</string>
-    
+
     <string name="medium">"mitjà"</string>
-    
+
     <string name="maximum">"Màxim"</string>
-    
+
     <string name="small">"petit"</string>
-    
+
     <string name="large">"gran"</string>
-    
+
     <string name="short_">"Curt"</string>
-    
+
     <string name="long_">"llarg"</string>
-    
+
     <string name="slow">"Lent"</string>
-    
+
     <string name="fast">"Ràpid"</string>
-    
+
     <string name="quick">"Ràpid"</string>
-    
+
     <string name="narrow">"estret"</string>
-    
+
     <string name="wide">"ample"</string>
 
-    
+
     <string name="thank_you">"Gràcies"</string>
-    
+
     <string name="youre_welcome">"De res"</string>
-    
+
     <string name="please">"si us plau"</string>
 
-    
+
     <string name="you">"Vostè"</string>
-    
+
     <string name="me">"em"</string>
-    
+
     <string name="us">"nosaltres"</string>
-    
+
     <string name="we">"nosaltres"</string>
-    
+
     <string name="them">"ells"</string>
 
-    
+
     <string name="short_on">"el curt"</string>
-    
+
     <string name="medium_on">"mitjà de"</string>
-    
+
     <string name="long_on">"de llarg en"</string>
-    
+
     <string name="short_off">"fora curta"</string>
-    
+
     <string name="medium_off">"mitjà off"</string>
-    
+
     <string name="long_off">"Llargs passos fora"</string>
 
-    
+
     <string name="pro">"pro"</string>
-    
+
     <string name="pro_feature">"pro Característica"</string>
-    
+
     <string name="upgrade">"modernització"</string>
-    
+
     <string name="feature_requires_pro">"Aquesta funció requereix la versió Pro"</string>
-    
+
     <string name="feature_requires_pro_limited">"Aquesta funció està limitada en la versió gratuïta. Actualització a favor o suprimir un element existent."</string>
-    
+
     <string name="upgrade_to_pro">"Actualitza a pro"</string>
-    
+
     <string name="upgrade_now">"Actualitza ara"</string>
 
-    
+
     <string name="start_date">"Data d'inici"</string>
-    
+
     <string name="end_date">"Data de finalització"</string>
-    
+
     <string name="start_time">"L'hora d'inici"</string>
-    
+
     <string name="end_time">"Hora de finalització"</string>
-    
+
     <string name="end_type">"tipus fi"</string>
-    
+
     <string name="timing_type">"Tipus de temporització"</string>
-    
+
     <string name="edit_times">"Edició de temps"</string>
-    
+
     <string name="time">"Temps"</string>
-    
+
     <string name="times">"vegades"</string>
-    
+
     <string name="timing">"sincronització"</string>
-    
+
     <string name="all_time">"Tot el temps"</string>
-    
+
     <string name="every_week">"Cada setmana"</string>
-    
+
     <string name="lifetime">"tota la vida"</string>
-    
+
     <string name="forever">"sempre"</string>
-    
+
     <string name="time_period">"Període de temps"</string>
-    
+
     <string name="random">"atzar"</string>
-    
+
     <string name="randomly">"a l'atzar"</string>
-    
+
     <string name="less_random">"menys aleatòria"</string>
-    
+
     <string name="even">"Fins i tot"</string>
-    
+
     <string name="evenly">"igualment"</string>
-    
+
     <string name="specific">"específic"</string>
-    
+
     <string name="interval">"Interval"</string>
-    
+
     <string name="specific_times">"Els temps específics"</string>
-    
+
     <string name="repeat_every">"repetir cada"</string>
 
-    
+
     <string name="data_loaded">"dades carregades"</string>
-    
+
     <string name="file">"Dossier"</string>
-    
+
     <string name="local_storage">"emmagatzematge local"</string>
-    
+
     <string name="filename">"Nom de l'arxiu"</string>
 
-    
+
     <string name="permission_granted">"permís concedit"</string>
-    
+
     <string name="permission_denied">"Permís denegat"</string>
-    
+
     <string name="allow_if_any">"Permetre si qualsevol"</string>
-    
+
     <string name="allow_if_all">"Permetre si tot"</string>
-    
+
     <string name="disallow_if_any">"No permetre el seu cas"</string>
-    
+
     <string name="disallow_if_all">"No permetre si tot"</string>
-    
+
     <string name="trigger_if_any">"Disparador si qualsevol"</string>
-    
+
     <string name="trigger_if_all">"Disparador si tot"</string>
 
-    
+
     <string name="reminders">"recordatoris"</string>
-    
+
     <string name="no_reminder">"No hi ha Recordatoris"</string>
-    
+
     <string name="no_reminders_yet">"No té encara recordatoris"</string>
-    
+
     <string name="alerts_per_day">"Recordatoris Per Dia"</string>
-    
+
     <string name="number_of_reminders">"Nombre de recordatoris"</string>
 
-    
+
     <string name="changes_discarded">"Els canvis rebutjades"</string>
-    
+
     <string name="changes_saved">"canvis Guardats"</string>
-    
+
     <string name="no_changes">"sense canvis"</string>
-    
+
     <string name="select_at_least_one_item">"Seleccionar almenys un element"</string>
 
-    
+
     <string name="loading">"carregant"</string>
-    
+
     <string name="loaded">"carregat"</string>
-    
+
     <string name="loading_failed">"carregant No"</string>
-    
+
     <string name="loading_complete">"càrrega completa"</string>
-    
+
     <string name="error">"error"</string>
-    
+
     <string name="fail">"fallar"</string>
-    
+
     <string name="failed">"Fracassat"</string>
-    
+
     <string name="success">"èxit"</string>
-    
+
     <string name="successful">"reeixit"</string>
-    
+
     <string name="unsuccessful">"infructuós"</string>
-    
+
     <string name="valid">"vàlid"</string>
-    
+
     <string name="invalid">"Invàlid"</string>
-    
+
     <string name="complete">"complet"</string>
-    
+
     <string name="completed">"acabat"</string>
-    
+
     <string name="skipped">"omès"</string>
-    
+
     <string name="incomplete">"incomplet"</string>
-    
+
     <string name="dismiss">"acomiadar"</string>
-    
+
     <string name="dismissed">"acomiadat"</string>
-    
+
     <string name="acknowledge">"reconèixer"</string>
-    
+
     <string name="acknowledged">"admès"</string>
-    
+
     <string name="add">"afegir"</string>
-    
+
     <string name="added">"sumat"</string>
-    
+
     <string name="add_item">"Afegeix element"</string>
-    
+
     <string name="remove">"eliminar"</string>
-    
+
     <string name="removed">"eliminat"</string>
-    
+
     <string name="remove_item">"treure element"</string>
-    
+
     <string name="delete">"esborrar"</string>
-    
+
     <string name="deleted">"suprimit"</string>
-    
+
     <string name="duplicate">"duplicar"</string>
-    
+
     <string name="duplicated">"duplicada"</string>
-    
+
     <string name="restart">"Reinicia"</string>
-    
+
     <string name="restarting">"reinici"</string>
-    
+
     <string name="restarting_app_please_wait">"El reinici de l'aplicació, si us plau, esperi"</string>
 
-    
+
     <string name="map">"mapa"</string>
-    
+
     <string name="location">"Ubicació"</string>
-    
+
     <string name="locations">"ubicacions"</string>
-    
+
     <string name="latitude">"latitud"</string>
-    
+
     <string name="longitude">"longitud"</string>
-    
+
     <string name="radius">"ràdio"</string>
-    
+
     <string name="enter">"entrar"</string>
-    
+
     <string name="exit">"sortida"</string>
-    
+
     <string name="linger_time">"Temps de desconnexió"</string>
 
-    
+
     <string name="music">"Música"</string>
-    
+
     <string name="ring">"anell"</string>
-    
+
     <string name="speak_time">"Temps de parlar"</string>
-    
+
     <string name="speak_title">"Parla Títol"</string>
-    
+
     <string name="speak_message">"Parla Missatge"</string>
-    
+
     <string name="tone">"to"</string>
-    
+
     <string name="sound">"sonar"</string>
 
-    
+
     <string name="notification">"Notificació"</string>
-    
+
     <string name="notifications">"notificacions"</string>
-    
+
     <string name="select_notification">"Seleccioneu Notificació"</string>
 
-    
+
     <string name="vibrate">"vibrar"</string>
-    
+
     <string name="vibrate_pattern">"el tipus de vibració"</string>
-    
+
     <string name="vibrate_patterns">"Els patrons de vibració"</string>
-    
+
     <string name="create_vibrate_pattern">"Crear el tipus de vibració"</string>
 
-    
 
-    
     <string name="you_win">"Tu guanyes"</string>
-    
+
     <string name="you_won">"Vas guanyar"</string>
-    
+
     <string name="you_lost">"Has perdut"</string>
-    
+
     <string name="you_lose">"Tu perds"</string>
-    
+
     <string name="you_tied">"lligat"</string>
-    
+
     <string name="winner">"Guanyador"</string>
-    
+
     <string name="winners">"els guanyadors"</string>
-    
+
     <string name="loser">"Perdedor"</string>
-    
+
     <string name="Losers">"perdedors"</string>
 
-    
+
     <string name="number_of_players">"Nombre de jugadors"</string>
-    
+
     <string name="player">"jugador"</string>
-    
+
     <string name="players">"jugadors"</string>
-    
+
     <string name="player_1">"El jugador 1"</string>
-    
+
     <string name="player_2">"El jugador 2"</string>
-    
+
     <string name="player_3">"jugador 3"</string>
-    
+
     <string name="player_4">"jugador abril"</string>
-    
+
     <string name="player_5">"jugador 5"</string>
-    
+
     <string name="player_6">"player juny"</string>
-    
+
     <string name="team">"equip"</string>
-    
+
     <string name="teams">"equips"</string>
-    
+
     <string name="number_of_teams">"Nombre d'equips"</string>
-    
+
     <string name="team_1">"equip 1"</string>
-    
+
     <string name="team_2">"equip 2"</string>
-    
+
     <string name="team_3">"equip 3"</string>
-    
+
     <string name="team_4">"l'equip 4"</string>
 
-    
+
     <string name="requires_google_play">"Aquesta acció requereix Google Play Games"</string>
-    
+
     <string name="compare_profiles">"Comparar Juga Jocs Perfils"</string>
-    
+
     <string name="view_profile">"Veure perfil de Play Games"</string>
 
-    
+
     <string name="sponsored">"Sponsored"</string>
-    
+
     <string name="ads">"anuncis"</string>
-    
+
     <string name="remove_ads">"eliminar anuncis"</string>
-    
+
     <string name="ads_removed">"anuncis treuen"</string>
 
-    
+
     <string name="current_score">"puntuació actual"</string>
-    
+
     <string name="top_score">"Top Score"</string>
-    
+
     <string name="score">"puntuació"</string>
 
-    
+
     <string name="your_turn">"El teu torn"</string>
-    
+
     <string name="their_turn">"al seu torn,"</string>
-    
+
     <string name="turn">"torn"</string>
-    
+
     <string name="turns">"voltes"</string>
-    
+
     <string name="round">"ronda"</string>
-    
+
     <string name="rounds">"rondes"</string>
-    
+
     <string name="match">"partit"</string>
-    
+
     <string name="matches">"llumins"</string>
 
-    
+
     <string name="dollar">"dòlar"</string>
-    
+
     <string name="dollars">"dòlars"</string>
-    
+
     <string name="buy">"comprar"</string>
-    
+
     <string name="sell">"vendre"</string>
-    
+
     <string name="purchase">"compra"</string>
-    
+
     <string name="diamond">"diamant"</string>
-    
+
     <string name="diamonds">"diamants"</string>
 
-    
+
     <string name="rematch">"revenja"</string>
-    
+
     <string name="try_again">"Intentar de nou"</string>
-    
+
     <string name="touch_continue">"Toc per Continuar"</string>
-    
+
     <string name="touch_resume">"Toc per reprendre la"</string>
-    
+
     <string name="touch_edit">"Toc per editar"</string>
-    
+
     <string name="pause">"pausa"</string>
-    
+
     <string name="pause_game">"Joc de pausa"</string>
-    
+
     <string name="resume">"Resum"</string>
-    
+
     <string name="resume_game">"continuar partida"</string>
-    
+
     <string name="new_">"nou"</string>
-    
+
     <string name="new_game">"Nou joc"</string>
-    
+
     <string name="select_save">"Seleccioneu Desa"</string>
-    
+
     <string name="save">"Desar"</string>
-    
+
     <string name="save_game">"Guardar la partida"</string>
-    
+
     <string name="load">"càrrega"</string>
-    
+
     <string name="load_game">"Carregar el joc"</string>
-    
+
     <string name="game_over">"Fi del joc"</string>
-    
+
     <string name="start">"començament"</string>
-    
+
     <string name="start_game">"Inicia joc"</string>
-    
+
     <string name="end">"Final"</string>
-    
+
     <string name="end_game">"fi del joc"</string>
-    
+
     <string name="stop">"aturar"</string>
-    
+
     <string name="stop_game">"Joc de parada"</string>
 
-    
 
     <string name="free">"gratis"</string>
     <string name="pull">"llençar"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"porta-retalls"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

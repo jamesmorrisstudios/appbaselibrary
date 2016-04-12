@@ -46,7 +46,7 @@ public final class HelpFragment extends BaseFragment {
         Button rateNow = (Button) view.findViewById(R.id.btn_rateNow);
         Button moreBy = (Button) view.findViewById(R.id.btn_moreBy);
         Button beta = (Button) view.findViewById(R.id.btn_beta);
-        Button support = (Button) view.findViewById(R.id.btn_pro_upgrade);
+        Button proUpgrade = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button translate = (Button) view.findViewById(R.id.btn_translate);
         Button releaseNotes = (Button) view.findViewById(R.id.btn_release_notes);
         readHow.setOnClickListener(new View.OnClickListener() {
@@ -89,11 +89,11 @@ public final class HelpFragment extends BaseFragment {
                 Utils.openLink(getResources().getString(R.string.store_link_all));
             }
         });
-        support.setOnClickListener(new View.OnClickListener() {
+        proUpgrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HelpEvent.GOTO_SUPPORT.post();
-                Utils.openLink(getResources().getString(R.string.store_link_pro));
+                HelpEvent.GOTO_PRO_UPGRADE.post();
+                BaseActivity.AppBaseEvent.UPGRADE_TO_PRO.post();
             }
         });
         translate.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +103,7 @@ public final class HelpFragment extends BaseFragment {
                 Utils.openLink(getResources().getString(R.string.help_link_translate));
             }
         });
-        if(getResources().getString(R.string.store_link_beta) == null || getResources().getString(R.string.store_link_beta).isEmpty()) {
+        if (getResources().getString(R.string.store_link_beta) == null || getResources().getString(R.string.store_link_beta).isEmpty()) {
             beta.setVisibility(View.GONE);
         } else {
             beta.setVisibility(View.VISIBLE);
@@ -223,7 +223,7 @@ public final class HelpFragment extends BaseFragment {
         WATCH_TUTORIAL,
         GOTO_RATE,
         GOTO_MORE,
-        GOTO_SUPPORT,
+        GOTO_PRO_UPGRADE,
         GOTO_TRANSLATE,
         GOTO_RELEASE_NOTES;
 

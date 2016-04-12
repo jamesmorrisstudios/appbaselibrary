@@ -255,7 +255,7 @@ public final class Notifier {
     @NonNull
     private static RemoteViews getContentView(@NonNull final NotificationContent notif, final boolean snooze) {
         RemoteViews contentView;
-        if(notif.isWideButtons()) {
+        if (notif.isWideButtons()) {
             if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
                 contentView = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_dark_wide);
             } else {
@@ -319,7 +319,7 @@ public final class Notifier {
     @NonNull
     private static RemoteViews getContentBigView(@NonNull final NotificationContent notif, final boolean snooze) {
         RemoteViews contentViewBig;
-        if(notif.isWideButtons()) {
+        if (notif.isWideButtons()) {
             if (notif.themeText == NotificationContent.NotificationThemeText.LIGHT_TEXT) {
                 contentViewBig = new RemoteViews(AppBase.getContext().getPackageName(), R.layout.notification_big_dark_wide);
             } else {

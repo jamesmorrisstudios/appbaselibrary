@@ -113,7 +113,7 @@ public final class DialogBuildManager extends BaseBuildManager {
         new StartActivityForResultRequest(i, new StartActivityForResultRequest.OnStartActivityForResultListener() {
             @Override
             public void resultOk(Intent intent) {
-                if(request.allowMultiSelect) {
+                if (request.allowMultiSelect) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
                         ClipData clip = intent.getClipData();
                         if (clip != null) {
@@ -127,7 +127,7 @@ public final class DialogBuildManager extends BaseBuildManager {
                         ArrayList<String> paths = intent.getStringArrayListExtra(FilePickerActivity.EXTRA_PATHS);
                         if (paths != null) {
                             ArrayList<Uri> uris = new ArrayList<>();
-                            for (String path: paths) {
+                            for (String path : paths) {
                                 uris.add(Uri.parse(path));
                             }
                             request.onFileBrowserRequestListener.multiItemSelected(uris);
@@ -248,12 +248,12 @@ public final class DialogBuildManager extends BaseBuildManager {
 
             @Override
             public void permissionDenied() {
-
+                UtilsVersion.showPermDeniedSnackbar(false);
             }
 
             @Override
             public void shouldShowRationale() {
-
+                UtilsVersion.showPermDeniedSnackbar(true);
             }
         }).execute();
     }
@@ -298,21 +298,21 @@ public final class DialogBuildManager extends BaseBuildManager {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), UtilsTheme.getAlertDialogStyle())
                 .setTitle(request.title)
                 .setMessage(request.content);
-        if(request.onPositive != null) {
+        if (request.onPositive != null) {
             if (request.positiveText != null) {
                 builder.setPositiveButton(request.positiveText, request.onPositive);
             } else {
                 builder.setPositiveButton(R.string.okay, request.onPositive);
             }
         }
-        if(request.onNegative != null) {
+        if (request.onNegative != null) {
             if (request.negativeText != null) {
                 builder.setNegativeButton(request.negativeText, request.onNegative);
             } else {
                 builder.setNegativeButton(R.string.cancel, request.onNegative);
             }
         }
-        if(request.dismissListener != null) {
+        if (request.dismissListener != null) {
             builder.setOnDismissListener(request.dismissListener);
         }
         builder.show();
@@ -594,6 +594,12 @@ public final class DialogBuildManager extends BaseBuildManager {
         builder.build().show();
     }
 
+    /**
+     * Not Called Directly
+     * Creates an image view dialog
+     *
+     * @param request Dialog Request
+     */
     @Subscribe
     public final void onImageRequest(@NonNull final ImageRequest request) {
         ImageDialogBuilder builder = ImageDialogBuilder.with(getActivity(), UtilsTheme.getAlertDialogStyle())

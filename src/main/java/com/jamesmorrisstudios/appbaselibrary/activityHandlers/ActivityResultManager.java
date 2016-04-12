@@ -8,6 +8,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
@@ -93,17 +94,24 @@ public final class ActivityResultManager extends BaseBuildManager {
                 request.listener.permissionGranted();
                 return;
             }
+            for (String item : permList) {
+                Log.v("ActivityResultManager", "Perm: " + item);
+            }
+            boolean anyDenied = false;
             for (String perm : permList) {
                 if (getActivity().checkSelfPermission(perm) != PackageManager.PERMISSION_GRANTED) {
                     if (getActivity().shouldShowRequestPermissionRationale(perm)) {
                         request.listener.shouldShowRationale();
                         return;
                     }
-                    permissionRequests.add(request);
-                    AutoLockOrientation.enableAutoLock(getActivity());
-                    getActivity().requestPermissions(permList, request.requestCode);
-                    return;
+                    anyDenied = true;
                 }
+            }
+            if (anyDenied) {
+                permissionRequests.add(request);
+                AutoLockOrientation.enableAutoLock(getActivity());
+                getActivity().requestPermissions(permList, request.requestCode);
+                return;
             }
         }
         request.listener.permissionGranted();

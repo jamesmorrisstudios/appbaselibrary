@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"дисплей"</string>
-    
+
     <string name="settings_category_sound">"звук"</string>
-    
+
     <string name="settings_category_general">"загальний"</string>
-    
+
     <string name="settings_category_locale">"місце дії"</string>
-    
+
     <string name="settings_category_theme">"тема"</string>
-    
+
     <string name="settings_category_notification">"повідомлення"</string>
-    
+
     <string name="settings_category_notification_custom">"призначені для користувача повідомлення"</string>
-    
+
     <string name="settings_category_notification_override">"Override Повідомлення"</string>
-    
+
     <string name="settings_category_defaults">"Значення за замовчуванням"</string>
-    
+
     <string name="settings_category_random">"хаотичність"</string>
-    
+
     <string name="settings_category_widget">"Віджет"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Immersive Режим"</string>
-    
+
     <string name="setting_sound_enable_primary">"Звукові ефекти"</string>
-    
+
     <string name="setting_music_enable_primary">"музика"</string>
-    
+
     <string name="setting_language_picker_primary">"Мова"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Призначені для користувача Ringtone Picker"</string>
-    
+
     <string name="setting_theme_picker_primary">"App Theme"</string>
-    
+
     <string name="setting_accent_color_primary">"Accent Колір"</string>
-    
+
     <string name="setting_primary_color_primary">"основний колір"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Панель інструментів Колір тексту"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"натисніть дію"</string>
-    
+
     <string name="setting_notification_custom_primary">"включити"</string>
-    
+
     <string name="setting_notification_button_style_primary">"кнопка Стиль"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Постійна Повідомлення"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"Поточні повідомлення не підтримуються на SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"фон"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"колір тексту"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Перший день тижня"</string>
-    
+
     <string name="setting_force_advanced_primary">"Завжди показувати Додаткові параметри"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Відключити, щоб показати додаткові параметри розрахунку на одного нагадування основі"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"розмах дій"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Клацання відкриває App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Розмах відкриває App"</string>
-    
+
     <string name="setting_random_amount_primary">"випадковий"</string>
-    
+
     <string name="setting_less_random_amount_primary">"менше Випадкові"</string>
-    
+
     <string name="setting_even_amount_primary">"навіть"</string>
-    
+
     <string name="setting_widget_theme_primary">"тема"</string>
-    
+
     <string name="setting_widget_text_color_primary">"колір тексту"</string>
-    
+
     <string name="setting_override_vibrate_primary">"Повідомлення вібрують Override"</string>
-    
+
     <string name="setting_override_ringtone_primary">"Відтворення повідомлення тон Override"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Це повинен бути включений, щоб перекрити потік аудіо"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"Повідомлення аудиопоток Override"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"Потік мови Override"</string>
 
-    
+
     <string name="time_millisecond">"мілісекунди"</string>
-    
+
     <string name="time_milliseconds">"мілісекунди"</string>
-    
+
     <string name="time_millisecond_abrev">"Міссісіпі"</string>
-    
+
     <string name="time_second">"другий"</string>
-    
+
     <string name="time_seconds">"секунд"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"хвилин"</string>
-    
+
     <string name="time_minutes">"хвилин"</string>
-    
+
     <string name="time_hour">"годину"</string>
-    
+
     <string name="time_hours">"годин"</string>
-    
+
     <string name="time_day">"день"</string>
-    
+
     <string name="time_days">"днів"</string>
-    
+
     <string name="time_daily">"щодня"</string>
-    
+
     <string name="time_week">"тиждень"</string>
-    
+
     <string name="time_weeks">"тижня"</string>
-    
+
     <string name="time_weekly">"щотижня"</string>
-    
+
     <string name="time_month">"місяць"</string>
-    
+
     <string name="time_months">"місяці"</string>
-    
+
     <string name="time_monthly">"щомісяця"</string>
-    
+
     <string name="time_year">"рік"</string>
-    
+
     <string name="time_years">"років"</string>
-    
+
     <string name="time_yearly">"щороку"</string>
 
-    
+
     <string name="meter">"метр"</string>
-    
+
     <string name="meters">"метри"</string>
 
-    
+
     <string name="num_one">"один"</string>
-    
+
     <string name="num_two">"два"</string>
-    
+
     <string name="num_three">"три"</string>
-    
+
     <string name="num_four">"чотири"</string>
-    
+
     <string name="num_five">"п'ять"</string>
-    
+
     <string name="num_six">"шість"</string>
-    
+
     <string name="num_seven">"сім"</string>
-    
+
     <string name="num_eight">"вісім"</string>
-    
+
     <string name="num_nine">"дев'ять"</string>
-    
+
     <string name="num_ten">"десять"</string>
 
-    
+
     <string name="num_first">"Перший"</string>
-    
+
     <string name="num_second">"другий"</string>
-    
+
     <string name="num_third">"третій"</string>
-    
+
     <string name="num_fourth">"четвертий"</string>
-    
+
     <string name="num_fifth">"п'ятий"</string>
-    
+
     <string name="num_sixth">"шостий"</string>
-    
+
     <string name="num_seventh">"сьомий"</string>
-    
+
     <string name="num_eighth">"восьмий"</string>
-    
+
     <string name="num_ninth">"дев'ятий"</string>
-    
+
     <string name="num_tenth">"десятий"</string>
 
-    
+
     <string name="day_sunday">"Неділя"</string>
-    
+
     <string name="day_monday">"Понеділок"</string>
-    
+
     <string name="day_tuesday">"Вівторок"</string>
-    
+
     <string name="day_wednesday">"середа"</string>
-    
+
     <string name="day_thursday">"Четвер"</string>
-    
+
     <string name="day_friday">"п'ятниця"</string>
-    
+
     <string name="day_saturday">"субота"</string>
-    
+
     <string name="today">"сьогодні"</string>
-    
+
     <string name="tomorrow">"завтра"</string>
-    
+
     <string name="yesterday">"вчора"</string>
 
-    
+
     <string name="days_of_week">"дні тижня"</string>
-    
+
     <string name="days_of_month">"дні місяця"</string>
-    
+
     <string name="days_of_year">"дні року"</string>
-    
+
     <string name="weeks_of_month">"тижня Місяць"</string>
-    
+
     <string name="weeks_of_year">"тижня року"</string>
-    
+
     <string name="months_of_year">"місяців року"</string>
 
-    
+
     <string name="next">"наступного"</string>
-    
+
     <string name="previous">"Попередній"</string>
-    
+
     <string name="back">"назад"</string>
-    
+
     <string name="forward">"вперед"</string>
 
-    
+
     <string name="pattern_1">"схема 1"</string>
-    
+
     <string name="pattern_2">"шаблон 2"</string>
-    
+
     <string name="pattern_3">"Pattern 3"</string>
-    
+
     <string name="pattern_4">"Pattern 4"</string>
-    
+
     <string name="pattern_5">"схема 5"</string>
-    
+
     <string name="pattern_6">"Pattern 6"</string>
 
-    
+
     <string name="select">"вибрати"</string>
-    
+
     <string name="select_all">"Вибрати все"</string>
-    
+
     <string name="select_none">"Чи не вибирати"</string>
 
-    
+
     <string name="diff_difficulty">"трудність"</string>
-    
+
     <string name="diff_select_difficulty">"Виберіть Рівень складності"</string>
-    
+
     <string name="diff_easy">"легко"</string>
-    
+
     <string name="diff_normal">"нормальний"</string>
-    
+
     <string name="diff_hard">"жорсткий"</string>
 
-    
+
     <string name="enable">"включити"</string>
-    
+
     <string name="enabled">"включено"</string>
-    
+
     <string name="disable">"забороняти"</string>
-    
+
     <string name="disabled">"інвалід"</string>
-    
+
     <string name="lock">"замикати"</string>
-    
+
     <string name="unlock">"відімкнути"</string>
-    
+
     <string name="locked">"замкнений"</string>
-    
+
     <string name="unlocked">"розблокована"</string>
-    
+
     <string name="open">"відкритий"</string>
-    
+
     <string name="close">"близько"</string>
-    
+
     <string name="opened">"відкритий"</string>
-    
+
     <string name="closed">"закрито"</string>
-    
+
     <string name="show">"шоу"</string>
-    
+
     <string name="hide">"приховувати"</string>
-    
+
     <string name="shown">"показаний"</string>
-    
+
     <string name="Hidden">"прихований"</string>
-    
+
     <string name="automatic">"автоматичний"</string>
-    
+
     <string name="manual">"керівництво"</string>
-    
+
     <string name="online">"Інтернет"</string>
-    
+
     <string name="offline">"Offline"</string>
-    
+
     <string name="active">"активний"</string>
-    
+
     <string name="inactive">"неактивний"</string>
 
-    
+
     <string name="okay">"добре"</string>
-    
+
     <string name="cancel">"скасувати"</string>
-    
+
     <string name="yes">"Так"</string>
-    
+
     <string name="no">"Немає"</string>
-    
+
     <string name="maybe">"Може бути"</string>
-    
+
     <string name="some">"Дещо"</string>
-    
+
     <string name="none">"жоден"</string>
-    
+
     <string name="all">"всі"</string>
-    
+
     <string name="set">"встановити"</string>
-    
+
     <string name="unset">"Unset"</string>
-    
+
     <string name="last">"останній"</string>
-    
+
     <string name="first">"Перший"</string>
-    
+
     <string name="every">"кожен"</string>
-    
+
     <string name="other">"Інший"</string>
-    
+
     <string name="off">"вимкнено"</string>
-    
+
     <string name="on">"на"</string>
-    
+
     <string name="delete_reminder_prompt_title">"видалити нагадування"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Ви впевнені, що хочете видалити це нагадування?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"видалити іконку"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Ви впевнені, що хочете видалити цей значок?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Скасувати зміни"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Ви впевнені, що хочете скасувати зміни?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Видалити Вібровиклик Pattern"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Ви впевнені, що хочете видалити цей шаблон вібрувати?"</string>
-    
+
     <string name="delete_location_prompt_title">"видалити Розташування"</string>
-    
+
     <string name="delete_location_prompt_content">"Ви впевнені, що хочете видалити це місце розташування?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"повторювані нагадування"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Ви впевнені, що хочете дублювати це нагадування?"</string>
-    
+
     <string name="include_log_prompt_title">"включити Вхід"</string>
-    
+
     <string name="include_log_prompt_content">"ви хочете включити в журнал нагадування робити?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Увімкніть За замовчуванням нагадування"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Ви хочете, щоб включити нагадування за умовчанням?"</string>
-    
+
     <string name="start_new_game_title">"Нова гру"</string>
-    
+
     <string name="start_new_game_prompt">"Ви впевнені, що хочете почати нову гру?"</string>
-    
+
     <string name="end_game_title">"кінець гри"</string>
-    
+
     <string name="end_game_prompt">"Ви впевнені, що хочете закінчити цю гру?"</string>
 
-    
+
     <string name="help">"допомога"</string>
-    
+
     <string name="about">"про"</string>
-    
+
     <string name="settings">"настройки"</string>
-    
+
     <string name="help_and_feedback">"Допомога &amp; Зворотній зв'язок"</string>
-    
+
     <string name="rate_app">"оцінити App"</string>
-    
+
     <string name="more_apps">"Більше додатків"</string>
-    
+
     <string name="tutorial">"підручник"</string>
-    
+
     <string name="read">"зчитування"</string>
-    
+
     <string name="watch">"годинник"</string>
-    
+
     <string name="links">"зв'язку"</string>
-    
+
     <string name="licenses">"ліцензії"</string>
-    
+
     <string name="help_translate">"Допомога Перевести"</string>
-    
+
     <string name="get_the_beta">"Отримати бета-версію"</string>
-    
+
     <string name="achievements">"досягнення"</string>
-    
+
     <string name="leaderboards">"Leaderboards"</string>
-    
+
     <string name="high_scores">"Кращі результати"</string>
-    
+
     <string name="my_circles">"Мої кола"</string>
-    
+
     <string name="invitations">"запрошення"</string>
-    
+
     <string name="options">"опції"</string>
-    
+
     <string name="game_options">"гра Опції"</string>
-    
+
     <string name="advanced_options">"Розширені опції"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"гість"</string>
 
-    
+
     <string name="light">"світло"</string>
-    
+
     <string name="light_transparent">"светопрозрачнойг"</string>
-    
+
     <string name="dark">"темно"</string>
-    
+
     <string name="dark_transparent">"темний прозорий"</string>
-    
+
     <string name="transparent">"прозорий"</string>
-    
+
     <string name="night">"ніч"</string>
-    
+
     <string name="black">"чорний"</string>
-    
+
     <string name="white">"білий"</string>
-    
+
     <string name="system">"система"</string>
-    
+
     <string name="light_text">"легкий текст"</string>
-    
+
     <string name="dark_text">"темний текст"</string>
 
-    
+
     <string name="red">"червоний"</string>
-    
+
     <string name="pink">"рожевий"</string>
-    
+
     <string name="purple">"фіолетовий"</string>
-    
+
     <string name="deep_purple">"Deep Purple"</string>
-    
+
     <string name="indigo">"індиго"</string>
-    
+
     <string name="blue">"синій"</string>
-    
+
     <string name="light_blue">"Блакитний"</string>
-    
+
     <string name="cyan">"Cyan"</string>
-    
+
     <string name="teal">"чирок"</string>
-    
+
     <string name="green">"зелений"</string>
-    
+
     <string name="light_green">"Світло-зелений"</string>
-    
+
     <string name="lime">"лайм"</string>
-    
+
     <string name="yellow">"жовтий"</string>
-    
+
     <string name="amber">"бурштиновий"</string>
-    
+
     <string name="orange">"помаранчевий"</string>
-    
+
     <string name="deep_orange">"Deep Orange"</string>
-    
+
     <string name="brown">"коричневий"</string>
-    
+
     <string name="grey">"сірий"</string>
-    
+
     <string name="blue_grey">"синій Сірий"</string>
-    
+
     <string name="dark_grey">"Темно-сірий"</string>
 
-    
+
     <string name="major">"майор"</string>
-    
+
     <string name="minor">"другорядний"</string>
-    
+
     <string name="aux">"Aux"</string>
-    
+
     <string name="version">"версія"</string>
-    
+
     <string name="production">"виробництво"</string>
-    
+
     <string name="beta">"бета"</string>
-    
+
     <string name="alpha">"альфа"</string>
 
-    
+
     <string name="icon">"іконка"</string>
-    
+
     <string name="icons">"іконки"</string>
-    
+
     <string name="custom_icon">"призначені для користувача Іконка"</string>
-    
+
     <string name="custom_icons">"іконки"</string>
-    
+
     <string name="choose_icon">"Виберіть значок"</string>
 
-    
+
     <string name="backup">"резервна копія"</string>
-    
+
     <string name="import_">"імпорт"</string>
-    
+
     <string name="export">"експорт"</string>
-    
+
     <string name="export_log">"експорт Вхід"</string>
-    
+
     <string name="import_export">"Імпорт-експорт"</string>
-    
+
     <string name="export_location">"експорт Розташування"</string>
-    
+
     <string name="import_failed">"імпорт Помилка"</string>
-    
+
     <string name="import_canceled">"імпорт Скасовано"</string>
-    
+
     <string name="export_failed">"Помилка експорту"</string>
-    
+
     <string name="export_canceled">"експорт Скасовано"</string>
-    
+
     <string name="import_complete">"імпорт завершено"</string>
-    
+
     <string name="export_complete">"експортувати"</string>
-    
+
     <string name="importing_please_wait">"Імпорт, будь ласка, зачекайте"</string>
-    
+
     <string name="exporting_please_wait">"Експортний, будь ласка, зачекайте"</string>
 
-    
+
     <string name="snooze">"подрімати"</string>
-    
+
     <string name="snoozed">"відкладено"</string>
-    
+
     <string name="auto_snooze">"авто Snooze"</string>
-    
+
     <string name="manual_snooze">"Керівництво Snooze"</string>
 
-    
+
     <string name="message">"повідомлення"</string>
-    
+
     <string name="messages">"повідомлення"</string>
-    
+
     <string name="num_messages">"кількість повідомлень"</string>
-    
+
     <string name="edit_messages">"редагування повідомлення"</string>
-    
+
     <string name="view_messages">"Перегляд повідомлень"</string>
-    
+
     <string name="import_messages">"імпорт повідомлень"</string>
-    
+
     <string name="message_separator">"Повідомлення Сепаратор ||||"</string>
 
-    
+
     <string name="sign_in">"Увійти"</string>
-    
+
     <string name="signed_in">"підпис В"</string>
-    
+
     <string name="sign_in_failed">"Вхід не виконано"</string>
-    
+
     <string name="sign_out">"Вийти з аккаунта"</string>
-    
+
     <string name="signed_out">"виписався"</string>
 
-    
+
     <string name="low">"низький"</string>
-    
+
     <string name="mid">"середині"</string>
-    
+
     <string name="high">"висока"</string>
-    
+
     <string name="min">"Min"</string>
-    
+
     <string name="max">"Макс"</string>
-    
+
     <string name="minimum">"мінімальний"</string>
-    
+
     <string name="medium">"середа"</string>
-    
+
     <string name="maximum">"максимальна"</string>
-    
+
     <string name="small">"невеликий"</string>
-    
+
     <string name="large">"великий"</string>
-    
+
     <string name="short_">"короткий"</string>
-    
+
     <string name="long_">"Довго"</string>
-    
+
     <string name="slow">"повільний"</string>
-    
+
     <string name="fast">"швидко"</string>
-    
+
     <string name="quick">"швидкий"</string>
-    
+
     <string name="narrow">"вузький"</string>
-    
+
     <string name="wide">"широкий"</string>
 
-    
+
     <string name="thank_you">"Дякую"</string>
-    
+
     <string name="youre_welcome">"Ласкаво просимо"</string>
-    
+
     <string name="please">"будь ласка"</string>
 
-    
+
     <string name="you">"ви"</string>
-    
+
     <string name="me">"мені"</string>
-    
+
     <string name="us">"Нас"</string>
-    
+
     <string name="we">"ми"</string>
-    
+
     <string name="them">"їх"</string>
 
-    
+
     <string name="short_on">"короткі на"</string>
-    
+
     <string name="medium_on">"Середня по"</string>
-    
+
     <string name="long_on">"тривало"</string>
-    
+
     <string name="short_off">"короткі викл"</string>
-    
+
     <string name="medium_off">"середній викл"</string>
-    
+
     <string name="long_off">"довгі викл"</string>
 
-    
+
     <string name="pro">"професіонал"</string>
-    
+
     <string name="pro_feature">"Pro Feature"</string>
-    
+
     <string name="upgrade">"модернізація"</string>
-    
+
     <string name="feature_requires_pro">"Ця функція вимагає про версію"</string>
-    
+
     <string name="feature_requires_pro_limited">"Ця функція обмежена в безкоштовної версії. Оновлення до Pro або видалити існуючий елемент."</string>
-    
+
     <string name="upgrade_to_pro">"Оновлення до Pro"</string>
-    
+
     <string name="upgrade_now">"Оновити зараз"</string>
 
-    
+
     <string name="start_date">"Дата початку"</string>
-    
+
     <string name="end_date">"Дата закінчення"</string>
-    
+
     <string name="start_time">"Час початку"</string>
-    
+
     <string name="end_time">"час закінчення"</string>
-    
+
     <string name="end_type">"End Type"</string>
-    
+
     <string name="timing_type">"терміни Тип"</string>
-    
+
     <string name="edit_times">"редагувати Часи"</string>
-    
+
     <string name="time">"час"</string>
-    
+
     <string name="times">"раз"</string>
-    
+
     <string name="timing">"таймінг"</string>
-    
+
     <string name="all_time">"Весь час"</string>
-    
+
     <string name="every_week">"Кожного тижня"</string>
-    
+
     <string name="lifetime">"Час життя"</string>
-    
+
     <string name="forever">"назавжди"</string>
-    
+
     <string name="time_period">"Період часу"</string>
-    
+
     <string name="random">"випадковий"</string>
-    
+
     <string name="randomly">"випадково"</string>
-    
+
     <string name="less_random">"менше Випадкові"</string>
-    
+
     <string name="even">"навіть"</string>
-    
+
     <string name="evenly">"рівномірно"</string>
-    
+
     <string name="specific">"питома"</string>
-    
+
     <string name="interval">"інтервал"</string>
-    
+
     <string name="specific_times">"конкретні часи"</string>
-    
+
     <string name="repeat_every">"повторювати кожні"</string>
 
-    
+
     <string name="data_loaded">"завантажені дані"</string>
-    
+
     <string name="file">"файл"</string>
-    
+
     <string name="local_storage">"локальна пам'ять"</string>
-    
+
     <string name="filename">"ім'я файлу"</string>
 
-    
+
     <string name="permission_granted">"дозволяю"</string>
-    
+
     <string name="permission_denied">"відмовлено"</string>
-    
+
     <string name="allow_if_any">"Дозволити, якщо який-небудь"</string>
-    
+
     <string name="allow_if_all">"Дозволити, якщо все"</string>
-    
+
     <string name="disallow_if_any">"Забороняє якщо такі"</string>
-    
+
     <string name="disallow_if_all">"Забороніть, якщо все"</string>
-    
+
     <string name="trigger_if_any">"Trigger, якщо який-небудь"</string>
-    
+
     <string name="trigger_if_all">"Trigger, якщо все"</string>
 
-    
+
     <string name="reminders">"нагадування"</string>
-    
+
     <string name="no_reminder">"ні Нагадування"</string>
-    
+
     <string name="no_reminders_yet">"У вас немає нагадувань ще"</string>
-    
+
     <string name="alerts_per_day">"Нагадування в день"</string>
-    
+
     <string name="number_of_reminders">"кількість нагадувань"</string>
 
-    
+
     <string name="changes_discarded">"зміни Викинутий"</string>
-    
+
     <string name="changes_saved">"зміни збережені"</string>
-    
+
     <string name="no_changes">"немає змін"</string>
-    
+
     <string name="select_at_least_one_item">"Виберіть принаймні один елемент"</string>
 
-    
+
     <string name="loading">"завантаження"</string>
-    
+
     <string name="loaded">"навантажений"</string>
-    
+
     <string name="loading_failed">"Завантаження Не вдалося"</string>
-    
+
     <string name="loading_complete">"Завантаження завершено"</string>
-    
+
     <string name="error">"помилка"</string>
-    
+
     <string name="fail">"терпіти невдачу"</string>
-    
+
     <string name="failed">"не вдалося"</string>
-    
+
     <string name="success">"успіх"</string>
-    
+
     <string name="successful">"успішний"</string>
-    
+
     <string name="unsuccessful">"невдалий"</string>
-    
+
     <string name="valid">"дійсний"</string>
-    
+
     <string name="invalid">"недійсний"</string>
-    
+
     <string name="complete">"повний"</string>
-    
+
     <string name="completed">"завершений"</string>
-    
+
     <string name="skipped">"пропущені"</string>
-    
+
     <string name="incomplete">"незавершений"</string>
-    
+
     <string name="dismiss">"відхиляти"</string>
-    
+
     <string name="dismissed">"звільнений"</string>
-    
+
     <string name="acknowledge">"визнавати"</string>
-    
+
     <string name="acknowledged">"визнаний"</string>
-    
+
     <string name="add">"додавати"</string>
-    
+
     <string name="added">"доданої"</string>
-    
+
     <string name="add_item">"Додати елемент"</string>
-    
+
     <string name="remove">"видалення"</string>
-    
+
     <string name="removed">"вилучені"</string>
-    
+
     <string name="remove_item">"видалити елемент"</string>
-    
+
     <string name="delete">"видаляти"</string>
-    
+
     <string name="deleted">"віддалений"</string>
-    
+
     <string name="duplicate">"дублювати"</string>
-    
+
     <string name="duplicated">"дубльований"</string>
-    
+
     <string name="restart">"перезапуск"</string>
-    
+
     <string name="restarting">"перезапуск"</string>
-    
+
     <string name="restarting_app_please_wait">"Перезапуск програми, будь ласка, зачекайте"</string>
 
-    
+
     <string name="map">"карта"</string>
-    
+
     <string name="location">"Місцезнаходження"</string>
-    
+
     <string name="locations">"Місце проживання"</string>
-    
+
     <string name="latitude">"широта"</string>
-    
+
     <string name="longitude">"довгота"</string>
-    
+
     <string name="radius">"радіус"</string>
-    
+
     <string name="enter">"вводити"</string>
-    
+
     <string name="exit">"вихід"</string>
-    
+
     <string name="linger_time">"Затримайтеся Час"</string>
 
-    
+
     <string name="music">"музика"</string>
-    
+
     <string name="ring">"Каблучка"</string>
-    
+
     <string name="speak_time">"кажуть Час"</string>
-    
+
     <string name="speak_title">"кажуть Назва"</string>
-    
+
     <string name="speak_message">"говоріть повідомлення"</string>
-    
+
     <string name="tone">"тон"</string>
-    
+
     <string name="sound">"звук"</string>
 
-    
+
     <string name="notification">"повідомлення"</string>
-    
+
     <string name="notifications">"повідомлення"</string>
-    
+
     <string name="select_notification">"вибір повідомлення"</string>
 
-    
+
     <string name="vibrate">"вібрувати"</string>
-    
+
     <string name="vibrate_pattern">"вібрує Pattern"</string>
-    
+
     <string name="vibrate_patterns">"Вібродзвінок Візерунки"</string>
-    
+
     <string name="create_vibrate_pattern">"Створення Вібровиклик Pattern"</string>
 
-    
 
-    
     <string name="you_win">"Ти виграв"</string>
-    
+
     <string name="you_won">"Ти виграв"</string>
-    
+
     <string name="you_lost">"Ти програв"</string>
-    
+
     <string name="you_lose">"Ти програв"</string>
-    
+
     <string name="you_tied">"ви пов'язали"</string>
-    
+
     <string name="winner">"переможець"</string>
-    
+
     <string name="winners">"Переможці"</string>
-    
+
     <string name="loser">"Невдаха"</string>
-    
+
     <string name="Losers">"невдахи"</string>
 
-    
+
     <string name="number_of_players">"кількість гравців"</string>
-    
+
     <string name="player">"гравець"</string>
-    
+
     <string name="players">"гравці"</string>
-    
+
     <string name="player_1">"гравець 1"</string>
-    
+
     <string name="player_2">"гравець 2"</string>
-    
+
     <string name="player_3">"гравець 3"</string>
-    
+
     <string name="player_4">"гравець 4"</string>
-    
+
     <string name="player_5">"гравець 5"</string>
-    
+
     <string name="player_6">"гравець 6"</string>
-    
+
     <string name="team">"команда"</string>
-    
+
     <string name="teams">"команди"</string>
-    
+
     <string name="number_of_teams">"кількість команд"</string>
-    
+
     <string name="team_1">"команда 1"</string>
-    
+
     <string name="team_2">"команда 2"</string>
-    
+
     <string name="team_3">"команда 3"</string>
-    
+
     <string name="team_4">"команда 4"</string>
 
-    
+
     <string name="requires_google_play">"Ця дія вимагає Google Play Ігри"</string>
-    
+
     <string name="compare_profiles">"Порівняти Грати Ігри Профілі"</string>
-    
+
     <string name="view_profile">"Перегляд профілю Play Ігри"</string>
 
-    
+
     <string name="sponsored">"Рекламні"</string>
-    
+
     <string name="ads">"оголошення"</string>
-    
+
     <string name="remove_ads">"видалити оголошення"</string>
-    
+
     <string name="ads_removed">"оголошення вилучений"</string>
 
-    
+
     <string name="current_score">"Поточний рейтинг"</string>
-    
+
     <string name="top_score">"кращий рахунок"</string>
-    
+
     <string name="score">"рахунок"</string>
 
-    
+
     <string name="your_turn">"Твоя черга"</string>
-    
+
     <string name="their_turn">"їх Turn"</string>
-    
+
     <string name="turn">"поворот"</string>
-    
+
     <string name="turns">"повороти"</string>
-    
+
     <string name="round">"раунд"</string>
-    
+
     <string name="rounds">"раундів"</string>
-    
+
     <string name="match">"матч"</string>
-    
+
     <string name="matches">"сірники"</string>
 
-    
+
     <string name="dollar">"долар"</string>
-    
+
     <string name="dollars">"доларів"</string>
-    
+
     <string name="buy">"купити"</string>
-    
+
     <string name="sell">"продавати"</string>
-    
+
     <string name="purchase">"покупка"</string>
-    
+
     <string name="diamond">"ромб"</string>
-    
+
     <string name="diamonds">"діаманти"</string>
 
-    
+
     <string name="rematch">"матч-відповідь"</string>
-    
+
     <string name="try_again">"Спробуйте ще раз"</string>
-    
+
     <string name="touch_continue">"Натисніть, щоб продовжити"</string>
-    
+
     <string name="touch_resume">"Натисніть для резюме"</string>
-    
+
     <string name="touch_edit">"Натисніть, щоб змінити"</string>
-    
+
     <string name="pause">"пауза"</string>
-    
+
     <string name="pause_game">"пауза гри"</string>
-    
+
     <string name="resume">"Резюме"</string>
-    
+
     <string name="resume_game">"резюме гри"</string>
-    
+
     <string name="new_">"новий"</string>
-    
+
     <string name="new_game">"Нова гра"</string>
-    
+
     <string name="select_save">"Виберіть Зберегти"</string>
-    
+
     <string name="save">"зберегти"</string>
-    
+
     <string name="save_game">"зберегти гру"</string>
-    
+
     <string name="load">"навантаження"</string>
-    
+
     <string name="load_game">"Завантажити гру"</string>
-    
+
     <string name="game_over">"Гра завершена"</string>
-    
+
     <string name="start">"старт"</string>
-    
+
     <string name="start_game">"Почни гру"</string>
-    
+
     <string name="end">"кінець"</string>
-    
+
     <string name="end_game">"кінець гри"</string>
-    
+
     <string name="stop">"зупинити"</string>
-    
+
     <string name="stop_game">"зупинити гру"</string>
 
-    
 
     <string name="free">"безкоштовно"</string>
     <string name="pull">"витягувати"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"буфер обміну"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

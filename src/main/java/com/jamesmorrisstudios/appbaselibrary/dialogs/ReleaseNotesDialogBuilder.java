@@ -108,7 +108,7 @@ public final class ReleaseNotesDialogBuilder {
         btnSupport.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HelpFragment.HelpEvent.GOTO_SUPPORT.post();
+                HelpFragment.HelpEvent.GOTO_PRO_UPGRADE.post();
                 Utils.openLink(AppBase.getContext().getString(R.string.store_link_pro));
             }
         });

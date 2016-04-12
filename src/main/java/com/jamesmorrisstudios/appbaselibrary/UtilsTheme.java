@@ -540,7 +540,7 @@ public final class UtilsTheme {
      */
     public enum AccentColorTheme {
         RED, PINK, PURPLE, DEEP_PURPLE, INDIGO, BLUE, LIGHT_BLUE, CYAN,
-        TEAL, GREEN, LIGHT_GREEN, LIME, YELLOW, AMBER, ORANGE, DEEP_ORANGE;
+        TEAL, GREEN, LIGHT_GREEN, LIME, YELLOW, AMBER, ORANGE, DEEP_ORANGE
     }
 
     /**
@@ -549,7 +549,7 @@ public final class UtilsTheme {
     public enum PrimaryColorTheme {
         RED, PINK, PURPLE, DEEP_PURPLE, INDIGO, BLUE, LIGHT_BLUE, CYAN,
         TEAL, GREEN, LIGHT_GREEN, LIME, YELLOW, AMBER, ORANGE, DEEP_ORANGE,
-        BROWN, GREY, BLUE_GREY, DARK_GREY, WHITE;
+        BROWN, GREY, BLUE_GREY, DARK_GREY, WHITE
     }
 
 }

@@ -1,1030 +1,1027 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-    
+
     <string name="settings_category_display">"дисплей"</string>
-    
+
     <string name="settings_category_sound">"звук"</string>
-    
+
     <string name="settings_category_general">"Генеральная"</string>
-    
+
     <string name="settings_category_locale">"место действия"</string>
-    
+
     <string name="settings_category_theme">"тема"</string>
-    
+
     <string name="settings_category_notification">"уведомление"</string>
-    
+
     <string name="settings_category_notification_custom">"Пользовательские уведомления"</string>
-    
+
     <string name="settings_category_notification_override">"Override Уведомление"</string>
-    
+
     <string name="settings_category_defaults">"Значения по умолчанию"</string>
-    
+
     <string name="settings_category_random">"хаотичность"</string>
-    
+
     <string name="settings_category_widget">"Виджет"</string>
 
-    
+
     <string name="setting_immersive_enable_primary">"Immersive Режим"</string>
-    
+
     <string name="setting_sound_enable_primary">"Звуковые эффекты"</string>
-    
+
     <string name="setting_music_enable_primary">"Музыка"</string>
-    
+
     <string name="setting_language_picker_primary">"язык"</string>
-    
+
     <string name="setting_ringtone_picker_enable_primary">"Пользовательские Ringtone Picker"</string>
-    
+
     <string name="setting_theme_picker_primary">"App Theme"</string>
-    
+
     <string name="setting_accent_color_primary">"Accent Цвет"</string>
-    
+
     <string name="setting_primary_color_primary">"Основной цвет"</string>
-    
+
     <string name="setting_toolbar_text_color_primary">"Панель инструментов Цвет текста"</string>
 
-    
+
     <string name="setting_notification_click_action_primary">"Нажмите действие"</string>
-    
+
     <string name="setting_notification_custom_primary">"включить"</string>
-    
+
     <string name="setting_notification_button_style_primary">"Кнопка Стиль"</string>
-    
+
     <string name="setting_notification_ongoing_primary">"Постоянная Уведомление"</string>
-    
+
     <string name="setting_notification_ongoing_secondary">"Текущие уведомления не поддерживаются на SmartWatches"</string>
-    
+
     <string name="setting_notification_theme_primary">"Задний план"</string>
-    
+
     <string name="setting_notification_theme_text_primary">"Цвет текста"</string>
-    
+
     <string name="setting_first_day_of_week_primary">"Воскресенье"</string>
-    
+
     <string name="setting_force_advanced_primary">"Всегда показывать Дополнительные параметры"</string>
-    
+
     <string name="setting_force_advanced_secondary">"Отключить, чтобы показать дополнительные параметры расчета на одного напоминания основе"</string>
-    
+
     <string name="setting_notification_swipe_away_action_primary">"Размах действий"</string>
-    
+
     <string name="setting_notification_click_open_primary">"Щелчок открывает App"</string>
-    
+
     <string name="setting_notification_swipe_away_open_primary">"Размах открывает App"</string>
-    
+
     <string name="setting_random_amount_primary">"случайный"</string>
-    
+
     <string name="setting_less_random_amount_primary">"Меньше Случайные"</string>
-    
+
     <string name="setting_even_amount_primary">"Даже"</string>
-    
+
     <string name="setting_widget_theme_primary">"тема"</string>
-    
+
     <string name="setting_widget_text_color_primary">"Цвет текста"</string>
-    
+
     <string name="setting_override_vibrate_primary">"Уведомление вибрируют Override"</string>
-    
+
     <string name="setting_override_ringtone_primary">"Воспроизведение уведомление тон Override"</string>
-    
+
     <string name="setting_override_ringtone_secondary">"Это должен быть включен, чтобы перекрыть поток аудио"</string>
-    
+
     <string name="setting_override_ringtone_stream_primary">"Уведомление аудиопоток Override"</string>
-    
+
     <string name="setting_override_speech_stream_primary">"Поток речи Override"</string>
 
-    
+
     <string name="time_millisecond">"миллисекунды"</string>
-    
+
     <string name="time_milliseconds">"миллисекунды"</string>
-    
+
     <string name="time_millisecond_abrev">"Миз"</string>
-    
+
     <string name="time_second">"второй"</string>
-    
+
     <string name="time_seconds">"секунд"</string>
-    
+
     <string name="time_second_abrev">"s"</string>
-    
+
     <string name="time_minute">"Минут"</string>
-    
+
     <string name="time_minutes">"Минут"</string>
-    
+
     <string name="time_hour">"Час"</string>
-    
+
     <string name="time_hours">"Часов"</string>
-    
+
     <string name="time_day">"День"</string>
-    
+
     <string name="time_days">"Дней"</string>
-    
+
     <string name="time_daily">"Ежедневно"</string>
-    
+
     <string name="time_week">"Неделю"</string>
-    
+
     <string name="time_weeks">"Недели"</string>
-    
+
     <string name="time_weekly">"еженедельно"</string>
-    
+
     <string name="time_month">"Месяц"</string>
-    
+
     <string name="time_months">"Месяцы"</string>
-    
+
     <string name="time_monthly">"ежемесячно"</string>
-    
+
     <string name="time_year">"Год"</string>
-    
+
     <string name="time_years">"лет"</string>
-    
+
     <string name="time_yearly">"каждый год"</string>
 
-    
+
     <string name="meter">"метр"</string>
-    
+
     <string name="meters">"метры"</string>
 
-    
+
     <string name="num_one">"Один"</string>
-    
+
     <string name="num_two">"Два"</string>
-    
+
     <string name="num_three">"Три"</string>
-    
+
     <string name="num_four">"4"</string>
-    
+
     <string name="num_five">"5"</string>
-    
+
     <string name="num_six">"Шесть"</string>
-    
+
     <string name="num_seven">"Семь"</string>
-    
+
     <string name="num_eight">"8"</string>
-    
+
     <string name="num_nine">"9"</string>
-    
+
     <string name="num_ten">"10"</string>
 
-    
+
     <string name="num_first">"Первый"</string>
-    
+
     <string name="num_second">"второй"</string>
-    
+
     <string name="num_third">"В третьих"</string>
-    
+
     <string name="num_fourth">"четвертый"</string>
-    
+
     <string name="num_fifth">"пятый"</string>
-    
+
     <string name="num_sixth">"шестой"</string>
-    
+
     <string name="num_seventh">"Седьмой"</string>
-    
+
     <string name="num_eighth">"Восьмой"</string>
-    
+
     <string name="num_ninth">"девятый"</string>
-    
+
     <string name="num_tenth">"десятый"</string>
 
-    
+
     <string name="day_sunday">"Воскресенье"</string>
-    
+
     <string name="day_monday">"Понедельник"</string>
-    
+
     <string name="day_tuesday">"Вторник"</string>
-    
+
     <string name="day_wednesday">"Среда"</string>
-    
+
     <string name="day_thursday">"Четверг"</string>
-    
+
     <string name="day_friday">"Пятница"</string>
-    
+
     <string name="day_saturday">"Суббота"</string>
-    
+
     <string name="today">"Cегодня"</string>
-    
+
     <string name="tomorrow">"Завтра"</string>
-    
+
     <string name="yesterday">"Вчера"</string>
 
-    
+
     <string name="days_of_week">"Дни недели"</string>
-    
+
     <string name="days_of_month">"Дни месяца"</string>
-    
+
     <string name="days_of_year">"Дни года"</string>
-    
+
     <string name="weeks_of_month">"Недели Месяц"</string>
-    
+
     <string name="weeks_of_year">"Недели года"</string>
-    
+
     <string name="months_of_year">"Месяцев года"</string>
 
-    
+
     <string name="next">"следующий"</string>
-    
+
     <string name="previous">"предыдущий"</string>
-    
+
     <string name="back">"назад"</string>
-    
+
     <string name="forward">"Вперед"</string>
 
-    
+
     <string name="pattern_1">"Схема 1"</string>
-    
+
     <string name="pattern_2">"шаблон 2"</string>
-    
+
     <string name="pattern_3">"Pattern 3"</string>
-    
+
     <string name="pattern_4">"Pattern 4"</string>
-    
+
     <string name="pattern_5">"Схема 5"</string>
-    
+
     <string name="pattern_6">"Pattern 6"</string>
 
-    
+
     <string name="select">"Выбрать"</string>
-    
+
     <string name="select_all">"Выбрать все"</string>
-    
+
     <string name="select_none">"Не выбирать"</string>
 
-    
+
     <string name="diff_difficulty">"трудность"</string>
-    
+
     <string name="diff_select_difficulty">"Выберите Уровень сложности"</string>
-    
+
     <string name="diff_easy">"Легко"</string>
-    
+
     <string name="diff_normal">"Нормальный"</string>
-    
+
     <string name="diff_hard">"Жесткий"</string>
 
-    
+
     <string name="enable">"включить"</string>
-    
+
     <string name="enabled">"Включено"</string>
-    
+
     <string name="disable">"запрещать"</string>
-    
+
     <string name="disabled">"Отключено"</string>
-    
+
     <string name="lock">"Замок"</string>
-    
+
     <string name="unlock">"отпереть"</string>
-    
+
     <string name="locked">"запертый"</string>
-    
+
     <string name="unlocked">"разблокирована"</string>
-    
+
     <string name="open">"открыто"</string>
-    
+
     <string name="close">"Закрыть"</string>
-    
+
     <string name="opened">"открытый"</string>
-    
+
     <string name="closed">"закрыто"</string>
-    
+
     <string name="show">"Показать"</string>
-    
+
     <string name="hide">"Спрятать"</string>
-    
+
     <string name="shown">"показанный"</string>
-    
+
     <string name="Hidden">"скрытый"</string>
-    
+
     <string name="automatic">"автоматический"</string>
-    
+
     <string name="manual">"Руководство"</string>
-    
+
     <string name="online">"В сети"</string>
-    
+
     <string name="offline">"Не в сети"</string>
-    
+
     <string name="active">"активный"</string>
-    
+
     <string name="inactive">"Неактивный"</string>
 
-    
+
     <string name="okay">"ОК"</string>
-    
+
     <string name="cancel">"Отмена"</string>
-    
+
     <string name="yes">"да"</string>
-    
+
     <string name="no">"Нет"</string>
-    
+
     <string name="maybe">"Может быть"</string>
-    
+
     <string name="some">"Некоторые"</string>
-    
+
     <string name="none">"Никто"</string>
-    
+
     <string name="all">"Все"</string>
-    
+
     <string name="set">"Задавать"</string>
-    
+
     <string name="unset">"Unset"</string>
-    
+
     <string name="last">"Последний"</string>
-    
+
     <string name="first">"Первый"</string>
-    
+
     <string name="every">"каждый"</string>
-    
+
     <string name="other">"Другие"</string>
-    
+
     <string name="off">"от"</string>
-    
+
     <string name="on">"На"</string>
-    
+
     <string name="delete_reminder_prompt_title">"Удалить напоминание"</string>
-    
+
     <string name="delete_reminder_prompt_content">"Вы уверены, что хотите удалить это напоминание?"</string>
-    
+
     <string name="delete_custom_icon_prompt_title">"Удалить иконку"</string>
-    
+
     <string name="delete_custom_icon_prompt_content">"Вы уверены, что хотите удалить этот значок?"</string>
-    
+
     <string name="cancel_reminder_prompt_title">"Отменить изменения"</string>
-    
+
     <string name="cancel_reminder_prompt_content">"Вы уверены, что хотите отменить изменения?"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_title">"Удалить Вибровызов Pattern"</string>
-    
+
     <string name="delete_vibrate_pattern_prompt_content">"Вы уверены, что хотите удалить этот шаблон вибрировать?"</string>
-    
+
     <string name="delete_location_prompt_title">"Удалить Расположение"</string>
-    
+
     <string name="delete_location_prompt_content">"Вы уверены, что хотите удалить это местоположение?"</string>
-    
+
     <string name="duplicate_reminder_prompt_title">"Повторяющиеся напоминание"</string>
-    
+
     <string name="duplicate_reminder_prompt_content">"Вы уверены, что хотите дублировать это напоминание?"</string>
-    
+
     <string name="include_log_prompt_title">"Включить Вход"</string>
-    
+
     <string name="include_log_prompt_content">"вы хотите включить в журнал напоминания делать?"</string>
-    
+
     <string name="include_default_reminder_prompt_title">"Включите По умолчанию напоминание"</string>
-    
+
     <string name="include_default_reminder_prompt_content">"Вы хотите, чтобы включить напоминание по умолчанию?"</string>
-    
+
     <string name="start_new_game_title">"Начать новую игру"</string>
-    
+
     <string name="start_new_game_prompt">"Вы уверены, что хотите начать новую игру?"</string>
-    
+
     <string name="end_game_title">"Конец игры"</string>
-    
+
     <string name="end_game_prompt">"Вы уверены, что хотите закончить эту игру?"</string>
 
-    
+
     <string name="help">"Помогите"</string>
-    
+
     <string name="about">"Около"</string>
-    
+
     <string name="settings">"настройки"</string>
-    
+
     <string name="help_and_feedback">"Помощь &amp; Обратная связь"</string>
-    
+
     <string name="rate_app">"Оценить App"</string>
-    
+
     <string name="more_apps">"Больше приложений"</string>
-    
+
     <string name="tutorial">"Руководство"</string>
-    
+
     <string name="read">"Читать"</string>
-    
+
     <string name="watch">"Смотреть"</string>
-    
+
     <string name="links">"связи"</string>
-    
+
     <string name="licenses">"Лицензии"</string>
-    
+
     <string name="help_translate">"Помощь Перевести"</string>
-    
+
     <string name="get_the_beta">"Получить бета-версию"</string>
-    
+
     <string name="achievements">"достижения"</string>
-    
+
     <string name="leaderboards">"Leaderboards"</string>
-    
+
     <string name="high_scores">"Высокие баллы"</string>
-    
+
     <string name="my_circles">"Мои круги"</string>
-    
+
     <string name="invitations">"Приглашения"</string>
-    
+
     <string name="options">"Опции"</string>
-    
+
     <string name="game_options">"Игра Опции"</string>
-    
+
     <string name="advanced_options">"Расширенные опции"</string>
-    
+
     <string name="automatch">"Automatch"</string>
-    
+
     <string name="guest">"гость"</string>
 
-    
+
     <string name="light">"Легкий"</string>
-    
+
     <string name="light_transparent">"светопрозрачнойг"</string>
-    
+
     <string name="dark">"Темно"</string>
-    
+
     <string name="dark_transparent">"Темный прозрачный"</string>
-    
+
     <string name="transparent">"прозрачный"</string>
-    
+
     <string name="night">"Ночь"</string>
-    
+
     <string name="black">"черный"</string>
-    
+
     <string name="white">"белый"</string>
-    
+
     <string name="system">"система"</string>
-    
+
     <string name="light_text">"Легкий текст"</string>
-    
+
     <string name="dark_text">"Темный текст"</string>
 
-    
+
     <string name="red">"красный"</string>
-    
+
     <string name="pink">"розовый"</string>
-    
+
     <string name="purple">"Пурпурный"</string>
-    
+
     <string name="deep_purple">"Темно-фиолетовый"</string>
-    
+
     <string name="indigo">"Индиго"</string>
-    
+
     <string name="blue">"синий"</string>
-    
+
     <string name="light_blue">"Светло-синий"</string>
-    
+
     <string name="cyan">"Cyan"</string>
-    
+
     <string name="teal">"чирок"</string>
-    
+
     <string name="green">"зеленый"</string>
-    
+
     <string name="light_green">"Светло-зеленый"</string>
-    
+
     <string name="lime">"Лайм"</string>
-    
+
     <string name="yellow">"желтый"</string>
-    
+
     <string name="amber">"янтарный"</string>
-    
+
     <string name="orange">"оранжевый"</string>
-    
+
     <string name="deep_orange">"Deep Orange"</string>
-    
+
     <string name="brown">"коричневый"</string>
-    
+
     <string name="grey">"Серый"</string>
-    
+
     <string name="blue_grey">"Серо-голубой"</string>
-    
+
     <string name="dark_grey">"Темно-серый"</string>
 
-    
+
     <string name="major">"Главный"</string>
-    
+
     <string name="minor">"Незначительный"</string>
-    
+
     <string name="aux">"Aux"</string>
-    
+
     <string name="version">"Версия"</string>
-    
+
     <string name="production">"производство"</string>
-    
+
     <string name="beta">"Бета"</string>
-    
+
     <string name="alpha">"Альфа"</string>
 
-    
+
     <string name="icon">"Значок"</string>
-    
+
     <string name="icons">"Иконки"</string>
-    
+
     <string name="custom_icon">"Пользовательские Иконка"</string>
-    
+
     <string name="custom_icons">"Иконки"</string>
-    
+
     <string name="choose_icon">"Выберите значок"</string>
 
-    
+
     <string name="backup">"Резервное копирование"</string>
-    
+
     <string name="import_">"Импортировать"</string>
-    
+
     <string name="export">"экспорт"</string>
-    
+
     <string name="export_log">"Экспорт Вход"</string>
-    
+
     <string name="import_export">"Импорт Экспорт"</string>
-    
+
     <string name="export_location">"Экспорт Расположение"</string>
-    
+
     <string name="import_failed">"Импорт Ошибка"</string>
-    
+
     <string name="import_canceled">"Импорт Отменено"</string>
-    
+
     <string name="export_failed">"Ошибка экспорта"</string>
-    
+
     <string name="export_canceled">"Экспорт Отменено"</string>
-    
+
     <string name="import_complete">"Импорт завершен"</string>
-    
+
     <string name="export_complete">"Экспортировать"</string>
-    
+
     <string name="importing_please_wait">"Импортирование, пожалуйста, подождите"</string>
-    
+
     <string name="exporting_please_wait">"Экспортный, пожалуйста, подождите"</string>
 
-    
+
     <string name="snooze">"вздремнуть"</string>
-    
+
     <string name="snoozed">"Отложено"</string>
-    
+
     <string name="auto_snooze">"Авто Snooze"</string>
-    
+
     <string name="manual_snooze">"Руководство Snooze"</string>
 
-    
+
     <string name="message">"Сообщение"</string>
-    
+
     <string name="messages">"Сообщения"</string>
-    
+
     <string name="num_messages">"Количество сообщений"</string>
-    
+
     <string name="edit_messages">"Редактирование сообщения"</string>
-    
+
     <string name="view_messages">"Просмотр сообщений"</string>
-    
+
     <string name="import_messages">"Импорт сообщений"</string>
-    
+
     <string name="message_separator">"Сообщение Сепаратор ||||"</string>
 
-    
+
     <string name="sign_in">"Войти в систему"</string>
-    
+
     <string name="signed_in">"Вошел"</string>
-    
+
     <string name="sign_in_failed">"Ошибка входа"</string>
-    
+
     <string name="sign_out">"Выход"</string>
-    
+
     <string name="signed_out">"выписался"</string>
 
-    
+
     <string name="low">"Низкий"</string>
-    
+
     <string name="mid">"середине"</string>
-    
+
     <string name="high">"Высокая"</string>
-    
+
     <string name="min">"Min"</string>
-    
+
     <string name="max">"Максимум"</string>
-    
+
     <string name="minimum">"минимальный"</string>
-    
+
     <string name="medium">"средний"</string>
-    
+
     <string name="maximum">"максимальная"</string>
-    
+
     <string name="small">"Маленький"</string>
-    
+
     <string name="large">"большой"</string>
-    
+
     <string name="short_">"короткий"</string>
-    
+
     <string name="long_">"Длинный"</string>
-    
+
     <string name="slow">"Медленный"</string>
-    
+
     <string name="fast">"Быстро"</string>
-    
+
     <string name="quick">"Быстро"</string>
-    
+
     <string name="narrow">"узкий"</string>
-    
+
     <string name="wide">"широкий"</string>
 
-    
+
     <string name="thank_you">"Спасибо"</string>
-    
+
     <string name="youre_welcome">"Пожалуйста"</string>
-    
+
     <string name="please">"пожалуйста"</string>
 
-    
+
     <string name="you">"Вы"</string>
-    
+
     <string name="me">"меня"</string>
-    
+
     <string name="us">"Нас"</string>
-    
+
     <string name="we">"Мы"</string>
-    
+
     <string name="them">"Их"</string>
 
-    
+
     <string name="short_on">"Короткие на"</string>
-    
+
     <string name="medium_on">"Средняя по"</string>
-    
+
     <string name="long_on">"продолжительно"</string>
-    
+
     <string name="short_off">"Короткие выкл"</string>
-    
+
     <string name="medium_off">"Средний выкл"</string>
-    
+
     <string name="long_off">"Длинные выкл"</string>
 
-    
+
     <string name="pro">"профессионал"</string>
-    
+
     <string name="pro_feature">"Pro Feature"</string>
-    
+
     <string name="upgrade">"Обновить"</string>
-    
+
     <string name="feature_requires_pro">"Эта функция требует про версию"</string>
-    
+
     <string name="feature_requires_pro_limited">"Эта функция ограничена в бесплатной версии. Обновление до Pro или удалить существующий элемент."</string>
-    
+
     <string name="upgrade_to_pro">"Обновление до Pro"</string>
-    
+
     <string name="upgrade_now">"Обнови сейчас"</string>
 
-    
+
     <string name="start_date">"Дата начала"</string>
-    
+
     <string name="end_date">"Дата окончания"</string>
-    
+
     <string name="start_time">"Время начала"</string>
-    
+
     <string name="end_time">"Время окончания"</string>
-    
+
     <string name="end_type">"End Type"</string>
-    
+
     <string name="timing_type">"Сроки Тип"</string>
-    
+
     <string name="edit_times">"Редактировать Времена"</string>
-    
+
     <string name="time">"Время"</string>
-    
+
     <string name="times">"раз"</string>
-    
+
     <string name="timing">"тайминг"</string>
-    
+
     <string name="all_time">"Все время"</string>
-    
+
     <string name="every_week">"Каждую неделю"</string>
-    
+
     <string name="lifetime">"Продолжительность жизни"</string>
-    
+
     <string name="forever">"навсегда"</string>
-    
+
     <string name="time_period">"Временной период"</string>
-    
+
     <string name="random">"случайный"</string>
-    
+
     <string name="randomly">"Случайно"</string>
-    
+
     <string name="less_random">"Меньше Случайные"</string>
-    
+
     <string name="even">"Даже"</string>
-    
+
     <string name="evenly">"Равномерно"</string>
-    
+
     <string name="specific">"Конкретный"</string>
-    
+
     <string name="interval">"интервал"</string>
-    
+
     <string name="specific_times">"Конкретные времена"</string>
-    
+
     <string name="repeat_every">"Повторять каждые"</string>
 
-    
+
     <string name="data_loaded">"Загруженные данные"</string>
-    
+
     <string name="file">"файл"</string>
-    
+
     <string name="local_storage">"Локальное хранилище"</string>
-    
+
     <string name="filename">"Имя файла"</string>
 
-    
+
     <string name="permission_granted">"Разрешение получено"</string>
-    
+
     <string name="permission_denied">"Доступ запрещен"</string>
-    
+
     <string name="allow_if_any">"Разрешить, если какой-либо"</string>
-    
+
     <string name="allow_if_all">"Разрешить, если все"</string>
-    
+
     <string name="disallow_if_any">"Запрещает если таковые"</string>
-    
+
     <string name="disallow_if_all">"Запретите, если все"</string>
-    
+
     <string name="trigger_if_any">"Trigger, если какой-либо"</string>
-    
+
     <string name="trigger_if_all">"Trigger, если все"</string>
 
-    
+
     <string name="reminders">"Напоминания"</string>
-    
+
     <string name="no_reminder">"Нет Напоминания"</string>
-    
+
     <string name="no_reminders_yet">"У вас нет напоминаний еще"</string>
-    
+
     <string name="alerts_per_day">"Напоминания в день"</string>
-    
+
     <string name="number_of_reminders">"Количество напоминаний"</string>
 
-    
+
     <string name="changes_discarded">"Изменения Выброшенный"</string>
-    
+
     <string name="changes_saved">"Изменения сохранены"</string>
-    
+
     <string name="no_changes">"Без изменений"</string>
-    
+
     <string name="select_at_least_one_item">"Выберите по крайней мере один элемент"</string>
 
-    
+
     <string name="loading">"загрузка"</string>
-    
+
     <string name="loaded">"нагруженный"</string>
-    
+
     <string name="loading_failed">"Загрузка Не удалось"</string>
-    
+
     <string name="loading_complete">"Загрузка завершена"</string>
-    
+
     <string name="error">"ошибка"</string>
-    
+
     <string name="fail">"Потерпеть неудачу"</string>
-    
+
     <string name="failed">"Не смогли"</string>
-    
+
     <string name="success">"успех"</string>
-    
+
     <string name="successful">"успешный"</string>
-    
+
     <string name="unsuccessful">"неудачный"</string>
-    
+
     <string name="valid">"действительный"</string>
-    
+
     <string name="invalid">"Инвалид"</string>
-    
+
     <string name="complete">"полный"</string>
-    
+
     <string name="completed">"Завершенный"</string>
-    
+
     <string name="skipped">"Пропущенные"</string>
-    
+
     <string name="incomplete">"незавершенный"</string>
-    
+
     <string name="dismiss">"отклонять"</string>
-    
+
     <string name="dismissed">"уволенный"</string>
-    
+
     <string name="acknowledge">"признавать"</string>
-    
+
     <string name="acknowledged">"признанный"</string>
-    
+
     <string name="add">"Добавить"</string>
-    
+
     <string name="added">"добавленной"</string>
-    
+
     <string name="add_item">"Добавить элемент"</string>
-    
+
     <string name="remove">"Удалить"</string>
-    
+
     <string name="removed">"Удалены"</string>
-    
+
     <string name="remove_item">"Убрать предмет"</string>
-    
+
     <string name="delete">"Удалить"</string>
-    
+
     <string name="deleted">"удаленный"</string>
-    
+
     <string name="duplicate">"дублировать"</string>
-    
+
     <string name="duplicated">"Дублированный"</string>
-    
+
     <string name="restart">"Перезапуск"</string>
-    
+
     <string name="restarting">"Перезапуск"</string>
-    
+
     <string name="restarting_app_please_wait">"Перезапуск приложения, пожалуйста, подождите"</string>
 
-    
+
     <string name="map">"карта"</string>
-    
+
     <string name="location">"Место нахождения"</string>
-    
+
     <string name="locations">"Место проживания"</string>
-    
+
     <string name="latitude">"широта"</string>
-    
+
     <string name="longitude">"долгота"</string>
-    
+
     <string name="radius">"Радиус"</string>
-    
+
     <string name="enter">"Войти"</string>
-    
+
     <string name="exit">"Выход"</string>
-    
+
     <string name="linger_time">"Задержитесь Время"</string>
 
-    
+
     <string name="music">"Музыка"</string>
-    
+
     <string name="ring">"Кольцо"</string>
-    
+
     <string name="speak_time">"Говорят Время"</string>
-    
+
     <string name="speak_title">"Говорят Название"</string>
-    
+
     <string name="speak_message">"Говорите сообщение"</string>
-    
+
     <string name="tone">"тон"</string>
-    
+
     <string name="sound">"звук"</string>
 
-    
+
     <string name="notification">"уведомление"</string>
-    
+
     <string name="notifications">"Уведомления"</string>
-    
+
     <string name="select_notification">"Выбор уведомления"</string>
 
-    
+
     <string name="vibrate">"вибрировать"</string>
-    
+
     <string name="vibrate_pattern">"вибрируйте Pattern"</string>
-    
+
     <string name="vibrate_patterns">"Виброзвонок Узоры"</string>
-    
+
     <string name="create_vibrate_pattern">"Создание Вибровызов Pattern"</string>
 
-    
 
-    
     <string name="you_win">"Ты победил"</string>
-    
+
     <string name="you_won">"Ты победил"</string>
-    
+
     <string name="you_lost">"Ты проиграла"</string>
-    
+
     <string name="you_lose">"Ты проиграл"</string>
-    
+
     <string name="you_tied">"Вы связали"</string>
-    
+
     <string name="winner">"победитель"</string>
-    
+
     <string name="winners">"Победители"</string>
-    
+
     <string name="loser">"Неудачник"</string>
-    
+
     <string name="Losers">"неудачники"</string>
 
-    
+
     <string name="number_of_players">"Количество игроков"</string>
-    
+
     <string name="player">"игрок"</string>
-    
+
     <string name="players">"игроки"</string>
-    
+
     <string name="player_1">"Игрок 1"</string>
-    
+
     <string name="player_2">"Игрок 2"</string>
-    
+
     <string name="player_3">"Игрок 3"</string>
-    
+
     <string name="player_4">"Игрок 4"</string>
-    
+
     <string name="player_5">"Игрок 5"</string>
-    
+
     <string name="player_6">"Игрок 6"</string>
-    
+
     <string name="team">"команда"</string>
-    
+
     <string name="teams">"Команды"</string>
-    
+
     <string name="number_of_teams">"Количество команд"</string>
-    
+
     <string name="team_1">"Команда 1"</string>
-    
+
     <string name="team_2">"Команда 2"</string>
-    
+
     <string name="team_3">"Команда 3"</string>
-    
+
     <string name="team_4">"Команда 4"</string>
 
-    
+
     <string name="requires_google_play">"Это действие требует Google Play Игры"</string>
-    
+
     <string name="compare_profiles">"Сравнить Играть Игры Профили"</string>
-    
+
     <string name="view_profile">"Просмотр профиля Play Игры"</string>
 
-    
+
     <string name="sponsored">"Рекламные"</string>
-    
+
     <string name="ads">"Объявления"</string>
-    
+
     <string name="remove_ads">"Убрать рекламу"</string>
-    
+
     <string name="ads_removed">"Объявления Удален"</string>
 
-    
+
     <string name="current_score">"Текущий рейтинг"</string>
-    
+
     <string name="top_score">"Наивысший балл"</string>
-    
+
     <string name="score">"Гол"</string>
 
-    
+
     <string name="your_turn">"Твой ход"</string>
-    
+
     <string name="their_turn">"Их Turn"</string>
-    
+
     <string name="turn">"Очередь"</string>
-    
+
     <string name="turns">"Повороты"</string>
-    
+
     <string name="round">"Круглый"</string>
-    
+
     <string name="rounds">"Раундов"</string>
-    
+
     <string name="match">"Совпадение"</string>
-    
+
     <string name="matches">"Матчи"</string>
 
-    
+
     <string name="dollar">"доллар"</string>
-    
+
     <string name="dollars">"долларов"</string>
-    
+
     <string name="buy">"купить"</string>
-    
+
     <string name="sell">"продавать"</string>
-    
+
     <string name="purchase">"покупка"</string>
-    
+
     <string name="diamond">"ромб"</string>
-    
+
     <string name="diamonds">"бриллианты"</string>
 
-    
+
     <string name="rematch">"ответный матч"</string>
-    
+
     <string name="try_again">"Попробуй еще раз"</string>
-    
+
     <string name="touch_continue">"Нажмите, чтобы продолжить"</string>
-    
+
     <string name="touch_resume">"Нажмите для резюме"</string>
-    
+
     <string name="touch_edit">"Нажмите, чтобы изменить"</string>
-    
+
     <string name="pause">"Пауза"</string>
-    
+
     <string name="pause_game">"Пауза игры"</string>
-    
+
     <string name="resume">"Продолжить"</string>
-    
+
     <string name="resume_game">"Продолжить игру"</string>
-    
+
     <string name="new_">"новый"</string>
-    
+
     <string name="new_game">"Новая игра"</string>
-    
+
     <string name="select_save">"Выберите Сохранить"</string>
-    
+
     <string name="save">"Сохранить"</string>
-    
+
     <string name="save_game">"Сохранить игру"</string>
-    
+
     <string name="load">"нагрузка"</string>
-    
+
     <string name="load_game">"Загрузить игру"</string>
-    
+
     <string name="game_over">"Игра закончена"</string>
-    
+
     <string name="start">"Начало"</string>
-    
+
     <string name="start_game">"Начать игру"</string>
-    
+
     <string name="end">"Конец"</string>
-    
+
     <string name="end_game">"Конец игры"</string>
-    
+
     <string name="stop">"Стоп"</string>
-    
+
     <string name="stop_game">"Остановить игру"</string>
 
-    
 
     <string name="free">"Свободно"</string>
     <string name="pull">"Тянуть"</string>
@@ -1084,8 +1081,6 @@
     <string name="clipboard">"буфер обмена"</string>
 
 
-
-    
     <string name="test_string_ignore">test</string>
 
 </resources>

@@ -316,6 +316,12 @@
     <!-- (Two State Options) Inactive -->
     <string name="inactive">Inactive</string>
 
+    <!-- (Prompts) Clear -->
+    <string name="clear">Clear</string>
+    <!-- (Prompts) Clear Log -->
+    <string name="clear_log">Clear Log</string>
+    <!-- (Prompts) Log cleared -->
+    <string name="log_cleared">Log cleared</string>
     <!-- (Prompts) OK -->
     <string name="okay">OK</string>
     <!-- (Prompts) Cancel -->
@@ -348,6 +354,10 @@
     <string name="off">Off</string>
     <!-- (Prompts) On -->
     <string name="on">On</string>
+    <!-- (Prompts) Clear Reminder Log -->
+    <string name="clear_reminder_log_prompt_title">Clear Reminder Log</string>
+    <!-- (Prompts) Are you sure you want to clear the reminder log? -->
+    <string name="clear_reminder_log_prompt_content">Are you sure you want to clear the reminder log?</string>
     <!-- (Prompts) Delete Reminder -->
     <string name="delete_reminder_prompt_title">Delete Reminder</string>
     <!-- (Prompts) Are you sure you want to delete this reminder? -->
@@ -658,6 +668,8 @@
 
     <!-- (Pro Upgrade) Pro -->
     <string name="pro">Pro</string>
+    <!-- (Pro Upgrade) Pro Unlocked -->
+    <string name="pro_unlocked">Pro Unlocked</string>
     <!-- (Pro Upgrade) Pro Feature -->
     <string name="pro_feature">Pro Feature</string>
     <!-- (Pro Upgrade) Upgrade -->
@@ -1105,7 +1117,6 @@
     <string name="missed">Missed</string>
     <string name="nothing">Nothing</string>
     <string name="clipboard">Clipboard</string>
-
 
 
     <!-- Test String IGNORE -->

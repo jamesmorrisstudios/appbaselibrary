@@ -35,25 +35,32 @@ public abstract class BaseRecycleContainer {
     }
 
     /**
-     * Cannot return null
+     * Override when supporting a header
      *
      * @return The header object
      */
     @NonNull
-    public abstract BaseRecycleItem getHeader();
+    public BaseRecycleItem getHeader() {
+        return new BaseRecycleItem();
+    }
 
     /**
-     * Cannot return null
+     * Override when supporting an item
      *
      * @return The row item object
      */
     @NonNull
-    public abstract BaseRecycleItem getItem();
+    public BaseRecycleItem getItem() {
+        return new BaseRecycleItem();
+    }
 
     /**
+     * Override if supporting a filter.
      * @return Filter Text
      */
     @NonNull
-    public abstract String getFilterText();
+    public String getFilterText() {
+        return "";
+    }
 
 }

@@ -87,6 +87,7 @@ public final class PromptDialogRequest extends AbstractDialogRequest {
 
     /**
      * Sets the dismiss listener to callback if the dialog is dismissed for any reason
+     *
      * @param dismissListener dismissListener
      */
     public final void setOnDismissListener(DialogInterface.OnDismissListener dismissListener) {

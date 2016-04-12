@@ -14,7 +14,7 @@
         <activity
             android:name="com.jamesmorrisstudios.appbaselibrary.activities.CustomFilePickerActivity"
             android:label="@string/app_name"
-            android:theme="@style/FilePickerThemeToolLight"></activity>
+            android:theme="@style/FilePickerThemeToolLight" />
 
         <!--
             Launcher/Restart activity. Can launch the app to any specific page.
@@ -25,7 +25,7 @@
             android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:noHistory="true"
-            android:theme="@style/AppThemeNoBackground"></activity>
+            android:theme="@style/AppThemeNoBackground" />
 
     </application>
 

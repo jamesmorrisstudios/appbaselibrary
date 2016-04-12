@@ -25,7 +25,7 @@ public final class PermissionRequest extends AbstractActivityRequest {
     public PermissionRequest(@NonNull final AppPermission permission, @NonNull final OnPermissionRequestListener listener) {
         this.permissions = new AppPermission[]{permission};
         this.listener = listener;
-        this.requestCode = Utils.generateUniqueInt();
+        this.requestCode = Utils.getNextRequestCode();
     }
 
     /**
@@ -37,7 +37,7 @@ public final class PermissionRequest extends AbstractActivityRequest {
     public PermissionRequest(@NonNull final AppPermission[] permissions, @NonNull final OnPermissionRequestListener listener) {
         this.permissions = permissions;
         this.listener = listener;
-        this.requestCode = Utils.generateUniqueInt();
+        this.requestCode = Utils.getNextRequestCode();
     }
 
     /**

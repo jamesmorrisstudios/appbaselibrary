@@ -30,7 +30,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Toast;
 
 import com.jamesmorrisstudios.appbaselibrary.activities.AppLauncherActivity;
 import com.jamesmorrisstudios.appbaselibrary.activityHandlers.SnackbarRequest;
@@ -49,6 +48,7 @@ public final class Utils {
     public static final String stringType = "UTF-8";
     public static final String stringType16 = "UTF-16";
     public final static Random rand = new Random();
+    private static int requestCode = 1;
 
     /**
      * Displays a popup toast for a short time
@@ -56,6 +56,7 @@ public final class Utils {
      * @param text Text to display
      * @return true if display, False if error
      */
+    /*
     public static boolean toastShort(@NonNull final String text) {
         try {
             Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_SHORT).show();
@@ -64,6 +65,7 @@ public final class Utils {
             return false;
         }
     }
+    */
 
     /**
      * Displays a popup toast for a long time
@@ -71,6 +73,7 @@ public final class Utils {
      * @param text Text to display
      * @return true if display, False if error
      */
+    /*
     public static boolean toastLong(@NonNull final String text) {
         try {
             Toast.makeText(AppBase.getContext(), text, Toast.LENGTH_LONG).show();
@@ -79,6 +82,7 @@ public final class Utils {
             return false;
         }
     }
+    */
 
     /**
      * Backwards compatible method of removing the global layout listener
@@ -237,7 +241,7 @@ public final class Utils {
         // Check if no view has focus:
         View view = activity.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
@@ -259,7 +263,7 @@ public final class Utils {
      */
     public static void restartApp(@NonNull final Activity activity, @Nullable final String page, final int scrollY, @Nullable final Bundle bundle) {
         Intent i = new Intent(activity, AppLauncherActivity.class);
-        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         if (page != null) {
             i.putExtra("PAGE", page);
         }
@@ -270,7 +274,8 @@ public final class Utils {
             i.putExtra("EXTRAS", bundle);
         }
         AppBase.getContext().startActivity(i);
-        activity.finish();
+        Log.v("Utils", "Restart App");
+        //activity.finish();
     }
 
     /**
@@ -376,6 +381,17 @@ public final class Utils {
     /**
      * @return Unique Int
      */
+    public static int getNextRequestCode() {
+        requestCode++;
+        if (requestCode >= 256) {
+            requestCode = 1;
+        }
+        return requestCode;
+    }
+
+    /**
+     * @return Unique Int
+     */
     public static int generateUniqueInt() {
         return (int) UUID.randomUUID().getLeastSignificantBits();
     }
@@ -385,6 +401,13 @@ public final class Utils {
      */
     public static int generateUniqueIntLower16() {
         return Math.abs(UtilsBits.intToShort(generateUniqueInt()));
+    }
+
+    /**
+     * @return Unique Int only using lower 8 bits
+     */
+    public static int generateUniqueIntLower8() {
+        return Math.abs(UtilsBits.intToByte(generateUniqueInt()));
     }
 
 }
