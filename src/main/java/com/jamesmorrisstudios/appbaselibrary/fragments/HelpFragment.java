@@ -127,6 +127,9 @@ public final class HelpFragment extends BaseFragment {
                 Utils.openLink(getResources().getString(R.string.help_about_site));
             }
         });
+        if(UtilsVersion.isPro()) {
+            proUpgrade.setVisibility(View.GONE);
+        }
         return view;
     }
 

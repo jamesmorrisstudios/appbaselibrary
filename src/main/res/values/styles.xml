@@ -79,8 +79,17 @@
 
     </style>
 
+    <!-- Spinner title coloring -->
+    <style name="spinnerLight" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/textLightMain</item>
+    </style>
+
+    <style name="spinnerDark" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/textDarkMain</item>
+    </style>
+
     <!-- Toolbar -->
-    <style name="baseToolbarLight" parent="ThemeOverlay.AppCompat">
+    <style name="baseToolbarLight" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/textLightMain</item>
         <!-- Title text -->
         <item name="android:textColorPrimary">@color/textLightMain</item>
@@ -92,10 +101,12 @@
         <item name="android:textColorSecondary">@color/textDarkMain</item>
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
+        <!-- Spinner title color -->
+        <item name="spinnerTitleItemStyle">@style/spinnerLight</item>
     </style>
 
     <!-- dark toolbar -->
-    <style name="baseToolbarDark" parent="ThemeOverlay.AppCompat">
+    <style name="baseToolbarDark" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/textLightMain</item>
         <item name="colorControlHighlight">@color/textDarkDivider</item>
         <item name="colorButtonNormal">@color/textLightMain</item>
@@ -110,10 +121,12 @@
         <item name="android:textColorSecondary">@android:color/white</item>
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
+        <!-- Spinner title color -->
+        <item name="spinnerTitleItemStyle">@style/spinnerLight</item>
     </style>
 
     <!-- Toolbar -->
-    <style name="baseToolbarLightDarkText" parent="ThemeOverlay.AppCompat">
+    <style name="baseToolbarLightDarkText" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/textDarkMain</item>
         <!-- Title text -->
         <item name="android:textColorPrimary">@color/textDarkMain</item>
@@ -125,10 +138,12 @@
         <item name="android:textColorSecondary">@color/textLightMain</item>
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/BlackDrawerIconStyle</item>
+        <!-- Spinner title color -->
+        <item name="spinnerTitleItemStyle">@style/spinnerDark</item>
     </style>
 
     <!-- dark toolbar -->
-    <style name="baseToolbarDarkDarkText" parent="ThemeOverlay.AppCompat">
+    <style name="baseToolbarDarkDarkText" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="colorControlNormal">@color/textDarkMain</item>
         <item name="colorControlHighlight">@color/textDarkDivider</item>
         <item name="colorButtonNormal">@color/textDarkMain</item>
@@ -143,6 +158,8 @@
         <item name="android:textColorSecondary">@color/textDarkMain</item>
         <!-- This will change drawer icon -->
         <item name="drawerArrowStyle">@style/BlackDrawerIconStyle</item>
+        <!-- Spinner title color -->
+        <item name="spinnerTitleItemStyle">@style/spinnerDark</item>
     </style>
 
     <!-- Toolbar Popup -->
@@ -163,30 +180,6 @@
     <!-- Dark Toolbar Popup -->
     <style name="toolbarPopupDarkDarkText" parent="ThemeOverlay.AppCompat">
         <item name="android:textColorPrimary">@color/textLightMain</item>
-    </style>
-
-
-    <style name="AppSpinnerLight" parent="Theme.AppCompat">
-        <!--<item name="android:textColor">@color/textLightMain</item>-->
-
-        <item name="colorControlNormal">@color/textLightMain</item>
-        <!-- Title text -->
-        <item name="android:textColorPrimary">@color/textLightMain</item>
-        <!-- Title color in AppCompat.Light  -->
-        <item name="android:textColorPrimaryInverse">@color/textLightMain</item>
-        <!-- Menu text-->
-        <item name="actionMenuTextColor">@color/textLightMain</item>
-        <!-- Overflow -->
-        <item name="android:textColorSecondary">@color/textLightMain</item>
-        <!-- This will change drawer icon -->
-        <item name="drawerArrowStyle">@style/WhiteDrawerIconStyle</item>
-    </style>
-
-    <style name="AppSpinnerDark" parent="Widget.AppCompat.Spinner">
-        <item name="android:textColor">@color/textDarkMain</item>
-        <item name="colorPrimary">@color/textDarkMain</item>
-        <item name="colorPrimaryDark">@color/textDarkMain</item>
-        <item name="colorAccent">@color/textDarkMain</item>
     </style>
 
     <style name="YourCustomDropDownItemStyle" parent="Widget.AppCompat.Spinner">

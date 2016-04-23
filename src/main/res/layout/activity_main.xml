@@ -46,8 +46,6 @@
                     android:layout_gravity="left|center_vertical"
                     android:gravity="left|center_vertical"
                     android:saveEnabled="false"
-
-                    android:theme="@style/AppSpinnerLight"
                     android:visibility="gone" />
 
                 <android.support.v7.widget.AppCompatSpinner
@@ -55,10 +53,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="right|center_vertical"
-                    android:layout_marginRight="16dp"
                     android:gravity="right|center_vertical"
                     android:saveEnabled="false"
-                    android:visibility="gone" />
+                    android:visibility="gone"
+                    android:layout_marginRight="16dp"/>
 
             </android.support.v7.widget.Toolbar>
 
@@ -89,7 +87,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="start"
             app:headerLayout="@layout/drawer_header"
-            app:menu="@menu/drawer" />
+             />
 
     </android.support.v4.widget.DrawerLayout>
 

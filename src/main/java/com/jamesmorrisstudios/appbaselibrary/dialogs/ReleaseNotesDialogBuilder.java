@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.R;
 import com.jamesmorrisstudios.appbaselibrary.Utils;
+import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.fragments.HelpFragment;
 
@@ -96,7 +97,7 @@ public final class ReleaseNotesDialogBuilder {
         TextView notes = (TextView) view.findViewById(R.id.notes);
         notes.setText(content);
         Button btnRate = (Button) view.findViewById(R.id.btn_rate);
-        Button btnSupport = (Button) view.findViewById(R.id.btn_pro_upgrade);
+        Button btnProUpgrade = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button btnTranslate = (Button) view.findViewById(R.id.btn_translate);
         btnRate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +106,7 @@ public final class ReleaseNotesDialogBuilder {
                 Utils.openLink(AppBase.getContext().getString(R.string.store_link));
             }
         });
-        btnSupport.setOnClickListener(new View.OnClickListener() {
+        btnProUpgrade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 HelpFragment.HelpEvent.GOTO_PRO_UPGRADE.post();
@@ -119,6 +120,9 @@ public final class ReleaseNotesDialogBuilder {
                 Utils.openLink(AppBase.getContext().getString(R.string.help_link_translate));
             }
         });
+        if(UtilsVersion.isPro()) {
+            btnProUpgrade.setVisibility(View.GONE);
+        }
         mainView.addView(view);
     }
 

@@ -42,6 +42,10 @@ public abstract class BaseFragment extends Fragment {
     private Bundle startBundle = null;
     private boolean fabAutoHide = false;
 
+    /**
+     * @param startBundle Start bundle of data
+     * @param startScrollY Start scroll Y position
+     */
     protected abstract void setStartData(@Nullable Bundle startBundle, int startScrollY);
 
     /**

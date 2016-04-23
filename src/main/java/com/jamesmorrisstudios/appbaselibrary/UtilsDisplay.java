@@ -352,14 +352,39 @@ public final class UtilsDisplay {
     */
 
     /**
-     * Update Immersive mode for the given activity
+     * Reset immersive mode back to the user set value. This will set it to the opposite value and then back.
+     * @param activity Activity
+     */
+    public static void resetImmersiveMode(@NonNull final AppCompatActivity activity, final boolean hasFocus) {
+        if(UtilsAppBase.useImmersiveMode()) {
+            updateImmersiveMode(activity, hasFocus, false);
+            updateImmersiveMode(activity, hasFocus, true);
+        } else {
+            updateImmersiveMode(activity, hasFocus, true);
+            updateImmersiveMode(activity, hasFocus, false);
+        }
+    }
+
+    /**
+     * Update Immersive mode for the given activity to the user set value
      *
      * @param activity Activity
      * @param hasFocus True if the app has focus, false if not
      */
     public static void updateImmersiveMode(@NonNull final AppCompatActivity activity, final boolean hasFocus) {
+        updateImmersiveMode(activity, hasFocus, UtilsAppBase.useImmersiveMode());
+    }
+
+    /**
+     * Update Immersive mode for the given activity
+     *
+     * @param activity Activity
+     * @param hasFocus True if the app has focus, false if not
+     * @param useImmersiveMode true to enable immersive mode and false to disable.
+     */
+    public static void updateImmersiveMode(@NonNull final AppCompatActivity activity, final boolean hasFocus, boolean useImmersiveMode) {
         int newUiOptions = 0;
-        if (UtilsAppBase.useImmersiveMode()) {
+        if (useImmersiveMode) {
             if (hasFocus) {
                 if (Build.VERSION.SDK_INT >= 16) {
                     newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION

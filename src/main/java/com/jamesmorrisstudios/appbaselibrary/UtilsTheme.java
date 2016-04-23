@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
+import android.support.annotation.StyleRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 
@@ -16,6 +17,15 @@ import com.jamesmorrisstudios.appbaselibrary.preferences.Prefs;
  * Created by James on 10/29/2015.
  */
 public final class UtilsTheme {
+
+    /**
+     * Apply the given theme to the app
+     * @param activity Activity
+     * @param style Style resource Id of the theme.
+     */
+    public static void applyTheme(@NonNull final AppCompatActivity activity, @StyleRes int style) {
+        activity.setTheme(style);
+    }
 
     /**
      * Applies the theme from the activity

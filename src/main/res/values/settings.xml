@@ -50,7 +50,7 @@
         <item name="pro">@bool/setting_immersive_enable_pro</item>
     </array>
 
-    <bool name="setting_immersive_enable_pro">true</bool>
+    <bool name="setting_immersive_enable_pro">false</bool>
     <bool name="setting_immersive_enable_restart">false</bool>
     <bool name="setting_immersive_enable_default_value">false</bool>
     <string name="setting_immersive_enable_key" translatable="false">@string/pref_immersive</string>

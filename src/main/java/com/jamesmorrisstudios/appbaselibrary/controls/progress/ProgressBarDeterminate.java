@@ -23,6 +23,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.jamesmorrisstudios.appbaselibrary.UtilsTheme;
 import com.jamesmorrisstudios.appbaselibrary.math.UtilsMath;
 
 /**
@@ -33,7 +34,7 @@ public abstract class ProgressBarDeterminate extends View {
     protected int min = 0;
     protected int progress = 0;
     protected Paint paint = new Paint();
-    protected int[] colors = new int[]{Color.parseColor("#1E88E5")};
+    protected int[] colors = new int[]{UtilsTheme.getPrimaryColor()};
     protected int pendindProgress = -1;
 
     /**

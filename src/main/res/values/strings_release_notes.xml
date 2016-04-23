@@ -22,12 +22,16 @@
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">nothing</item>
+        <item name="line0">Initial Release</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">nothing</item>
+        <item name="line0">Simplified the menu design by moving everything to a navigation drawer.</item>
+        <item name="line0">Changed the ad format to interstitial ads and removed banner ads.</item>
+        <item name="line0">Changed the ad provider so ads are mostly more gaming related.</item>
+        <item name="line0">Improved game performance.</item>
+        <item name="line0">Added custom theme support.</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

@@ -38,7 +38,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private TextView noDataText;
     private RecyclerView mRecyclerView;
-    private String filterText = null;
+    private String filterText = "";
 
     /**
      * @return True if we have a search view for the recycleList
@@ -257,7 +257,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
         ViewHolder mViews = new ViewHolder(view);
         mAdapter = getAdapter(this);
         mViews.setAdapter(getAdapterToSet());
-        filterText = null;
+        filterText = "";
         startDataLoad(false);
         mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
@@ -451,7 +451,7 @@ public abstract class BaseRecycleListFragment extends BaseFragment implements Ba
     /**
      * @param filterText Filter Text. Null or empty for no filter
      */
-    public final void setFilterText(@Nullable final String filterText) {
+    public final void setFilterText(@NonNull final String filterText) {
         this.filterText = filterText;
         this.mAdapter.updateFilterText();
     }

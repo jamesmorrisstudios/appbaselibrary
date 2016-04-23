@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.CallSuper;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.MenuRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
@@ -103,6 +104,11 @@ public abstract class BaseActivity extends AppCompatActivity implements
     protected abstract boolean enableSound();
 
     /**
+     * Use this function to apply any themes that are needed and adjustable.
+     */
+    protected abstract void applyThemes();
+
+    /**
      * Use this in place of onCreate.
      * Add all fragments here with the addFragment function.
      *
@@ -125,6 +131,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
     protected final void onCreate(@Nullable final Bundle savedInstanceState) {
         Log.v("BaseActivity", "onCreate");
         UtilsTheme.applyTheme(this);
+        applyThemes();
         UtilsAppBase.applyLocale();
         UtilsAppBase.applyFirstDayOfWeek();
         UtilsDisplay.updateImmersiveMode(this, true);
@@ -459,6 +466,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
                     loadFragment(loadRequest.tag, loadRequest.bundle, loadRequest.scrollY);
                     loadRequest.clearData();
                 }
+                AppBaseEvent.DRAWER_CLOSED.post();
                 syncState();
             }
 
@@ -467,6 +475,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 super.onDrawerOpened(drawerView);
                 super.onDrawerSlide(drawerView, 0);
                 loadRequest.clearData();
+                AppBaseEvent.DRAWER_OPENED.post();
                 syncState();
             }
 
@@ -492,6 +501,11 @@ public abstract class BaseActivity extends AppCompatActivity implements
         mDrawerToggle.syncState();
     }
 
+    public final void inflateNavigationDrawer(@MenuRes int drawerId) {
+        navigationView.getMenu().clear();
+        navigationView.inflateMenu(drawerId);
+    }
+
     /**
      * Override to provide navigation drawer actions
      *
@@ -509,6 +523,7 @@ public abstract class BaseActivity extends AppCompatActivity implements
      * @param item Menu item
      * @return True if consumed action
      */
+    @CallSuper
     @Override
     public boolean onNavigationItemSelected(@NonNull final MenuItem item) {
         if (item.getItemId() == R.id.navigation_settings) {
@@ -881,7 +896,9 @@ public abstract class BaseActivity extends AppCompatActivity implements
         HELP_CLICKED,
         SETTINGS_CHANGED,
         SET_TOOLBAR_TITLE,
-        UPGRADE_TO_PRO;
+        UPGRADE_TO_PRO,
+        DRAWER_OPENED,
+        DRAWER_CLOSED;
 
         public String text;
         public Context context;
