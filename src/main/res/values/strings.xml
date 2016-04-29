@@ -1065,6 +1065,7 @@
 
     -->
 
+    <string name="bandit">BandIt</string>
     <string name="free">Free</string>
     <string name="pull">Pull</string>
     <string name="wild">Wild</string>

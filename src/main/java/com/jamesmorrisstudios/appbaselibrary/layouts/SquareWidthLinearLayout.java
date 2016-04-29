@@ -57,7 +57,7 @@ public final class SquareWidthLinearLayout extends LinearLayout {
      * @param heightMeasureSpec The height spec of the view
      */
     @Override
-    public final void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
+    public void onMeasure(final int widthMeasureSpec, final int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, widthMeasureSpec);
     }
 
