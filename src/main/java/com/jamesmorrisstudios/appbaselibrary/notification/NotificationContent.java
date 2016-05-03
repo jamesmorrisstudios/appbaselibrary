@@ -16,6 +16,7 @@
 
 package com.jamesmorrisstudios.appbaselibrary.notification;
 
+import android.annotation.TargetApi;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.graphics.Bitmap;
@@ -64,6 +65,8 @@ public final class NotificationContent {
     private boolean onGoing = false;
     private Bitmap iconOverride = null;
     private boolean wideButtons = false;
+    private NotificationCategory category = NotificationCategory.REMINDER;
+    private Bitmap imageLarge = null;
 
     /**
      * Builder that includes all required components of the notification
@@ -90,6 +93,24 @@ public final class NotificationContent {
         this.notificationId = notificationId;
         this.contentIntent = contentIntent;
         this.deleteIntent = deleteIntent;
+    }
+
+    @Nullable
+    public Bitmap getImageLarge() {
+        return imageLarge;
+    }
+
+    public void setImageLarge(@Nullable Bitmap imageLarge) {
+        this.imageLarge = imageLarge;
+    }
+
+    @NonNull
+    public NotificationCategory getCategory() {
+        return category;
+    }
+
+    public void setCategory(@NonNull NotificationCategory category) {
+        this.category = category;
     }
 
     /**
@@ -293,6 +314,142 @@ public final class NotificationContent {
      */
     public enum NotificationThemeText {
         DARK_TEXT, LIGHT_TEXT
+    }
+
+    /**
+     * Notification category.
+     */
+    public enum NotificationCategory {
+        ALARM, CALL, EMAIL, ERROR, EVENT, MESSAGE, PROGRESS, PROMO, RECOMMENDATION,
+        REMINDER, SERVICE, SOCIAL, STATUS, SYSTEM, TRANSPORT;
+
+        /**
+         *
+         * @return
+         */
+        @NonNull
+        public final String getName() {
+            switch(this) {
+                case ALARM:
+                    return AppBase.getContext().getResources().getString(R.string.alarm);
+                case CALL:
+                    return AppBase.getContext().getResources().getString(R.string.call);
+                case EMAIL:
+                    return AppBase.getContext().getResources().getString(R.string.email);
+                case ERROR:
+                    return AppBase.getContext().getResources().getString(R.string.error);
+                case EVENT:
+                    return AppBase.getContext().getResources().getString(R.string.event);
+                case MESSAGE:
+                    return AppBase.getContext().getResources().getString(R.string.message);
+                case PROGRESS:
+                    return AppBase.getContext().getResources().getString(R.string.progress);
+                case PROMO:
+                    return AppBase.getContext().getResources().getString(R.string.promo);
+                case RECOMMENDATION:
+                    return AppBase.getContext().getResources().getString(R.string.recommendation);
+                case REMINDER:
+                    return AppBase.getContext().getResources().getString(R.string.reminder);
+                case SERVICE:
+                    return AppBase.getContext().getResources().getString(R.string.service);
+                case SOCIAL:
+                    return AppBase.getContext().getResources().getString(R.string.social);
+                case STATUS:
+                    return AppBase.getContext().getResources().getString(R.string.status);
+                case SYSTEM:
+                    return AppBase.getContext().getResources().getString(R.string.system);
+                case TRANSPORT:
+                    return AppBase.getContext().getResources().getString(R.string.transport);
+                default:
+                    return AppBase.getContext().getResources().getString(R.string.event);
+            }
+        }
+
+        /**
+         *
+         * @return
+         */
+        @NonNull
+        public final String getCategoryCompat() {
+            switch(this) {
+                case ALARM:
+                    return NotificationCompat.CATEGORY_ALARM;
+                case CALL:
+                    return NotificationCompat.CATEGORY_CALL;
+                case EMAIL:
+                    return NotificationCompat.CATEGORY_EMAIL;
+                case ERROR:
+                    return NotificationCompat.CATEGORY_ERROR;
+                case EVENT:
+                    return NotificationCompat.CATEGORY_EVENT;
+                case MESSAGE:
+                    return NotificationCompat.CATEGORY_MESSAGE;
+                case PROGRESS:
+                    return NotificationCompat.CATEGORY_PROGRESS;
+                case PROMO:
+                    return NotificationCompat.CATEGORY_PROMO;
+                case RECOMMENDATION:
+                    return NotificationCompat.CATEGORY_RECOMMENDATION;
+                case REMINDER:
+                    return NotificationCompat.CATEGORY_EVENT;
+                case SERVICE:
+                    return NotificationCompat.CATEGORY_SERVICE;
+                case SOCIAL:
+                    return NotificationCompat.CATEGORY_SOCIAL;
+                case STATUS:
+                    return NotificationCompat.CATEGORY_STATUS;
+                case SYSTEM:
+                    return NotificationCompat.CATEGORY_SYSTEM;
+                case TRANSPORT:
+                    return NotificationCompat.CATEGORY_TRANSPORT;
+                default:
+                    return NotificationCompat.CATEGORY_EVENT;
+            }
+        }
+
+        /**
+         *
+         * @return
+         */
+        @TargetApi(Build.VERSION_CODES.M)
+        @NonNull
+        public final String getCategory() {
+            switch(this) {
+                case ALARM:
+                    return Notification.CATEGORY_ALARM;
+                case CALL:
+                    return Notification.CATEGORY_CALL;
+                case EMAIL:
+                    return Notification.CATEGORY_EMAIL;
+                case ERROR:
+                    return Notification.CATEGORY_ERROR;
+                case EVENT:
+                    return Notification.CATEGORY_EVENT;
+                case MESSAGE:
+                    return Notification.CATEGORY_MESSAGE;
+                case PROGRESS:
+                    return Notification.CATEGORY_PROGRESS;
+                case PROMO:
+                    return Notification.CATEGORY_PROMO;
+                case RECOMMENDATION:
+                    return Notification.CATEGORY_RECOMMENDATION;
+                case REMINDER:
+                    return Notification.CATEGORY_REMINDER;
+                case SERVICE:
+                    return Notification.CATEGORY_SERVICE;
+                case SOCIAL:
+                    return Notification.CATEGORY_SOCIAL;
+                case STATUS:
+                    return Notification.CATEGORY_STATUS;
+                case SYSTEM:
+                    return Notification.CATEGORY_SYSTEM;
+                case TRANSPORT:
+                    return Notification.CATEGORY_TRANSPORT;
+                default:
+                    return Notification.CATEGORY_EVENT;
+            }
+        }
+
     }
 
     /**

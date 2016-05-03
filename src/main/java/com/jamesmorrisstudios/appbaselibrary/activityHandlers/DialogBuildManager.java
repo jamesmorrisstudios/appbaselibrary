@@ -33,6 +33,7 @@ import com.jamesmorrisstudios.appbaselibrary.colorpicker.OnColorSelectedListener
 import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.ColorPickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.DualSpinnerRequest;
+import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditSoundListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTextListRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTextRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.EditTimesListRequest;
@@ -52,6 +53,7 @@ import com.jamesmorrisstudios.appbaselibrary.dialogRequests.TimePickerRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.VibratePatternRequest;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DatePickerMultiDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.DualSpinnerDialogBuilder;
+import com.jamesmorrisstudios.appbaselibrary.dialogs.EditSoundListDialog;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextDialogBuilder;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTextListDialog;
 import com.jamesmorrisstudios.appbaselibrary.dialogs.EditTimesListDialog;
@@ -402,6 +404,20 @@ public final class DialogBuildManager extends BaseBuildManager {
         EditTextListDialog editTextListDialog = new EditTextListDialog();
         editTextListDialog.setData(request.title, request.messages, request.onPositive, request.onNegative);
         editTextListDialog.show(fm, "EditTextListDialog");
+    }
+
+    /**
+     * Not Called Directly
+     * Creates a edit sound list dialog
+     *
+     * @param request Dialog request
+     */
+    @Subscribe
+    public final void onEditSoundListRequest(@NonNull final EditSoundListRequest request) {
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        EditSoundListDialog dialog = new EditSoundListDialog();
+        dialog.setData(request.title, request.freeLimit, request.items, request.onPositive, request.onNegative);
+        dialog.show(fm, "EditSoundListDialog");
     }
 
     /**

@@ -108,7 +108,19 @@
         android:layout_below="@id/topContainer"
         android:layout_marginBottom="12dp"
         android:layout_marginRight="12dp"
-        android:layout_toRightOf="@id/imageContainer"
+        android:layout_marginLeft="12dp"
         android:singleLine="false" />
+
+    <ImageView
+        android:id="@+id/imageLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="300dp"
+        android:layout_below="@id/text"
+        android:clickable="false"
+        android:layout_marginBottom="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:scaleType="fitCenter" />
 
 </RelativeLayout>

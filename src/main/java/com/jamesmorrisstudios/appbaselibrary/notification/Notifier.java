@@ -87,7 +87,7 @@ public final class Notifier {
         //noinspection ResourceType
         mBuilder = new Notification.Builder(AppBase.getContext())
                 .setContentTitle(notif.title)
-                .setCategory(Notification.CATEGORY_REMINDER)
+                .setCategory(notif.getCategory().getCategory())
                 .setPriority(notif.getNotificationPriority())
                 .setContentText(notif.content);
         if (notif.getIconOverride() != null) {
@@ -172,7 +172,7 @@ public final class Notifier {
         mBuilder = new NotificationCompat.Builder(AppBase.getContext())
                 .setSmallIcon(notif.iconRes)
                 .setContentTitle(notif.title)
-                .setCategory(NotificationCompat.CATEGORY_EVENT)
+                .setCategory(notif.getCategory().getCategoryCompat())
                 .setPriority(notif.getNotificationPriority())
                 .setContentText(notif.content);
         if (notif.isVibrateDefault() && !notif.isVibrateCustom()) {
@@ -344,8 +344,19 @@ public final class Notifier {
         } else {
             contentViewBig.setImageViewResource(R.id.image, notif.iconRes);
         }
+        if(notif.getImageLarge() != null) {
+            contentViewBig.setViewVisibility(R.id.imageLarge, View.VISIBLE);
+            contentViewBig.setImageViewBitmap(R.id.imageLarge, notif.getImageLarge());
+        } else {
+            contentViewBig.setViewVisibility(R.id.imageLarge, View.GONE);
+        }
         contentViewBig.setTextViewText(R.id.title, notif.title);
-        contentViewBig.setTextViewText(R.id.text, notif.content);
+        if(!notif.content.trim().isEmpty()) {
+            contentViewBig.setViewVisibility(R.id.text, View.VISIBLE);
+            contentViewBig.setTextViewText(R.id.text, notif.content);
+        } else {
+            contentViewBig.setViewVisibility(R.id.text, View.GONE);
+        }
         if (snooze) {
             contentViewBig.setViewVisibility(R.id.imageSnooze, View.VISIBLE);
             if (notif.getActions().size() == 3) {

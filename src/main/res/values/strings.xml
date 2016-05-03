@@ -221,11 +221,11 @@
     <string name="yesterday">Yesterday</string>
 
     <!-- (X Time of Y Period) Days of Week -->
-    <string name="days_of_week">Days Of Week</string>
+    <string name="days_of_week">Days of Week</string>
     <!-- (X Time of Y Period) Days Of Month -->
-    <string name="days_of_month">Days Of Month</string>
+    <string name="days_of_month">Days of Month</string>
     <!-- (X Time of Y Period) Days Of Year -->
-    <string name="days_of_year">Days Of Year</string>
+    <string name="days_of_year">Days of Year</string>
     <!-- (X Time of Y Period) Weeks of Month -->
     <string name="weeks_of_month">Weeks of Month</string>
     <!-- (X Time of Y Period) Weeks of Year -->
@@ -1122,9 +1122,18 @@
     <string name="missed">Missed</string>
     <string name="nothing">Nothing</string>
     <string name="clipboard">Clipboard</string>
-
-
-    <!-- Test String IGNORE -->
-    <string name="test_string_ignore">Ignore This</string>
+    <string name="call">Call</string>
+    <string name="email">Email</string>
+    <string name="event">Event</string>
+    <string name="progress">Progress</string>
+    <string name="promo">Promo</string>
+    <string name="recommendation">Recommendation</string>
+    <string name="reminder">Reminder</string>
+    <string name="service">Service</string>
+    <string name="social">Social</string>
+    <string name="status">Status</string>
+    <string name="transport">Transport</string>
+    <string name="category">Category</string>
+    <string name="show_image_in_notification">Show Image in Notification</string>
 
 </resources>

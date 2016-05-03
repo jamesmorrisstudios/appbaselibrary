@@ -5,41 +5,36 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.jamesmorrisstudios.appbaselibrary.Bus;
 import com.jamesmorrisstudios.appbaselibrary.R;
-import com.jamesmorrisstudios.appbaselibrary.activities.BaseActivity;
+import com.jamesmorrisstudios.appbaselibrary.UtilsVersion;
 import com.jamesmorrisstudios.appbaselibrary.app.AppBase;
 import com.jamesmorrisstudios.appbaselibrary.dialogRequests.RingtoneRequest;
-import com.jamesmorrisstudios.appbaselibrary.listeners.AfterTextChangedWatcher;
+import com.jamesmorrisstudios.appbaselibrary.items.SoundItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Edit text list dialog
- * <p/>
- * Created by James on 7/9/2015.
+ * Created by James on 5/2/2016.
  */
-public final class EditTextListDialog extends BaseDialogFragment {
+public class EditSoundListDialog extends BaseDialogFragment {
     private ListView list;
-    private ArrayList<String> messages = null;
-    private EditTextListAdapter adapter = null;
+    private ArrayList<SoundItem> items = null;
+    private EditSoundListAdapter adapter = null;
     private String titleText;
-    private EditTextListListener onPositive;
+    private EditSoundListListener onPositive;
     private View.OnClickListener onNegative;
+    private int freeLimit;
 
     /**
      * @param inflater           Inflater
@@ -50,23 +45,15 @@ public final class EditTextListDialog extends BaseDialogFragment {
     @Override
     @NonNull
     public final View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.dialog_edit_text_list, container);
+        View view = inflater.inflate(R.layout.dialog_edit_sound_list, container);
         list = (ListView) view.findViewById(R.id.list);
         Button btnCancel = (Button) view.findViewById(R.id.btn_cancel);
         Button btnOk = (Button) view.findViewById(R.id.btn_ok);
         Button btnAdd = (Button) view.findViewById(R.id.btn_neutral);
         TextView title = (TextView) view.findViewById(R.id.title);
         title.setText(titleText);
-        view.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.requestFocus();
-                BaseActivity.AppBaseEvent.HIDE_KEYBOARD_FROM.context(getContext()).view(v).post();
-                return false;
-            }
-        });
-        if (messages != null) {
-            adapter = new EditTextListAdapter(getActivity(), R.layout.dialog_edit_text_list_item, wrapString(messages));
+        if (items != null) {
+            adapter = new EditSoundListAdapter(getActivity(), R.layout.dialog_edit_sound_list_item, items);
             list.setAdapter(adapter);
         }
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -98,7 +85,18 @@ public final class EditTextListDialog extends BaseDialogFragment {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                adapter.add(new StringWrapper(""));
+                if(!UtilsVersion.isPro() && freeLimit != -1 && items.size() >= freeLimit) {
+                    UtilsVersion.showProPopupLimited();
+                } else {
+                    Bus.postObject(new RingtoneRequest(null, AppBase.getContext().getResources().getString(R.string.select_notification), new RingtoneRequest.RingtoneRequestListener() {
+                        @Override
+                        public final void ringtoneResponse(@Nullable final Uri uri, @Nullable final String name) {
+                            if(uri != null && name != null) {
+                                adapter.add(new SoundItem(uri, name));
+                            }
+                        }
+                    }));
+                }
             }
         });
         return view;
@@ -106,74 +104,41 @@ public final class EditTextListDialog extends BaseDialogFragment {
 
     /**
      * @param titleText  Dialog title
-     * @param messages   List of text items
+     * @param items   List of sound items
      * @param onPositive onPositive
      * @param onNegative onNegative
      */
-    public final void setData(@NonNull final String titleText, @NonNull final ArrayList<String> messages, @NonNull final EditTextListListener onPositive, @Nullable final View.OnClickListener onNegative) {
+    public final void setData(@NonNull final String titleText, int freeLimit, @NonNull final ArrayList<SoundItem> items, @NonNull final EditSoundListListener onPositive, @Nullable final View.OnClickListener onNegative) {
         this.titleText = titleText;
-        this.messages = new ArrayList<>(messages);
+        this.freeLimit = freeLimit;
+        this.items = new ArrayList<>(items);
         this.onPositive = onPositive;
         this.onNegative = onNegative;
     }
 
-    /**
-     * @param list List of strings
-     * @return Wrapped string items
-     */
-    @NonNull
-    private List<StringWrapper> wrapString(@NonNull final List<String> list) {
-        List<StringWrapper> wrapList = new ArrayList<>();
-        for (String text : list) {
-            wrapList.add(new StringWrapper(text));
-        }
-        return wrapList;
-    }
 
     /**
      * Edit text list listener
      */
-    public interface EditTextListListener {
+    public interface EditSoundListListener {
 
         /**
-         * @param messages list of Strings
+         * @param messages list of sound items
          */
-        void onPositive(@NonNull final ArrayList<String> messages);
-    }
-
-    /**
-     * String wrapper object
-     */
-    private class StringWrapper {
-        public String text;
-        public TextWatcher textWatcher = new AfterTextChangedWatcher() {
-            @Override
-            public void afterTextChanged(@NonNull final Editable s) {
-                text = s.toString();
-            }
-        };
-
-        /**
-         * Constructor
-         *
-         * @param text String
-         */
-        public StringWrapper(@NonNull final String text) {
-            this.text = text;
-        }
+        void onPositive(@NonNull final ArrayList<SoundItem> messages);
     }
 
     /**
      * List adapter
      */
-    private class EditTextListAdapter extends ArrayAdapter<StringWrapper> {
+    private class EditSoundListAdapter extends ArrayAdapter<SoundItem> {
 
         /**
          * @param context  Context
          * @param resource Row layout id
          * @param items    List of items
          */
-        public EditTextListAdapter(@NonNull final Context context, final int resource, @NonNull final List<StringWrapper> items) {
+        public EditSoundListAdapter(@NonNull final Context context, final int resource, @NonNull final List<SoundItem> items) {
             super(context, resource, items);
         }
 
@@ -181,10 +146,10 @@ public final class EditTextListDialog extends BaseDialogFragment {
          * @return List of String items
          */
         @NonNull
-        public ArrayList<String> getItems() {
-            ArrayList<String> wrapList = new ArrayList<>();
+        public ArrayList<SoundItem> getItems() {
+            ArrayList<SoundItem> wrapList = new ArrayList<>();
             for (int i = 0; i < getCount(); i++) {
-                wrapList.add(getItem(i).text);
+                wrapList.add(getItem(i));
             }
             return wrapList;
         }
@@ -198,27 +163,34 @@ public final class EditTextListDialog extends BaseDialogFragment {
         @Override
         @NonNull
         public View getView(final int position, @Nullable final View convertView, @NonNull final ViewGroup parent) {
-            final StringWrapper item = getItem(position);
-            EditText editText;
+            final SoundItem item = getItem(position);
+            TextView text;
             ImageView delete;
             View view = convertView;
             if (view == null) {
-                LayoutInflater vi;
-                vi = LayoutInflater.from(getContext());
-                view = vi.inflate(R.layout.dialog_edit_text_list_item, null);
-                editText = (EditText) view.findViewById(R.id.text1);
-                delete = (ImageView) view.findViewById(R.id.delete1);
-            } else {
-                editText = (EditText) view.findViewById(R.id.text1);
-                delete = (ImageView) view.findViewById(R.id.delete1);
-                for (int i = 0; i < getCount(); i++) {
-                    editText.removeTextChangedListener(getItem(i).textWatcher);
-                    delete.setOnClickListener(null);
-                }
+                view = LayoutInflater.from(getContext()).inflate(R.layout.dialog_edit_sound_list_item, null);
+            }
+            text = (TextView) view.findViewById(R.id.text1);
+            delete = (ImageView) view.findViewById(R.id.delete1);
+            for (int i = 0; i < getCount(); i++) {
+                delete.setOnClickListener(null);
             }
             if (item != null) {
-                editText.setText(item.text);
-                editText.addTextChangedListener(item.textWatcher);
+                text.setText(item.name);
+                view.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Bus.postObject(new RingtoneRequest(item.getUri(), AppBase.getContext().getResources().getString(R.string.select_notification), new RingtoneRequest.RingtoneRequestListener() {
+                            @Override
+                            public final void ringtoneResponse(@Nullable final Uri uri, @Nullable final String name) {
+                                if(uri != null && name != null) {
+                                    item.set(uri, name);
+                                    notifyDataSetChanged();
+                                }
+                            }
+                        }));
+                    }
+                });
                 delete.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -229,5 +201,4 @@ public final class EditTextListDialog extends BaseDialogFragment {
             return view;
         }
     }
-
 }

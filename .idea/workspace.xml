@@ -27,19 +27,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e12e0e8c-0b8d-4228-ab73-6c5181c189e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogRequests/EditSoundListRequest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditSoundListDialog.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/items/SoundItem.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/dialog_edit_sound_list.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/res/layout/dialog_edit_sound_list_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appbaselibrary.iml" afterPath="$PROJECT_DIR$/appbaselibrary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard-rules.pro" afterPath="$PROJECT_DIR$/proguard-rules.pro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightFrameLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightFrameLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightLinearLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightLinearLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightRelativeLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightRelativeLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthFrameLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthFrameLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthLinearLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthLinearLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthRelativeLayout.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthRelativeLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/DialogBuildManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/DialogBuildManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTextListDialog.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTextListDialog.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/NotificationContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/NotificationContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/Notifier.java" afterPath="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/Notifier.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_narrow.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_narrow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_wide.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_wide.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/notification_big_light_narrow.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/notification_big_light_narrow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/layout/notification_big_light_wide.xml" afterPath="$PROJECT_DIR$/src/main/res/layout/notification_big_light_wide.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/src/main/res/values/strings.xml" />
     </list>
     <ignored path="appbaselibrary.iws" />
@@ -81,8 +83,8 @@
       <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52926826">
-              <caret line="1059" column="47" selection-start-line="1059" selection-start-column="47" selection-end-line="1059" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.3360522">
+              <caret line="946" column="42" selection-start-line="946" selection-start-column="42" selection-end-line="946" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -1211,25 +1213,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTextListDialog.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_edit_text_list.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/items/FragmentLoadRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/LicenseFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values/styles_toolbar.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogRequests/PromptDialogRequest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/UtilsLocation.java" />
-        <option value="$PROJECT_DIR$/src/main/res/values-ar-rEG/strings_release_notes.xml" />
-        <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/ActivityResultManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/PermissionRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/StartActivityForResultRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/sound/Sounds.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/UtilsVersion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/AppLauncherActivity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activities/CustomFilePickerActivity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/DialogBuildManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/FinishAppRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleContainer.java" />
@@ -1252,7 +1241,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/UtilsDisplay.java" />
         <option value="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" />
         <option value="$PROJECT_DIR$/proguard-rules.pro" />
-        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightFrameLayout.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareHeightLinearLayout.java" />
@@ -1262,6 +1250,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthLinearLayout.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthRelativeLayout.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/layouts/SquareWidthView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTextListDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditSoundsListDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_edit_sound_list_item.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogRequests/EditSoundListRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/DialogBuildManager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditSoundListDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/items/SoundItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/NotificationContent.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/notification_big_light_narrow.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/Notifier.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/notification_big_light_wide.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_wide.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/notification_big_dark_narrow.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -1306,21 +1308,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="appbaselibrary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1338,10 +1326,77 @@
               <option name="myItemId" value="appbaselibrary" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1380,6 +1435,21 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appbaselibrary" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1405,12 +1475,14 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\java\com\jamesmorrisstudios\appbaselibrary\touchHelper" />
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\java\com\jamesmorrisstudios\appbaselibrary\superslim" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.jamesmorrisstudios.appbaselibrary" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\layout" />
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\menu" />
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\drawable-hdpi" />
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\color" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.jamesmorrisstudios.appbaselibrary.filewriting" />
@@ -1419,11 +1491,9 @@
       <recent name="com.jamesmorrisstudios.appbaselibrary.animator" />
       <recent name="com.jamesmorrisstudios.appbaselibrary.dialogs" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\layout" />
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\menu" />
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\drawable-hdpi" />
-      <recent name="C:\Programming\libraries\appbaselibrary\src\main\res\color" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\java\com\jamesmorrisstudios\appbaselibrary\touchHelper" />
+      <recent name="C:\Programming\libraries\appbaselibrary\src\main\java\com\jamesmorrisstudios\appbaselibrary\superslim" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.appbaselibrary [uploadArchives]">
@@ -1744,7 +1814,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3288889" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1754,14 +1824,16 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31746033" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18151447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23051225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195629" sideWeight="0.48365122" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.195629" sideWeight="0.48365122" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22494432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295699" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1777,9 +1849,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="92" y="92" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.416198" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22494432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1840,159 +1910,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleViewHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.2521892">
-          <caret line="139" column="5" selection-start-line="139" selection-start-column="5" selection-end-line="139" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2977233">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.17338">
-          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/SettingsFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25040916">
-          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/LicenseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5859247">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/listAdapters/BaseRecycleAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.4713583">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/BaseBuildManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45017183">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values-v21/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/fragments/BaseRecycleListFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33235294">
-          <caret line="334" column="20" selection-start-line="334" selection-start-column="17" selection-end-line="334" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_override.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_primary.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_tabLayout.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_accent.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_dialogs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles-filebrowser.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2363636">
-          <caret line="41" column="16" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.3.0/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36406994">
-          <caret line="1247" column="17" selection-start-line="1247" selection-start-column="17" selection-end-line="1247" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/simple_spinner_title_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.92727274">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/UtilsTheme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/values/styles_toolbar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0777439">
-          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="17" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46646342">
@@ -2209,10 +2126,382 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/NotificationAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/VibratePatternDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40646976">
+          <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/items/RingtoneItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23909986">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_edit_text.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_edit_sound_list.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.021103896">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogRequests/EditTextListRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2533532">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTextListDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.5499297">
+          <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+          <folding>
+            <element signature="e#3685#3853#0" expanded="true" />
+            <element signature="e#3852#3853#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditTimesListDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28270042">
+          <caret line="159" column="34" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_edit_sound_list_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051829267">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogRequests/EditSoundListRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/activityHandlers/DialogBuildManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15465465">
+          <caret line="411" column="6" selection-start-line="411" selection-start-column="6" selection-end-line="411" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/UtilsTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46624804">
+          <caret line="1014" column="24" selection-start-line="1014" selection-start-column="24" selection-end-line="1014" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/time/DateItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.533033">
+          <caret line="128" column="4" selection-start-line="128" selection-start-column="4" selection-end-line="134" selection-end-column="5" />
+          <folding>
+            <element signature="e#3886#3887#0" expanded="true" />
+            <element signature="e#3961#3962#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/items/SoundItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43543544">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1048#1049#0" expanded="true" />
+            <element signature="e#1109#1110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/dialogs/EditSoundListDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43543544">
+          <caret line="186" column="42" selection-start-line="186" selection-start-column="42" selection-end-line="186" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2302#2647#0" expanded="true" />
+            <element signature="e#2646#2647#0" expanded="true" />
+            <element signature="e#2683#3131#0" expanded="true" />
+            <element signature="e#3130#3131#0" expanded="true" />
+            <element signature="e#3168#4024#0" expanded="true" />
+            <element signature="e#3495#3570#0" expanded="true" />
+            <element signature="e#3572#3979#0" expanded="true" />
+            <element signature="e#3978#3979#0" expanded="true" />
+            <element signature="e#4023#4024#0" expanded="true" />
+            <element signature="e#6660#7440#0" expanded="true" />
+            <element signature="e#6843#6918#0" expanded="true" />
+            <element signature="e#6920#7397#0" expanded="true" />
+            <element signature="e#7396#7397#0" expanded="true" />
+            <element signature="e#7439#7440#0" expanded="true" />
+            <element signature="e#7485#7671#0" expanded="true" />
+            <element signature="e#7670#7671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/Notifier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9744745">
+          <caret line="384" column="5" selection-start-line="384" selection-start-column="5" selection-end-line="384" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#dismissNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="method#dismissNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#buildNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="method#buildNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#buildNotificationSub#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#addCustomNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="e#5702#5735#0" expanded="false" />
+            <element signature="docComment;method#addCustomSnoozeNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="e#6278#6311#0" expanded="false" />
+            <element signature="method#addCustomSnoozeNotification#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#buildNotificationSubCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="method#buildNotificationSubCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#addCustomNotificationCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="method#addCustomNotificationCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#addCustomSnoozeNotificationCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="method#addCustomSnoozeNotificationCompat#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#getContentView#0;class#Notifier#0" expanded="false" />
+            <element signature="method#getContentView#0;class#Notifier#0" expanded="false" />
+            <element signature="docComment;method#getContentBigView#0;class#Notifier#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/jamesmorrisstudios/appbaselibrary/notification/NotificationContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6186186">
+          <caret line="100" column="5" selection-start-line="100" selection-start-column="5" selection-end-line="100" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#NotificationContent#0" expanded="false" />
+            <element signature="e#4146#4147#0" expanded="true" />
+            <element signature="e#4179#4180#0" expanded="true" />
+            <element signature="e#4241#4242#0" expanded="true" />
+            <element signature="e#4285#4286#0" expanded="true" />
+            <element signature="docComment;method#addAction#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getActions#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getTone#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setTone#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#isWideButtons#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setWideButtons#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getVibratePattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getVibratePattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#isVibrateDefault#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#isVibrateCustom#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setVibrateCustom#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setVibrateCustom#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setLed#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setLed#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getLed#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getLedColor#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getAccentColor#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setAccentColor#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setAccentColor#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getNotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setNotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setNotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getIconOverride#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setIconOverride#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#setIconOverride#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getOnGoing#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#setOnGoing#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationType#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationThemeBackground#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationThemeBackground#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationThemeText#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationThemeText#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getName#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getName#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="e#9520#9581#0" expanded="true" />
+            <element signature="e#9637#9697#0" expanded="true" />
+            <element signature="e#9754#9815#0" expanded="true" />
+            <element signature="e#9872#9933#0" expanded="true" />
+            <element signature="e#9990#10051#0" expanded="true" />
+            <element signature="e#10110#10173#0" expanded="true" />
+            <element signature="e#10233#10297#0" expanded="true" />
+            <element signature="e#10354#10415#0" expanded="true" />
+            <element signature="e#10481#10551#0" expanded="true" />
+            <element signature="e#10611#10675#0" expanded="true" />
+            <element signature="e#10734#10797#0" expanded="true" />
+            <element signature="e#10855#10917#0" expanded="true" />
+            <element signature="e#10975#11037#0" expanded="true" />
+            <element signature="e#11095#11157#0" expanded="true" />
+            <element signature="e#11218#11283#0" expanded="true" />
+            <element signature="e#11337#11398#0" expanded="true" />
+            <element signature="docComment;method#getCategoryCompat#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getCategoryCompat#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getCategory#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="e#13144#13177#0" expanded="false" />
+            <element signature="method#getCategory#0;class#NotificationCategory#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getName#0;class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getName#0;class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="e#15030#15094#0" expanded="true" />
+            <element signature="e#15149#15208#0" expanded="true" />
+            <element signature="e#15264#15324#0" expanded="true" />
+            <element signature="e#15379#15438#0" expanded="true" />
+            <element signature="e#15492#15556#0" expanded="true" />
+            <element signature="docComment;method#getPriority#0;class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getPriority#0;class#NotificationPriority#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getName#0;class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getName#0;class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="e#17322#17386#0" expanded="true" />
+            <element signature="e#17445#17509#0" expanded="true" />
+            <element signature="e#17566#17628#0" expanded="true" />
+            <element signature="e#17686#17748#0" expanded="true" />
+            <element signature="e#17804#17865#0" expanded="true" />
+            <element signature="e#17926#17991#0" expanded="true" />
+            <element signature="e#18052#18117#0" expanded="true" />
+            <element signature="e#18178#18243#0" expanded="true" />
+            <element signature="e#18304#18369#0" expanded="true" />
+            <element signature="e#18430#18495#0" expanded="true" />
+            <element signature="e#18556#18621#0" expanded="true" />
+            <element signature="e#18675#18739#0" expanded="true" />
+            <element signature="docComment;method#getPattern#0;class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getPattern#0;class#NotificationVibrate#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="docComment;method#getName#0;class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getName#0;class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="e#20751#20815#0" expanded="true" />
+            <element signature="e#20826#20891#0" expanded="true" />
+            <element signature="e#20962#21026#0" expanded="true" />
+            <element signature="e#21037#21103#0" expanded="true" />
+            <element signature="e#21172#21236#0" expanded="true" />
+            <element signature="e#21247#21311#0" expanded="true" />
+            <element signature="e#21382#21447#0" expanded="true" />
+            <element signature="e#21458#21523#0" expanded="true" />
+            <element signature="e#21595#21660#0" expanded="true" />
+            <element signature="e#21671#21737#0" expanded="true" />
+            <element signature="e#21807#21872#0" expanded="true" />
+            <element signature="e#21883#21947#0" expanded="true" />
+            <element signature="e#22016#22079#0" expanded="true" />
+            <element signature="e#22090#22155#0" expanded="true" />
+            <element signature="e#22225#22288#0" expanded="true" />
+            <element signature="e#22299#22365#0" expanded="true" />
+            <element signature="e#22433#22496#0" expanded="true" />
+            <element signature="e#22507#22571#0" expanded="true" />
+            <element signature="e#22625#22689#0" expanded="true" />
+            <element signature="e#22700#22765#0" expanded="true" />
+            <element signature="docComment;method#getPattern#0;class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+            <element signature="method#getPattern#0;class#NotificationLedPattern#0;class#NotificationContent#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/notification_big_light_wide.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.636364">
+          <caret line="123" column="40" selection-start-line="123" selection-start-column="40" selection-end-line="123" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/notification_big_dark_wide.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5272727">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/notification_big_dark_narrow.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5272727">
+          <caret line="100" column="21" selection-start-line="100" selection-start-column="21" selection-end-line="100" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/notification_big_light_narrow.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.109656304">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding>
+            <element signature="e#863#1716#0" expanded="false" />
+            <element signature="e#1722#3692#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52926826">
-          <caret line="1059" column="47" selection-start-line="1059" selection-start-column="47" selection-end-line="1059" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.3360522">
+          <caret line="946" column="42" selection-start-line="946" selection-start-column="42" selection-end-line="946" selection-end-column="42" />
           <folding />
         </state>
       </provider>
