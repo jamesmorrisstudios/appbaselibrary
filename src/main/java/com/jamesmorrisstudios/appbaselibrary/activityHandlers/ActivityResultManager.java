@@ -126,7 +126,12 @@ public final class ActivityResultManager extends BaseBuildManager {
     public final void onStartActivityForResultRequest(@NonNull final StartActivityForResultRequest request) {
         startActivityForResultRequests.add(request);
         AutoLockOrientation.enableAutoLock(getActivity());
-        getActivity().startActivityForResult(request.intent, request.requestCode);
+        try {
+            getActivity().startActivityForResult(request.intent, request.requestCode);
+        } catch(Exception ex) {
+            ex.printStackTrace();
+            Log.v("ActivityResultManager", "Start Activity For Result Failed");
+        }
     }
 
     /**
@@ -136,7 +141,28 @@ public final class ActivityResultManager extends BaseBuildManager {
      */
     @Subscribe
     public final void onStartActivityRequest(@NonNull final StartActivityRequest request) {
-        getActivity().startActivity(request.intent);
+        try {
+            getActivity().startActivity(request.intent);
+        } catch(Exception ex) {
+            ex.printStackTrace();
+            Log.v("ActivityResultManager", "Start Activity Failed");
+        }
+    }
+
+    /**
+     * Not called directly
+     *
+     * @param request Send Broadcast request
+     */
+    @Subscribe
+    public final void onSendBroadcastRequest(@NonNull final SendBroadcastRequest request) {
+        try {
+            Log.v("ActivityResultManager", "Send Broadcast");
+            getActivity().sendBroadcast(request.intent);
+        } catch(Exception ex) {
+            ex.printStackTrace();
+            Log.v("ActivityResultManager", "Send Broadcast failed");
+        }
     }
 
     /**

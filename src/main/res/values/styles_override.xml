@@ -9,6 +9,18 @@
         <item name="android:visibility">visible</item>
     </style>
 
+    <style name="help_custom_button_1">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="help_custom_button_2">
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="help_custom_button_3">
+        <item name="android:visibility">gone</item>
+    </style>
+
     <style name="upgrade_to_pro">
         <item name="android:visibility">gone</item>
     </style>

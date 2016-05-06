@@ -154,6 +154,48 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="@dimen/item_size" />
 
+        <Button
+            android:id="@+id/custom_button_1"
+            style="@style/help_custom_button_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/help_custom_button_1_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:id="@+id/custom_button_2"
+            style="@style/help_custom_button_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/help_custom_button_2_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/item_size" />
+
+        <Button
+            android:id="@+id/custom_button_3"
+            style="@style/help_custom_button_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/help_custom_button_3_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/item_size" />
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

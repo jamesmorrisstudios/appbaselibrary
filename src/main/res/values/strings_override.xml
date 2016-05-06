@@ -12,6 +12,13 @@
     <string name="tutorial_link_watch" translatable="false">Change This</string>
     <string name="pro_package_name" translatable="false">Change This</string>
 
+    <string name="help_custom_button_1_text" translatable="false">Change This</string>
+    <string name="help_custom_button_1_link" translatable="false">Change This</string>
+    <string name="help_custom_button_2_text" translatable="false">Change This</string>
+    <string name="help_custom_button_2_link" translatable="false">Change This</string>
+    <string name="help_custom_button_3_text" translatable="false">Change This</string>
+    <string name="help_custom_button_3_link" translatable="false">Change This</string>
+
     <string name="version_type" translatable="false">@string/alpha</string>
 
     <array name="current_release_notes">

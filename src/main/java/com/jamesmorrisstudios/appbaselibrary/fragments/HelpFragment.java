@@ -49,6 +49,9 @@ public final class HelpFragment extends BaseFragment {
         Button proUpgrade = (Button) view.findViewById(R.id.btn_pro_upgrade);
         Button translate = (Button) view.findViewById(R.id.btn_translate);
         Button releaseNotes = (Button) view.findViewById(R.id.btn_release_notes);
+        Button custom1 = (Button) view.findViewById(R.id.custom_button_1);
+        Button custom2 = (Button) view.findViewById(R.id.custom_button_2);
+        Button custom3 = (Button) view.findViewById(R.id.custom_button_3);
         readHow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -130,6 +133,24 @@ public final class HelpFragment extends BaseFragment {
         if(UtilsVersion.isPro()) {
             proUpgrade.setVisibility(View.GONE);
         }
+        custom1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.openLink(getResources().getString(R.string.help_custom_button_1_link));
+            }
+        });
+        custom2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.openLink(getResources().getString(R.string.help_custom_button_2_link));
+            }
+        });
+        custom3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Utils.openLink(getResources().getString(R.string.help_custom_button_3_link));
+            }
+        });
         return view;
     }
 
