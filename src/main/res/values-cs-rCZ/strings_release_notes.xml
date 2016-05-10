@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"verze 2.0.0"</item>
-        <item name="line1">"Re-brandové \"dar\" na \"Pro\". Všechny dříve volné funkce a mnoho nových funkcí jsou zdarma."</item>
-        <item name="line2">"Přidal zásuvku aplikaci pro podstránek."</item>
-        <item name="line5">"Přidána možnost nastavit výchozí nastavení připomenutí pro každou připomínku, kterou vytvoříte."</item>
-        <item name="line3">"Aktualizováno téma aplikace."</item>
-        <item name="line4">"Aktualizováno nastavení a Nápověda a zpětná vazba stránky."</item>
-        <item name="line4">"Přidal aplikace widgetu."</item>
-        <item name="line5">"Mnoho dalších možností připomenutí (zobrazit všechny zaškrtnutím \"Show Advanced\")."</item>
-        <item name="line5">"upomínky založené přidán umístění. Přidejte ze stránky \"Customizer\"."</item>
-        <item name="line5">"Některé nové funkce uzamčen \"Pro\" verze."</item>
-        <item name="line5">"App Témata"</item>
-        <item name="line5">"Pohlcující Mode."</item>
-        <item name="line4">"Custom vibrací vzory."</item>
-        <item name="line4">"Ikony oznámení na zakázku (Android 6.0+ pouze)."</item>
-        <item name="line5">"Prozkoumejte aplikaci pro přídavné funkce. Další budou brzy."</item>
+        <item name="line0">"Přidána možnost jasného protokolu připomenutí."</item>
+        <item name="line1">"Přidané kategorií oznámení."</item>
+        <item name="line2">"Přidá seznam oznámení zní schopnosti."</item>
+        <item name="line5">"Přidán odkaz na ochutnat upomínky a ikonu balení na webových stránkách jamesmorrisstudios."</item>
+        <item name="line3">"Přidána možnost ukázat připomenutí obraz v oznámení."</item>
+        <item name="line4">"Přidána Android Intent na bázi plugin Podpora pro použití s ​​aplikacemi automatizaci."</item>
+        <item name="line4">"Přidána podpora krmivo RSS zpráv."</item>
+        <item name="line4">"Opravena chyba, kdy by auto snooze nebude fungovat s umístění spustí připomenutí."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nic"</item>
+        <item name="line0">"První vydání"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nic"</item>
+        <item name="line0">"Zjednodušené menu design pohybem všechno navigační šuplíku."</item>
+        <item name="line0">"Změnil formát reklamy na vsunuté reklamy a odstranil bannerové reklamy."</item>
+        <item name="line0">"Změnili poskytovatele reklamy, takže reklamy jsou většinou více související herní."</item>
+        <item name="line0">"Zlepšený výkon hra."</item>
+        <item name="line0">"Přidána technickou podporu téma."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

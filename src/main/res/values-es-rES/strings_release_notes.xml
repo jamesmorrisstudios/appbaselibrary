@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versión 2.0.0"</item>
-        <item name="line1">"Re-marca \"donación\" a \"Pro\". Todas las funciones que antes eran gratuitos y muchas de las nuevas características son gratis."</item>
-        <item name="line2">"Se ha añadido un cajón de aplicación para la sub-páginas."</item>
-        <item name="line5">"capacidad para establecer la configuración de aviso predeterminado para cada recordatorio de que se crea añadido."</item>
-        <item name="line3">"Se ha actualizado el tema de aplicación."</item>
-        <item name="line4">"Actualización de la configuración y Ayuda y páginas de votos."</item>
-        <item name="line4">"Se ha añadido un widget de aplicación."</item>
-        <item name="line5">"Muchas opciones de recordatorio adicionales (mostrar todos marcando \"Mostrar avanzada\")."</item>
-        <item name="line5">"recordatorios basados ​​añadido ubicación. Añadir desde la página \"Personalizador\"."</item>
-        <item name="line5">"Algunas de las nuevas características bloqueadas a la versión \"Pro\"."</item>
-        <item name="line5">"Temas de aplicaciones"</item>
-        <item name="line5">"Modo de inmersión."</item>
-        <item name="line4">"patrones de vibración personalizado."</item>
-        <item name="line4">"los iconos de notificación personalizada (Android 6.0+ solamente)."</item>
-        <item name="line5">"Explorar la aplicación de características adicionales. Más vendrán pronto."</item>
+        <item name="line0">"Añadida la opción de registro claro recordatorio."</item>
+        <item name="line1">"Añadido categorías de notificación."</item>
+        <item name="line2">"Añadido lista de los sonidos de notificación capacidad."</item>
+        <item name="line5">"Se ha añadido un enlace a la muestra recordatorios y paquetes de icono en la página web jamesmorrisstudios."</item>
+        <item name="line3">"Se añadió una opción para mostrar la imagen recordatorio en la notificación."</item>
+        <item name="line4">"Añadido soporte para plugins basados ​​Intención Android para su uso con aplicaciones de automatización."</item>
+        <item name="line4">"el apoyo añadido fuente RSS para los mensajes."</item>
+        <item name="line4">"Se ha corregido un error por el que repetición automática no trabajaría con una ubicación desencadenado recordatorio."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nada"</item>
+        <item name="line0">"Versión inicial"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nada"</item>
+        <item name="line0">"Simplificado el diseño del menú moviendo todo a un panel lateral de navegación."</item>
+        <item name="line0">"Se ha cambiado el formato de anuncio de los anuncios intersticiales y banners retirados."</item>
+        <item name="line0">"Se ha cambiado el proveedor de anuncios para que los anuncios son en su mayoría más relacionados con el juego."</item>
+        <item name="line0">"Mejora el rendimiento del juego."</item>
+        <item name="line0">"Se ha añadido soporte tema personalizado."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

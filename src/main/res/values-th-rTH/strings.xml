@@ -1,1034 +1,1058 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"แสดง"</string>
-
+    
     <string name="settings_category_sound">"เสียง"</string>
-
+    
     <string name="settings_category_general">"ทั่วไป"</string>
-
+    
     <string name="settings_category_locale">"สถานที่เกิดเหตุ"</string>
-
+    
     <string name="settings_category_theme">"กระทู้"</string>
-
+    
     <string name="settings_category_notification">"การแจ้งเตือน"</string>
-
+    
     <string name="settings_category_notification_custom">"แจ้งที่กำหนดเอง"</string>
-
+    
     <string name="settings_category_notification_override">"แจ้งแทนที่"</string>
-
+    
     <string name="settings_category_defaults">"ค่าเริ่มต้น"</string>
-
+    
     <string name="settings_category_random">"สุ่ม"</string>
-
+    
     <string name="settings_category_widget">"วิดเจ็ต"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"โหมดใหญ่พิเศษ"</string>
-
+    
     <string name="setting_sound_enable_primary">"เสียงประกอบ"</string>
-
+    
     <string name="setting_music_enable_primary">"เพลง"</string>
-
+    
     <string name="setting_language_picker_primary">"ภาษา"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"ที่กำหนดเอง Ringtone Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"App ธีม"</string>
-
+    
     <string name="setting_accent_color_primary">"สำเนียงสี"</string>
-
+    
     <string name="setting_primary_color_primary">"สีหลัก"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Toolbar สีข้อความ"</string>
+    
+    <string name="setting_game_text_color_primary">"เกมสีข้อความ"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"คลิกการกระทำ"</string>
-
+    
     <string name="setting_notification_custom_primary">"ทำให้สามารถ"</string>
-
+    
     <string name="setting_notification_button_style_primary">"รูปแบบปุ่ม"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"การแจ้งเตือนอย่างต่อเนื่อง"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"การแจ้งเตือนอย่างต่อเนื่องยังไม่ได้รับการสนับสนุนบน SmartWatches"</string>
-
+    
     <string name="setting_notification_theme_primary">"พื้นหลัง"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"สีข้อความ"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"วันแรกของสัปดาห์"</string>
-
+    
     <string name="setting_force_advanced_primary">"เคยแสดงตัวเลือกขั้นสูง"</string>
-
+    
     <string name="setting_force_advanced_secondary">"ปิดการใช้งานเพื่อแสดงตัวเลือกขั้นสูงบนพื้นฐานต่อการแจ้งเตือน"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"งาบการดำเนินการ"</string>
-
+    
     <string name="setting_notification_click_open_primary">"คลิกเปิด App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"รูดเปิด App"</string>
-
+    
     <string name="setting_random_amount_primary">"สุ่ม"</string>
-
+    
     <string name="setting_less_random_amount_primary">"หักสุ่ม"</string>
-
+    
     <string name="setting_even_amount_primary">"แม้"</string>
-
+    
     <string name="setting_widget_theme_primary">"กระทู้"</string>
-
+    
     <string name="setting_widget_text_color_primary">"สีข้อความ"</string>
-
+    
     <string name="setting_override_vibrate_primary">"แทนที่การสั่นสะเทือนการแจ้งเตือน"</string>
-
+    
     <string name="setting_override_ringtone_primary">"แทนที่การเล่นเสียงแจ้งเตือน"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"นี้จะต้องเปิดการใช้งานแทนที่กระแสข้อมูลเสียง"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"แทนที่กระแสข้อมูลเสียงแจ้งเตือน"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"กระแสการพูดแทนที่"</string>
 
-
+    
     <string name="time_millisecond">"มิลลิวินาที"</string>
-
+    
     <string name="time_milliseconds">"มิลลิวินาที"</string>
-
+    
     <string name="time_millisecond_abrev">"นางสาว"</string>
-
+    
     <string name="time_second">"ที่สอง"</string>
-
+    
     <string name="time_seconds">"วินาที"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"นาที"</string>
-
+    
     <string name="time_minutes">"รายงานการประชุม"</string>
-
+    
     <string name="time_hour">"ชั่วโมง"</string>
-
+    
     <string name="time_hours">"ชั่วโมง"</string>
-
+    
     <string name="time_day">"วัน"</string>
-
+    
     <string name="time_days">"วัน"</string>
-
+    
     <string name="time_daily">"ประจำวัน"</string>
-
+    
     <string name="time_week">"สัปดาห์"</string>
-
+    
     <string name="time_weeks">"สัปดาห์ที่ผ่านมา"</string>
-
+    
     <string name="time_weekly">"รายสัปดาห์"</string>
-
+    
     <string name="time_month">"เดือน"</string>
-
+    
     <string name="time_months">"เดือน"</string>
-
+    
     <string name="time_monthly">"รายเดือน"</string>
-
+    
     <string name="time_year">"ปี"</string>
-
+    
     <string name="time_years">"ปี"</string>
-
+    
     <string name="time_yearly">"รายปี"</string>
 
-
+    
     <string name="meter">"เมตร"</string>
-
+    
     <string name="meters">"เมตร"</string>
 
-
+    
     <string name="num_one">"หนึ่ง"</string>
-
+    
     <string name="num_two">"สอง"</string>
-
+    
     <string name="num_three">"สาม"</string>
-
+    
     <string name="num_four">"สี่"</string>
-
+    
     <string name="num_five">"ห้า"</string>
-
+    
     <string name="num_six">"หก"</string>
-
+    
     <string name="num_seven">"เจ็ด"</string>
-
+    
     <string name="num_eight">"แปด"</string>
-
+    
     <string name="num_nine">"เก้า"</string>
-
+    
     <string name="num_ten">"สิบ"</string>
 
-
+    
     <string name="num_first">"เป็นครั้งแรก"</string>
-
+    
     <string name="num_second">"ที่สอง"</string>
-
+    
     <string name="num_third">"ที่สาม"</string>
-
+    
     <string name="num_fourth">"ที่สี่"</string>
-
+    
     <string name="num_fifth">"ที่ห้า"</string>
-
+    
     <string name="num_sixth">"ที่หก"</string>
-
+    
     <string name="num_seventh">"ที่เจ็ด"</string>
-
+    
     <string name="num_eighth">"ที่แปด"</string>
-
+    
     <string name="num_ninth">"ที่เก้า"</string>
-
+    
     <string name="num_tenth">"ที่สิบ"</string>
 
-
+    
     <string name="day_sunday">"วันอาทิตย์"</string>
-
+    
     <string name="day_monday">"วันจันทร์"</string>
-
+    
     <string name="day_tuesday">"วันอังคาร"</string>
-
+    
     <string name="day_wednesday">"วันพุธ"</string>
-
+    
     <string name="day_thursday">"วันพฤหัสบดี"</string>
-
+    
     <string name="day_friday">"วันศุกร์"</string>
-
+    
     <string name="day_saturday">"วันเสาร์"</string>
-
+    
     <string name="today">"ในวันนี้"</string>
-
-    <string name="tomorrow">"วันพรุ่งนี้"</string>
-
+    
+    <string name="tomorrow">"พรุ่งนี้"</string>
+    
     <string name="yesterday">"เมื่อวาน"</string>
 
-
-    <string name="days_of_week">"วันของสัปดาห์"</string>
-
+    
+    <string name="days_of_week">"วันในสัปดาห์"</string>
+    
     <string name="days_of_month">"วันของเดือน"</string>
-
+    
     <string name="days_of_year">"วันของปี"</string>
-
+    
     <string name="weeks_of_month">"สัปดาห์ของเดือน"</string>
-
+    
     <string name="weeks_of_year">"สัปดาห์ที่ผ่านมาของปี"</string>
-
+    
     <string name="months_of_year">"เดือนแรกของปี"</string>
 
-
+    
     <string name="next">"ต่อไป"</string>
-
+    
     <string name="previous">"ก่อน"</string>
-
+    
     <string name="back">"กลับ"</string>
-
+    
     <string name="forward">"ข้างหน้า"</string>
 
-
+    
     <string name="pattern_1">"แบบที่ 1"</string>
-
+    
     <string name="pattern_2">"แบบที่ 2"</string>
-
+    
     <string name="pattern_3">"แบบที่ 3"</string>
-
+    
     <string name="pattern_4">"แบบที่ 4"</string>
-
+    
     <string name="pattern_5">"แบบ 5"</string>
-
+    
     <string name="pattern_6">"แบบ 6"</string>
 
-
+    
     <string name="select">"เลือก"</string>
-
+    
     <string name="select_all">"เลือกทั้งหมด"</string>
-
+    
     <string name="select_none">"เลือกไม่มี"</string>
 
-
+    
     <string name="diff_difficulty">"ความยาก"</string>
-
+    
     <string name="diff_select_difficulty">"เลือกความยากลำบาก"</string>
-
+    
     <string name="diff_easy">"ง่าย"</string>
-
+    
     <string name="diff_normal">"ปกติ"</string>
-
+    
     <string name="diff_hard">"ยาก"</string>
 
-
+    
     <string name="enable">"ทำให้สามารถ"</string>
-
+    
     <string name="enabled">"เปิดใช้งาน"</string>
-
+    
     <string name="disable">"ปิดการใช้งาน"</string>
-
+    
     <string name="disabled">"พิการ"</string>
-
+    
     <string name="lock">"ล็อค"</string>
-
+    
     <string name="unlock">"ปลดล็อค"</string>
-
+    
     <string name="locked">"ที่ถูกใส่กุญแจ"</string>
-
+    
     <string name="unlocked">"ปลดล็อค"</string>
-
+    
     <string name="open">"เปิด"</string>
-
+    
     <string name="close">"ปิด"</string>
-
+    
     <string name="opened">"เปิด"</string>
-
+    
     <string name="closed">"ปิด"</string>
-
+    
     <string name="show">"แสดง"</string>
-
+    
     <string name="hide">"ปิดบัง"</string>
-
+    
     <string name="shown">"แสดงให้เห็นว่า"</string>
-
+    
     <string name="Hidden">"ซ่อนเร้น"</string>
-
+    
     <string name="automatic">"อัตโนมัติ"</string>
-
+    
     <string name="manual">"คู่มือ"</string>
-
+    
     <string name="online">"ออนไลน์"</string>
-
+    
     <string name="offline">"ออฟไลน์"</string>
-
+    
     <string name="active">"คล่องแคล่ว"</string>
-
+    
     <string name="inactive">"เฉื่อยชา"</string>
 
-
+    
+    <string name="clear">"ชัดเจน"</string>
+    
+    <string name="clear_log">"เข้าสู่ระบบที่ชัดเจน"</string>
+    
+    <string name="log_cleared">"เข้าสู่ระบบเคลียร์"</string>
+    
     <string name="okay">"ตกลง"</string>
-
+    
     <string name="cancel">"ยกเลิก"</string>
-
+    
     <string name="yes">"ใช่"</string>
-
+    
     <string name="no">"ไม่"</string>
-
+    
     <string name="maybe">"อาจจะ"</string>
-
+    
     <string name="some">"บาง"</string>
-
+    
     <string name="none">"ไม่มี"</string>
-
+    
     <string name="all">"ทั้งหมด"</string>
-
+    
     <string name="set">"ตั้งค่า"</string>
-
+    
     <string name="unset">"ยกเลิกการตั้งค่า"</string>
-
+    
     <string name="last">"สุดท้าย"</string>
-
+    
     <string name="first">"เป็นครั้งแรก"</string>
-
+    
     <string name="every">"ทุกๆ"</string>
-
+    
     <string name="other">"อื่น ๆ"</string>
-
+    
     <string name="off">"ปิด"</string>
-
+    
     <string name="on">"บน"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"เข้าสู่ระบบการแจ้งเตือนที่ชัดเจน"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการที่จะล้างบันทึกเตือนความจำ?"</string>
+    
     <string name="delete_reminder_prompt_title">"ลบการแจ้งเตือน"</string>
-
+    
     <string name="delete_reminder_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการที่จะลบการแจ้งเตือนนี้หรือไม่?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"ไอคอนลบ"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการลบไอคอนนี้?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"ยกเลิกการเปลี่ยนแปลง"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการยกเลิกการเปลี่ยนแปลงของคุณหรือไม่"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"ลบแบบสั่น"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการลบรูปแบบการสั่นสะเทือนนี้หรือไม่?"</string>
-
+    
     <string name="delete_location_prompt_title">"ลบตำแหน่ง"</string>
-
-    <string name="delete_location_prompt_content">"คุณแน่ใจว่าคุณต้องการที่จะลบตำแหน่งนี้หรือไม่?"</string>
-
+    
+    <string name="delete_location_prompt_content">"คุณแน่ใจหรือไม่ว่าคุณต้องการลบสถานที่นี้"</string>
+    
     <string name="duplicate_reminder_prompt_title">"การแจ้งเตือนซ้ำ"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"คุณคุณแน่ใจว่าต้องการทำซ้ำเตือนนี้?"</string>
-
+    
     <string name="include_log_prompt_title">"รวมถึงการเข้าสู่ระบบ"</string>
-
+    
     <string name="include_log_prompt_content">"คุณต้องการที่จะรวมถึงการเข้าสู่ระบบการแจ้งเตือนหรือไม่"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"รวมถึงการแจ้งเตือนเริ่มต้น"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"คุณต้องการที่จะรวมถึงการแจ้งเตือนเริ่มต้น?"</string>
-
+    
     <string name="start_new_game_title">"เริ่มเกมใหม่"</string>
-
+    
     <string name="start_new_game_prompt">"คุณคุณแน่ใจว่าต้องการที่จะเริ่มต้นเกมใหม่?"</string>
-
+    
     <string name="end_game_title">"จบเกม"</string>
-
+    
     <string name="end_game_prompt">"คุณแน่ใจหรือไม่ว่าคุณต้องการที่จะจบเกมนี้หรือไม่"</string>
 
-
+    
     <string name="help">"ช่วยด้วย"</string>
-
+    
     <string name="about">"เกี่ยวกับ"</string>
-
+    
     <string name="settings">"การตั้งค่า"</string>
-
+    
     <string name="help_and_feedback">"ช่วยเหลือและความคิดเห็น"</string>
-
+    
     <string name="rate_app">"ให้คะแนนแอพ"</string>
-
+    
     <string name="more_apps">"ปพลิเคชันอื่น ๆ"</string>
-
+    
     <string name="tutorial">"เกี่ยวกับการสอน"</string>
-
+    
     <string name="read">"อ่าน"</string>
-
+    
     <string name="watch">"ดู"</string>
-
+    
+    <string name="link">"ลิงค์"</string>
+    
     <string name="links">"การเชื่อมโยง"</string>
-
+    
     <string name="licenses">"ใบอนุญาต"</string>
-
+    
     <string name="help_translate">"ช่วยแปล"</string>
-
+    
     <string name="get_the_beta">"ได้รับเบต้า"</string>
-
+    
     <string name="achievements">"ผู้ชนะ"</string>
-
+    
     <string name="leaderboards">"ลีดเดอร์"</string>
-
+    
     <string name="high_scores">"คะแนนสูง"</string>
-
+    
     <string name="my_circles">"กลุ่มของฉัน"</string>
-
+    
     <string name="invitations">"เชิญ"</string>
-
+    
     <string name="options">"ตัวเลือก"</string>
-
+    
     <string name="game_options">"ตัวเลือกเกม"</string>
-
+    
     <string name="advanced_options">"ตัวเลือกขั้นสูง"</string>
-
+    
     <string name="automatch">"Automatch"</string>
-
+    
     <string name="guest">"แขก"</string>
 
-
+    
     <string name="light">"เบา"</string>
-
+    
     <string name="light_transparent">"แสงใส"</string>
-
+    
     <string name="dark">"มืด"</string>
-
+    
     <string name="dark_transparent">"เข้มใส"</string>
-
+    
     <string name="transparent">"โปร่งใส"</string>
-
+    
     <string name="night">"กลางคืน"</string>
-
+    
     <string name="black">"สีดำ"</string>
-
+    
     <string name="white">"ขาว"</string>
-
+    
     <string name="system">"ระบบ"</string>
-
+    
     <string name="light_text">"ข้อความแสง"</string>
-
+    
     <string name="dark_text">"ข้อความสีเข้ม"</string>
 
-
+    
     <string name="red">"สีแดง"</string>
-
+    
     <string name="pink">"สีชมพู"</string>
-
+    
     <string name="purple">"สีม่วง"</string>
-
+    
     <string name="deep_purple">"สีม่วงเข้ม"</string>
-
+    
     <string name="indigo">"คราม"</string>
-
+    
     <string name="blue">"สีน้ำเงิน"</string>
-
+    
     <string name="light_blue">"ฟ้าอ่อน"</string>
-
+    
     <string name="cyan">"สีฟ้า"</string>
-
+    
     <string name="teal">"นกเป็ดน้ำ"</string>
-
+    
     <string name="green">"สีเขียว"</string>
-
+    
     <string name="light_green">"สีเขียวอ่อน"</string>
-
+    
     <string name="lime">"มะนาว"</string>
-
+    
     <string name="yellow">"สีเหลือง"</string>
-
+    
     <string name="amber">"สีเหลืองอำพัน"</string>
-
+    
     <string name="orange">"สีส้ม"</string>
-
+    
     <string name="deep_orange">"ลึกสีส้ม"</string>
-
+    
     <string name="brown">"สีน้ำตาล"</string>
-
+    
     <string name="grey">"สีเทา"</string>
-
+    
     <string name="blue_grey">"สีฟ้าสีเทา"</string>
-
+    
     <string name="dark_grey">"เทาเข้ม"</string>
 
-
+    
     <string name="major">"สำคัญ"</string>
-
+    
     <string name="minor">"ผู้เยาว์"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"รุ่น"</string>
-
+    
     <string name="production">"การผลิต"</string>
-
+    
     <string name="beta">"เบต้า"</string>
-
+    
     <string name="alpha">"แอลฟา"</string>
 
-
+    
     <string name="icon">"ไอคอน"</string>
-
+    
     <string name="icons">"ไอคอน"</string>
-
+    
     <string name="custom_icon">"ไอคอนที่กำหนดเอง"</string>
-
+    
     <string name="custom_icons">"ไอคอนที่กำหนดเอง"</string>
-
+    
     <string name="choose_icon">"เลือกไอคอน"</string>
 
-
+    
     <string name="backup">"การสำรองข้อมูล"</string>
-
+    
     <string name="import_">"นำเข้า"</string>
-
+    
     <string name="export">"ส่งออก"</string>
-
+    
     <string name="export_log">"การส่งออกเข้าสู่ระบบ"</string>
-
+    
     <string name="import_export">"นำเข้าส่งออก"</string>
-
+    
     <string name="export_location">"การส่งออกและสถานที่ตั้ง"</string>
-
+    
     <string name="import_failed">"นำเข้าไม่"</string>
-
+    
     <string name="import_canceled">"การนำเข้าถูกยกเลิก"</string>
-
+    
     <string name="export_failed">"ส่งออกไม่"</string>
-
+    
     <string name="export_canceled">"ยกเลิกการส่งออก"</string>
-
+    
     <string name="import_complete">"นำเข้าสินค้า"</string>
-
+    
     <string name="export_complete">"การส่งออกสินค้า"</string>
-
+    
     <string name="importing_please_wait">"การนำเข้าโปรดรอสักครู่"</string>
-
+    
     <string name="exporting_please_wait">"การส่งออกโปรดรอสักครู่"</string>
 
-
+    
     <string name="snooze">"การงีบหลับ"</string>
-
+    
     <string name="snoozed">"แจ้งเตือนทีหลัง"</string>
-
+    
     <string name="auto_snooze">"Snooze อัตโนมัติ"</string>
-
+    
     <string name="manual_snooze">"Snooze คู่มือการใช้งาน"</string>
 
-
+    
     <string name="message">"ข่าวสาร"</string>
-
+    
     <string name="messages">"ข้อความ"</string>
-
+    
     <string name="num_messages">"จำนวนของข้อความ"</string>
-
+    
     <string name="edit_messages">"แก้ไขข้อความ"</string>
-
+    
     <string name="view_messages">"ดูข้อความ"</string>
-
+    
     <string name="import_messages">"นำเข้าข้อความ"</string>
-
+    
     <string name="message_separator">"ข้อความ Separator ||||"</string>
 
-
+    
     <string name="sign_in">"ลงชื่อเข้าใช้"</string>
-
+    
     <string name="signed_in">"ลงทะเบียนเข้า"</string>
-
+    
     <string name="sign_in_failed">"เข้าสู่ระบบล้มเหลว"</string>
-
+    
     <string name="sign_out">"ออกจากระบบ"</string>
-
+    
     <string name="signed_out">"ออกจากระบบ"</string>
 
-
+    
     <string name="low">"ต่ำ"</string>
-
+    
     <string name="mid">"ปานกลาง"</string>
-
+    
     <string name="high">"สูง"</string>
-
+    
     <string name="min">"นาที"</string>
-
+    
     <string name="max">"แม็กซ์"</string>
-
+    
     <string name="minimum">"ขั้นต่ำ"</string>
-
+    
     <string name="medium">"กลาง"</string>
-
+    
     <string name="maximum">"สูงสุด"</string>
-
+    
     <string name="small">"เล็ก"</string>
-
+    
     <string name="large">"ใหญ่"</string>
-
+    
     <string name="short_">"สั้น"</string>
-
+    
     <string name="long_">"ยาว"</string>
-
+    
     <string name="slow">"ช้า"</string>
-
+    
     <string name="fast">"รวดเร็ว"</string>
-
+    
     <string name="quick">"รวดเร็ว"</string>
-
+    
     <string name="narrow">"แคบ"</string>
-
+    
     <string name="wide">"กว้าง"</string>
 
-
+    
     <string name="thank_you">"ขอขอบคุณ"</string>
-
+    
     <string name="youre_welcome">"ไม่เป็นไร"</string>
-
+    
     <string name="please">"กรุณา"</string>
 
-
-    <string name="you">"คุณ"</string>
-
+    
+    <string name="you">"เธอ"</string>
+    
     <string name="me">"ผม"</string>
-
-    <string name="us">"เรา"</string>
-
+    
+    <string name="us">"พวกเรา"</string>
+    
     <string name="we">"เรา"</string>
-
+    
     <string name="them">"พวกเขา"</string>
 
-
+    
     <string name="short_on">"สั้น ๆ เกี่ยวกับ"</string>
-
+    
     <string name="medium_on">"ขนาดกลางใน"</string>
-
+    
     <string name="long_on">"ยาว"</string>
-
+    
     <string name="short_off">"ปิดสั้น"</string>
-
+    
     <string name="medium_off">"กลางออก"</string>
-
+    
     <string name="long_off">"ยาวออก"</string>
 
-
+    
     <string name="pro">"มือโปร"</string>
-
+    
+    <string name="pro_unlocked">"โปรปลดล็อค"</string>
+    
     <string name="pro_feature">"Pro คุณสมบัติ"</string>
-
+    
     <string name="upgrade">"อัพเกรด"</string>
-
+    
     <string name="feature_requires_pro">"คุณลักษณะนี้จำเป็นต้องรุ่น Pro"</string>
-
+    
     <string name="feature_requires_pro_limited">"คุณลักษณะนี้จะถูก จำกัด ในรุ่นฟรี อัพเกรดเป็นโปรหรือลบรายการที่มีอยู่"</string>
-
+    
     <string name="upgrade_to_pro">"อัพเกรดเป็น Pro"</string>
-
+    
     <string name="upgrade_now">"อัพเกรดเดี๋ยวนี้"</string>
 
-
+    
     <string name="start_date">"วันที่เริ่มต้น"</string>
-
+    
     <string name="end_date">"วันที่สิ้นสุด"</string>
-
+    
     <string name="start_time">"เวลาเริ่มต้น"</string>
-
+    
     <string name="end_time">"เวลาสิ้นสุด"</string>
-
+    
     <string name="end_type">"จบประเภท"</string>
-
+    
     <string name="timing_type">"ประเภทการกำหนดเวลา"</string>
-
+    
     <string name="edit_times">"แก้ไขเวลา"</string>
-
+    
     <string name="time">"เวลา"</string>
-
+    
     <string name="times">"ไทม์ส"</string>
-
+    
     <string name="timing">"การจับเวลา"</string>
-
+    
     <string name="all_time">"ตลอดเวลา"</string>
-
+    
     <string name="every_week">"ทุกสัปดาห์"</string>
-
+    
     <string name="lifetime">"ตลอดชีวิต"</string>
-
+    
     <string name="forever">"ตลอดไป"</string>
-
+    
     <string name="time_period">"ช่วงเวลา"</string>
-
+    
     <string name="random">"สุ่ม"</string>
-
+    
     <string name="randomly">"สุ่ม"</string>
-
+    
     <string name="less_random">"หักสุ่ม"</string>
-
+    
     <string name="even">"แม้"</string>
-
+    
     <string name="evenly">"อย่างเท่าเทียมกัน"</string>
-
+    
     <string name="specific">"โดยเฉพาะ"</string>
-
+    
     <string name="interval">"ระยะห่าง"</string>
-
+    
     <string name="specific_times">"เวลาที่เฉพาะเจาะจง"</string>
-
+    
     <string name="repeat_every">"ซ้ำทุก"</string>
 
-
+    
     <string name="data_loaded">"โหลดข้อมูล"</string>
-
+    
     <string name="file">"ไฟล์"</string>
-
+    
     <string name="local_storage">"เก็บข้อมูลท้องถิ่น"</string>
-
+    
     <string name="filename">"ชื่อไฟล์"</string>
 
-
+    
     <string name="permission_granted">"ได้รับอนุญาต"</string>
-
+    
     <string name="permission_denied">"อนุญาตปฏิเสธ"</string>
-
+    
     <string name="allow_if_any">"อนุญาตให้ถ้ามี"</string>
-
+    
     <string name="allow_if_all">"อนุญาตให้ถ้าทั้งหมด"</string>
-
+    
     <string name="disallow_if_any">"ไม่อนุญาตให้ผู้ใด"</string>
-
+    
     <string name="disallow_if_all">"ไม่อนุญาตให้ใช้ถ้าทั้งหมด"</string>
-
+    
     <string name="trigger_if_any">"ถ้ามีทริกเกอร์"</string>
-
+    
     <string name="trigger_if_all">"ทริกเกอร์ถ้าทั้งหมด"</string>
 
-
+    
     <string name="reminders">"การแจ้งเตือน"</string>
-
+    
     <string name="no_reminder">"ไม่มีการแจ้งเตือน"</string>
-
+    
     <string name="no_reminders_yet">"คุณมีการแจ้งเตือนยังไม่มี"</string>
-
+    
     <string name="alerts_per_day">"การแจ้งเตือนต่อวัน"</string>
-
+    
     <string name="number_of_reminders">"จำนวนการแจ้งเตือน"</string>
 
-
+    
     <string name="changes_discarded">"การเปลี่ยนแปลงทิ้ง"</string>
-
+    
     <string name="changes_saved">"บันทึกการเปลี่ยนแปลง"</string>
-
+    
     <string name="no_changes">"ไม่มีการเปลี่ยนแปลง"</string>
-
+    
     <string name="select_at_least_one_item">"เลือกอย่างน้อยหนึ่งรายการ"</string>
 
-
+    
     <string name="loading">"กำลังโหลด"</string>
-
+    
     <string name="loaded">"เพียบ"</string>
-
+    
     <string name="loading_failed">"กำลังโหลดไม่"</string>
-
+    
     <string name="loading_complete">"โหลดเสร็จสมบูรณ์"</string>
-
+    
     <string name="error">"ความผิดพลาด"</string>
-
+    
     <string name="fail">"ล้มเหลว"</string>
-
+    
     <string name="failed">"ล้มเหลว"</string>
-
+    
     <string name="success">"ความสำเร็จ"</string>
-
+    
     <string name="successful">"ที่ประสบความสำเร็จ"</string>
-
+    
     <string name="unsuccessful">"ไม่สำเร็จ"</string>
-
+    
     <string name="valid">"ถูกต้อง"</string>
-
+    
     <string name="invalid">"โมฆะ"</string>
-
+    
     <string name="complete">"สมบูรณ์"</string>
-
+    
     <string name="completed">"เสร็จ"</string>
-
+    
     <string name="skipped">"ข้ามไป"</string>
-
+    
     <string name="incomplete">"ไม่สมบูรณ์"</string>
-
+    
     <string name="dismiss">"ยกเลิก"</string>
-
+    
     <string name="dismissed">"ไล่ออก"</string>
-
+    
     <string name="acknowledge">"รับทราบ"</string>
-
+    
     <string name="acknowledged">"ที่ยอมรับ"</string>
-
+    
     <string name="add">"เพิ่ม"</string>
-
+    
     <string name="added">"ที่เพิ่ม"</string>
-
+    
     <string name="add_item">"เพิ่มรายการ"</string>
-
+    
     <string name="remove">"เอาออก"</string>
-
+    
     <string name="removed">"ลบออก"</string>
-
+    
     <string name="remove_item">"ลบรายการสินค้า"</string>
-
+    
     <string name="delete">"ลบ"</string>
-
+    
     <string name="deleted">"ที่ถูกลบ"</string>
-
+    
     <string name="duplicate">"ซ้ำ"</string>
-
+    
     <string name="duplicated">"ซ้ำ"</string>
-
+    
     <string name="restart">"เริ่มใหม่"</string>
-
+    
     <string name="restarting">"การเริ่มต้นใหม่"</string>
-
+    
     <string name="restarting_app_please_wait">"การเริ่มต้นใหม่ App โปรดรอสักครู่"</string>
 
-
+    
     <string name="map">"แผนที่"</string>
-
+    
     <string name="location">"ที่ตั้ง"</string>
-
+    
     <string name="locations">"สถานที่"</string>
-
+    
     <string name="latitude">"ละติจูด"</string>
-
+    
     <string name="longitude">"ลองจิจูด"</string>
-
+    
     <string name="radius">"รัศมี"</string>
-
+    
     <string name="enter">"เข้าสู่"</string>
-
+    
     <string name="exit">"ทางออก"</string>
-
+    
     <string name="linger_time">"เวลา Linger"</string>
 
-
+    
     <string name="music">"เพลง"</string>
-
+    
     <string name="ring">"แหวน"</string>
-
+    
     <string name="speak_time">"พูดเวลา"</string>
-
+    
     <string name="speak_title">"พูดชื่อ"</string>
-
+    
     <string name="speak_message">"พูดข้อความ"</string>
-
+    
     <string name="tone">"โทน"</string>
-
+    
     <string name="sound">"เสียง"</string>
+    
+    <string name="sounds">"เสียง"</string>
 
-
+    
     <string name="notification">"การแจ้งเตือน"</string>
-
+    
     <string name="notifications">"การแจ้งเตือน"</string>
-
+    
     <string name="select_notification">"เลือกการแจ้งเตือน"</string>
 
-
+    
     <string name="vibrate">"สั่น"</string>
-
+    
     <string name="vibrate_pattern">"แบบสั่น"</string>
-
+    
     <string name="vibrate_patterns">"รูปแบบการสั่น"</string>
-
+    
     <string name="create_vibrate_pattern">"สร้างรูปแบบสั่น"</string>
 
+    
 
+    
     <string name="you_win">"คุณชนะ"</string>
-
+    
     <string name="you_won">"คุณได้รับรางวัล"</string>
-
+    
     <string name="you_lost">"คุณแพ้แล้ว"</string>
-
+    
     <string name="you_lose">"คุณแพ้"</string>
-
+    
     <string name="you_tied">"คุณผูก"</string>
-
+    
     <string name="winner">"ผู้ชนะ"</string>
-
+    
     <string name="winners">"ผู้ได้รับรางวัล"</string>
-
+    
     <string name="loser">"ผู้แพ้"</string>
-
+    
     <string name="Losers">"แพ้"</string>
 
-
+    
     <string name="number_of_players">"จำนวนผู้เล่น"</string>
-
+    
     <string name="player">"ผู้เล่น"</string>
-
+    
     <string name="players">"ผู้เล่น"</string>
-
+    
     <string name="player_1">"ผู้เล่นที่ 1"</string>
-
+    
     <string name="player_2">"ผู้เล่นที่ 2"</string>
-
+    
     <string name="player_3">"3 ผู้เล่น"</string>
-
+    
     <string name="player_4">"4 ผู้เล่น"</string>
-
+    
     <string name="player_5">"ผู้เล่น 5"</string>
-
+    
     <string name="player_6">"Player 6"</string>
-
+    
     <string name="team">"ทีม"</string>
-
+    
     <string name="teams">"ทีมงาน"</string>
-
+    
     <string name="number_of_teams">"จำนวนของทีม"</string>
-
+    
     <string name="team_1">"ทีม 1"</string>
-
+    
     <string name="team_2">"2 ทีม"</string>
-
+    
     <string name="team_3">"3 ทีม"</string>
-
+    
     <string name="team_4">"4 ทีม"</string>
 
-
+    
     <string name="requires_google_play">"การดำเนินการนี​​้ต้องใช้ Google Play เกม"</string>
-
+    
     <string name="compare_profiles">"เปรียบเทียบเล่นเกมโปรไฟล์"</string>
-
+    
     <string name="view_profile">"ดูข้อมูลส่วนตัวเล่นเกมส์"</string>
 
-
+    
     <string name="sponsored">"ผู้ให้การสนับสนุน"</string>
-
+    
     <string name="ads">"โฆษณา"</string>
-
+    
     <string name="remove_ads">"นำโฆษณา"</string>
-
+    
     <string name="ads_removed">"โฆษณาที่ถูกลบออก"</string>
+    
+    <string name="ad_unavailable">"โฆษณาไม่พร้อมใช้งาน"</string>
 
-
+    
     <string name="current_score">"คะแนนปัจจุบันของ"</string>
-
+    
     <string name="top_score">"คะแนนสูงสุด"</string>
-
+    
     <string name="score">"คะแนน"</string>
 
-
+    
     <string name="your_turn">"ตาคุณ"</string>
-
+    
     <string name="their_turn">"กลับของพวกเขา"</string>
-
+    
     <string name="turn">"กลับ"</string>
-
+    
     <string name="turns">"ย้อนกลับ"</string>
-
+    
     <string name="round">"รอบ"</string>
-
+    
     <string name="rounds">"รอบ"</string>
-
+    
     <string name="match">"การจับคู่"</string>
-
+    
     <string name="matches">"ไม้ขีด"</string>
 
-
+    
     <string name="dollar">"ดอลลาร์"</string>
-
+    
     <string name="dollars">"ดอลลาร์"</string>
-
+    
     <string name="buy">"ซื้อ"</string>
-
+    
     <string name="sell">"ขาย"</string>
-
+    
     <string name="purchase">"ซื้อ"</string>
-
+    
     <string name="diamond">"เพชร"</string>
-
+    
     <string name="diamonds">"เพชร"</string>
 
-
+    
     <string name="rematch">"การแข่งขัน"</string>
-
+    
     <string name="try_again">"ลองอีกครั้ง"</string>
-
+    
     <string name="touch_continue">"แตะเพื่อดำเนินการต่อ"</string>
-
+    
     <string name="touch_resume">"แตะเพื่อสมัครงาน"</string>
-
+    
     <string name="touch_edit">"แตะเพื่อแก้ไข"</string>
-
-    <string name="pause">"หยุดชั่วคราว"</string>
-
+    
+    <string name="pause">"หยุด"</string>
+    
     <string name="pause_game">"เกมหยุดชั่วคราว"</string>
-
+    
     <string name="resume">"ประวัติย่อ"</string>
-
+    
     <string name="resume_game">"กลับสู่เกม"</string>
-
+    
     <string name="new_">"ใหม่"</string>
-
+    
     <string name="new_game">"เกมส์ใหม่"</string>
-
+    
     <string name="select_save">"เลือกบันทึก"</string>
-
-    <string name="save">"บันทึก"</string>
-
+    
+    <string name="save">"ประหยัด"</string>
+    
     <string name="save_game">"บันทึกเกม"</string>
-
+    
     <string name="load">"ภาระ"</string>
-
+    
     <string name="load_game">"โหลดเกมส์"</string>
-
+    
     <string name="game_over">"จบเกม"</string>
-
+    
     <string name="start">"เริ่มต้น"</string>
-
+    
     <string name="start_game">"เริ่มเกมส์"</string>
-
+    
     <string name="end">"ปลาย"</string>
-
+    
     <string name="end_game">"จบเกม"</string>
-
+    
     <string name="stop">"หยุด"</string>
-
+    
     <string name="stop_game">"หยุดเกม"</string>
 
+    
 
+    <string name="bandit">"โจร"</string>
     <string name="free">"ฟรี"</string>
     <string name="pull">"ดึง"</string>
     <string name="wild">"ป่า"</string>
     <string name="normal">"ปกติ"</string>
     <string name="public_">"สาธารณะ"</string>
-    <string name="private_">"เอกชน"</string>
+    <string name="private_">"ส่วนตัว"</string>
     <string name="default_">"ค่าเริ่มต้น"</string>
     <string name="defaults">"ค่าเริ่มต้น"</string>
     <string name="completed_early">"ที่เสร็จสมบูรณ์ในช่วงต้น"</string>
@@ -1051,7 +1075,7 @@
     <string name="name">"ชื่อ"</string>
     <string name="color">"สี"</string>
     <string name="repeat">"ทำซ้ำ"</string>
-    <string name="alarm">"สัญญาณเตือนภัย"</string>
+    <string name="alarm">"ปลุก"</string>
     <string name="general">"ทั่วไป"</string>
     <string name="range">"พิสัย"</string>
     <string name="priority">"ลำดับความสำคัญ"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"ที่ไม่ได้รับ"</string>
     <string name="nothing">"ไม่มีอะไร"</string>
     <string name="clipboard">"คลิปบอร์ด"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"โทร"</string>
+    <string name="email">"อีเมล์"</string>
+    <string name="event">"เหตุการณ์"</string>
+    <string name="progress">"ความคืบหน้า"</string>
+    <string name="promo">"โปรโมชั่น"</string>
+    <string name="recommendation">"คำแนะนำ"</string>
+    <string name="reminder">"การแจ้งเตือน"</string>
+    <string name="service">"บริการ"</string>
+    <string name="social">"สังคม"</string>
+    <string name="status">"สถานะ"</string>
+    <string name="transport">"ขนส่ง"</string>
+    <string name="category">"ประเภท"</string>
+    <string name="show_image_in_notification">"การแสดงภาพในประกาศ"</string>
+    <string name="sample_reminders">"การแจ้งเตือนตัวอย่าง"</string>
+    <string name="app_plugin">"ปลั๊กอิน App"</string>
+    <string name="plugin">"เสียบเข้าไป"</string>
+    <string name="allow_action">"อนุญาตการดำเนิน"</string>
+    <string name="disallow_action">"ไม่อนุญาตให้ใช้การดำเนินการ"</string>
+    <string name="action">"การกระทำ"</string>
+    <string name="extra">"พิเศษ"</string>
+    <string name="package_">"แพ็คเกจ"</string>
+    <string name="broadcast">"ออกอากาศ"</string>
+    <string name="activity">"กิจกรรม"</string>
+    <string name="class_">"ชั้น"</string>
+    <string name="target">"เป้า"</string>
+    <string name="on_trigger_send_intent">"ทริกเกอร์ส่งเจตนา"</string>
+    <string name="receive_intent_criteria">"ได้รับเกณฑ์เจตนา"</string>
+    <string name="receive_intent_trigger">"ได้รับ Trigger เจตนา"</string>
+    <string name="message_source">"ข้อความที่มา"</string>
+    <string name="list">"รายการ"</string>
+    <string name="rss_feed">"ฟีด RSS"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"แจ้งการเปิดลิงก์"</string>
 
 </resources>

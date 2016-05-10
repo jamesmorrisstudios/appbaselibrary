@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versie 2.0.0"</item>
-        <item name="line1">"Re-branded \"Donatie\" naar \"Pro\". Alle eerder gratis features en veel van de nieuwe functies zijn gratis."</item>
-        <item name="line2">"Toegevoegd een app lade voor sub-pagina's."</item>
-        <item name="line5">"Toegevoegd mogelijkheid om standaard herinnering in te stellen voor elke herinnering die u maakt."</item>
-        <item name="line3">"Bijgewerkt de app thema."</item>
-        <item name="line4">"Bijgewerkt de Instellingen en Help en feedback pagina's."</item>
-        <item name="line4">"Toegevoegd een app widget."</item>
-        <item name="line5">"Veel extra herinnering opties (alles bekijken door te controleren \"Show Advanced\")."</item>
-        <item name="line5">"Toegevoegd locatie gebaseerde herinneringen. Voeg uit de \"Customizer\" pagina."</item>
-        <item name="line5">"Een aantal nieuwe functies vergrendeld om \"Pro\" versie."</item>
-        <item name="line5">"App Themes"</item>
-        <item name="line5">"Meeslepende Mode."</item>
-        <item name="line4">"Custom trillen patronen."</item>
-        <item name="line4">"Custom meldingspictogrammen (Android 6.0 + alleen)."</item>
-        <item name="line5">"Ontdek de app voor extra functies. Meer zal spoedig komen."</item>
+        <item name="line0">"Optie toegevoegd om duidelijke herinnering logboek."</item>
+        <item name="line1">"Toegevoegd categorieën kennisgeving."</item>
+        <item name="line2">"Toegevoegd lijst meldingsgeluiden vermogen."</item>
+        <item name="line5">"Koppeling toegevoegd aan herinneringen en het pictogram packs op de jamesmorrisstudios website proeven."</item>
+        <item name="line3">"Een optie toegevoegd om het beeld van de herinnering te laten zien in de kennisgeving."</item>
+        <item name="line4">"Toegevoegd Android Intent gebaseerd plugin ondersteuning voor gebruik met automatisering apps."</item>
+        <item name="line4">"Toegevoegd RSS feed ondersteuning voor berichten."</item>
+        <item name="line4">"Fixed a bug waar de auto snooze niet zou werken met een locatie geactiveerd herinnering."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"niks"</item>
+        <item name="line0">"Eerste uitgave"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"niks"</item>
+        <item name="line0">"Vereenvoudigd het menu ontwerp door het verplaatsen van alles om een ​​navigatie-lade."</item>
+        <item name="line0">"Veranderde de advertentie-indeling te interstitiële advertenties en verwijderd banner advertenties."</item>
+        <item name="line0">"Veranderde de advertentie provider zodat advertenties zijn meestal meer gaming gerelateerde."</item>
+        <item name="line0">"Verbeterde prestaties van het spel."</item>
+        <item name="line0">"Toegevoegd aangepaste thema te ondersteunen."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

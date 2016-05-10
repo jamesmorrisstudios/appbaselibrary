@@ -1,1028 +1,1052 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"zobraziť"</string>
-
+    
     <string name="settings_category_sound">"znieť"</string>
-
+    
     <string name="settings_category_general">"všeobecný"</string>
-
+    
     <string name="settings_category_locale">"locale"</string>
-
+    
     <string name="settings_category_theme">"téma"</string>
-
+    
     <string name="settings_category_notification">"oznámenia"</string>
-
+    
     <string name="settings_category_notification_custom">"Custom Oznámenie"</string>
-
+    
     <string name="settings_category_notification_override">"Prepis Oznámenie"</string>
-
+    
     <string name="settings_category_defaults">"predvolené nastavenie"</string>
-
+    
     <string name="settings_category_random">"náhodnosť"</string>
-
+    
     <string name="settings_category_widget">"widget"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"Immersive Mode"</string>
-
+    
     <string name="setting_sound_enable_primary">"Zvukové efekty"</string>
-
+    
     <string name="setting_music_enable_primary">"hudba"</string>
-
+    
     <string name="setting_language_picker_primary">"Jazyk"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Custom zvonenie Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"app Theme"</string>
-
+    
     <string name="setting_accent_color_primary">"Accent Color"</string>
-
+    
     <string name="setting_primary_color_primary">"základná farba"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Panel nástrojov Color Text"</string>
+    
+    <string name="setting_game_text_color_primary">"Hra Farba textu"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"Kliknite na akciu"</string>
-
+    
     <string name="setting_notification_custom_primary">"umožniť"</string>
-
+    
     <string name="setting_notification_button_style_primary">"tlačidlo Style"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"priebežné Oznámenie"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"Prebiehajúce oznámenia nie sú podporované na SmartWatches"</string>
-
+    
     <string name="setting_notification_theme_primary">"Pozadie"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"Farba textu"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Prvý deň v týždni"</string>
-
+    
     <string name="setting_force_advanced_primary">"Vždy zobrazovať Advanced Options"</string>
-
+    
     <string name="setting_force_advanced_secondary">"Zakázať pre zobrazenie pokročilých možností pre jednotlivých pripomenutie základu"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"prejdeniu Action"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Potom sa zobrazí App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Prejdeniu otvára App"</string>
-
+    
     <string name="setting_random_amount_primary">"náhodný"</string>
-
+    
     <string name="setting_less_random_amount_primary">"menej Random"</string>
-
+    
     <string name="setting_even_amount_primary">"Dokonca"</string>
-
+    
     <string name="setting_widget_theme_primary">"téma"</string>
-
+    
     <string name="setting_widget_text_color_primary">"Farba textu"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Prepis oznámenia vibrovať"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Prehrávanie Prepis oznámenia tón"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"To musí byť umožnené, aby prepísať audio stream"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Prepis oznámenia audio stream"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"Prepis reči potok"</string>
 
-
+    
     <string name="time_millisecond">"milisekunda"</string>
-
+    
     <string name="time_milliseconds">"milisekúnd"</string>
-
+    
     <string name="time_millisecond_abrev">"pani"</string>
-
+    
     <string name="time_second">"druhý"</string>
-
+    
     <string name="time_seconds">"sekundy"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"minúta"</string>
-
+    
     <string name="time_minutes">"zápis"</string>
-
+    
     <string name="time_hour">"hodina"</string>
-
+    
     <string name="time_hours">"hodiny"</string>
-
+    
     <string name="time_day">"deň"</string>
-
-    <string name="time_days">"dni"</string>
-
+    
+    <string name="time_days">"Dni"</string>
+    
     <string name="time_daily">"denná"</string>
-
+    
     <string name="time_week">"týždeň"</string>
-
+    
     <string name="time_weeks">"týždne"</string>
-
+    
     <string name="time_weekly">"týždenný"</string>
-
+    
     <string name="time_month">"mesiac"</string>
-
+    
     <string name="time_months">"mesiaca"</string>
-
+    
     <string name="time_monthly">"mesačne"</string>
-
+    
     <string name="time_year">"rok"</string>
-
+    
     <string name="time_years">"leta"</string>
-
+    
     <string name="time_yearly">"ročne"</string>
 
-
+    
     <string name="meter">"meter"</string>
-
+    
     <string name="meters">"merače"</string>
 
-
+    
     <string name="num_one">"jeden"</string>
-
+    
     <string name="num_two">"dva"</string>
-
+    
     <string name="num_three">"tri"</string>
-
+    
     <string name="num_four">"štyri"</string>
-
+    
     <string name="num_five">"päť"</string>
-
+    
     <string name="num_six">"šesť"</string>
-
+    
     <string name="num_seven">"sedem"</string>
-
+    
     <string name="num_eight">"osem"</string>
-
+    
     <string name="num_nine">"deväť"</string>
-
+    
     <string name="num_ten">"desať"</string>
 
-
+    
     <string name="num_first">"prvý"</string>
-
+    
     <string name="num_second">"druhý"</string>
-
+    
     <string name="num_third">"tretia"</string>
-
+    
     <string name="num_fourth">"štvrtý"</string>
-
+    
     <string name="num_fifth">"piaty"</string>
-
+    
     <string name="num_sixth">"šiesty"</string>
-
+    
     <string name="num_seventh">"siedmy"</string>
-
+    
     <string name="num_eighth">"ôsmy"</string>
-
+    
     <string name="num_ninth">"deviaty"</string>
-
+    
     <string name="num_tenth">"desiaty"</string>
 
-
+    
     <string name="day_sunday">"nedeľa"</string>
-
+    
     <string name="day_monday">"pondelok"</string>
-
+    
     <string name="day_tuesday">"utorok"</string>
-
+    
     <string name="day_wednesday">"streda"</string>
-
+    
     <string name="day_thursday">"štvrtok"</string>
-
+    
     <string name="day_friday">"piatok"</string>
-
+    
     <string name="day_saturday">"sobota"</string>
-
+    
     <string name="today">"dnes"</string>
-
+    
     <string name="tomorrow">"zajtra"</string>
-
+    
     <string name="yesterday">"včera"</string>
 
-
+    
     <string name="days_of_week">"Dni v týždni"</string>
-
+    
     <string name="days_of_month">"dni mesiaca"</string>
-
+    
     <string name="days_of_year">"dni roku"</string>
-
+    
     <string name="weeks_of_month">"týždne mesiaca"</string>
-
+    
     <string name="weeks_of_year">"týždne roka"</string>
-
+    
     <string name="months_of_year">"mesiacov roka"</string>
 
-
+    
     <string name="next">"Ďalší →"</string>
-
+    
     <string name="previous">"predchádzajúca"</string>
-
+    
     <string name="back">"späť"</string>
-
+    
     <string name="forward">"vpred"</string>
 
-
+    
     <string name="pattern_1">"vzor 1"</string>
-
+    
     <string name="pattern_2">"vzor 2"</string>
-
+    
     <string name="pattern_3">"vzor 3"</string>
-
+    
     <string name="pattern_4">"vzor 4"</string>
-
+    
     <string name="pattern_5">"vzor 5"</string>
-
+    
     <string name="pattern_6">"vzor 6"</string>
 
-
+    
     <string name="select">"vybrať"</string>
-
+    
     <string name="select_all">"Vybrať všetko"</string>
-
+    
     <string name="select_none">"vybrať Žiadne"</string>
 
-
+    
     <string name="diff_difficulty">"obtiažnosť"</string>
-
+    
     <string name="diff_select_difficulty">"vybrať Obtiažnosť"</string>
-
+    
     <string name="diff_easy">"jednoduchý"</string>
-
+    
     <string name="diff_normal">"normálne"</string>
-
+    
     <string name="diff_hard">"usilovne"</string>
 
-
+    
     <string name="enable">"umožniť"</string>
-
+    
     <string name="enabled">"povolené"</string>
-
+    
     <string name="disable">"zakázať"</string>
-
+    
     <string name="disabled">"invalidný"</string>
-
+    
     <string name="lock">"zamknúť"</string>
-
+    
     <string name="unlock">"odomknúť"</string>
-
+    
     <string name="locked">"zamknutý"</string>
-
+    
     <string name="unlocked">"odomknutý"</string>
-
-    <string name="open">"otvorené"</string>
-
+    
+    <string name="open">"Otvorený"</string>
+    
     <string name="close">"Blízky"</string>
-
+    
     <string name="opened">"otvoril"</string>
-
+    
     <string name="closed">"zatvorené"</string>
-
+    
     <string name="show">"show"</string>
-
+    
     <string name="hide">"skryť"</string>
-
+    
     <string name="shown">"zobrazené"</string>
-
+    
     <string name="Hidden">"skrytý"</string>
-
+    
     <string name="automatic">"automatický"</string>
-
+    
     <string name="manual">"príručka"</string>
-
+    
     <string name="online">"online"</string>
-
+    
     <string name="offline">"offline"</string>
-
+    
     <string name="active">"aktívny"</string>
+    
+    <string name="inactive">"Neaktívny"</string>
 
-    <string name="inactive">"neaktívne"</string>
-
-
+    
+    <string name="clear">"jasný"</string>
+    
+    <string name="clear_log">"clear Log"</string>
+    
+    <string name="log_cleared">"log vymazané"</string>
+    
     <string name="okay">"OK"</string>
-
+    
     <string name="cancel">"Zrušiť"</string>
-
+    
     <string name="yes">"áno"</string>
-
+    
     <string name="no">"nie"</string>
-
+    
     <string name="maybe">"Možno"</string>
-
-    <string name="some">"niektorí"</string>
-
+    
+    <string name="some">"Niečo"</string>
+    
     <string name="none">"nikto"</string>
-
-    <string name="all">"všetko"</string>
-
+    
+    <string name="all">"Všetko"</string>
+    
     <string name="set">"nastaviť"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"posledný"</string>
-
+    
     <string name="first">"prvý"</string>
-
+    
     <string name="every">"každý"</string>
-
+    
     <string name="other">"ostatné"</string>
-
+    
     <string name="off">"preč"</string>
-
+    
     <string name="on">"na"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Clear Pripomenutie Log"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Ste si istí, že chcete vymazať protokol pripomenutie?"</string>
+    
     <string name="delete_reminder_prompt_title">"zmazať pripomenutie"</string>
-
+    
     <string name="delete_reminder_prompt_content">"Ste si istí, že chcete zmazať toto pripomenutie?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"odstrániť ikonu"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Ste si istí, že chcete zmazať túto ikonu?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"Zrušiť zmeny"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"Ste si istí, že chcete zmeny zahodiť?"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Zmazať Vibrácie vzor"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Ste si istí, že chcete zmazať túto vibrácií vzor?"</string>
-
+    
     <string name="delete_location_prompt_title">"zmazať Umiestnenie"</string>
-
+    
     <string name="delete_location_prompt_content">"Ste si istí, že chcete zmazať toto miesto?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"Duplicate Pripomienka"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"Ste si istí, že chcete duplikovať toto pripomenutie?"</string>
-
+    
     <string name="include_log_prompt_title">"patrí Prihlásiť"</string>
-
+    
     <string name="include_log_prompt_content">"Chcete zahrnúť protokol pripomenutie?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Patrí východzieho pripomenutie"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Chcete zahrnúť predvoleného pripomenutie?"</string>
-
+    
     <string name="start_new_game_title">"Spustiť novú hru"</string>
-
+    
     <string name="start_new_game_prompt">"Ste si istí, že chcete začať novú hru?"</string>
-
+    
     <string name="end_game_title">"end Game"</string>
-
+    
     <string name="end_game_prompt">"Ste si istí, že chcete ukončiť túto hru?"</string>
 
-
+    
     <string name="help">"Pomoc"</string>
-
+    
     <string name="about">"o"</string>
-
+    
     <string name="settings">"nastavenie"</string>
-
+    
     <string name="help_and_feedback">"Pomoc a spätná väzba"</string>
-
+    
     <string name="rate_app">"miera App"</string>
-
+    
     <string name="more_apps">"Ďalšie aplikácie"</string>
-
+    
     <string name="tutorial">"konzultácie"</string>
-
+    
     <string name="read">"čítať"</string>
-
+    
     <string name="watch">"hodinky"</string>
-
+    
+    <string name="link">"odkaz"</string>
+    
     <string name="links">"odkazy"</string>
-
+    
     <string name="licenses">"licencií"</string>
-
+    
     <string name="help_translate">"pomôcť s prekladom"</string>
-
+    
     <string name="get_the_beta">"Získajte Beta"</string>
-
+    
     <string name="achievements">"úspechy"</string>
-
+    
     <string name="leaderboards">"rebríčky"</string>
-
+    
     <string name="high_scores">"Vysoké skóre"</string>
-
+    
     <string name="my_circles">"mojich kruhov"</string>
-
+    
     <string name="invitations">"pozvánky"</string>
-
+    
     <string name="options">"možnosti"</string>
-
+    
     <string name="game_options">"možnosti herné"</string>
-
+    
     <string name="advanced_options">"Pokročilé nastavenia"</string>
-
+    
     <string name="automatch">"Automatch"</string>
-
+    
     <string name="guest">"Hosť"</string>
 
-
+    
     <string name="light">"Svetlo"</string>
-
+    
     <string name="light_transparent">"pre svetlo prestupná"</string>
-
-    <string name="dark">"tmavý"</string>
-
+    
+    <string name="dark">"Tmavá"</string>
+    
     <string name="dark_transparent">"tmavo Transparent"</string>
-
+    
     <string name="transparent">"priehľadný"</string>
-
-    <string name="night">"noc"</string>
-
+    
+    <string name="night">"Noc"</string>
+    
     <string name="black">"čierna"</string>
-
+    
     <string name="white">"biela"</string>
-
+    
     <string name="system">"systém"</string>
-
+    
     <string name="light_text">"light Text"</string>
-
+    
     <string name="dark_text">"tmavo Text"</string>
 
-
+    
     <string name="red">"červená"</string>
-
+    
     <string name="pink">"ružový"</string>
-
+    
     <string name="purple">"nachový"</string>
-
+    
     <string name="deep_purple">"Tmavá fialová"</string>
-
+    
     <string name="indigo">"indigo"</string>
-
+    
     <string name="blue">"modrý"</string>
-
+    
     <string name="light_blue">"Svetlo modrá"</string>
-
+    
     <string name="cyan">"cyan"</string>
-
+    
     <string name="teal">"Teal"</string>
-
+    
     <string name="green">"zelená"</string>
-
+    
     <string name="light_green">"Svetlo zelená"</string>
-
+    
     <string name="lime">"vápno"</string>
-
+    
     <string name="yellow">"žltý"</string>
-
+    
     <string name="amber">"jantár"</string>
-
+    
     <string name="orange">"oranžový"</string>
-
+    
     <string name="deep_orange">"hlboká Orange"</string>
-
+    
     <string name="brown">"hnedý"</string>
-
+    
     <string name="grey">"sivá"</string>
-
+    
     <string name="blue_grey">"modrá Šedá"</string>
-
+    
     <string name="dark_grey">"Tmavošedý"</string>
 
-
+    
     <string name="major">"major"</string>
-
+    
     <string name="minor">"moll"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"verzia"</string>
-
+    
     <string name="production">"výroba"</string>
-
+    
     <string name="beta">"beta"</string>
-
+    
     <string name="alpha">"alpha"</string>
 
-
+    
     <string name="icon">"ikona"</string>
-
+    
     <string name="icons">"ikony"</string>
-
+    
     <string name="custom_icon">"Custom Icon"</string>
-
+    
     <string name="custom_icons">"vlastné ikony"</string>
-
+    
     <string name="choose_icon">"vybrať ikonu"</string>
 
-
+    
     <string name="backup">"zálohovanie"</string>
-
+    
     <string name="import_">"import"</string>
-
+    
     <string name="export">"Export"</string>
-
+    
     <string name="export_log">"Export Log"</string>
-
+    
     <string name="import_export">"Import / Export"</string>
-
+    
     <string name="export_location">"export Umiestnenie"</string>
-
+    
     <string name="import_failed">"import sa nepodaril"</string>
-
+    
     <string name="import_canceled">"import Vypustený"</string>
-
+    
     <string name="export_failed">"Export sa nepodaril"</string>
-
+    
     <string name="export_canceled">"export Vypustený"</string>
-
+    
     <string name="import_complete">"import bol dokončený"</string>
-
+    
     <string name="export_complete">"export Complete"</string>
-
+    
     <string name="importing_please_wait">"Import, čakajte prosím"</string>
-
+    
     <string name="exporting_please_wait">"Export, čakajte prosím"</string>
 
-
+    
     <string name="snooze">"podřimovat"</string>
-
+    
     <string name="snoozed">"odložené"</string>
-
+    
     <string name="auto_snooze">"auto Snooze"</string>
-
+    
     <string name="manual_snooze">"manuálny Snooze"</string>
 
-
+    
     <string name="message">"správa"</string>
-
+    
     <string name="messages">"správy"</string>
-
+    
     <string name="num_messages">"počet správ"</string>
-
+    
     <string name="edit_messages">"upraviť Správy"</string>
-
+    
     <string name="view_messages">"zobrazenie správ"</string>
-
+    
     <string name="import_messages">"import správ"</string>
-
+    
     <string name="message_separator">"Správa Separator ||||"</string>
 
-
+    
     <string name="sign_in">"Prihlásiť sa"</string>
-
+    
     <string name="signed_in">"podpísanej v"</string>
-
+    
     <string name="sign_in_failed">"Prihlásenie sa nepodarilo"</string>
-
+    
     <string name="sign_out">"Odhlásiť Sa"</string>
-
+    
     <string name="signed_out">"odhlásený"</string>
 
-
+    
     <string name="low">"nízky"</string>
-
+    
     <string name="mid">"stredná"</string>
-
+    
     <string name="high">"vysoký"</string>
-
+    
     <string name="min">"min"</string>
-
+    
     <string name="max">"Max"</string>
-
+    
     <string name="minimum">"minimum"</string>
-
+    
     <string name="medium">"stredná"</string>
-
+    
     <string name="maximum">"maximum"</string>
-
+    
     <string name="small">"malý"</string>
-
+    
     <string name="large">"Veľký"</string>
-
+    
     <string name="short_">"Krátky"</string>
-
+    
     <string name="long_">"dlho"</string>
-
+    
     <string name="slow">"pomaly"</string>
-
+    
     <string name="fast">"rýchly"</string>
-
+    
     <string name="quick">"rýchly"</string>
-
+    
     <string name="narrow">"úzky"</string>
-
+    
     <string name="wide">"široký"</string>
 
-
+    
     <string name="thank_you">"Ďakujem"</string>
-
+    
     <string name="youre_welcome">"nie je zač"</string>
-
+    
     <string name="please">"prosím"</string>
 
-
+    
     <string name="you">"vy"</string>
-
+    
     <string name="me">"ma"</string>
-
+    
     <string name="us">"nás"</string>
-
+    
     <string name="we">"my"</string>
-
+    
     <string name="them">"im"</string>
 
-
+    
     <string name="short_on">"málo"</string>
-
+    
     <string name="medium_on">"Medium na"</string>
-
+    
     <string name="long_on">"dlho na"</string>
-
+    
     <string name="short_off">"krátky off"</string>
-
+    
     <string name="medium_off">"Medium off"</string>
-
+    
     <string name="long_off">"dlhá off"</string>
 
-
+    
     <string name="pro">"pre"</string>
-
+    
+    <string name="pro_unlocked">"pre odomknutý"</string>
+    
     <string name="pro_feature">"pre Feature"</string>
-
+    
     <string name="upgrade">"upgrade"</string>
-
+    
     <string name="feature_requires_pro">"Táto funkcia vyžaduje verziu Pro"</string>
-
+    
     <string name="feature_requires_pro_limited">"Táto funkcia je obmedzená v bezplatnej verzii. Upgrade na profesionálne alebo odobratie existujúce položky."</string>
-
+    
     <string name="upgrade_to_pro">"Upgrade na Pro"</string>
-
+    
     <string name="upgrade_now">"Vylepšiť teraz"</string>
 
-
+    
     <string name="start_date">"Dátum začiatku"</string>
-
+    
     <string name="end_date">"Dátum ukončenia"</string>
-
+    
     <string name="start_time">"Doba spustenia"</string>
-
+    
     <string name="end_time">"end Time"</string>
-
+    
     <string name="end_type">"end Type"</string>
-
+    
     <string name="timing_type">"načasovanie Type"</string>
-
+    
     <string name="edit_times">"edit Times"</string>
-
+    
     <string name="time">"čas"</string>
-
+    
     <string name="times">"doba"</string>
-
+    
     <string name="timing">"načasovanie"</string>
-
+    
     <string name="all_time">"Vždy"</string>
-
+    
     <string name="every_week">"Každý týždeň"</string>
-
+    
     <string name="lifetime">"Život"</string>
-
+    
     <string name="forever">"navždy"</string>
-
+    
     <string name="time_period">"Časový úsek"</string>
-
+    
     <string name="random">"náhodný"</string>
-
+    
     <string name="randomly">"náhodne"</string>
-
+    
     <string name="less_random">"menej Random"</string>
-
+    
     <string name="even">"Dokonca"</string>
-
+    
     <string name="evenly">"rovnako"</string>
-
+    
     <string name="specific">"špecifický"</string>
-
+    
     <string name="interval">"interval"</string>
-
+    
     <string name="specific_times">"konkrétne časy"</string>
-
+    
     <string name="repeat_every">"opakovať každých"</string>
 
-
+    
     <string name="data_loaded">"Loaded údaje"</string>
-
+    
     <string name="file">"súbor"</string>
-
+    
     <string name="local_storage">"miestnej úložiska"</string>
-
+    
     <string name="filename">"Názov súboru"</string>
 
-
+    
     <string name="permission_granted">"povolením"</string>
-
+    
     <string name="permission_denied">"Prístup zamietnutý"</string>
-
+    
     <string name="allow_if_any">"Umožňujú Ak niektorý"</string>
-
+    
     <string name="allow_if_all">"Umožňujú Ak je všetko"</string>
-
+    
     <string name="disallow_if_any">"Zakázať ak existuje"</string>
-
+    
     <string name="disallow_if_all">"Zakázať ak všetko"</string>
-
+    
     <string name="trigger_if_any">"Spúšť ak existuje"</string>
-
+    
     <string name="trigger_if_all">"Trigger Ak je všetko"</string>
 
-
+    
     <string name="reminders">"upomienky"</string>
-
+    
     <string name="no_reminder">"žiadne upomienky"</string>
-
+    
     <string name="no_reminders_yet">"Nemáte žiadne pripomienky dosiaľ"</string>
-
+    
     <string name="alerts_per_day">"Upomienky za deň"</string>
-
+    
     <string name="number_of_reminders">"počet pripomenutie"</string>
 
-
+    
     <string name="changes_discarded">"zmeny vyradené"</string>
-
+    
     <string name="changes_saved">"zmeny Uložené"</string>
-
+    
     <string name="no_changes">"žiadne zmeny"</string>
-
+    
     <string name="select_at_least_one_item">"Vyberte aspoň jednu položku"</string>
 
-
-    <string name="loading">"nakladanie"</string>
-
+    
+    <string name="loading">"Načítavanie"</string>
+    
     <string name="loaded">"Naložený"</string>
-
+    
     <string name="loading_failed">"Načítanie Stránku sa nepodarilo"</string>
-
+    
     <string name="loading_complete">"loading Complete"</string>
-
+    
     <string name="error">"chyba"</string>
-
+    
     <string name="fail">"zlyhať"</string>
-
+    
     <string name="failed">"neúspešný"</string>
-
+    
     <string name="success">"Úspech"</string>
-
+    
     <string name="successful">"Úspešný"</string>
-
+    
     <string name="unsuccessful">"neúspešný"</string>
-
+    
     <string name="valid">"platný"</string>
-
+    
     <string name="invalid">"neplatný"</string>
-
+    
     <string name="complete">"kompletné"</string>
-
+    
     <string name="completed">"dokončený"</string>
-
+    
     <string name="skipped">"preskočená"</string>
-
+    
     <string name="incomplete">"neúplný"</string>
-
+    
     <string name="dismiss">"zamietnuť"</string>
-
+    
     <string name="dismissed">"zamietnutý"</string>
-
+    
     <string name="acknowledge">"uznať"</string>
-
+    
     <string name="acknowledged">"uznal"</string>
-
+    
     <string name="add">"pridať"</string>
-
+    
     <string name="added">"pridaný"</string>
-
+    
     <string name="add_item">"Pridať položku"</string>
-
+    
     <string name="remove">"odstrániť"</string>
-
+    
     <string name="removed">"Odstránený"</string>
-
+    
     <string name="remove_item">"odstrániť položku"</string>
-
+    
     <string name="delete">"vymazať"</string>
-
+    
     <string name="deleted">"vypúšťa"</string>
-
+    
     <string name="duplicate">"duplikát"</string>
-
+    
     <string name="duplicated">"duplicitné"</string>
-
+    
     <string name="restart">"Reštart"</string>
-
+    
     <string name="restarting">"reštartovanie"</string>
-
+    
     <string name="restarting_app_please_wait">"Opätovné spustenie App, čakajte prosím"</string>
 
-
+    
     <string name="map">"mapa"</string>
-
+    
     <string name="location">"umiestnenie"</string>
-
+    
     <string name="locations">"miesta"</string>
-
+    
     <string name="latitude">"zemepisná šírka"</string>
-
+    
     <string name="longitude">"zemepisná dĺžka"</string>
-
-    <string name="radius">"polomer"</string>
-
+    
+    <string name="radius">"Polomer"</string>
+    
     <string name="enter">"vstúpiť"</string>
-
-    <string name="exit">"výjazd"</string>
-
+    
+    <string name="exit">"Východ"</string>
+    
     <string name="linger_time">"oneskorenie"</string>
 
-
+    
     <string name="music">"hudba"</string>
-
+    
     <string name="ring">"krúžok"</string>
-
+    
     <string name="speak_time">"hovorte čas"</string>
-
+    
     <string name="speak_title">"hovorte názov"</string>
-
+    
     <string name="speak_message">"hovorte Správa"</string>
-
+    
     <string name="tone">"tón"</string>
-
+    
     <string name="sound">"znieť"</string>
+    
+    <string name="sounds">"zvuky"</string>
 
-
+    
     <string name="notification">"oznámenia"</string>
-
+    
     <string name="notifications">"oznámenia"</string>
-
+    
     <string name="select_notification">"select Notification"</string>
 
-
+    
     <string name="vibrate">"vibrovať"</string>
-
+    
     <string name="vibrate_pattern">"vibrácie Pattern"</string>
-
+    
     <string name="vibrate_patterns">"vibrácie Patterns"</string>
-
+    
     <string name="create_vibrate_pattern">"Vytvoriť Vibrácie vzor"</string>
 
+    
 
+    
     <string name="you_win">"Vyhral si"</string>
-
+    
     <string name="you_won">"Vyhral si"</string>
-
+    
     <string name="you_lost">"Prehral si"</string>
-
+    
     <string name="you_lose">"Prehral si"</string>
-
+    
     <string name="you_tied">"vy Viazaný"</string>
-
+    
     <string name="winner">"víťaz"</string>
-
+    
     <string name="winners">"víťazi"</string>
-
+    
     <string name="loser">"stroskotanec"</string>
-
+    
     <string name="Losers">"losers"</string>
 
-
+    
     <string name="number_of_players">"počet hráčov"</string>
-
+    
     <string name="player">"prehrávač"</string>
-
+    
     <string name="players">"hráči"</string>
-
+    
     <string name="player_1">"hráč 1"</string>
-
+    
     <string name="player_2">"hráč 2"</string>
-
+    
     <string name="player_3">"hráč 3"</string>
-
+    
     <string name="player_4">"hráč 4"</string>
-
+    
     <string name="player_5">"Player 5"</string>
-
+    
     <string name="player_6">"hráč 6"</string>
-
+    
     <string name="team">"tím"</string>
-
+    
     <string name="teams">"tímy"</string>
-
+    
     <string name="number_of_teams">"počet tímov"</string>
-
+    
     <string name="team_1">"team 1"</string>
-
+    
     <string name="team_2">"team 2"</string>
-
+    
     <string name="team_3">"team 3"</string>
-
+    
     <string name="team_4">"team 4"</string>
 
-
+    
     <string name="requires_google_play">"Táto akcia vyžaduje Google Play Games"</string>
-
+    
     <string name="compare_profiles">"Porovnať Hrať hry profily"</string>
-
+    
     <string name="view_profile">"Pohľad hranie hier profil"</string>
 
-
+    
     <string name="sponsored">"Sponzorované"</string>
-
-    <string name="ads">"reklamy"</string>
-
+    
+    <string name="ads">"Reklamy"</string>
+    
     <string name="remove_ads">"Odstrániť reklamy"</string>
-
+    
     <string name="ads_removed">"reklamy Odstránené"</string>
+    
+    <string name="ad_unavailable">"ad nedostupné"</string>
 
-
+    
     <string name="current_score">"aktuálne skóre"</string>
-
+    
     <string name="top_score">"top Score"</string>
-
+    
     <string name="score">"skóre"</string>
 
-
+    
     <string name="your_turn">"Si na rade"</string>
-
+    
     <string name="their_turn">"ich Turn"</string>
-
+    
     <string name="turn">"otočenie"</string>
-
+    
     <string name="turns">"zákruty"</string>
-
-    <string name="round">"kolo"</string>
-
+    
+    <string name="round">"Kolo"</string>
+    
     <string name="rounds">"Rounds"</string>
-
-    <string name="match">"zápas"</string>
-
+    
+    <string name="match">"Zápas"</string>
+    
     <string name="matches">"zápalky"</string>
 
-
+    
     <string name="dollar">"dolár"</string>
-
+    
     <string name="dollars">"dolárov"</string>
-
+    
     <string name="buy">"kúpiť"</string>
-
-    <string name="sell">"predávať"</string>
-
+    
+    <string name="sell">"Predať"</string>
+    
     <string name="purchase">"nákup"</string>
-
+    
     <string name="diamond">"diamant"</string>
-
+    
     <string name="diamonds">"kule"</string>
 
-
+    
     <string name="rematch">"Rematch"</string>
-
+    
     <string name="try_again">"Try Again"</string>
-
+    
     <string name="touch_continue">"dotykom pokračovať"</string>
-
+    
     <string name="touch_resume">"dotykom Resume"</string>
-
+    
     <string name="touch_edit">"dotykom editovať"</string>
-
+    
     <string name="pause">"Pauza"</string>
-
+    
     <string name="pause_game">"Pause Game"</string>
-
+    
     <string name="resume">"Pokračovať"</string>
-
+    
     <string name="resume_game">"Resume Game"</string>
-
+    
     <string name="new_">"Nový"</string>
-
+    
     <string name="new_game">"Nová hra"</string>
-
+    
     <string name="select_save">"vyberte možnosť Uložiť"</string>
-
+    
     <string name="save">"uložiť"</string>
-
+    
     <string name="save_game">"Uložiť hru"</string>
-
+    
     <string name="load">"zaťaženie"</string>
-
+    
     <string name="load_game">"Načítať hru"</string>
-
+    
     <string name="game_over">"Koniec hry"</string>
-
+    
     <string name="start">"štart"</string>
-
+    
     <string name="start_game">"Začať hru"</string>
-
+    
     <string name="end">"Koniec"</string>
-
+    
     <string name="end_game">"end Game"</string>
-
+    
     <string name="stop">"prestať"</string>
-
+    
     <string name="stop_game">"zastaviť hru"</string>
 
+    
 
+    <string name="bandit">"bandita"</string>
     <string name="free">"zadarmo"</string>
     <string name="pull">"ťahať"</string>
     <string name="wild">"divoký"</string>
@@ -1069,7 +1093,7 @@
     <string name="customize">"prispôsobenie"</string>
     <string name="create">"vytvoriť"</string>
     <string name="home">"domov"</string>
-    <string name="upcoming">"nadchádzajúce"</string>
+    <string name="upcoming">"Nadchádzajúce"</string>
     <string name="edit_reminder">"editovať pripomenutie"</string>
     <string name="summary">"zhrnutie"</string>
     <string name="note">"Poznámka"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"vynechal"</string>
     <string name="nothing">"nič"</string>
     <string name="clipboard">"schránka"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"volania"</string>
+    <string name="email">"E-mail"</string>
+    <string name="event">"udalosť"</string>
+    <string name="progress">"pokrok"</string>
+    <string name="promo">"promo"</string>
+    <string name="recommendation">"odporúčanie"</string>
+    <string name="reminder">"Pripomienka"</string>
+    <string name="service">"služba"</string>
+    <string name="social">"Sociálna"</string>
+    <string name="status">"Postavenie"</string>
+    <string name="transport">"doprava"</string>
+    <string name="category">"kategórie"</string>
+    <string name="show_image_in_notification">"Zobraziť obrázok v oznámení"</string>
+    <string name="sample_reminders">"ukážkovej Upomienky"</string>
+    <string name="app_plugin">"app Plugin"</string>
+    <string name="plugin">"Zapojiť"</string>
+    <string name="allow_action">"povoliť akcie"</string>
+    <string name="disallow_action">"zakázať akcie"</string>
+    <string name="action">"akčná"</string>
+    <string name="extra">"extra"</string>
+    <string name="package_">"balíček"</string>
+    <string name="broadcast">"vysielania"</string>
+    <string name="activity">"aktivita"</string>
+    <string name="class_">"Trieda"</string>
+    <string name="target">"terč"</string>
+    <string name="on_trigger_send_intent">"On Trigger Odoslať Intent"</string>
+    <string name="receive_intent_criteria">"Prijímať Intent Kritériá"</string>
+    <string name="receive_intent_trigger">"Prijímať Intent Trigger"</string>
+    <string name="message_source">"správa Source"</string>
+    <string name="list">"zoznam"</string>
+    <string name="rss_feed">"RSS"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Oznámenie odkaz otvára"</string>
 
 </resources>

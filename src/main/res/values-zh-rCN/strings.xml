@@ -1,1028 +1,1052 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"显示"</string>
-
+    
     <string name="settings_category_sound">"声音"</string>
-
+    
     <string name="settings_category_general">"一般"</string>
-
+    
     <string name="settings_category_locale">"语言环境"</string>
-
+    
     <string name="settings_category_theme">"主题"</string>
-
+    
     <string name="settings_category_notification">"通知"</string>
-
+    
     <string name="settings_category_notification_custom">"自定义通知"</string>
-
+    
     <string name="settings_category_notification_override">"替代通知"</string>
-
+    
     <string name="settings_category_defaults">"默认"</string>
-
+    
     <string name="settings_category_random">"随机性"</string>
-
+    
     <string name="settings_category_widget">"窗口小部件"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"沉浸模式"</string>
-
+    
     <string name="setting_sound_enable_primary">"声音特效"</string>
-
+    
     <string name="setting_music_enable_primary">"音乐"</string>
-
+    
     <string name="setting_language_picker_primary">"语言"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"自定义铃声选择器"</string>
-
+    
     <string name="setting_theme_picker_primary">"应用主题"</string>
-
+    
     <string name="setting_accent_color_primary">"雅绅特的颜色"</string>
-
+    
     <string name="setting_primary_color_primary">"原色"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"工具栏文字颜色"</string>
+    
+    <string name="setting_game_text_color_primary">"游戏文本颜色"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"点击动作"</string>
-
+    
     <string name="setting_notification_custom_primary">"启用"</string>
-
+    
     <string name="setting_notification_button_style_primary">"按钮样式"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"正在进行的通知"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"正在进行的通知不支持智能手表"</string>
-
+    
     <string name="setting_notification_theme_primary">"背景"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"文字颜色"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"在一周的第一天"</string>
-
+    
     <string name="setting_force_advanced_primary">"总是显示高级选项"</string>
-
+    
     <string name="setting_force_advanced_secondary">"禁用显示每个提醒的基础上的高级选项"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"刷卡动作"</string>
-
+    
     <string name="setting_notification_click_open_primary">"即可打开应用程序"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"刷卡应用开幕"</string>
-
+    
     <string name="setting_random_amount_primary">"随机"</string>
-
+    
     <string name="setting_less_random_amount_primary">"随机的"</string>
-
+    
     <string name="setting_even_amount_primary">"甚至"</string>
-
+    
     <string name="setting_widget_theme_primary">"主题"</string>
-
+    
     <string name="setting_widget_text_color_primary">"文字颜色"</string>
-
+    
     <string name="setting_override_vibrate_primary">"覆盖通知震动"</string>
-
+    
     <string name="setting_override_ringtone_primary">"覆盖通知音播放"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"这必须能够覆盖音频流"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"覆盖通知音频流"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"覆盖言语流"</string>
 
-
+    
     <string name="time_millisecond">"毫秒"</string>
-
+    
     <string name="time_milliseconds">"毫秒"</string>
-
+    
     <string name="time_millisecond_abrev">"女士"</string>
-
+    
     <string name="time_second">"第二"</string>
-
+    
     <string name="time_seconds">"秒"</string>
-
+    
     <string name="time_second_abrev">"小号"</string>
-
+    
     <string name="time_minute">"分钟"</string>
-
+    
     <string name="time_minutes">"纪要"</string>
-
+    
     <string name="time_hour">"小时"</string>
-
+    
     <string name="time_hours">"小时"</string>
-
+    
     <string name="time_day">"天"</string>
-
+    
     <string name="time_days">"天"</string>
-
+    
     <string name="time_daily">"日常"</string>
-
+    
     <string name="time_week">"周"</string>
-
+    
     <string name="time_weeks">"周"</string>
-
+    
     <string name="time_weekly">"每周"</string>
-
+    
     <string name="time_month">"月"</string>
-
+    
     <string name="time_months">"月"</string>
-
+    
     <string name="time_monthly">"每月一次"</string>
-
+    
     <string name="time_year">"年"</string>
-
+    
     <string name="time_years">"年份"</string>
-
+    
     <string name="time_yearly">"每年"</string>
 
-
+    
     <string name="meter">"仪表"</string>
-
+    
     <string name="meters">"米"</string>
 
-
+    
     <string name="num_one">"一"</string>
-
+    
     <string name="num_two">"二"</string>
-
+    
     <string name="num_three">"三"</string>
-
+    
     <string name="num_four">"四"</string>
-
+    
     <string name="num_five">"五"</string>
-
+    
     <string name="num_six">"六"</string>
-
+    
     <string name="num_seven">"七"</string>
-
+    
     <string name="num_eight">"八"</string>
-
+    
     <string name="num_nine">"九"</string>
-
+    
     <string name="num_ten">"十"</string>
 
-
+    
     <string name="num_first">"第一"</string>
-
+    
     <string name="num_second">"第二"</string>
-
+    
     <string name="num_third">"第三"</string>
-
+    
     <string name="num_fourth">"第四"</string>
-
+    
     <string name="num_fifth">"第五"</string>
-
+    
     <string name="num_sixth">"第六"</string>
-
+    
     <string name="num_seventh">"第七"</string>
-
+    
     <string name="num_eighth">"第八"</string>
-
+    
     <string name="num_ninth">"第九"</string>
-
+    
     <string name="num_tenth">"第十"</string>
 
-
+    
     <string name="day_sunday">"星期日"</string>
-
+    
     <string name="day_monday">"星期一"</string>
-
+    
     <string name="day_tuesday">"星期二"</string>
-
+    
     <string name="day_wednesday">"星期三"</string>
-
+    
     <string name="day_thursday">"星期四"</string>
-
+    
     <string name="day_friday">"星期五"</string>
-
+    
     <string name="day_saturday">"星期六"</string>
-
+    
     <string name="today">"今天"</string>
-
+    
     <string name="tomorrow">"明天"</string>
-
+    
     <string name="yesterday">"昨天"</string>
 
-
-    <string name="days_of_week">"天周"</string>
-
-    <string name="days_of_month">"天月"</string>
-
-    <string name="days_of_year">"天的年份"</string>
-
+    
+    <string name="days_of_week">"周天"</string>
+    
+    <string name="days_of_month">"本月天"</string>
+    
+    <string name="days_of_year">"新年的日子"</string>
+    
     <string name="weeks_of_month">"本月周"</string>
-
+    
     <string name="weeks_of_year">"新年的周"</string>
-
+    
     <string name="months_of_year">"一年中的月份"</string>
 
-
+    
     <string name="next">"下一个"</string>
-
+    
     <string name="previous">"以前"</string>
-
+    
     <string name="back">"背部"</string>
-
+    
     <string name="forward">"前锋"</string>
 
-
+    
     <string name="pattern_1">"模式1"</string>
-
+    
     <string name="pattern_2">"模式2"</string>
-
+    
     <string name="pattern_3">"模式3"</string>
-
+    
     <string name="pattern_4">"模式4"</string>
-
+    
     <string name="pattern_5">"模式5"</string>
-
+    
     <string name="pattern_6">"模式6"</string>
 
-
+    
     <string name="select">"选择"</string>
-
+    
     <string name="select_all">"全选"</string>
-
+    
     <string name="select_none">"选择无"</string>
 
-
+    
     <string name="diff_difficulty">"困难"</string>
-
+    
     <string name="diff_select_difficulty">"选择了难度"</string>
-
+    
     <string name="diff_easy">"简单"</string>
-
+    
     <string name="diff_normal">"正常"</string>
-
+    
     <string name="diff_hard">"硬"</string>
 
-
+    
     <string name="enable">"启用"</string>
-
+    
     <string name="enabled">"启用"</string>
-
+    
     <string name="disable">"关闭"</string>
-
+    
     <string name="disabled">"残"</string>
-
+    
     <string name="lock">"锁"</string>
-
+    
     <string name="unlock">"开锁"</string>
-
+    
     <string name="locked">"锁定"</string>
-
+    
     <string name="unlocked">"解锁"</string>
-
+    
     <string name="open">"打开"</string>
-
+    
     <string name="close">"关"</string>
-
+    
     <string name="opened">"开业"</string>
-
+    
     <string name="closed">"关闭"</string>
-
+    
     <string name="show">"显示"</string>
-
+    
     <string name="hide">"隐藏"</string>
-
+    
     <string name="shown">"如图"</string>
-
+    
     <string name="Hidden">"隐"</string>
-
+    
     <string name="automatic">"自动"</string>
-
+    
     <string name="manual">"手册"</string>
-
+    
     <string name="online">"线上"</string>
-
+    
     <string name="offline">"当前离线"</string>
-
+    
     <string name="active">"活性"</string>
-
+    
     <string name="inactive">"待用"</string>
 
-
+    
+    <string name="clear">"明确"</string>
+    
+    <string name="clear_log">"清除日志"</string>
+    
+    <string name="log_cleared">"清除日志"</string>
+    
     <string name="okay">"好"</string>
-
+    
     <string name="cancel">"取消"</string>
-
+    
     <string name="yes">"是"</string>
-
+    
     <string name="no">"没有"</string>
-
+    
     <string name="maybe">"也许"</string>
-
+    
     <string name="some">"一些"</string>
-
+    
     <string name="none">"没有"</string>
-
+    
     <string name="all">"所有"</string>
-
+    
     <string name="set">"组"</string>
-
+    
     <string name="unset">"取消设置"</string>
-
+    
     <string name="last">"持续"</string>
-
+    
     <string name="first">"第一"</string>
-
+    
     <string name="every">"一切"</string>
-
+    
     <string name="other">"其他"</string>
-
+    
     <string name="off">"离"</string>
-
+    
     <string name="on">"上"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"清除提醒登录"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"你确定要清除提醒日志？"</string>
+    
     <string name="delete_reminder_prompt_title">"删除提醒"</string>
-
+    
     <string name="delete_reminder_prompt_content">"你确定要删除此提醒？"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"删除图标"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"你确定要删除这个图标？"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"放弃更改"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"你确定要放弃更改？"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"删除振动模式"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"你确定要删除这个振动模式？"</string>
-
+    
     <string name="delete_location_prompt_title">"删除位置"</string>
-
+    
     <string name="delete_location_prompt_content">"你确定要删除这个位置？"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"重复提醒"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"你确定要复制此提醒吗？"</string>
-
+    
     <string name="include_log_prompt_title">"包括日志"</string>
-
+    
     <string name="include_log_prompt_content">"你想包括提醒日志？"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"包括默认提醒"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"你要包括默认的提醒？"</string>
-
+    
     <string name="start_new_game_title">"开始新游戏"</string>
-
+    
     <string name="start_new_game_prompt">"你确定要开始新游戏？"</string>
-
+    
     <string name="end_game_title">"游戏结束"</string>
-
+    
     <string name="end_game_prompt">"你确定你要结束这个游戏？"</string>
 
-
+    
     <string name="help">"帮帮我"</string>
-
+    
     <string name="about">"关于"</string>
-
+    
     <string name="settings">"设置"</string>
-
+    
     <string name="help_and_feedback">"帮助和反馈"</string>
-
+    
     <string name="rate_app">"评价应用"</string>
-
+    
     <string name="more_apps">"更多应用程序"</string>
-
+    
     <string name="tutorial">"教程"</string>
-
+    
     <string name="read">"读"</string>
-
+    
     <string name="watch">"看"</string>
-
+    
+    <string name="link">"链接"</string>
+    
     <string name="links">"链接"</string>
-
+    
     <string name="licenses">"许可证"</string>
-
+    
     <string name="help_translate">"帮忙翻译"</string>
-
+    
     <string name="get_the_beta">"获取Beta版"</string>
-
+    
     <string name="achievements">"成就"</string>
-
+    
     <string name="leaderboards">"排行榜"</string>
-
+    
     <string name="high_scores">"高分数"</string>
-
+    
     <string name="my_circles">"我的圈子"</string>
-
+    
     <string name="invitations">"邀请"</string>
-
+    
     <string name="options">"选项"</string>
-
+    
     <string name="game_options">"游戏选项"</string>
-
+    
     <string name="advanced_options">"高级选项"</string>
-
+    
     <string name="automatch">"自动匹配"</string>
-
+    
     <string name="guest">"客人"</string>
 
-
+    
     <string name="light">"光"</string>
-
+    
     <string name="light_transparent">"光透射"</string>
-
+    
     <string name="dark">"黑暗"</string>
-
+    
     <string name="dark_transparent">"深色透明"</string>
-
+    
     <string name="transparent">"透明"</string>
-
+    
     <string name="night">"晚"</string>
-
+    
     <string name="black">"黑色"</string>
-
+    
     <string name="white">"白色"</string>
-
+    
     <string name="system">"系统"</string>
-
+    
     <string name="light_text">"浅色文字"</string>
-
+    
     <string name="dark_text">"深色文本"</string>
 
-
+    
     <string name="red">"红"</string>
-
+    
     <string name="pink">"粉"</string>
-
+    
     <string name="purple">"紫色"</string>
-
+    
     <string name="deep_purple">"深紫色"</string>
-
+    
     <string name="indigo">"靛青"</string>
-
+    
     <string name="blue">"蓝色"</string>
-
+    
     <string name="light_blue">"淡蓝色"</string>
-
+    
     <string name="cyan">"青色"</string>
-
+    
     <string name="teal">"蒂尔"</string>
-
-    <string name="green">"绿"</string>
-
+    
+    <string name="green">"绿色"</string>
+    
     <string name="light_green">"浅绿色"</string>
-
-    <string name="lime">"酸橙"</string>
-
+    
+    <string name="lime">"青柠"</string>
+    
     <string name="yellow">"黄色"</string>
-
+    
     <string name="amber">"琥珀色"</string>
-
+    
     <string name="orange">"橙"</string>
-
+    
     <string name="deep_orange">"深橙色"</string>
-
+    
     <string name="brown">"棕色"</string>
-
+    
     <string name="grey">"灰色"</string>
-
+    
     <string name="blue_grey">"蓝灰色"</string>
-
+    
     <string name="dark_grey">"深灰色"</string>
 
-
+    
     <string name="major">"重大的"</string>
-
+    
     <string name="minor">"次要"</string>
-
+    
     <string name="aux">"奥克斯"</string>
-
+    
     <string name="version">"版"</string>
-
+    
     <string name="production">"生产"</string>
-
+    
     <string name="beta">"Beta版"</string>
-
+    
     <string name="alpha">"Α"</string>
 
-
+    
     <string name="icon">"图标"</string>
-
+    
     <string name="icons">"图标"</string>
-
+    
     <string name="custom_icon">"自定义图标"</string>
-
+    
     <string name="custom_icons">"自定义图标"</string>
-
+    
     <string name="choose_icon">"选择图标"</string>
 
-
+    
     <string name="backup">"备用"</string>
-
+    
     <string name="import_">"进口"</string>
-
+    
     <string name="export">"出口"</string>
-
+    
     <string name="export_log">"导出日志"</string>
-
+    
     <string name="import_export">"进出口"</string>
-
+    
     <string name="export_location">"导出位置"</string>
-
+    
     <string name="import_failed">"导入失败"</string>
-
+    
     <string name="import_canceled">"导入已取消"</string>
-
+    
     <string name="export_failed">"出口失败"</string>
-
+    
     <string name="export_canceled">"取消出口"</string>
-
+    
     <string name="import_complete">"导入完成"</string>
-
+    
     <string name="export_complete">"导出完成"</string>
-
+    
     <string name="importing_please_wait">"导入，请稍候"</string>
-
+    
     <string name="exporting_please_wait">"导出，请稍候"</string>
 
-
+    
     <string name="snooze">"打盹"</string>
-
+    
     <string name="snoozed">"延后"</string>
-
+    
     <string name="auto_snooze">"自动贪睡"</string>
-
+    
     <string name="manual_snooze">"手册贪睡"</string>
 
-
+    
     <string name="message">"信息"</string>
-
+    
     <string name="messages">"消息"</string>
-
+    
     <string name="num_messages">"消息数"</string>
-
+    
     <string name="edit_messages">"编辑留言"</string>
-
+    
     <string name="view_messages">"查看留言"</string>
-
+    
     <string name="import_messages">"导入邮件"</string>
-
+    
     <string name="message_separator">"邮件分隔||||"</string>
 
-
+    
     <string name="sign_in">"签到"</string>
-
+    
     <string name="signed_in">"在签署"</string>
-
+    
     <string name="sign_in_failed">"登录失败"</string>
-
+    
     <string name="sign_out">"登出"</string>
-
+    
     <string name="signed_out">"注销"</string>
 
-
+    
     <string name="low">"低"</string>
-
+    
     <string name="mid">"中"</string>
-
+    
     <string name="high">"高"</string>
-
+    
     <string name="min">"敏"</string>
-
+    
     <string name="max">"马克斯"</string>
-
+    
     <string name="minimum">"最低限度"</string>
-
+    
     <string name="medium">"中"</string>
-
-    <string name="maximum">"最大"</string>
-
+    
+    <string name="maximum">"最大值"</string>
+    
     <string name="small">"小"</string>
-
+    
     <string name="large">"大"</string>
-
+    
     <string name="short_">"短"</string>
-
+    
     <string name="long_">"长"</string>
-
+    
     <string name="slow">"慢"</string>
-
+    
     <string name="fast">"快速"</string>
-
+    
     <string name="quick">"快"</string>
-
-    <string name="narrow">"缩小"</string>
-
+    
+    <string name="narrow">"狭窄"</string>
+    
     <string name="wide">"宽"</string>
 
-
+    
     <string name="thank_you">"谢谢"</string>
-
+    
     <string name="youre_welcome">"别客气"</string>
-
+    
     <string name="please">"请"</string>
 
-
+    
     <string name="you">"您"</string>
-
+    
     <string name="me">"我"</string>
-
+    
     <string name="us">"我们"</string>
-
+    
     <string name="we">"我们"</string>
-
+    
     <string name="them">"他们"</string>
 
-
+    
     <string name="short_on">"在短"</string>
-
+    
     <string name="medium_on">"媒体上"</string>
-
+    
     <string name="long_on">"陇上"</string>
-
+    
     <string name="short_off">"淡"</string>
-
+    
     <string name="medium_off">"中关"</string>
-
+    
     <string name="long_off">"关长"</string>
 
-
+    
     <string name="pro">"临"</string>
-
+    
+    <string name="pro_unlocked">"临解锁"</string>
+    
     <string name="pro_feature">"PRO特性"</string>
-
+    
     <string name="upgrade">"升级"</string>
-
+    
     <string name="feature_requires_pro">"此功能需要专业版"</string>
-
+    
     <string name="feature_requires_pro_limited">"此功能在免费版本的限制。升级到Pro或删除现有项目。"</string>
-
+    
     <string name="upgrade_to_pro">"升级到Pro"</string>
-
+    
     <string name="upgrade_now">"即刻升级"</string>
 
-
+    
     <string name="start_date">"开始日期"</string>
-
+    
     <string name="end_date">"结束日期"</string>
-
+    
     <string name="start_time">"开始时间"</string>
-
+    
     <string name="end_time">"时间结束"</string>
-
+    
     <string name="end_type">"结束类型"</string>
-
+    
     <string name="timing_type">"定时类型"</string>
-
+    
     <string name="edit_times">"编辑时报"</string>
-
+    
     <string name="time">"时间"</string>
-
+    
     <string name="times">"时"</string>
-
+    
     <string name="timing">"定时"</string>
-
+    
     <string name="all_time">"整天"</string>
-
+    
     <string name="every_week">"每周"</string>
-
+    
     <string name="lifetime">"一生"</string>
-
+    
     <string name="forever">"永远"</string>
-
+    
     <string name="time_period">"时间段"</string>
-
+    
     <string name="random">"随机"</string>
-
+    
     <string name="randomly">"随机"</string>
-
+    
     <string name="less_random">"随机的"</string>
-
+    
     <string name="even">"甚至"</string>
-
+    
     <string name="evenly">"匀"</string>
-
+    
     <string name="specific">"具体"</string>
-
+    
     <string name="interval">"间隔"</string>
-
+    
     <string name="specific_times">"具体时报"</string>
-
+    
     <string name="repeat_every">"每天重复"</string>
 
-
+    
     <string name="data_loaded">"数据加载"</string>
-
+    
     <string name="file">"文件"</string>
-
+    
     <string name="local_storage">"本地存储"</string>
-
+    
     <string name="filename">"文件名"</string>
 
-
+    
     <string name="permission_granted">"许可授予"</string>
-
+    
     <string name="permission_denied">"没有权限"</string>
-
+    
     <string name="allow_if_any">"如果允许任何"</string>
-
+    
     <string name="allow_if_all">"如果允许所有"</string>
-
+    
     <string name="disallow_if_any">"禁止如果有的话"</string>
-
+    
     <string name="disallow_if_all">"禁止在所有"</string>
-
+    
     <string name="trigger_if_any">"如果触发任何"</string>
-
+    
     <string name="trigger_if_all">"如果触发所有"</string>
 
-
+    
     <string name="reminders">"提醒"</string>
-
+    
     <string name="no_reminder">"无提醒"</string>
-
+    
     <string name="no_reminders_yet">"你有没有催还"</string>
-
+    
     <string name="alerts_per_day">"提醒每一天"</string>
-
+    
     <string name="number_of_reminders">"提醒数"</string>
 
-
+    
     <string name="changes_discarded">"废弃的变化"</string>
-
+    
     <string name="changes_saved">"保存更改"</string>
-
+    
     <string name="no_changes">"没有变化"</string>
-
+    
     <string name="select_at_least_one_item">"至少选择一个项目"</string>
 
-
+    
     <string name="loading">"加载"</string>
-
+    
     <string name="loaded">"加载"</string>
-
+    
     <string name="loading_failed">"加载失败"</string>
-
+    
     <string name="loading_complete">"加载完成"</string>
-
+    
     <string name="error">"错误"</string>
-
+    
     <string name="fail">"失败"</string>
-
+    
     <string name="failed">"失败"</string>
-
+    
     <string name="success">"成功"</string>
-
+    
     <string name="successful">"成功"</string>
-
+    
     <string name="unsuccessful">"不成功"</string>
-
+    
     <string name="valid">"有效"</string>
-
+    
     <string name="invalid">"无效"</string>
-
+    
     <string name="complete">"完成"</string>
-
+    
     <string name="completed">"完成"</string>
-
+    
     <string name="skipped">"跳过"</string>
-
+    
     <string name="incomplete">"残缺"</string>
-
+    
     <string name="dismiss">"解雇"</string>
-
+    
     <string name="dismissed">"驳回"</string>
-
+    
     <string name="acknowledge">"确认"</string>
-
+    
     <string name="acknowledged">"已确认"</string>
-
+    
     <string name="add">"加"</string>
-
+    
     <string name="added">"添加"</string>
-
+    
     <string name="add_item">"新增项目"</string>
-
+    
     <string name="remove">"去掉"</string>
-
+    
     <string name="removed">"去除"</string>
-
+    
     <string name="remove_item">"除去项目"</string>
-
+    
     <string name="delete">"删除"</string>
-
+    
     <string name="deleted">"已删除"</string>
-
+    
     <string name="duplicate">"重复"</string>
-
+    
     <string name="duplicated">"复制"</string>
-
+    
     <string name="restart">"重新开始"</string>
-
+    
     <string name="restarting">"重新启动"</string>
-
+    
     <string name="restarting_app_please_wait">"重新启动应用程序，请稍候"</string>
 
-
+    
     <string name="map">"地图"</string>
-
+    
     <string name="location">"位置"</string>
-
+    
     <string name="locations">"位置"</string>
-
+    
     <string name="latitude">"纬度"</string>
-
+    
     <string name="longitude">"经度"</string>
-
+    
     <string name="radius">"半径"</string>
-
+    
     <string name="enter">"输入"</string>
-
+    
     <string name="exit">"出口"</string>
-
+    
     <string name="linger_time">"延期时间"</string>
 
-
+    
     <string name="music">"音乐"</string>
-
+    
     <string name="ring">"环"</string>
-
+    
     <string name="speak_time">"发言时间"</string>
-
+    
     <string name="speak_title">"读出标题"</string>
-
+    
     <string name="speak_message">"说话留言"</string>
-
+    
     <string name="tone">"音"</string>
-
+    
     <string name="sound">"声音"</string>
+    
+    <string name="sounds">"声音"</string>
 
-
+    
     <string name="notification">"通知"</string>
-
+    
     <string name="notifications">"通知"</string>
-
+    
     <string name="select_notification">"选择通知"</string>
 
-
+    
     <string name="vibrate">"颤动"</string>
-
+    
     <string name="vibrate_pattern">"振动模式"</string>
-
+    
     <string name="vibrate_patterns">"振动模式"</string>
-
+    
     <string name="create_vibrate_pattern">"创建振动模式"</string>
 
+    
 
+    
     <string name="you_win">"你赢了"</string>
-
+    
     <string name="you_won">"你赢了"</string>
-
+    
     <string name="you_lost">"你输了"</string>
-
+    
     <string name="you_lose">"你输了"</string>
-
+    
     <string name="you_tied">"你绑"</string>
-
+    
     <string name="winner">"优胜者"</string>
-
+    
     <string name="winners">"获奖者"</string>
-
+    
     <string name="loser">"失败者"</string>
-
+    
     <string name="Losers">"失败者"</string>
 
-
+    
     <string name="number_of_players">"玩家数"</string>
-
+    
     <string name="player">"播放机"</string>
-
+    
     <string name="players">"玩家"</string>
-
+    
     <string name="player_1">"玩家1"</string>
-
+    
     <string name="player_2">"玩家2"</string>
-
+    
     <string name="player_3">"玩家3"</string>
-
+    
     <string name="player_4">"播放器4"</string>
-
+    
     <string name="player_5">"玩家5"</string>
-
+    
     <string name="player_6">"玩家6"</string>
-
+    
     <string name="team">"球队"</string>
-
+    
     <string name="teams">"小组"</string>
-
+    
     <string name="number_of_teams">"球队数量"</string>
-
+    
     <string name="team_1">"1队"</string>
-
+    
     <string name="team_2">"2队"</string>
-
+    
     <string name="team_3">"3队"</string>
-
+    
     <string name="team_4">"4队"</string>
 
-
+    
     <string name="requires_google_play">"此操作需要谷歌的Play游戏"</string>
-
+    
     <string name="compare_profiles">"比较玩游戏简介"</string>
-
+    
     <string name="view_profile">"查看玩游戏简介"</string>
 
-
+    
     <string name="sponsored">"赞助商"</string>
-
+    
     <string name="ads">"广告"</string>
-
+    
     <string name="remove_ads">"移除广告"</string>
-
+    
     <string name="ads_removed">"广告移除"</string>
+    
+    <string name="ad_unavailable">"广告不可用"</string>
 
-
+    
     <string name="current_score">"当前分数"</string>
-
+    
     <string name="top_score">"最高分"</string>
-
+    
     <string name="score">"得分了"</string>
 
-
+    
     <string name="your_turn">"到你了"</string>
-
+    
     <string name="their_turn">"轮到自己"</string>
-
+    
     <string name="turn">"转"</string>
-
+    
     <string name="turns">"转弯"</string>
-
+    
     <string name="round">"回合"</string>
-
+    
     <string name="rounds">"大红大紫"</string>
-
+    
     <string name="match">"匹配"</string>
-
+    
     <string name="matches">"火柴"</string>
 
-
+    
     <string name="dollar">"美元"</string>
-
+    
     <string name="dollars">"美元"</string>
-
+    
     <string name="buy">"购买"</string>
-
+    
     <string name="sell">"卖"</string>
-
+    
     <string name="purchase">"采购"</string>
-
+    
     <string name="diamond">"钻石"</string>
-
+    
     <string name="diamonds">"钻石"</string>
 
-
+    
     <string name="rematch">"复赛"</string>
-
+    
     <string name="try_again">"再试一次"</string>
-
+    
     <string name="touch_continue">"轻触继续"</string>
-
+    
     <string name="touch_resume">"轻触恢复"</string>
-
+    
     <string name="touch_edit">"触摸来编辑"</string>
-
+    
     <string name="pause">"暂停"</string>
-
+    
     <string name="pause_game">"暂停游戏"</string>
-
+    
     <string name="resume">"恢复"</string>
-
+    
     <string name="resume_game">"游戏继续"</string>
-
+    
     <string name="new_">"新"</string>
-
+    
     <string name="new_game">"新游戏"</string>
-
+    
     <string name="select_save">"选择保存"</string>
-
+    
     <string name="save">"保存"</string>
-
+    
     <string name="save_game">"保存游戏"</string>
-
+    
     <string name="load">"加载"</string>
-
+    
     <string name="load_game">"加载游戏"</string>
-
+    
     <string name="game_over">"游戏结束"</string>
-
+    
     <string name="start">"开始"</string>
-
+    
     <string name="start_game">"开始游戏"</string>
-
+    
     <string name="end">"结束"</string>
-
+    
     <string name="end_game">"游戏结束"</string>
-
+    
     <string name="stop">"停止"</string>
-
+    
     <string name="stop_game">"停止游戏"</string>
 
+    
 
+    <string name="bandit">"土匪"</string>
     <string name="free">"自由"</string>
     <string name="pull">"拉"</string>
     <string name="wild">"野生"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"错过"</string>
     <string name="nothing">"没有"</string>
     <string name="clipboard">"剪贴板"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"呼叫"</string>
+    <string name="email">"电子邮件"</string>
+    <string name="event">"事件"</string>
+    <string name="progress">"进展"</string>
+    <string name="promo">"促销"</string>
+    <string name="recommendation">"建议"</string>
+    <string name="reminder">"提醒"</string>
+    <string name="service">"服务"</string>
+    <string name="social">"社会"</string>
+    <string name="status">"状态"</string>
+    <string name="transport">"运输"</string>
+    <string name="category">"类别"</string>
+    <string name="show_image_in_notification">"在显示图像的通知"</string>
+    <string name="sample_reminders">"样品提醒"</string>
+    <string name="app_plugin">"应用程序插件"</string>
+    <string name="plugin">"插入"</string>
+    <string name="allow_action">"允许行动"</string>
+    <string name="disallow_action">"禁止行动"</string>
+    <string name="action">"行动"</string>
+    <string name="extra">"额外"</string>
+    <string name="package_">"包"</string>
+    <string name="broadcast">"广播"</string>
+    <string name="activity">"活动"</string>
+    <string name="class_">"类"</string>
+    <string name="target">"目标"</string>
+    <string name="on_trigger_send_intent">"在触发发送意向"</string>
+    <string name="receive_intent_criteria">"接收意向标准"</string>
+    <string name="receive_intent_trigger">"接收意向触发"</string>
+    <string name="message_source">"消息源"</string>
+    <string name="list">"名单"</string>
+    <string name="rss_feed">"RSS订阅"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"通知打开链接"</string>
 
 </resources>

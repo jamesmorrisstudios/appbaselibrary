@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"גרסה 2.0.0"</item>
-        <item name="line1">"מחדש למותג \"תרומה\" ל \"פרו\". כל התכונות חינם בעבר ורבים מן התכונות החדשות חופשיים."</item>
-        <item name="line2">"הוספה במגירת App עבור דפי משנה."</item>
-        <item name="line5">"נוסף יכולת להגדיר הגדרות תזכורת ברירת מחדל עבור כל תזכורת שאתה יוצר."</item>
-        <item name="line3">"עודכן נושא האפליקציה."</item>
-        <item name="line4">"עודכן ההגדרות והעזרה ועמודי משוב."</item>
-        <item name="line4">"הוספת יישומון אפליקציה."</item>
-        <item name="line5">"אפשרויות רבות תזכורת נוספת (הצג את כל על ידי סימון \"הצג מתקדם\")."</item>
-        <item name="line5">"תזכורות מבוססות מיקום נוסף. להוסיף מהעמוד בו \"Customizer\"."</item>
-        <item name="line5">"תכונות חדשות חלק נעול לגרסה \"פרו\"."</item>
-        <item name="line5">"נושאי App"</item>
-        <item name="line5">"מצב עשיר."</item>
-        <item name="line4">"דפוסי רטט מותאם אישית."</item>
-        <item name="line4">"אייקוני התרעות אישית (אנדרואיד 6.0 ומעלה בלבד)."</item>
-        <item name="line5">"חקור את האפליקציה עבור תכונות נוספות. עוד יגיע בקרוב."</item>
+        <item name="line0">"נוספה אפשרות יומן תזכורת ברורה."</item>
+        <item name="line1">"קטגוריות הודעה נוספות."</item>
+        <item name="line2">"רשימת הודעות נוספת נשמעת יכולת."</item>
+        <item name="line5">"נוסף קישור לדגום תזכורות וערכות סמל באתר jamesmorrisstudios."</item>
+        <item name="line3">"נוסף אפשרות להציג את תמונת התזכורת בהודעה."</item>
+        <item name="line4">"נוספה תמיכה תוסף מבוסס אנדרואיד כוונה לשימוש עם יישומי אוטומציה."</item>
+        <item name="line4">"תמיכה ב RSS נוסף עבור הודעות."</item>
+        <item name="line4">"תוקן באג שבו נודניקים אוטומטי לא יעבוד עם תזכורת מיקום מופעלת."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"שום דבר"</item>
+        <item name="line0">"שיחרור ראשוני"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"שום דבר"</item>
+        <item name="line0">"לפשט את עיצוב תפריט ידי הזזת הכל כדי מגירת ניווט."</item>
+        <item name="line0">"שינה את פורמט המודעה למודעות ביניים ובאנרים סיר."</item>
+        <item name="line0">"שינה את ספקית המודעה כך שמודעות הן ברובם יותר הקשורים למשחקים."</item>
+        <item name="line0">"ביצועי משחק משופרים."</item>
+        <item name="line0">"נוסף תמיכת ערכת נושא מותאמת אישית."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

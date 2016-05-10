@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"phiên bản 2.0.0"</item>
-        <item name="line1">"Re-mang nhãn hiệu \"hiến\" để \"Pro\". Tất cả các tính năng trước đây miễn phí và rất nhiều các tính năng mới được tự do."</item>
-        <item name="line2">"Thêm một ngăn kéo ứng dụng cho trang phụ."</item>
-        <item name="line5">"Thêm khả năng để đặt thiết lập nhắc nhở mặc định cho mỗi lời nhắc nhở rằng bạn tạo ra."</item>
-        <item name="line3">"Cập nhật các chủ đề ứng dụng."</item>
-        <item name="line4">"Cập nhật Cài đặt và Help &amp; trang phản hồi."</item>
-        <item name="line4">"Thêm một widget ứng dụng."</item>
-        <item name="line5">"Nhiều tùy chọn nhắc nhở thêm (hiển thị tất cả bằng cách kiểm tra \"Hiển thị chi tiết\")."</item>
-        <item name="line5">"Thêm vị trí nhắc nhở dựa. Thêm từ trang \"Customizer\"."</item>
-        <item name="line5">"Một số tính năng mới đã bị khóa với phiên bản \"Pro\"."</item>
-        <item name="line5">"App Themes"</item>
-        <item name="line5">"Chế độ nhập vai."</item>
-        <item name="line4">"mô hình tùy chỉnh rung."</item>
-        <item name="line4">"biểu tượng thông báo tùy chỉnh (Android 6.0+ chỉ)."</item>
-        <item name="line5">"Khám phá các ứng dụng cho các tính năng bổ sung. Hơn sẽ đến sớm."</item>
+        <item name="line0">"Thêm tùy chọn để ghi lời nhắc nhở rõ ràng."</item>
+        <item name="line1">"Thêm loại thông báo."</item>
+        <item name="line2">"Thêm vào danh sách các âm thanh thông báo khả năng."</item>
+        <item name="line5">"Thêm một liên kết để lấy mẫu nhắc nhở và gói biểu tượng trên trang web jamesmorrisstudios."</item>
+        <item name="line3">"Thêm tùy chọn để hiển thị các hình ảnh nhắc nhở trong thông báo."</item>
+        <item name="line4">"Thêm Ý định dựa trên các plugin hỗ trợ Android để sử dụng với các ứng dụng tự động hóa."</item>
+        <item name="line4">"Thêm hỗ trợ RSS feed cho các tin nhắn."</item>
+        <item name="line4">"Sửa lỗi tự động ngủ sẽ không làm việc với một vị trí kích hoạt nhắc nhở."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"không có gì"</item>
+        <item name="line0">"Phát hành lần đầu"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"không có gì"</item>
+        <item name="line0">"Đơn giản hóa việc thiết kế menu bằng cách di chuyển mọi thứ vào một ngăn điều hướng."</item>
+        <item name="line0">"Thay đổi các định dạng quảng cáo để quảng cáo xen kẽ và banner quảng cáo loại bỏ."</item>
+        <item name="line0">"Thay đổi nhà cung cấp quảng cáo để quảng cáo chủ yếu là chơi game nhiều có liên quan."</item>
+        <item name="line0">"Cải thiện hiệu suất trò chơi."</item>
+        <item name="line0">"Thêm hỗ trợ chủ đề tùy chỉnh."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

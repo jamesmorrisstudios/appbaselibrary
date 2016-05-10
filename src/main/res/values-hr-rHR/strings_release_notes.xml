@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"verzija 2.0.0"</item>
-        <item name="line1">"Ponovno marke \"Donacija\" u \"Pro\". Sve prethodno besplatne značajke i mnoge nove značajke su besplatni."</item>
-        <item name="line2">"Dodali ladicu aplikacije za podstranica."</item>
-        <item name="line5">"Dodana mogućnost da postavite zadane postavke podsjetnika za svaki podsjetnik da ste stvorili."</item>
-        <item name="line3">"Ažurirano temu app."</item>
-        <item name="line4">"Ažurirano postavki i pomoći i povratne informacije stranica."</item>
-        <item name="line4">"Dodano aplikaciju widget."</item>
-        <item name="line5">"Mnoge dodatne opcije podsjetnika (prikaži sve provjerom \"Prikaži napredne\")."</item>
-        <item name="line5">"Dodano podsjetnika na temelju lokacije. Dodaj na stranici \"za prilagođavanje\"."</item>
-        <item name="line5">"Neke nove značajke zaključan na \"Pro\" verziji."</item>
-        <item name="line5">"Teme aplikacija"</item>
-        <item name="line5">"Interaktivni način."</item>
-        <item name="line4">"Custom vibracije uzoraka."</item>
-        <item name="line4">"Ikone Custom obavijesti (Android 6.0+ jedini)."</item>
-        <item name="line5">"Istražite aplikaciju za dodatne značajke. Više će se uskoro."</item>
+        <item name="line0">"Dodana mogućnost da se jasno upozorava zapisnik."</item>
+        <item name="line1">"Dodano kategorije obavijesti."</item>
+        <item name="line2">"Dodano popis obavijesti zvuči sposobnosti."</item>
+        <item name="line5">"Dodano link na uzorak podsjetnike i ikona omot na web stranici jamesmorrisstudios."</item>
+        <item name="line3">"Dodana je opcija za prikaz podsjetnika sliku u obavijesti."</item>
+        <item name="line4">"Dodano Android namjera temelji plugin podrška za korištenje s aplikacijama za automatizaciju."</item>
+        <item name="line4">"Dodana podrška Feed RSS za poruke."</item>
+        <item name="line4">"Fixed bug gdje auto odgode neće raditi s adrese pokreću podsjetnik."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ništa"</item>
+        <item name="line0">"Prvo izdanje"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ništa"</item>
+        <item name="line0">"Pojednostavljeni dizajn izbornika pomicanjem sve u ladici za navigaciju."</item>
+        <item name="line0">"Promijenjen format oglasa na međuprostornim oglase i ukloniti banner oglase."</item>
+        <item name="line0">"Promijenjen davatelja oglasa tako oglasi su uglavnom više gaming povezane."</item>
+        <item name="line0">"Poboljšane performanse igre."</item>
+        <item name="line0">"Dodano prilagođene teme podršku."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

@@ -419,6 +419,8 @@
     <string name="read">Read</string>
     <!-- (Menu Pages) Watch-->
     <string name="watch">Watch</string>
+    <!-- (Menu Pages) Link-->
+    <string name="link">Link</string>
     <!-- (Menu Pages) Links-->
     <string name="links">Links</string>
     <!-- (Menu Pages) Licenses -->
@@ -1138,25 +1140,24 @@
     <string name="category">Category</string>
     <string name="show_image_in_notification">Show Image in Notification</string>
     <string name="sample_reminders">Sample Reminders</string>
-
-
     <string name="app_plugin">App Plugin</string>
     <string name="plugin">Plugin</string>
-
     <string name="allow_action">Allow Action</string>
     <string name="disallow_action">Disallow Action</string>
     <string name="action">Action</string>
     <string name="extra">Extra</string>
     <string name="package_">Package</string>
-
     <string name="broadcast">Broadcast</string>
     <string name="activity">Activity</string>
     <string name="class_">Class</string>
     <string name="target">Target</string>
-
     <string name="on_trigger_send_intent">On Trigger Send Intent</string>
     <string name="receive_intent_criteria">Receive Intent Criteria</string>
     <string name="receive_intent_trigger">Receive Intent Trigger</string>
-
+    <string name="message_source">Message Source</string>
+    <string name="list">List</string>
+    <string name="rss_feed">RSS Feed</string>
+    <string name="rss">RSS</string>
+    <string name="notification_opens_link">Notification Opens Link</string>
 
 </resources>

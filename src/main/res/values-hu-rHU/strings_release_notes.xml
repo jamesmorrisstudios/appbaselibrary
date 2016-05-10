@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"2.0.0 verzió"</item>
-        <item name="line1">"Re-branded \"adomány\", hogy \"Pro\". Minden korábban ingyenes szolgáltatásokat és sok az új funkciók ingyenesek."</item>
-        <item name="line2">"Hozzáadott egy alkalmazást fiókban aloldalak."</item>
-        <item name="line5">"Hozzáadott képes alapértelmezett emlékeztető beállítása minden emlékeztető, hogy hozzon létre."</item>
-        <item name="line3">"Frissítette az alkalmazást témát."</item>
-        <item name="line4">"Frissült a beállítások és a Súgó és visszajelzés oldalakon."</item>
-        <item name="line4">"Hozzáadott egy app widget."</item>
-        <item name="line5">"Számos további emlékeztető lehetőségek (összes ellenőrzésével \"Show Advanced\")."</item>
-        <item name="line5">"Hozzáadott helyfüggő emlékeztetők. Add a \"testreszabási\" oldalon."</item>
-        <item name="line5">"Néhány új funkciók zárva \"Pro\" változat."</item>
-        <item name="line5">"App témák"</item>
-        <item name="line5">"Magával ragadó mód."</item>
-        <item name="line4">"Egyedi rezgő mintákat."</item>
-        <item name="line4">"Egyedi értesítés ikonok (android 6.0+ esetén)."</item>
-        <item name="line5">"Fedezze fel az alkalmazást további funkciókat. Több lesz hamarosan."</item>
+        <item name="line0">"Új lehetőség, hogy egyértelműen arra naplót."</item>
+        <item name="line1">"Hozzáadott értesítési kategóriák."</item>
+        <item name="line2">"Hozzáadott listája értesítési hangok képességét."</item>
+        <item name="line5">"Hozzáadott egy linket, hogy mintát emlékeztetőket és ikon csomagokat a jamesmorrisstudios honlapján."</item>
+        <item name="line3">"Hozzáadott egy lehetőséget, hogy bemutassák a emlékeztető képet a bejelentést."</item>
+        <item name="line4">"Hozzáadott Android szándék alapú plugin támogatás használható automatizálási alkalmazásokat."</item>
+        <item name="line4">"Hozzáadott RSS feed támogatása üzeneteket."</item>
+        <item name="line4">"Javítva egy hiba, ha az automatikus szundi nem működik egy helyen váltott emlékeztetőt."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"semmi"</item>
+        <item name="line0">"Első kiadás"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"semmi"</item>
+        <item name="line0">"Egyszerűsített menü tervezés mozgatásával mindent a navigációs fiókot."</item>
+        <item name="line0">"Megváltozott a hirdetési formátum közbeiktatott hirdetések és eltávolított banner hirdetéseket."</item>
+        <item name="line0">"Megváltozott a hirdetési szolgáltató úgy hirdetései többnyire nagyobb játékokkal."</item>
+        <item name="line0">"Javított játék teljesítménye."</item>
+        <item name="line0">"Hozzáadott egyéni tématámogatás."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

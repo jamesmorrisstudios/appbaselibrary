@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versão 2.0.0"</item>
-        <item name="line1">"Re-branded \"doação\" para \"Pro\". Todos os recursos anteriormente livres e muitas das novas funcionalidades são gratuitas."</item>
-        <item name="line2">"Adicionado uma gaveta app para sub-páginas."</item>
-        <item name="line5">"capacidade de definir configurações padrão do lembrete para cada lembrete de que você cria acrescentou."</item>
-        <item name="line3">"Atualizado o tema app."</item>
-        <item name="line4">"Atualizado Configurações e Ajuda &amp; páginas feedback."</item>
-        <item name="line4">"Adicionado um widget app."</item>
-        <item name="line5">"Muitas opções de lembrete adicionais (mostrar todos marcando \"Mostrar avançada\")."</item>
-        <item name="line5">"lembretes baseados em localização acrescentou. Adicionar a partir da página \"Customizer\"."</item>
-        <item name="line5">"Algumas das novas funcionalidades bloqueado para a versão \"Pro\"."</item>
-        <item name="line5">"Temas App"</item>
-        <item name="line5">"Modo envolvente."</item>
-        <item name="line4">"padrões de vibração personalizado."</item>
-        <item name="line4">"ícones de notificação personalizada (Android 6.0+ apenas)."</item>
-        <item name="line5">"Explorar o aplicativo para recursos adicionais. Mais será em breve."</item>
+        <item name="line0">"Adicionado opção para log clara advertência."</item>
+        <item name="line1">"Categorias de notificação acrescentou."</item>
+        <item name="line2">"lista adicional de sons de notificação habilidade."</item>
+        <item name="line5">"Adicionou um link para provar lembretes e pacotes de ícone no site da jamesmorrisstudios."</item>
+        <item name="line3">"Adicionado uma opção para mostrar a imagem lembrete na notificação."</item>
+        <item name="line4">"apoio Intenção com Android Adicionado plug-in para uso com aplicativos de automação."</item>
+        <item name="line4">"suporte RSS feed adicionado para mensagens."</item>
+        <item name="line4">"Corrigido um bug onde auto soneca não iria trabalhar com uma localização acionado lembrete."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nada"</item>
+        <item name="line0">"Lançamento inicial"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nada"</item>
+        <item name="line0">"Simplificou o projeto do menu movendo tudo para uma gaveta de navegação."</item>
+        <item name="line0">"Mudou o formato de anúncio para anúncios intersticiais e banners removidos."</item>
+        <item name="line0">"Mudou o provedor de anúncio para anúncios são na sua maioria mais relacionada jogos."</item>
+        <item name="line0">"Melhorou o desempenho do jogo."</item>
+        <item name="line0">"Adicionado suporte tema personalizado."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

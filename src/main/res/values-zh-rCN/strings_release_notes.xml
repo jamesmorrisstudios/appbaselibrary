@@ -1,37 +1,34 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"版本2.0.0"</item>
-        <item name="line1">"重新打上了“捐赠”到“亲”。所有以前免费的功能和许多新功能都是免费的。"</item>
-        <item name="line2">"增加了子页面的应用程序的抽屉。"</item>
-        <item name="line5">"添加到您创建的每一个提醒设置默认提醒设置的能力。"</item>
-        <item name="line3">"更新了应用程序的主题。"</item>
-        <item name="line4">"更新设置和帮助与反馈页面。"</item>
-        <item name="line4">"添加的应用程序部件。"</item>
-        <item name="line5">"许多额外提醒选项（显示全部通过检查“显示高级”）。"</item>
-        <item name="line5">"基于新增位置提醒。添加从“定制”页面。"</item>
-        <item name="line5">"一些新的功能锁定为“亲”的版本。"</item>
-        <item name="line5">"应用主题"</item>
-        <item name="line5">"沉浸模式。"</item>
-        <item name="line4">"自定义振动模式。"</item>
-        <item name="line4">"自定义通知图标（安卓6.0+只）。"</item>
-        <item name="line5">"探索附加功能的应用程序。更多即将到来。"</item>
+        <item name="line0">"增加的选择清楚地提醒日志。"</item>
+        <item name="line1">"补充通知类别。"</item>
+        <item name="line2">"新增的通知列表声音的能力。"</item>
+        <item name="line5">"增加了一个链接到品尝jamesmorrisstudios网站上的提示和图标包。"</item>
+        <item name="line3">"增加了一个选项，以显示在通知提醒形象。"</item>
+        <item name="line4">"对于自动化应用程序使用添加基于Android的意图插件的支持。"</item>
+        <item name="line4">"消息增加了RSS源的支持。"</item>
+        <item name="line4">"修正了自动贪睡不会与位置触发提醒工作中的错误。"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"没什么"</item>
+        <item name="line0">"初始发行"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"没什么"</item>
+        <item name="line0">"通过一切都移动到抽屉式导航栏简化了菜单设计。"</item>
+        <item name="line0">"改变了广告格式插页广告和删除横幅广告。"</item>
+        <item name="line0">"改变了广告商的广告让大多更博彩相关。"</item>
+        <item name="line0">"提高游戏性能。"</item>
+        <item name="line0">"新增自定义主题的支持。"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="bandit_release_notes">
-        <item name="line0">"没什么"</item>
+        <item name="line0">"没有"</item>
     </string-array>
 
 </resources>

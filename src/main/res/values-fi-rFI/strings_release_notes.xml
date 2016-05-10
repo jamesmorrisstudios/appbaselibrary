@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versio 2.0.0"</item>
-        <item name="line1">"Re-merkkisten \"Lahjoitus\" ja \"Pro\". Kaikki aiemmin ilmaisia ​​ominaisuuksia ja monet uudet toiminnot ovat ilmaisia."</item>
-        <item name="line2">"Lisätty App laatikko alasivuilla."</item>
-        <item name="line5">"Lisätty kyky asettaa oletusmuistutuksen asetukset jokaiselle muistutus jotka luot."</item>
-        <item name="line3">"Päivitetty sovellus teema."</item>
-        <item name="line4">"Päivitetty Asetukset ja Ohje ja palaute sivuja."</item>
-        <item name="line4">"Lisätty -widgetillä."</item>
-        <item name="line5">"Monia muita muistutus vaihtoehtoja (näytä kaikki valitsemalla \"Show Advanced\")."</item>
-        <item name="line5">"Lisätty sijaintiin perustuvat muistutukset. Lisää käyttäjistä \"Customizer\" sivulla."</item>
-        <item name="line5">"Joitakin uusia ominaisuuksia lukittu \"Pro\" versio."</item>
-        <item name="line5">"App teemat"</item>
-        <item name="line5">"Mukaansatempaava tila."</item>
-        <item name="line4">"Custom värisemään kuvioita."</item>
-        <item name="line4">"Custom ilmoituskuvakkeita (Android 6.0 vain)."</item>
-        <item name="line5">"Tutki sovellus lisäominaisuuksia. Lisää tulossa pian."</item>
+        <item name="line0">"Lisätty mahdollisuus selkeän muistutuksen loki."</item>
+        <item name="line1">"Lisätty ilmoitus luokkia."</item>
+        <item name="line2">"Lisätty luetteloon ilmoituksesta kuulostaa kyky."</item>
+        <item name="line5">"Lisätty linkki näyte muistutuksia ja kuvake pakkauksissa on jamesmorrisstudios verkkosivuilla."</item>
+        <item name="line3">"Lisätty mahdollisuus näyttää muistutuksen kuvan ilmoituksessa."</item>
+        <item name="line4">"Lisätty Android Intent perustuva plugin tukea käytettäväksi automaation sovelluksia."</item>
+        <item name="line4">"Lisätty RSS tuki viestejä."</item>
+        <item name="line4">"Kiinteä vika, jos auto torkku ei toimi paikkaan laukaisi muistutuksen."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ei mitään"</item>
+        <item name="line0">"Initial Release"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ei mitään"</item>
+        <item name="line0">"Yksinkertaistettu valikon suunnitteluun siirtämällä kaiken navigoinnin laatikkoon."</item>
+        <item name="line0">"Muuttunut mainoksen muodossa välimainosten ja poistaa bannerimainoksia."</item>
+        <item name="line0">"Muuttunut mainos tarjoaja niin mainokset ovat useimmiten enemmän pelaamista liittyviä."</item>
+        <item name="line0">"Parempi pelin suorituskykyä."</item>
+        <item name="line0">"Lisätty mukautetun teeman tukea."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

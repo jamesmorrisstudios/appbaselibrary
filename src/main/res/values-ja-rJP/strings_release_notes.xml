@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"バージョン2.0.0"</item>
-        <item name="line1">"再ブランド \"プロ\"に \"寄付\"。すべての以前に自由な機能と新機能の多くは無料です。"</item>
-        <item name="line2">"サブページのためのアプリの引き出しを追加しました。"</item>
-        <item name="line5">"作成したすべてのアラームのデフォルトのアラーム設定を設定する機能を追加しました。"</item>
-        <item name="line3">"アプリのテーマを更新しました。"</item>
-        <item name="line4">"設定とヘルプ＆フィードバックページを更新しました。"</item>
-        <item name="line4">"アプリウィジェットを追加しました。"</item>
-        <item name="line5">"多くの追加のリマインダーオプション（「表示詳細設定」を確認して、すべてを表示します）。"</item>
-        <item name="line5">"ロケーションベースのリマインダーを追加しました。 「カスタマイザ」ページから追加。"</item>
-        <item name="line5">"\"プロ\"のバージョンにロックされ、いくつかの新機能を備えています。"</item>
-        <item name="line5">"アプリのテーマ"</item>
-        <item name="line5">"没入型モード。"</item>
-        <item name="line4">"カスタムバイブレーションパターン。"</item>
-        <item name="line4">"カスタム通知アイコン（アンドロイド6.0以降のみ）。"</item>
-        <item name="line5">"追加機能のアプリを探ります。詳細は近日公開されます。"</item>
+        <item name="line0">"リマインダーログを消去するオプションを追加。"</item>
+        <item name="line1">"通知カテゴリを追加しました。"</item>
+        <item name="line2">"通知の追加されたリストは、能力が鳴ります。"</item>
+        <item name="line5">"jamesmorrisstudiosのウェブサイトに通知し、アイコンパックをサンプリングするためのリンクを追加しました。"</item>
+        <item name="line3">"通知にリマインダ画像を表示するオプションを追加しました。"</item>
+        <item name="line4">"オートメーション・アプリケーションで使用するためのAndroidのインテントベースのプラグインのサポートが追加されました。"</item>
+        <item name="line4">"メッセージのRSSフィードのサポートを追加しました。"</item>
+        <item name="line4">"アラームをトリガし、自動スヌーズは場所では動作しないバグを修正しました。"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"何も"</item>
+        <item name="line0">"初回リリース"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"何も"</item>
+        <item name="line0">"ナビゲーションドロワーにすべてを移動することによって、メニューのデザインを簡素化されました。"</item>
+        <item name="line0">"インタースティシャル広告に広告フォーマットを変更し、バナー広告を削除しました。"</item>
+        <item name="line0">"広告は主に、よりゲームに関連しているので、広告プロバイダを変更しました。"</item>
+        <item name="line0">"改善されたゲームのパフォーマンス。"</item>
+        <item name="line0">"カスタムテーマのサポートが追加されました。"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

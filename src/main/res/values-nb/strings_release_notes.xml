@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versjon 2.0.0"</item>
-        <item name="line1">"Re-branded \"donasjon\" til \"Pro\". Alle tidligere gratis funksjoner og mange av de nye funksjonene er gratis."</item>
-        <item name="line2">"Lagt en app skuff for undersider."</item>
-        <item name="line5">"Lagt evne til å angi standardpåminnelsesinnstillinger for hver påminnelse om at du oppretter."</item>
-        <item name="line3">"Oppdatert app tema."</item>
-        <item name="line4">"Oppdatert Innstillinger og Hjelp og tilbakemelding sider."</item>
-        <item name="line4">"Lagt en app widget."</item>
-        <item name="line5">"Mange ekstra påminnelse alternativer (vis alle ved å sjekke \"Show Advanced\")."</item>
-        <item name="line5">"Lagt lokasjonsbaserte påminnelser. Legg fra \"Customizer\" side."</item>
-        <item name="line5">"Noen nye funksjoner låst til \"Pro\" versjon."</item>
-        <item name="line5">"App Temaer"</item>
-        <item name="line5">"Immersive Mode."</item>
-        <item name="line4">"Custom vibreringsmønstre."</item>
-        <item name="line4">"Custom varselikoner (android 6.0+ only)."</item>
-        <item name="line5">"Utforsk app for flere funksjoner. Flere vil komme snart."</item>
+        <item name="line0">"Lagt til muligheten til å tydelig påminnelse logg."</item>
+        <item name="line1">"Lagt inn varslingskategorier."</item>
+        <item name="line2">"Lagt liste over varslingslyder evne."</item>
+        <item name="line5">"Lagt en link til prøve påminnelser og ikonet pakker på jamesmorrisstudios nettstedet."</item>
+        <item name="line3">"Lagt til et alternativ for å vise påminnelsen bilde i meldingen."</item>
+        <item name="line4">"Lagt Android Intent basert plugin støtte for bruk med automasjons apps."</item>
+        <item name="line4">"Lagt RSS feed støtte for meldinger."</item>
+        <item name="line4">"Fikset en bug hvor autoslumring ikke ville fungere med en plassering utløst påminnelse."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ingenting"</item>
+        <item name="line0">"Første utgivelse"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ingenting"</item>
+        <item name="line0">"Forenklet menyen design ved å flytte alt til en navigasjonsmenyen."</item>
+        <item name="line0">"Endret annonseformatet til interstitialer og fjernet bannerannonser."</item>
+        <item name="line0">"Endret annonseleverandøren, slik at annonsene er stort sett mer spillrelaterte."</item>
+        <item name="line0">"Forbedret spillytelse."</item>
+        <item name="line0">"Lagt tilpasset tema støtte."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

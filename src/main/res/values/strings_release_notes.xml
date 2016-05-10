@@ -5,10 +5,11 @@
     <string-array name="randremind_release_notes">
         <item name="line0">Added option to clear reminder log.</item>
         <item name="line1">Added notification categories.</item>
-        <item name="line2">Added list of notification sounds ability randomized or in order.</item>
+        <item name="line2">Added list of notification sounds ability.</item>
         <item name="line5">Added a link to sample reminders and icon packs on the jamesmorrisstudios website.</item>
         <item name="line3">Added an option to show the reminder image in the notification.</item>
         <item name="line4">Added Android Intent based plugin support for use with automation apps.</item>
+        <item name="line4">Added RSS feed support for messages.</item>
         <item name="line4">Fixed a bug where auto snooze would not work with a location triggered reminder.</item>
     </string-array>
 

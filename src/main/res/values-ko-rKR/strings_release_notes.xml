@@ -1,37 +1,34 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"버전 2.0.0"</item>
-        <item name="line1">"다시 브랜드 \"프로\"에서 \"기부\". 이전에 무료 기능 및 새로운 기능의 대부분은 무료입니다."</item>
-        <item name="line2">"서브 페이지의 앱 서랍을 추가했습니다."</item>
-        <item name="line5">"사용자가 만든 모든 알림에 대한 기본 미리 알림 설정을 설정하는 기능을 추가했습니다."</item>
-        <item name="line3">"앱 테마를 업데이트되었습니다."</item>
-        <item name="line4">"설정 및 도움말 및 피드백 페이지를 업데이트했습니다."</item>
-        <item name="line4">"앱 위젯을 추가했습니다."</item>
-        <item name="line5">"많은 추가 알림 옵션 (모든은 \"고급\"을 선택하여 표시)."</item>
-        <item name="line5">"추가 된 위치 기반 알림. \"사용자 정의\"페이지에서 추가합니다."</item>
-        <item name="line5">"일부 새로운 기능 \"프로\"버전에 잠겨 있습니다."</item>
-        <item name="line5">"앱 테마"</item>
-        <item name="line5">"몰입 모드."</item>
-        <item name="line4">"사용자 정의 진동 패턴."</item>
-        <item name="line4">"사용자 정의 알림 아이콘 (안드로이드 6.0 이상 만 해당)."</item>
-        <item name="line5">"추가 기능을위한 응용 프로그램을 탐험 해보세요. 더 곧 올 것입니다."</item>
+        <item name="line0">"분명 알림 로그에 추가 옵션을 선택합니다."</item>
+        <item name="line1">"추가 알림 종류."</item>
+        <item name="line2">"통지의 추가 목록 기능을 울립니다."</item>
+        <item name="line5">"jamesmorrisstudios 웹 사이트에서 알림 및 아이콘 팩을 맛볼 수있는 링크가 추가되었습니다."</item>
+        <item name="line3">"알림에서 알림 이미지를 표시 할 수있는 옵션을 추가했습니다."</item>
+        <item name="line4">"자동화 앱을 사용하기위한 추가 안드로이드 의도를 기반으로 플러그인을 지원합니다."</item>
+        <item name="line4">"메시지에 대한 추가 RSS 피드를 지원합니다."</item>
+        <item name="line4">"자동 스누즈가 위치 트리거 알림과 함께 작동하지 않을 버그가 수정되었습니다."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"무"</item>
+        <item name="line0">"초판"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"무"</item>
+        <item name="line0">"네비게이션 서랍 모두를 이동시켜 메뉴 설계를 단순화."</item>
+        <item name="line0">"삽입 광고 제거 배너 광고에 광고 형식을 변경."</item>
+        <item name="line0">"광고는 대부분 더 게임 관련 그래서 광고 공급자를 변경."</item>
+        <item name="line0">"향상된 게임 성능을 제공합니다."</item>
+        <item name="line0">"사용자 지정 테마 지원 추가."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="bandit_release_notes">
-        <item name="line0">"무"</item>
+        <item name="line0">"아무것도"</item>
     </string-array>
 
 </resources>

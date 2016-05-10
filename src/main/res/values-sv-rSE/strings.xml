@@ -1,1028 +1,1052 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
-    <string name="settings_category_display">"Visa"</string>
-
-    <string name="settings_category_sound">"Ljud"</string>
-
-    <string name="settings_category_general">"Allmän"</string>
-
-    <string name="settings_category_locale">"locale"</string>
-
-    <string name="settings_category_theme">"Tema"</string>
-
-    <string name="settings_category_notification">"Underrättelse"</string>
-
-    <string name="settings_category_notification_custom">"anpassade Anmälan"</string>
-
+    
+    <string name="settings_category_display">Skärm</string>
+    
+    <string name="settings_category_sound">Ljud</string>
+    
+    <string name="settings_category_general">Allmänt</string>
+    
+    <string name="settings_category_locale">Plats</string>
+    
+    <string name="settings_category_theme">Tema</string>
+    
+    <string name="settings_category_notification">Notifikation</string>
+    
+    <string name="settings_category_notification_custom">Notifikation</string>
+    
     <string name="settings_category_notification_override">"Åsido Anmälan"</string>
-
+    
     <string name="settings_category_defaults">"defaults"</string>
-
+    
     <string name="settings_category_random">"Randomness"</string>
-
+    
     <string name="settings_category_widget">"widget"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"uppslukande Läge"</string>
-
+    
     <string name="setting_sound_enable_primary">"Ljudeffekter"</string>
-
+    
     <string name="setting_music_enable_primary">"Musik"</string>
-
+    
     <string name="setting_language_picker_primary">"Språk"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Custom Tone Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"app Tema"</string>
-
+    
     <string name="setting_accent_color_primary">"Accent Color"</string>
-
+    
     <string name="setting_primary_color_primary">"Grundfärg"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Verktygsfältet Textfärg"</string>
+    
+    <string name="setting_game_text_color_primary">"Speltextfärg"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"Klicka på åtgärder"</string>
-
+    
     <string name="setting_notification_custom_primary">"Möjliggöra"</string>
-
+    
     <string name="setting_notification_button_style_primary">"Button Style"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"pågående Anmälan"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"Pågående anmälningar stöds inte på SmartWatches"</string>
-
+    
     <string name="setting_notification_theme_primary">"Bakgrund"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"tEXT~~POS=TRUNC"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Första dagen i veckan"</string>
-
+    
     <string name="setting_force_advanced_primary">"Alltid Visa Avancerade alternativ"</string>
-
+    
     <string name="setting_force_advanced_secondary">"Inaktivera för att visa avancerade alternativ på en per påminnelse basis"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"Svep Action"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Klicka Öppnar App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Svep Öppnar App"</string>
-
+    
     <string name="setting_random_amount_primary">"Slumpmässig"</string>
-
+    
     <string name="setting_less_random_amount_primary">"mindre Random"</string>
-
+    
     <string name="setting_even_amount_primary">"Även"</string>
-
+    
     <string name="setting_widget_theme_primary">"Tema"</string>
-
+    
     <string name="setting_widget_text_color_primary">"tEXT~~POS=TRUNC"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Override vibrera anmälan"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Åsido ljudsignal uppspelning"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"Detta måste få möjlighet att åsidosätta ljudströmmen"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Override ljudsignal ström"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"Åsido tal ström"</string>
 
-
+    
     <string name="time_millisecond">"millisekund"</string>
-
+    
     <string name="time_milliseconds">"millisekunder"</string>
-
+    
     <string name="time_millisecond_abrev">"Fröken"</string>
-
+    
     <string name="time_second">"Andra"</string>
-
+    
     <string name="time_seconds">"sekunder"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"Minut"</string>
-
+    
     <string name="time_minutes">"Minuter"</string>
-
+    
     <string name="time_hour">"Timme"</string>
-
+    
     <string name="time_hours">"timmar"</string>
-
+    
     <string name="time_day">"Dag"</string>
-
+    
     <string name="time_days">"dagar"</string>
-
+    
     <string name="time_daily">"Dagligen"</string>
-
+    
     <string name="time_week">"Vecka"</string>
-
+    
     <string name="time_weeks">"veckor"</string>
-
+    
     <string name="time_weekly">"Varje vecka"</string>
-
+    
     <string name="time_month">"Månad"</string>
-
+    
     <string name="time_months">"månader"</string>
-
+    
     <string name="time_monthly">"En gång i månaden"</string>
-
+    
     <string name="time_year">"År"</string>
-
-    <string name="time_years">"år"</string>
-
+    
+    <string name="time_years">"År"</string>
+    
     <string name="time_yearly">"Årlig"</string>
 
-
+    
     <string name="meter">"Meter"</string>
-
+    
     <string name="meters">"meter"</string>
 
-
+    
     <string name="num_one">"En"</string>
-
+    
     <string name="num_two">"Två"</string>
-
+    
     <string name="num_three">"Tre"</string>
-
+    
     <string name="num_four">"Fyra"</string>
-
+    
     <string name="num_five">"Fem"</string>
-
+    
     <string name="num_six">"Sex"</string>
-
+    
     <string name="num_seven">"Sju"</string>
-
+    
     <string name="num_eight">"Åtta"</string>
-
+    
     <string name="num_nine">"Nio"</string>
-
+    
     <string name="num_ten">"Tio"</string>
 
-
+    
     <string name="num_first">"Först"</string>
-
+    
     <string name="num_second">"Andra"</string>
-
+    
     <string name="num_third">"Tredje"</string>
-
+    
     <string name="num_fourth">"Fjärde"</string>
-
+    
     <string name="num_fifth">"Femte"</string>
-
+    
     <string name="num_sixth">"Sjätte"</string>
-
+    
     <string name="num_seventh">"Sjunde"</string>
-
+    
     <string name="num_eighth">"Åttonde"</string>
-
+    
     <string name="num_ninth">"Nionde"</string>
-
+    
     <string name="num_tenth">"Tionde"</string>
 
-
+    
     <string name="day_sunday">"söndag"</string>
-
+    
     <string name="day_monday">"måndag"</string>
-
+    
     <string name="day_tuesday">"tisdag"</string>
-
+    
     <string name="day_wednesday">"onsdag"</string>
-
+    
     <string name="day_thursday">"torsdag"</string>
-
+    
     <string name="day_friday">"fredag"</string>
-
+    
     <string name="day_saturday">"lördag"</string>
-
+    
     <string name="today">"I dag"</string>
-
+    
     <string name="tomorrow">"I morgon"</string>
-
+    
     <string name="yesterday">"I går"</string>
 
-
-    <string name="days_of_week">"Dagar i veckan"</string>
-
+    
+    <string name="days_of_week">"Dagar av veckan"</string>
+    
     <string name="days_of_month">"Dagar i månaden"</string>
-
-    <string name="days_of_year">"Dagar på året"</string>
-
+    
+    <string name="days_of_year">"Dagar av året"</string>
+    
     <string name="weeks_of_month">"Veckor i månaden"</string>
-
+    
     <string name="weeks_of_year">"Veckor av året"</string>
-
+    
     <string name="months_of_year">"Månader av året"</string>
 
-
+    
     <string name="next">"Nästa"</string>
-
+    
     <string name="previous">"Tidigare"</string>
-
+    
     <string name="back">"Tillbaka"</string>
+    
+    <string name="forward">"Framåt"</string>
 
-    <string name="forward">"Fram"</string>
-
-
+    
     <string name="pattern_1">"mönster 1"</string>
-
+    
     <string name="pattern_2">"mönster 2"</string>
-
+    
     <string name="pattern_3">"mönster 3"</string>
-
+    
     <string name="pattern_4">"M.4"</string>
-
+    
     <string name="pattern_5">"mönster 5"</string>
-
+    
     <string name="pattern_6">"mönster 6"</string>
 
-
+    
     <string name="select">"Välj"</string>
-
+    
     <string name="select_all">"Välj alla"</string>
-
+    
     <string name="select_none">"Välj ingen"</string>
 
-
+    
     <string name="diff_difficulty">"Svårighet"</string>
-
+    
     <string name="diff_select_difficulty">"Välj Svårighetsgrad"</string>
-
+    
     <string name="diff_easy">"Lätt"</string>
-
+    
     <string name="diff_normal">"Vanligt"</string>
-
+    
     <string name="diff_hard">"Hård"</string>
 
-
+    
     <string name="enable">"Möjliggöra"</string>
-
+    
     <string name="enabled">"Aktiverad"</string>
-
+    
     <string name="disable">"inaktivera"</string>
-
+    
     <string name="disabled">"funktionshindrade"</string>
-
+    
     <string name="lock">"Låsa"</string>
-
+    
     <string name="unlock">"Lås upp"</string>
-
+    
     <string name="locked">"låst"</string>
-
+    
     <string name="unlocked">"Olåst"</string>
-
+    
     <string name="open">"Öppen"</string>
-
+    
     <string name="close">"Stänga"</string>
-
+    
     <string name="opened">"Öppnad"</string>
-
+    
     <string name="closed">"Stängd"</string>
-
+    
     <string name="show">"Show"</string>
-
+    
     <string name="hide">"Dölja"</string>
-
-    <string name="shown">"visas"</string>
-
+    
+    <string name="shown">"Visad"</string>
+    
     <string name="Hidden">"Dold"</string>
-
+    
     <string name="automatic">"Automatisk"</string>
-
+    
     <string name="manual">"Manuell"</string>
-
+    
     <string name="online">"Uppkopplad"</string>
-
+    
     <string name="offline">"Off-line"</string>
-
+    
     <string name="active">"Aktiva"</string>
-
+    
     <string name="inactive">"Inaktiv"</string>
 
-
+    
+    <string name="clear">"Klar"</string>
+    
+    <string name="clear_log">"Rensa loggen"</string>
+    
+    <string name="log_cleared">"log rensas"</string>
+    
     <string name="okay">"ok"</string>
-
+    
     <string name="cancel">"Annullera"</string>
-
+    
     <string name="yes">"Ja"</string>
-
+    
     <string name="no">"Nej"</string>
-
+    
     <string name="maybe">"Kanske"</string>
-
+    
     <string name="some">"Några"</string>
-
+    
     <string name="none">"Ingen"</string>
-
+    
     <string name="all">"Alla"</string>
-
+    
     <string name="set">"Uppsättning"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"Sista"</string>
-
+    
     <string name="first">"Först"</string>
-
+    
     <string name="every">"Varje"</string>
-
+    
     <string name="other">"Andra"</string>
-
+    
     <string name="off">"Av"</string>
-
+    
     <string name="on">"På"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Tydlig påminnelse Log"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Är du säker på att du vill ta bort påminnelsen loggen?"</string>
+    
     <string name="delete_reminder_prompt_title">"Radera påminnelse"</string>
-
+    
     <string name="delete_reminder_prompt_content">"Är du säker på att du vill ta bort denna påminnelse?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"radera Ikon"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Är du säker på att du vill ta bort denna ikon?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"Ignorera ändringar"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"Är du säker på att du vill ignorera ändringarna?"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Radera Vibrera Mönster"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Är du säker på att du vill ta bort denna vibration mönster?"</string>
-
+    
     <string name="delete_location_prompt_title">"Radera plats"</string>
-
+    
     <string name="delete_location_prompt_content">"Är du säker på att du vill ta bort den här platsen?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"Duplicate Påminnelse"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"Är du säker på att du vill duplicera denna påminnelse?"</string>
-
+    
     <string name="include_log_prompt_title">"inkludera Log"</string>
-
+    
     <string name="include_log_prompt_content">"Vill du inkludera påminnelsen loggen?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Inkludera Standard påminnelse"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Vill du inkludera standardpåminnelse?"</string>
-
+    
     <string name="start_new_game_title">"Starta nytt spel"</string>
-
+    
     <string name="start_new_game_prompt">"Är du säker på att du vill starta ett nytt spel?"</string>
-
+    
     <string name="end_game_title">"End Game"</string>
-
+    
     <string name="end_game_prompt">"Är du säker på att du vill avsluta det här spelet?"</string>
 
-
+    
     <string name="help">"Hjälp"</string>
-
+    
     <string name="about">"Handla om"</string>
-
+    
     <string name="settings">"inställningar"</string>
-
+    
     <string name="help_and_feedback">"Hjälp &amp; feedback"</string>
-
+    
     <string name="rate_app">"Betygsätt app"</string>
-
+    
     <string name="more_apps">"Fler appar"</string>
-
+    
     <string name="tutorial">"Handledning"</string>
-
+    
     <string name="read">"Läsa"</string>
-
+    
     <string name="watch">"Kolla på"</string>
-
+    
+    <string name="link">"Länk"</string>
+    
     <string name="links">"länkar"</string>
-
+    
     <string name="licenses">"licenser"</string>
-
+    
     <string name="help_translate">"Hjälp Översätt"</string>
-
+    
     <string name="get_the_beta">"Få Beta"</string>
-
+    
     <string name="achievements">"vinningar"</string>
-
+    
     <string name="leaderboards">"topplistor"</string>
-
+    
     <string name="high_scores">"Höga poäng"</string>
-
+    
     <string name="my_circles">"Mina cirklar"</string>
-
+    
     <string name="invitations">"inbjudan"</string>
-
+    
     <string name="options">"alternativ"</string>
-
+    
     <string name="game_options">"spel~~POS=TRUNC"</string>
-
+    
     <string name="advanced_options">"Avancerade alternativ"</string>
-
+    
     <string name="automatch">"Automatch"</string>
-
+    
     <string name="guest">"Gäst"</string>
 
-
+    
     <string name="light">"Ljus"</string>
-
+    
     <string name="light_transparent">"ljus Transparent"</string>
-
+    
     <string name="dark">"Mörk"</string>
-
+    
     <string name="dark_transparent">"mörk Transparent"</string>
-
+    
     <string name="transparent">"Transparent"</string>
-
+    
     <string name="night">"Natt"</string>
-
+    
     <string name="black">"Svart"</string>
-
+    
     <string name="white">"Vit"</string>
-
+    
     <string name="system">"Systemet"</string>
-
+    
     <string name="light_text">"ljus text"</string>
-
+    
     <string name="dark_text">"mörk text"</string>
 
-
+    
     <string name="red">"Röd"</string>
-
+    
     <string name="pink">"Rosa"</string>
-
+    
     <string name="purple">"Lila"</string>
-
+    
     <string name="deep_purple">"Djup lila"</string>
-
+    
     <string name="indigo">"Indigo"</string>
-
+    
     <string name="blue">"Blå"</string>
-
+    
     <string name="light_blue">"Ljusblå"</string>
-
+    
     <string name="cyan">"cyan"</string>
-
+    
     <string name="teal">"Kricka"</string>
-
+    
     <string name="green">"Grön"</string>
-
+    
     <string name="light_green">"Ljusgrön"</string>
-
+    
     <string name="lime">"Kalk"</string>
-
+    
     <string name="yellow">"Gul"</string>
-
+    
     <string name="amber">"Bärnsten"</string>
-
+    
     <string name="orange">"Orange"</string>
-
+    
     <string name="deep_orange">"djup orange"</string>
-
+    
     <string name="brown">"Brun"</string>
-
-    <string name="grey">"Grå"</string>
-
+    
+    <string name="grey">"grå"</string>
+    
     <string name="blue_grey">"blå Grå"</string>
-
+    
     <string name="dark_grey">"Mörkgrå"</string>
 
-
+    
     <string name="major">"Större"</string>
-
+    
     <string name="minor">"Mindre"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"Version"</string>
-
+    
     <string name="production">"Produktion"</string>
-
+    
     <string name="beta">"Beta"</string>
-
+    
     <string name="alpha">"Alfa"</string>
 
-
+    
     <string name="icon">"Ikon"</string>
-
+    
     <string name="icons">"ikoner"</string>
-
+    
     <string name="custom_icon">"anpassad ikon"</string>
-
+    
     <string name="custom_icons">"anpassade ikoner"</string>
-
+    
     <string name="choose_icon">"Välj Ikon"</string>
 
-
+    
     <string name="backup">"Säkerhetskopiering"</string>
-
+    
     <string name="import_">"Importera"</string>
-
+    
     <string name="export">"Exportera"</string>
-
+    
     <string name="export_log">"export Log"</string>
-
-    <string name="import_export">"Importera exportera"</string>
-
+    
+    <string name="import_export">"Import Export"</string>
+    
     <string name="export_location">"export Plats"</string>
-
+    
     <string name="import_failed">"import misslyckades"</string>
-
+    
     <string name="import_canceled">"import avbrutet"</string>
-
+    
     <string name="export_failed">"export misslyckades"</string>
-
+    
     <string name="export_canceled">"export avbrutet"</string>
-
+    
     <string name="import_complete">"import Komplett"</string>
-
+    
     <string name="export_complete">"exporten är slutförd"</string>
-
+    
     <string name="importing_please_wait">"Import, Vänta"</string>
-
+    
     <string name="exporting_please_wait">"Exportera, Vänta"</string>
 
-
+    
     <string name="snooze">"snooze"</string>
-
+    
     <string name="snoozed">"Pausat"</string>
-
+    
     <string name="auto_snooze">"Auto Snooze"</string>
-
+    
     <string name="manual_snooze">"manuell Snooze"</string>
 
-
+    
     <string name="message">"Meddelande"</string>
-
+    
     <string name="messages">"meddelanden"</string>
-
+    
     <string name="num_messages">"Antal meddelanden"</string>
-
+    
     <string name="edit_messages">"redigera meddelanden"</string>
-
+    
     <string name="view_messages">"Visa meddelanden"</string>
-
+    
     <string name="import_messages">"import Meddelanden"</string>
-
+    
     <string name="message_separator">"Meddelande Separator ||||"</string>
 
-
+    
     <string name="sign_in">"Logga in"</string>
-
+    
     <string name="signed_in">"Inloggad"</string>
-
+    
     <string name="sign_in_failed">"Logga in misslyckades"</string>
-
+    
     <string name="sign_out">"Logga ut"</string>
-
+    
     <string name="signed_out">"Utloggad"</string>
 
-
+    
     <string name="low">"Låg"</string>
-
+    
     <string name="mid">"Mitten"</string>
-
+    
     <string name="high">"Hög"</string>
-
+    
     <string name="min">"min"</string>
-
+    
     <string name="max">"max"</string>
-
+    
     <string name="minimum">"Minimum"</string>
-
+    
     <string name="medium">"Medium"</string>
-
+    
     <string name="maximum">"Maximal"</string>
-
+    
     <string name="small">"Små"</string>
-
+    
     <string name="large">"Stor"</string>
-
+    
     <string name="short_">"Kort"</string>
-
+    
     <string name="long_">"Lång"</string>
-
+    
     <string name="slow">"Långsam"</string>
-
+    
     <string name="fast">"Snabb"</string>
-
+    
     <string name="quick">"Snabbt"</string>
-
+    
     <string name="narrow">"Smal"</string>
-
+    
     <string name="wide">"Bred"</string>
 
-
+    
     <string name="thank_you">"Tack"</string>
-
+    
     <string name="youre_welcome">"Varsågod"</string>
-
+    
     <string name="please">"Vänligen"</string>
 
-
+    
     <string name="you">"Du"</string>
-
+    
     <string name="me">"Mig"</string>
-
+    
     <string name="us">"Oss"</string>
-
+    
     <string name="we">"Vi"</string>
-
+    
     <string name="them">"Dem"</string>
 
-
+    
     <string name="short_on">"kort om"</string>
-
+    
     <string name="medium_on">"medium på"</string>
-
+    
     <string name="long_on">"långa på"</string>
-
+    
     <string name="short_off">"kort off"</string>
-
+    
     <string name="medium_off">"Medium off"</string>
-
+    
     <string name="long_off">"långa off"</string>
 
-
-    <string name="pro">"Pro"</string>
-
+    
+    <string name="pro">"Proffs"</string>
+    
+    <string name="pro_unlocked">"pro olåst"</string>
+    
     <string name="pro_feature">"Pro Feature"</string>
-
+    
     <string name="upgrade">"uppgradering"</string>
-
+    
     <string name="feature_requires_pro">"Den här funktionen kräver att pro-versionen"</string>
-
+    
     <string name="feature_requires_pro_limited">"Den här funktionen är begränsad i den fria versionen. Uppgradera till Pro eller ta bort en befintlig post."</string>
-
+    
     <string name="upgrade_to_pro">"Uppgradera till PRO"</string>
-
+    
     <string name="upgrade_now">"Uppgradera nu"</string>
 
-
+    
     <string name="start_date">"Start datum"</string>
-
+    
     <string name="end_date">"Slutdatum"</string>
-
+    
     <string name="start_time">"Starttid"</string>
-
+    
     <string name="end_time">"Sluttid"</string>
-
+    
     <string name="end_type">"end Typ"</string>
-
+    
     <string name="timing_type">"Timingtyp"</string>
-
+    
     <string name="edit_times">"Redigera Times"</string>
-
+    
     <string name="time">"Tid"</string>
-
+    
     <string name="times">"gånger"</string>
-
+    
     <string name="timing">"timing"</string>
-
+    
     <string name="all_time">"Hela tiden"</string>
-
+    
     <string name="every_week">"Varje vecka"</string>
-
+    
     <string name="lifetime">"Livstid"</string>
-
+    
     <string name="forever">"Evigt"</string>
-
+    
     <string name="time_period">"Tidsperiod"</string>
-
+    
     <string name="random">"Slumpmässig"</string>
-
+    
     <string name="randomly">"Slumpvis"</string>
-
+    
     <string name="less_random">"mindre Random"</string>
-
+    
     <string name="even">"Även"</string>
-
+    
     <string name="evenly">"jämnt"</string>
-
+    
     <string name="specific">"Specifik"</string>
-
+    
     <string name="interval">"Intervall"</string>
-
+    
     <string name="specific_times">"specifika Times"</string>
-
+    
     <string name="repeat_every">"upprepa varje"</string>
 
-
+    
     <string name="data_loaded">"Data Loaded"</string>
-
+    
     <string name="file">"Fil"</string>
-
-    <string name="local_storage">"lokal lagring"</string>
-
+    
+    <string name="local_storage">"Lokalt utrymme"</string>
+    
     <string name="filename">"Filnamn"</string>
 
-
-    <string name="permission_granted">"tillåtelse"</string>
-
+    
+    <string name="permission_granted">"Tillstånd beviljas"</string>
+    
     <string name="permission_denied">"Åtkomst nekad"</string>
-
+    
     <string name="allow_if_any">"Tillåt om någon"</string>
-
+    
     <string name="allow_if_all">"Tillåt om allt"</string>
-
+    
     <string name="disallow_if_any">"Tillåt inte om någon"</string>
-
+    
     <string name="disallow_if_all">"Känna om allt"</string>
-
+    
     <string name="trigger_if_any">"Trigger om någon"</string>
-
+    
     <string name="trigger_if_all">"Trigger om allt"</string>
 
-
+    
     <string name="reminders">"påminnelser"</string>
-
+    
     <string name="no_reminder">"inga påminnelser"</string>
-
+    
     <string name="no_reminders_yet">"Du har inga påminnelser ännu"</string>
-
+    
     <string name="alerts_per_day">"Påminnelser per dag"</string>
-
+    
     <string name="number_of_reminders">"Antal påminnelser"</string>
 
-
+    
     <string name="changes_discarded">"förändringar kasserad"</string>
-
+    
     <string name="changes_saved">"ändringar sparade"</string>
-
+    
     <string name="no_changes">"Inga förändringar"</string>
-
+    
     <string name="select_at_least_one_item">"Välj minst ett objekt"</string>
 
-
+    
     <string name="loading">"Läser in"</string>
-
+    
     <string name="loaded">"Lastad"</string>
-
+    
     <string name="loading_failed">"loading misslyckades"</string>
-
+    
     <string name="loading_complete">"loading Komplett"</string>
-
+    
     <string name="error">"Fel"</string>
-
+    
     <string name="fail">"Misslyckas"</string>
-
+    
     <string name="failed">"misslyckades"</string>
-
+    
     <string name="success">"Framgång"</string>
-
+    
     <string name="successful">"Framgångsrik"</string>
-
+    
     <string name="unsuccessful">"Misslyckad"</string>
-
+    
     <string name="valid">"Giltig"</string>
-
+    
     <string name="invalid">"Ogiltig"</string>
-
+    
     <string name="complete">"Komplett"</string>
-
+    
     <string name="completed">"Avslutad"</string>
-
+    
     <string name="skipped">"överhoppade"</string>
-
+    
     <string name="incomplete">"Ofullständig"</string>
-
+    
     <string name="dismiss">"Avfärda"</string>
-
+    
     <string name="dismissed">"avfärdas"</string>
-
+    
     <string name="acknowledge">"Erkänna"</string>
-
+    
     <string name="acknowledged">"Erkänd"</string>
-
+    
     <string name="add">"Lägg till"</string>
-
+    
     <string name="added">"Lagt till"</string>
-
+    
     <string name="add_item">"Lägg till vara"</string>
-
+    
     <string name="remove">"Avlägsna"</string>
-
+    
     <string name="removed">"Tog bort"</string>
-
+    
     <string name="remove_item">"Ta bort sak"</string>
-
+    
     <string name="delete">"Radera"</string>
-
+    
     <string name="deleted">"utgår"</string>
-
+    
     <string name="duplicate">"Duplicera"</string>
-
+    
     <string name="duplicated">"dupliceras"</string>
-
+    
     <string name="restart">"Omstart"</string>
-
+    
     <string name="restarting">"omstart"</string>
-
+    
     <string name="restarting_app_please_wait">"Omstart App Vänta"</string>
 
-
+    
     <string name="map">"Karta"</string>
-
+    
     <string name="location">"Plats"</string>
-
+    
     <string name="locations">"platser"</string>
-
+    
     <string name="latitude">"Latitud"</string>
-
+    
     <string name="longitude">"Longitud"</string>
-
+    
     <string name="radius">"Radie"</string>
-
+    
     <string name="enter">"Stiga på"</string>
-
+    
     <string name="exit">"Utgång"</string>
-
+    
     <string name="linger_time">"Linger Tid"</string>
 
-
+    
     <string name="music">"Musik"</string>
-
+    
     <string name="ring">"Ringa"</string>
-
+    
     <string name="speak_time">"tala Tid"</string>
-
+    
     <string name="speak_title">"tala Titel"</string>
-
+    
     <string name="speak_message">"tala Meddelande"</string>
-
+    
     <string name="tone">"Tona"</string>
-
+    
     <string name="sound">"Ljud"</string>
+    
+    <string name="sounds">"Ljud"</string>
 
-
+    
     <string name="notification">"Underrättelse"</string>
-
+    
     <string name="notifications">"aviseringar"</string>
-
+    
     <string name="select_notification">"Välj Anmälan"</string>
 
-
+    
     <string name="vibrate">"Vibrera"</string>
-
+    
     <string name="vibrate_pattern">"vibrera Mönster"</string>
-
+    
     <string name="vibrate_patterns">"Vibrate Patterns"</string>
-
+    
     <string name="create_vibrate_pattern">"Skapa vibration Mönster"</string>
 
+    
 
+    
     <string name="you_win">"Du vinner"</string>
-
+    
     <string name="you_won">"Du vann"</string>
-
+    
     <string name="you_lost">"Du förlorade"</string>
-
+    
     <string name="you_lose">"Du förlorar"</string>
-
+    
     <string name="you_tied">"du Tied"</string>
-
+    
     <string name="winner">"Vinnare"</string>
-
+    
     <string name="winners">"vinnare"</string>
-
+    
     <string name="loser">"Förlorare"</string>
-
+    
     <string name="Losers">"förlorare"</string>
 
-
+    
     <string name="number_of_players">"Antal spelare"</string>
-
+    
     <string name="player">"Spelare"</string>
-
+    
     <string name="players">"spelare"</string>
-
+    
     <string name="player_1">"spelare 1"</string>
-
+    
     <string name="player_2">"spelare 2"</string>
-
+    
     <string name="player_3">"spelare 3"</string>
-
+    
     <string name="player_4">"spelare 4"</string>
-
+    
     <string name="player_5">"Player 5"</string>
-
+    
     <string name="player_6">"Player 6"</string>
-
+    
     <string name="team">"Team"</string>
-
+    
     <string name="teams">"lag"</string>
-
+    
     <string name="number_of_teams">"Antal lag"</string>
-
+    
     <string name="team_1">"lag 1"</string>
-
+    
     <string name="team_2">"Team 2"</string>
-
+    
     <string name="team_3">"Team 3"</string>
-
+    
     <string name="team_4">"Team 4"</string>
 
-
+    
     <string name="requires_google_play">"Denna åtgärd kräver Google Play Spel"</string>
-
+    
     <string name="compare_profiles">"Jämför Play Spel Profiler"</string>
-
+    
     <string name="view_profile">"Visa Play Spel Profil"</string>
 
-
+    
     <string name="sponsored">"sponsrade"</string>
-
+    
     <string name="ads">"annonser"</string>
-
+    
     <string name="remove_ads">"Ta bort annonser"</string>
-
+    
     <string name="ads_removed">"annonser Bort"</string>
+    
+    <string name="ad_unavailable">"Ad Ej"</string>
 
-
+    
     <string name="current_score">"Aktuell Score"</string>
-
+    
     <string name="top_score">"toppbetyg"</string>
-
+    
     <string name="score">"Göra"</string>
 
-
+    
     <string name="your_turn">"Din tur"</string>
-
+    
     <string name="their_turn">"sin tur"</string>
-
+    
     <string name="turn">"Sväng"</string>
-
+    
     <string name="turns">"varv"</string>
-
+    
     <string name="round">"Runda"</string>
-
+    
     <string name="rounds">"omgångar"</string>
-
+    
     <string name="match">"Match"</string>
-
+    
     <string name="matches">"Stämmer överrens"</string>
 
-
+    
     <string name="dollar">"Dollar"</string>
-
+    
     <string name="dollars">"dollar"</string>
-
+    
     <string name="buy">"Köpa"</string>
-
+    
     <string name="sell">"Sälja"</string>
-
+    
     <string name="purchase">"Inköp"</string>
-
+    
     <string name="diamond">"Diamant"</string>
-
+    
     <string name="diamonds">"Ruter"</string>
 
-
+    
     <string name="rematch">"returmatch"</string>
-
+    
     <string name="try_again">"Försök igen"</string>
-
+    
     <string name="touch_continue">"Tryck här för att fortsätta"</string>
-
+    
     <string name="touch_resume">"Tryck Återuppta"</string>
-
+    
     <string name="touch_edit">"Tryck här för att redigera"</string>
-
+    
     <string name="pause">"Paus"</string>
-
+    
     <string name="pause_game">"pause Game"</string>
-
+    
     <string name="resume">"Återuppta"</string>
-
+    
     <string name="resume_game">"Återupptag spelet"</string>
-
+    
     <string name="new_">"Ny"</string>
-
+    
     <string name="new_game">"Nytt spel"</string>
-
+    
     <string name="select_save">"Välj Spara"</string>
-
+    
     <string name="save">"Spara"</string>
-
+    
     <string name="save_game">"Spara spelet"</string>
-
-    <string name="load">"Ladda"</string>
-
+    
+    <string name="load">"Läsa in"</string>
+    
     <string name="load_game">"Belastnings spel"</string>
-
+    
     <string name="game_over">"Game Over"</string>
-
-    <string name="start">"Start"</string>
-
+    
+    <string name="start">"Sätt igång"</string>
+    
     <string name="start_game">"Starta spelet"</string>
-
+    
     <string name="end">"Slutet"</string>
-
+    
     <string name="end_game">"End Game"</string>
-
+    
     <string name="stop">"Sluta"</string>
-
+    
     <string name="stop_game">"Stop Game"</string>
 
+    
 
+    <string name="bandit">"Bandit"</string>
     <string name="free">"Ledig"</string>
     <string name="pull">"Dra"</string>
     <string name="wild">"Vild"</string>
@@ -1074,13 +1098,43 @@
     <string name="summary">"Sammanfattning"</string>
     <string name="note">"Notera"</string>
     <string name="image">"Bild"</string>
-    <string name="get">"Få"</string>
+    <string name="get">"Skaffa sig"</string>
     <string name="type">"Typ"</string>
     <string name="missed">"missade"</string>
     <string name="nothing">"Ingenting"</string>
     <string name="clipboard">"Urklipp"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"Ring upp"</string>
+    <string name="email">"E-post"</string>
+    <string name="event">"Händelse"</string>
+    <string name="progress">"Framsteg"</string>
+    <string name="promo">"promo"</string>
+    <string name="recommendation">"Rekommendation"</string>
+    <string name="reminder">"Påminnelse"</string>
+    <string name="service">"Service"</string>
+    <string name="social">"Social"</string>
+    <string name="status">"Status"</string>
+    <string name="transport">"Transport"</string>
+    <string name="category">"Kategori"</string>
+    <string name="show_image_in_notification">"Visa bild i anmälan"</string>
+    <string name="sample_reminders">"Exempel påminnelser"</string>
+    <string name="app_plugin">"app Plugin"</string>
+    <string name="plugin">"plugin"</string>
+    <string name="allow_action">"Tillåt Action"</string>
+    <string name="disallow_action">"känna Action"</string>
+    <string name="action">"Handling"</string>
+    <string name="extra">"Extra"</string>
+    <string name="package_">"Paket"</string>
+    <string name="broadcast">"Utsända"</string>
+    <string name="activity">"Aktivitet"</string>
+    <string name="class_">"Klass"</string>
+    <string name="target">"Mål"</string>
+    <string name="on_trigger_send_intent">"På Trigger Skicka Intent"</string>
+    <string name="receive_intent_criteria">"Motta Intent Kriterier"</string>
+    <string name="receive_intent_trigger">"Motta Intent Trigger"</string>
+    <string name="message_source">"meddelande Källa"</string>
+    <string name="list">"Lista"</string>
+    <string name="rss_feed">"Rssflöde"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Anmälan Öppnar Länk"</string>
 
 </resources>

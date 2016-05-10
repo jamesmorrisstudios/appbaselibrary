@@ -1,1028 +1,1052 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"Anzeigen"</string>
-
+    
     <string name="settings_category_sound">"Klingen"</string>
-
+    
     <string name="settings_category_general">"General"</string>
-
+    
     <string name="settings_category_locale">"Schauplatz"</string>
-
+    
     <string name="settings_category_theme">"Thema"</string>
-
+    
     <string name="settings_category_notification">"Benachrichtigung"</string>
-
+    
     <string name="settings_category_notification_custom">"Benutzerdefinierte Benachrichtigung"</string>
-
+    
     <string name="settings_category_notification_override">"Aufschalten Mitteilung"</string>
-
+    
     <string name="settings_category_defaults">"Defaults"</string>
-
+    
     <string name="settings_category_random">"Zufälligkeit"</string>
-
+    
     <string name="settings_category_widget">"Widget"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"fesselnde Modus"</string>
-
+    
     <string name="setting_sound_enable_primary">"Soundeffekte"</string>
-
+    
     <string name="setting_music_enable_primary">"Musik"</string>
-
+    
     <string name="setting_language_picker_primary">"Sprache"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Individuelle Klingelton Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"App Theme"</string>
-
+    
     <string name="setting_accent_color_primary">"Akzentfarbe"</string>
-
+    
     <string name="setting_primary_color_primary">"Primärfarbe"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Symbolleiste Textfarbe"</string>
+    
+    <string name="setting_game_text_color_primary">"Spiel Textfarbe"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"Klicken Sie auf Aktion"</string>
-
+    
     <string name="setting_notification_custom_primary">"Aktivieren"</string>
-
+    
     <string name="setting_notification_button_style_primary">"Button Style"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"Laufende Mitteilung"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"Laufende Meldungen werden nicht auf SmartWatches unterstützt"</string>
-
+    
     <string name="setting_notification_theme_primary">"Hintergrund"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"Textfarbe"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Erster Tag der Woche"</string>
-
+    
     <string name="setting_force_advanced_primary">"Immer Erweiterte Optionen anzeigen"</string>
-
+    
     <string name="setting_force_advanced_secondary">"Deaktivieren Sie auf erweiterte Optionen auf einer pro Mahnung Basis zeigen"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"Swipe Aktion"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Klick öffnet App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Swipe Öffnet App"</string>
-
+    
     <string name="setting_random_amount_primary">"Zufällig"</string>
-
+    
     <string name="setting_less_random_amount_primary">"Weniger Zufall"</string>
-
+    
     <string name="setting_even_amount_primary">"Sogar"</string>
-
+    
     <string name="setting_widget_theme_primary">"Thema"</string>
-
+    
     <string name="setting_widget_text_color_primary">"Textfarbe"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Aufschalten Benachrichtigung vibrieren"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Aufschalten Benachrichtigung Ton-Wiedergabe"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"Dies muss aktiviert werden, um den Audio-Stream zu überschreiben"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Aufschalten Benachrichtigung Audio-Stream"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"Aufschalten Sprachstrom"</string>
 
-
+    
     <string name="time_millisecond">"Millisekunde"</string>
-
+    
     <string name="time_milliseconds">"Millisekunden"</string>
-
+    
     <string name="time_millisecond_abrev">"Frau"</string>
-
+    
     <string name="time_second">"Zweite"</string>
-
+    
     <string name="time_seconds">"Sekunden"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"Minute"</string>
-
+    
     <string name="time_minutes">"Protokoll"</string>
-
+    
     <string name="time_hour">"Stunde"</string>
-
+    
     <string name="time_hours">"Stunden"</string>
-
+    
     <string name="time_day">"Tag"</string>
-
+    
     <string name="time_days">"Tage"</string>
-
+    
     <string name="time_daily">"Täglich"</string>
-
+    
     <string name="time_week">"Woche"</string>
-
+    
     <string name="time_weeks">"Wochen"</string>
-
+    
     <string name="time_weekly">"Wöchentlich"</string>
-
+    
     <string name="time_month">"Monat"</string>
-
+    
     <string name="time_months">"Monate"</string>
-
+    
     <string name="time_monthly">"Monatlich"</string>
-
+    
     <string name="time_year">"Jahr"</string>
-
+    
     <string name="time_years">"Jahre"</string>
-
+    
     <string name="time_yearly">"Jährlich"</string>
 
-
+    
     <string name="meter">"Meter"</string>
-
+    
     <string name="meters">"Meters"</string>
 
-
+    
     <string name="num_one">"Eins"</string>
-
+    
     <string name="num_two">"Zwei"</string>
-
+    
     <string name="num_three">"Drei"</string>
-
+    
     <string name="num_four">"Vier"</string>
-
+    
     <string name="num_five">"Fünf"</string>
-
+    
     <string name="num_six">"Sechs"</string>
-
+    
     <string name="num_seven">"Sieben"</string>
-
+    
     <string name="num_eight">"Acht"</string>
-
+    
     <string name="num_nine">"Neun"</string>
-
+    
     <string name="num_ten">"Zehn"</string>
 
-
+    
     <string name="num_first">"Zuerst"</string>
-
+    
     <string name="num_second">"Zweite"</string>
-
+    
     <string name="num_third">"Dritte"</string>
-
+    
     <string name="num_fourth">"Vierte"</string>
-
+    
     <string name="num_fifth">"Fünfte"</string>
-
+    
     <string name="num_sixth">"Sechste"</string>
-
+    
     <string name="num_seventh">"Siebte"</string>
-
+    
     <string name="num_eighth">"Achte"</string>
-
+    
     <string name="num_ninth">"Neunte"</string>
-
+    
     <string name="num_tenth">"Zehntel"</string>
 
-
+    
     <string name="day_sunday">Sonntag</string>
-
+    
     <string name="day_monday">Montag</string>
-
+    
     <string name="day_tuesday">Dienstag</string>
-
+    
     <string name="day_wednesday">Mittwoch</string>
-
+    
     <string name="day_thursday">Donnerstag</string>
-
+    
     <string name="day_friday">Freitag</string>
-
+    
     <string name="day_saturday">Samstag</string>
-
+    
     <string name="today">Heute</string>
-
+    
     <string name="tomorrow">Morgen</string>
-
+    
     <string name="yesterday">Gestern</string>
 
-
+    
     <string name="days_of_week">Wochentag</string>
-
+    
     <string name="days_of_month">"Tag des Monats"</string>
-
-    <string name="days_of_year">"Tage im Jahr"</string>
-
+    
+    <string name="days_of_year">"Tage des Jahres"</string>
+    
     <string name="weeks_of_month">"Wochen des Monats"</string>
-
+    
     <string name="weeks_of_year">"Wochen des Jahres"</string>
-
+    
     <string name="months_of_year">"Monate des Jahres"</string>
 
-
+    
     <string name="next">Nächstes</string>
-
+    
     <string name="previous">Vorheriges</string>
-
+    
     <string name="back">Zurück</string>
-
+    
     <string name="forward">Vorwärts</string>
 
-
+    
     <string name="pattern_1">Muster 1</string>
-
+    
     <string name="pattern_2">Muster 2</string>
-
+    
     <string name="pattern_3">Muster 3</string>
-
+    
     <string name="pattern_4">Muster 4</string>
-
+    
     <string name="pattern_5">Muster 5</string>
-
+    
     <string name="pattern_6">Muster 6</string>
 
-
+    
     <string name="select">Auswählen</string>
-
+    
     <string name="select_all">Alle auswählen</string>
-
+    
     <string name="select_none">keins auswählen</string>
 
-
+    
     <string name="diff_difficulty">"Schwierigkeit"</string>
-
+    
     <string name="diff_select_difficulty">"Wählen Sie Schwierigkeitsgrad"</string>
-
+    
     <string name="diff_easy">"Einfach"</string>
-
+    
     <string name="diff_normal">"Normal"</string>
-
+    
     <string name="diff_hard">"Hart"</string>
 
-
+    
     <string name="enable">Einschalten</string>
-
+    
     <string name="enabled">Eingeschaltet</string>
-
+    
     <string name="disable">Ausschalten</string>
-
+    
     <string name="disabled">Ausgeschaltet</string>
-
+    
     <string name="lock">Sperren</string>
-
+    
     <string name="unlock">Entsperren</string>
-
+    
     <string name="locked">Gesperrt</string>
-
+    
     <string name="unlocked">Entsperrt</string>
-
+    
     <string name="open">Öffnen</string>
-
+    
     <string name="close">Schließen</string>
-
+    
     <string name="opened">Geöffnet</string>
-
+    
     <string name="closed">Geschlossen</string>
-
+    
     <string name="show">Anzeigen</string>
-
+    
     <string name="hide">Verstecken</string>
-
+    
     <string name="shown">angezeigt</string>
-
+    
     <string name="Hidden">"Versteckt"</string>
-
+    
     <string name="automatic">Automatisch</string>
-
+    
     <string name="manual">Handbuch</string>
-
+    
     <string name="online">Online</string>
-
+    
     <string name="offline">Offline</string>
-
+    
     <string name="active">"Aktiv"</string>
-
+    
     <string name="inactive">"Inaktiv"</string>
 
-
+    
+    <string name="clear">"Klar"</string>
+    
+    <string name="clear_log">"Protokoll löschen"</string>
+    
+    <string name="log_cleared">"Log gelöscht"</string>
+    
     <string name="okay">"OK"</string>
-
+    
     <string name="cancel">Abbrechen</string>
-
+    
     <string name="yes">"ja"</string>
-
+    
     <string name="no">"Nein"</string>
-
+    
     <string name="maybe">"Könnte sein"</string>
-
+    
     <string name="some">"Etwas"</string>
-
+    
     <string name="none">"Keiner"</string>
-
+    
     <string name="all">"Alle"</string>
-
+    
     <string name="set">"Set"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"Letzte"</string>
-
+    
     <string name="first">Erstes</string>
-
+    
     <string name="every">"Jeden"</string>
-
+    
     <string name="other">"Andere"</string>
-
+    
     <string name="off">"Aus"</string>
-
+    
     <string name="on">"Auf"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Klar Erinnerung Log"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Sind Sie sicher, dass Sie die Erinnerung Protokoll löschen wollen?"</string>
+    
     <string name="delete_reminder_prompt_title">Erinnerung löschen</string>
-
+    
     <string name="delete_reminder_prompt_content">Sind Sie sicher, dass Sie diese Erinnerung löschen möchten?</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"löschen Icon"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Sind Sie sicher, dass Sie auf dieses Symbol zu löschen?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">Änderungen verwerfen</string>
-
+    
     <string name="cancel_reminder_prompt_content">Sind Sie sicher, dass Sie diese Änderungen verwerfen wollen?</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Löschen Vibrieren Pattern"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Sind Sie sicher, dass Sie dieses Vibrieren Muster zu löschen?"</string>
-
+    
     <string name="delete_location_prompt_title">"Entfernen Location"</string>
-
+    
     <string name="delete_location_prompt_content">"Sind Sie sicher, dass Sie diesen Ort zu löschen?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">Erinnerung kopieren</string>
-
+    
     <string name="duplicate_reminder_prompt_content">Sind Sie sicher, dass Sie diese Erinnerung duplizieren möchten?</string>
-
+    
     <string name="include_log_prompt_title">"Fügen Sie Log"</string>
-
+    
     <string name="include_log_prompt_content">"Haben Sie die Erinnerungsprotokoll enthalten sein sollen?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Fügen Sie Standarderinnerung"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Wollen Sie die Standarderinnerung enthalten?"</string>
-
+    
     <string name="start_new_game_title">Neues Spiel starten</string>
-
+    
     <string name="start_new_game_prompt">Möchten Sie wirklich ein neues Spiel starten?</string>
-
+    
     <string name="end_game_title">"End Game"</string>
-
+    
     <string name="end_game_prompt">"Sind Sie sicher, dass Sie dieses Spiel zu beenden?"</string>
 
-
+    
     <string name="help">Hilfe</string>
-
+    
     <string name="about">Über</string>
-
+    
     <string name="settings">Einstellungen</string>
-
+    
     <string name="help_and_feedback">HIlfe und Feedback</string>
-
+    
     <string name="rate_app">App bewerten</string>
-
+    
     <string name="more_apps">Mehr Apps</string>
-
+    
     <string name="tutorial">"Lernprogramm"</string>
-
+    
     <string name="read">"Lesen"</string>
-
+    
     <string name="watch">"Uhr"</string>
-
+    
+    <string name="link">"Link"</string>
+    
     <string name="links">"Links"</string>
-
+    
     <string name="licenses">Lizenzen</string>
-
+    
     <string name="help_translate">Bei der Übersetzung helfen</string>
-
+    
     <string name="get_the_beta">"Holen Sie sich das Beta"</string>
-
+    
     <string name="achievements">"Erfolge"</string>
-
+    
     <string name="leaderboards">"Rang"</string>
-
+    
     <string name="high_scores">Highscore</string>
-
+    
     <string name="my_circles">Meine Kreise</string>
-
+    
     <string name="invitations">Einladungen</string>
-
+    
     <string name="options">Optionen</string>
-
+    
     <string name="game_options">Spiel Optionen</string>
-
+    
     <string name="advanced_options">"Erweiterte Optionen"</string>
-
+    
     <string name="automatch">"Automatch"</string>
-
+    
     <string name="guest">Gast</string>
 
-
+    
     <string name="light">Hell</string>
-
+    
     <string name="light_transparent">"Licht transparent"</string>
-
+    
     <string name="dark">Dunkel</string>
-
+    
     <string name="dark_transparent">"Dunkle Transparent"</string>
-
+    
     <string name="transparent">"Transparent"</string>
-
+    
     <string name="night">Nacht</string>
-
+    
     <string name="black">Schwarz</string>
-
+    
     <string name="white">Weiß</string>
-
+    
     <string name="system">"System"</string>
-
+    
     <string name="light_text">"Licht Text"</string>
-
+    
     <string name="dark_text">"Dunkler Text"</string>
 
-
+    
     <string name="red">"Rot"</string>
-
+    
     <string name="pink">"Rosa"</string>
-
+    
     <string name="purple">"Lila"</string>
-
+    
     <string name="deep_purple">"Dunkellila"</string>
-
+    
     <string name="indigo">"Indigo"</string>
-
+    
     <string name="blue">"Blau"</string>
-
+    
     <string name="light_blue">"Hellblau"</string>
-
+    
     <string name="cyan">"Cyan"</string>
-
+    
     <string name="teal">"Teal"</string>
-
+    
     <string name="green">"Grün"</string>
-
+    
     <string name="light_green">"Hellgrün"</string>
-
+    
     <string name="lime">"Limette"</string>
-
+    
     <string name="yellow">"Gelb"</string>
-
+    
     <string name="amber">"Bernstein"</string>
-
+    
     <string name="orange">"Orange"</string>
-
+    
     <string name="deep_orange">"Tiefer orange"</string>
-
+    
     <string name="brown">"Braun"</string>
-
+    
     <string name="grey">"Grau"</string>
-
+    
     <string name="blue_grey">"Blau grau"</string>
-
+    
     <string name="dark_grey">"Dunkelgrau"</string>
 
-
+    
     <string name="major">Major</string>
-
+    
     <string name="minor">Minor</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">Version</string>
-
+    
     <string name="production">Produktion</string>
-
+    
     <string name="beta">Beta</string>
-
+    
     <string name="alpha">Alpha</string>
 
-
+    
     <string name="icon">"Symbol"</string>
-
+    
     <string name="icons">"Icons"</string>
-
+    
     <string name="custom_icon">"Benutzerdefinierte Icon"</string>
-
+    
     <string name="custom_icons">"Benutzerdefinierte Symbole"</string>
-
+    
     <string name="choose_icon">"wählen Sie Symbol"</string>
 
-
+    
     <string name="backup">Sichern</string>
-
+    
     <string name="import_">Import</string>
-
+    
     <string name="export">Export</string>
-
+    
     <string name="export_log">Export Log</string>
-
-    <string name="import_export">"Import / Export"</string>
-
+    
+    <string name="import_export">"Import Export"</string>
+    
     <string name="export_location">Exportspeicherort</string>
-
+    
     <string name="import_failed">"Import fehlgeschlagen"</string>
-
+    
     <string name="import_canceled">"Import Abgebrochen"</string>
-
+    
     <string name="export_failed">Exportieren fehlgeschlagen</string>
-
+    
     <string name="export_canceled">"Export Abgebrochen"</string>
-
+    
     <string name="import_complete">"Import abgeschlossen"</string>
-
+    
     <string name="export_complete">"Export abgeschlossen"</string>
-
+    
     <string name="importing_please_wait">"Importieren, bitte warten"</string>
-
+    
     <string name="exporting_please_wait">"Exportieren, bitte warten"</string>
 
-
+    
     <string name="snooze">"Schläfchen"</string>
-
+    
     <string name="snoozed">"Verschoben"</string>
-
+    
     <string name="auto_snooze">"Auto Snooze"</string>
-
+    
     <string name="manual_snooze">"Manuelle Snooze"</string>
 
-
+    
     <string name="message">"Nachricht"</string>
-
+    
     <string name="messages">"Nachrichten"</string>
-
+    
     <string name="num_messages">"Anzahl der Nachrichten,"</string>
-
+    
     <string name="edit_messages">"Bearbeiten Nachrichten"</string>
-
+    
     <string name="view_messages">"Meldungen anzeigen"</string>
-
+    
     <string name="import_messages">"importieren von Nachrichten"</string>
-
+    
     <string name="message_separator">"Nachrichtenseparator ||||"</string>
 
-
+    
     <string name="sign_in">"Anmelden"</string>
-
+    
     <string name="signed_in">"Angemeldet"</string>
-
+    
     <string name="sign_in_failed">"Anmeldung fehlgeschlagen"</string>
-
+    
     <string name="sign_out">"Ausloggen"</string>
-
+    
     <string name="signed_out">"Abgemeldet"</string>
 
-
+    
     <string name="low">Niedrig</string>
-
+    
     <string name="mid">Mittel</string>
-
+    
     <string name="high">Hoch</string>
-
+    
     <string name="min">Min</string>
-
+    
     <string name="max">Max</string>
-
+    
     <string name="minimum">Minimum</string>
-
+    
     <string name="medium">Mittel</string>
-
+    
     <string name="maximum">Maximum</string>
-
+    
     <string name="small">Klein</string>
-
+    
     <string name="large">Groß</string>
-
+    
     <string name="short_">Kurz</string>
-
+    
     <string name="long_">Lang</string>
-
+    
     <string name="slow">"Langsam"</string>
-
+    
     <string name="fast">"Schnell"</string>
-
+    
     <string name="quick">Schnell</string>
-
+    
     <string name="narrow">"Eng"</string>
-
+    
     <string name="wide">"Breit"</string>
 
-
+    
     <string name="thank_you">"Danke"</string>
-
+    
     <string name="youre_welcome">"Bitte"</string>
-
+    
     <string name="please">"Bitte"</string>
 
-
+    
     <string name="you">"Sie"</string>
-
+    
     <string name="me">"Mich"</string>
-
+    
     <string name="us">"Uns"</string>
-
+    
     <string name="we">"Wir"</string>
-
+    
     <string name="them">"Sie"</string>
 
-
+    
     <string name="short_on">"Kurz auf"</string>
-
+    
     <string name="medium_on">"Medium auf"</string>
-
+    
     <string name="long_on">"Lange auf"</string>
-
+    
     <string name="short_off">"Short aus"</string>
-
+    
     <string name="medium_off">"Medium aus"</string>
-
+    
     <string name="long_off">"Lange weg"</string>
 
-
+    
     <string name="pro">"Profi"</string>
-
+    
+    <string name="pro_unlocked">"Pro entriegeltes"</string>
+    
     <string name="pro_feature">"Pro Feature"</string>
-
+    
     <string name="upgrade">"Aktualisierung"</string>
-
+    
     <string name="feature_requires_pro">"Diese Funktion erfordert die Pro-Version"</string>
-
+    
     <string name="feature_requires_pro_limited">"Diese Funktion ist in der kostenlosen Version beschränkt. Upgrade auf Pro oder ein vorhandenes Element zu entfernen."</string>
-
+    
     <string name="upgrade_to_pro">"Upgrade auf Pro"</string>
-
+    
     <string name="upgrade_now">"Jetzt upgraden"</string>
 
-
+    
     <string name="start_date">"Anfangsdatum"</string>
-
+    
     <string name="end_date">"Enddatum"</string>
-
+    
     <string name="start_time">Startzeit</string>
-
+    
     <string name="end_time">Endzeit</string>
-
+    
     <string name="end_type">"End Type"</string>
-
+    
     <string name="timing_type">Zeittyp</string>
-
+    
     <string name="edit_times">Zeiten ändern</string>
-
+    
     <string name="time">Zeit</string>
-
+    
     <string name="times">Zeiten</string>
-
+    
     <string name="timing">Timing</string>
-
+    
     <string name="all_time">Jederzeit</string>
-
+    
     <string name="every_week">Wöchentlich</string>
-
+    
     <string name="lifetime">Lebensdauer</string>
-
+    
     <string name="forever">"Für immer"</string>
-
+    
     <string name="time_period">"Zeitperiode"</string>
-
+    
     <string name="random">"Zufällig"</string>
-
+    
     <string name="randomly">"Randomly"</string>
-
+    
     <string name="less_random">"Weniger Zufall"</string>
-
+    
     <string name="even">"Sogar"</string>
-
+    
     <string name="evenly">"Gleichmäßig"</string>
-
+    
     <string name="specific">"spezifisch"</string>
-
+    
     <string name="interval">"Intervall"</string>
-
+    
     <string name="specific_times">"bestimmten Zeiten"</string>
-
+    
     <string name="repeat_every">"Wiederholen alle"</string>
 
-
+    
     <string name="data_loaded">"Daten beladen"</string>
-
+    
     <string name="file">Datei</string>
-
+    
     <string name="local_storage">Lokaler Speicher</string>
-
+    
     <string name="filename">"Dateiname"</string>
 
-
+    
     <string name="permission_granted">"Erlaubnis erteilt"</string>
-
+    
     <string name="permission_denied">"Erlaubnis verweigert"</string>
-
+    
     <string name="allow_if_any">"Erlauben Sie, wenn eine"</string>
-
+    
     <string name="allow_if_all">"Zulassen, wenn alle"</string>
-
+    
     <string name="disallow_if_any">"Verbieten falls vorhanden"</string>
-
+    
     <string name="disallow_if_all">"Verbieten, wenn alle"</string>
-
+    
     <string name="trigger_if_any">"Auslöser falls vorhanden"</string>
-
+    
     <string name="trigger_if_all">"Auslöser, wenn alle"</string>
 
-
+    
     <string name="reminders">"Reminders"</string>
-
+    
     <string name="no_reminder">"Keine Erinnerungen"</string>
-
+    
     <string name="no_reminders_yet">"Sie haben keine Erinnerungen noch"</string>
-
+    
     <string name="alerts_per_day">Erinnerungen pro Tag</string>
-
+    
     <string name="number_of_reminders">"Anzahl der Erinnerungen"</string>
 
-
+    
     <string name="changes_discarded">"Änderungen Ausrangierte"</string>
-
+    
     <string name="changes_saved">"Änderungen gespeichert"</string>
-
+    
     <string name="no_changes">"Keine Änderungen"</string>
-
+    
     <string name="select_at_least_one_item">"Wählen Sie mindestens ein Element"</string>
 
-
+    
     <string name="loading">"Laden"</string>
-
+    
     <string name="loaded">"beladen"</string>
-
+    
     <string name="loading_failed">"Laden fehlgeschlagen"</string>
-
+    
     <string name="loading_complete">"Laden kompletter"</string>
-
+    
     <string name="error">Fehler</string>
-
+    
     <string name="fail">Fehler</string>
-
+    
     <string name="failed">Fehlgeschlagen</string>
-
+    
     <string name="success">Erfolg</string>
-
+    
     <string name="successful">Erfolgreich</string>
-
+    
     <string name="unsuccessful">"Erfolglos"</string>
-
+    
     <string name="valid">Gültig</string>
-
+    
     <string name="invalid">Ungültig</string>
-
+    
     <string name="complete">Komplett</string>
-
+    
     <string name="completed">Vervollständigt</string>
-
+    
     <string name="skipped">"Übersprungene"</string>
-
+    
     <string name="incomplete">Unvollständig</string>
-
+    
     <string name="dismiss">Verwerfen</string>
-
+    
     <string name="dismissed">Verworfen</string>
-
+    
     <string name="acknowledge">Vereinbarung</string>
-
+    
     <string name="acknowledged">Bestätigt</string>
-
+    
     <string name="add">"Hinzufügen"</string>
-
+    
     <string name="added">"Hinzugefügt"</string>
-
+    
     <string name="add_item">"Artikel hinzufügen"</string>
-
+    
     <string name="remove">"Entfernen"</string>
-
+    
     <string name="removed">"entfernt"</string>
-
+    
     <string name="remove_item">"Gegenstand entfernen"</string>
-
+    
     <string name="delete">"Löschen"</string>
-
+    
     <string name="deleted">"gelöscht"</string>
-
+    
     <string name="duplicate">Duplizieren</string>
-
+    
     <string name="duplicated">"duplizierte"</string>
-
+    
     <string name="restart">"Neustart"</string>
-
+    
     <string name="restarting">"Neustarten"</string>
-
+    
     <string name="restarting_app_please_wait">"Neustarten App, bitte warten"</string>
 
-
+    
     <string name="map">"Karte"</string>
-
+    
     <string name="location">"Ort"</string>
-
+    
     <string name="locations">"Standorte"</string>
-
+    
     <string name="latitude">"Breite"</string>
-
+    
     <string name="longitude">"Länge"</string>
-
+    
     <string name="radius">"Radius"</string>
-
+    
     <string name="enter">"Eingeben"</string>
-
+    
     <string name="exit">"Ausgang"</string>
-
+    
     <string name="linger_time">"Linger Time"</string>
 
-
+    
     <string name="music">"Musik"</string>
-
+    
     <string name="ring">"Ring"</string>
-
+    
     <string name="speak_time">"Speak Zeit"</string>
-
+    
     <string name="speak_title">"Speak Titel"</string>
-
+    
     <string name="speak_message">"Sprechen Nachricht"</string>
-
+    
     <string name="tone">"Ton"</string>
-
+    
     <string name="sound">"Klingen"</string>
+    
+    <string name="sounds">"Geräusche"</string>
 
-
+    
     <string name="notification">"Benachrichtigung"</string>
-
+    
     <string name="notifications">"Benachrichtigungen"</string>
-
+    
     <string name="select_notification">"Mitteilung auswählen"</string>
 
-
+    
     <string name="vibrate">"Vibrieren"</string>
-
+    
     <string name="vibrate_pattern">"Vibrieren Muster"</string>
-
+    
     <string name="vibrate_patterns">"Vibrieren Patterns"</string>
-
+    
     <string name="create_vibrate_pattern">"Erstellen Sie Vibrieren Pattern"</string>
 
+    
 
+    
     <string name="you_win">Gewonnen</string>
-
+    
     <string name="you_won">Gewonnen</string>
-
+    
     <string name="you_lost">Verloren</string>
-
+    
     <string name="you_lose">Verloren</string>
-
+    
     <string name="you_tied">Unentschieden</string>
-
+    
     <string name="winner">Gewinner</string>
-
+    
     <string name="winners">Gewinner</string>
-
+    
     <string name="loser">"Verlierer"</string>
+    
+    <string name="Losers">"Losers"</string>
 
-    <string name="Losers">"Verlierer"</string>
-
-
+    
     <string name="number_of_players">"Anzahl der Spieler"</string>
-
+    
     <string name="player">"Spieler"</string>
-
+    
     <string name="players">"Spieler"</string>
-
+    
     <string name="player_1">"Spieler 1"</string>
-
+    
     <string name="player_2">"Spieler 2"</string>
-
+    
     <string name="player_3">"Spieler 3"</string>
-
+    
     <string name="player_4">"Spieler 4"</string>
-
+    
     <string name="player_5">"Player 5"</string>
-
+    
     <string name="player_6">"Player 6"</string>
-
+    
     <string name="team">"Mannschaft"</string>
-
+    
     <string name="teams">"Teams"</string>
-
+    
     <string name="number_of_teams">"Anzahl der Teams"</string>
-
+    
     <string name="team_1">"Spieler 1"</string>
-
+    
     <string name="team_2">"Spieler 2"</string>
-
+    
     <string name="team_3">"Team 3"</string>
-
+    
     <string name="team_4">"Team 4"</string>
 
-
+    
     <string name="requires_google_play">"Diese Aktion erfordert Google Play Games"</string>
-
+    
     <string name="compare_profiles">"Vergleichen Play Games Profiles"</string>
-
+    
     <string name="view_profile">"Ansicht Play Games Profil"</string>
 
-
+    
     <string name="sponsored">"Sponsored"</string>
-
+    
     <string name="ads">"Anzeigen"</string>
-
+    
     <string name="remove_ads">"Anzeigen entfernen"</string>
-
+    
     <string name="ads_removed">"Anzeigen entfernt"</string>
+    
+    <string name="ad_unavailable">"ad nicht verfügbar"</string>
 
-
+    
     <string name="current_score">Derzeitige Wertung</string>
-
+    
     <string name="top_score">Bestwertung</string>
-
+    
     <string name="score">Wertung</string>
 
-
+    
     <string name="your_turn">Ihr Spielzug</string>
-
+    
     <string name="their_turn">Deren Spielzug</string>
-
+    
     <string name="turn">Spielzug</string>
-
+    
     <string name="turns">Spielzüge</string>
-
+    
     <string name="round">Runde</string>
-
+    
     <string name="rounds">Runden</string>
-
+    
     <string name="match">"Spiel"</string>
-
+    
     <string name="matches">Wettkämpfe</string>
 
-
+    
     <string name="dollar">"Dollar"</string>
-
+    
     <string name="dollars">"Dollar"</string>
-
+    
     <string name="buy">"Kaufen"</string>
-
+    
     <string name="sell">"Verkaufen"</string>
-
+    
     <string name="purchase">"Kauf"</string>
-
+    
     <string name="diamond">"Diamant"</string>
-
+    
     <string name="diamonds">"Diamanten"</string>
 
-
+    
     <string name="rematch">Revanche</string>
-
+    
     <string name="try_again">Nochmal versuchen</string>
-
+    
     <string name="touch_continue">Berühren um fortzufahren</string>
-
+    
     <string name="touch_resume">Berühren um forzufahren</string>
-
+    
     <string name="touch_edit">"Tippen Sie bearbeiten"</string>
-
+    
     <string name="pause">Pause</string>
-
+    
     <string name="pause_game">Spiel pausieren</string>
-
+    
     <string name="resume">Fortsetzen</string>
-
+    
     <string name="resume_game">Spiel fortsetzen</string>
-
+    
     <string name="new_">Neu</string>
-
+    
     <string name="new_game">Neues Spiel</string>
-
+    
     <string name="select_save">Speichen</string>
-
+    
     <string name="save">Speichern</string>
-
+    
     <string name="save_game">Spiel speichern</string>
-
+    
     <string name="load">Laden</string>
-
+    
     <string name="load_game">Spiel laden</string>
-
+    
     <string name="game_over">Game over</string>
-
+    
     <string name="start">Start</string>
-
+    
     <string name="start_game">Spiel starten</string>
-
+    
     <string name="end">Ende</string>
-
+    
     <string name="end_game">Spiel beenden</string>
-
+    
     <string name="stop">Stop</string>
-
+    
     <string name="stop_game">Spiel stoppen</string>
 
+    
 
+    <string name="bandit">"Bandit"</string>
     <string name="free">"Frei"</string>
     <string name="pull">"ziehen"</string>
     <string name="wild">"Wild"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"Verpasste"</string>
     <string name="nothing">"Nichts"</string>
     <string name="clipboard">"Zwischenablage"</string>
-
-
-    <string name="test_string_ignore">Test</string>
+    <string name="call">"Anruf"</string>
+    <string name="email">"Email"</string>
+    <string name="event">"Event"</string>
+    <string name="progress">"Fortschritt"</string>
+    <string name="promo">"Promo"</string>
+    <string name="recommendation">"Empfehlung"</string>
+    <string name="reminder">"Mahnung"</string>
+    <string name="service">"Bedienung"</string>
+    <string name="social">"Sozial-"</string>
+    <string name="status">"Status"</string>
+    <string name="transport">"Transport"</string>
+    <string name="category">"Kategorie"</string>
+    <string name="show_image_in_notification">"Bild in Benachrichtigung"</string>
+    <string name="sample_reminders">"Beispiel Reminders"</string>
+    <string name="app_plugin">"App Plugin"</string>
+    <string name="plugin">"Plugin"</string>
+    <string name="allow_action">"Lassen Sie Aktion"</string>
+    <string name="disallow_action">"verbieten Aktion"</string>
+    <string name="action">"Aktion"</string>
+    <string name="extra">"Extra"</string>
+    <string name="package_">"Paket"</string>
+    <string name="broadcast">"Übertragen"</string>
+    <string name="activity">"Aktivität"</string>
+    <string name="class_">"Klasse"</string>
+    <string name="target">"Ziel"</string>
+    <string name="on_trigger_send_intent">"On Trigger senden Intent"</string>
+    <string name="receive_intent_criteria">"Erhalten Intent Kriterien"</string>
+    <string name="receive_intent_trigger">"Empfangen Intent-Trigger"</string>
+    <string name="message_source">"Message Source"</string>
+    <string name="list">"Liste"</string>
+    <string name="rss_feed">"RSS Feed"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Mitteilung Öffnet Link"</string>
 
 </resources>

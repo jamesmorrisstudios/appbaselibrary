@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"έκδοση 2.0.0"</item>
-        <item name="line1">"Re-branded \"Δωρεά\" στο \"Pro\". Όλα τα προηγούμενα δωρεάν χαρακτηριστικά και πολλά από τα νέα χαρακτηριστικά είναι δωρεάν."</item>
-        <item name="line2">"Προστέθηκε ένα συρτάρι app για επιμέρους σελίδες."</item>
-        <item name="line5">"Προστέθηκε η δυνατότητα να ορίσετε τις προεπιλεγμένες ρυθμίσεις υπενθύμισης για κάθε υπενθύμιση που δημιουργείτε."</item>
-        <item name="line3">"Ενημερώθηκε το θέμα της εφαρμογής."</item>
-        <item name="line4">"Ενημερώθηκε τις Ρυθμίσεις και Βοήθεια &amp; σελίδες σχολίων."</item>
-        <item name="line4">"Προστέθηκε ένα widget app."</item>
-        <item name="line5">"Πολλές πρόσθετες επιλογές υπενθύμισης (προβολή όλων επιλέγοντας \"Εμφάνιση Advanced\")."</item>
-        <item name="line5">"Προστέθηκε τοποθεσία υπενθυμίσεις βάση. Προσθήκη από τη σελίδα \"Customizer\"."</item>
-        <item name="line5">"Μερικά νέα χαρακτηριστικά κλειδωμένο στο \"Pro\" έκδοση."</item>
-        <item name="line5">"Θέματα App"</item>
-        <item name="line5">"Μοναδική λειτουργία."</item>
-        <item name="line4">"μοτίβα έθιμο δονείται."</item>
-        <item name="line4">"εικονίδια συνήθειας κοινοποίηση (Android 6.0+ μόνο)."</item>
-        <item name="line5">"Εξερευνήστε το app για πρόσθετες λειτουργίες. Περισσότερες θα είναι σύντομα κοντά σας."</item>
+        <item name="line0">"Προστέθηκε επιλογή για σαφή ημερολόγιο υπενθύμιση."</item>
+        <item name="line1">"Προστέθηκε κατηγορίες κοινοποίηση."</item>
+        <item name="line2">"Προστέθηκε λίστα των ήχων ειδοποιήσεων ικανότητα."</item>
+        <item name="line5">"Προστέθηκε ένα σύνδεσμο για να δοκιμάσετε τις υπενθυμίσεις και τα πακέτα εικονίδιο στην ιστοσελίδα jamesmorrisstudios."</item>
+        <item name="line3">"Προστέθηκε μια επιλογή για να δείξει την εικόνα υπενθύμιση στην κοινοποίηση."</item>
+        <item name="line4">"Προστέθηκε Android Πρόθεση βάση στήριξης plugin για χρήση με εφαρμογές αυτοματισμού."</item>
+        <item name="line4">"Προστέθηκε υποστήριξη RSS feed για τα μηνύματα."</item>
+        <item name="line4">"Διορθώθηκε ένα σφάλμα όπου auto αναβολής δεν θα μπορούσε να λειτουργήσει με μια τοποθεσία ενεργοποιείται υπενθύμιση."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"τίποτα"</item>
+        <item name="line0">"Αρχική έκδοση"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"τίποτα"</item>
+        <item name="line0">"Απλοποιημένη το σχεδιασμό μενού μετακινώντας τα πάντα σε ένα συρτάρι πλοήγησης."</item>
+        <item name="line0">"Άλλαξε τη μορφή διαφήμισης σε διάμεση διαφημίσεις και να απομακρύνονται διαφημίσεις banner."</item>
+        <item name="line0">"Άλλαξε τον πάροχο διαφημίσεων, ώστε οι διαφημίσεις είναι σχετικές ως επί το πλείστον πιο gaming."</item>
+        <item name="line0">"Βελτιωμένη απόδοση του παιχνιδιού."</item>
+        <item name="line0">"Προστέθηκε προσαρμοσμένη υποστήριξη θέμα."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

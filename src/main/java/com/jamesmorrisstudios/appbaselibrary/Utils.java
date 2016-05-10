@@ -278,12 +278,7 @@ public final class Utils {
         //activity.finish();
     }
 
-    /**
-     * Open the given link
-     *
-     * @param link Link to open
-     */
-    public static void openLink(@NonNull final String link) {
+    public static void openLink(@NonNull Context context, @NonNull final String link, boolean background, boolean showOnError) {
         try {
             String link2 = link;
             if (link2.startsWith("www")) {
@@ -291,12 +286,37 @@ public final class Utils {
             }
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(link2));
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            AppBase.getContext().startActivity(intent);
+            if(background) {
+                intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
+            }
+            context.startActivity(intent);
+            Log.v("Utils", link2);
         } catch (Exception ex) {
             ex.printStackTrace();
             Log.v("Utils", ex.getMessage());
-            new SnackbarRequest(AppBase.getContext().getResources().getString(R.string.failed), SnackbarRequest.SnackBarDuration.SHORT).execute();
+            if(showOnError) {
+                new SnackbarRequest(AppBase.getContext().getResources().getString(R.string.failed), SnackbarRequest.SnackBarDuration.SHORT).execute();
+            }
         }
+    }
+
+    /**
+     * Open the given link
+     *
+     * @param link Link to open
+     */
+    public static void openLink(@NonNull final String link) {
+        openLink(AppBase.getContext(), link, false, true);
+    }
+
+
+    /**
+     * Open the given link
+     *
+     * @param link Link to open
+     */
+    public static void openLinkBackground(@NonNull Context context, @NonNull final String link) {
+        openLink(context, link, false, false);
     }
 
     /**

@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versiunea 2.0.0"</item>
-        <item name="line1">"Re-branded \"donație\" la \"Pro\". Toate caracteristicile anterioare gratuite și multe dintre noile caracteristici sunt gratuite."</item>
-        <item name="line2">"A adăugat un sertar app pentru pagini sub."</item>
-        <item name="line5">"capacitatea de a seta setările implicite de memento pentru fiecare memento pe care le creați adăugate."</item>
-        <item name="line3">"Actualizarea tema app."</item>
-        <item name="line4">"Actualizat Setări și Ajutor &amp; pagini Feedback."</item>
-        <item name="line4">"A adăugat un widget app."</item>
-        <item name="line5">"Mai multe opțiuni suplimentare de memento (arata tot prin verificarea \"Show Advanced\")."</item>
-        <item name="line5">"memento-uri bazate pe locație adăugată. Adăugați din pagina \"Customizer\"."</item>
-        <item name="line5">"Unele caracteristici noi blocate la versiunea \"Pro\"."</item>
-        <item name="line5">"app Teme"</item>
-        <item name="line5">"Modul imersiva."</item>
-        <item name="line4">"modele personalizate. vibrării"</item>
-        <item name="line4">"Pictogramele de notificare personalizată (Android 6.0+ numai)."</item>
-        <item name="line5">"Exploreaza aplicația pentru caracteristici suplimentare. Mai mult va veni în curând."</item>
+        <item name="line0">"Adăugat opțiunea de a jurnal clar memento."</item>
+        <item name="line1">"Categorii de notificare adăugată."</item>
+        <item name="line2">"Lista de sunete de notificare adăugată capacității."</item>
+        <item name="line5">"A adăugat un link pentru a proba memento-uri și pachete de pictograme de pe site-ul jamesmorrisstudios."</item>
+        <item name="line3">"A adăugat o opțiune pentru a afișa imaginea memento în notificare."</item>
+        <item name="line4">"Adaugata Android sprijin plug bazat în intenție pentru utilizarea cu aplicații de automatizare."</item>
+        <item name="line4">"adăugat suport RSS feed pentru mesaje."</item>
+        <item name="line4">"Fixed un bug în cazul în care auto amânarea nu ar funcționa cu o locație a declanșat memento."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nimic"</item>
+        <item name="line0">"Eliberarea inițială"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nimic"</item>
+        <item name="line0">"Simplificat designul meniului prin mutarea totul într-un sertar de navigare."</item>
+        <item name="line0">"S-a modificat formatul de anunț pentru anunțurile interstițiale și anunțurile banner eliminate."</item>
+        <item name="line0">"S-a modificat furnizorul de anunțuri, astfel încât anunțurile sunt în mare parte legate de mai multe jocuri de noroc."</item>
+        <item name="line0">"Performanță îmbunătățită a jocului."</item>
+        <item name="line0">"Adăugat suport temă personalizată."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

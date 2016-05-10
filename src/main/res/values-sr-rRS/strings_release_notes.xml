@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"verzija 2.0.0"</item>
-        <item name="line1">"Ре-брандед \"Донација\" у \"ПРО\". Све претходно фрее карактеристике и многе нове функције су слободни."</item>
-        <item name="line2">"Додали апликације фиоку за суб страницама."</item>
-        <item name="line5">"Додаје могућност да подесите подразумевана подсетник за сваки подсетник да сте креирали."</item>
-        <item name="line3">"Ажурирао апликације тему."</item>
-        <item name="line4">"Ажурирати подешавања и Хелп &amp; Феедбацк странице."</item>
-        <item name="line4">"Додали апликације виџет."</item>
-        <item name="line5">"Многе додатне опције за опоравак (показати све провером \"Схов Адванцед\")."</item>
-        <item name="line5">"Додао Лоцатион Басед подсетника. Додај из \"Цустомизер\" страници."</item>
-        <item name="line5">"Неке нове карактеристике закључан у \"Про\" верзије."</item>
-        <item name="line5">"Апп Теме"</item>
-        <item name="line5">"Импресивно режим."</item>
-        <item name="line4">"Цустом вибрације обрасци."</item>
-        <item name="line4">"Цустом иконе обавештења (Андроид 6.0+ само)."</item>
-        <item name="line5">"Истражите апликацију за додатне функције. Више ће се ускоро."</item>
+        <item name="line0">"Додата опција за јасним подсетник лог."</item>
+        <item name="line1">"Аддед категорије обавештења."</item>
+        <item name="line2">"Додао листа обавештења звучи способности."</item>
+        <item name="line5">"Додао линк узорку подсетнике и икона пакете на сајту јамесморрисстудиос."</item>
+        <item name="line3">"Додао опцију да покажу подсетник слику у обавештењу."</item>
+        <item name="line4">"Додао Андроид намери заснован додатак подршке за употребу са аутоматске апликације."</item>
+        <item name="line4">"Додао РСС подршка храна за поруке."</item>
+        <item name="line4">"Фиксни грешку када аутоматско одлагања не би радити са локацију активира подсетник."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ништа"</item>
+        <item name="line0">"initial релеасе"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ништа"</item>
+        <item name="line0">"Поједноставио дизајн менија креће све на навигацију фиоку."</item>
+        <item name="line0">"Променио формат огласа на транзитивне огласе и уклонити банера."</item>
+        <item name="line0">"Променио добављача оглас тако огласи се налазе углавном више играње у вези."</item>
+        <item name="line0">"Побољшана игра учинак."</item>
+        <item name="line0">"Додао прилагођену тему подршку."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"เวอร์ชัน 2.0.0"</item>
-        <item name="line1">"ตราหน้า \"บริจาค\" กับ \"โปร\" ทั้งหมดคุณลักษณะฟรีก่อนหน้านี้และคุณสมบัติใหม่ต่างๆของได้ฟรี"</item>
-        <item name="line2">"เพิ่มลิ้นชัก app สำหรับเพจย่อย"</item>
-        <item name="line5">"เพิ่มความสามารถในการตั้งค่าการแจ้งเตือนเริ่มต้นสำหรับการแจ้งเตือนที่คุณสร้างทุก"</item>
-        <item name="line3">"การปรับปรุงรูปแบบแอป"</item>
-        <item name="line4">"ปรับปรุงการตั้งค่าและความช่วยเหลือและหน้าข้อเสนอแนะ"</item>
-        <item name="line4">"เพิ่มเครื่องมือ app"</item>
-        <item name="line5">"หลายตัวเลือกการแจ้งเตือนเพิ่มเติม (แสดงทั้งหมดโดยการตรวจสอบ \"แสดงขั้นสูง\")"</item>
-        <item name="line5">"เพิ่มการแจ้งเตือนตามสถานที่ เพิ่มจาก \"Customizer หน้า\""</item>
-        <item name="line5">"คุณสมบัติใหม่บางล็อครุ่น \"โปร\""</item>
-        <item name="line5">"ธีม App"</item>
-        <item name="line5">"โหมดใหญ่พิเศษ"</item>
-        <item name="line4">"รูปแบบการสั่นที่กำหนดเอง"</item>
-        <item name="line4">"ไอคอนแจ้งที่กำหนดเอง (Android 6.0 ขึ้นไปเท่านั้น)"</item>
-        <item name="line5">"สำรวจ app สำหรับคุณสมบัติเพิ่มเติม เพิ่มเติมจะมาเร็ว ๆ นี้"</item>
+        <item name="line0">"เพิ่มตัวเลือกที่จะเข้าสู่ระบบการแจ้งเตือนที่ชัดเจน"</item>
+        <item name="line1">"ประเภทการแจ้งเตือนที่เพิ่มเข้ามา"</item>
+        <item name="line2">"รายการที่เพิ่มขึ้นของความสามารถในการแจ้งเตือนเสียง"</item>
+        <item name="line5">"เพิ่มการเชื่อมโยงไปยังกลุ่มตัวอย่างการแจ้งเตือนและชุดไอคอนบนเว็บไซต์ jamesmorrisstudios"</item>
+        <item name="line3">"เพิ่มตัวเลือกเพื่อแสดงภาพการแจ้งเตือนในการแจ้งเตือนที่"</item>
+        <item name="line4">"เพิ่ม Android เจตนาการสนับสนุนปลั๊กอินสำหรับใช้งานร่วมกับแอพพลิเคอัตโนมัติ"</item>
+        <item name="line4">"เพิ่มการสนับสนุนฟีด RSS สำหรับข้อความ"</item>
+        <item name="line4">"แก้ไขข้อผิดพลาดที่งีบหลับอัตโนมัติจะไม่ทำงานกับการแจ้งเตือนตำแหน่งเรียกเป็น"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ไม่มีอะไร"</item>
+        <item name="line0">"รุ่นแรก"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ไม่มีอะไร"</item>
+        <item name="line0">"ประยุกต์การออกแบบเมนูโดยการย้ายทุกอย่างเพื่อลิ้นชักนำทาง"</item>
+        <item name="line0">"เปลี่ยนรูปแบบโฆษณาให้โฆษณาคั่นระหว่างหน้าและโฆษณาแบนเนอร์ลบออก"</item>
+        <item name="line0">"เปลี่ยนผู้ให้บริการโฆษณาเพื่อให้โฆษณาส่วนใหญ่จะเล่นเกมอื่น ๆ ที่เกี่ยวข้อง"</item>
+        <item name="line0">"ผลการดำเนินงานที่ดีขึ้นเกม"</item>
+        <item name="line0">"การสนับสนุนรูปแบบกำหนดเองที่เพิ่มเข้ามา"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

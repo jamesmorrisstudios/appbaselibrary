@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"različica 2.0.0"</item>
-        <item name="line1">"Re-blagovno znamko \"Donacija\" v \"Pro\". Vse prej brezplačne funkcije in mnoge nove funkcije so brezplačne."</item>
-        <item name="line2">"Dodano aplikacijo predal za podstrani."</item>
-        <item name="line5">"Dodana možnost, da nastavite privzete nastavitve opomnika za vsak opomnik, ki ga ustvarite."</item>
-        <item name="line3">"Posodobljeno temo aplikacije."</item>
-        <item name="line4">"Posodobljene Nastavitve in Pomoč in povratne strani."</item>
-        <item name="line4">"Dodal aplikacije pripomočka."</item>
-        <item name="line5">"Veliko dodatne možnosti opomnik (prikaz vseh s preverjanjem \"Show Advanced\")."</item>
-        <item name="line5">"Dodano lega opomniki osnovi. Dodaj iz \"za prilagajanje\" stran."</item>
-        <item name="line5">"Nekatere nove funkcije zaklenjen na \"Pro\" različici."</item>
-        <item name="line5">"aplikacije Teme"</item>
-        <item name="line5">"Čelada način."</item>
-        <item name="line4">"Meri vibriranja vzorci."</item>
-        <item name="line4">"Ikone obvestil po meri (android 6.0+ samo)."</item>
-        <item name="line5">"Razišči aplikacijo za dodatne funkcije. Več bo kmalu."</item>
+        <item name="line0">"Dodana možnost, da jasno izražajo dnevnik."</item>
+        <item name="line1">"Dodano kategorije obvestil."</item>
+        <item name="line2">"Dodano seznam obvestila sliši sposobnosti."</item>
+        <item name="line5">"Dodal povezavo na pokušino opomnike in ikon pakete na spletni strani jamesmorrisstudios."</item>
+        <item name="line3">"Dodana možnost, da pokažejo opomina sliko v obvestilu."</item>
+        <item name="line4">"Dodano Android Intent temelji plugin podpora za uporabo z aplikacijami za avtomatizacijo."</item>
+        <item name="line4">"Dodano RSS podpora feed za sporočila."</item>
+        <item name="line4">"Fixed bug, kjer avto dremež ne bi delovala z lokacije sproži opomnik."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nič"</item>
+        <item name="line0">"začetno javnost"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nič"</item>
+        <item name="line0">"Poenostavljeno zasnovo menija, ki se gibljejo vse v predalu za krmarjenje."</item>
+        <item name="line0">"Spremenila obliko oglasa na vmesnih oglasov in odstranjenih oglasne pasice."</item>
+        <item name="line0">"Spremenjeno ponudnika oglasa tako da so oglasi večinoma bolj gaming povezane."</item>
+        <item name="line0">"Izboljšana zmogljivost igra."</item>
+        <item name="line0">"Dodano meri temo podporo."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

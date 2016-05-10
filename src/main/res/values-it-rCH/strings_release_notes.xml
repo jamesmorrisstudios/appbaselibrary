@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versione 2.0.0"</item>
-        <item name="line1">"Re-branded \"Donazione\" a \"Pro\". Tutte le caratteristiche in precedenza liberi e molte delle nuove funzionalità sono gratuiti."</item>
-        <item name="line2">"Aggiunto un cassetto app per le pagine secondarie."</item>
-        <item name="line5">"Aggiunta la possibilità di configurare le impostazioni predefinite per ogni promemoria promemoria che si crea."</item>
-        <item name="line3">"Aggiornato il tema app."</item>
-        <item name="line4">"Aggiornamento delle impostazioni e Guida e pagine feedback."</item>
-        <item name="line4">"Aggiunta di un widget di app."</item>
-        <item name="line5">"Molte opzioni promemoria aggiuntive (mostra tutto selezionando \"Mostra avanzate\")."</item>
-        <item name="line5">"promemoria basati sulla localizzazione aggiunto. Aggiungere dalla pagina \"Customizer\"."</item>
-        <item name="line5">"Alcune nuove caratteristiche bloccate alla versione \"Pro\"."</item>
-        <item name="line5">"App temi"</item>
-        <item name="line5">"Modalità immersiva."</item>
-        <item name="line4">"modelli di vibrazione personalizzate."</item>
-        <item name="line4">"icone di notifica personalizzate (Android 6.0 e versioni successive solo)."</item>
-        <item name="line5">"Esplorare l'applicazione per funzionalità aggiuntive. Più saranno disponibili a breve."</item>
+        <item name="line0">"Aggiunta l'opzione per registro promemoria chiaro."</item>
+        <item name="line1">"categorie di notifica aggiunto."</item>
+        <item name="line2">"Lista Aggiunta di suoni di notifica capacità."</item>
+        <item name="line5">"Aggiunto un link per assaggiare promemoria e pacchetti di icone sul sito jamesmorrisstudios."</item>
+        <item name="line3">"Aggiunta una opzione per mostrare l'immagine di promemoria nella notifica."</item>
+        <item name="line4">"Aggiunto il supporto per i plugin intenti basato su Android per l'utilizzo con le applicazioni di automazione."</item>
+        <item name="line4">"Aggiunto il supporto feed RSS per i messaggi."</item>
+        <item name="line4">"Corretto un bug dove l'auto ripetizione non funzionerebbe con una posizione innescata promemoria."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"Niente"</item>
+        <item name="line0">"Versione iniziale"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"Niente"</item>
+        <item name="line0">"Semplificato il design menu spostando tutto a un cassetto di navigazione."</item>
+        <item name="line0">"Cambiato il formato di annunci di annunci interstiziali e banner pubblicitari rimossi."</item>
+        <item name="line0">"Cambiato il fornitore di pubblicità in modo annunci sono legati per lo più di più di gioco."</item>
+        <item name="line0">"prestazioni di gioco migliorata."</item>
+        <item name="line0">"Aggiunto il supporto tema personalizzato."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

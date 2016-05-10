@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"Версия 2.0.0"</item>
-        <item name="line1">"Re-брандирана \"Дарение\" да \"Pro\". Всички по-рано безплатни функции и много от новите функции са безплатни."</item>
-        <item name="line2">"Добавен ап чекмедже за под-страници."</item>
-        <item name="line5">"Добавена възможност да зададете настройки за напомняне по подразбиране за всеки напомняне, че вие ​​създавате."</item>
-        <item name="line3">"Обновено на ап тема."</item>
-        <item name="line4">"Обновено на Настройки и помощ и обратна връзка страници."</item>
-        <item name="line4">"Добавен приложение джаджа."</item>
-        <item name="line5">"Много допълнителни опции за напомняне (покажи всички чрез проверка на \"Show Advanced\")."</item>
-        <item name="line5">"Добавен местоположение базирани напомняния. Добави от страницата \"Customizer\"."</item>
-        <item name="line5">"Някои нови функции заключени към \"Pro\" версия."</item>
-        <item name="line5">"App Теми"</item>
-        <item name="line5">"Пълно потапяне Mode."</item>
-        <item name="line4">"Персонализирана вибриране модели."</item>
-        <item name="line4">"икони за уведомяване по поръчка (Android 6.0+ само)."</item>
-        <item name="line5">"Изследване на приложението за допълнителни функции. Повече ще бъде идва скоро."</item>
+        <item name="line0">"Добавена възможност за ясно напомняне дневник."</item>
+        <item name="line1">"Добавен категории известяване."</item>
+        <item name="line2">"Добавен списък на уведомление звучи способност."</item>
+        <item name="line5">"Добавен линк към образец напомняния и икона пакети на интернет страницата на jamesmorrisstudios."</item>
+        <item name="line3">"Добавен има опция за показване на изображението на напомняне в уведомлението."</item>
+        <item name="line4">"Добавен Android намерение базирани плъгин подкрепа за използване с автоматизация приложения."</item>
+        <item name="line4">"Добавена е поддръжка емисия RSS за съобщения."</item>
+        <item name="line4">"Фиксирана бъг, където авто дрямка няма да работи с място задейства напомняне."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"Нищо"</item>
+        <item name="line0">"Първоначална версия"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"Нищо"</item>
+        <item name="line0">"Опростена дизайн на менюто, като движите всичко към навигация чекмедже."</item>
+        <item name="line0">"Променена рекламния формат за рекламни заставки и отстраняват банер реклами."</item>
+        <item name="line0">"Променена доставчика на реклами така, че са свързани най-вече повече игрални."</item>
+        <item name="line0">"Подобрена производителност игра."</item>
+        <item name="line0">"Добавен обичай подкрепа тема."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

@@ -40,6 +40,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.util.zip.Deflater;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
@@ -101,16 +102,16 @@ public final class FileWriter {
     }
 
     public static Uri writeToZip(@NonNull final Uri[] files, @NonNull final String zipFileName, @NonNull final FileLocation zipLocation) {
-        int BUFFER = 2048;
-        BufferedInputStream origin = null;
         File zipFile = getFile(zipFileName, zipLocation);
         if (zipFile == null) {
             return null;
         }
         try {
-            FileOutputStream dest = new FileOutputStream(zipFile);
-            ZipOutputStream out = new ZipOutputStream(new BufferedOutputStream(dest));
-            byte data[] = new byte[BUFFER];
+            FileOutputStream fout = new FileOutputStream(zipFile);
+            ZipOutputStream zout = new ZipOutputStream(new BufferedOutputStream(fout));
+            zout.setLevel(Deflater.NO_COMPRESSION);
+            BufferedInputStream bis;
+            byte buffer[] = new byte[2048];
             for (int i = 0; i < files.length; i++) {
                 Log.v("Compress", "Adding: " + files[i].getPath());
                 File file = getFile(files[i].getPath(), FileLocation.PATH);
@@ -118,16 +119,16 @@ public final class FileWriter {
                     continue;
                 }
                 FileInputStream fi = new FileInputStream(file);
-                origin = new BufferedInputStream(fi, BUFFER);
+                bis = new BufferedInputStream(fi, buffer.length);
                 ZipEntry entry = new ZipEntry(files[i].getPath().substring(files[i].getPath().lastIndexOf("/") + 1));
-                out.putNextEntry(entry);
+                zout.putNextEntry(entry);
                 int count;
-                while ((count = origin.read(data, 0, BUFFER)) != -1) {
-                    out.write(data, 0, count);
+                while ((count = bis.read(buffer, 0, buffer.length)) != -1) {
+                    zout.write(buffer, 0, count);
                 }
-                origin.close();
+                bis.close();
             }
-            out.close();
+            zout.close();
             return Uri.fromFile(zipFile);
         } catch (Exception e) {
             e.printStackTrace();
@@ -142,7 +143,8 @@ public final class FileWriter {
             try {
                 FileInputStream fin = new FileInputStream(zipFile.getPath());
                 ZipInputStream zin = new ZipInputStream(fin);
-                ZipEntry ze = null;
+                ZipEntry ze;
+                byte[] buffer = new byte[2048];
                 while ((ze = zin.getNextEntry()) != null) {
                     Log.v("Decompress", "Unzipping " + ze.getName());
                     if (!ze.isDirectory()) {
@@ -150,9 +152,14 @@ public final class FileWriter {
                         if (file != null) {
                             Log.v("Decompress", "Unzipping " + file.getPath());
                             FileOutputStream fout = new FileOutputStream(file);
-                            for (int c = zin.read(); c != -1; c = zin.read()) {
-                                fout.write(c);
+                            BufferedOutputStream bos = new BufferedOutputStream(fout, buffer.length);
+                            int size;
+                            while ((size = zin.read(buffer, 0, buffer.length)) != -1) {
+                                bos.write(buffer, 0, size);
                             }
+                            bos.flush();
+                            bos.close();
+                            fout.flush();
                             fout.close();
                             Log.v("Decompress", "Unzipping File Written " + ze.getName());
                         }
@@ -513,6 +520,7 @@ public final class FileWriter {
             FileInputStream fin = new FileInputStream(fd);
             ZipInputStream zin = new ZipInputStream(fin);
             ZipEntry ze = null;
+            byte[] buffer = new byte[2048];
             while ((ze = zin.getNextEntry()) != null) {
                 Log.v("Decompress", "Unzipping " + ze.getName());
                 if (!ze.isDirectory()) {
@@ -520,9 +528,14 @@ public final class FileWriter {
                     if (file != null) {
                         Log.v("Decompress", "Unzipping " + file.getPath());
                         FileOutputStream fout = new FileOutputStream(file);
-                        for (int c = zin.read(); c != -1; c = zin.read()) {
-                            fout.write(c);
+                        BufferedOutputStream bos = new BufferedOutputStream(fout, buffer.length);
+                        int size;
+                        while ((size = zin.read(buffer, 0, buffer.length)) != -1) {
+                            bos.write(buffer, 0, size);
                         }
+                        bos.flush();
+                        bos.close();
+                        fout.flush();
                         fout.close();
                         Log.v("Decompress", "Unzipping File Written " + ze.getName());
                     }

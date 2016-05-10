@@ -1,1028 +1,1052 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"pameran"</string>
-
+    
     <string name="settings_category_sound">"Suara"</string>
-
+    
     <string name="settings_category_general">"Umum"</string>
-
+    
     <string name="settings_category_locale">"lokal"</string>
-
+    
     <string name="settings_category_theme">"Tema"</string>
-
+    
     <string name="settings_category_notification">"Pemberitahuan"</string>
-
+    
     <string name="settings_category_notification_custom">"Pemberitahuan kustom"</string>
-
+    
     <string name="settings_category_notification_override">"override Pemberitahuan"</string>
-
+    
     <string name="settings_category_defaults">"default"</string>
-
+    
     <string name="settings_category_random">"Keserampangan"</string>
-
+    
     <string name="settings_category_widget">"widget"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"Modus Immersive"</string>
-
+    
     <string name="setting_sound_enable_primary">"Efek suara"</string>
-
+    
     <string name="setting_music_enable_primary">"Musik"</string>
-
+    
     <string name="setting_language_picker_primary">"Bahasa"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Kustom Ringtone Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"App Tema"</string>
-
+    
     <string name="setting_accent_color_primary">"Accent Warna"</string>
-
+    
     <string name="setting_primary_color_primary">"Warna primer"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Toolbar Warna Teks"</string>
+    
+    <string name="setting_game_text_color_primary">"Permainan Warna Teks"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"klik tindakan"</string>
-
+    
     <string name="setting_notification_custom_primary">"Memungkinkan"</string>
-
+    
     <string name="setting_notification_button_style_primary">"tombol Style"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"Pemberitahuan yang sedang berlangsung"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"pemberitahuan yang sedang berlangsung tidak didukung pada SmartWatches"</string>
-
-    <string name="setting_notification_theme_primary">"Latar belakang"</string>
-
+    
+    <string name="setting_notification_theme_primary">"latar belakang"</string>
+    
     <string name="setting_notification_theme_text_primary">"Warna teks"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Hari pertama dari minggu"</string>
-
+    
     <string name="setting_force_advanced_primary">"Selalu Tampilkan Advanced Options"</string>
-
+    
     <string name="setting_force_advanced_secondary">"Menonaktifkan menampilkan opsi lanjutan secara pengingat per"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"Gesek Action"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Klik Membuka App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Gesek Membuka App"</string>
-
+    
     <string name="setting_random_amount_primary">"Acak"</string>
-
+    
     <string name="setting_less_random_amount_primary">"Kurang Acak"</string>
-
+    
     <string name="setting_even_amount_primary">"Bahkan"</string>
-
+    
     <string name="setting_widget_theme_primary">"Tema"</string>
-
+    
     <string name="setting_widget_text_color_primary">"Warna teks"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Override pemberitahuan getar"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Override pemutaran nada notifikasi"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"Ini harus diaktifkan untuk menimpa stream audio"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Override stream audio pemberitahuan"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"aliran pidato Override"</string>
 
-
+    
     <string name="time_millisecond">"milidetik"</string>
-
+    
     <string name="time_milliseconds">"milidetik"</string>
-
+    
     <string name="time_millisecond_abrev">"Nona"</string>
-
+    
     <string name="time_second">"Kedua"</string>
-
+    
     <string name="time_seconds">"detik"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"Menit"</string>
-
+    
     <string name="time_minutes">"Menit"</string>
-
+    
     <string name="time_hour">"Jam"</string>
-
+    
     <string name="time_hours">"Jam"</string>
-
+    
     <string name="time_day">"Hari"</string>
-
+    
     <string name="time_days">"hari-hari"</string>
-
+    
     <string name="time_daily">"Harian"</string>
-
+    
     <string name="time_week">"Minggu"</string>
-
+    
     <string name="time_weeks">"minggu"</string>
-
+    
     <string name="time_weekly">"Mingguan"</string>
-
+    
     <string name="time_month">"Bulan"</string>
-
+    
     <string name="time_months">"Bulan"</string>
-
+    
     <string name="time_monthly">"Bulanan"</string>
-
+    
     <string name="time_year">"Tahun"</string>
-
+    
     <string name="time_years">"tahun"</string>
-
+    
     <string name="time_yearly">"Tahunan"</string>
 
-
+    
     <string name="meter">"Meter"</string>
-
+    
     <string name="meters">"meter"</string>
 
-
+    
     <string name="num_one">"Satu"</string>
-
+    
     <string name="num_two">"Dua"</string>
-
+    
     <string name="num_three">"Tiga"</string>
-
+    
     <string name="num_four">"Empat"</string>
-
+    
     <string name="num_five">"Lima"</string>
-
+    
     <string name="num_six">"Enam"</string>
-
+    
     <string name="num_seven">"Tujuh"</string>
-
+    
     <string name="num_eight">"Delapan"</string>
-
+    
     <string name="num_nine">"Sembilan"</string>
-
+    
     <string name="num_ten">"Sepuluh"</string>
 
-
+    
     <string name="num_first">"Pertama"</string>
-
+    
     <string name="num_second">"Kedua"</string>
-
+    
     <string name="num_third">"Ketiga"</string>
-
+    
     <string name="num_fourth">"Keempat"</string>
-
+    
     <string name="num_fifth">"Kelima"</string>
-
+    
     <string name="num_sixth">"Keenam"</string>
-
+    
     <string name="num_seventh">"Ketujuh"</string>
-
+    
     <string name="num_eighth">"Kedelapan"</string>
-
+    
     <string name="num_ninth">"Kesembilan"</string>
-
+    
     <string name="num_tenth">"Kesepuluh"</string>
 
-
+    
     <string name="day_sunday">"Minggu"</string>
-
+    
     <string name="day_monday">"Senin"</string>
-
+    
     <string name="day_tuesday">"Selasa"</string>
-
+    
     <string name="day_wednesday">"Rabu"</string>
-
+    
     <string name="day_thursday">"Kamis"</string>
-
+    
     <string name="day_friday">"Jumat"</string>
-
+    
     <string name="day_saturday">"Sabtu"</string>
-
+    
     <string name="today">"Hari ini"</string>
-
+    
     <string name="tomorrow">"Besok"</string>
-
+    
     <string name="yesterday">"Kemarin"</string>
 
-
+    
     <string name="days_of_week">"Hari-hari dalam seminggu"</string>
-
-    <string name="days_of_month">"Days Of Bulan"</string>
-
-    <string name="days_of_year">"Days Of Year"</string>
-
+    
+    <string name="days_of_month">"Hari Bulan"</string>
+    
+    <string name="days_of_year">"Hari Tahun"</string>
+    
     <string name="weeks_of_month">"Minggu Bulan"</string>
-
+    
     <string name="weeks_of_year">"Minggu Tahun"</string>
-
+    
     <string name="months_of_year">"Bulan Tahun"</string>
 
-
+    
     <string name="next">"Berikutnya"</string>
-
+    
     <string name="previous">"Sebelumnya"</string>
-
+    
     <string name="back">"Kembali"</string>
-
+    
     <string name="forward">"Meneruskan"</string>
 
-
+    
     <string name="pattern_1">"pola 1"</string>
-
+    
     <string name="pattern_2">"pola 2"</string>
-
+    
     <string name="pattern_3">"pola 3"</string>
-
+    
     <string name="pattern_4">"pola 4"</string>
-
+    
     <string name="pattern_5">"pola 5"</string>
-
+    
     <string name="pattern_6">"pola 6"</string>
 
-
+    
     <string name="select">"Memilih"</string>
-
+    
     <string name="select_all">"Pilih Semua"</string>
-
+    
     <string name="select_none">"Pilih Tidak"</string>
 
-
+    
     <string name="diff_difficulty">"Kesulitan"</string>
-
+    
     <string name="diff_select_difficulty">"Pilih Kesulitan"</string>
-
+    
     <string name="diff_easy">"Mudah"</string>
-
+    
     <string name="diff_normal">"Normal"</string>
-
+    
     <string name="diff_hard">"Keras"</string>
 
-
+    
     <string name="enable">"Memungkinkan"</string>
-
+    
     <string name="enabled">"Diaktifkan"</string>
-
+    
     <string name="disable">"melumpuhkan"</string>
-
+    
     <string name="disabled">"Cacat"</string>
-
+    
     <string name="lock">"Mengunci"</string>
-
+    
     <string name="unlock">"Membuka kunci"</string>
-
+    
     <string name="locked">"Terkunci"</string>
-
+    
     <string name="unlocked">"unlocked"</string>
-
+    
     <string name="open">"Buka"</string>
-
+    
     <string name="close">"Dekat"</string>
-
+    
     <string name="opened">"dibuka"</string>
-
+    
     <string name="closed">"Tertutup"</string>
-
+    
     <string name="show">"Menunjukkan"</string>
-
+    
     <string name="hide">"Menyembunyikan"</string>
-
+    
     <string name="shown">"Tampil"</string>
-
+    
     <string name="Hidden">"Tersembunyi"</string>
-
+    
     <string name="automatic">"Otomatis"</string>
-
+    
     <string name="manual">"panduan"</string>
-
+    
     <string name="online">"On line"</string>
-
+    
     <string name="offline">"Offline"</string>
-
+    
     <string name="active">"Aktif"</string>
-
+    
     <string name="inactive">"non-aktif"</string>
 
-
+    
+    <string name="clear">"Bersih"</string>
+    
+    <string name="clear_log">"Clear Log"</string>
+    
+    <string name="log_cleared">"Log dibersihkan"</string>
+    
     <string name="okay">"baik"</string>
-
+    
     <string name="cancel">"Membatalkan"</string>
-
+    
     <string name="yes">"iya nih"</string>
-
+    
     <string name="no">"Tidak"</string>
-
+    
     <string name="maybe">"Mungkin"</string>
-
+    
     <string name="some">"Beberapa"</string>
-
+    
     <string name="none">"tak satupun"</string>
-
+    
     <string name="all">"Semua"</string>
-
+    
     <string name="set">"Set"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"Terakhir"</string>
-
+    
     <string name="first">"Pertama"</string>
-
+    
     <string name="every">"Setiap"</string>
-
+    
     <string name="other">"Lain"</string>
-
+    
     <string name="off">"Mati"</string>
-
+    
     <string name="on">"Di"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Jelas Pengingat Log"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Apakah Anda yakin ingin menghapus log pengingat?"</string>
+    
     <string name="delete_reminder_prompt_title">"Hapus Pengingat"</string>
-
+    
     <string name="delete_reminder_prompt_content">"Apakah Anda yakin ingin menghapus pengingat ini?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"Hapus Icon"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Apakah Anda yakin ingin menghapus ikon ini?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"Membuang perubahan"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"Apakah Anda yakin ingin membuang perubahan?"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Hapus Pola Getar"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Apakah Anda yakin ingin menghapus pola getar ini?"</string>
-
+    
     <string name="delete_location_prompt_title">"Hapus Lokasi"</string>
-
+    
     <string name="delete_location_prompt_content">"Apakah Anda yakin ingin menghapus lokasi ini?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"Pengingat duplikat"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"Apakah Anda yakin ingin menduplikasi pengingat ini?"</string>
-
+    
     <string name="include_log_prompt_title">"Sertakan Log"</string>
-
+    
     <string name="include_log_prompt_content">"Apakah Anda ingin menyertakan log pengingat?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Sertakan Pengingat default"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Apakah Anda ingin menyertakan pengingat default?"</string>
-
+    
     <string name="start_new_game_title">"Mulai Game Baru"</string>
-
+    
     <string name="start_new_game_prompt">"Apakah Anda yakin ingin memulai permainan baru?"</string>
-
+    
     <string name="end_game_title">"akhir Pertandingan"</string>
-
+    
     <string name="end_game_prompt">"Apakah Anda yakin ingin mengakhiri permainan ini?"</string>
 
-
+    
     <string name="help">"Membantu"</string>
-
+    
     <string name="about">"Tentang"</string>
-
+    
     <string name="settings">"pengaturan"</string>
-
+    
     <string name="help_and_feedback">"Bantuan &amp; Masukan"</string>
-
+    
     <string name="rate_app">"tingkat App"</string>
-
+    
     <string name="more_apps">"Aplikasi tambahan lainnya"</string>
-
+    
     <string name="tutorial">"tutorial"</string>
-
+    
     <string name="read">"Baca baca"</string>
-
+    
     <string name="watch">"Menonton"</string>
-
+    
+    <string name="link">"Link"</string>
+    
     <string name="links">"Link"</string>
-
+    
     <string name="licenses">"lisensi"</string>
-
+    
     <string name="help_translate">"Bantuan Terjemahkan"</string>
-
+    
     <string name="get_the_beta">"Dapatkan Beta"</string>
-
+    
     <string name="achievements">"Medali"</string>
-
+    
     <string name="leaderboards">"leaderboards"</string>
-
+    
     <string name="high_scores">"Nilai yang tinggi"</string>
-
+    
     <string name="my_circles">"Lingkaran saya"</string>
-
+    
     <string name="invitations">"undangan"</string>
-
+    
     <string name="options">"Pilihan"</string>
-
+    
     <string name="game_options">"Game Pilihan"</string>
-
+    
     <string name="advanced_options">"advanced Options"</string>
-
+    
     <string name="automatch">"Automatch"</string>
-
+    
     <string name="guest">"Tamu"</string>
 
-
+    
     <string name="light">"Cahaya"</string>
-
+    
     <string name="light_transparent">"cahaya Transparan"</string>
-
+    
     <string name="dark">"Gelap"</string>
-
+    
     <string name="dark_transparent">"gelap Transparan"</string>
-
+    
     <string name="transparent">"jelas"</string>
-
+    
     <string name="night">"Malam"</string>
-
+    
     <string name="black">"Hitam"</string>
-
+    
     <string name="white">"putih"</string>
-
+    
     <string name="system">"Sistem"</string>
-
+    
     <string name="light_text">"Teks cahaya"</string>
-
+    
     <string name="dark_text">"gelap Teks"</string>
 
-
+    
     <string name="red">"Merah"</string>
-
+    
     <string name="pink">"Berwarna merah muda"</string>
-
+    
     <string name="purple">"Ungu"</string>
-
+    
     <string name="deep_purple">"Ungu gelap"</string>
-
+    
     <string name="indigo">"Nila"</string>
-
+    
     <string name="blue">"Biru"</string>
-
+    
     <string name="light_blue">"Biru muda"</string>
-
+    
     <string name="cyan">"cyan"</string>
-
+    
     <string name="teal">"Teal"</string>
-
-    <string name="green">"Hijau"</string>
-
+    
+    <string name="green">"hijau"</string>
+    
     <string name="light_green">"Hijau muda"</string>
-
-    <string name="lime">"Kapur"</string>
-
+    
+    <string name="lime">"jeruk nipis"</string>
+    
     <string name="yellow">"Kuning"</string>
-
+    
     <string name="amber">"Amber"</string>
-
+    
     <string name="orange">"Jeruk"</string>
-
+    
     <string name="deep_orange">"mendalam Jeruk"</string>
-
+    
     <string name="brown">"Coklat"</string>
-
+    
     <string name="grey">"Abu-abu"</string>
-
+    
     <string name="blue_grey">"biru abu-abu"</string>
-
+    
     <string name="dark_grey">"Abu-abu gelap"</string>
 
-
+    
     <string name="major">"Utama"</string>
-
+    
     <string name="minor">"Minor"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"Versi"</string>
-
+    
     <string name="production">"Produksi"</string>
-
+    
     <string name="beta">"beta"</string>
-
+    
     <string name="alpha">"Alfa"</string>
 
-
+    
     <string name="icon">"icon"</string>
-
+    
     <string name="icons">"ikon"</string>
-
+    
     <string name="custom_icon">"Icon kustom"</string>
-
+    
     <string name="custom_icons">"Ikon kustom"</string>
-
+    
     <string name="choose_icon">"Pilih Icon"</string>
 
-
+    
     <string name="backup">"backup"</string>
-
+    
     <string name="import_">"Impor"</string>
-
+    
     <string name="export">"Ekspor"</string>
-
+    
     <string name="export_log">"ekspor Log"</string>
-
+    
     <string name="import_export">"Ekspor Impor"</string>
-
+    
     <string name="export_location">"ekspor Lokasi"</string>
-
+    
     <string name="import_failed">"impor Gagal"</string>
-
+    
     <string name="import_canceled">"impor Dibatalkan"</string>
-
+    
     <string name="export_failed">"ekspor Gagal"</string>
-
+    
     <string name="export_canceled">"ekspor Dibatalkan"</string>
-
+    
     <string name="import_complete">"impor Lengkap"</string>
-
+    
     <string name="export_complete">"ekspor Lengkap"</string>
-
+    
     <string name="importing_please_wait">"Mengimpor, Harap Tunggu"</string>
-
+    
     <string name="exporting_please_wait">"Mengekspor, Harap Tunggu"</string>
 
-
+    
     <string name="snooze">"Tidur sebentar"</string>
-
+    
     <string name="snoozed">"ditunda"</string>
-
+    
     <string name="auto_snooze">"Auto Tunda"</string>
-
+    
     <string name="manual_snooze">"Tunda pengguna"</string>
 
-
+    
     <string name="message">"Pesan"</string>
-
+    
     <string name="messages">"pesan"</string>
-
+    
     <string name="num_messages">"Jumlah Pesan"</string>
-
+    
     <string name="edit_messages">"mengedit Pesan"</string>
-
+    
     <string name="view_messages">"Lihat Pesan"</string>
-
+    
     <string name="import_messages">"impor Pesan"</string>
-
+    
     <string name="message_separator">"Pesan Separator ||||"</string>
 
-
+    
     <string name="sign_in">"Masuk"</string>
-
+    
     <string name="signed_in">"ditandatangani Dalam"</string>
-
+    
     <string name="sign_in_failed">"Masuk gagal"</string>
-
+    
     <string name="sign_out">"Keluar"</string>
-
+    
     <string name="signed_out">"Keluar"</string>
 
-
+    
     <string name="low">"Rendah"</string>
-
+    
     <string name="mid">"Pertengahan"</string>
-
+    
     <string name="high">"Tinggi"</string>
-
+    
     <string name="min">"Min"</string>
-
+    
     <string name="max">"Max"</string>
-
+    
     <string name="minimum">"Minimum"</string>
-
+    
     <string name="medium">"Medium"</string>
-
+    
     <string name="maximum">"Maksimum"</string>
-
+    
     <string name="small">"Kecil"</string>
-
+    
     <string name="large">"Besar"</string>
-
+    
     <string name="short_">"Pendek"</string>
-
+    
     <string name="long_">"Panjang"</string>
-
+    
     <string name="slow">"Lambat"</string>
-
+    
     <string name="fast">"Cepat"</string>
-
+    
     <string name="quick">"Cepat"</string>
-
+    
     <string name="narrow">"Sempit"</string>
-
+    
     <string name="wide">"Lebar"</string>
 
-
+    
     <string name="thank_you">"Terima kasih"</string>
-
+    
     <string name="youre_welcome">"Sama-sama"</string>
-
+    
     <string name="please">"Silahkan"</string>
 
-
+    
     <string name="you">"Kamu"</string>
-
+    
     <string name="me">"Saya"</string>
-
+    
     <string name="us">"Kami"</string>
-
+    
     <string name="we">"Kita"</string>
-
+    
     <string name="them">"Mereka"</string>
 
-
+    
     <string name="short_on">"pendek pada"</string>
-
+    
     <string name="medium_on">"sedang di"</string>
-
+    
     <string name="long_on">"panjang pada"</string>
-
+    
     <string name="short_off">"off singkat"</string>
-
+    
     <string name="medium_off">"sedang off"</string>
-
+    
     <string name="long_off">"-jauh"</string>
 
-
+    
     <string name="pro">"Pro"</string>
-
+    
+    <string name="pro_unlocked">"Pro unlocked"</string>
+    
     <string name="pro_feature">"Fitur Pro"</string>
-
+    
     <string name="upgrade">"Meningkatkan"</string>
-
+    
     <string name="feature_requires_pro">"Fitur ini memerlukan versi pro"</string>
-
+    
     <string name="feature_requires_pro_limited">"Fitur ini terbatas dalam versi gratis. Upgrade ke pro atau menghapus item yang ada."</string>
-
+    
     <string name="upgrade_to_pro">"Upgrade ke yang lebih baik"</string>
-
+    
     <string name="upgrade_now">"Tingkatkan sekarang"</string>
 
-
+    
     <string name="start_date">"Mulai tanggal"</string>
-
+    
     <string name="end_date">"Tanggal akhir"</string>
-
+    
     <string name="start_time">"Waktu mulai"</string>
-
+    
     <string name="end_time">"Akhir waktu"</string>
-
+    
     <string name="end_type">"end Jenis"</string>
-
+    
     <string name="timing_type">"timing Jenis"</string>
-
+    
     <string name="edit_times">"mengedit Kali"</string>
-
+    
     <string name="time">"Waktu"</string>
-
+    
     <string name="times">"Waktu"</string>
-
+    
     <string name="timing">"pemilihan waktu"</string>
-
+    
     <string name="all_time">"Sepanjang waktu"</string>
-
+    
     <string name="every_week">"Setiap minggu"</string>
-
+    
     <string name="lifetime">"Seumur hidup"</string>
-
+    
     <string name="forever">"Selama-lamanya"</string>
-
+    
     <string name="time_period">"Jangka waktu"</string>
-
+    
     <string name="random">"Acak"</string>
-
+    
     <string name="randomly">"acak"</string>
-
+    
     <string name="less_random">"Kurang Acak"</string>
-
+    
     <string name="even">"Bahkan"</string>
-
+    
     <string name="evenly">"Rata"</string>
-
+    
     <string name="specific">"Spesifik"</string>
-
+    
     <string name="interval">"Selang"</string>
-
+    
     <string name="specific_times">"Kali spesifik"</string>
-
+    
     <string name="repeat_every">"ulangi setiap"</string>
 
-
+    
     <string name="data_loaded">"Data Loaded"</string>
-
+    
     <string name="file">"Mengajukan"</string>
-
+    
     <string name="local_storage">"Penyimpanan lokal"</string>
-
+    
     <string name="filename">"Nama file"</string>
 
-
+    
     <string name="permission_granted">"Izin diberikan"</string>
-
+    
     <string name="permission_denied">"Izin ditolak"</string>
-
+    
     <string name="allow_if_any">"Memungkinkan jika ada"</string>
-
+    
     <string name="allow_if_all">"Memungkinkan jika semua"</string>
-
+    
     <string name="disallow_if_any">"Larang jika ada"</string>
-
+    
     <string name="disallow_if_all">"Larang jika semua"</string>
-
+    
     <string name="trigger_if_any">"Pemicu jika ada"</string>
-
+    
     <string name="trigger_if_all">"Pemicu jika semua"</string>
 
-
+    
     <string name="reminders">"pengingat"</string>
-
+    
     <string name="no_reminder">"Tidak ada Pengingat"</string>
-
+    
     <string name="no_reminders_yet">"Anda tidak memiliki pengingat belum"</string>
-
+    
     <string name="alerts_per_day">"Pengingat Per Hari"</string>
-
+    
     <string name="number_of_reminders">"Jumlah pengingat"</string>
 
-
+    
     <string name="changes_discarded">"Perubahan Dibuang"</string>
-
+    
     <string name="changes_saved">"Perubahan tersimpan"</string>
-
+    
     <string name="no_changes">"Tidak ada perubahan"</string>
-
+    
     <string name="select_at_least_one_item">"Pilih setidaknya satu item"</string>
 
-
+    
     <string name="loading">"Pemuatan"</string>
-
+    
     <string name="loaded">"Sarat"</string>
-
+    
     <string name="loading_failed">"Memuat Gagal"</string>
-
+    
     <string name="loading_complete">"memuat Lengkap"</string>
-
+    
     <string name="error">"Kesalahan"</string>
-
+    
     <string name="fail">"Gagal"</string>
-
+    
     <string name="failed">"Gagal"</string>
-
+    
     <string name="success">"Keberhasilan"</string>
-
+    
     <string name="successful">"sukses"</string>
-
+    
     <string name="unsuccessful">"Gagal"</string>
-
+    
     <string name="valid">"Sah"</string>
-
+    
     <string name="invalid">"cacat"</string>
-
+    
     <string name="complete">"Lengkap"</string>
-
+    
     <string name="completed">"Lengkap"</string>
-
+    
     <string name="skipped">"dilewati"</string>
-
+    
     <string name="incomplete">"Tidak lengkap"</string>
-
+    
     <string name="dismiss">"Memberhentikan"</string>
-
+    
     <string name="dismissed">"Dibubarkan"</string>
-
+    
     <string name="acknowledge">"Mengakui"</string>
-
+    
     <string name="acknowledged">"diakui"</string>
-
+    
     <string name="add">"Menambahkan"</string>
-
+    
     <string name="added">"ditambahkan"</string>
-
+    
     <string name="add_item">"Tambahkan Barang"</string>
-
+    
     <string name="remove">"Menghapus"</string>
-
+    
     <string name="removed">"dihapus"</string>
-
+    
     <string name="remove_item">"Hapus Barang"</string>
-
+    
     <string name="delete">"Menghapus"</string>
-
+    
     <string name="deleted">"dihapus"</string>
-
+    
     <string name="duplicate">"Duplikat"</string>
-
+    
     <string name="duplicated">"digandakan"</string>
-
+    
     <string name="restart">"Mengulang kembali"</string>
-
+    
     <string name="restarting">"restart"</string>
-
+    
     <string name="restarting_app_please_wait">"Restart App, Harap Tunggu"</string>
 
-
+    
     <string name="map">"Peta"</string>
-
+    
     <string name="location">"tempat"</string>
-
+    
     <string name="locations">"lokasi"</string>
-
+    
     <string name="latitude">"Lintang"</string>
-
+    
     <string name="longitude">"Garis bujur"</string>
-
+    
     <string name="radius">"Radius"</string>
-
+    
     <string name="enter">"Memasukkan"</string>
-
+    
     <string name="exit">"Keluar"</string>
-
+    
     <string name="linger_time">"Linger Waktu"</string>
 
-
+    
     <string name="music">"Musik"</string>
-
+    
     <string name="ring">"Cincin"</string>
-
+    
     <string name="speak_time">"bicara Waktu"</string>
-
+    
     <string name="speak_title">"berbicara Judul"</string>
-
+    
     <string name="speak_message">"bicara Pesan"</string>
-
+    
     <string name="tone">"Nada"</string>
-
+    
     <string name="sound">"Suara"</string>
+    
+    <string name="sounds">"suara"</string>
 
-
+    
     <string name="notification">"Pemberitahuan"</string>
-
+    
     <string name="notifications">"pemberitahuan"</string>
-
+    
     <string name="select_notification">"Pilih Pemberitahuan"</string>
 
-
+    
     <string name="vibrate">"Bergetar"</string>
-
+    
     <string name="vibrate_pattern">"Pola Getar"</string>
-
+    
     <string name="vibrate_patterns">"Pola Getar"</string>
-
+    
     <string name="create_vibrate_pattern">"Buat Pola Getar"</string>
 
+    
 
+    
     <string name="you_win">"Kamu menang"</string>
-
+    
     <string name="you_won">"Kamu menang"</string>
-
+    
     <string name="you_lost">"Kamu kalah"</string>
-
+    
     <string name="you_lose">"Kamu kalah"</string>
-
+    
     <string name="you_tied">"Anda Terikat"</string>
-
+    
     <string name="winner">"Pemenang"</string>
-
+    
     <string name="winners">"pemenang"</string>
-
+    
     <string name="loser">"Pecundang"</string>
-
+    
     <string name="Losers">"pecundang"</string>
 
-
+    
     <string name="number_of_players">"Jumlah Pemain"</string>
-
+    
     <string name="player">"Pemain"</string>
-
+    
     <string name="players">"pemain"</string>
-
+    
     <string name="player_1">"Player 1"</string>
-
+    
     <string name="player_2">"pemain 2"</string>
-
+    
     <string name="player_3">"pemain 3"</string>
-
+    
     <string name="player_4">"Player 4"</string>
-
+    
     <string name="player_5">"Player 5"</string>
-
+    
     <string name="player_6">"Player 6"</string>
-
+    
     <string name="team">"Tim"</string>
-
+    
     <string name="teams">"tim"</string>
-
+    
     <string name="number_of_teams">"Jumlah Tim"</string>
-
+    
     <string name="team_1">"tim 1"</string>
-
+    
     <string name="team_2">"tim 2"</string>
-
+    
     <string name="team_3">"tim 3"</string>
-
+    
     <string name="team_4">"tim 4"</string>
 
-
+    
     <string name="requires_google_play">"Tindakan ini memerlukan Google Play Game"</string>
-
+    
     <string name="compare_profiles">"Bandingkan Mainkan Game Profiles"</string>
-
+    
     <string name="view_profile">"Lihat Play Game Profil"</string>
 
-
+    
     <string name="sponsored">"Sponsor"</string>
-
+    
     <string name="ads">"Iklan"</string>
-
+    
     <string name="remove_ads">"Hilangkan iklan"</string>
-
+    
     <string name="ads_removed">"iklan Dihapus"</string>
+    
+    <string name="ad_unavailable">"iklan Tidak Tersedia"</string>
 
-
+    
     <string name="current_score">"Skor saat ini"</string>
-
+    
     <string name="top_score">"Top Skor"</string>
-
+    
     <string name="score">"Skor"</string>
 
-
+    
     <string name="your_turn">"Giliran Anda"</string>
-
+    
     <string name="their_turn">"Aktifkan mereka"</string>
-
-    <string name="turn">"Berbelok"</string>
-
+    
+    <string name="turn">"Giliran"</string>
+    
     <string name="turns">"Turns"</string>
-
+    
     <string name="round">"Bulat"</string>
-
+    
     <string name="rounds">"Rounds"</string>
-
+    
     <string name="match">"Pertandingan"</string>
-
+    
     <string name="matches">"korek api"</string>
 
-
+    
     <string name="dollar">"Dolar"</string>
-
+    
     <string name="dollars">"dolar"</string>
-
+    
     <string name="buy">"Membeli"</string>
-
+    
     <string name="sell">"Menjual"</string>
-
+    
     <string name="purchase">"Membeli"</string>
-
+    
     <string name="diamond">"berlian"</string>
-
+    
     <string name="diamonds">"Diamonds"</string>
 
-
+    
     <string name="rematch">"pertandingan ulang"</string>
-
+    
     <string name="try_again">"Coba lagi"</string>
-
+    
     <string name="touch_continue">"Sentuh untuk Lanjutkan"</string>
-
+    
     <string name="touch_resume">"Sentuh untuk Lanjutkan"</string>
-
+    
     <string name="touch_edit">"Sentuh untuk mengedit"</string>
-
+    
     <string name="pause">"Berhenti sebentar"</string>
-
+    
     <string name="pause_game">"jeda permainan"</string>
-
+    
     <string name="resume">"Lanjut"</string>
-
+    
     <string name="resume_game">"Melanjutkan permainan"</string>
-
+    
     <string name="new_">"Baru"</string>
-
+    
     <string name="new_game">"Permainan baru"</string>
-
+    
     <string name="select_save">"pilih Simpan"</string>
-
+    
     <string name="save">"Menyimpan"</string>
-
+    
     <string name="save_game">"Simpan permainan"</string>
-
+    
     <string name="load">"Beban"</string>
-
+    
     <string name="load_game">"beban Permainan"</string>
-
+    
     <string name="game_over">"Permainan telah berakhir"</string>
-
+    
     <string name="start">"Mulai"</string>
-
+    
     <string name="start_game">"Memulai permainan"</string>
-
+    
     <string name="end">"Akhir"</string>
-
+    
     <string name="end_game">"akhir Pertandingan"</string>
-
+    
     <string name="stop">"Berhenti"</string>
-
+    
     <string name="stop_game">"berhenti Permainan"</string>
 
+    
 
+    <string name="bandit">"Bandit"</string>
     <string name="free">"Bebas"</string>
     <string name="pull">"Tarik"</string>
     <string name="wild">"Liar"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"terjawab"</string>
     <string name="nothing">"Tidak ada"</string>
     <string name="clipboard">"clipboard"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"Panggilan"</string>
+    <string name="email">"E-mail"</string>
+    <string name="event">"Peristiwa"</string>
+    <string name="progress">"Kemajuan"</string>
+    <string name="promo">"Promo"</string>
+    <string name="recommendation">"Rekomendasi"</string>
+    <string name="reminder">"Peringatan"</string>
+    <string name="service">"Layanan"</string>
+    <string name="social">"Sosial"</string>
+    <string name="status">"Status"</string>
+    <string name="transport">"Mengangkut"</string>
+    <string name="category">"Kategori"</string>
+    <string name="show_image_in_notification">"Tampilkan Gambar di Pemberitahuan"</string>
+    <string name="sample_reminders">"Pengingat sampel"</string>
+    <string name="app_plugin">"App Plugin"</string>
+    <string name="plugin">"Plugin"</string>
+    <string name="allow_action">"Izinkan Action"</string>
+    <string name="disallow_action">"Larang Aksi"</string>
+    <string name="action">"Tindakan"</string>
+    <string name="extra">"Tambahan"</string>
+    <string name="package_">"Paket"</string>
+    <string name="broadcast">"Siaran"</string>
+    <string name="activity">"Aktivitas"</string>
+    <string name="class_">"Kelas"</string>
+    <string name="target">"Target"</string>
+    <string name="on_trigger_send_intent">"Pada Pemicu Kirim Intent"</string>
+    <string name="receive_intent_criteria">"Menerima Kriteria Intent"</string>
+    <string name="receive_intent_trigger">"Menerima Pemicu Intent"</string>
+    <string name="message_source">"pesan Sumber"</string>
+    <string name="list">"Daftar"</string>
+    <string name="rss_feed">"RSS feed"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Pemberitahuan Membuka Tautan"</string>
 
 </resources>

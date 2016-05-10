@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"version 2.0.0"</item>
-        <item name="line1">"Re-märkta \"donation\" till \"Pro\". Alla tidigare fria funktioner och många av de nya funktionerna är gratis."</item>
-        <item name="line2">"Lagt till en app låda för undersidor."</item>
-        <item name="line5">"Lade till möjligheten att ställa in standardpåminnelseinställningar för varje påminnelse om att du skapar."</item>
-        <item name="line3">"Uppdaterad appen tema."</item>
-        <item name="line4">"Uppdaterad Inställningar och Hjälp &amp; feedback sidor."</item>
-        <item name="line4">"Lagt till en app widget."</item>
-        <item name="line5">"Många ytterligare påminnelse alternativ (visa alla genom att markera \"Show Advanced\")."</item>
-        <item name="line5">"Inkom platsbaserade påminnelser. Lägg av \"Customizer\" sida."</item>
-        <item name="line5">"Några nya funktioner låst till \"Pro\" version."</item>
-        <item name="line5">"App Teman"</item>
-        <item name="line5">"Uppslukande läge."</item>
-        <item name="line4">"Anpassade vibrationsmönster."</item>
-        <item name="line4">"ikoner anpassade anmälan (android 6.0+ endast)."</item>
-        <item name="line5">"Utforska appen för ytterligare funktioner. Mer kommer snart."</item>
+        <item name="line0">"Lade till möjligheten till tydlig påminnelse loggen."</item>
+        <item name="line1">"Tillsatta kategorier anmälan."</item>
+        <item name="line2">"Läggas lista över meddelandeljud förmåga."</item>
+        <item name="line5">"Lade till en länk för att prova påminnelser och ikonpaket på jamesmorrisstudios hemsida."</item>
+        <item name="line3">"Lagt en möjlighet att visa påminnelsen bilden i anmälan."</item>
+        <item name="line4">"Lagt Android Intent baserad plugin stöd för användning med automations appar."</item>
+        <item name="line4">"Inkom RSS-flöde stöd för meddelanden."</item>
+        <item name="line4">"Fixade en bugg där automatisk snooze inte skulle fungera med en plats utlöst påminnelse."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ingenting"</item>
+        <item name="line0">"Första utgåvan"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ingenting"</item>
+        <item name="line0">"Förenklat menydesign genom att flytta allt till en navigations låda."</item>
+        <item name="line0">"Ändrad annonsformatet till sidesannonser och borttagna bannerannonser."</item>
+        <item name="line0">"Ändrad annonsleverantören så annonser är oftast mer spelrelaterade."</item>
+        <item name="line0">"Bättre spelprestanda."</item>
+        <item name="line0">"Lagt anpassade tema stöd."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

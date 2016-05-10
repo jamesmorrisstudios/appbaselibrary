@@ -1,1029 +1,1053 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"Näyttö"</string>
-
+    
     <string name="settings_category_sound">"Ääni"</string>
-
+    
     <string name="settings_category_general">"yleinen"</string>
-
+    
     <string name="settings_category_locale">"maa"</string>
-
+    
     <string name="settings_category_theme">"Teema"</string>
-
+    
     <string name="settings_category_notification">"ilmoitus"</string>
-
+    
     <string name="settings_category_notification_custom">"Custom Ilmoitus"</string>
-
+    
     <string name="settings_category_notification_override">"ohitus Ilmoitus"</string>
-
+    
     <string name="settings_category_defaults">"oletukset"</string>
-
+    
     <string name="settings_category_random">"Randomness"</string>
-
+    
     <string name="settings_category_widget">"vekotin"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"mukaansatempaava tila"</string>
-
+    
     <string name="setting_sound_enable_primary">"Ääniefektit"</string>
-
+    
     <string name="setting_music_enable_primary">"musiikki"</string>
-
+    
     <string name="setting_language_picker_primary">"Kieli"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Custom Ringtone Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"App Teema"</string>
-
+    
     <string name="setting_accent_color_primary">"Accent Color"</string>
-
+    
     <string name="setting_primary_color_primary">"pääväri"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Toolbar tekstin väri"</string>
+    
+    <string name="setting_game_text_color_primary">"Peli tekstin väri"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"osoita toiminta"</string>
-
+    
     <string name="setting_notification_custom_primary">"mahdollistaa"</string>
-
+    
     <string name="setting_notification_button_style_primary">"Button Style"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"Käynnissä Ilmoitus"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"Meneillään ilmoituksia ei tueta SmartWatches"</string>
-
+    
     <string name="setting_notification_theme_primary">"Tausta"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"tekstin väri"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Ensimmäinen viikonpäivä"</string>
-
+    
     <string name="setting_force_advanced_primary">"Aina Näytä Lisäasetukset"</string>
-
-    <string name="setting_force_advanced_secondary">"Poista näyttää kehittyneitä vaihtoehtoja per muistutus perusta"</string>
-
+    
+    <string name="setting_force_advanced_secondary">"Poista näyttää lisäasetuksia on per muistutus perusta"</string>
+    
     <string name="setting_notification_swipe_away_action_primary">"pyyhkäisemällä Action"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Osoita Avaa App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Pyyhkäisemällä Avaa App"</string>
-
+    
     <string name="setting_random_amount_primary">"satunnainen"</string>
-
+    
     <string name="setting_less_random_amount_primary">"vähemmän Random"</string>
-
+    
     <string name="setting_even_amount_primary">"Jopa"</string>
-
+    
     <string name="setting_widget_theme_primary">"Teema"</string>
-
+    
     <string name="setting_widget_text_color_primary">"tekstin väri"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Ohitus ilmoitus värisemään"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Ohitus merkkiääni toisto"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"Tämä on voitava ohittaa äänivirtaan"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Ohitus ilmoitus äänivirta"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"Ohitus puhetta stream"</string>
 
-
+    
     <string name="time_millisecond">"millisekunnin"</string>
-
+    
     <string name="time_milliseconds">"millisekuntia"</string>
-
+    
     <string name="time_millisecond_abrev">"neiti"</string>
-
+    
     <string name="time_second">"Toinen"</string>
-
+    
     <string name="time_seconds">"sekuntia"</string>
-
+    
     <string name="time_second_abrev">"s"</string>
-
+    
     <string name="time_minute">"minuutti"</string>
-
-    <string name="time_minutes">"minuutin"</string>
-
+    
+    <string name="time_minutes">"Minuutit"</string>
+    
     <string name="time_hour">"Tunnin"</string>
-
+    
     <string name="time_hours">"tuntia"</string>
-
+    
     <string name="time_day">"Päivä"</string>
-
+    
     <string name="time_days">"Days"</string>
-
+    
     <string name="time_daily">"Päivittäin"</string>
-
+    
     <string name="time_week">"Viikko"</string>
-
-    <string name="time_weeks">"Weeks"</string>
-
+    
+    <string name="time_weeks">"Viikkoja"</string>
+    
     <string name="time_weekly">"Viikoittain"</string>
-
+    
     <string name="time_month">"Kuukausi"</string>
-
-    <string name="time_months">"Kuukautta"</string>
-
+    
+    <string name="time_months">"Kuukaudet"</string>
+    
     <string name="time_monthly">"Kuukausittain"</string>
-
+    
     <string name="time_year">"vuosi"</string>
-
+    
     <string name="time_years">"vuosia"</string>
-
+    
     <string name="time_yearly">"Vuosittain"</string>
 
-
+    
     <string name="meter">"metri"</string>
-
+    
     <string name="meters">"Mittarit"</string>
 
-
+    
     <string name="num_one">"Yksi"</string>
-
+    
     <string name="num_two">"Kaksi"</string>
-
+    
     <string name="num_three">"Kolme"</string>
-
+    
     <string name="num_four">"Neljä"</string>
-
+    
     <string name="num_five">"Viisi"</string>
-
+    
     <string name="num_six">"Kuusi"</string>
-
+    
     <string name="num_seven">"Seitsemän"</string>
-
+    
     <string name="num_eight">"Kahdeksan"</string>
-
+    
     <string name="num_nine">"Yhdeksän"</string>
-
+    
     <string name="num_ten">"Kymmenen"</string>
 
-
+    
     <string name="num_first">"Ensimmäinen"</string>
-
+    
     <string name="num_second">"Toinen"</string>
-
+    
     <string name="num_third">"kolmas"</string>
-
+    
     <string name="num_fourth">"Neljäs"</string>
-
+    
     <string name="num_fifth">"Viides"</string>
-
+    
     <string name="num_sixth">"Kuudes"</string>
-
+    
     <string name="num_seventh">"seitsemäs"</string>
-
+    
     <string name="num_eighth">"Kahdeksas"</string>
-
+    
     <string name="num_ninth">"Yhdeksäs"</string>
-
+    
     <string name="num_tenth">"Kymmenes"</string>
 
-
+    
     <string name="day_sunday">"sunnuntai"</string>
-
+    
     <string name="day_monday">"maanantai"</string>
-
+    
     <string name="day_tuesday">"tiistai"</string>
-
+    
     <string name="day_wednesday">"keskiviikko"</string>
-
+    
     <string name="day_thursday">"torstai"</string>
-
+    
     <string name="day_friday">"perjantai"</string>
-
+    
     <string name="day_saturday">"lauantai"</string>
-
+    
     <string name="today">"Tänään"</string>
-
+    
     <string name="tomorrow">"Huomenna"</string>
-
+    
     <string name="yesterday">"Eilen"</string>
 
-
-    <string name="days_of_week">"Viikonpäivät"</string>
-
-    <string name="days_of_month">"Days Of Kuukausi"</string>
-
-    <string name="days_of_year">"Days Of Year"</string>
-
+    
+    <string name="days_of_week">"Days of Week"</string>
+    
+    <string name="days_of_month">"Days of Month"</string>
+    
+    <string name="days_of_year">"Days of Year"</string>
+    
     <string name="weeks_of_month">"Viikon kuukausi"</string>
-
+    
     <string name="weeks_of_year">"Viikon Year"</string>
-
+    
     <string name="months_of_year">"Kuukausien Year"</string>
 
-
+    
     <string name="next">"seuraava"</string>
-
+    
     <string name="previous">"Edellinen"</string>
-
+    
     <string name="back">"Takaisin"</string>
-
+    
     <string name="forward">"Eteenpäin"</string>
 
-
+    
     <string name="pattern_1">"kuvio 1"</string>
-
+    
     <string name="pattern_2">"kuvio 2"</string>
-
+    
     <string name="pattern_3">"kuvio 3"</string>
-
+    
     <string name="pattern_4">"kuvio 4"</string>
-
+    
     <string name="pattern_5">"kuvio 5"</string>
-
+    
     <string name="pattern_6">"kuvio 6"</string>
 
-
+    
     <string name="select">"valita"</string>
-
+    
     <string name="select_all">"Valitse kaikki"</string>
-
+    
     <string name="select_none">"Älä valitse mitään"</string>
 
-
+    
     <string name="diff_difficulty">"vaikeus"</string>
-
+    
     <string name="diff_select_difficulty">"Valitse Vaikeus"</string>
-
+    
     <string name="diff_easy">"Helppo"</string>
-
+    
     <string name="diff_normal">"normaali"</string>
-
+    
     <string name="diff_hard">"kova"</string>
 
-
+    
     <string name="enable">"mahdollistaa"</string>
-
+    
     <string name="enabled">"käytössä"</string>
-
+    
     <string name="disable">"Poista käytöstä"</string>
-
-    <string name="disabled">"vammaiset"</string>
-
+    
+    <string name="disabled">"Liikuntarajoitteinen"</string>
+    
     <string name="lock">"Lukko"</string>
-
+    
     <string name="unlock">"Avata"</string>
-
+    
     <string name="locked">"kiinni"</string>
-
+    
     <string name="unlocked">"auki"</string>
-
+    
     <string name="open">"Avata"</string>
-
+    
     <string name="close">"Lähellä"</string>
-
+    
     <string name="opened">"avattu"</string>
-
+    
     <string name="closed">"Suljettu"</string>
-
+    
     <string name="show">"Show"</string>
-
+    
     <string name="hide">"Piilottaa"</string>
-
+    
     <string name="shown">"Näkyy"</string>
-
+    
     <string name="Hidden">"kätketty"</string>
-
+    
     <string name="automatic">"Automaattinen"</string>
-
+    
     <string name="manual">"manuaalinen"</string>
-
+    
     <string name="online">"Online"</string>
-
+    
     <string name="offline">"Poissa"</string>
-
+    
     <string name="active">"aktiivinen"</string>
+    
+    <string name="inactive">"Epäaktiivinen"</string>
 
-    <string name="inactive">"toimeton"</string>
-
-
+    
+    <string name="clear">"Selvä"</string>
+    
+    <string name="clear_log">"Clear Log"</string>
+    
+    <string name="log_cleared">"log selvitetty"</string>
+    
     <string name="okay">"kunnossa"</string>
-
+    
     <string name="cancel">"Peruuttaa"</string>
-
+    
     <string name="yes">"Kyllä"</string>
-
+    
     <string name="no">"Ei"</string>
-
+    
     <string name="maybe">"Voi olla"</string>
-
+    
     <string name="some">"jotkut"</string>
-
+    
     <string name="none">"Ei mitään"</string>
-
+    
     <string name="all">"Kaikki"</string>
-
+    
     <string name="set">"Sarja"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"Kestää"</string>
-
+    
     <string name="first">"Ensimmäinen"</string>
-
+    
     <string name="every">"Joka"</string>
-
+    
     <string name="other">"muut"</string>
-
+    
     <string name="off">"Pois"</string>
-
+    
     <string name="on">"Päällä"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Tyhjennä Muistutus Log"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Oletko varma, että haluat tyhjentää muistutuksen loki?"</string>
+    
     <string name="delete_reminder_prompt_title">"Poista muistutus"</string>
-
+    
     <string name="delete_reminder_prompt_content">"Oletko varma, että haluat poistaa tämän muistutuksen?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"Poista Ikoni"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Oletko varma, että haluat poistaa tämän kuvakkeen?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"Hylkää muutokset"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"Oletko varma, että haluat hylätä muutokset?"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Poista Värinä Pattern"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Oletko varma, että haluat poistaa tämän värisemään mallia?"</string>
-
+    
     <string name="delete_location_prompt_title">"Poista Location"</string>
-
+    
     <string name="delete_location_prompt_content">"Oletko varma, että haluat poistaa tämän sijainnin?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"Monista Muistutus"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"Oletko varma, että haluat monistaa tämän muistutuksen?"</string>
-
+    
     <string name="include_log_prompt_title">"Sisällytä Log"</string>
-
+    
     <string name="include_log_prompt_content">"Haluatko sisällyttää muistutuksen loki?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Sisällytä oletusmuistutuksen"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Haluatko sisällyttää oletusmuistutuksen?"</string>
-
+    
     <string name="start_new_game_title">"Aloita uusi peli"</string>
-
+    
     <string name="start_new_game_prompt">"Oletko varma, että haluat aloittaa uuden pelin?"</string>
-
+    
     <string name="end_game_title">"end Game"</string>
-
+    
     <string name="end_game_prompt">"Oletko varma, että haluat lopettaa tämän pelin?"</string>
 
-
+    
     <string name="help">"Auttaa"</string>
-
+    
     <string name="about">"Noin"</string>
-
+    
     <string name="settings">"Asetukset"</string>
-
+    
     <string name="help_and_feedback">"Ohje ja palaute"</string>
-
+    
     <string name="rate_app">"Arvostele sovellus"</string>
-
+    
     <string name="more_apps">"Lisää sovelluksia"</string>
-
+    
     <string name="tutorial">"oppitunti"</string>
-
+    
     <string name="read">"Lukea"</string>
-
+    
     <string name="watch">"Katsella"</string>
-
+    
+    <string name="link">"Linkki"</string>
+    
     <string name="links">"Linkit"</string>
-
+    
     <string name="licenses">"lisenssit"</string>
-
+    
     <string name="help_translate">"Ohje Käännä"</string>
-
+    
     <string name="get_the_beta">"Hanki Beta"</string>
-
+    
     <string name="achievements">"Saavutukset"</string>
-
+    
     <string name="leaderboards">"Tulostaulukot"</string>
-
+    
     <string name="high_scores">"Huippupisteet"</string>
-
+    
     <string name="my_circles">"Omat piirit"</string>
-
+    
     <string name="invitations">"Kutsut"</string>
-
+    
     <string name="options">"Vaihtoehdot"</string>
-
+    
     <string name="game_options">"Pelivaihtoehdot"</string>
-
+    
     <string name="advanced_options">"Edistyneet asetukset"</string>
-
+    
     <string name="automatch">"automatch"</string>
-
+    
     <string name="guest">"vieras"</string>
 
-
+    
     <string name="light">"valo"</string>
-
+    
     <string name="light_transparent">"Light Läpinäkyvä"</string>
-
+    
     <string name="dark">"Tumma"</string>
-
+    
     <string name="dark_transparent">"tumma Läpinäkyvä"</string>
-
+    
     <string name="transparent">"läpinäkyvä"</string>
-
+    
     <string name="night">"Yö"</string>
-
+    
     <string name="black">"Musta"</string>
-
+    
     <string name="white">"Valkoinen"</string>
-
+    
     <string name="system">"järjestelmä"</string>
-
+    
     <string name="light_text">"Light teksti"</string>
-
+    
     <string name="dark_text">"tumma teksti"</string>
 
-
+    
     <string name="red">"Punainen"</string>
-
+    
     <string name="pink">"Vaaleanpunainen"</string>
-
+    
     <string name="purple">"Violetti"</string>
-
+    
     <string name="deep_purple">"Deep Purple"</string>
-
+    
     <string name="indigo">"Indigo"</string>
-
+    
     <string name="blue">"Sininen"</string>
-
+    
     <string name="light_blue">"Vaaleansininen"</string>
-
+    
     <string name="cyan">"Cyan"</string>
-
+    
     <string name="teal">"tavi"</string>
-
+    
     <string name="green">"Vihreä"</string>
-
+    
     <string name="light_green">"Vaaleanvihreä"</string>
-
+    
     <string name="lime">"Lime"</string>
-
+    
     <string name="yellow">"Keltainen"</string>
-
+    
     <string name="amber">"Keltainen"</string>
-
+    
     <string name="orange">"Oranssi"</string>
-
+    
     <string name="deep_orange">"Deep Orange"</string>
-
+    
     <string name="brown">"Ruskea"</string>
-
+    
     <string name="grey">"Harmaa"</string>
-
+    
     <string name="blue_grey">"sininen Harmaa"</string>
-
+    
     <string name="dark_grey">"Tummanharmaa"</string>
 
-
-    <string name="major">"merkittävä"</string>
-
+    
+    <string name="major">"Suuri"</string>
+    
     <string name="minor">"vähäinen"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"Versio"</string>
-
+    
     <string name="production">"tuotanto"</string>
-
+    
     <string name="beta">"Beeta"</string>
-
+    
     <string name="alpha">"Alpha"</string>
 
-
+    
     <string name="icon">"ikoni"</string>
-
+    
     <string name="icons">"kuvakkeet"</string>
-
+    
     <string name="custom_icon">"Custom Ikoni"</string>
-
+    
     <string name="custom_icons">"Custom kuvakkeet"</string>
-
+    
     <string name="choose_icon">"Valitse Ikoni"</string>
 
-
+    
     <string name="backup">"varmuuskopio"</string>
-
+    
     <string name="import_">"Tuonti"</string>
-
+    
     <string name="export">"Viedä"</string>
-
+    
     <string name="export_log">"vienti Log"</string>
-
+    
     <string name="import_export">"Tuonti ja vienti"</string>
-
+    
     <string name="export_location">"vienti Paikka"</string>
-
+    
     <string name="import_failed">"Tuo epäonnistui"</string>
-
+    
     <string name="import_canceled">"Tuo peruutettu"</string>
-
+    
     <string name="export_failed">"vienti epäonnistui"</string>
-
+    
     <string name="export_canceled">"vienti peruutettu"</string>
-
+    
     <string name="import_complete">"tuonti valmis"</string>
-
+    
     <string name="export_complete">"vienti valmis"</string>
-
+    
     <string name="importing_please_wait">"Tuominen, odota"</string>
-
+    
     <string name="exporting_please_wait">"Vientiä, odota"</string>
 
-
+    
     <string name="snooze">"torkkua"</string>
-
+    
     <string name="snoozed">"Torkutettu"</string>
-
+    
     <string name="auto_snooze">"Auto Snooze"</string>
-
+    
     <string name="manual_snooze">"Manuaalinen Snooze"</string>
 
-
+    
     <string name="message">"Viesti"</string>
-
+    
     <string name="messages">"viestit"</string>
-
+    
     <string name="num_messages">"Lukumäärä viestit"</string>
-
+    
     <string name="edit_messages">"Edit viestit"</string>
-
+    
     <string name="view_messages">"Katso viestit"</string>
-
+    
     <string name="import_messages">"Tuo viestit"</string>
-
+    
     <string name="message_separator">"Message Separator ||||"</string>
 
-
+    
     <string name="sign_in">"Kirjaudu sisään"</string>
-
+    
     <string name="signed_in">"Kirjautunut sisään"</string>
-
+    
     <string name="sign_in_failed">"Kirjautuminen epäonnistui"</string>
-
+    
     <string name="sign_out">"Kirjaudu ulos"</string>
-
+    
     <string name="signed_out">"kirjautumattoman"</string>
 
-
+    
     <string name="low">"Matala"</string>
-
+    
     <string name="mid">"keski-"</string>
-
+    
     <string name="high">"Korkea"</string>
-
+    
     <string name="min">"min"</string>
-
+    
     <string name="max">"max"</string>
-
+    
     <string name="minimum">"vähimmäismäärä"</string>
-
+    
     <string name="medium">"keskikokoinen"</string>
-
+    
     <string name="maximum">"Enimmäismäärä"</string>
-
+    
     <string name="small">"Pieni"</string>
-
+    
     <string name="large">"Suuri"</string>
-
+    
     <string name="short_">"Lyhyt"</string>
-
+    
     <string name="long_">"pitkä"</string>
-
+    
     <string name="slow">"Hidas"</string>
-
+    
     <string name="fast">"Nopeasti"</string>
-
+    
     <string name="quick">"Nopea"</string>
-
+    
     <string name="narrow">"Kapea"</string>
-
+    
     <string name="wide">"leveä"</string>
 
-
+    
     <string name="thank_you">"Kiitos"</string>
-
+    
     <string name="youre_welcome">"Ole hyvä"</string>
-
+    
     <string name="please">"Ole hyvä"</string>
 
-
+    
     <string name="you">"Sinä"</string>
-
+    
     <string name="me">"Minulle"</string>
-
+    
     <string name="us">"Meille"</string>
-
+    
     <string name="we">"me"</string>
-
+    
     <string name="them">"Niitä"</string>
 
-
+    
     <string name="short_on">"lyhyt"</string>
-
+    
     <string name="medium_on">"Medium on"</string>
-
+    
     <string name="long_on">"pitkä"</string>
-
+    
     <string name="short_off">"lyhyt off"</string>
-
+    
     <string name="medium_off">"Medium off"</string>
-
+    
     <string name="long_off">"pitkä off"</string>
 
-
+    
     <string name="pro">"ammattilainen"</string>
-
+    
+    <string name="pro_unlocked">"Pro Avattu"</string>
+    
     <string name="pro_feature">"Pro Ominaisuus"</string>
-
+    
     <string name="upgrade">"parantaa"</string>
-
+    
     <string name="feature_requires_pro">"Tämä ominaisuus edellyttää pro version"</string>
-
+    
     <string name="feature_requires_pro_limited">"Tämä ominaisuus on rajoitettu ilmainen versio. Päivitä pro tai poistaa olemassa olevan kohteen."</string>
-
+    
     <string name="upgrade_to_pro">"Päivittää Pro: hon"</string>
-
+    
     <string name="upgrade_now">"Päivitä nyt"</string>
 
-
+    
     <string name="start_date">"Aloituspäivämäärä"</string>
-
+    
     <string name="end_date">"Päättymispäivä"</string>
-
+    
     <string name="start_time">"Aloitusaika"</string>
-
+    
     <string name="end_time">"Loppu aika"</string>
-
+    
     <string name="end_type">"end Type"</string>
-
+    
     <string name="timing_type">"ajoitus Tyyppi"</string>
-
+    
     <string name="edit_times">"Edit Times"</string>
-
-    <string name="time">"aika"</string>
-
-    <string name="times">"Times"</string>
-
+    
+    <string name="time">"Aika"</string>
+    
+    <string name="times">"Ajat"</string>
+    
     <string name="timing">"Ajoitus"</string>
-
+    
     <string name="all_time">"Koko ajan"</string>
-
+    
     <string name="every_week">"Joka viikko"</string>
-
+    
     <string name="lifetime">"Elinikä"</string>
-
+    
     <string name="forever">"Ikuisesti"</string>
-
+    
     <string name="time_period">"Ajanjakso"</string>
-
+    
     <string name="random">"satunnainen"</string>
-
+    
     <string name="randomly">"Satunnaisesti"</string>
-
+    
     <string name="less_random">"vähemmän Random"</string>
-
+    
     <string name="even">"Jopa"</string>
-
+    
     <string name="evenly">"Tasaisesti"</string>
-
+    
     <string name="specific">"erityinen"</string>
-
+    
     <string name="interval">"intervalli"</string>
-
+    
     <string name="specific_times">"erityiset Times"</string>
-
+    
     <string name="repeat_every">"Toista Joka"</string>
 
-
+    
     <string name="data_loaded">"data Loaded"</string>
-
+    
     <string name="file">"tiedosto"</string>
-
+    
     <string name="local_storage">"paikallinen tallennus"</string>
-
+    
     <string name="filename">"Tiedoston nimi"</string>
 
-
-    <string name="permission_granted">"myönnettyä lupaa"</string>
-
+    
+    <string name="permission_granted">"Lupa myönnetty"</string>
+    
     <string name="permission_denied">"Lupa kielletty"</string>
-
+    
     <string name="allow_if_any">"Salli mahdolliset"</string>
-
+    
     <string name="allow_if_all">"Salli jos kaikki"</string>
-
+    
     <string name="disallow_if_any">"Evätä, jos jokin"</string>
-
+    
     <string name="disallow_if_all">"Evätä, jos kaikki"</string>
-
+    
     <string name="trigger_if_any">"Trigger mahdolliset"</string>
-
+    
     <string name="trigger_if_all">"Trigger jos kaikki"</string>
 
-
+    
     <string name="reminders">"muistutukset"</string>
-
+    
     <string name="no_reminder">"ei muistutukset"</string>
-
+    
     <string name="no_reminders_yet">"Sinulla ei ole muistutuksia vielä"</string>
-
+    
     <string name="alerts_per_day">"Muistutukset päivässä"</string>
-
+    
     <string name="number_of_reminders">"Lukumäärä muistutuksia"</string>
 
-
+    
     <string name="changes_discarded">"muutokset poistetut"</string>
-
+    
     <string name="changes_saved">"muutokset Tallennetut"</string>
-
+    
     <string name="no_changes">"Ei muutoksia"</string>
-
+    
     <string name="select_at_least_one_item">"Valitse ainakin yksi kohde"</string>
 
-
+    
     <string name="loading">"Ladataan"</string>
-
+    
     <string name="loaded">"Ladattu"</string>
-
+    
     <string name="loading_failed">"Ladataan epäonnistui"</string>
-
+    
     <string name="loading_complete">"Ladataan Complete"</string>
-
+    
     <string name="error">"Virhe"</string>
-
+    
     <string name="fail">"epäonnistua"</string>
-
+    
     <string name="failed">"epäonnistui"</string>
-
+    
     <string name="success">"Menestys"</string>
-
+    
     <string name="successful">"onnistunut"</string>
-
+    
     <string name="unsuccessful">"epäonnistunut"</string>
-
+    
     <string name="valid">"pätevä"</string>
-
+    
     <string name="invalid">"pätemätön"</string>
-
+    
     <string name="complete">"Täydellinen"</string>
-
+    
     <string name="completed">"valmistunut"</string>
-
+    
     <string name="skipped">"Skipped"</string>
-
-    <string name="incomplete">"epätäydellinen"</string>
-
+    
+    <string name="incomplete">"Keskeneräinen"</string>
+    
     <string name="dismiss">"erottaa"</string>
-
+    
     <string name="dismissed">"hylätty"</string>
-
+    
     <string name="acknowledge">"Tunnustaa"</string>
-
+    
     <string name="acknowledged">"Kuitatut"</string>
-
+    
     <string name="add">"Lisätä"</string>
-
+    
     <string name="added">"lisä-"</string>
-
-    <string name="add_item">"Alkion"</string>
-
+    
+    <string name="add_item">"Lisää tavara"</string>
+    
     <string name="remove">"Poistaa"</string>
-
+    
     <string name="removed">"poistettu"</string>
-
-    <string name="remove_item">"Poista kohde"</string>
-
+    
+    <string name="remove_item">"Poista esine"</string>
+    
     <string name="delete">"Poistaa"</string>
-
+    
     <string name="deleted">"poistettu"</string>
-
+    
     <string name="duplicate">"monistaa"</string>
-
+    
     <string name="duplicated">"monistaa"</string>
-
+    
     <string name="restart">"Uudelleenkäynnistää"</string>
-
+    
     <string name="restarting">"uudelleenkäynnistyksen"</string>
-
+    
     <string name="restarting_app_please_wait">"Uudelleenkäynnistyksen App, odota"</string>
 
-
+    
     <string name="map">"Kartta"</string>
-
+    
     <string name="location">"Sijainti"</string>
-
+    
     <string name="locations">"Paikat"</string>
-
+    
     <string name="latitude">"leveysaste"</string>
-
+    
     <string name="longitude">"pituusaste"</string>
-
+    
     <string name="radius">"Säde"</string>
-
-    <string name="enter">"astua"</string>
-
+    
+    <string name="enter">"Tulla sisään"</string>
+    
     <string name="exit">"poistuminen"</string>
-
+    
     <string name="linger_time">"Odotusaika"</string>
 
-
+    
     <string name="music">"musiikki"</string>
-
+    
     <string name="ring">"Rengas"</string>
-
+    
     <string name="speak_time">"puhu Time"</string>
-
+    
     <string name="speak_title">"puhu Otsikko"</string>
-
+    
     <string name="speak_message">"puhu Message"</string>
-
+    
     <string name="tone">"Sävy"</string>
-
+    
     <string name="sound">"Ääni"</string>
+    
+    <string name="sounds">"Kuulostaa"</string>
 
-
+    
     <string name="notification">"ilmoitus"</string>
-
+    
     <string name="notifications">"ilmoitukset"</string>
-
+    
     <string name="select_notification">"Valitse Ilmoitus"</string>
 
-
+    
     <string name="vibrate">"värähdellä"</string>
-
+    
     <string name="vibrate_pattern">"Värinä Pattern"</string>
-
+    
     <string name="vibrate_patterns">"Värinä Patterns"</string>
-
+    
     <string name="create_vibrate_pattern">"Luo Värinä Pattern"</string>
 
+    
 
+    
     <string name="you_win">"Sinä voitat"</string>
-
+    
     <string name="you_won">"Sinä voitit"</string>
-
+    
     <string name="you_lost">"Hävisit"</string>
-
+    
     <string name="you_lose">"Sinä häviät"</string>
-
+    
     <string name="you_tied">"Sinä Tied"</string>
-
+    
     <string name="winner">"Voittaja"</string>
-
+    
     <string name="winners">"Voittajat"</string>
-
+    
     <string name="loser">"Häviäjä"</string>
-
+    
     <string name="Losers">"Losers"</string>
 
-
+    
     <string name="number_of_players">"Pelaajien lukumäärä"</string>
-
+    
     <string name="player">"pelaaja"</string>
-
+    
     <string name="players">"Pelaajat"</string>
-
+    
     <string name="player_1">"Pelaaja 1"</string>
-
+    
     <string name="player_2">"Pelaaja 2"</string>
-
+    
     <string name="player_3">"Pelaaja 3"</string>
-
+    
     <string name="player_4">"Player 4"</string>
-
+    
     <string name="player_5">"Player 5"</string>
-
+    
     <string name="player_6">"Player 6"</string>
-
+    
     <string name="team">"Joukkue"</string>
-
+    
     <string name="teams">"joukkueet"</string>
-
+    
     <string name="number_of_teams">"Lukumäärä Joukkueet"</string>
-
+    
     <string name="team_1">"Team 1"</string>
-
+    
     <string name="team_2">"Team 2"</string>
-
+    
     <string name="team_3">"Team 3"</string>
-
+    
     <string name="team_4">"Team 4"</string>
 
-
+    
     <string name="requires_google_play">"Toiminta vaatii Google Play Games"</string>
-
+    
     <string name="compare_profiles">"Vertaa Play Games Profiles"</string>
-
+    
     <string name="view_profile">"Katso Play Games profiilia"</string>
 
-
+    
     <string name="sponsored">"Sponsoroidut"</string>
-
+    
     <string name="ads">"mainokset"</string>
-
+    
     <string name="remove_ads">"Poista mainokset"</string>
-
+    
     <string name="ads_removed">"mainokset Poistettu"</string>
+    
+    <string name="ad_unavailable">"Ad Ei saatavilla"</string>
 
-
+    
     <string name="current_score">"nykyinen Score"</string>
-
+    
     <string name="top_score">"Top Score"</string>
-
+    
     <string name="score">"Pisteet"</string>
 
-
+    
     <string name="your_turn">"Sinun vuorosi"</string>
-
+    
     <string name="their_turn">"vuoroaan"</string>
-
+    
     <string name="turn">"vuoro"</string>
-
+    
     <string name="turns">"Turns"</string>
-
+    
     <string name="round">"Pyöristää"</string>
-
+    
     <string name="rounds">"kierrokset"</string>
-
+    
     <string name="match">"Ottelu"</string>
-
+    
     <string name="matches">"tulitikut"</string>
 
-
+    
     <string name="dollar">"Dollari"</string>
-
+    
     <string name="dollars">"Dollars"</string>
-
+    
     <string name="buy">"Ostaa"</string>
-
+    
     <string name="sell">"Myydä"</string>
-
+    
     <string name="purchase">"Ostaa"</string>
-
+    
     <string name="diamond">"Timantti"</string>
-
+    
     <string name="diamonds">"ruutu"</string>
 
-
+    
     <string name="rematch">"uusintaottelu"</string>
-
+    
     <string name="try_again">"Yritä uudelleen"</string>
-
+    
     <string name="touch_continue">"Koskettamalla Jatka"</string>
-
+    
     <string name="touch_resume">"Koskettamalla Jatka"</string>
-
+    
     <string name="touch_edit">"Koskettamalla muokata"</string>
-
+    
     <string name="pause">"Tauko"</string>
-
+    
     <string name="pause_game">"tauko peli"</string>
-
+    
     <string name="resume">"Jatkaa"</string>
-
+    
     <string name="resume_game">"Jatka peliä"</string>
-
+    
     <string name="new_">"Uusi"</string>
-
+    
     <string name="new_game">"Uusi peli"</string>
-
+    
     <string name="select_save">"Valitse Tallenna"</string>
-
+    
     <string name="save">"Tallentaa"</string>
-
+    
     <string name="save_game">"Tallentaa pelin"</string>
-
+    
     <string name="load">"Ladata"</string>
-
+    
     <string name="load_game">"Lataa peli"</string>
-
+    
     <string name="game_over">"Peli ohi"</string>
-
+    
     <string name="start">"alku"</string>
-
+    
     <string name="start_game">"Aloita peli"</string>
-
-    <string name="end">"Pää"</string>
-
+    
+    <string name="end">"pää"</string>
+    
     <string name="end_game">"end Game"</string>
-
+    
     <string name="stop">"Stop"</string>
-
+    
     <string name="stop_game">"Lopeta peli"</string>
 
+    
 
-    <string name="free">"ilmaiseksi"</string>
+    <string name="bandit">"bandiitti"</string>
+    <string name="free">"Vapaa"</string>
     <string name="pull">"Vedä"</string>
     <string name="wild">"Villi"</string>
     <string name="normal">"normaali"</string>
@@ -1059,9 +1083,9 @@
     <string name="accent_color">"Accent Color"</string>
     <string name="choose_color">"Valitse Color"</string>
     <string name="filter_type">"Suodatintyyppi"</string>
-    <string name="criteria">"kriteerit"</string>
+    <string name="criteria">"Kriteeri"</string>
     <string name="trigger">"Laukaista"</string>
-    <string name="triggers">"Triggers"</string>
+    <string name="triggers">"Liipaisimet"</string>
     <string name="trigger_type">"Trigger Type"</string>
     <string name="led_pattern">"LED Pattern"</string>
     <string name="search">"Haku"</string>
@@ -1077,10 +1101,40 @@
     <string name="get">"Saada"</string>
     <string name="type">"Tyyppi"</string>
     <string name="missed">"Missed"</string>
-    <string name="nothing">"ei mitään"</string>
+    <string name="nothing">"Ei mitään"</string>
     <string name="clipboard">"Leikepöytä"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"Puhelu"</string>
+    <string name="email">"Sähköposti"</string>
+    <string name="event">"Tapahtuma"</string>
+    <string name="progress">"edistyminen"</string>
+    <string name="promo">"mainos"</string>
+    <string name="recommendation">"Suositus"</string>
+    <string name="reminder">"Muistutus"</string>
+    <string name="service">"palvelu"</string>
+    <string name="social">"sosiaalinen"</string>
+    <string name="status">"Status"</string>
+    <string name="transport">"Kuljetus"</string>
+    <string name="category">"Kategoria"</string>
+    <string name="show_image_in_notification">"Näytä Kuva Ilmoitus"</string>
+    <string name="sample_reminders">"näyte muistutukset"</string>
+    <string name="app_plugin">"App Plugin"</string>
+    <string name="plugin">"Kytkeä"</string>
+    <string name="allow_action">"salli Action"</string>
+    <string name="disallow_action">"Älä salli Action"</string>
+    <string name="action">"Toiminta"</string>
+    <string name="extra">"ylimääräinen"</string>
+    <string name="package_">"Paketti"</string>
+    <string name="broadcast">"Lähettää"</string>
+    <string name="activity">"Toiminta"</string>
+    <string name="class_">"luokka"</string>
+    <string name="target">"Kohde"</string>
+    <string name="on_trigger_send_intent">"Trigger Lähetä Intent"</string>
+    <string name="receive_intent_criteria">"Vastaanottaa Intent Kriteerit"</string>
+    <string name="receive_intent_trigger">"Vastaanottaa Intent Trigger"</string>
+    <string name="message_source">"viestin lähde"</string>
+    <string name="list">"Lista"</string>
+    <string name="rss_feed">"RSS-syöte"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Ilmoitus Avaa Link"</string>
 
 </resources>

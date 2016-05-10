@@ -1,1035 +1,1059 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
 
-
+    
     <string name="settings_category_display">"displėjus"</string>
-
+    
     <string name="settings_category_sound">"garso"</string>
-
+    
     <string name="settings_category_general">"bendras"</string>
-
+    
     <string name="settings_category_locale">"vieta"</string>
-
+    
     <string name="settings_category_theme">"tema"</string>
-
+    
     <string name="settings_category_notification">"pranešimas"</string>
-
+    
     <string name="settings_category_notification_custom">"Pasirinktinis Pranešimas"</string>
-
+    
     <string name="settings_category_notification_override">"Nepaisyti Pranešimas"</string>
-
+    
     <string name="settings_category_defaults">"Numatytasis"</string>
-
+    
     <string name="settings_category_random">"Savavališkai"</string>
-
+    
     <string name="settings_category_widget">"widget"</string>
 
-
+    
     <string name="setting_immersive_enable_primary">"svaiginančius režimas"</string>
-
+    
     <string name="setting_sound_enable_primary">"Garso efektai"</string>
-
+    
     <string name="setting_music_enable_primary">"muzika"</string>
-
+    
     <string name="setting_language_picker_primary">"kalba"</string>
-
+    
     <string name="setting_ringtone_picker_enable_primary">"Individualizuotos melodijos Picker"</string>
-
+    
     <string name="setting_theme_picker_primary">"Programos tema"</string>
-
+    
     <string name="setting_accent_color_primary">"akcentas spalva"</string>
-
+    
     <string name="setting_primary_color_primary">"pirminė spalva"</string>
-
+    
     <string name="setting_toolbar_text_color_primary">"Įrankinė Teksto spalva"</string>
+    
+    <string name="setting_game_text_color_primary">"Žaidimo Teksto spalva"</string>
 
-
+    
     <string name="setting_notification_click_action_primary">"Spauskite veiksmų"</string>
-
+    
     <string name="setting_notification_custom_primary">"leisti"</string>
-
+    
     <string name="setting_notification_button_style_primary">"mygtuko stilius"</string>
-
+    
     <string name="setting_notification_ongoing_primary">"Vykdomi Pranešimas"</string>
-
+    
     <string name="setting_notification_ongoing_secondary">"Vykdomi pranešimai nepalaiko SmartWatches"</string>
-
+    
     <string name="setting_notification_theme_primary">"fonas"</string>
-
+    
     <string name="setting_notification_theme_text_primary">"teksto spalva"</string>
-
+    
     <string name="setting_first_day_of_week_primary">"Pirma savaitės diena"</string>
-
+    
     <string name="setting_force_advanced_primary">"Visada Rodyti išplėstines parinktis"</string>
-
+    
     <string name="setting_force_advanced_secondary">"Išjungti parodyti pažangias parinktis vienam priminimo pagrindu"</string>
-
+    
     <string name="setting_notification_swipe_away_action_primary">"Braukimas veiksmas"</string>
-
+    
     <string name="setting_notification_click_open_primary">"Spauskite Atidaro App"</string>
-
+    
     <string name="setting_notification_swipe_away_open_primary">"Braukimas Atidaro Programos"</string>
-
+    
     <string name="setting_random_amount_primary">"atsitiktinis"</string>
-
+    
     <string name="setting_less_random_amount_primary">"mažiau Atsitiktinės"</string>
-
+    
     <string name="setting_even_amount_primary">"net"</string>
-
+    
     <string name="setting_widget_theme_primary">"tema"</string>
-
+    
     <string name="setting_widget_text_color_primary">"teksto spalva"</string>
-
+    
     <string name="setting_override_vibrate_primary">"Nepaisyti pranešimas vibruoti"</string>
-
+    
     <string name="setting_override_ringtone_primary">"Nepaisyti pranešimas tonas atkūrimas"</string>
-
+    
     <string name="setting_override_ringtone_secondary">"Tai turi būti įjungta jei norite nepaisyti garso srautą"</string>
-
+    
     <string name="setting_override_ringtone_stream_primary">"Nepaisyti pranešimas garso srautas"</string>
-
+    
     <string name="setting_override_speech_stream_primary">"Nepaisyti kalbos srautas"</string>
 
-
+    
     <string name="time_millisecond">"milisekundės"</string>
-
+    
     <string name="time_milliseconds">"milisekundžių"</string>
-
+    
     <string name="time_millisecond_abrev">"ponia"</string>
-
+    
     <string name="time_second">"Antra"</string>
-
+    
     <string name="time_seconds">"sekundžių"</string>
-
+    
     <string name="time_second_abrev">"ai"</string>
-
+    
     <string name="time_minute">"Minutė"</string>
-
+    
     <string name="time_minutes">"protokolas"</string>
-
+    
     <string name="time_hour">"valanda"</string>
-
+    
     <string name="time_hours">"valandos"</string>
-
+    
     <string name="time_day">"diena"</string>
-
+    
     <string name="time_days">"dienų"</string>
-
+    
     <string name="time_daily">"kasdien"</string>
-
+    
     <string name="time_week">"savaitė"</string>
-
+    
     <string name="time_weeks">"savaites"</string>
-
+    
     <string name="time_weekly">"kas savaitę"</string>
-
+    
     <string name="time_month">"mėnuo"</string>
-
+    
     <string name="time_months">"Mėnesių"</string>
-
+    
     <string name="time_monthly">"kas mėnesį"</string>
-
+    
     <string name="time_year">"metai"</string>
-
+    
     <string name="time_years">"metų"</string>
-
+    
     <string name="time_yearly">"kasmet"</string>
 
-
+    
     <string name="meter">"matuoklis"</string>
-
+    
     <string name="meters">"metrų"</string>
 
-
+    
     <string name="num_one">"vienas"</string>
-
+    
     <string name="num_two">"du"</string>
-
+    
     <string name="num_three">"trys"</string>
-
+    
     <string name="num_four">"keturi"</string>
-
+    
     <string name="num_five">"penki"</string>
-
+    
     <string name="num_six">"šeši"</string>
-
+    
     <string name="num_seven">"septyni"</string>
-
+    
     <string name="num_eight">"aštuoni"</string>
-
+    
     <string name="num_nine">"devyni"</string>
-
+    
     <string name="num_ten">"dešimt"</string>
 
-
-    <string name="num_first">"pirmas"</string>
-
+    
+    <string name="num_first">"Pirmas"</string>
+    
     <string name="num_second">"Antra"</string>
-
+    
     <string name="num_third">"Trečias"</string>
-
+    
     <string name="num_fourth">"ketvirtas"</string>
-
+    
     <string name="num_fifth">"penktas"</string>
-
+    
     <string name="num_sixth">"šeštas"</string>
-
+    
     <string name="num_seventh">"septintas"</string>
-
-    <string name="num_eighth">"aštuntas"</string>
-
+    
+    <string name="num_eighth">"Aštunta"</string>
+    
     <string name="num_ninth">"devintas"</string>
-
+    
     <string name="num_tenth">"Dešimtas"</string>
 
-
+    
     <string name="day_sunday">"sekmadienis"</string>
-
+    
     <string name="day_monday">"pirmadienis"</string>
-
+    
     <string name="day_tuesday">"antradienis"</string>
-
+    
     <string name="day_wednesday">"trečiadienis"</string>
-
+    
     <string name="day_thursday">"ketvirtadienis"</string>
-
+    
     <string name="day_friday">"penktadienis"</string>
-
+    
     <string name="day_saturday">"šeštadienis"</string>
-
+    
     <string name="today">"šiandien"</string>
-
+    
     <string name="tomorrow">"rytoj"</string>
-
+    
     <string name="yesterday">"vakar"</string>
 
-
+    
     <string name="days_of_week">"Savaitės dienomis"</string>
-
-    <string name="days_of_month">"Days Of Mėnesio"</string>
-
-    <string name="days_of_year">"Days Of Metų"</string>
-
+    
+    <string name="days_of_month">"Dienos Mėnesio"</string>
+    
+    <string name="days_of_year">"Dienos Metų"</string>
+    
     <string name="weeks_of_month">"Savaičių Mėnesio"</string>
-
+    
     <string name="weeks_of_year">"Savaites Metų"</string>
-
+    
     <string name="months_of_year">"Mėnesių Metų"</string>
 
-
+    
     <string name="next">"Kitas"</string>
-
+    
     <string name="previous">"ankstesnis"</string>
-
+    
     <string name="back">"atgal"</string>
-
+    
     <string name="forward">"Pirmyn"</string>
 
-
+    
     <string name="pattern_1">"raštas 1"</string>
-
+    
     <string name="pattern_2">"raštas 2"</string>
-
+    
     <string name="pattern_3">"raštas 3"</string>
-
+    
     <string name="pattern_4">"raštas 4"</string>
-
+    
     <string name="pattern_5">"raštas 5"</string>
-
+    
     <string name="pattern_6">"raštas 6"</string>
 
-
+    
     <string name="select">"pasirinkti"</string>
-
+    
     <string name="select_all">"Pasirinkti viską"</string>
-
+    
     <string name="select_none">"Pasirinkite Nėra"</string>
 
-
+    
     <string name="diff_difficulty">"sunkumas"</string>
-
+    
     <string name="diff_select_difficulty">"Pasirinkite Sunkumo"</string>
-
+    
     <string name="diff_easy">"lengvas"</string>
-
+    
     <string name="diff_normal">"Normalus"</string>
-
+    
     <string name="diff_hard">"Sunku"</string>
 
-
+    
     <string name="enable">"leisti"</string>
-
-    <string name="enabled">"įjungta"</string>
-
+    
+    <string name="enabled">"Įjungtas"</string>
+    
     <string name="disable">"išjungti"</string>
-
+    
     <string name="disabled">"neįgalusis"</string>
-
+    
     <string name="lock">"spyna"</string>
-
+    
     <string name="unlock">"atrakinti"</string>
-
+    
     <string name="locked">"užrakintas"</string>
-
+    
     <string name="unlocked">"atrakinta"</string>
-
+    
     <string name="open">"Atviras"</string>
-
+    
     <string name="close">"Uždaryti"</string>
-
+    
     <string name="opened">"atidarytas"</string>
-
-    <string name="closed">"uždarytas"</string>
-
+    
+    <string name="closed">"Uždaryta"</string>
+    
     <string name="show">"Rodyti"</string>
-
+    
     <string name="hide">"paslėpti"</string>
-
+    
     <string name="shown">"parodyta"</string>
-
+    
     <string name="Hidden">"paslėptas"</string>
-
-    <string name="automatic">"automatinis"</string>
-
+    
+    <string name="automatic">"Automatinis"</string>
+    
     <string name="manual">"vadovas"</string>
-
-    <string name="online">"Dabar naršo"</string>
-
+    
+    <string name="online">"Prisijunges"</string>
+    
     <string name="offline">"Atsijungęs"</string>
-
+    
     <string name="active">"aktyvus"</string>
-
+    
     <string name="inactive">"neveiklus"</string>
 
-
+    
+    <string name="clear">"aiškus"</string>
+    
+    <string name="clear_log">"Išvalyti Prisijungti"</string>
+    
+    <string name="log_cleared">"Prisijungti išvalytas"</string>
+    
     <string name="okay">"Gerai"</string>
-
+    
     <string name="cancel">"atšaukti"</string>
-
+    
     <string name="yes">"taip"</string>
-
+    
     <string name="no">"ne"</string>
-
-    <string name="maybe">"Galbūt"</string>
-
+    
+    <string name="maybe">"Gal būt"</string>
+    
     <string name="some">"keletas"</string>
-
-    <string name="none">"nė vienas"</string>
-
+    
+    <string name="none">"Nė vienas"</string>
+    
     <string name="all">"visi"</string>
-
+    
     <string name="set">"nustatyti"</string>
-
+    
     <string name="unset">"unset"</string>
-
+    
     <string name="last">"paskutinis"</string>
-
-    <string name="first">"pirmas"</string>
-
+    
+    <string name="first">"Pirmas"</string>
+    
     <string name="every">"kiekvienas"</string>
-
+    
     <string name="other">"kitas"</string>
-
+    
     <string name="off">"nuo"</string>
-
+    
     <string name="on">"apie"</string>
-
+    
+    <string name="clear_reminder_log_prompt_title">"Išvalyti Priminimas Prisijungti"</string>
+    
+    <string name="clear_reminder_log_prompt_content">"Ar tikrai norite išvalyti priminimo žurnalą?"</string>
+    
     <string name="delete_reminder_prompt_title">"Ištrinti priminimas"</string>
-
+    
     <string name="delete_reminder_prompt_content">"Ar tikrai norite ištrinti šį priminimą?"</string>
-
+    
     <string name="delete_custom_icon_prompt_title">"Ištrinti piktogramą"</string>
-
+    
     <string name="delete_custom_icon_prompt_content">"Ar tikrai norite ištrinti šią piktogramą?"</string>
-
+    
     <string name="cancel_reminder_prompt_title">"Atsisakyti pakeitimų"</string>
-
+    
     <string name="cancel_reminder_prompt_content">"Ar jūs tikrai norite atmesti pakeitimus?"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_title">"Ištrinti Vibruoti Šablonas"</string>
-
+    
     <string name="delete_vibrate_pattern_prompt_content">"Ar tikrai norite ištrinti šį vibruoti modelį?"</string>
-
+    
     <string name="delete_location_prompt_title">"Ištrinti kur"</string>
-
+    
     <string name="delete_location_prompt_content">"Ar tikrai norite ištrinti šią vietą?"</string>
-
+    
     <string name="duplicate_reminder_prompt_title">"Dubliuoti priminimas"</string>
-
+    
     <string name="duplicate_reminder_prompt_content">"Ar tikrai norite dubliuoti šią priminimą?"</string>
-
+    
     <string name="include_log_prompt_title">"įtraukti Prisijungti"</string>
-
+    
     <string name="include_log_prompt_content">"Ar norite įtraukti priminimą žurnalą?"</string>
-
+    
     <string name="include_default_reminder_prompt_title">"Įtraukti Default Priminimas"</string>
-
+    
     <string name="include_default_reminder_prompt_content">"Ar norite įtraukti numatytąją priminimą?"</string>
-
+    
     <string name="start_new_game_title">"Pradėti naują žaidimą"</string>
-
+    
     <string name="start_new_game_prompt">"Ar tikrai norite pradėti naują žaidimą?"</string>
-
+    
     <string name="end_game_title">"pabaiga Žaidimo"</string>
-
+    
     <string name="end_game_prompt">"Ar tikrai norite baigti šį žaidimą?"</string>
 
-
+    
     <string name="help">"padėti"</string>
-
+    
     <string name="about">"apie"</string>
-
+    
     <string name="settings">"Nustatymai"</string>
-
+    
     <string name="help_and_feedback">"Pagalba &amp; Atsiliepimai"</string>
-
+    
     <string name="rate_app">"Balsuok Programos"</string>
-
+    
     <string name="more_apps">"Daugiau programėlių"</string>
-
+    
     <string name="tutorial">"vadovėlis"</string>
-
+    
     <string name="read">"skaityti"</string>
-
+    
     <string name="watch">"Žiūrėti"</string>
-
+    
+    <string name="link">"ryšys"</string>
+    
     <string name="links">"saitai"</string>
-
+    
     <string name="licenses">"licencijos"</string>
-
+    
     <string name="help_translate">"Pagalba Versti"</string>
-
+    
     <string name="get_the_beta">"Gaukite Beta"</string>
-
+    
     <string name="achievements">"Pasiekimai"</string>
-
+    
     <string name="leaderboards">"Lyderių"</string>
-
+    
     <string name="high_scores">"Rekordai"</string>
-
+    
     <string name="my_circles">"Mano ratai"</string>
-
+    
     <string name="invitations">"kvietimai"</string>
-
+    
     <string name="options">"Nustatymai"</string>
-
+    
     <string name="game_options">"Žaidimo nustatymai"</string>
-
+    
     <string name="advanced_options">"Išplėstiniai nustatymai"</string>
-
+    
     <string name="automatch">"Automatch"</string>
+    
+    <string name="guest">"Svečias"</string>
 
-    <string name="guest">"svečias"</string>
-
-
+    
     <string name="light">"šviesa"</string>
-
+    
     <string name="light_transparent">"šviesos Skaidri"</string>
-
+    
     <string name="dark">"tamsus"</string>
-
+    
     <string name="dark_transparent">"Tamsiai Skaidri"</string>
-
+    
     <string name="transparent">"skaidrus"</string>
-
+    
     <string name="night">"Naktis"</string>
-
+    
     <string name="black">"juodas"</string>
-
+    
     <string name="white">"baltas"</string>
-
+    
     <string name="system">"sistema"</string>
-
+    
     <string name="light_text">"šviesos tekstas"</string>
-
+    
     <string name="dark_text">"Tamsiai tekstas"</string>
 
-
+    
     <string name="red">"raudonas"</string>
-
+    
     <string name="pink">"Rožinis"</string>
-
+    
     <string name="purple">"Violetinė"</string>
-
+    
     <string name="deep_purple">"Tamsiai violetinė"</string>
-
+    
     <string name="indigo">"indigas"</string>
-
+    
     <string name="blue">"mėlynas"</string>
-
+    
     <string name="light_blue">"Šviesiai mėlynas"</string>
-
+    
     <string name="cyan">"Žydras"</string>
-
+    
     <string name="teal">"kryklė"</string>
-
+    
     <string name="green">"žalias"</string>
-
+    
     <string name="light_green">"Šviesiai žalia"</string>
-
+    
     <string name="lime">"kalkės"</string>
-
+    
     <string name="yellow">"geltonas"</string>
-
+    
     <string name="amber">"gintaras"</string>
-
+    
     <string name="orange">"oranžinis"</string>
-
+    
     <string name="deep_orange">"giliai Oranžinė"</string>
-
+    
     <string name="brown">"rudas"</string>
-
+    
     <string name="grey">"Pilka"</string>
-
+    
     <string name="blue_grey">"Mėlyna Pilka"</string>
-
+    
     <string name="dark_grey">"Tamsiai pilka"</string>
 
-
+    
     <string name="major">"pagrindinis"</string>
-
+    
     <string name="minor">"nepilnametis"</string>
-
+    
     <string name="aux">"aux"</string>
-
+    
     <string name="version">"versija"</string>
-
-    <string name="production">"gamyba"</string>
-
+    
+    <string name="production">"Gamyba"</string>
+    
     <string name="beta">"beta"</string>
-
+    
     <string name="alpha">"alfa"</string>
 
-
+    
     <string name="icon">"piktograma"</string>
-
+    
     <string name="icons">"Piktogramos"</string>
-
+    
     <string name="custom_icon">"tinkintą piktogramą"</string>
-
+    
     <string name="custom_icons">"Individualizuotos Piktogramos"</string>
-
+    
     <string name="choose_icon">"Pasirinkite piktogramą"</string>
 
-
+    
     <string name="backup">"Atsarginė"</string>
-
+    
     <string name="import_">"importas"</string>
-
+    
     <string name="export">"eksportas"</string>
-
+    
     <string name="export_log">"eksportas Prisijungti"</string>
-
+    
     <string name="import_export">"Importas eksportas"</string>
-
+    
     <string name="export_location">"eksportas kur"</string>
-
+    
     <string name="import_failed">"Nepavyko importuoti"</string>
-
+    
     <string name="import_canceled">"importas Atšaukta"</string>
-
+    
     <string name="export_failed">"Nepavyko eksportuoti"</string>
-
+    
     <string name="export_canceled">"eksportas Atšaukta"</string>
-
+    
     <string name="import_complete">"importas Užbaigti"</string>
-
+    
     <string name="export_complete">"eksportas Užbaigti"</string>
-
+    
     <string name="importing_please_wait">"Importavimas, prašome palaukti"</string>
-
+    
     <string name="exporting_please_wait">"Eksportavimas, prašome palaukti"</string>
 
-
+    
     <string name="snooze">"nusnūsti"</string>
-
+    
     <string name="snoozed">"Snaudžia"</string>
-
+    
     <string name="auto_snooze">"Auto Atidėti"</string>
-
+    
     <string name="manual_snooze">"Rankinis Atidėti"</string>
 
-
+    
     <string name="message">"žinutė"</string>
-
+    
     <string name="messages">"Žinutės"</string>
-
+    
     <string name="num_messages">"Pranešimų skaičius"</string>
-
+    
     <string name="edit_messages">"redaguoti Žinutės"</string>
-
+    
     <string name="view_messages">"Peržiūrėti Žinutės"</string>
-
+    
     <string name="import_messages">"importo Žinutės"</string>
-
+    
     <string name="message_separator">"Pranešimo separatorius ||||"</string>
 
-
+    
     <string name="sign_in">"Prisijungti"</string>
-
+    
     <string name="signed_in">"pasirašyta"</string>
-
+    
     <string name="sign_in_failed">"Nepavyko prisijungti"</string>
-
+    
     <string name="sign_out">"Atsijungti"</string>
-
+    
     <string name="signed_out">"Išregistruotos"</string>
 
-
+    
     <string name="low">"žemas"</string>
-
+    
     <string name="mid">"Vidutinės"</string>
-
+    
     <string name="high">"aukštas"</string>
-
+    
     <string name="min">"min"</string>
-
+    
     <string name="max">"daugiausia"</string>
-
-    <string name="minimum">"minimalus"</string>
-
+    
+    <string name="minimum">"Minimumas"</string>
+    
     <string name="medium">"vidutinis"</string>
-
+    
     <string name="maximum">"maksimalus"</string>
-
+    
     <string name="small">"mažas"</string>
-
+    
     <string name="large">"Didelis"</string>
-
+    
     <string name="short_">"trumpas"</string>
-
+    
     <string name="long_">"Ilgai"</string>
-
+    
     <string name="slow">"lėtas"</string>
-
+    
     <string name="fast">"Greitai"</string>
-
+    
     <string name="quick">"greitai"</string>
-
+    
     <string name="narrow">"siauras"</string>
-
+    
     <string name="wide">"platus"</string>
 
-
+    
     <string name="thank_you">"Ačiū"</string>
-
+    
     <string name="youre_welcome">"Prašom"</string>
-
+    
     <string name="please">"Prašom"</string>
 
-
+    
     <string name="you">"Tu"</string>
-
+    
     <string name="me">"man"</string>
-
+    
     <string name="us">"mums"</string>
-
-    <string name="we">"mes"</string>
-
+    
+    <string name="we">"Mes"</string>
+    
     <string name="them">"juos"</string>
 
-
+    
     <string name="short_on">"Trumpas apie"</string>
-
+    
     <string name="medium_on">"laikmena"</string>
-
+    
     <string name="long_on">"ilgai"</string>
-
+    
     <string name="short_off">"Trumpas išjungtas"</string>
-
+    
     <string name="medium_off">"Vidutinis išjungtas"</string>
-
+    
     <string name="long_off">"ilgas išjungtas"</string>
 
-
+    
     <string name="pro">"už"</string>
-
+    
+    <string name="pro_unlocked">"pro atrakinta"</string>
+    
     <string name="pro_feature">"Pro \"funkcija"</string>
-
-    <string name="upgrade">"patobulinti"</string>
-
+    
+    <string name="upgrade">"Patobulinti"</string>
+    
     <string name="feature_requires_pro">"Ši funkcija reikalauja pro versiją"</string>
-
+    
     <string name="feature_requires_pro_limited">"Ši funkcija yra ribotas nemokamą versiją. Atnaujinti Pro arba pašalinti esamą elementą."</string>
-
-    <string name="upgrade_to_pro">"Atnaujinti Pro \""</string>
-
+    
+    <string name="upgrade_to_pro">"Pagerinti iki profesionalios versijos"</string>
+    
     <string name="upgrade_now">"Patobulinti dabar"</string>
 
-
+    
     <string name="start_date">"Pradžios data"</string>
-
+    
     <string name="end_date">"pabaigos data"</string>
-
+    
     <string name="start_time">"Pradžios laikas"</string>
-
+    
     <string name="end_time">"pabaigos laikas"</string>
-
+    
     <string name="end_type">"pabaiga tipas"</string>
-
+    
     <string name="timing_type">"laikas tipas"</string>
-
+    
     <string name="edit_times">"Redaguoti Times \""</string>
-
+    
     <string name="time">"Laikas"</string>
-
+    
     <string name="times">"Laikai"</string>
-
+    
     <string name="timing">"laikas"</string>
-
+    
     <string name="all_time">"Visą laiką"</string>
-
+    
     <string name="every_week">"Kiekvieną savaitę"</string>
-
+    
     <string name="lifetime">"Gyvenimas"</string>
-
+    
     <string name="forever">"amžinai"</string>
-
+    
     <string name="time_period">"Laiko tarpas"</string>
-
+    
     <string name="random">"atsitiktinis"</string>
-
+    
     <string name="randomly">"atsitiktinai"</string>
-
+    
     <string name="less_random">"mažiau Atsitiktinės"</string>
-
+    
     <string name="even">"net"</string>
-
+    
     <string name="evenly">"tolygiai"</string>
-
+    
     <string name="specific">"specifinis"</string>
-
+    
     <string name="interval">"intervalas"</string>
-
+    
     <string name="specific_times">"tam tikru laiku"</string>
-
+    
     <string name="repeat_every">"Pakartokite kas"</string>
 
-
+    
     <string name="data_loaded">"duomenų Loaded"</string>
-
+    
     <string name="file">"byla"</string>
-
+    
     <string name="local_storage">"vietinis saugojimas"</string>
-
+    
     <string name="filename">"Failo pavadinimas"</string>
 
-
+    
     <string name="permission_granted">"išduoto leidimo"</string>
-
+    
     <string name="permission_denied">"Leidimas nesuteiktas"</string>
-
+    
     <string name="allow_if_any">"Leiskite, jei bet"</string>
-
+    
     <string name="allow_if_all">"Leiskite, jei visi"</string>
-
+    
     <string name="disallow_if_any">"Neleisti, jei bet"</string>
-
+    
     <string name="disallow_if_all">"Neleisti, jei visi"</string>
-
+    
     <string name="trigger_if_any">"Sukelti jei tokių"</string>
-
+    
     <string name="trigger_if_all">"Gaidukas, jei visi"</string>
 
-
+    
     <string name="reminders">"Priminimai"</string>
-
+    
     <string name="no_reminder">"nėra Priminimai"</string>
-
+    
     <string name="no_reminders_yet">"Jūs neturite priminimus dar"</string>
-
+    
     <string name="alerts_per_day">"Priminimai Per diena"</string>
-
+    
     <string name="number_of_reminders">"Taškų priminimus"</string>
 
-
+    
     <string name="changes_discarded">"pokyčiai Nebenaudojama"</string>
-
+    
     <string name="changes_saved">"pokyčiai Išsaugoti"</string>
-
+    
     <string name="no_changes">"nėra keitimai"</string>
-
+    
     <string name="select_at_least_one_item">"Pasirinkti bent vieną elementą"</string>
 
-
+    
     <string name="loading">"pakrovimas"</string>
-
+    
     <string name="loaded">"pakrautas"</string>
-
+    
     <string name="loading_failed">"Kraunasi Nepavyko"</string>
-
+    
     <string name="loading_complete">"Kraunasi Užbaigti"</string>
-
+    
     <string name="error">"klaida"</string>
-
+    
     <string name="fail">"žlugti"</string>
-
+    
     <string name="failed">"nepavyko"</string>
-
-    <string name="success">"sėkmė"</string>
-
+    
+    <string name="success">"Sėkmė"</string>
+    
     <string name="successful">"sėkmingas"</string>
-
+    
     <string name="unsuccessful">"nesėkmingas"</string>
-
+    
     <string name="valid">"galiojantis"</string>
-
+    
     <string name="invalid">"negaliojantis"</string>
-
+    
     <string name="complete">"pilnas"</string>
-
+    
     <string name="completed">"užbaigtas"</string>
-
+    
     <string name="skipped">"Praleistas"</string>
-
-    <string name="incomplete">"neužbaigtas"</string>
-
+    
+    <string name="incomplete">"Nebaigtas"</string>
+    
     <string name="dismiss">"atleisti"</string>
-
+    
     <string name="dismissed">"atmesti"</string>
-
-    <string name="acknowledge">"pripažinti"</string>
-
+    
+    <string name="acknowledge">"Pripažinti"</string>
+    
     <string name="acknowledged">"pripažintas"</string>
-
+    
     <string name="add">"Papildyti"</string>
-
+    
     <string name="added">"Pridėta"</string>
-
+    
     <string name="add_item">"Pridėti Prekę"</string>
-
+    
     <string name="remove">"pašalinti"</string>
-
+    
     <string name="removed">"pašalintas"</string>
-
+    
     <string name="remove_item">"pašalinti elementą"</string>
-
+    
     <string name="delete">"panaikinti"</string>
-
+    
     <string name="deleted">"ištrinta"</string>
-
+    
     <string name="duplicate">"dublikatas"</string>
-
+    
     <string name="duplicated">"dubliuojami"</string>
-
+    
     <string name="restart">"Perkrauti"</string>
-
+    
     <string name="restarting">"Atnaujinus"</string>
-
+    
     <string name="restarting_app_please_wait">"Atnaujinus App, prašome palaukti"</string>
 
-
+    
     <string name="map">"žemėlapis"</string>
-
+    
     <string name="location">"vieta"</string>
-
+    
     <string name="locations">"vietos"</string>
-
+    
     <string name="latitude">"platuma"</string>
-
+    
     <string name="longitude">"ilguma"</string>
-
+    
     <string name="radius">"spindulys"</string>
-
+    
     <string name="enter">"įeiti"</string>
-
+    
     <string name="exit">"išeiti"</string>
-
+    
     <string name="linger_time">"svyruos laikas"</string>
 
-
+    
     <string name="music">"muzika"</string>
-
+    
     <string name="ring">"žiedas"</string>
-
+    
     <string name="speak_time">"kalbėti laikas"</string>
-
+    
     <string name="speak_title">"kalbėti Pavadinimas"</string>
-
+    
     <string name="speak_message">"kalbėti pranešimas"</string>
-
+    
     <string name="tone">"Tonas"</string>
-
+    
     <string name="sound">"garso"</string>
+    
+    <string name="sounds">"Garsai"</string>
 
-
+    
     <string name="notification">"pranešimas"</string>
-
+    
     <string name="notifications">"Pranešimai"</string>
-
+    
     <string name="select_notification">"Pasirinkite Pranešimas"</string>
 
-
+    
     <string name="vibrate">"vibruoti"</string>
-
+    
     <string name="vibrate_pattern">"vibruoti Raštas"</string>
-
+    
     <string name="vibrate_patterns">"vibravimo modeliai"</string>
-
+    
     <string name="create_vibrate_pattern">"Sukurti Vibruoti Šablonas"</string>
 
+    
 
+    
     <string name="you_win">"Tu laimėjai"</string>
-
+    
     <string name="you_won">"Tu laimėjai"</string>
-
+    
     <string name="you_lost">"Tu pralaimėjai"</string>
-
+    
     <string name="you_lose">"jūs Lose"</string>
-
+    
     <string name="you_tied">"jūs Sąlygotoji"</string>
-
+    
     <string name="winner">"nugalėtojas"</string>
-
+    
     <string name="winners">"Laimėtojai"</string>
-
+    
     <string name="loser">"Nevykėlis"</string>
-
+    
     <string name="Losers">"pralaimėtojai"</string>
 
-
+    
     <string name="number_of_players">"Dalyvių"</string>
-
+    
     <string name="player">"žaidėjas"</string>
-
+    
     <string name="players">"žaidėjai"</string>
-
+    
     <string name="player_1">"žaidėjas 1"</string>
-
+    
     <string name="player_2">"2 žaidėjas"</string>
-
+    
     <string name="player_3">"Žaidėjo 3"</string>
-
+    
     <string name="player_4">"Žaidėjo 4"</string>
-
+    
     <string name="player_5">"Žaidėjo 5"</string>
-
+    
     <string name="player_6">"Žaidėjo 6"</string>
-
+    
     <string name="team">"komanda"</string>
-
+    
     <string name="teams">"Komandos"</string>
-
+    
     <string name="number_of_teams">"Komandų skaičius"</string>
-
+    
     <string name="team_1">"komanda 1"</string>
-
+    
     <string name="team_2">"komanda 2"</string>
-
+    
     <string name="team_3">"komanda 3"</string>
-
+    
     <string name="team_4">"komanda 4"</string>
 
-
+    
     <string name="requires_google_play">"Šis veiksmas reikalauja Google Play \"žaidimus"</string>
-
+    
     <string name="compare_profiles">"Palyginti Žaisti Žaidimai profiliai"</string>
-
+    
     <string name="view_profile">"Peržiūrėti Žaisti Žaidimai profilis"</string>
 
-
+    
     <string name="sponsored">"Rėmėjų"</string>
-
+    
     <string name="ads">"skelbimai"</string>
-
+    
     <string name="remove_ads">"Panaikinti reklamas"</string>
-
+    
     <string name="ads_removed">"Pašalinta skelbimai"</string>
+    
+    <string name="ad_unavailable">"Reklamos neprieinamas"</string>
 
-
+    
     <string name="current_score">"Dabartinis balas"</string>
-
+    
     <string name="top_score">"Rekordas"</string>
-
+    
     <string name="score">"rezultatas"</string>
 
-
+    
     <string name="your_turn">"Tavo eilė"</string>
-
+    
     <string name="their_turn">"savo ruožtu"</string>
-
+    
     <string name="turn">"eilė"</string>
-
+    
     <string name="turns">"mėnesinės"</string>
-
+    
     <string name="round">"turas"</string>
-
+    
     <string name="rounds">"raundai"</string>
-
+    
     <string name="match">"rungtynės"</string>
+    
+    <string name="matches">"Degtukai"</string>
 
-    <string name="matches">"degtukai"</string>
-
-
+    
     <string name="dollar">"doleris"</string>
-
+    
     <string name="dollars">"JAV dolerių"</string>
-
+    
     <string name="buy">"nupirkti"</string>
-
+    
     <string name="sell">"Parduoti"</string>
-
+    
     <string name="purchase">"pirkti"</string>
-
+    
     <string name="diamond">"deimantas"</string>
-
+    
     <string name="diamonds">"būgnai"</string>
 
-
+    
     <string name="rematch">"rematch"</string>
-
+    
     <string name="try_again">"Bandyk iš naujo"</string>
-
+    
     <string name="touch_continue">"Palieskite, jei norite tęsti"</string>
-
+    
     <string name="touch_resume">"Palieskite, kad Tęsti"</string>
-
+    
     <string name="touch_edit">"Palieskite redaguoti"</string>
-
+    
     <string name="pause">"Pauzė"</string>
-
+    
     <string name="pause_game">"Pauzė Žaidimo"</string>
-
+    
     <string name="resume">"atnaujinti"</string>
-
+    
     <string name="resume_game">"Gyvenimo žaidimas"</string>
-
+    
     <string name="new_">"naujas"</string>
-
+    
     <string name="new_game">"Naujas žaidimas"</string>
-
+    
     <string name="select_save">"Pasirinkite Save"</string>
-
+    
     <string name="save">"Sutaupyti"</string>
-
+    
     <string name="save_game">"Išsaugoti žaidimą"</string>
-
+    
     <string name="load">"apkrova"</string>
-
+    
     <string name="load_game">"Užkrauti žaidimą"</string>
-
+    
     <string name="game_over">"Žaidimas baigtas"</string>
-
+    
     <string name="start">"pradžia"</string>
-
+    
     <string name="start_game">"Pradėti žaidimą"</string>
-
+    
     <string name="end">"Galas"</string>
-
+    
     <string name="end_game">"pabaiga Žaidimo"</string>
-
-    <string name="stop">"Stop"</string>
-
+    
+    <string name="stop">"Sustabdyti"</string>
+    
     <string name="stop_game">"Sustabdyti žaidimą"</string>
 
+    
 
+    <string name="bandit">"banditas"</string>
     <string name="free">"nemokamai"</string>
     <string name="pull">"traukti"</string>
     <string name="wild">"laukinis"</string>
     <string name="normal">"Normalus"</string>
     <string name="public_">"visuomenės"</string>
     <string name="private_">"privatus"</string>
-    <string name="default_">"numatytasis"</string>
+    <string name="default_">"Numatytas"</string>
     <string name="defaults">"Numatytasis"</string>
     <string name="completed_early">"užbaigtas Ankstyvas"</string>
     <string name="no_items_found">"Nėra jokių elementų nerasta"</string>
@@ -1059,16 +1083,16 @@
     <string name="accent_color">"akcentas spalva"</string>
     <string name="choose_color">"Pasirinkite spalva"</string>
     <string name="filter_type">"filtro tipas"</string>
-    <string name="criteria">"kriterijai"</string>
+    <string name="criteria">"Kriterijai"</string>
     <string name="trigger">"gaidukas"</string>
     <string name="triggers">"paleidiklius"</string>
     <string name="trigger_type">"Sukelti tipas"</string>
     <string name="led_pattern">"LED Raštas"</string>
     <string name="search">"Paieška"</string>
     <string name="customizer">"prisitaikymas"</string>
-    <string name="customize">"tinkinti"</string>
+    <string name="customize">"Pritaikyti"</string>
     <string name="create">"kurti"</string>
-    <string name="home">"namo"</string>
+    <string name="home">"Namai"</string>
     <string name="upcoming">"Artimiausi"</string>
     <string name="edit_reminder">"Redaguoti priminimas"</string>
     <string name="summary">"santrauka"</string>
@@ -1079,8 +1103,38 @@
     <string name="missed">"praleidau"</string>
     <string name="nothing">"niekas"</string>
     <string name="clipboard">"Mainų"</string>
-
-
-    <string name="test_string_ignore">test</string>
+    <string name="call">"kvietimas"</string>
+    <string name="email">"paštas"</string>
+    <string name="event">"renginys"</string>
+    <string name="progress">"Progresas"</string>
+    <string name="promo">"promo"</string>
+    <string name="recommendation">"rekomendacija"</string>
+    <string name="reminder">"priminimas"</string>
+    <string name="service">"tarnyba"</string>
+    <string name="social">"socialinis"</string>
+    <string name="status">"statusas"</string>
+    <string name="transport">"transportas"</string>
+    <string name="category">"Kategorija"</string>
+    <string name="show_image_in_notification">"Rodyti atvaizdas Pranešimas"</string>
+    <string name="sample_reminders">"Imties Priminimai"</string>
+    <string name="app_plugin">"Programos Įskiepis"</string>
+    <string name="plugin">"Prijungti"</string>
+    <string name="allow_action">"Leiskite veiksmas"</string>
+    <string name="disallow_action">"neleisti veiksmas"</string>
+    <string name="action">"veiksmas"</string>
+    <string name="extra">"papildomai"</string>
+    <string name="package_">"paketas"</string>
+    <string name="broadcast">"transliacija"</string>
+    <string name="activity">"veikla"</string>
+    <string name="class_">"Klasė"</string>
+    <string name="target">"taikinys"</string>
+    <string name="on_trigger_send_intent">"Dėl Trigger Siųsti Intent"</string>
+    <string name="receive_intent_criteria">"Gauti ketinimų kriterijai"</string>
+    <string name="receive_intent_trigger">"Gauti ketinimas Trigger"</string>
+    <string name="message_source">"Pranešimo Šaltinis"</string>
+    <string name="list">"sąrašas"</string>
+    <string name="rss_feed">"RSS"</string>
+    <string name="rss">"RSS"</string>
+    <string name="notification_opens_link">"Pranešimas Atidaro nuorodą"</string>
 
 </resources>

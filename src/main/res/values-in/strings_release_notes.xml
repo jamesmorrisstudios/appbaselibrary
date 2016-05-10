@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versi 2.0.0"</item>
-        <item name="line1">"Re-branded \"Donasi\" untuk \"Pro\". Semua fitur yang sebelumnya gratis dan banyak fitur baru yang bebas."</item>
-        <item name="line2">"Menambahkan laci aplikasi untuk sub halaman."</item>
-        <item name="line5">"Ditambahkan kemampuan untuk mengatur pengaturan pengingat default untuk setiap pengingat bahwa Anda buat."</item>
-        <item name="line3">"Updated tema app."</item>
-        <item name="line4">"Updated Pengaturan dan Bantuan &amp; halaman Masukan."</item>
-        <item name="line4">"Menambahkan widget aplikasi."</item>
-        <item name="line5">"Banyak pilihan pengingat tambahan (menampilkan semua dengan memeriksa \"Tampilkan Advanced\")."</item>
-        <item name="line5">"pengingat berbasis lokasi ditambahkan. Tambah dari halaman \"Customizer\"."</item>
-        <item name="line5">"Beberapa fitur baru dikunci untuk versi \"Pro\"."</item>
-        <item name="line5">"App Tema"</item>
-        <item name="line5">"Modus Immersive."</item>
-        <item name="line4">"pola kustom bergetar."</item>
-        <item name="line4">"ikon kustom pemberitahuan (android 6.0 + saja)."</item>
-        <item name="line5">"Jelajahi aplikasi untuk fitur tambahan. Lebih akan segera hadir."</item>
+        <item name="line0">"Ditambahkan pilihan untuk log pengingat yang jelas."</item>
+        <item name="line1">"Ditambahkan kategori pemberitahuan."</item>
+        <item name="line2">"daftar menambahkan pemberitahuan suara kemampuan."</item>
+        <item name="line5">"Ditambahkan link untuk sampel pengingat dan paket ikon di situs jamesmorrisstudios."</item>
+        <item name="line3">"Ditambahkan pilihan untuk menampilkan gambar pengingat dalam pemberitahuan tersebut."</item>
+        <item name="line4">"Ditambahkan Android dukungan plugin berdasarkan Intent untuk digunakan dengan aplikasi otomatisasi."</item>
+        <item name="line4">"Ditambahkan dukungan RSS feed untuk pesan."</item>
+        <item name="line4">"Fixed bug di mana auto snooze tidak akan bekerja dengan pengingat lokasi dipicu."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"tidak ada"</item>
+        <item name="line0">"Peluncuran pertama"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"tidak ada"</item>
+        <item name="line0">"Menyederhanakan desain menu dengan menggerakkan segala sesuatu untuk laci navigasi."</item>
+        <item name="line0">"Mengubah format iklan untuk iklan interstisial dan iklan banner dihapus."</item>
+        <item name="line0">"Berubah penyedia iklan sehingga iklan sebagian besar lebih game terkait."</item>
+        <item name="line0">"kinerja game ditingkatkan."</item>
+        <item name="line0">"Ditambahkan dukungan tema kustom."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versija 2.0.0"</item>
-        <item name="line1">"Re-firmas \"Ziedojums\" uz \"Pro\". Visi iepriekš bezmaksas funkcijas un daudzas jaunas funkcijas ir bezmaksas."</item>
-        <item name="line2">"Pievienots lietotnes atvilktne apakšgrupas lapām."</item>
-        <item name="line5">"Pievienots spēja noteikt noklusējuma atgādinājumu iestatījumus katru atgādinājums, ka jūs izveidojat."</item>
-        <item name="line3">"Atjaunināja lietotnes tēmu."</item>
-        <item name="line4">"Atjaunots uzstādījumus un Palīdzība un atsauksmes lapas."</item>
-        <item name="line4">"Pievienots lietotnes logrīku."</item>
-        <item name="line5">"Daudzas papildus atgādinājumu iespējas (rādīt visus, pārbaudot \"Rādīt papildus\")."</item>
-        <item name="line5">"Pievienots atrašanās balstīti atgādinājumus. Pievienot no \"pielāgošanas\" lapā."</item>
-        <item name="line5">"Dažas jaunas funkcijas bloķēta \"Pro\" versija."</item>
-        <item name="line5">"lietotnes Tēmas"</item>
-        <item name="line5">"Immersive Mode."</item>
-        <item name="line4">"Custom vibrācijas modeļi."</item>
-        <item name="line4">"Custom paziņojumu ikonas (Android 6.0 vai jaunāka versija tikai)."</item>
-        <item name="line5">"Izpētīt lietotni papildu funkcijas. Vairāk tiks drīzumā."</item>
+        <item name="line0">"Pievienots iespēja skaidru atgādinājuma žurnālā."</item>
+        <item name="line1">"Pievienots paziņojumu kategorijas."</item>
+        <item name="line2">"Pievienots saraksts paziņojuma skaņas spējas."</item>
+        <item name="line5">"Pievienots saiti nobaudīt atgādinājumus un ikonu pakas uz jamesmorrisstudios mājas lapā."</item>
+        <item name="line3">"Pievienots iespēja parādīt atgādinājuma attēlu paziņojumā."</item>
+        <item name="line4">"Pievienots Android Intent balstīta spraudnis atbalsts izmantošanai ar automatizācijas progr."</item>
+        <item name="line4">"Pievienots RSS feed atbalstu ziņojumiem."</item>
+        <item name="line4">"Fiksētie bug kur auto atlikšanas nevarētu strādāt ar atrašanās vietas izraisīja atgādinājumu."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"nekas"</item>
+        <item name="line0">"sākotnējās izlaišanas"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"nekas"</item>
+        <item name="line0">"Vienkāršota izvēlnes dizainu, pārvietojot visu, lai navigācijas atvilktni."</item>
+        <item name="line0">"Mainīts reklāmas formātu iespiestās reklāmas un izņemti reklāmas bannerus."</item>
+        <item name="line0">"Mainīts reklāmas sniedzēju tā reklāmas ir pārsvarā vairāk spēļu saistīti."</item>
+        <item name="line0">"Uzlabots spēle sniegumu."</item>
+        <item name="line0">"Pievienots pasūtījuma tēma atbalstu."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

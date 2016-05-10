@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"Version 2.0.0"</item>
-        <item name="line1">"Re-branded \"Donation\" til \"Pro\". Alle tidligere gratis funktioner og mange af de nye funktioner er gratis."</item>
-        <item name="line2">"Tilføjet en app skuffe til undersider."</item>
-        <item name="line5">"Lagt evne til at sætte standardindstillinger påmindelser indstillingerne for hver påmindelse om, at du opretter."</item>
-        <item name="line3">"Opdateret app tema."</item>
-        <item name="line4">"Opdateret Indstillinger og Hjælp og feedback sider."</item>
-        <item name="line4">"Tilføjet en app widget."</item>
-        <item name="line5">"Mange ekstra påmindelse muligheder (vis alle ved at markere \"Show Advanced\")."</item>
-        <item name="line5">"Tilføjet lokationsbaserede påmindelser. Tilføj fra \"Customizer\" side."</item>
-        <item name="line5">"Nogle nye funktioner låst til \"Pro\" version."</item>
-        <item name="line5">"App Temaer"</item>
-        <item name="line5">"Immersive Mode."</item>
-        <item name="line4">"Tilpasset vibration mønstre."</item>
-        <item name="line4">"ikoner Brugerdefineret anmeldelse (android 6.0+ kun)."</item>
-        <item name="line5">"Udforsk app til ekstra funktioner. Flere vil komme snart."</item>
+        <item name="line0">"Tilføjet mulighed for klart log påmindelse."</item>
+        <item name="line1">"Tilføjet kategorier meddelelser."</item>
+        <item name="line2">"Tilføjet liste over anmeldelsen lyder evne."</item>
+        <item name="line5">"Tilføjet et link til prøve påmindelser og ikon packs på jamesmorrisstudios hjemmeside."</item>
+        <item name="line3">"Tilføjet en mulighed for at vise billedet påmindelse i anmeldelsen."</item>
+        <item name="line4">"Tilføjet Android Intent baseret plugin support til brug med automatisering apps."</item>
+        <item name="line4">"Tilføjet foder support RSS for meddelelser."</item>
+        <item name="line4">"Rettet en fejl, hvor auto snooze ikke ville arbejde med en placering udløst påmindelse."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"intet"</item>
+        <item name="line0">"Første udgivelse"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"intet"</item>
+        <item name="line0">"Forenklet menuen design ved at flytte alt til en navigation skuffe."</item>
+        <item name="line0">"Ændret annoncen format til interstitielle annoncer og fjernede bannerreklamer."</item>
+        <item name="line0">"Ændret annoncen udbyder, så annoncer er for det meste mere gaming relateret."</item>
+        <item name="line0">"Forbedret spillets ydeevne."</item>
+        <item name="line0">"Tilføjet brugerdefinerede tema support."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

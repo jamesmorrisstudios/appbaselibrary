@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"versija 2.0.0"</item>
-        <item name="line1">"Re firminių \"Donorystė\" į \"Apple\". Visi anksčiau nemokami funkcijos ir daug naujų funkcijų yra nemokama."</item>
-        <item name="line2">"Pridėta žinutę app stalčių sub puslapiuose."</item>
-        <item name="line5">"Pridėta galimybę nustatyti numatytuosius nustatymus priminimas kiekvienam priminimas, kad jums sukurti."</item>
-        <item name="line3">"Atnaujintas app temą."</item>
-        <item name="line4">"Atnaujinta parametrus ir Pagalba ir atsiliepimai puslapius."</item>
-        <item name="line4">"Pridėta žinutę app valdikliui."</item>
-        <item name="line5">"Daug papildomų priminimų pasirinktys (rodyti visus tikrinant \"Show Advanced\")."</item>
-        <item name="line5">"Pridėta vietos nustatymo priminimus. Pridėti nuo \"prisitaikymas\" puslapyje."</item>
-        <item name="line5">"Keletą naujų funkcijų užrakinta \"Pro\" versijoje."</item>
-        <item name="line5">"Programos Temos"</item>
-        <item name="line5">"Svaiginančius režimas."</item>
-        <item name="line4">"Pasirinktinis vibravimo modeliai."</item>
-        <item name="line4">"Pasirinktinis pranešimo piktogramos ( \"Android 6.0\" tik)."</item>
-        <item name="line5">"Naršyti papildomų funkcijų app. Daugiau bus netrukus."</item>
+        <item name="line0">"Pridėta galimybė Išvalyti priminimą žurnale."</item>
+        <item name="line1">"Pridėta pranešimo kategorijos."</item>
+        <item name="line2">"Pridėta sąrašas pranešimo skamba galimybes."</item>
+        <item name="line5">"Pridėta nuorodą paragauti priminimus ir piktograma pakuočių dėl jamesmorrisstudios svetainėje."</item>
+        <item name="line3">"Pridėta galimybę parodyti priminimo įvaizdį pranešimo."</item>
+        <item name="line4">"Pridėta \"Android\" ketinimas pagrįstas įskiepiai parama naudoti automatikos apps."</item>
+        <item name="line4">"Pridėta RSS parama pranešimus."</item>
+        <item name="line4">"Ištaisyta klaida, kur automatinis snaudimo nebūtų dirbti su vietos sukėlė priminimą."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"niekas"</item>
+        <item name="line0">"Initial release"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"niekas"</item>
+        <item name="line0">"Supaprastintas meniu dizainas juda viską navigacijos stalčių."</item>
+        <item name="line0">"Pasikeitė reklamos formatą intersticinis skelbimus ir pašalinti banerių."</item>
+        <item name="line0">"Pasikeitė reklamos paslaugų teikėjas, kad skelbimai yra daugiausia daugiau žaidimų susiję."</item>
+        <item name="line0">"Geresnis žaidimas efektyvumą."</item>
+        <item name="line0">"Pridėta užsakymą tema paramą."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->

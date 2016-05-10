@@ -1,32 +1,29 @@
 <resources>
 
-    <!--DO NOT TRANSLATE Latest update release notes.-->
+    <!-- Machine Translation Only. Latest update release notes.-->
     <string-array name="randremind_release_notes">
-        <item name="line0">"Версия 2.0.0"</item>
-        <item name="line1">"Ребрендинг \"Пожертвование\" на \"Pro\". Все ранее свободные признаки и многие из новых функций свободны."</item>
-        <item name="line2">"Добавлен ящик приложения для подстраниц."</item>
-        <item name="line5">"Добавлена ​​возможность устанавливать настройки напоминаний по умолчанию для каждого напоминания, что вы создаете."</item>
-        <item name="line3">"Обновление темы приложения."</item>
-        <item name="line4">"Обновление настроек и Помощь &amp; Обратная связь страниц."</item>
-        <item name="line4">"Добавлено приложение виджет."</item>
-        <item name="line5">"Многие дополнительные опции напоминания (показать все путем проверки \"Show Advanced\")."</item>
-        <item name="line5">"Добавлено расположение напоминания на основе. Добавить со страницы \"Настройщик\"."</item>
-        <item name="line5">"Некоторые новые функции заблокированы \"Pro\" версии."</item>
-        <item name="line5">"App Темы"</item>
-        <item name="line5">"Immersive режим."</item>
-        <item name="line4">"Пользовательские вибрирует узоры."</item>
-        <item name="line4">"Значки пользовательских уведомлений (Android 6.0+ только)."</item>
-        <item name="line5">"Исследуйте приложение для дополнительных функций. Больше будет в ближайшее время."</item>
+        <item name="line0">"Добавлена ​​опция, чтобы очистить журнал напоминания."</item>
+        <item name="line1">"Добавлены категории уведомлений."</item>
+        <item name="line2">"Добавлен список звуков уведомлений способности."</item>
+        <item name="line5">"Добавлена ​​ссылка к образцу напоминания и значок пакеты на веб-сайте jamesmorrisstudios."</item>
+        <item name="line3">"Добавлена ​​возможность отображать напоминание изображение в уведомлении."</item>
+        <item name="line4">"Добавлена ​​поддержка плагинов Android Intent на основе для использования с приложениями автоматизации."</item>
+        <item name="line4">"Добавлена ​​поддержка подачи RSS для сообщений."</item>
+        <item name="line4">"Исправлена ​​ошибка, при которой авто повтора не будет работать с местоположением вызвало напоминание."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="matchblock_release_notes">
-        <item name="line0">"ничего"</item>
+        <item name="line0">"Начальная версия"</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
     <string-array name="oneup_release_notes">
-        <item name="line0">"ничего"</item>
+        <item name="line0">"Упрощенный дизайн меню, перемещая все к навигационному ящик."</item>
+        <item name="line0">"Изменен формат объявлений для междоузельных объявлений и удалены рекламные баннеры."</item>
+        <item name="line0">"Изменен поставщика объявлений, чтобы объявления связаны в основном более игр."</item>
+        <item name="line0">"Улучшена производительность игры."</item>
+        <item name="line0">"Добавлена ​​поддержка пользовательской темы."</item>
     </string-array>
 
     <!--DO NOT TRANSLATE Latest update release notes.-->
