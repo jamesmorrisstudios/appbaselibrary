@@ -4,7 +4,7 @@ import android.content.DialogInterface;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
-import com.jamesmorrisstudios.appbaselibrary.colorpicker.builder.ColorPickerClickListener;
+import com.flask.colorpicker.builder.ColorPickerClickListener;
 
 /**
  * Request to build a color picker dialog.

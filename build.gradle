@@ -76,4 +76,5 @@ dependencies {
     //https://github.com/square/picasso
     compile 'com.commit451:PhotoView:1.2.5'
     //https://github.com/chrisbanes/PhotoView
+    compile 'com.github.morris-james:colorpicker:v0.0.11'//https://github.com/morris-james/colorpicker
 }
