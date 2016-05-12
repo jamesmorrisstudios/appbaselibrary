@@ -7,7 +7,7 @@
     <!-- This base library -->
     <string-array name="help_license_library_code_item_0" translatable="false">
         <item name="title">App Base: James Morris Studios</item>
-        <item name="link_site">https://github.com/morris-james/appbaselibrary</item>
+        <item name="link_site">https://github.com/jamesmorrisstudios/appbaselibrary</item>
         <item name="link_license">http://www.apache.org/licenses/LICENSE-2.0</item>
     </string-array>
 
