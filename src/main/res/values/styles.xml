@@ -9,14 +9,6 @@
         <item name="android:windowBackground">@null</item>
     </style>
 
-    <style name="AppThemeSplash" parent="Theme.AppCompat.Light">
-        <!-- Disable the action bar -->
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <!-- Set the background to the splash screen -->
-        <item name="android:windowBackground">@layout/splash_screen</item>
-    </style>
-
     <!-- application themeBackground. -->
     <style name="AppThemeLight" parent="Theme.AppCompat.Light">
         <!-- Disable the action bar -->

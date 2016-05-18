@@ -277,26 +277,6 @@ public final class UtilsDisplay {
     }
 
     /**
-     * Hides the splashscreen
-     *
-     * @param splashScreen Splashscreen view
-     * @param forceInstant True to force instant, false to animate
-     */
-    public static void hideSplashScreen(@NonNull final View splashScreen, final boolean forceInstant) {
-        if (forceInstant || !AppBase.getInstance().isColdLaunch()) {
-            splashScreen.setVisibility(View.GONE);
-        } else if (splashScreen.getVisibility() == View.VISIBLE) {
-            AnimatorControl.alphaAutoStart(splashScreen, 1.0f, 0.0f, 1000, 1000, AnimatorControl.InterpolatorType.ACCELERATE, new AnimatorEndListener() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    splashScreen.setVisibility(View.GONE);
-                }
-            });
-        }
-        AppBase.getInstance().setHasLaunched();
-    }
-
-    /**
      * Toggles showing the toolbar
      *
      * @param toolbar Toolbar view

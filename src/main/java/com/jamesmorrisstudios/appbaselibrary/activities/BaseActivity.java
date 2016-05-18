@@ -62,7 +62,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
     public static boolean previouslyRunning = false;
     private DrawerLayout drawer;
     private NavigationView navigationView;
-    private View splashScreen;
     private Toolbar toolbar;
     private ProgressBar spinner;
     private FloatingActionButton fab;
@@ -144,7 +143,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
                 FabEvent.CLICKED.post();
             }
         });
-        splashScreen = findViewById(R.id.splashScreen);
         spinner = (ProgressBar) findViewById(R.id.progressBar);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -179,7 +177,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
         if (enableSound()) {
             Sounds.getInstance().onStart();
         }
-        UtilsDisplay.hideSplashScreen(splashScreen, false);
     }
 
     /**
@@ -433,7 +430,6 @@ public abstract class BaseActivity extends AppCompatActivity implements
             return;
         }
         if (intent.hasExtra("PAGE")) {
-            UtilsDisplay.hideSplashScreen(splashScreen, true);
             String page = intent.getStringExtra("PAGE");
             int scrollY = intent.getIntExtra("SCROLL_Y", -1);
             Bundle bundle = intent.getBundleExtra("EXTRAS");

@@ -99,11 +99,5 @@
         android:layout_gravity="center"
         android:visibility="gone" />
 
-    <include
-        android:id="@+id/splashScreen"
-        layout="@layout/splash_screen"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
 </merge>
 
